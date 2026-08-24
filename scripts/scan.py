@@ -35,6 +35,10 @@ OUT_PATH = DATA / "signals.json"
 RVOL_ALERT = 2.5          # times the 20-day median volume
 MOVE_SIGMA = 2.0          # standard deviations of daily return
 BASELINE_DAYS = 20
+NEWS_SCORE_ALERT = 2      # below this a story is commentary, not news
+NEWS_MAX_AGE_H = 48       # older than this is history, not an alert
+NEWS_PER_TICKER = 2       # a flood about one name is still a flood
+NEWS_SIMILARITY = 0.35    # measured: two reports of one acquisition overlap ~0.43
 MAX_SEEN = 4000
 
 # Disclosures a company is obliged to file but which carry no information. Left
@@ -97,6 +101,40 @@ def score(bars: list[dict]) -> dict | None:
         "medianVolume": int(median_volume),
         "rvol": round(rvol, 2),
     }
+
+
+def words(title: str) -> set[str]:
+    """Content words, for judging whether two headlines are the same story."""
+    return {w for w in re.findall(r"[a-zA-Z]{4,}", title.lower())
+            if w not in {"with", "from", "that", "this", "into", "over", "after",
+                         "will", "than", "have", "been", "more", "said", "says"}}
+
+
+def same_story(title: str, accepted: list[str]) -> bool:
+    """One acquisition reported by seven outlets is one alert, not seven."""
+    mine = words(title)
+    if not mine:
+        return False
+    for other in accepted:
+        theirs = words(other)
+        if not theirs:
+            continue
+        overlap = len(mine & theirs) / len(mine | theirs)
+        if overlap >= NEWS_SIMILARITY:
+            return True
+    return False
+
+
+def hours_old(published: str) -> float:
+    """Google News gives RFC 822 dates. Anything unparseable is treated as old."""
+    from email.utils import parsedate_to_datetime
+    try:
+        when = parsedate_to_datetime(published)
+    except Exception:                                            # noqa: BLE001
+        return 1e6
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - when).total_seconds() / 3600
 
 
 def ticker_from_title(title: str) -> str | None:
@@ -190,6 +228,37 @@ def main() -> int:
         })
         seen.add(key)
 
+    # Open-web coverage, one query per name. The regulated feeds say what the
+    # company had to say; this catches what everyone else said about it - a
+    # downgrade, a counterparty announcing the same contract, a sector story.
+    for entry in watchlist:
+        query = entry.get("name") or entry["ticker"]
+        accepted: list[str] = []
+        for item in sources.news(query, 25):
+            if item["score"] < NEWS_SCORE_ALERT:
+                continue
+            if hours_old(item.get("published", "")) > NEWS_MAX_AGE_H:
+                continue
+            if same_story(item["title"], accepted):
+                continue
+            if len(accepted) >= NEWS_PER_TICKER:
+                break
+            accepted.append(item["title"])
+            key = f"web:{item['id']}"
+            alerts.append({
+                "kind": "news",
+                "key": key,
+                "ticker": entry["ticker"],
+                "name": query,
+                "headline": item["title"],
+                "publisher": item.get("publisher"),
+                "score": item["score"],
+                "url": item["url"],
+                "published": item.get("published"),
+                "fresh": key not in seen,
+            })
+            seen.add(key)
+
     fresh = [a for a in alerts if a["fresh"]]
     quotes.sort(key=lambda q: -q["rvol"])
 
@@ -204,8 +273,13 @@ def main() -> int:
 
     print(f"  {len(quotes)} quotes, {len(alerts)} alerts, {len(fresh)} of them new")
     for a in fresh:
-        mark = "REG" if a.get("regulatory") else "   "
-        print(f"  [{mark}] {a['ticker']:<12} {a['headline'][:70]}")
+        if a["kind"] == "news":
+            mark = f"+{a['score']}"
+        elif a.get("regulatory"):
+            mark = "REG"
+        else:
+            mark = "   "
+        print(f"  [{mark:^3}] {a['ticker']:<12} {a['headline'][:66]}")
 
     # Hand the fresh ones to the workflow so it can decide whether to shout.
     if os.environ.get("GITHUB_OUTPUT"):

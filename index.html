@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stockwatch</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Hourly scanner for European equities: price, volume and regulated disclosures.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 22 L11 14 L17 19 L29 7' fill='none' stroke='%233ee0c5' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="masthead">
+      <span class="wordmark">stock<span>watch</span></span>
+      <span class="stamp" id="stamp">loading…</span>
+    </header>
+
+    <section class="lede-block">
+      <h1>What moved, and why.</h1>
+      <p class="lede">
+        Ten European names, scanned hourly. Moves are measured against each
+        instrument's own volatility and against the day's market, so a stock only
+        appears here if it did something the rest of the list did not.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Signals</h2>
+      <p class="panel-note" id="alertNote">—</p>
+      <ul class="alerts" id="alerts"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Prices</h2>
+      <p class="panel-note" id="marketNote">—</p>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead>
+            <tr>
+              <th>Ticker</th><th>Name</th><th class="num">Close</th>
+              <th class="num">Move</th><th class="num">vs market</th>
+              <th class="num">σ</th><th class="num">RVOL</th>
+            </tr>
+          </thead>
+          <tbody id="prices"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>
+        Free data only: Yahoo for prices, Oslo Børs NewsWeb and MFN for regulated
+        disclosures, Google News for open-web coverage.
+        <a href="https://github.com/LordOftheIdiot5/stockwatch" target="_blank" rel="noopener noreferrer">Source</a>.
+      </p>
+      <p class="disclaimer">
+        Not advice, and not a view on where anything is going. The thresholds have
+        not been tested against forward returns, so this is a tool for noticing
+        things — nothing more.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    const fmt = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 });
+    const signed = v => (v > 0 ? "+" : "") + fmt.format(v);
+    const cls = v => (v > 0 ? "up" : v < 0 ? "down" : "");
+
+    function ago(iso) {
+      const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+      if (mins < 2) return "just now";
+      if (mins < 60) return mins + "m ago";
+      const h = Math.round(mins / 60);
+      return h < 24 ? h + "h ago" : Math.round(h / 24) + "d ago";
+    }
+
+    function badge(a) {
+      if (a.kind === "price") return '<span class="tag price">price</span>';
+      if (a.kind === "disclosure") {
+        return a.regulatory
+          ? '<span class="tag reg">regulatory</span>'
+          : '<span class="tag">disclosure</span>';
+      }
+      return '<span class="tag news">news</span>';
+    }
+
+    fetch("data/signals.json?cb=" + Date.now())
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById("stamp").textContent =
+          "updated " + ago(d.generated);
+
+        const alerts = d.alerts || [];
+        document.getElementById("alertNote").textContent = alerts.length
+          ? `${alerts.length} across ${d.tickers} tickers`
+          : "Nothing stood out in the last scan.";
+
+        document.getElementById("alerts").innerHTML = alerts.map(a => `
+          <li class="alert">
+            ${badge(a)}
+            <div class="alert-body">
+              <a class="alert-head" href="${a.url}" target="_blank" rel="noopener noreferrer">${a.headline}</a>
+              <p class="alert-meta">${a.name} · ${a.ticker}${a.publisher ? " · " + a.publisher : ""}</p>
+            </div>
+          </li>`).join("");
+
+        const quotes = d.quotes || [];
+        if (quotes.length) {
+          document.getElementById("marketNote").textContent =
+            `Market baseline ${signed(quotes[0].marketPct)}% — the median move across the list.`;
+        }
+        document.getElementById("prices").innerHTML = quotes.map(q => `
+          <tr>
+            <td class="mono">${q.ticker}</td>
+            <td>${q.name}</td>
+            <td class="num mono">${fmt.format(q.close)} <span class="ccy">${q.currency}</span></td>
+            <td class="num mono ${cls(q.changePct)}">${signed(q.changePct)}%</td>
+            <td class="num mono ${cls(q.excessPct)}">${signed(q.excessPct)}%</td>
+            <td class="num mono ${Math.abs(q.excessSigma) >= 2 ? "hot" : ""}">${fmt.format(q.excessSigma)}</td>
+            <td class="num mono ${q.rvol >= 2.5 ? "hot" : ""}">${fmt.format(q.rvol)}x</td>
+          </tr>`).join("");
+      })
+      .catch(() => {
+        document.getElementById("stamp").textContent = "could not load data";
+      });
+  </script>
+</body>
+</html>

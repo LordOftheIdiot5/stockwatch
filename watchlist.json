@@ -1,21 +1,75 @@
 {
-  "_comment": "Yahoo suffixes: .OL Oslo, .ST Stockholm, .CO Copenhagen, .HE Helsinki, .DE XETRA, .PA Paris, .L London, .AS Amsterdam",
+  "_comment": "Chosen by scripts/select.py on liquidity, realised volatility and how often a 2-sigma day occurred. Not a view on direction.",
   "tickers": [
-    { "ticker": "EQNR.OL",   "name": "Equinor" },
-    { "ticker": "DNB.OL",    "name": "DNB Bank" },
-    { "ticker": "NHY.OL",    "name": "Norsk Hydro" },
-    { "ticker": "TEL.OL",    "name": "Telenor" },
-    { "ticker": "YAR.OL",    "name": "Yara" },
-    { "ticker": "AKRBP.OL",  "name": "Aker BP" },
-    { "ticker": "MOWI.OL",   "name": "Mowi" },
-    { "ticker": "SALM.OL",   "name": "SalMar" },
-    { "ticker": "FRO.OL",    "name": "Frontline" },
-    { "ticker": "KOG.OL",    "name": "Kongsberg Gruppen" },
-    { "ticker": "VOLV-B.ST", "name": "Volvo B" },
-    { "ticker": "ERIC-B.ST", "name": "Ericsson B" },
-    { "ticker": "NDA-SE.ST", "name": "Nordea" },
-    { "ticker": "SAP.DE",    "name": "SAP" },
-    { "ticker": "AIR.PA",    "name": "Airbus" },
-    { "ticker": "ASML.AS",   "name": "ASML" }
+    {
+      "ticker": "AKRBP.OL",
+      "name": "Aker BP",
+      "exchange": "Oslo",
+      "annualVolPct": 40.5,
+      "medianVolume": 1157042
+    },
+    {
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "exchange": "Oslo",
+      "annualVolPct": 38.8,
+      "medianVolume": 430538
+    },
+    {
+      "ticker": "EMBRAC-B.ST",
+      "name": "Embracer",
+      "exchange": "Stockholm",
+      "annualVolPct": 39.3,
+      "medianVolume": 608264
+    },
+    {
+      "ticker": "AIR.PA",
+      "name": "Airbus",
+      "exchange": "Paris",
+      "annualVolPct": 33.8,
+      "medianVolume": 1197714
+    },
+    {
+      "ticker": "ASML.AS",
+      "name": "ASML",
+      "exchange": "Amsterdam",
+      "annualVolPct": 48.2,
+      "medianVolume": 677148
+    },
+    {
+      "ticker": "SAP.DE",
+      "name": "SAP",
+      "exchange": "XETRA",
+      "annualVolPct": 44.1,
+      "medianVolume": 2671969
+    },
+    {
+      "ticker": "YAR.OL",
+      "name": "Yara",
+      "exchange": "Oslo",
+      "annualVolPct": 40.8,
+      "medianVolume": 543321
+    },
+    {
+      "ticker": "SAND.ST",
+      "name": "Sandvik",
+      "exchange": "Stockholm",
+      "annualVolPct": 37.6,
+      "medianVolume": 1855676
+    },
+    {
+      "ticker": "VOLV-B.ST",
+      "name": "Volvo B",
+      "exchange": "Stockholm",
+      "annualVolPct": 28.2,
+      "medianVolume": 2895927
+    },
+    {
+      "ticker": "IFX.DE",
+      "name": "Infineon",
+      "exchange": "XETRA",
+      "annualVolPct": 64.0,
+      "medianVolume": 4930118
+    }
   ]
 }
