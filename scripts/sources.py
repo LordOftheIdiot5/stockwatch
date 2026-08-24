@@ -157,6 +157,8 @@ SOURCE_WEIGHT = {
     "marketbeat": -3, "zacks": -2, "simply wall st": -3, "insider monkey": -3,
     "tipranks": -2, "benzinga": -1, "stocktwits": -3, "investing.com": -1,
     "marketscreener": -1, "tradingview": -2, "barchart": -2, "gurufocus": -3,
+    "motley fool": -3, "247 wall st": -3, "24/7 wall st": -3, "invezz": -2,
+    "ad-hoc-news": -2, "newsfilecorp": -2, "globenewswire": -1, "accesswire": -2,
 }
 
 # Words that mark a story as consequential rather than commentary.
@@ -180,23 +182,74 @@ JUNK = (
     "shares bought by", "position lowered", "position raised", "stake in",
     "short interest", "trading down", "trading up", "reaches new",
     "should you buy", "is it time to", "hidden gem", "price prediction",
+    # Valuation commentary. Nothing happened; someone did arithmetic on a chart.
+    "trades at a", "discount to its", "premium to its", "% discount",
+    "% upside", "fair value", "undervalued", "overvalued", "worth buying",
+    "here's why", "heres why", "what to know", "things to watch",
     # Generated market-wrap filler: a headline about nothing having happened.
     "holds steady", "holds above", "masks a deeper", "quiet monday",
     "quiet session", "little changed", "flat as", "in focus as investors",
 )
 
 
-def _news_score(title: str, source: str) -> int:
-    """Higher means more likely to matter. Negative means noise."""
+def _flatten(name: str) -> str:
+    """Publisher names arrive in whatever form Google has: 'marketscreener.com',
+    'simplywall.st', 'FT.com'. Exact-match lookup misses all of those, so the
+    weight table silently did nothing for them. Compare on letters alone."""
+    return "".join(c for c in (name or "").lower() if c.isalnum())
+
+
+_WEIGHTS = tuple((_flatten(k), v) for k, v in SOURCE_WEIGHT.items())
+
+
+def _material(title: str) -> int:
+    """How consequential the event is, from the words alone: 3 is an acquisition
+    or a profit warning, 1 is a partnership, 0 is commentary."""
     lowered = title.lower()
-    if any(j in lowered for j in JUNK):
+    for weight in sorted(MATERIAL, reverse=True):
+        if any(w in lowered for w in MATERIAL[weight]):
+            return weight
+    return 0
+
+
+def _source_weight(source: str) -> int:
+    flat = _flatten(source)
+    # Longest key first, so 'financial times' is not shadowed by a shorter key.
+    return next((v for k, v in sorted(_WEIGHTS, key=lambda kv: -len(kv[0]))
+                 if k and k in flat), 0)
+
+
+def _news_score(title: str, source: str) -> int:
+    """Kept as a single number for ranking and display. The alert decision uses
+    worth_alerting, which does not collapse the two axes."""
+    if any(j in title.lower() for j in JUNK):
         return -5
-    score = SOURCE_WEIGHT.get((source or "").lower().strip(), 0)
-    for weight, words in MATERIAL.items():
-        if any(w in lowered for w in words):
-            score += weight
-            break
-    return score
+    return _source_weight(source) + _material(title)
+
+
+def worth_alerting(item: dict) -> bool:
+    """Whether a story earns a place on the page.
+
+    Materiality and source quality are judged separately, because adding them
+    let a weak publisher veto a real event. SEB upgrading Sandvik to buy with a
+    445-krone target is a fact whoever prints it - and only aggregators printed
+    it, because wires do not cover single-broker notes on mid-caps. Summed, that
+    story scored 1 against a threshold of 2 and vanished.
+
+    So: the bigger the event, the less the publisher matters. A takeover clears
+    on anything but a known farm. A story with no material content at all has to
+    come from a wire, or it is someone's opinion.
+    """
+    if item.get("junk"):
+        return False
+    material, source = item.get("material", 0), item.get("sourceWeight", 0)
+    if material >= 3:
+        return source > -3          # a takeover is news from all but a farm
+    if material >= 2:
+        return source >= -2         # an upgrade or a contract needs an outlet
+    if material >= 1:
+        return source >= 2          # a partnership needs a real newsroom
+    return source >= 3              # no event named: only a wire is worth it
 
 
 def news(query: str, count: int = 25) -> list[dict]:
@@ -225,5 +278,8 @@ def news(query: str, count: int = 25) -> list[dict]:
             "published": (item.findtext("pubDate") or "").strip(),
             "url": (item.findtext("link") or "").strip(),
             "score": _news_score(clean, source),
+            "material": _material(clean),
+            "sourceWeight": _source_weight(source),
+            "junk": any(j in clean.lower() for j in JUNK),
         })
     return out

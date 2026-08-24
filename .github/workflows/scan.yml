@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Test signal logic
+        run: python tests/test_signals.py
+
       - name: Scan
         id: scan
         run: python scripts/scan.py

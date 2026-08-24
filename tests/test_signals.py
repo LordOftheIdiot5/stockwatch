@@ -1,0 +1,190 @@
+"""Labelled cases for the two judgements this scanner actually makes:
+is this story the same as one already shown, and is this source worth reading.
+
+These are not illustrative. Every case here is one the scanner previously got
+wrong, or a control that guards a fix from overreaching. The controls matter
+more than the duplicates: a surviving duplicate costs a line on a page, a wrong
+merge deletes a story you needed to see. So there are deliberately more "these
+must stay separate" cases than "these must collapse".
+
+Run: python tests/test_signals.py
+"""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+
+from scan import same_story, distinctive                          # noqa: E402
+from sources import _news_score, _material, _source_weight, worth_alerting  # noqa: E402
+
+# (subject, headline A, headline B, should_merge, description)
+STORY_CASES = [
+    # Same event, different wording or language. These must collapse.
+    ("Aker BP", "Equinor, Aker BP and Vår Energi join forces to search for Norway",
+     "Equinor, Aker BP og Vår Energi går sammen for å lete etter Norge",
+     True, "one filing, Norwegian and English"),
+    ("Aker BP", "Equinor, Aker BP and Vår Energi join forces to search for Norway",
+     "Equinor, Aker BP and Vaar target major Norway oil, gas discoveries",
+     True, "filing and the wire report of it"),
+    ("Sandvik", "SEB sees strong growth prospects for Sandvik, upgrades to buy",
+     "Sandvik stock climbs after SEB rating upgrade and higher price target",
+     True, "one upgrade, two outlets"),
+    ("Infineon", "Infineon acquires Bangalore-based C2i Semiconductors",
+     "Infineon Technologies acquires C2i Semiconductors to expand into",
+     True, "one deal, two outlets"),
+    ("SAP", "SAP raises cloud revenue outlook for 2026",
+     "SAP lifts cloud guidance after strong quarter",
+     True, "raises/lifts and outlook/guidance are synonyms"),
+    ("Volvo", "Volvo cuts truck delivery outlook for 2026",
+     "Volvo lowers guidance on European truck demand",
+     True, "cuts/lowers likewise"),
+    ("Embracer", "Embracer to split into three listed companies",
+     "Embracer announces three-way separation of group",
+     True, "split and separation are one event"),
+    ("Yara", "Yara halts ammonia production at Tertre on gas prices",
+     "Yara to close Tertre ammonia plant permanently",
+     True, "same site, escalating"),
+
+    # Controls. A merge here would hide something.
+    ("Infineon", "Infineon acquires Bangalore-based C2i Semiconductors",
+     "Infineon cuts full-year revenue guidance on weak auto demand",
+     False, "an acquisition is not a guidance cut"),
+    ("SAP", "SAP raises cloud revenue outlook for 2026",
+     "SAP cuts cloud revenue outlook for 2026",
+     False, "opposite directions are never one story"),
+    ("Yara", "Yara halts ammonia production at Tertre",
+     "Yara halts ammonia production at Sluiskil",
+     False, "same act, different plant"),
+    ("Subsea 7", "Subsea 7 awarded large contract offshore Brazil",
+     "Subsea 7 awarded large contract offshore Angola",
+     False, "same act, different country"),
+    ("Airbus", "Airbus wins 40-jet order from Lufthansa",
+     "Airbus wins 40-jet order from IndiGo",
+     False, "same act, different customer"),
+    ("Sandvik", "SEB sees strong growth prospects for Sandvik, upgrades to buy",
+     "Sandvik wins 900 million SEK mining order in Chile",
+     False, "an upgrade is not an order win"),
+    ("Aker BP", "Equinor, Aker BP and Vår Energi join forces to search for Norway",
+     "Aker BP cuts 2026 capex guidance after Johan Sverdrup review",
+     False, "a discovery is not a capex cut"),
+    ("ASML", "ASML reports transactions under its current share buyback programme",
+     "ASML wins export licence for China shipments",
+     False, "a buyback is not an export licence"),
+    ("Volvo", "Volvo B: Interim report January-June 2026",
+     "Volvo delivers record truck orders in North America",
+     False, "a report is not an order book"),
+    ("ASML", "ASML Q2 bookings beat expectations",
+     "ASML names new chief financial officer",
+     False, "results are not an appointment"),
+    # Isolates dropping the subject name. These share the company plus one
+    # incidental verb; keeping the name would push them over the threshold and
+    # merge two unrelated stories.
+    ("Airbus", "Airbus delivers 60 jets in July",
+     "Airbus delivers new emissions plan to regulators",
+     False, "company name plus a coincidental verb is not a shared story"),
+    ("Yara", "Yara reports second quarter results",
+     "Yara reports fire at Porsgrunn plant",
+     False, "likewise - 'reports' is not a story"),
+]
+
+# (headline, publisher, predicate, description)
+SCORE_CASES = [
+    (lambda s: s >= 2, "Equinor, Aker BP make gas find just northwest of Balder field",
+     "Reuters", "a wire reporting a discovery"),
+    (lambda s: s >= 2, "Infineon acquires Bangalore-based C2i Semiconductors",
+     "Evertiq", "an acquisition from trade press"),
+    (lambda s: s >= 2, "Volvo wins 900 million SEK order", "Financial Times",
+     "FT keeps its weight through the flattened lookup"),
+    (lambda s: s < 0, "Infineon's Stock Trades at a 39% Discount to Its High",
+     "Ad-hoc-news.de", "valuation arithmetic, not news"),
+    (lambda s: s < 0, "ASML: 5 Things You Need To Know", "simplywall.st",
+     "content farm - and the dotted name must still match its key"),
+    (lambda s: s < 0, "Sandvik shares gap up after strong quarter", "Benzinga",
+     "chart commentary"),
+    (lambda s: s < 2, "SEB sees strong growth prospects for Sandvik, upgrades to buy",
+     "marketscreener.com", "real story, demoted aggregator: another outlet should carry it"),
+    # Isolates the junk patterns. Electronics Weekly carries no weight of its
+    # own, so only the headline pattern can push these below the threshold.
+    (lambda s: s < 0, "Infineon's Stock Trades at a 39% Discount to Its High",
+     "Electronics Weekly", "valuation commentary from a neutral publisher"),
+    (lambda s: s < 0, "Here's Why ASML Stock Is Worth Buying Today",
+     "Electronics Weekly", "opinion framing from a neutral publisher"),
+    (lambda s: s >= 2, "Infineon wins design order from Bosch",
+     "Electronics Weekly", "control: neutral publisher, real news, still passes"),
+]
+
+
+# (should_alert, headline, publisher, description)
+ALERT_CASES = [
+    # A material event clears even from a weak outlet - only aggregators cover
+    # single-broker notes on mid-caps, and the note is still a fact.
+    (True, "SEB upgrades Sandvik to buy (hold), target price 445 kroner",
+     "marketscreener.com", "broker upgrade, aggregator"),
+    (True, "Sandvik stock climbs after SEB rating upgrade and higher price target",
+     "Ad-hoc-news.de", "same upgrade, weaker outlet"),
+    (True, "Infineon acquires Bangalore-based C2i Semiconductors",
+     "Evertiq", "acquisition, neutral trade press"),
+    (True, "Yara issues profit warning on ammonia margins",
+     "Ad-hoc-news.de", "profit warning outranks a weak publisher"),
+    (True, "Equinor, Aker BP make gas find just northwest of Balder field",
+     "Reuters", "no keyword, but a wire"),
+    # And the other direction.
+    (False, "Infineon acquires C2i Semiconductors", "gurufocus",
+     "even a takeover does not clear a content farm"),
+    (False, "ASML announces partnership with local supplier", "Ad-hoc-news.de",
+     "a minor event from a weak outlet is not news"),
+    (False, "Volvo shares in focus as investors weigh the quarter", "Electronics Weekly",
+     "no event named and no wire behind it"),
+    (False, "Infineon's Stock Trades at a 39% Discount to Its High", "Reuters",
+     "junk framing fails even from a wire"),
+]
+
+
+def main() -> int:
+    failures = []
+
+    for want, title, publisher, label in ALERT_CASES:
+        item = {"material": _material(title), "sourceWeight": _source_weight(publisher),
+                "junk": _news_score(title, publisher) == -5}
+        got = worth_alerting(item)
+        if got != want:
+            failures.append(
+                f"worth_alerting: wanted {want}, got {got} - {label} "
+                f"(material={item['material']} source={item['sourceWeight']} "
+                f"junk={item['junk']}) [{publisher}]"
+            )
+
+    for subject, a, b, want, label in STORY_CASES:
+        got = same_story(a, [b], subject)
+        if got != want:
+            failures.append(
+                f"same_story: wanted {want}, got {got} - {label}\n"
+                f"    A distinctive: {sorted(distinctive(a, subject))}\n"
+                f"    B distinctive: {sorted(distinctive(b, subject))}"
+            )
+
+    # Merging must not depend on which headline arrived first.
+    for subject, a, b, want, label in STORY_CASES:
+        if same_story(b, [a], subject) != want:
+            failures.append(f"same_story not symmetric - {label}")
+
+    for predicate, title, publisher, label in SCORE_CASES:
+        score = _news_score(title, publisher)
+        if not predicate(score):
+            failures.append(f"_news_score: {score} fails its test - {label} [{publisher}]")
+
+    total = len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
+    if failures:
+        print(f"FAIL  {len(failures)} of {total}\n")
+        for f in failures:
+            print(f"  {f}")
+        return 1
+    print(f"ok  {total} checks: {len(STORY_CASES)} story pairs (both directions), "
+          f"{len(SCORE_CASES)} scores, {len(ALERT_CASES)} alert decisions")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

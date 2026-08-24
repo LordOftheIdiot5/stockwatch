@@ -19,6 +19,7 @@ import os
 import re
 import statistics
 import sys
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -35,10 +36,11 @@ OUT_PATH = DATA / "signals.json"
 RVOL_ALERT = 2.5          # times the 20-day median volume
 MOVE_SIGMA = 2.0          # standard deviations of daily return
 BASELINE_DAYS = 20
-NEWS_SCORE_ALERT = 2      # below this a story is commentary, not news
+# Materiality and source quality are weighed separately in sources.py; see
+# worth_alerting there for why a single summed threshold could not work.
 NEWS_MAX_AGE_H = 48       # older than this is history, not an alert
 NEWS_PER_TICKER = 2       # a flood about one name is still a flood
-NEWS_SIMILARITY = 0.35    # measured: two reports of one acquisition overlap ~0.43
+# SHARED_MIN, below, replaced a similarity threshold that could not work.
 MAX_SEEN = 4000
 
 # Disclosures a company is obliged to file but which carry no information. Left
@@ -103,25 +105,123 @@ def score(bars: list[dict]) -> dict | None:
     }
 
 
-def words(title: str) -> set[str]:
-    """Content words, for judging whether two headlines are the same story."""
-    return {w for w in re.findall(r"[a-zA-Z]{4,}", title.lower())
-            if w not in {"with", "from", "that", "this", "into", "over", "after",
-                         "will", "than", "have", "been", "more", "said", "says"}}
+# --- telling one story from another -------------------------------------------
+# Comparing headlines by shared words does not work here, and the failure is
+# measurable: "SEB upgrades Sandvik to buy" and "Sandvik climbs after SEB
+# upgrade" - the same event - overlap 0.077, exactly as much as Infineon's
+# acquisition overlaps its guidance cut, which are different events. No
+# threshold separates those, so the comparison itself had to change.
+#
+# Four changes, each aimed at a case that was getting it wrong:
+#   accent folding   so "Vaar" and "Vår" are one word, and Norwegian headlines
+#                    tokenise at all - the old [a-zA-Z] pattern dropped them
+#   stemming         so "upgrades" and "upgrade" meet
+#   synonyms         so "raises outlook" and "lifts guidance" meet
+#   drop the subject every headline from a per-company query names the company,
+#                    so the name says nothing about which story this is
+#
+# And two vetoes, because the errors are not symmetric: a surviving duplicate
+# costs a line, a wrong merge deletes a story you needed to see.
+#
+# Known limit: English and Norwegian headlines with no shared cognate - "Q2
+# results beat expectations" against "kvartalsresultat over forventningene" -
+# are not matched. That needs a dictionary. It fails toward showing both.
+
+STOP = {"with","from","that","this","into","over","after","will","than","have",
+        "been","more","said","says","about","their","they","its","for","and",
+        "the","are","was","were","has","new","not","but","all","can"}
+
+def fold(text):
+    """Accent-fold so Norwegian and its transliteration meet: vår/vaar -> var."""
+    t = unicodedata.normalize("NFKD", text.lower())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return t.replace("ø","o").replace("æ","ae").replace("ß","ss").replace("aa","a")
+
+def stem(w):
+    """Crude suffix strip. 'upgrades'/'upgrade' and 'discoveries'/'discovery'
+    are one word to a reader and must be one token here."""
+    for suf in ("ingen","ies","ing","ene","ed","es","er","en","s"):
+        if len(w) - len(suf) >= 3 and w.endswith(suf):
+            w = w[:-len(suf)] + ("y" if suf == "ies" else "")
+            break
+    # A silent trailing 'e' survives suffix-stripping on one side only:
+    # 'upgrades' -> 'upgrad' but 'upgrade' -> 'upgrade'. Drop it from both.
+    return w[:-1] if len(w) >= 5 and w.endswith("e") else w
+
+# The same event gets reported in different words. These are the equity-news
+# synonyms frequent enough to be worth collapsing; each maps to one token so
+# "raises outlook" and "lifts guidance" become the same three tokens.
+SYNONYM = {
+    "lift": "rais", "hik": "rais", "boost": "rais", "upgrad": "rais",
+    "increas": "rais", "hev": "rais", "oppjuster": "rais",
+    "lower": "cut", "slash": "cut", "reduc": "cut", "downgrad": "cut",
+    "trim": "cut", "kutt": "cut", "nedjuster": "cut",
+    "outlook": "guidanc", "forecast": "guidanc", "prognos": "guidanc",
+    "utsikt": "guidanc", "guidance": "guidanc",
+    "acquir": "acq", "acquisit": "acq", "takeov": "acq", "buyout": "acq",
+    "merg": "acq", "oppkjop": "acq", "kjop": "acq",
+    "halt": "stop", "suspend": "stop", "shutdown": "stop", "clos": "stop",
+    "stans": "stop", "steng": "stop",
+    "separation": "split", "separat": "split", "demerg": "split",
+    "spinoff": "split", "spin": "split", "divid": "split",
+    "profit": "earning", "result": "earning", "quart": "earning",
+    "resultat": "earning", "kvartal": "earning",
+}
 
 
-def same_story(title: str, accepted: list[str]) -> bool:
-    """One acquisition reported by seven outlets is one alert, not seven."""
-    mine = words(title)
-    if not mine:
-        return False
-    for other in accepted:
-        theirs = words(other)
-        if not theirs:
+def tokens(title):
+    out = set()
+    for word in re.findall(r"[a-z0-9]{3,}", fold(title)):
+        if word in STOP:
             continue
-        overlap = len(mine & theirs) / len(mine | theirs)
-        if overlap >= NEWS_SIMILARITY:
-            return True
+        root = stem(word)
+        out.add(SYNONYM.get(root, root))
+    return out
+
+def distinctive(title, subject):
+    """Drop the company's own name. Every headline from a per-company query
+    mentions it, so it says nothing about which story this is."""
+    drop = tokens(subject) | {"group","asa","ab","nv","plc","technologies","aktiebolag"}
+    return tokens(title) - drop
+
+SHARED_MIN = 2
+
+# Two vetoes, because a wrong merge is worse than a duplicate: a duplicate
+# wastes a line, a wrong merge deletes a story you needed to see.
+
+def _proper(title, subject):
+    """Capitalised words that are not the company and not sentence-initial.
+    Place and entity names: Tertre, Sluiskil, Balder, C2i."""
+    drop = tokens(subject)
+    found = set()
+    for word in re.findall(r"[A-Za-zÀ-ÿ0-9]+", title):
+        if word[:1].isupper() and len(word) >= 3:
+            token = stem(fold(word))
+            if token not in drop and token not in STOP:
+                found.add(token)
+    return found
+
+
+def _opposed(a, b):
+    """A guidance raise and a guidance cut are never the same story, however
+    much wording they share."""
+    return ("rais" in a and "cut" in b) or ("cut" in a and "rais" in b)
+
+
+def same_story(title, others, subject):
+    mine = distinctive(title, subject)
+    if len(mine) < SHARED_MIN:
+        return False
+    my_names = _proper(title, subject)
+    for other in others:
+        theirs = distinctive(other, subject)
+        if len(mine & theirs) < SHARED_MIN or _opposed(mine, theirs):
+            continue
+        their_names = _proper(other, subject)
+        # Both name places or entities, and none in common: different events.
+        if my_names and their_names and not (my_names & their_names):
+            continue
+        return True
     return False
 
 
@@ -208,12 +308,23 @@ def main() -> int:
     # Disclosures, matched to the watchlist by ticker.
     symbols = {e["ticker"].split(".")[0].upper(): e for e in watchlist}
     disclosures = sources.newsweb(120) + sources.mfn(80)
+    # What has already been reported for each name, so the same event is not
+    # told three times: once by the filing, once by its English translation,
+    # and once by the wire that picked it up.
+    told: dict[str, list[str]] = {}
     for item in disclosures:
         symbol = (item.get("issuer") or "").upper() or ticker_from_title(item["title"])
         if not symbol or symbol not in symbols:
             continue
         if is_routine(item["title"]):
             continue
+        entry = symbols[symbol]
+        subject = entry.get("name") or entry["ticker"]
+        prior = told.setdefault(entry["ticker"], [])
+        # Companies file the same disclosure in Norwegian and English.
+        if same_story(item["title"], prior, subject):
+            continue
+        prior.append(item["title"])
         key = f"news:{item['source']}:{item['id']}"
         alerts.append({
             "kind": "disclosure",
@@ -233,17 +344,26 @@ def main() -> int:
     # downgrade, a counterparty announcing the same contract, a sector story.
     for entry in watchlist:
         query = entry.get("name") or entry["ticker"]
-        accepted: list[str] = []
+        # Seeded with this name's disclosures: a wire report of a filing already
+        # shown is the same story, whichever feed carried it first.
+        accepted = told.setdefault(entry["ticker"], [])
+        taken = 0
         for item in sources.news(query, 25):
-            if item["score"] < NEWS_SCORE_ALERT:
+            if not sources.worth_alerting(item):
+                continue
+            # A daily buyback tally is routine wherever it is published. This
+            # filter only ran on disclosures, so buyback stories arrived by the
+            # open web instead - which is how ASML's did.
+            if is_routine(item["title"]):
                 continue
             if hours_old(item.get("published", "")) > NEWS_MAX_AGE_H:
                 continue
-            if same_story(item["title"], accepted):
+            if same_story(item["title"], accepted, query):
                 continue
-            if len(accepted) >= NEWS_PER_TICKER:
+            if taken >= NEWS_PER_TICKER:
                 break
             accepted.append(item["title"])
+            taken += 1
             key = f"web:{item['id']}"
             alerts.append({
                 "kind": "news",
