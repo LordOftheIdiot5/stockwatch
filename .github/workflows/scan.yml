@@ -1,0 +1,46 @@
+name: Scan
+
+on:
+  # Hourly across European market hours. Cron is UTC and does not know about
+  # daylight saving, so the window is deliberately wide: 06:00-17:00 UTC covers
+  # 07:00-18:00 CET in winter and 08:00-19:00 CEST in summer, which brackets
+  # Oslo, Stockholm, XETRA, Paris and London in both halves of the year.
+  schedule:
+    - cron: "5 6-17 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan
+        id: scan
+        run: python scripts/scan.py
+
+      - name: Notify
+        if: steps.scan.outputs.fresh != '0'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/notify.py
+
+      - name: Commit results
+        run: |
+          git config user.name "stockwatch"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "scan: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
