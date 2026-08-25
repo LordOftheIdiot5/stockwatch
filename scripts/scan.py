@@ -29,6 +29,11 @@ from translate import Translator                                  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+# Committed with the results, not ignored. The runner is thrown away between
+# scans, so a seen-list that only exists on disk is empty at the start of every
+# run - which made every story new every hour. Harmless on the page, where it
+# only lights a marker, and not harmless at all once a notification is wired to
+# it: nineteen alerts, nineteen of them "new", twelve times a day.
 SEEN_PATH = DATA / "seen.json"
 OUT_PATH = DATA / "signals.json"
 

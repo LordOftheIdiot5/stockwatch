@@ -265,6 +265,24 @@ TRANSLATION_CASES = [
 ]
 
 
+def unpersisted_state() -> list[str]:
+    """Files the scan must carry between runs but git would throw away.
+
+    The runner is rebuilt for every scan, so anything not committed starts
+    empty. data/seen.json was ignored, which meant every story was new on every
+    run - nineteen alerts, nineteen of them "new", twelve times a day. On the
+    page that only lights a marker; wired to a notification it is a pager going
+    off hourly with the same news.
+    """
+    root = Path(__file__).resolve().parent.parent
+    ignore = root / ".gitignore"
+    patterns = ([l.strip() for l in ignore.read_text(encoding="utf-8").splitlines()]
+                if ignore.exists() else [])
+    must_persist = ("data/seen.json", "data/translations.json", "data/signals.json")
+    return [name for name in must_persist
+            if name in patterns or name.split("/")[-1] in patterns]
+
+
 def stdlib_shadowing() -> list[str]:
     """Module names in scripts/ that the standard library already owns.
 
@@ -288,6 +306,11 @@ def main() -> int:
         got = clean(raw)
         if got != want:
             failures.append(f"clean: wanted {want!r}, got {got!r} - {label}")
+
+    for name in unpersisted_state():
+        failures.append(
+            f"{name} is gitignored, but the scan needs it between runs - "
+            f"the runner starts empty, so its state resets every hour")
 
     for name in stdlib_shadowing():
         failures.append(
@@ -347,7 +370,7 @@ def main() -> int:
 
     total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
              + len(LANGUAGE_CASES) + len(PUBLISHER_CASES)
-             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 1)
+             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 2)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:

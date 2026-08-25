@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-25T11:43:11+00:00",
+ "generated": "2026-08-25T11:46:55+00:00",
  "tickers": 116,
- "marketPct": 0.54,
+ "marketPct": 0.53,
  "languages": [
   "da",
   "de",
@@ -52,7 +52,7 @@
     510.0,
     509.5,
     526.5,
-    547.0
+    546.5
    ],
    "stories": [
     {
@@ -148,15 +148,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 547.0,
-   "changePct": 3.89,
-   "sigma": 2.44,
-   "volume": 286350,
+   "close": 546.5,
+   "changePct": 3.8,
+   "sigma": 2.38,
+   "volume": 287203,
    "medianVolume": 153395,
    "rvol": 1.87,
-   "marketPct": 0.54,
-   "excessPct": 3.35,
-   "excessSigma": 2.1
+   "marketPct": 0.53,
+   "excessPct": 3.27,
+   "excessSigma": 2.05
   },
   {
    "ticker": "IFISH.OL",
@@ -219,8 +219,8 @@
    "volume": 46777,
    "medianVolume": 12254,
    "rvol": 3.82,
-   "marketPct": 0.54,
-   "excessPct": -3.93,
+   "marketPct": 0.53,
+   "excessPct": -3.92,
    "excessSigma": -0.9
   },
   {
@@ -284,60 +284,9 @@
    "volume": 7827,
    "medianVolume": 15251,
    "rvol": 0.51,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
-  },
-  {
-   "ticker": "PROXI.OL",
-   "name": "Proximar Seafood",
-   "sector": "Aquaculture",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": false,
-   "spark": [
-    0.45,
-    0.45,
-    0.45,
-    0.478,
-    0.48,
-    0.48,
-    0.5,
-    0.48,
-    0.436,
-    0.435,
-    0.423,
-    0.42,
-    0.448,
-    0.459,
-    0.459,
-    0.44,
-    0.444,
-    0.45,
-    0.431,
-    0.459,
-    0.44,
-    0.442,
-    0.45,
-    0.445,
-    0.449,
-    0.44,
-    0.469,
-    0.446,
-    0.435,
-    0.47
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 0.47,
-   "changePct": 8.05,
-   "sigma": 2.27,
-   "volume": 286298,
-   "medianVolume": 99043,
-   "rvol": 2.89,
-   "marketPct": 0.54,
-   "excessPct": 7.52,
-   "excessSigma": 2.12
   },
   {
    "ticker": "AUSS.OL",
@@ -376,19 +325,70 @@
     83.3,
     83.9,
     86.3,
-    88.9
+    88.8
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 88.9,
-   "changePct": 3.01,
-   "sigma": 2.23,
-   "volume": 96181,
+   "close": 88.8,
+   "changePct": 2.9,
+   "sigma": 2.15,
+   "volume": 96205,
    "medianVolume": 112322,
    "rvol": 0.86,
-   "marketPct": 0.54,
-   "excessPct": 2.47,
-   "excessSigma": 1.83
+   "marketPct": 0.53,
+   "excessPct": 2.38,
+   "excessSigma": 1.76
+  },
+  {
+   "ticker": "PROXI.OL",
+   "name": "Proximar Seafood",
+   "sector": "Aquaculture",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": false,
+   "spark": [
+    0.45,
+    0.45,
+    0.45,
+    0.478,
+    0.48,
+    0.48,
+    0.5,
+    0.48,
+    0.436,
+    0.435,
+    0.423,
+    0.42,
+    0.448,
+    0.459,
+    0.459,
+    0.44,
+    0.444,
+    0.45,
+    0.431,
+    0.459,
+    0.44,
+    0.442,
+    0.45,
+    0.445,
+    0.449,
+    0.44,
+    0.469,
+    0.446,
+    0.435,
+    0.45
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 0.45,
+   "changePct": 3.45,
+   "sigma": 0.97,
+   "volume": 479256,
+   "medianVolume": 99043,
+   "rvol": 4.84,
+   "marketPct": 0.53,
+   "excessPct": 2.93,
+   "excessSigma": 0.82
   },
   {
    "ticker": "AFISH.OL",
@@ -437,8 +437,8 @@
    "volume": 586,
    "medianVolume": 799,
    "rvol": 0.73,
-   "marketPct": 0.54,
-   "excessPct": -3.62,
+   "marketPct": 0.53,
+   "excessPct": -3.6,
    "excessSigma": -0.75
   },
   {
@@ -488,8 +488,8 @@
    "volume": 569869,
    "medianVolume": 747767,
    "rvol": 0.76,
-   "marketPct": 0.54,
-   "excessPct": -0.92,
+   "marketPct": 0.53,
+   "excessPct": -0.91,
    "excessSigma": -0.41
   },
   {
@@ -539,8 +539,8 @@
    "volume": 1759,
    "medianVolume": 3130,
    "rvol": 0.56,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
   },
   {
@@ -590,8 +590,8 @@
    "volume": 1722,
    "medianVolume": 5275,
    "rvol": 0.33,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
   },
   {
@@ -665,12 +665,12 @@
    "close": 155.0,
    "changePct": 0.91,
    "sigma": 1.54,
-   "volume": 88512,
+   "volume": 89341,
    "medianVolume": 575734,
-   "rvol": 0.15,
-   "marketPct": 0.54,
-   "excessPct": 0.38,
-   "excessSigma": 0.64
+   "rvol": 0.16,
+   "marketPct": 0.53,
+   "excessPct": 0.39,
+   "excessSigma": 0.66
   },
   {
    "ticker": "STB.OL",
@@ -730,12 +730,12 @@
    "close": 205.8,
    "changePct": 1.98,
    "sigma": 2.47,
-   "volume": 206280,
+   "volume": 207603,
    "medianVolume": 410598,
-   "rvol": 0.5,
-   "marketPct": 0.54,
-   "excessPct": 1.44,
-   "excessSigma": 1.8
+   "rvol": 0.51,
+   "marketPct": 0.53,
+   "excessPct": 1.46,
+   "excessSigma": 1.82
   },
   {
    "ticker": "UCG.MI",
@@ -774,7 +774,7 @@
     82.37,
     82.82,
     83.03,
-    84.56
+    84.57
    ],
    "stories": [
     {
@@ -792,15 +792,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 84.56,
-   "changePct": 1.84,
-   "sigma": 1.52,
-   "volume": 1179690,
+   "close": 84.57,
+   "changePct": 1.85,
+   "sigma": 1.53,
+   "volume": 1192333,
    "medianVolume": 3605862,
    "rvol": 0.33,
-   "marketPct": 0.54,
-   "excessPct": 1.31,
-   "excessSigma": 1.08
+   "marketPct": 0.53,
+   "excessPct": 1.33,
+   "excessSigma": 1.1
   },
   {
    "ticker": "NOBA.ST",
@@ -839,7 +839,7 @@
     90.0,
     90.2,
     89.9,
-    89.5
+    89.8
    ],
    "stories": [
     {
@@ -857,15 +857,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 89.5,
-   "changePct": -0.44,
-   "sigma": -0.36,
-   "volume": 49197,
+   "close": 89.8,
+   "changePct": -0.11,
+   "sigma": -0.09,
+   "volume": 49563,
    "medianVolume": 179842,
-   "rvol": 0.27,
-   "marketPct": 0.54,
-   "excessPct": -0.98,
-   "excessSigma": -0.8
+   "rvol": 0.28,
+   "marketPct": 0.53,
+   "excessPct": -0.64,
+   "excessSigma": -0.52
   },
   {
    "ticker": "GJF.OL",
@@ -925,12 +925,12 @@
    "close": 282.6,
    "changePct": 0.36,
    "sigma": 0.46,
-   "volume": 43275,
+   "volume": 43693,
    "medianVolume": 180108,
    "rvol": 0.24,
-   "marketPct": 0.54,
-   "excessPct": -0.18,
-   "excessSigma": -0.23
+   "marketPct": 0.53,
+   "excessPct": -0.17,
+   "excessSigma": -0.22
   },
   {
    "ticker": "SBNOR.OL",
@@ -969,19 +969,19 @@
     192.34,
     192.0,
     193.32,
-    206.1
+    206.35
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 206.1,
-   "changePct": 6.61,
-   "sigma": 4.57,
-   "volume": 121672,
+   "close": 206.35,
+   "changePct": 6.74,
+   "sigma": 4.66,
+   "volume": 121780,
    "medianVolume": 105319,
    "rvol": 1.16,
-   "marketPct": 0.54,
-   "excessPct": 6.08,
-   "excessSigma": 4.2
+   "marketPct": 0.53,
+   "excessPct": 6.21,
+   "excessSigma": 4.29
   },
   {
    "ticker": "HOFI.ST",
@@ -1020,19 +1020,19 @@
     212.2,
     209.8,
     211.2,
-    219.2
+    218.6
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 219.2,
-   "changePct": 3.79,
-   "sigma": 3.5,
-   "volume": 335820,
+   "close": 218.6,
+   "changePct": 3.5,
+   "sigma": 3.24,
+   "volume": 335842,
    "medianVolume": 105117,
    "rvol": 3.19,
-   "marketPct": 0.54,
-   "excessPct": 3.25,
-   "excessSigma": 3.0
+   "marketPct": 0.53,
+   "excessPct": 2.98,
+   "excessSigma": 2.76
   },
   {
    "ticker": "MORROW.ST",
@@ -1071,19 +1071,19 @@
     14.0,
     14.24,
     14.2,
-    14.64
+    14.66
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 14.64,
-   "changePct": 3.1,
-   "sigma": 1.95,
-   "volume": 212934,
+   "close": 14.66,
+   "changePct": 3.24,
+   "sigma": 2.04,
+   "volume": 212935,
    "medianVolume": 412104,
    "rvol": 0.52,
-   "marketPct": 0.54,
-   "excessPct": 2.56,
-   "excessSigma": 1.61
+   "marketPct": 0.53,
+   "excessPct": 2.72,
+   "excessSigma": 1.71
   },
   {
    "ticker": "PROT.OL",
@@ -1122,19 +1122,19 @@
     476.8,
     475.8,
     478.2,
-    491.0
+    491.6
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 491.0,
-   "changePct": 2.68,
-   "sigma": 1.64,
-   "volume": 23007,
+   "close": 491.6,
+   "changePct": 2.8,
+   "sigma": 1.72,
+   "volume": 23969,
    "medianVolume": 53848,
-   "rvol": 0.43,
-   "marketPct": 0.54,
-   "excessPct": 2.15,
-   "excessSigma": 1.32
+   "rvol": 0.45,
+   "marketPct": 0.53,
+   "excessPct": 2.27,
+   "excessSigma": 1.39
   },
   {
    "ticker": "INSTA.OL",
@@ -1183,7 +1183,7 @@
    "volume": 84126,
    "medianVolume": 412726,
    "rvol": 0.2,
-   "marketPct": 0.54,
+   "marketPct": 0.53,
    "excessPct": -1.52,
    "excessSigma": -1.2
   },
@@ -1231,10 +1231,10 @@
    "close": 17.8,
    "changePct": -1.39,
    "sigma": -0.7,
-   "volume": 15356,
+   "volume": 17856,
    "medianVolume": 31119,
-   "rvol": 0.49,
-   "marketPct": 0.54,
+   "rvol": 0.57,
+   "marketPct": 0.53,
    "excessPct": -1.92,
    "excessSigma": -0.97
   },
@@ -1275,19 +1275,19 @@
     391.5,
     396.2,
     400.0,
-    403.3
+    402.7
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 403.3,
-   "changePct": 0.82,
-   "sigma": 1.0,
-   "volume": 78774,
+   "close": 402.7,
+   "changePct": 0.68,
+   "sigma": 0.82,
+   "volume": 78856,
    "medianVolume": 213592,
    "rvol": 0.37,
-   "marketPct": 0.54,
-   "excessPct": 0.28,
-   "excessSigma": 0.34
+   "marketPct": 0.53,
+   "excessPct": 0.16,
+   "excessSigma": 0.19
   },
   {
    "ticker": "INVE-B.ST",
@@ -1326,19 +1326,19 @@
     410.2,
     410.05,
     413.1,
-    414.6
+    414.75
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 414.6,
-   "changePct": 0.36,
-   "sigma": 0.59,
-   "volume": 849840,
+   "close": 414.75,
+   "changePct": 0.4,
+   "sigma": 0.65,
+   "volume": 856600,
    "medianVolume": 2245090,
    "rvol": 0.38,
-   "marketPct": 0.54,
-   "excessPct": -0.18,
-   "excessSigma": -0.29
+   "marketPct": 0.53,
+   "excessPct": -0.12,
+   "excessSigma": -0.19
   },
   {
    "ticker": "VIG.VI",
@@ -1387,8 +1387,8 @@
    "volume": 3545,
    "medianVolume": 37998,
    "rvol": 0.09,
-   "marketPct": 0.54,
-   "excessPct": 0.31,
+   "marketPct": 0.53,
+   "excessPct": 0.32,
    "excessSigma": 0.19
   },
   {
@@ -1435,11 +1435,11 @@
    "close": 201.0,
    "changePct": 0.0,
    "sigma": 0.0,
-   "volume": 6040,
+   "volume": 6195,
    "medianVolume": 33329,
-   "rvol": 0.18,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "rvol": 0.19,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
   },
   {
@@ -1542,8 +1542,8 @@
    "volume": 373313,
    "medianVolume": 331179,
    "rvol": 1.13,
-   "marketPct": 0.54,
-   "excessPct": 1.69,
+   "marketPct": 0.53,
+   "excessPct": 1.7,
    "excessSigma": 1.19
   },
   {
@@ -1583,7 +1583,7 @@
     123.6,
     122.55,
     124.0,
-    122.3
+    122.45
    ],
    "stories": [
     {
@@ -1640,15 +1640,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 122.3,
-   "changePct": -1.37,
-   "sigma": -0.57,
-   "volume": 436050,
+   "close": 122.45,
+   "changePct": -1.25,
+   "sigma": -0.52,
+   "volume": 438417,
    "medianVolume": 1227843,
    "rvol": 0.36,
-   "marketPct": 0.54,
-   "excessPct": -1.91,
-   "excessSigma": -0.79
+   "marketPct": 0.53,
+   "excessPct": -1.77,
+   "excessSigma": -0.74
   },
   {
    "ticker": "NIBE-B.ST",
@@ -1687,7 +1687,7 @@
     37.96,
     38.59,
     41.99,
-    42.63
+    42.62
    ],
    "stories": [
     {
@@ -1744,14 +1744,14 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 42.63,
-   "changePct": 1.52,
-   "sigma": 0.67,
-   "volume": 3522346,
+   "close": 42.62,
+   "changePct": 1.5,
+   "sigma": 0.66,
+   "volume": 3526607,
    "medianVolume": 4535248,
    "rvol": 0.78,
-   "marketPct": 0.54,
-   "excessPct": 0.98,
+   "marketPct": 0.53,
+   "excessPct": 0.97,
    "excessSigma": 0.43
   },
   {
@@ -1791,7 +1791,7 @@
     209.3,
     212.5,
     208.3,
-    212.6
+    212.4
    ],
    "stories": [
     {
@@ -1835,15 +1835,93 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 212.6,
-   "changePct": 2.06,
-   "sigma": 0.43,
-   "volume": 445103,
+   "close": 212.4,
+   "changePct": 1.97,
+   "sigma": 0.41,
+   "volume": 446497,
    "medianVolume": 1960385,
    "rvol": 0.23,
-   "marketPct": 0.54,
-   "excessPct": 1.52,
-   "excessSigma": 0.32
+   "marketPct": 0.53,
+   "excessPct": 1.44,
+   "excessSigma": 0.3
+  },
+  {
+   "ticker": "S92.DE",
+   "name": "SMA Solar",
+   "sector": "Grid & energy",
+   "exchange": "XETRA",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    65.2,
+    62.05,
+    58.2,
+    61.55,
+    59.0,
+    60.5,
+    60.15,
+    58.15,
+    56.85,
+    55.75,
+    49.74,
+    52.55,
+    55.0,
+    52.85,
+    52.25,
+    54.35,
+    53.5,
+    54.9,
+    54.55,
+    54.7,
+    55.2,
+    57.1,
+    58.3,
+    58.0,
+    57.3,
+    56.55,
+    57.4,
+    57.6,
+    56.8,
+    55.8
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMirAFBVV95cUxPdy00eG53dG9HWnZIb0VUZVVYTFVjcHRrOGlTcHctNmtGWWExOWFKZjRPckRibFJDOEIxZTVvMzlTVkpLR1ZDZ3BYSF9JNUpPR1h5bEYxUU1POFkxSGZjQkFrOXZZS2pReEwwSkgtZ250SVdYRUpzVDRrMjhZa3IzUURoVXRWcGt2Q1NteGtfN0k3QVVieUEtNEd2eGtOekJzaS0zR29HVkxVdFdH?oc=5",
+     "headline": "SMA Solar stock slips after August 13 results",
+     "english": null,
+     "lang": "en",
+     "publisher": "Ad-hoc-news.de",
+     "score": 0,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdy00eG53dG9HWnZIb0VUZVVYTFVjcHRrOGlTcHctNmtGWWExOWFKZjRPckRibFJDOEIxZTVvMzlTVkpLR1ZDZ3BYSF9JNUpPR1h5bEYxUU1POFkxSGZjQkFrOXZZS2pReEwwSkgtZ250SVdYRUpzVDRrMjhZa3IzUURoVXRWcGt2Q1NteGtfN0k3QVVieUEtNEd2eGtOekJzaS0zR29HVkxVdFdH?oc=5",
+     "published": "Mon, 24 Aug 2026 11:13:43 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiggFBVV95cUxPS1Y4UVFpMkJZR1RnY0xqNkpGRm1uMkNwZWU3ajlxR09lcUhxM0YtOF9GelZDNF9mZnZZQ1VCNHIySXNaYmljVF9MblVJX1FscmZENkJCcmV1MFdZVlU0NFJaY2RTbFBPSF9nNTJsdjRKbGtpVWpfNFByNUpXNUNjUkl3?oc=5",
+     "headline": "SMA Solar Aktie Prognose 2026 & Kursziel",
+     "english": "SMA Solar Stock Forecast 2026 & Price Target",
+     "lang": "de",
+     "publisher": "Börse Express",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPS1Y4UVFpMkJZR1RnY0xqNkpGRm1uMkNwZWU3ajlxR09lcUhxM0YtOF9GelZDNF9mZnZZQ1VCNHIySXNaYmljVF9MblVJX1FscmZENkJCcmV1MFdZVlU0NFJaY2RTbFBPSF9nNTJsdjRKbGtpVWpfNFByNUpXNUNjUkl3?oc=5",
+     "published": "Mon, 24 Aug 2026 03:05:35 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 55.8,
+   "changePct": -1.76,
+   "sigma": -0.5,
+   "volume": 11287,
+   "medianVolume": 77784,
+   "rvol": 0.15,
+   "marketPct": 0.53,
+   "excessPct": -2.29,
+   "excessSigma": -0.65
   },
   {
    "ticker": "4DS.DE",
@@ -1903,12 +1981,12 @@
    "close": 21.3,
    "changePct": -6.58,
    "sigma": -2.75,
-   "volume": 2892,
+   "volume": 2968,
    "medianVolume": 1091,
-   "rvol": 2.65,
-   "marketPct": 0.54,
-   "excessPct": -7.12,
-   "excessSigma": -2.98
+   "rvol": 2.72,
+   "marketPct": 0.53,
+   "excessPct": -7.11,
+   "excessSigma": -2.97
   },
   {
    "ticker": "ZAP.OL",
@@ -1947,7 +2025,7 @@
     48.2,
     49.4,
     51.8,
-    53.0
+    52.8
    ],
    "stories": [
     {
@@ -1965,145 +2043,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 53.0,
-   "changePct": 2.32,
-   "sigma": 1.19,
-   "volume": 429406,
+   "close": 52.8,
+   "changePct": 1.93,
+   "sigma": 0.99,
+   "volume": 429481,
    "medianVolume": 229394,
    "rvol": 1.87,
-   "marketPct": 0.54,
-   "excessPct": 1.78,
-   "excessSigma": 0.91
-  },
-  {
-   "ticker": "S92.DE",
-   "name": "SMA Solar",
-   "sector": "Grid & energy",
-   "exchange": "XETRA",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    65.2,
-    62.05,
-    58.2,
-    61.55,
-    59.0,
-    60.5,
-    60.15,
-    58.15,
-    56.85,
-    55.75,
-    49.74,
-    52.55,
-    55.0,
-    52.85,
-    52.25,
-    54.35,
-    53.5,
-    54.9,
-    54.55,
-    54.7,
-    55.2,
-    57.1,
-    58.3,
-    58.0,
-    57.3,
-    56.55,
-    57.4,
-    57.6,
-    56.8,
-    55.7
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMirAFBVV95cUxPdy00eG53dG9HWnZIb0VUZVVYTFVjcHRrOGlTcHctNmtGWWExOWFKZjRPckRibFJDOEIxZTVvMzlTVkpLR1ZDZ3BYSF9JNUpPR1h5bEYxUU1POFkxSGZjQkFrOXZZS2pReEwwSkgtZ250SVdYRUpzVDRrMjhZa3IzUURoVXRWcGt2Q1NteGtfN0k3QVVieUEtNEd2eGtOekJzaS0zR29HVkxVdFdH?oc=5",
-     "headline": "SMA Solar stock slips after August 13 results",
-     "english": null,
-     "lang": "en",
-     "publisher": "Ad-hoc-news.de",
-     "score": 0,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdy00eG53dG9HWnZIb0VUZVVYTFVjcHRrOGlTcHctNmtGWWExOWFKZjRPckRibFJDOEIxZTVvMzlTVkpLR1ZDZ3BYSF9JNUpPR1h5bEYxUU1POFkxSGZjQkFrOXZZS2pReEwwSkgtZ250SVdYRUpzVDRrMjhZa3IzUURoVXRWcGt2Q1NteGtfN0k3QVVieUEtNEd2eGtOekJzaS0zR29HVkxVdFdH?oc=5",
-     "published": "Mon, 24 Aug 2026 11:13:43 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-08-25",
-   "close": 55.7,
-   "changePct": -1.94,
-   "sigma": -0.55,
-   "volume": 11268,
-   "medianVolume": 77784,
-   "rvol": 0.14,
-   "marketPct": 0.54,
-   "excessPct": -2.48,
-   "excessSigma": -0.7
-  },
-  {
-   "ticker": "NEX.PA",
-   "name": "Nexans",
-   "sector": "Grid & energy",
-   "exchange": "Paris",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    135.8,
-    136.0,
-    133.9,
-    135.3,
-    133.4,
-    134.8,
-    134.1,
-    133.8,
-    132.2,
-    130.3,
-    124.1,
-    128.6,
-    131.6,
-    131.8,
-    129.2,
-    132.9,
-    138.1,
-    140.5,
-    139.6,
-    137.9,
-    138.8,
-    144.7,
-    142.5,
-    140.0,
-    140.9,
-    138.0,
-    138.1,
-    138.5,
-    141.8,
-    141.6
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
-     "headline": "Tills elektrikern skiljer dem åt. Nexans lanserar hybridkabel som förenklar installationer",
-     "english": "Until the electrician separates them. Nexans launches hybrid cable to simplify installations",
-     "lang": "sv",
-     "publisher": "dagensinfrastruktur -",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
-     "published": "Tue, 25 Aug 2026 07:15:57 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-08-25",
-   "close": 141.6,
-   "changePct": -0.14,
-   "sigma": -0.06,
-   "volume": 22759,
-   "medianVolume": 178951,
-   "rvol": 0.13,
-   "marketPct": 0.54,
-   "excessPct": -0.68,
-   "excessSigma": -0.29
+   "marketPct": 0.53,
+   "excessPct": 1.4,
+   "excessSigma": 0.72
   },
   {
    "ticker": "NDX1.DE",
@@ -2142,7 +2090,7 @@
     39.16,
     38.5,
     38.88,
-    39.38
+    39.46
    ],
    "stories": [
     {
@@ -2160,15 +2108,80 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 39.38,
-   "changePct": 1.29,
-   "sigma": 0.48,
-   "volume": 39186,
+   "close": 39.46,
+   "changePct": 1.49,
+   "sigma": 0.55,
+   "volume": 40704,
    "medianVolume": 487629,
    "rvol": 0.08,
-   "marketPct": 0.54,
-   "excessPct": 0.76,
-   "excessSigma": 0.28
+   "marketPct": 0.53,
+   "excessPct": 0.96,
+   "excessSigma": 0.35
+  },
+  {
+   "ticker": "NEX.PA",
+   "name": "Nexans",
+   "sector": "Grid & energy",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    135.8,
+    136.0,
+    133.9,
+    135.3,
+    133.4,
+    134.8,
+    134.1,
+    133.8,
+    132.2,
+    130.3,
+    124.1,
+    128.6,
+    131.6,
+    131.8,
+    129.2,
+    132.9,
+    138.1,
+    140.5,
+    139.6,
+    137.9,
+    138.8,
+    144.7,
+    142.5,
+    140.0,
+    140.9,
+    138.0,
+    138.1,
+    138.5,
+    141.8,
+    141.5
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
+     "headline": "Tills elektrikern skiljer dem åt. Nexans lanserar hybridkabel som förenklar installationer",
+     "english": "Until the electrician separates them. Nexans launches hybrid cable to simplify installations",
+     "lang": "sv",
+     "publisher": "dagensinfrastruktur -",
+     "score": 1,
+     "material": 1,
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
+     "published": "Tue, 25 Aug 2026 07:15:57 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 141.5,
+   "changePct": -0.21,
+   "sigma": -0.09,
+   "volume": 22760,
+   "medianVolume": 178951,
+   "rvol": 0.13,
+   "marketPct": 0.53,
+   "excessPct": -0.73,
+   "excessSigma": -0.31
   },
   {
    "ticker": "PFSE.DE",
@@ -2207,7 +2220,7 @@
     68.8,
     71.85,
     72.75,
-    72.5
+    72.55
    ],
    "stories": [
     {
@@ -2225,15 +2238,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 72.5,
-   "changePct": -0.34,
-   "sigma": -0.09,
-   "volume": 4412,
+   "close": 72.55,
+   "changePct": -0.27,
+   "sigma": -0.07,
+   "volume": 4433,
    "medianVolume": 29819,
    "rvol": 0.15,
-   "marketPct": 0.54,
-   "excessPct": -0.88,
-   "excessSigma": -0.23
+   "marketPct": 0.53,
+   "excessPct": -0.8,
+   "excessSigma": -0.21
   },
   {
    "ticker": "ELI.BR",
@@ -2296,9 +2309,9 @@
    "volume": 6008,
    "medianVolume": 89603,
    "rvol": 0.07,
-   "marketPct": 0.54,
-   "excessPct": 0.02,
-   "excessSigma": 0.01
+   "marketPct": 0.53,
+   "excessPct": 0.03,
+   "excessSigma": 0.02
   },
   {
    "ticker": "CLOUD.OL",
@@ -2347,9 +2360,9 @@
    "volume": 14518,
    "medianVolume": 111969,
    "rvol": 0.13,
-   "marketPct": 0.54,
-   "excessPct": -1.12,
-   "excessSigma": -0.91
+   "marketPct": 0.53,
+   "excessPct": -1.11,
+   "excessSigma": -0.9
   },
   {
    "ticker": "BONHR.OL",
@@ -2398,9 +2411,9 @@
    "volume": 6609,
    "medianVolume": 15451,
    "rvol": 0.43,
-   "marketPct": 0.54,
-   "excessPct": 0.69,
-   "excessSigma": 0.61
+   "marketPct": 0.53,
+   "excessPct": 0.7,
+   "excessSigma": 0.62
   },
   {
    "ticker": "NKT.CO",
@@ -2439,19 +2452,19 @@
     944.0,
     930.5,
     933.0,
-    938.5
+    939.0
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 938.5,
-   "changePct": 0.59,
-   "sigma": 0.3,
-   "volume": 27990,
+   "close": 939.0,
+   "changePct": 0.64,
+   "sigma": 0.32,
+   "volume": 28353,
    "medianVolume": 145252,
-   "rvol": 0.19,
-   "marketPct": 0.54,
-   "excessPct": 0.05,
-   "excessSigma": 0.03
+   "rvol": 0.2,
+   "marketPct": 0.53,
+   "excessPct": 0.11,
+   "excessSigma": 0.06
   },
   {
    "ticker": "PERR.PA",
@@ -2500,8 +2513,8 @@
    "volume": 122,
    "medianVolume": 808,
    "rvol": 0.15,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
   },
   {
@@ -2541,22 +2554,9 @@
     276.65,
     276.0,
     280.35,
-    285.95
+    286.0
    ],
    "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMioAFBVV95cUxOZFpuczctRTdxaG1kcFdUVjNSQ2Jtak5rMEJCX21TQW1zcmFBSmRqV3ZQNXpzR1IxbXJkQ1B3S2hkUW1rWV94UUVKajdzY3JmQ01oY0dyOGJFbU9jMFMzUWxlbjdwc19EUG5RVkpmUngtN2Mzcm12dEhlVVI3MzFBZnZZWVB0eDJwWVZLZXpZRnZmb25pLXRUbTgta0VrOGdY?oc=5",
-     "headline": "Siemens och TechSeed inleder partnerskap för digitalisering av fastigheter",
-     "english": "Siemens and TechSeed initiate real estate digitization partnership",
-     "lang": "sv",
-     "publisher": "Dagens Fastigheter",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZFpuczctRTdxaG1kcFdUVjNSQ2Jtak5rMEJCX21TQW1zcmFBSmRqV3ZQNXpzR1IxbXJkQ1B3S2hkUW1rWV94UUVKajdzY3JmQ01oY0dyOGJFbU9jMFMzUWxlbjdwc19EUG5RVkpmUngtN2Mzcm12dEhlVVI3MzFBZnZZWVB0eDJwWVZLZXpZRnZmb25pLXRUbTgta0VrOGdY?oc=5",
-     "published": "Sun, 23 Aug 2026 21:46:58 GMT",
-     "fresh": true
-    },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbHBtQWN1aVNSSGpISGdaN1BpMllOV1NEYXh0cFprMDVuS3E0d3pzbHE5eUxlQ2xlQzY0NGs3c0lsS2dhOUtiZVFSUDhYZ3cwZ2dESFJOZmZ2b3hwQ09MX0RJMjFOQUFUVng3aDlDdzhUZF9SWkFpZ21VSm5PZUduYWw1ZXE4OUszR2didHNIc1h4Z1RPSTB1SWQxQnF6QkN4TURiYTdOM0FvcmMxa3lQTVVZeXpwMlZFNW1TX25XYmNWUlVITy1MRGhVM3c2X2sxNWY0bkxoYw?oc=5",
@@ -2598,6 +2598,19 @@
     },
     {
      "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMioAFBVV95cUxOZFpuczctRTdxaG1kcFdUVjNSQ2Jtak5rMEJCX21TQW1zcmFBSmRqV3ZQNXpzR1IxbXJkQ1B3S2hkUW1rWV94UUVKajdzY3JmQ01oY0dyOGJFbU9jMFMzUWxlbjdwc19EUG5RVkpmUngtN2Mzcm12dEhlVVI3MzFBZnZZWVB0eDJwWVZLZXpZRnZmb25pLXRUbTgta0VrOGdY?oc=5",
+     "headline": "Siemens och TechSeed inleder partnerskap för digitalisering av fastigheter",
+     "english": "Siemens and TechSeed initiate real estate digitization partnership",
+     "lang": "sv",
+     "publisher": "Dagens Fastigheter",
+     "score": 1,
+     "material": 1,
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZFpuczctRTdxaG1kcFdUVjNSQ2Jtak5rMEJCX21TQW1zcmFBSmRqV3ZQNXpzR1IxbXJkQ1B3S2hkUW1rWV94UUVKajdzY3JmQ01oY0dyOGJFbU9jMFMzUWxlbjdwc19EUG5RVkpmUngtN2Mzcm12dEhlVVI3MzFBZnZZWVB0eDJwWVZLZXpZRnZmb25pLXRUbTgta0VrOGdY?oc=5",
+     "published": "Sun, 23 Aug 2026 21:46:58 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMihAFBVV95cUxPSFplN1Z1UGNQRkNWb3kyajRqeUd1TGoyR2JlMzBheE40dWRDS3BfUXFPLTRBWDR0ck5BSERqVXd0eEVwUDFuQUpoT3V6R0xSWXI1bHp3YVJEdmV6Qno1VE91ZDNnYkNJSTN1U1dwZzl6eS1YOHN2aURtZHZPakdNazVJUkU?oc=5",
      "headline": "Källor: EQT jagar Siemens-enhet värd över 100 miljarder",
      "english": "Sources: EQT hunts Siemens unit worth over 100 billion",
@@ -2611,15 +2624,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 285.95,
-   "changePct": 2.0,
-   "sigma": 1.2,
-   "volume": 215135,
+   "close": 286.0,
+   "changePct": 2.02,
+   "sigma": 1.21,
+   "volume": 216956,
    "medianVolume": 807554,
    "rvol": 0.27,
-   "marketPct": 0.54,
-   "excessPct": 1.46,
-   "excessSigma": 0.88
+   "marketPct": 0.53,
+   "excessPct": 1.5,
+   "excessSigma": 0.9
   },
   {
    "ticker": "SAAB-B.ST",
@@ -2658,7 +2671,7 @@
     675.9,
     666.5,
     655.2,
-    644.1
+    643.8
    ],
    "stories": [
     {
@@ -2715,15 +2728,119 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 644.1,
-   "changePct": -1.69,
-   "sigma": -1.04,
-   "volume": 350179,
+   "close": 643.8,
+   "changePct": -1.74,
+   "sigma": -1.07,
+   "volume": 352317,
    "medianVolume": 1752304,
    "rvol": 0.2,
-   "marketPct": 0.54,
-   "excessPct": -2.23,
-   "excessSigma": -1.37
+   "marketPct": 0.53,
+   "excessPct": -2.27,
+   "excessSigma": -1.4
+  },
+  {
+   "ticker": "TKMS.DE",
+   "name": "TKMS",
+   "sector": "Industry & defence",
+   "exchange": "XETRA",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    82.3,
+    81.7,
+    80.4,
+    80.3,
+    79.5,
+    81.1,
+    81.4,
+    80.3,
+    81.7,
+    83.0,
+    82.1,
+    79.8,
+    80.6,
+    81.9,
+    85.1,
+    89.6,
+    88.6,
+    90.8,
+    88.2,
+    86.8,
+    86.8,
+    94.2,
+    103.8,
+    104.0,
+    100.0,
+    96.3,
+    96.7,
+    93.0,
+    91.6,
+    91.3
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMitwFBVV95cUxOVDViOFpVWDEtVGVrdmpIV3dBVXFhN3dLa0xUbzM2ZGp1cmxDWEF0YVk2U25sM0RaSjI4TlZQakhmOUowaXRVQThNQlNkVGxvQTFDZmtxR3EwV1kxZm44Mjk4NmxaaU9yV2l5T0JqUm5fMVRFSTIwT3RxcnBmUl94Tno5Y2JKRF9pclc4XzNqQkhNOWoySEtBRGw2TVcyRUx3a3RoM0h5dGJkc19kUnJwNHZUUHV6RUU?oc=5",
+     "headline": "TKMS: Prognose steigt – schafft die Aktie noch mehr?",
+     "english": "TKMS: Forecast rises – can the stock do even more?",
+     "lang": "de",
+     "publisher": "BörsenNEWS.de",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVDViOFpVWDEtVGVrdmpIV3dBVXFhN3dLa0xUbzM2ZGp1cmxDWEF0YVk2U25sM0RaSjI4TlZQakhmOUowaXRVQThNQlNkVGxvQTFDZmtxR3EwV1kxZm44Mjk4NmxaaU9yV2l5T0JqUm5fMVRFSTIwT3RxcnBmUl94Tno5Y2JKRF9pclc4XzNqQkhNOWoySEtBRGw2TVcyRUx3a3RoM0h5dGJkc19kUnJwNHZUUHV6RUU?oc=5",
+     "published": "Mon, 24 Aug 2026 13:24:00 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMieEFVX3lxTE9reWF6UzFtSFRQR3VqdGZHeDVhZ3NwNjRjOGdGZEVYcDZmWkVIanBERUZtZy1Qb1dmZG0wZFplODhVYWc2TzN0dWFTcHQ4T3FxSXY3S1dQNnI3UmJwUXVJbUoxSGcxQmh0OGkwVVNKMm9KLVVHV2dCZw?oc=5",
+     "headline": "A Canadian company makes hydrogen by dropping scrap aluminum into water, and it wants to supply the industrial base going up around the 12 submarines Ottawa just ordered, 2,800-ton boats that run 41 days under on hydrogen loaded in port and stored o",
+     "english": null,
+     "lang": "en",
+     "publisher": "Autonocion.com",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9reWF6UzFtSFRQR3VqdGZHeDVhZ3NwNjRjOGdGZEVYcDZmWkVIanBERUZtZy1Qb1dmZG0wZFplODhVYWc2TzN0dWFTcHQ4T3FxSXY3S1dQNnI3UmJwUXVJbUoxSGcxQmh0OGkwVVNKMm9KLVVHV2dCZw?oc=5",
+     "published": "Mon, 24 Aug 2026 10:30:35 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMigwFBVV95cUxQM01TWVRza2lYUEpoa0RJY1FJaW9hRUxJazhOOUVvVVozeXhueGRWQmwtRkx0akVTM2xaNkJrbzBjaXE0a1NmQk1Rd0ltTnpjSXF6Z3MyQWRLSVJSQ1BUakNTX0JMX3dCTC1PamxhMzN4WS1kSm1IMzFIU0w4LXJlRnhpUQ?oc=5",
+     "headline": "TKMS Aktie: 787-Millionen-Vertrag mit Saab",
+     "english": "TKMS share: 787 million contract with Saab",
+     "lang": "de",
+     "publisher": "Börse Global",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQM01TWVRza2lYUEpoa0RJY1FJaW9hRUxJazhOOUVvVVozeXhueGRWQmwtRkx0akVTM2xaNkJrbzBjaXE0a1NmQk1Rd0ltTnpjSXF6Z3MyQWRLSVJSQ1BUakNTX0JMX3dCTC1PamxhMzN4WS1kSm1IMzFIU0w4LXJlRnhpUQ?oc=5",
+     "published": "Mon, 24 Aug 2026 08:33:23 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi6wFBVV95cUxOektsRGdFblVUWFFBbFlFVnFsMXdsYzNtZmFJdFFkM3lzV3k5aHZfWGVlbmFPUTZoZDRwRHB2TlpTWEU0b1pNRDU3ODV1MlFWX1IyUFloZE9lNEx6U0M1SjdsZjdZQUJyQ3hSa0NaU1VVcC1iRHI1c3lYZmw0RFRjS0RVWndpV29hS0hGYzg2TFJ6M1J6bHRUUWNPYUF3TGo5Rm1TMTZLREg4VlEzSVF5cXc4UGI2cHo0R3VKZnJ3enpET0swVnBLM0l6RW53cDh5ZDZRLU5qZUppMXFlWUZzTzZXLTlILVk0UGd3?oc=5",
+     "headline": "TKMS, Navantia move towards joint submarine framework by year-end to expand capacity and compete for future global naval orders",
+     "english": null,
+     "lang": "en",
+     "publisher": "Defence Industry Europe",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOektsRGdFblVUWFFBbFlFVnFsMXdsYzNtZmFJdFFkM3lzV3k5aHZfWGVlbmFPUTZoZDRwRHB2TlpTWEU0b1pNRDU3ODV1MlFWX1IyUFloZE9lNEx6U0M1SjdsZjdZQUJyQ3hSa0NaU1VVcC1iRHI1c3lYZmw0RFRjS0RVWndpV29hS0hGYzg2TFJ6M1J6bHRUUWNPYUF3TGo5Rm1TMTZLREg4VlEzSVF5cXc4UGI2cHo0R3VKZnJ3enpET0swVnBLM0l6RW53cDh5ZDZRLU5qZUppMXFlWUZzTzZXLTlILVk0UGd3?oc=5",
+     "published": "Sun, 23 Aug 2026 19:45:22 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 91.3,
+   "changePct": -0.33,
+   "sigma": -0.08,
+   "volume": 34025,
+   "medianVolume": 184137,
+   "rvol": 0.18,
+   "marketPct": 0.53,
+   "excessPct": -0.85,
+   "excessSigma": -0.21
   },
   {
    "ticker": "CAF.MC",
@@ -2812,100 +2929,9 @@
    "volume": 6743,
    "medianVolume": 25663,
    "rvol": 0.26,
-   "marketPct": 0.54,
-   "excessPct": 1.09,
-   "excessSigma": 0.42
-  },
-  {
-   "ticker": "TKMS.DE",
-   "name": "TKMS",
-   "sector": "Industry & defence",
-   "exchange": "XETRA",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    82.3,
-    81.7,
-    80.4,
-    80.3,
-    79.5,
-    81.1,
-    81.4,
-    80.3,
-    81.7,
-    83.0,
-    82.1,
-    79.8,
-    80.6,
-    81.9,
-    85.1,
-    89.6,
-    88.6,
-    90.8,
-    88.2,
-    86.8,
-    86.8,
-    94.2,
-    103.8,
-    104.0,
-    100.0,
-    96.3,
-    96.7,
-    93.0,
-    91.6,
-    91.3
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMitwFBVV95cUxOVDViOFpVWDEtVGVrdmpIV3dBVXFhN3dLa0xUbzM2ZGp1cmxDWEF0YVk2U25sM0RaSjI4TlZQakhmOUowaXRVQThNQlNkVGxvQTFDZmtxR3EwV1kxZm44Mjk4NmxaaU9yV2l5T0JqUm5fMVRFSTIwT3RxcnBmUl94Tno5Y2JKRF9pclc4XzNqQkhNOWoySEtBRGw2TVcyRUx3a3RoM0h5dGJkc19kUnJwNHZUUHV6RUU?oc=5",
-     "headline": "TKMS: Prognose steigt – schafft die Aktie noch mehr?",
-     "english": "TKMS: Forecast rises – can the stock do even more?",
-     "lang": "de",
-     "publisher": "BörsenNEWS.de",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVDViOFpVWDEtVGVrdmpIV3dBVXFhN3dLa0xUbzM2ZGp1cmxDWEF0YVk2U25sM0RaSjI4TlZQakhmOUowaXRVQThNQlNkVGxvQTFDZmtxR3EwV1kxZm44Mjk4NmxaaU9yV2l5T0JqUm5fMVRFSTIwT3RxcnBmUl94Tno5Y2JKRF9pclc4XzNqQkhNOWoySEtBRGw2TVcyRUx3a3RoM0h5dGJkc19kUnJwNHZUUHV6RUU?oc=5",
-     "published": "Mon, 24 Aug 2026 13:24:00 GMT",
-     "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMieEFVX3lxTE9reWF6UzFtSFRQR3VqdGZHeDVhZ3NwNjRjOGdGZEVYcDZmWkVIanBERUZtZy1Qb1dmZG0wZFplODhVYWc2TzN0dWFTcHQ4T3FxSXY3S1dQNnI3UmJwUXVJbUoxSGcxQmh0OGkwVVNKMm9KLVVHV2dCZw?oc=5",
-     "headline": "A Canadian company makes hydrogen by dropping scrap aluminum into water, and it wants to supply the industrial base going up around the 12 submarines Ottawa just ordered, 2,800-ton boats that run 41 days under on hydrogen loaded in port and stored o",
-     "english": null,
-     "lang": "en",
-     "publisher": "Autonocion.com",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9reWF6UzFtSFRQR3VqdGZHeDVhZ3NwNjRjOGdGZEVYcDZmWkVIanBERUZtZy1Qb1dmZG0wZFplODhVYWc2TzN0dWFTcHQ4T3FxSXY3S1dQNnI3UmJwUXVJbUoxSGcxQmh0OGkwVVNKMm9KLVVHV2dCZw?oc=5",
-     "published": "Mon, 24 Aug 2026 10:30:35 GMT",
-     "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi6wFBVV95cUxOektsRGdFblVUWFFBbFlFVnFsMXdsYzNtZmFJdFFkM3lzV3k5aHZfWGVlbmFPUTZoZDRwRHB2TlpTWEU0b1pNRDU3ODV1MlFWX1IyUFloZE9lNEx6U0M1SjdsZjdZQUJyQ3hSa0NaU1VVcC1iRHI1c3lYZmw0RFRjS0RVWndpV29hS0hGYzg2TFJ6M1J6bHRUUWNPYUF3TGo5Rm1TMTZLREg4VlEzSVF5cXc4UGI2cHo0R3VKZnJ3enpET0swVnBLM0l6RW53cDh5ZDZRLU5qZUppMXFlWUZzTzZXLTlILVk0UGd3?oc=5",
-     "headline": "TKMS, Navantia move towards joint submarine framework by year-end to expand capacity and compete for future global naval orders",
-     "english": null,
-     "lang": "en",
-     "publisher": "Defence Industry Europe",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOektsRGdFblVUWFFBbFlFVnFsMXdsYzNtZmFJdFFkM3lzV3k5aHZfWGVlbmFPUTZoZDRwRHB2TlpTWEU0b1pNRDU3ODV1MlFWX1IyUFloZE9lNEx6U0M1SjdsZjdZQUJyQ3hSa0NaU1VVcC1iRHI1c3lYZmw0RFRjS0RVWndpV29hS0hGYzg2TFJ6M1J6bHRUUWNPYUF3TGo5Rm1TMTZLREg4VlEzSVF5cXc4UGI2cHo0R3VKZnJ3enpET0swVnBLM0l6RW53cDh5ZDZRLU5qZUppMXFlWUZzTzZXLTlILVk0UGd3?oc=5",
-     "published": "Sun, 23 Aug 2026 19:45:22 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-08-25",
-   "close": 91.3,
-   "changePct": -0.33,
-   "sigma": -0.08,
-   "volume": 33955,
-   "medianVolume": 184137,
-   "rvol": 0.18,
-   "marketPct": 0.54,
-   "excessPct": -0.86,
-   "excessSigma": -0.21
+   "marketPct": 0.53,
+   "excessPct": 1.1,
+   "excessSigma": 0.43
   },
   {
    "ticker": "ALO.PA",
@@ -2944,7 +2970,7 @@
     15.875,
     15.825,
     15.99,
-    16.295
+    16.3
    ],
    "stories": [
     {
@@ -2975,15 +3001,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 16.295,
-   "changePct": 1.91,
-   "sigma": 1.26,
-   "volume": 253672,
+   "close": 16.3,
+   "changePct": 1.94,
+   "sigma": 1.28,
+   "volume": 254512,
    "medianVolume": 969123,
    "rvol": 0.26,
-   "marketPct": 0.54,
-   "excessPct": 1.38,
-   "excessSigma": 0.91
+   "marketPct": 0.53,
+   "excessPct": 1.42,
+   "excessSigma": 0.94
   },
   {
    "ticker": "PAAL-B.CO",
@@ -3022,7 +3048,7 @@
     738.0,
     752.0,
     771.0,
-    780.0
+    779.0
    ],
    "stories": [
     {
@@ -3040,15 +3066,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 780.0,
-   "changePct": 1.17,
-   "sigma": 0.87,
-   "volume": 11199,
+   "close": 779.0,
+   "changePct": 1.04,
+   "sigma": 0.77,
+   "volume": 11231,
    "medianVolume": 18845,
-   "rvol": 0.59,
-   "marketPct": 0.54,
-   "excessPct": 0.63,
-   "excessSigma": 0.47
+   "rvol": 0.6,
+   "marketPct": 0.53,
+   "excessPct": 0.52,
+   "excessSigma": 0.39
   },
   {
    "ticker": "BOL.ST",
@@ -3087,7 +3113,7 @@
     534.2,
     539.4,
     565.6,
-    570.8
+    570.6
    ],
    "stories": [
     {
@@ -3105,15 +3131,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 570.8,
-   "changePct": 0.92,
-   "sigma": 0.45,
-   "volume": 210968,
+   "close": 570.6,
+   "changePct": 0.88,
+   "sigma": 0.44,
+   "volume": 212287,
    "medianVolume": 1009277,
    "rvol": 0.21,
-   "marketPct": 0.54,
-   "excessPct": 0.39,
-   "excessSigma": 0.19
+   "marketPct": 0.53,
+   "excessPct": 0.35,
+   "excessSigma": 0.17
   },
   {
    "ticker": "KCR.HE",
@@ -3152,70 +3178,19 @@
     27.66,
     27.62,
     28.58,
-    29.48
+    29.42
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 29.48,
-   "changePct": 3.15,
-   "sigma": 2.19,
-   "volume": 74752,
+   "close": 29.42,
+   "changePct": 2.94,
+   "sigma": 2.04,
+   "volume": 75599,
    "medianVolume": 285821,
    "rvol": 0.26,
-   "marketPct": 0.54,
-   "excessPct": 2.61,
-   "excessSigma": 1.81
-  },
-  {
-   "ticker": "AM.PA",
-   "name": "Dassault Aviation",
-   "sector": "Industry & defence",
-   "exchange": "Paris",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    284.6,
-    280.2,
-    278.8,
-    285.4,
-    282.0,
-    283.6,
-    288.0,
-    304.6,
-    299.2,
-    304.8,
-    310.2,
-    303.0,
-    300.0,
-    298.2,
-    304.8,
-    310.2,
-    310.8,
-    313.6,
-    316.2,
-    316.6,
-    316.6,
-    320.4,
-    314.2,
-    318.8,
-    312.8,
-    310.2,
-    306.0,
-    304.2,
-    299.2,
-    296.4
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 296.4,
-   "changePct": -0.94,
-   "sigma": -0.68,
-   "volume": 3631,
-   "medianVolume": 44121,
-   "rvol": 0.08,
-   "marketPct": 0.54,
-   "excessPct": -1.48,
-   "excessSigma": -1.07
+   "marketPct": 0.53,
+   "excessPct": 2.42,
+   "excessSigma": 1.68
   },
   {
    "ticker": "VOS.DE",
@@ -3264,9 +3239,60 @@
    "volume": 4789,
    "medianVolume": 19948,
    "rvol": 0.24,
-   "marketPct": 0.54,
+   "marketPct": 0.53,
    "excessPct": 1.4,
    "excessSigma": 0.99
+  },
+  {
+   "ticker": "AM.PA",
+   "name": "Dassault Aviation",
+   "sector": "Industry & defence",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    284.6,
+    280.2,
+    278.8,
+    285.4,
+    282.0,
+    283.6,
+    288.0,
+    304.6,
+    299.2,
+    304.8,
+    310.2,
+    303.0,
+    300.0,
+    298.2,
+    304.8,
+    310.2,
+    310.8,
+    313.6,
+    316.2,
+    316.6,
+    316.6,
+    320.4,
+    314.2,
+    318.8,
+    312.8,
+    310.2,
+    306.0,
+    304.2,
+    299.2,
+    297.2
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 297.2,
+   "changePct": -0.67,
+   "sigma": -0.49,
+   "volume": 3636,
+   "medianVolume": 44121,
+   "rvol": 0.08,
+   "marketPct": 0.53,
+   "excessPct": -1.2,
+   "excessSigma": -0.88
   },
   {
    "ticker": "PAL.VI",
@@ -3315,9 +3341,74 @@
    "volume": 15948,
    "medianVolume": 34898,
    "rvol": 0.46,
-   "marketPct": 0.54,
-   "excessPct": 1.11,
+   "marketPct": 0.53,
+   "excessPct": 1.12,
    "excessSigma": 0.44
+  },
+  {
+   "ticker": "TISG.MI",
+   "name": "The Italian Sea Group",
+   "sector": "Luxury",
+   "exchange": "Milan",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    1.046,
+    1.06,
+    1.042,
+    1.016,
+    1.02,
+    0.992,
+    1.052,
+    0.996,
+    1.04,
+    1.13,
+    1.278,
+    1.216,
+    1.17,
+    1.152,
+    1.078,
+    1.112,
+    1.07,
+    1.128,
+    1.134,
+    1.254,
+    1.428,
+    1.41,
+    1.478,
+    1.396,
+    1.344,
+    1.308,
+    1.252,
+    1.264,
+    1.282,
+    1.332
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMilwFBVV95cUxPc0JRc21aenkxMi1PYS1BdHpUeTlsN092UDhxSVRnXzJxdW9mVE40SHg2bmxEbVFCaFpBVEpnSzFaakZ0Mnp1ZVQ3b2RKOWdzMk5SWGo3dUFMV3NwM1pRNUpQa0VESEY0WEpYdm5kYXBNd2s5ME5wSFR6dUQ5bm1yUkIzNnNkc3Iyb3BtZWdUVU9rdXFmcTZ3?oc=5",
+     "headline": "Contratti di solidarietà per The Italian Sea Group",
+     "english": "Solidarity contracts for The Italian Sea Group",
+     "lang": "it",
+     "publisher": "Collettiva",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPc0JRc21aenkxMi1PYS1BdHpUeTlsN092UDhxSVRnXzJxdW9mVE40SHg2bmxEbVFCaFpBVEpnSzFaakZ0Mnp1ZVQ3b2RKOWdzMk5SWGo3dUFMV3NwM1pRNUpQa0VESEY0WEpYdm5kYXBNd2s5ME5wSFR6dUQ5bm1yUkIzNnNkc3Iyb3BtZWdUVU9rdXFmcTZ3?oc=5",
+     "published": "Tue, 25 Aug 2026 09:17:20 GMT",
+     "fresh": true
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 1.332,
+   "changePct": 3.9,
+   "sigma": 0.64,
+   "volume": 101264,
+   "medianVolume": 690454,
+   "rvol": 0.15,
+   "marketPct": 0.53,
+   "excessPct": 3.38,
+   "excessSigma": 0.55
   },
   {
    "ticker": "P911.DE",
@@ -3356,22 +3447,9 @@
     44.65,
     44.6,
     45.01,
-    43.69
+    43.65
    ],
    "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFNPZ21SYkg4bVhBTXotS3lSdHdfVEtKYUxHbEdYYzZHTEpBVDhyT1diQXN6cGM0eVdWUFlObzQ5MGlXVUNZNjlhZjVMMW93UWVFbUx3aEZWWWRvZDlaeW03YjN6LTRMZTdET2dzWkxnNktnaFp6Z0lnTVpUdWlGSlVyMDdpTDZQQS1ZRm14Z1lGcFBZQXI1WVhQbWdVMHp6VTlWaktWZG1XY3ZFY3ZNaVBId3M1NWJSRE1aeXFlR1BrT01NTlEzWTVmZnBkVGdNQkNra0phenduTm9SWUdQVE1mbw?oc=5",
-     "headline": "DAX-Prognose: Leichtes Plus, Bitcoin-Rally – Infineon, Siemens Energy, VW, Porsche, Nvidia im Fokus",
-     "english": null,
-     "lang": "de",
-     "publisher": "Der Aktionär",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFNPZ21SYkg4bVhBTXotS3lSdHdfVEtKYUxHbEdYYzZHTEpBVDhyT1diQXN6cGM0eVdWUFlObzQ5MGlXVUNZNjlhZjVMMW93UWVFbUx3aEZWWWRvZDlaeW03YjN6LTRMZTdET2dzWkxnNktnaFp6Z0lnTVpUdWlGSlVyMDdpTDZQQS1ZRm14Z1lGcFBZQXI1WVhQbWdVMHp6VTlWaktWZG1XY3ZFY3ZNaVBId3M1NWJSRE1aeXFlR1BrT01NTlEzWTVmZnBkVGdNQkNra0phenduTm9SWUdQVE1mbw?oc=5",
-     "published": "Tue, 25 Aug 2026 07:18:22 GMT",
-     "fresh": true
-    },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMi3wFBVV95cUxORlU4YmZ1aG9SZHJSWl83SGg3cnV6dnlqOGt4OW14VjBubmlVZjJ1ak02RmRyWVB6cmxocUtwcG8tdHliT0tIZXkzYWd5eW8xdkpubjdmTEdTWTlHamg0MEhIMXVtbWZmY2lEcHRNNkZka09leExmYXR1YzVMWFRHVlRDZlVqc1NVMk4wWFhNZG9hbVBrclVESDJwZjI5YWRTUHVISHM5S2JTd1RCckVhWUJpMWp3cEdzNkRCQXdXLWZCcDhsLXJDeExhcUNtdXRRakpCcGJHQXZYd21Jb2NJ0gHkAUFVX3lxTE9TXzcyMG1rZDBIRE1fS0pXVkpkRjJBTnozQU56QzJTLVFRbUZrdU1PQjJaVjZzQmtkVzlDemQzV0Rxejg0Z0RDV0xFWEZOX3dJUDV1MGNQMW43RGJGSDJ1VUltaU9xOXFFeGVnZGdKSGc4dWdpY2UySGE0ZEUzd3ZuQWF2SDdVYTAyVVcxa2lEa2RxZzd0U015ZEZTWTJpcW40aktycGJMQWNhVEJKeTdTREhXdUJpMWFWN05zUGpqNWt2cE1kUHJCMmh2TkJNUHE3Qnpodmt6VDFuMjl6ZWtaRl9XaA?oc=5",
@@ -3413,6 +3491,19 @@
     },
     {
      "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFNPZ21SYkg4bVhBTXotS3lSdHdfVEtKYUxHbEdYYzZHTEpBVDhyT1diQXN6cGM0eVdWUFlObzQ5MGlXVUNZNjlhZjVMMW93UWVFbUx3aEZWWWRvZDlaeW03YjN6LTRMZTdET2dzWkxnNktnaFp6Z0lnTVpUdWlGSlVyMDdpTDZQQS1ZRm14Z1lGcFBZQXI1WVhQbWdVMHp6VTlWaktWZG1XY3ZFY3ZNaVBId3M1NWJSRE1aeXFlR1BrT01NTlEzWTVmZnBkVGdNQkNra0phenduTm9SWUdQVE1mbw?oc=5",
+     "headline": "DAX-Prognose: Leichtes Plus, Bitcoin-Rally – Infineon, Siemens Energy, VW, Porsche, Nvidia im Fokus",
+     "english": "DAX forecast: Slight plus, Bitcoin rally – Infineon, Siemens Energy, VW, Porsche, Nvidia in focus",
+     "lang": "de",
+     "publisher": "Der Aktionär",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFNPZ21SYkg4bVhBTXotS3lSdHdfVEtKYUxHbEdYYzZHTEpBVDhyT1diQXN6cGM0eVdWUFlObzQ5MGlXVUNZNjlhZjVMMW93UWVFbUx3aEZWWWRvZDlaeW03YjN6LTRMZTdET2dzWkxnNktnaFp6Z0lnTVpUdWlGSlVyMDdpTDZQQS1ZRm14Z1lGcFBZQXI1WVhQbWdVMHp6VTlWaktWZG1XY3ZFY3ZNaVBId3M1NWJSRE1aeXFlR1BrT01NTlEzWTVmZnBkVGdNQkNra0phenduTm9SWUdQVE1mbw?oc=5",
+     "published": "Tue, 25 Aug 2026 07:18:22 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMitwFBVV95cUxOeE1ZM3NMT1pBYXFKQ25Qc0wtVTBZVDNjNzhHdXo5RlFjOVZjYnZSSUJucmZQcF9TSEVwYlhsS2VsRk9vYTJjSDZyYXZfRlBlRHlvaVMxN3ZsQl93djRJaXZXV2FuUmNwTko4bzFCYWRUMHpGZWJ3ckZ3SmhLUDV2cW5vU0l6SWI5TTQwa1FhSVpDbFFKR1dwcXVPSGhUN3FaR01uU1pReEF5X3BybEhEMnVpVFptblE?oc=5",
      "headline": "TCS says Porsche partnership opens access to other European automakers - CNBC TV18",
      "english": null,
@@ -3428,7 +3519,7 @@
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMid0FVX3lxTE12aDFJaHJYcWpHSmc2cDBTSmc5eXpCdGZEWXFzOWJoNTlsbENhbTZydmk4RlVQSlRaTmRSY2JFMzljU1JhUi1tMXpndTFTOFRacF96VjVCZndyQnNJTTl6dWZNR1VEZTItX0ZqSGdQdWY4c2otcXJz?oc=5",
      "headline": "Porsches AI-drag – tecknar miljardkonsultavtal",
-     "english": null,
+     "english": "Porsche's AI drag – tecknar billion consultancy",
      "lang": "nl",
      "publisher": "Dagens industri",
      "score": 3,
@@ -3439,15 +3530,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 43.69,
-   "changePct": -2.93,
-   "sigma": -2.04,
-   "volume": 60941,
+   "close": 43.65,
+   "changePct": -3.02,
+   "sigma": -2.1,
+   "volume": 61133,
    "medianVolume": 344033,
    "rvol": 0.18,
-   "marketPct": 0.54,
-   "excessPct": -3.47,
-   "excessSigma": -2.42
+   "marketPct": 0.53,
+   "excessPct": -3.54,
+   "excessSigma": -2.46
   },
   {
    "ticker": "EL.PA",
@@ -3491,15 +3582,41 @@
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2poYTBla0RwaUR2Ums4LTNxQWxCZkw5TWhGRWpob3NmZFA0TVF2d2hyTl9SdUdHc09sT0JYZS0zaW5XcC1lLTRFc0N3cWhmZnlSdldBYVo2MXEzRUtSeEVUcTA5cjFPQnhkS1hFVlZVMEhuZkwxVTY5aVBwSjFuZDlsa1gtRW13Q2xjMGhvZEdaX2RtYWZub3NYMXh6RWM3Yml1WDl6NnVGcU0ybi1XRC1PYmpDZ19fVVAybUE1WmRnQQ?oc=5",
-     "headline": "EssilorLuxottica founder's son quits management roles after reported rift with CEO",
-     "english": null,
-     "lang": "en",
-     "publisher": "Reuters",
-     "score": 5,
+     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxOUTFjNXM0NkpVeUh5c0FIeUYxcWNVeXdXOUlENXRiUTlkeUJGYnlJSlBaVU9McXpUdEVTUXFuTFkxamtmVnlqNGlaT09UNDY1alBuVkc0TkJtYkpPN1NzT1JGVlVPbTVmTmgtdDhWQnN3bTVJUXU1TTZDTWNyVHp1MUhyZ2Zib29UeWhEVnhRMVlyekZVZzhidER6SXg5V3FKUTZPWXZQRXlXdldPR080?oc=5",
+     "headline": "Ray-Ban-arving trekker seg uventet: Kritiserer ledelsen",
+     "english": "Ray-Ban heir resigns unexpectedly: Criticizes management",
+     "lang": "no",
+     "publisher": "Finansavisen",
+     "score": 6,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUTFjNXM0NkpVeUh5c0FIeUYxcWNVeXdXOUlENXRiUTlkeUJGYnlJSlBaVU9McXpUdEVTUXFuTFkxamtmVnlqNGlaT09UNDY1alBuVkc0TkJtYkpPN1NzT1JGVlVPbTVmTmgtdDhWQnN3bTVJUXU1TTZDTWNyVHp1MUhyZ2Zib29UeWhEVnhRMVlyekZVZzhidER6SXg5V3FKUTZPWXZQRXlXdldPR080?oc=5",
+     "published": "Tue, 25 Aug 2026 10:52:26 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMihwFBVV95cUxOd1BCWGFQZ2tEc05kVk9haWpZYXRnMUdfcjZxMTRpeUZqT2c4aFFOcG14cGdNckdaaFhld0tjazZkeVpyRmtUMjItNk0xT3ROS3JId1k0Y1dXcG5ZTWZOUEw4Ym12SVo5NVY2WVVHWXJVT1B3RG1KakFGVk9pdkNuRS1KejBhazA?oc=5",
+     "headline": "Grundarson lämnar ledning efter VD-konflikt",
+     "english": "Founder son leaves management after CEO conflict",
+     "lang": "sv",
+     "publisher": "Affärsvärlden",
+     "score": 2,
      "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2poYTBla0RwaUR2Ums4LTNxQWxCZkw5TWhGRWpob3NmZFA0TVF2d2hyTl9SdUdHc09sT0JYZS0zaW5XcC1lLTRFc0N3cWhmZnlSdldBYVo2MXEzRUtSeEVUcTA5cjFPQnhkS1hFVlZVMEhuZkwxVTY5aVBwSjFuZDlsa1gtRW13Q2xjMGhvZEdaX2RtYWZub3NYMXh6RWM3Yml1WDl6NnVGcU0ybi1XRC1PYmpDZ19fVVAybUE1WmRnQQ?oc=5",
-     "published": "Tue, 25 Aug 2026 08:30:26 GMT",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOd1BCWGFQZ2tEc05kVk9haWpZYXRnMUdfcjZxMTRpeUZqT2c4aFFOcG14cGdNckdaaFhld0tjazZkeVpyRmtUMjItNk0xT3ROS3JId1k0Y1dXcG5ZTWZOUEw4Ym12SVo5NVY2WVVHWXJVT1B3RG1KakFGVk9pdkNuRS1KejBhazA?oc=5",
+     "published": "Tue, 25 Aug 2026 09:38:06 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVDJCUVo2c1B6eldRVUZpUEFuRlZ5LW9EZFlicWROUmpXTndYRnQxRFNtSU5OMGZudzNMZ24xMi02U2RKM1RqM3VqTXVJclNOejB6TVRlM28wTklyMEZ1MUxOUTZWUHl0ekpvWllDMEh3bWM2a3M0clo4Rk1GMUdtX3pSaVVrTzVkazNwa0gtUG1IYVVlZ0dRQV9MWXlwLWFjYjNzcUROcEhSdVJjRk12dUU5aHN0S3Z3M2NDMWYyVEw2OEZSbklGTDFpbnoxX1RCOUxqSmphLV9Zanc?oc=5",
+     "headline": "Bourse : du rififi chez EssilorLuxottica, des contrats pour Boeing, Eiffage et Exosens",
+     "english": "Stock exchange: rififi at EssilorLuxottica, contracts for Boeing, Eiffage and Exosens",
+     "lang": "fr",
+     "publisher": "Zonebourse",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVDJCUVo2c1B6eldRVUZpUEFuRlZ5LW9EZFlicWROUmpXTndYRnQxRFNtSU5OMGZudzNMZ24xMi02U2RKM1RqM3VqTXVJclNOejB6TVRlM28wTklyMEZ1MUxOUTZWUHl0ekpvWllDMEh3bWM2a3M0clo4Rk1GMUdtX3pSaVVrTzVkazNwa0gtUG1IYVVlZ0dRQV9MWXlwLWFjYjNzcUROcEhSdVJjRk12dUU5aHN0S3Z3M2NDMWYyVEw2OEZSbklGTDFpbnoxX1RCOUxqSmphLV9Zanc?oc=5",
+     "published": "Tue, 25 Aug 2026 06:55:07 GMT",
      "fresh": false
     },
     {
@@ -3527,29 +3644,16 @@
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZm9iMDBqMXEtWllicGJXX0VLZkpaTzBQdXNJU0ZQT2FDeF9FX2ZNU2Z3Zm5oTkxlOVFaMndpWkhsNUh1NExTbkFOdW52clBvVTVtMktiOFN5N1VaY0FNX19LbFFwTGRaSm9vaU9Ld2RjNHZueFRPdC01R2otdkF4UVNwMlZzdkl1RXVscUxZdWpIQzFYZmRYUFEyWm1NWGM?oc=5",
      "published": "Tue, 25 Aug 2026 11:21:16 GMT",
      "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxOUTFjNXM0NkpVeUh5c0FIeUYxcWNVeXdXOUlENXRiUTlkeUJGYnlJSlBaVU9McXpUdEVTUXFuTFkxamtmVnlqNGlaT09UNDY1alBuVkc0TkJtYkpPN1NzT1JGVlVPbTVmTmgtdDhWQnN3bTVJUXU1TTZDTWNyVHp1MUhyZ2Zib29UeWhEVnhRMVlyekZVZzhidER6SXg5V3FKUTZPWXZQRXlXdldPR080?oc=5",
-     "headline": "Ray-Ban-arving trekker seg uventet: Kritiserer ledelsen",
-     "english": null,
-     "lang": "no",
-     "publisher": "Finansavisen",
-     "score": 3,
-     "material": 0,
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUTFjNXM0NkpVeUh5c0FIeUYxcWNVeXdXOUlENXRiUTlkeUJGYnlJSlBaVU9McXpUdEVTUXFuTFkxamtmVnlqNGlaT09UNDY1alBuVkc0TkJtYkpPN1NzT1JGVlVPbTVmTmgtdDhWQnN3bTVJUXU1TTZDTWNyVHp1MUhyZ2Zib29UeWhEVnhRMVlyekZVZzhidER6SXg5V3FKUTZPWXZQRXlXdldPR080?oc=5",
-     "published": "Tue, 25 Aug 2026 10:52:26 GMT",
-     "fresh": false
     }
    ],
    "date": "2026-08-25",
    "close": 160.4,
    "changePct": -1.72,
    "sigma": -1.02,
-   "volume": 170892,
+   "volume": 172106,
    "medianVolume": 697394,
    "rvol": 0.25,
-   "marketPct": 0.54,
+   "marketPct": 0.53,
    "excessPct": -2.25,
    "excessSigma": -1.33
   },
@@ -3590,9 +3694,35 @@
     362.5,
     364.15,
     371.1,
-    357.75
+    357.4
    ],
    "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiwgFBVV95cUxONEU5TkMza0RwR2ZBazRXbnZzS196WVp0TlNBdVA1S0pnc2ctYnJBd2YxRzMtWkZNQ0hkWm5qQ0ZwdldTak1TOVF1N3g0ajhINzE0ZWVEVDlBS3BDVEhRRVFvZ0pUOUlfMF9jMERGWFBCVHBVc2ZzMmlFb0JNNFNPeUd2aFp3QUZ0MnRhbXJXYVBjNTdQaTlqbWtOenF3bFdkcXNLdHNGRUlpRS1HRV94SkIwRmtCaVQwU2s0NE5fRThvUQ?oc=5",
+     "headline": "San Felice, si dimette la consigliera Paola Ferrari, al suo posto l’assessore Giorgio Bocchi",
+     "english": "San Felice, the councillor Paola Ferrari resigns, in her place the councillor Giorgio Bocchi",
+     "lang": "it",
+     "publisher": "Sul Panaro news",
+     "score": 3,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONEU5TkMza0RwR2ZBazRXbnZzS196WVp0TlNBdVA1S0pnc2ctYnJBd2YxRzMtWkZNQ0hkWm5qQ0ZwdldTak1TOVF1N3g0ajhINzE0ZWVEVDlBS3BDVEhRRVFvZ0pUOUlfMF9jMERGWFBCVHBVc2ZzMmlFb0JNNFNPeUd2aFp3QUZ0MnRhbXJXYVBjNTdQaTlqbWtOenF3bFdkcXNLdHNGRUlpRS1HRV94SkIwRmtCaVQwU2s0NE5fRThvUQ?oc=5",
+     "published": "Tue, 25 Aug 2026 11:24:41 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi-gFBVV95cUxPeGF6Rk1tWHUwZnJCcWFuS3MxeVFmYkVxUm9zYXRoV1JVMlh2b1F4ZFQtanFSTUQ4UlZ1ME1pVXU2UFJvSldjX19rX2VITXBnWThhTEl1czFsdTdMbnJVT0xnTU1DVnpiRWYtYTg0NHNjMnhJRTJHMVlrbzluWWdKR3lIeG1PdWpzemRZX2RrZ2VEUWFvcHhqYTd2NWlBLXBOSVFHem5TeGdfbTVReFlkQmVmNmdHcFRCQXFXeDRrWXlwc1psTG1GLWVLY1g3VWxySnl2NGkxSmNXa1JGUDRpNHBQandOamNtLTNQR3ZuR3g5T0k0YVZpZ213?oc=5",
+     "headline": "Non solo Ferrari, a Monza anche la Mercedes di Antonelli con motore potenziato?",
+     "english": "Not only Ferrari, but also Antonelli's Mercedes with an upgraded engine at Monza?",
+     "lang": "it",
+     "publisher": "eurosport.it",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPeGF6Rk1tWHUwZnJCcWFuS3MxeVFmYkVxUm9zYXRoV1JVMlh2b1F4ZFQtanFSTUQ4UlZ1ME1pVXU2UFJvSldjX19rX2VITXBnWThhTEl1czFsdTdMbnJVT0xnTU1DVnpiRWYtYTg0NHNjMnhJRTJHMVlrbzluWWdKR3lIeG1PdWpzemRZX2RrZ2VEUWFvcHhqYTd2NWlBLXBOSVFHem5TeGdfbTVReFlkQmVmNmdHcFRCQXFXeDRrWXlwc1psTG1GLWVLY1g3VWxySnl2NGkxSmNXa1JGUDRpNHBQandOamNtLTNQR3ZuR3g5T0k0YVZpZ213?oc=5",
+     "published": "Tue, 25 Aug 2026 11:40:21 GMT",
+     "fresh": false
+    },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMixgFBVV95cUxNWkk1M3JYZU9Qang0OTRvcWtvYWFYN0xQaE4tam1FUWhYaDNiLWx1TEg4a2tKcFVLNkN0OEpLSi1pMHBnMzBSWm1UbjJWYWVtSXg5RXctNHpHajNlNmpySFZ4b3NIeXkzUGl2QXRlbmpqdzFMWVFmLWd6anA1ZER3WC1Land5eXJ2cl9WRmoyRHNiUDIyR2RnMUMwdVFkMmVQYWlNUFdtNUxKMmV1eHR4UEMwbGJ5TnBSMUJOMENSRWNKU09QRmc?oc=5",
@@ -3608,22 +3738,9 @@
     },
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVDcwODd2UlJ2M1pRMG80U3FNTzdxUlR5N0RDVG0zdnFReW9BZ3VRSFJrem5YM0lzY0NvNXpjRXZDWXBEbllmUmZ4V3c2ZXJkV0pjdzV3eFBvT3NHbXpsbmM4emNGZFZuNGlfNnlNTlB6RXdRaUExRDZXWWFYdDVkWTdFcmREeFZRcmxvcXVSX2VjaTFxZ2VHSjRJdURCWHBuczh5OWx0MkJJUnJtZXEtbkVET3lIUHVJdlVQa21aVmxYVm54dHNlSFZVT01td2tNTUloazdCbnRJZFNUVWhzcmNqcUpISFhEUnloSVZHSEo5LTU5?oc=5",
-     "headline": "Toto Wolff says Mercedes 'haven't got the money' to match McLaren, Ferrari's current upgrade rate amid F1 title battle",
-     "english": null,
-     "lang": "en",
-     "publisher": "Sky Sports",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVDcwODd2UlJ2M1pRMG80U3FNTzdxUlR5N0RDVG0zdnFReW9BZ3VRSFJrem5YM0lzY0NvNXpjRXZDWXBEbllmUmZ4V3c2ZXJkV0pjdzV3eFBvT3NHbXpsbmM4emNGZFZuNGlfNnlNTlB6RXdRaUExRDZXWWFYdDVkWTdFcmREeFZRcmxvcXVSX2VjaTFxZ2VHSjRJdURCWHBuczh5OWx0MkJJUnJtZXEtbkVET3lIUHVJdlVQa21aVmxYVm54dHNlSFZVT01td2tNTUloazdCbnRJZFNUVWhzcmNqcUpISFhEUnloSVZHSEo5LTU5?oc=5",
-     "published": "Mon, 24 Aug 2026 17:37:26 GMT",
-     "fresh": false
-    },
-    {
-     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZUN0N0hJYUd2aFM3UVczcDBGaXJSTC1wZWRJc0pfV0dPSDZHTjJHb3NxNlgyelQ4YUg1bjBQT05KdFNyMnZka251R0ljTC05VnNRM2pSa210bW1xdnVYeUdabTZFclVJTTN2elNQZEJxb2I4NHo4U01jTURFWlF4OG43R1YtTzN0cDd0QklBVGVOSVNWTDl1ZDRGS2Rzc0pCVm1UXzJDRXJLaGQzNXhiSmxET1VIdHZCUjY0?oc=5",
      "headline": "Alba Larsen, la ragazza più veloce del mondo: «Sarò la prima donna a vincere in Formula 1»",
-     "english": null,
+     "english": "Alba Larsen, the fastest girl in the world: \"I will be the first woman to win in Formula 1\"",
      "lang": "it",
      "publisher": "Style Magazine",
      "score": 2,
@@ -3634,15 +3751,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 357.75,
-   "changePct": -3.6,
-   "sigma": -3.26,
-   "volume": 173956,
+   "close": 357.4,
+   "changePct": -3.69,
+   "sigma": -3.34,
+   "volume": 175131,
    "medianVolume": 443588,
    "rvol": 0.39,
-   "marketPct": 0.54,
-   "excessPct": -4.13,
-   "excessSigma": -3.74
+   "marketPct": 0.53,
+   "excessPct": -4.21,
+   "excessSigma": -3.81
   },
   {
    "ticker": "YACHT.MI",
@@ -3691,60 +3808,9 @@
    "volume": 44833,
    "medianVolume": 238748,
    "rvol": 0.19,
-   "marketPct": 0.54,
-   "excessPct": -1.06,
-   "excessSigma": -0.77
-  },
-  {
-   "ticker": "TISG.MI",
-   "name": "The Italian Sea Group",
-   "sector": "Luxury",
-   "exchange": "Milan",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    1.046,
-    1.06,
-    1.042,
-    1.016,
-    1.02,
-    0.992,
-    1.052,
-    0.996,
-    1.04,
-    1.13,
-    1.278,
-    1.216,
-    1.17,
-    1.152,
-    1.078,
-    1.112,
-    1.07,
-    1.128,
-    1.134,
-    1.254,
-    1.428,
-    1.41,
-    1.478,
-    1.396,
-    1.344,
-    1.308,
-    1.252,
-    1.264,
-    1.282,
-    1.312
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 1.312,
-   "changePct": 2.34,
-   "sigma": 0.39,
-   "volume": 101159,
-   "medianVolume": 690454,
-   "rvol": 0.15,
-   "marketPct": 0.54,
-   "excessPct": 1.8,
-   "excessSigma": 0.3
+   "marketPct": 0.53,
+   "excessPct": -1.04,
+   "excessSigma": -0.76
   },
   {
    "ticker": "RMS.PA",
@@ -3783,19 +3849,19 @@
     1582.5,
     1549.5,
     1573.0,
-    1576.5
+    1574.0
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 1576.5,
-   "changePct": 0.22,
-   "sigma": 0.07,
-   "volume": 17935,
+   "close": 1574.0,
+   "changePct": 0.06,
+   "sigma": 0.02,
+   "volume": 18323,
    "medianVolume": 78750,
    "rvol": 0.23,
-   "marketPct": 0.54,
-   "excessPct": -0.32,
-   "excessSigma": -0.1
+   "marketPct": 0.53,
+   "excessPct": -0.47,
+   "excessSigma": -0.16
   },
   {
    "ticker": "1913.HK",
@@ -3844,8 +3910,8 @@
    "volume": 329511,
    "medianVolume": 1363052,
    "rvol": 0.24,
-   "marketPct": 0.54,
-   "excessPct": -0.25,
+   "marketPct": 0.53,
+   "excessPct": -0.24,
    "excessSigma": -0.07
   },
   {
@@ -3895,9 +3961,9 @@
    "volume": 5441,
    "medianVolume": 29637,
    "rvol": 0.18,
-   "marketPct": 0.54,
-   "excessPct": -0.02,
-   "excessSigma": -0.02
+   "marketPct": 0.53,
+   "excessPct": -0.01,
+   "excessSigma": -0.01
   },
   {
    "ticker": "AKRBP.OL",
@@ -3936,20 +4002,20 @@
     351.9,
     357.6,
     354.8,
-    345.5
+    345.3
    ],
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMimAFBVV95cUxPemNHWmphclZCaEp1MWFSbjJ1V1h3UVpHak91bHM3NDJCUjQ4RFk0X0ZsMHBaR2VxM05nZlNSN1FkVmd3dWdGV1FtUVJrODJEOW4za0RJcVJtY2k0bXRRY1gtbUdJd0JjaFNfM3pMQzJjQXIyOGo4Q3YweGR5UnZ2UlJrRDd3bFQ5SC1kbnBfU3NvUi1UdmZtRA?oc=5",
-     "headline": "Equinor, Aker BP and Vår Energi launch NCS exploration alliance",
-     "english": null,
-     "lang": "sv",
-     "publisher": "Offshore Technology",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPemNHWmphclZCaEp1MWFSbjJ1V1h3UVpHak91bHM3NDJCUjQ4RFk0X0ZsMHBaR2VxM05nZlNSN1FkVmd3dWdGV1FtUVJrODJEOW4za0RJcVJtY2k0bXRRY1gtbUdJd0JjaFNfM3pMQzJjQXIyOGo4Q3YweGR5UnZ2UlJrRDd3bFQ5SC1kbnBfU3NvUi1UdmZtRA?oc=5",
-     "published": "Tue, 25 Aug 2026 10:07:37 GMT",
+     "key": "web:https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ0VHTGdRZmt2T0FqVEw3el9KdlBuLTF3ZjVZbS1EOVcyTHJwUEdXS0MtZ2RxV2ZwSTRXaXZJY1RJT2thZnpSRG1Jcm9IZEZ0d3hCQ0libWpiMHAwcDNtUmR5eVpTS3puMVQ0MC1vajZfZ0NUdjRYWGk0TTZUSTRPY0huRTdtM2VHckp0eVZhTnpab1czNkFVUXZSRk5OTm5lTVh2Y2hTX3NwSXE0MFJDM1pFaFVMelZtaGU0eVc4QQ?oc=5",
+     "headline": "«Superoptimistisk» Aker BP-sjef: – Ingen må tro dette bare blir solskinnshistorier",
+     "english": "\"Superoptimistic\" Aker BP CEO: - No one should think this will just be sunshine stories",
+     "lang": "no",
+     "publisher": "Stavanger Aftenblad",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ0VHTGdRZmt2T0FqVEw3el9KdlBuLTF3ZjVZbS1EOVcyTHJwUEdXS0MtZ2RxV2ZwSTRXaXZJY1RJT2thZnpSRG1Jcm9IZEZ0d3hCQ0libWpiMHAwcDNtUmR5eVpTS3puMVQ0MC1vajZfZ0NUdjRYWGk0TTZUSTRPY0huRTdtM2VHckp0eVZhTnpab1czNkFVUXZSRk5OTm5lTVh2Y2hTX3NwSXE0MFJDM1pFaFVMelZtaGU0eVc4QQ?oc=5",
+     "published": "Mon, 24 Aug 2026 08:31:00 GMT",
      "fresh": true
     },
     {
@@ -3967,36 +4033,36 @@
     },
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMibEFVX3lxTE5uQkFLN211SzVmdjRfQ3BlcGZlb0pBTUppcXAwOHpTQ2JDZklMQmt4dzhuc3dtUkVWWmtTcjBfR05XamNoMTExNW1XMEF1TEp3bGo3ZUJROGVUYkJUU3NOWjgtMEVyLXVhV0FCMw?oc=5",
-     "headline": "Historisk letesamarbeid venter ikke utfordringer fra Sokkeldirektoratet",
-     "english": null,
+     "key": "web:https://news.google.com/rss/articles/CBMibEFVX3lxTE11OXZkRUl2ajh1SnNBcUg5SDhLaHNEUFBDMkU3dzhvZ3ZmY2dfWTdqcmJ5ZzkxUmYxRzFveDF4NDUxU1R4MzFlTmZYSFNwQWZFUlRiTkpDVF9TV2oxTk5Rdi1FUVdCOUlWLXVpRA?oc=5",
+     "headline": "Aker BP-sjefen: – Dette koster oss 250 millioner dollar i året",
+     "english": "Aker BP CEO: – This is costing us $250 million a year",
      "lang": "no",
      "publisher": "Energiwatch.no",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE11OXZkRUl2ajh1SnNBcUg5SDhLaHNEUFBDMkU3dzhvZ3ZmY2dfWTdqcmJ5ZzkxUmYxRzFveDF4NDUxU1R4MzFlTmZYSFNwQWZFUlRiTkpDVF9TV2oxTk5Rdi1FUVdCOUlWLXVpRA?oc=5",
+     "published": "Mon, 24 Aug 2026 14:30:24 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMimAFBVV95cUxPemNHWmphclZCaEp1MWFSbjJ1V1h3UVpHak91bHM3NDJCUjQ4RFk0X0ZsMHBaR2VxM05nZlNSN1FkVmd3dWdGV1FtUVJrODJEOW4za0RJcVJtY2k0bXRRY1gtbUdJd0JjaFNfM3pMQzJjQXIyOGo4Q3YweGR5UnZ2UlJrRDd3bFQ5SC1kbnBfU3NvUi1UdmZtRA?oc=5",
+     "headline": "Equinor, Aker BP and Vår Energi launch NCS exploration alliance",
+     "english": null,
+     "lang": "sv",
+     "publisher": "Offshore Technology",
      "score": 1,
      "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uQkFLN211SzVmdjRfQ3BlcGZlb0pBTUppcXAwOHpTQ2JDZklMQmt4dzhuc3dtUkVWWmtTcjBfR05XamNoMTExNW1XMEF1TEp3bGo3ZUJROGVUYkJUU3NOWjgtMEVyLXVhV0FCMw?oc=5",
-     "published": "Tue, 25 Aug 2026 11:31:01 GMT",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPemNHWmphclZCaEp1MWFSbjJ1V1h3UVpHak91bHM3NDJCUjQ4RFk0X0ZsMHBaR2VxM05nZlNSN1FkVmd3dWdGV1FtUVJrODJEOW4za0RJcVJtY2k0bXRRY1gtbUdJd0JjaFNfM3pMQzJjQXIyOGo4Q3YweGR5UnZ2UlJrRDd3bFQ5SC1kbnBfU3NvUi1UdmZtRA?oc=5",
+     "published": "Tue, 25 Aug 2026 10:07:37 GMT",
      "fresh": false
     },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMi2AFBVV95cUxOY3lyVkRXMk44WDJMRC1STXZ1TDFILUNqVkJHTmk3aE14OFpVZENoY2pteEh2eXNtMkkyRk0wb1p6U2FmdlFEWjdyYnNvYndySU5vZkJBcnAxZGJIY0ZaOGotcDF1Wm5SQWllZTlCUGNNampOY0c1TEdqRGhPVlp6TTRlNkFuRDBTVFlkTUFGZGU0dW9ka05kT3M5UGk5UFBab2JfWE5udDRoc1plM1lyR0JNbTNzWWFkNjB3MWFSS2d2WFhfSzFFSUE1Vzh4bkxobmJiTm5wODY?oc=5",
      "headline": "Equinors konserntillitsvalgt om ledelsen:– Endelig hører de på oss (+)",
-     "english": null,
+     "english": "Equinor Group Trustee on Management: - Finally, they listen to us (+)",
      "lang": "da",
-     "publisher": "Dagens Næringsliv",
-     "score": 3,
-     "material": 0,
-     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOY3lyVkRXMk44WDJMRC1STXZ1TDFILUNqVkJHTmk3aE14OFpVZENoY2pteEh2eXNtMkkyRk0wb1p6U2FmdlFEWjdyYnNvYndySU5vZkJBcnAxZGJIY0ZaOGotcDF1Wm5SQWllZTlCUGNNampOY0c1TEdqRGhPVlp6TTRlNkFuRDBTVFlkTUFGZGU0dW9ka05kT3M5UGk5UFBab2JfWE5udDRoc1plM1lyR0JNbTNzWWFkNjB3MWFSS2d2WFhfSzFFSUE1Vzh4bkxobmJiTm5wODY?oc=5",
-     "published": "Tue, 25 Aug 2026 04:22:00 GMT",
-     "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi2AFBVV95cUxOY3lyVkRXMk44WDJMRC1STXZ1TDFILUNqVkJHTmk3aE14OFpVZENoY2pteEh2eXNtMkkyRk0wb1p6U2FmdlFEWjdyYnNvYndySU5vZkJBcnAxZGJIY0ZaOGotcDF1Wm5SQWllZTlCUGNNampOY0c1TEdqRGhPVlp6TTRlNkFuRDBTVFlkTUFGZGU0dW9ka05kT3M5UGk5UFBab2JfWE5udDRoc1plM1lyR0JNbTNzWWFkNjB3MWFSS2d2WFhfSzFFSUE1Vzh4bkxobmJiTm5wODY?oc=5",
-     "headline": "Equinors konserntillitsvalgt om ledelsen:– Endelig hører de på oss (+)",
-     "english": "Equinor's group shop steward on management: - Finally they listen to us (+)",
-     "lang": "no",
      "publisher": "Dagens Næringsliv",
      "score": 3,
      "material": 0,
@@ -4019,15 +4085,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 345.5,
-   "changePct": -2.62,
-   "sigma": -2.15,
-   "volume": 464266,
+   "close": 345.3,
+   "changePct": -2.68,
+   "sigma": -2.2,
+   "volume": 465183,
    "medianVolume": 769769,
    "rvol": 0.6,
-   "marketPct": 0.54,
-   "excessPct": -3.16,
-   "excessSigma": -2.59
+   "marketPct": 0.53,
+   "excessPct": -3.21,
+   "excessSigma": -2.64
   },
   {
    "ticker": "AIR.PA",
@@ -4066,7 +4132,7 @@
     208.05,
     204.8,
     203.7,
-    206.4
+    206.5
    ],
    "stories": [
     {
@@ -4149,15 +4215,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 206.4,
-   "changePct": 1.33,
-   "sigma": 0.9,
-   "volume": 196884,
+   "close": 206.5,
+   "changePct": 1.37,
+   "sigma": 0.93,
+   "volume": 197755,
    "medianVolume": 769853,
    "rvol": 0.26,
-   "marketPct": 0.54,
-   "excessPct": 0.8,
-   "excessSigma": 0.54
+   "marketPct": 0.53,
+   "excessPct": 0.85,
+   "excessSigma": 0.58
   },
   {
    "ticker": "SAP.DE",
@@ -4196,7 +4262,7 @@
     185.9,
     185.64,
     188.12,
-    186.54
+    186.72
    ],
    "stories": [
     {
@@ -4253,15 +4319,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 186.54,
-   "changePct": -0.84,
-   "sigma": -0.4,
-   "volume": 466581,
+   "close": 186.72,
+   "changePct": -0.74,
+   "sigma": -0.35,
+   "volume": 473651,
    "medianVolume": 2913239,
    "rvol": 0.16,
-   "marketPct": 0.54,
-   "excessPct": -1.38,
-   "excessSigma": -0.66
+   "marketPct": 0.53,
+   "excessPct": -1.27,
+   "excessSigma": -0.6
   },
   {
    "ticker": "IFX.DE",
@@ -4300,7 +4366,7 @@
     54.98,
     55.41,
     55.97,
-    55.6
+    55.65
    ],
    "stories": [
     {
@@ -4344,15 +4410,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 55.6,
-   "changePct": -0.66,
-   "sigma": -0.17,
-   "volume": 860780,
+   "close": 55.65,
+   "changePct": -0.57,
+   "sigma": -0.14,
+   "volume": 865507,
    "medianVolume": 3924640,
    "rvol": 0.22,
-   "marketPct": 0.54,
-   "excessPct": -1.2,
-   "excessSigma": -0.31
+   "marketPct": 0.53,
+   "excessPct": -1.09,
+   "excessSigma": -0.27
   },
   {
    "ticker": "SAND.ST",
@@ -4391,7 +4457,7 @@
     358.5,
     368.7,
     380.8,
-    397.7
+    397.0
    ],
    "stories": [
     {
@@ -4422,15 +4488,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 397.7,
-   "changePct": 4.44,
-   "sigma": 2.81,
-   "volume": 411769,
+   "close": 397.0,
+   "changePct": 4.25,
+   "sigma": 2.7,
+   "volume": 462691,
    "medianVolume": 1594451,
-   "rvol": 0.26,
-   "marketPct": 0.54,
-   "excessPct": 3.91,
-   "excessSigma": 2.47
+   "rvol": 0.29,
+   "marketPct": 0.53,
+   "excessPct": 3.73,
+   "excessSigma": 2.37
   },
   {
    "ticker": "YAR.OL",
@@ -4469,7 +4535,7 @@
     437.2,
     433.0,
     450.1,
-    460.7
+    460.4
    ],
    "stories": [
     {
@@ -4500,15 +4566,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 460.7,
-   "changePct": 2.36,
-   "sigma": 1.24,
-   "volume": 202016,
+   "close": 460.4,
+   "changePct": 2.29,
+   "sigma": 1.21,
+   "volume": 202152,
    "medianVolume": 489854,
    "rvol": 0.41,
-   "marketPct": 0.54,
-   "excessPct": 1.82,
-   "excessSigma": 0.96
+   "marketPct": 0.53,
+   "excessPct": 1.77,
+   "excessSigma": 0.94
   },
   {
    "ticker": "SUBC.OL",
@@ -4547,7 +4613,7 @@
     341.2,
     342.2,
     338.0,
-    340.2
+    339.8
    ],
    "stories": [
     {
@@ -4578,15 +4644,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 340.2,
-   "changePct": 0.65,
-   "sigma": 0.32,
-   "volume": 23549,
+   "close": 339.8,
+   "changePct": 0.53,
+   "sigma": 0.26,
+   "volume": 23672,
    "medianVolume": 319291,
    "rvol": 0.07,
-   "marketPct": 0.54,
-   "excessPct": 0.11,
-   "excessSigma": 0.05
+   "marketPct": 0.53,
+   "excessPct": 0.01,
+   "excessSigma": 0.0
   },
   {
    "ticker": "EMBRAC-B.ST",
@@ -4625,7 +4691,7 @@
     73.12,
     72.06,
     75.06,
-    76.42
+    76.38
    ],
    "stories": [
     {
@@ -4643,15 +4709,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 76.42,
-   "changePct": 1.81,
-   "sigma": 0.63,
-   "volume": 295776,
+   "close": 76.38,
+   "changePct": 1.76,
+   "sigma": 0.61,
+   "volume": 298163,
    "medianVolume": 719794,
    "rvol": 0.41,
-   "marketPct": 0.54,
-   "excessPct": 1.27,
-   "excessSigma": 0.44
+   "marketPct": 0.53,
+   "excessPct": 1.23,
+   "excessSigma": 0.43
   },
   {
    "ticker": "VOLV-B.ST",
@@ -4690,19 +4756,19 @@
     338.2,
     340.0,
     342.8,
-    350.7
+    350.8
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 350.7,
-   "changePct": 2.3,
-   "sigma": 2.07,
-   "volume": 718237,
+   "close": 350.8,
+   "changePct": 2.33,
+   "sigma": 2.1,
+   "volume": 721142,
    "medianVolume": 2604368,
    "rvol": 0.28,
-   "marketPct": 0.54,
-   "excessPct": 1.76,
-   "excessSigma": 1.58
+   "marketPct": 0.53,
+   "excessPct": 1.81,
+   "excessSigma": 1.63
   },
   {
    "ticker": "ASML.AS",
@@ -4741,19 +4807,19 @@
     1507.6,
     1505.4,
     1506.0,
-    1509.2
+    1510.4
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 1509.2,
-   "changePct": 0.21,
-   "sigma": 0.09,
-   "volume": 110907,
+   "close": 1510.4,
+   "changePct": 0.29,
+   "sigma": 0.12,
+   "volume": 111512,
    "medianVolume": 547104,
    "rvol": 0.2,
-   "marketPct": 0.54,
-   "excessPct": -0.33,
-   "excessSigma": -0.14
+   "marketPct": 0.53,
+   "excessPct": -0.24,
+   "excessSigma": -0.1
   },
   {
    "ticker": "NOVO-B.CO",
@@ -4792,7 +4858,7 @@
     299.45,
     296.15,
     300.85,
-    306.1
+    306.45
    ],
    "stories": [
     {
@@ -4849,15 +4915,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 306.1,
-   "changePct": 1.75,
-   "sigma": 0.7,
-   "volume": 1444086,
+   "close": 306.45,
+   "changePct": 1.86,
+   "sigma": 0.75,
+   "volume": 1458396,
    "medianVolume": 3720715,
    "rvol": 0.39,
-   "marketPct": 0.54,
-   "excessPct": 1.21,
-   "excessSigma": 0.48
+   "marketPct": 0.53,
+   "excessPct": 1.33,
+   "excessSigma": 0.54
   },
   {
    "ticker": "TRMED.OL",
@@ -4933,8 +4999,8 @@
    "volume": 2710370,
    "medianVolume": 6265307,
    "rvol": 0.43,
-   "marketPct": 0.54,
-   "excessPct": 1.1,
+   "marketPct": 0.53,
+   "excessPct": 1.11,
    "excessSigma": 0.15
   },
   {
@@ -4998,9 +5064,9 @@
    "volume": 6753,
    "medianVolume": 11067,
    "rvol": 0.61,
-   "marketPct": 0.54,
-   "excessPct": 1.47,
-   "excessSigma": 1.14
+   "marketPct": 0.53,
+   "excessPct": 1.48,
+   "excessSigma": 1.15
   },
   {
    "ticker": "ZEAL.CO",
@@ -5039,7 +5105,7 @@
     321.4,
     314.6,
     321.2,
-    324.7
+    325.0
    ],
    "stories": [
     {
@@ -5057,15 +5123,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 324.7,
-   "changePct": 1.09,
-   "sigma": 0.45,
-   "volume": 256374,
+   "close": 325.0,
+   "changePct": 1.18,
+   "sigma": 0.49,
+   "volume": 256444,
    "medianVolume": 322811,
    "rvol": 0.79,
-   "marketPct": 0.54,
-   "excessPct": 0.56,
-   "excessSigma": 0.23
+   "marketPct": 0.53,
+   "excessPct": 0.65,
+   "excessSigma": 0.27
   },
   {
    "ticker": "EUZ.DE",
@@ -5111,12 +5177,12 @@
    "close": 13.3,
    "changePct": -2.56,
    "sigma": -2.46,
-   "volume": 40314,
+   "volume": 43883,
    "medianVolume": 86374,
-   "rvol": 0.47,
-   "marketPct": 0.54,
-   "excessPct": -3.1,
-   "excessSigma": -2.98
+   "rvol": 0.51,
+   "marketPct": 0.53,
+   "excessPct": -3.08,
+   "excessSigma": -2.96
   },
   {
    "ticker": "PILA.ST",
@@ -5165,8 +5231,8 @@
    "volume": 35169,
    "medianVolume": 32452,
    "rvol": 1.08,
-   "marketPct": 0.54,
-   "excessPct": -14.37,
+   "marketPct": 0.53,
+   "excessPct": -14.36,
    "excessSigma": -1.99
   },
   {
@@ -5213,10 +5279,10 @@
    "close": 10.6,
    "changePct": -3.64,
    "sigma": -1.69,
-   "volume": 827499,
+   "volume": 837522,
    "medianVolume": 464264,
-   "rvol": 1.78,
-   "marketPct": 0.54,
+   "rvol": 1.8,
+   "marketPct": 0.53,
    "excessPct": -4.17,
    "excessSigma": -1.94
   },
@@ -5267,9 +5333,9 @@
    "volume": 13383,
    "medianVolume": 53488,
    "rvol": 0.25,
-   "marketPct": 0.54,
-   "excessPct": -2.46,
-   "excessSigma": -1.79
+   "marketPct": 0.53,
+   "excessPct": -2.44,
+   "excessSigma": -1.78
   },
   {
    "ticker": "BONEX.ST",
@@ -5308,19 +5374,19 @@
     226.2,
     228.0,
     218.6,
-    223.2
+    223.4
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 223.2,
-   "changePct": 2.1,
-   "sigma": 1.01,
-   "volume": 53040,
+   "close": 223.4,
+   "changePct": 2.2,
+   "sigma": 1.06,
+   "volume": 56269,
    "medianVolume": 125100,
-   "rvol": 0.42,
-   "marketPct": 0.54,
-   "excessPct": 1.56,
-   "excessSigma": 0.75
+   "rvol": 0.45,
+   "marketPct": 0.53,
+   "excessPct": 1.68,
+   "excessSigma": 0.81
   },
   {
    "ticker": "FYB.DE",
@@ -5369,8 +5435,8 @@
    "volume": 879,
    "medianVolume": 2854,
    "rvol": 0.31,
-   "marketPct": 0.54,
-   "excessPct": -0.84,
+   "marketPct": 0.53,
+   "excessPct": -0.83,
    "excessSigma": -0.54
   },
   {
@@ -5410,19 +5476,19 @@
     395.0,
     381.0,
     391.8,
-    397.6
+    396.4
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 397.6,
-   "changePct": 1.48,
-   "sigma": 0.59,
-   "volume": 21875,
+   "close": 396.4,
+   "changePct": 1.17,
+   "sigma": 0.47,
+   "volume": 22002,
    "medianVolume": 18991,
-   "rvol": 1.15,
-   "marketPct": 0.54,
-   "excessPct": 0.94,
-   "excessSigma": 0.37
+   "rvol": 1.16,
+   "marketPct": 0.53,
+   "excessPct": 0.64,
+   "excessSigma": 0.26
   },
   {
    "ticker": "SOBI.ST",
@@ -5461,19 +5527,19 @@
     465.6,
     461.4,
     460.0,
-    460.8
+    460.6
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 460.8,
-   "changePct": 0.17,
-   "sigma": 0.08,
-   "volume": 75827,
+   "close": 460.6,
+   "changePct": 0.13,
+   "sigma": 0.06,
+   "volume": 76755,
    "medianVolume": 319859,
    "rvol": 0.24,
-   "marketPct": 0.54,
-   "excessPct": -0.36,
-   "excessSigma": -0.17
+   "marketPct": 0.53,
+   "excessPct": -0.4,
+   "excessSigma": -0.18
   },
   {
    "ticker": "GMAB.CO",
@@ -5512,19 +5578,19 @@
     2152.0,
     2141.0,
     2151.0,
-    2158.0
+    2159.0
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 2158.0,
-   "changePct": 0.33,
-   "sigma": 0.17,
-   "volume": 29716,
+   "close": 2159.0,
+   "changePct": 0.37,
+   "sigma": 0.19,
+   "volume": 30171,
    "medianVolume": 103057,
    "rvol": 0.29,
-   "marketPct": 0.54,
-   "excessPct": -0.21,
-   "excessSigma": -0.11
+   "marketPct": 0.53,
+   "excessPct": -0.16,
+   "excessSigma": -0.08
   },
   {
    "ticker": "FABG.ST",
@@ -5587,7 +5653,7 @@
    "volume": 140998,
    "medianVolume": 278367,
    "rvol": 0.51,
-   "marketPct": 0.54,
+   "marketPct": 0.53,
    "excessPct": -2.12,
    "excessSigma": -2.6
   },
@@ -5628,7 +5694,7 @@
     13.91,
     14.07,
     14.1,
-    13.96
+    13.95
    ],
    "stories": [
     {
@@ -5646,15 +5712,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 13.96,
-   "changePct": -0.99,
-   "sigma": -0.74,
-   "volume": 89354,
+   "close": 13.95,
+   "changePct": -1.06,
+   "sigma": -0.79,
+   "volume": 91210,
    "medianVolume": 809254,
    "rvol": 0.11,
-   "marketPct": 0.54,
-   "excessPct": -1.52,
-   "excessSigma": -1.14
+   "marketPct": 0.53,
+   "excessPct": -1.58,
+   "excessSigma": -1.18
   },
   {
    "ticker": "LOGI-B.ST",
@@ -5693,19 +5759,19 @@
     13.34,
     13.44,
     13.52,
-    13.36
+    13.38
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 13.36,
-   "changePct": -1.18,
-   "sigma": -1.31,
-   "volume": 123641,
+   "close": 13.38,
+   "changePct": -1.04,
+   "sigma": -1.14,
+   "volume": 123715,
    "medianVolume": 437776,
    "rvol": 0.28,
-   "marketPct": 0.54,
-   "excessPct": -1.71,
-   "excessSigma": -1.9
+   "marketPct": 0.53,
+   "excessPct": -1.56,
+   "excessSigma": -1.71
   },
   {
    "ticker": "HEBA-B.ST",
@@ -5754,9 +5820,9 @@
    "volume": 40290,
    "medianVolume": 64005,
    "rvol": 0.63,
-   "marketPct": 0.54,
-   "excessPct": 0.9,
-   "excessSigma": 1.46
+   "marketPct": 0.53,
+   "excessPct": 0.91,
+   "excessSigma": 1.48
   },
   {
    "ticker": "VNA.DE",
@@ -5795,19 +5861,19 @@
     20.07,
     19.985,
     20.06,
-    19.9
+    19.905
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 19.9,
-   "changePct": -0.8,
-   "sigma": -0.63,
-   "volume": 638304,
+   "close": 19.905,
+   "changePct": -0.77,
+   "sigma": -0.61,
+   "volume": 647084,
    "medianVolume": 2185236,
-   "rvol": 0.29,
-   "marketPct": 0.54,
-   "excessPct": -1.33,
-   "excessSigma": -1.05
+   "rvol": 0.3,
+   "marketPct": 0.53,
+   "excessPct": -1.29,
+   "excessSigma": -1.02
   },
   {
    "ticker": "BALD-B.ST",
@@ -5856,9 +5922,9 @@
    "volume": 396318,
    "medianVolume": 2088972,
    "rvol": 0.19,
-   "marketPct": 0.54,
-   "excessPct": -1.06,
-   "excessSigma": -0.86
+   "marketPct": 0.53,
+   "excessPct": -1.04,
+   "excessSigma": -0.84
   },
   {
    "ticker": "EIOF.OL",
@@ -5907,8 +5973,8 @@
    "volume": 497,
    "medianVolume": 11025,
    "rvol": 0.05,
-   "marketPct": 0.54,
-   "excessPct": -0.82,
+   "marketPct": 0.53,
+   "excessPct": -0.81,
    "excessSigma": -0.34
   },
   {
@@ -5958,8 +6024,8 @@
    "volume": 28376,
    "medianVolume": 189345,
    "rvol": 0.15,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
   },
   {
@@ -6004,19 +6070,6 @@
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUJSbVdJM1dyQy1ETmhRa1UzOWVVS3NYX2pVT1ZudnFVYml2cHc0SlJDSWw5V0JPXzF4X0JsRkdnTWRtaG9zSEt0Z1BmT0l1aEVSWUp3Zk0zN0M3eTlELXI3ZmJMbG4zM3AtLVpWMWdYdWozMzV1WW5mS001bGcwUg?oc=5",
-     "headline": "Ellos backar efter rapporten – vd:n: ”Den är en stark”",
-     "english": null,
-     "lang": "sv",
-     "publisher": "Dagens industri",
-     "score": 3,
-     "material": 0,
-     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUJSbVdJM1dyQy1ETmhRa1UzOWVVS3NYX2pVT1ZudnFVYml2cHc0SlJDSWw5V0JPXzF4X0JsRkdnTWRtaG9zSEt0Z1BmT0l1aEVSWUp3Zk0zN0M3eTlELXI3ZmJMbG4zM3AtLVpWMWdYdWozMzV1WW5mS001bGcwUg?oc=5",
-     "published": "Tue, 25 Aug 2026 09:09:24 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxNTnhRZ3RCWkFhTzVwUXRWZzFTa3RyZk9UZk51MEpfRWFndks2dkdHMXJkSV9aYWZUVzV4bW5hQThsODJ1VndMLXV6NzFlbTY4ODlsOE1pbFpaYmp6MGZDeWFlQy1PdjhhVnA4ZXZ0MHRmbjd0Rm1MODA3V292X3Z0bU1uSjVoWWd0TEpGX0tyb3hOUWY4YnhuTFZsQnUyQnU3eWpoRXNOX3JjSlBxMG1J?oc=5",
      "headline": "SB1 Markets reiterates buy on Ellos after earnings report",
      "english": null,
@@ -6043,6 +6096,19 @@
     },
     {
      "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUJSbVdJM1dyQy1ETmhRa1UzOWVVS3NYX2pVT1ZudnFVYml2cHc0SlJDSWw5V0JPXzF4X0JsRkdnTWRtaG9zSEt0Z1BmT0l1aEVSWUp3Zk0zN0M3eTlELXI3ZmJMbG4zM3AtLVpWMWdYdWozMzV1WW5mS001bGcwUg?oc=5",
+     "headline": "Ellos backar efter rapporten – vd:n: ”Den är en stark”",
+     "english": null,
+     "lang": "sv",
+     "publisher": "Dagens industri",
+     "score": 3,
+     "material": 0,
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUJSbVdJM1dyQy1ETmhRa1UzOWVVS3NYX2pVT1ZudnFVYml2cHc0SlJDSWw5V0JPXzF4X0JsRkdnTWRtaG9zSEt0Z1BmT0l1aEVSWUp3Zk0zN0M3eTlELXI3ZmJMbG4zM3AtLVpWMWdYdWozMzV1WW5mS001bGcwUg?oc=5",
+     "published": "Tue, 25 Aug 2026 09:09:24 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9OTFpTdzN1bVNhN0x6VkZtbGVtTXd0Y2tsOFFLNk0wMWU3SUFUUG1KT2Qyb2p4c08wTEJMNVNJc19zclNucmFzVnlSZzYzY2hOT1JrTGNnckdHb2JQcGhCVVpJWVBpSW8?oc=5",
      "headline": "Aktien lockar fortfarande inte",
      "english": null,
@@ -6062,9 +6128,9 @@
    "volume": 31429,
    "medianVolume": 28508,
    "rvol": 1.1,
-   "marketPct": 0.54,
-   "excessPct": 2.48,
-   "excessSigma": 1.08
+   "marketPct": 0.53,
+   "excessPct": 2.5,
+   "excessSigma": 1.09
   },
   {
    "ticker": "NELLY.ST",
@@ -6103,19 +6169,19 @@
     36.54,
     36.34,
     35.88,
-    37.28
+    37.2
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 37.28,
-   "changePct": 3.9,
-   "sigma": 2.46,
-   "volume": 102413,
+   "close": 37.2,
+   "changePct": 3.68,
+   "sigma": 2.32,
+   "volume": 104935,
    "medianVolume": 102646,
-   "rvol": 1.0,
-   "marketPct": 0.54,
-   "excessPct": 3.36,
-   "excessSigma": 2.12
+   "rvol": 1.02,
+   "marketPct": 0.53,
+   "excessPct": 3.16,
+   "excessSigma": 1.99
   },
   {
    "ticker": "CHEF.ST",
@@ -6154,19 +6220,19 @@
     123.8,
     120.2,
     117.6,
-    119.6
+    120.4
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 119.6,
-   "changePct": 1.7,
-   "sigma": 1.33,
-   "volume": 41492,
+   "close": 120.4,
+   "changePct": 2.38,
+   "sigma": 1.86,
+   "volume": 41500,
    "medianVolume": 24093,
    "rvol": 1.72,
-   "marketPct": 0.54,
-   "excessPct": 1.17,
-   "excessSigma": 0.92
+   "marketPct": 0.53,
+   "excessPct": 1.85,
+   "excessSigma": 1.45
   },
   {
    "ticker": "BMAX.ST",
@@ -6215,100 +6281,9 @@
    "volume": 31363,
    "medianVolume": 73617,
    "rvol": 0.43,
-   "marketPct": 0.54,
-   "excessPct": 0.61,
+   "marketPct": 0.53,
+   "excessPct": 0.62,
    "excessSigma": 0.54
-  },
-  {
-   "ticker": "DSV.CO",
-   "name": "DSV",
-   "sector": "Shipping & offshore",
-   "exchange": "Copenhagen",
-   "currency": "DKK",
-   "thin": false,
-   "spark": [
-    1682.5,
-    1690.5,
-    1693.5,
-    1693.0,
-    1665.0,
-    1670.0,
-    1433.5,
-    1409.0,
-    1448.5,
-    1398.0,
-    1402.5,
-    1426.0,
-    1419.5,
-    1405.5,
-    1376.0,
-    1356.0,
-    1335.5,
-    1333.5,
-    1349.0,
-    1344.0,
-    1349.5,
-    1380.0,
-    1426.0,
-    1437.0,
-    1414.0,
-    1382.5,
-    1370.5,
-    1377.0,
-    1398.5,
-    1405.0
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMilgFBVV95cUxQRE9KSHE1Um45aXNVTmptZDRjbFR3QnVjQlpCTkFYMmZIQnp2MU45M2loZy1GbWtRREhULUd6bURfQzFjTC1mdDFhdHVXSDNXSlRjelRXelhZX29fd0pXMmhGTDJDcHdpYms1Vk11SHRQQkNjcDZpQ2d1bThJbGJ0V3h0Y2N5ci04NlhNeXdIcHItZGo5ZHc?oc=5",
-     "headline": "Redusert resultat for Bergen Spesial Transport AS",
-     "english": null,
-     "lang": "en",
-     "publisher": "Tungt",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRE9KSHE1Um45aXNVTmptZDRjbFR3QnVjQlpCTkFYMmZIQnp2MU45M2loZy1GbWtRREhULUd6bURfQzFjTC1mdDFhdHVXSDNXSlRjelRXelhZX29fd0pXMmhGTDJDcHdpYms1Vk11SHRQQkNjcDZpQ2d1bThJbGJ0V3h0Y2N5ci04NlhNeXdIcHItZGo5ZHc?oc=5",
-     "published": "Tue, 25 Aug 2026 08:12:37 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMipgFBVV95cUxONUw0b0pabTVfMHZ3Y0gyVXRqd3hia29fNUVITTBjcW1LUEVoRlVRV3NRSS15YkU5QzdKTnY4T2FHMjJ2MXlFZXowU2pyRVBnOG4xWFZlSDZ6ZjlHUHN3WXkxZ0tJME45WHFPaXRPVmFpZDB0dDUtbFVyQWt2SlFyTHpKeFdXTWFqUXBxNEhqcWJ3aFp5MXd3b0ZqMDRQaDZLdHlHVzh3?oc=5",
-     "headline": "Så stor ble omsetningen i DSV Road AS etter Schenker-oppkjøpet",
-     "english": null,
-     "lang": "no",
-     "publisher": "Tungt",
-     "score": 3,
-     "material": 3,
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONUw0b0pabTVfMHZ3Y0gyVXRqd3hia29fNUVITTBjcW1LUEVoRlVRV3NRSS15YkU5QzdKTnY4T2FHMjJ2MXlFZXowU2pyRVBnOG4xWFZlSDZ6ZjlHUHN3WXkxZ0tJME45WHFPaXRPVmFpZDB0dDUtbFVyQWt2SlFyTHpKeFdXTWFqUXBxNEhqcWJ3aFp5MXd3b0ZqMDRQaDZLdHlHVzh3?oc=5",
-     "published": "Mon, 24 Aug 2026 10:51:15 GMT",
-     "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi9AFBVV95cUxPRjJkM3pOeUFqZXVHYjk1a2hlUmFSeVFsbFd5OGRwV0xSYWUxbDF4OVY0Q1hRVlpKTDZudFRIRWRmeWtpNUhrZk03c0h5VFFKQlk1c1p2emhvejlwc3VjRkk0UzVXaG5oaU1ZRXF2c3FhTDc5VEVudjBwYW1KVEVFRkJGTmttb2FWcnVQVV9TaG5aSkk5dW8tUlhrLWxhbDFHd1l2YzJYZEsxZzBzWGplSnBtVVJMUlRiek0tUkxuVkxiNWhfaUFueVhaUWY2N194QWJ6bTl2c2RfSzd5eFNra2hZY0JCQUhhYVpEbE5uc0VtUGhV?oc=5",
-     "headline": "Discovery Mining Ltd (TSX:DSV) Advances Higher as Precious Metals Production Growth and Resource Expansion Strengthen Market Sentiment",
-     "english": null,
-     "lang": "en",
-     "publisher": "kalkine.ca",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPRjJkM3pOeUFqZXVHYjk1a2hlUmFSeVFsbFd5OGRwV0xSYWUxbDF4OVY0Q1hRVlpKTDZudFRIRWRmeWtpNUhrZk03c0h5VFFKQlk1c1p2emhvejlwc3VjRkk0UzVXaG5oaU1ZRXF2c3FhTDc5VEVudjBwYW1KVEVFRkJGTmttb2FWcnVQVV9TaG5aSkk5dW8tUlhrLWxhbDFHd1l2YzJYZEsxZzBzWGplSnBtVVJMUlRiek0tUkxuVkxiNWhfaUFueVhaUWY2N194QWJ6bTl2c2RfSzd5eFNra2hZY0JCQUhhYVpEbE5uc0VtUGhV?oc=5",
-     "published": "Tue, 25 Aug 2026 09:42:00 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-08-25",
-   "close": 1405.0,
-   "changePct": 0.46,
-   "sigma": 0.31,
-   "volume": 53503,
-   "medianVolume": 424888,
-   "rvol": 0.13,
-   "marketPct": 0.54,
-   "excessPct": -0.08,
-   "excessSigma": -0.05
   },
   {
    "ticker": "CADLR.OL",
@@ -6449,8 +6424,8 @@
    "volume": 524461,
    "medianVolume": 261374,
    "rvol": 2.01,
-   "marketPct": 0.54,
-   "excessPct": 5.5,
+   "marketPct": 0.53,
+   "excessPct": 5.51,
    "excessSigma": 3.31
   },
   {
@@ -6540,9 +6515,9 @@
    "volume": 251226,
    "medianVolume": 647988,
    "rvol": 0.39,
-   "marketPct": 0.54,
-   "excessPct": -2.79,
-   "excessSigma": -1.18
+   "marketPct": 0.53,
+   "excessPct": -2.77,
+   "excessSigma": -1.17
   },
   {
    "ticker": "CMBTO.OL",
@@ -6581,7 +6556,7 @@
     166.6,
     164.4,
     171.6,
-    169.8
+    170.0
    ],
    "stories": [
     {
@@ -6612,15 +6587,93 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 169.8,
-   "changePct": -1.05,
-   "sigma": -0.7,
-   "volume": 82040,
+   "close": 170.0,
+   "changePct": -0.93,
+   "sigma": -0.62,
+   "volume": 83539,
    "medianVolume": 282290,
-   "rvol": 0.29,
-   "marketPct": 0.54,
-   "excessPct": -1.58,
-   "excessSigma": -1.05
+   "rvol": 0.3,
+   "marketPct": 0.53,
+   "excessPct": -1.46,
+   "excessSigma": -0.97
+  },
+  {
+   "ticker": "DSV.CO",
+   "name": "DSV",
+   "sector": "Shipping & offshore",
+   "exchange": "Copenhagen",
+   "currency": "DKK",
+   "thin": false,
+   "spark": [
+    1682.5,
+    1690.5,
+    1693.5,
+    1693.0,
+    1665.0,
+    1670.0,
+    1433.5,
+    1409.0,
+    1448.5,
+    1398.0,
+    1402.5,
+    1426.0,
+    1419.5,
+    1405.5,
+    1376.0,
+    1356.0,
+    1335.5,
+    1333.5,
+    1349.0,
+    1344.0,
+    1349.5,
+    1380.0,
+    1426.0,
+    1437.0,
+    1414.0,
+    1382.5,
+    1370.5,
+    1377.0,
+    1398.5,
+    1405.0
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMipgFBVV95cUxONUw0b0pabTVfMHZ3Y0gyVXRqd3hia29fNUVITTBjcW1LUEVoRlVRV3NRSS15YkU5QzdKTnY4T2FHMjJ2MXlFZXowU2pyRVBnOG4xWFZlSDZ6ZjlHUHN3WXkxZ0tJME45WHFPaXRPVmFpZDB0dDUtbFVyQWt2SlFyTHpKeFdXTWFqUXBxNEhqcWJ3aFp5MXd3b0ZqMDRQaDZLdHlHVzh3?oc=5",
+     "headline": "Så stor ble omsetningen i DSV Road AS etter Schenker-oppkjøpet",
+     "english": null,
+     "lang": "no",
+     "publisher": "Tungt",
+     "score": 3,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONUw0b0pabTVfMHZ3Y0gyVXRqd3hia29fNUVITTBjcW1LUEVoRlVRV3NRSS15YkU5QzdKTnY4T2FHMjJ2MXlFZXowU2pyRVBnOG4xWFZlSDZ6ZjlHUHN3WXkxZ0tJME45WHFPaXRPVmFpZDB0dDUtbFVyQWt2SlFyTHpKeFdXTWFqUXBxNEhqcWJ3aFp5MXd3b0ZqMDRQaDZLdHlHVzh3?oc=5",
+     "published": "Mon, 24 Aug 2026 10:51:15 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi9AFBVV95cUxPRjJkM3pOeUFqZXVHYjk1a2hlUmFSeVFsbFd5OGRwV0xSYWUxbDF4OVY0Q1hRVlpKTDZudFRIRWRmeWtpNUhrZk03c0h5VFFKQlk1c1p2emhvejlwc3VjRkk0UzVXaG5oaU1ZRXF2c3FhTDc5VEVudjBwYW1KVEVFRkJGTmttb2FWcnVQVV9TaG5aSkk5dW8tUlhrLWxhbDFHd1l2YzJYZEsxZzBzWGplSnBtVVJMUlRiek0tUkxuVkxiNWhfaUFueVhaUWY2N194QWJ6bTl2c2RfSzd5eFNra2hZY0JCQUhhYVpEbE5uc0VtUGhV?oc=5",
+     "headline": "Discovery Mining Ltd (TSX:DSV) Advances Higher as Precious Metals Production Growth and Resource Expansion Strengthen Market Sentiment",
+     "english": null,
+     "lang": "en",
+     "publisher": "kalkine.ca",
+     "score": 1,
+     "material": 1,
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPRjJkM3pOeUFqZXVHYjk1a2hlUmFSeVFsbFd5OGRwV0xSYWUxbDF4OVY0Q1hRVlpKTDZudFRIRWRmeWtpNUhrZk03c0h5VFFKQlk1c1p2emhvejlwc3VjRkk0UzVXaG5oaU1ZRXF2c3FhTDc5VEVudjBwYW1KVEVFRkJGTmttb2FWcnVQVV9TaG5aSkk5dW8tUlhrLWxhbDFHd1l2YzJYZEsxZzBzWGplSnBtVVJMUlRiek0tUkxuVkxiNWhfaUFueVhaUWY2N194QWJ6bTl2c2RfSzd5eFNra2hZY0JCQUhhYVpEbE5uc0VtUGhV?oc=5",
+     "published": "Tue, 25 Aug 2026 09:42:00 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 1405.0,
+   "changePct": 0.46,
+   "sigma": 0.31,
+   "volume": 54021,
+   "medianVolume": 424888,
+   "rvol": 0.13,
+   "marketPct": 0.53,
+   "excessPct": -0.07,
+   "excessSigma": -0.05
   },
   {
    "ticker": "ODF.OL",
@@ -6680,12 +6733,12 @@
    "close": 120.6,
    "changePct": 1.69,
    "sigma": 0.92,
-   "volume": 39340,
+   "volume": 39409,
    "medianVolume": 36313,
-   "rvol": 1.08,
-   "marketPct": 0.54,
-   "excessPct": 1.15,
-   "excessSigma": 0.63
+   "rvol": 1.09,
+   "marketPct": 0.53,
+   "excessPct": 1.17,
+   "excessSigma": 0.64
   },
   {
    "ticker": "HAUTO.OL",
@@ -6724,7 +6777,7 @@
     192.3,
     169.5,
     173.6,
-    172.3
+    172.6
    ],
    "stories": [
     {
@@ -6742,15 +6795,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 172.3,
-   "changePct": -0.75,
-   "sigma": -0.22,
-   "volume": 173365,
+   "close": 172.6,
+   "changePct": -0.58,
+   "sigma": -0.17,
+   "volume": 173592,
    "medianVolume": 354758,
    "rvol": 0.49,
-   "marketPct": 0.54,
-   "excessPct": -1.29,
-   "excessSigma": -0.38
+   "marketPct": 0.53,
+   "excessPct": -1.1,
+   "excessSigma": -0.32
   },
   {
    "ticker": "IWS.OL",
@@ -6799,9 +6852,9 @@
    "volume": 6488,
    "medianVolume": 2252,
    "rvol": 2.88,
-   "marketPct": 0.54,
-   "excessPct": 1.67,
-   "excessSigma": 1.22
+   "marketPct": 0.53,
+   "excessPct": 1.69,
+   "excessSigma": 1.23
   },
   {
    "ticker": "SOFF.OL",
@@ -6850,7 +6903,7 @@
    "volume": 43375,
    "medianVolume": 89371,
    "rvol": 0.49,
-   "marketPct": 0.54,
+   "marketPct": 0.53,
    "excessPct": -1.54,
    "excessSigma": -1.14
   },
@@ -6901,7 +6954,7 @@
    "volume": 7706,
    "medianVolume": 11892,
    "rvol": 0.65,
-   "marketPct": 0.54,
+   "marketPct": 0.53,
    "excessPct": 1.21,
    "excessSigma": 1.03
   },
@@ -6952,9 +7005,9 @@
    "volume": 201441,
    "medianVolume": 209184,
    "rvol": 0.96,
-   "marketPct": 0.54,
-   "excessPct": 2.51,
-   "excessSigma": 0.95
+   "marketPct": 0.53,
+   "excessPct": 2.52,
+   "excessSigma": 0.96
   },
   {
    "ticker": "DOFG.OL",
@@ -7003,9 +7056,9 @@
    "volume": 110130,
    "medianVolume": 299621,
    "rvol": 0.37,
-   "marketPct": 0.54,
-   "excessPct": -1.22,
-   "excessSigma": -0.83
+   "marketPct": 0.53,
+   "excessPct": -1.21,
+   "excessSigma": -0.82
   },
   {
    "ticker": "WAWI.OL",
@@ -7044,19 +7097,19 @@
     165.8,
     159.4,
     165.5,
-    167.8
+    167.5
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 167.8,
-   "changePct": 1.39,
-   "sigma": 0.7,
-   "volume": 168756,
+   "close": 167.5,
+   "changePct": 1.21,
+   "sigma": 0.61,
+   "volume": 168785,
    "medianVolume": 305352,
    "rvol": 0.55,
-   "marketPct": 0.54,
-   "excessPct": 0.85,
-   "excessSigma": 0.43
+   "marketPct": 0.53,
+   "excessPct": 0.68,
+   "excessSigma": 0.34
   },
   {
    "ticker": "AUTO.OL",
@@ -7095,7 +7148,7 @@
     15.81,
     15.52,
     15.74,
-    15.97
+    16.0
    ],
    "stories": [
     {
@@ -7113,15 +7166,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 15.97,
-   "changePct": 1.46,
-   "sigma": 0.3,
-   "volume": 2622679,
+   "close": 16.0,
+   "changePct": 1.65,
+   "sigma": 0.34,
+   "volume": 2683098,
    "medianVolume": 4398539,
-   "rvol": 0.6,
-   "marketPct": 0.54,
-   "excessPct": 0.92,
-   "excessSigma": 0.19
+   "rvol": 0.61,
+   "marketPct": 0.53,
+   "excessPct": 1.12,
+   "excessSigma": 0.23
   },
   {
    "ticker": "OVZON.ST",
@@ -7167,12 +7220,12 @@
    "close": 41.74,
    "changePct": 3.93,
    "sigma": 2.15,
-   "volume": 216390,
+   "volume": 218645,
    "medianVolume": 303654,
-   "rvol": 0.71,
-   "marketPct": 0.54,
-   "excessPct": 3.4,
-   "excessSigma": 1.86
+   "rvol": 0.72,
+   "marketPct": 0.53,
+   "excessPct": 3.41,
+   "excessSigma": 1.87
   },
   {
    "ticker": "SHT-B.ST",
@@ -7221,8 +7274,8 @@
    "volume": 71383,
    "medianVolume": 61597,
    "rvol": 1.16,
-   "marketPct": 0.54,
-   "excessPct": -7.98,
+   "marketPct": 0.53,
+   "excessPct": -7.97,
    "excessSigma": -1.38
   },
   {
@@ -7272,9 +7325,9 @@
    "volume": 245332,
    "medianVolume": 384867,
    "rvol": 0.64,
-   "marketPct": 0.54,
-   "excessPct": -2.44,
-   "excessSigma": -1.14
+   "marketPct": 0.53,
+   "excessPct": -2.42,
+   "excessSigma": -1.13
   },
   {
    "ticker": "SMHN.DE",
@@ -7323,8 +7376,8 @@
    "volume": 18120,
    "medianVolume": 92079,
    "rvol": 0.2,
-   "marketPct": 0.54,
-   "excessPct": -4.08,
+   "marketPct": 0.53,
+   "excessPct": -4.07,
    "excessSigma": -0.97
   },
   {
@@ -7374,111 +7427,9 @@
    "volume": 5322,
    "medianVolume": 9918,
    "rvol": 0.54,
-   "marketPct": 0.54,
-   "excessPct": 1.11,
-   "excessSigma": 0.94
-  },
-  {
-   "ticker": "ALRIB.PA",
-   "name": "Riber",
-   "sector": "Tech & space",
-   "exchange": "Paris",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    10.26,
-    10.3,
-    9.91,
-    9.68,
-    9.72,
-    10.36,
-    9.96,
-    10.02,
-    9.91,
-    9.53,
-    8.96,
-    8.77,
-    9.14,
-    9.03,
-    9.25,
-    9.43,
-    9.4,
-    9.47,
-    9.65,
-    9.78,
-    9.78,
-    9.96,
-    9.86,
-    9.72,
-    9.75,
-    9.45,
-    8.95,
-    8.91,
-    9.04,
-    9.26
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 9.26,
-   "changePct": 2.43,
-   "sigma": 0.97,
-   "volume": 48482,
-   "medianVolume": 70927,
-   "rvol": 0.68,
-   "marketPct": 0.54,
-   "excessPct": 1.9,
-   "excessSigma": 0.76
-  },
-  {
-   "ticker": "SMOP.OL",
-   "name": "Smartoptics",
-   "sector": "Tech & space",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": false,
-   "spark": [
-    46.0,
-    44.4,
-    45.0,
-    44.3,
-    43.4,
-    44.8,
-    44.8,
-    44.5,
-    43.8,
-    44.2,
-    43.1,
-    43.4,
-    44.2,
-    43.6,
-    43.4,
-    45.6,
-    46.1,
-    46.3,
-    46.3,
-    48.4,
-    47.5,
-    47.6,
-    48.3,
-    49.2,
-    47.5,
-    45.6,
-    44.1,
-    44.2,
-    45.0,
-    46.0
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 46.0,
-   "changePct": 2.22,
-   "sigma": 0.92,
-   "volume": 102292,
-   "medianVolume": 160127,
-   "rvol": 0.64,
-   "marketPct": 0.54,
-   "excessPct": 1.69,
-   "excessSigma": 0.7
+   "marketPct": 0.53,
+   "excessPct": 1.12,
+   "excessSigma": 0.95
   },
   {
    "ticker": "MYCR.ST",
@@ -7517,19 +7468,121 @@
     314.2,
     316.2,
     318.0,
-    323.6
+    323.8
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 323.6,
-   "changePct": 1.76,
-   "sigma": 0.88,
-   "volume": 98596,
+   "close": 323.8,
+   "changePct": 1.82,
+   "sigma": 0.91,
+   "volume": 98688,
    "medianVolume": 185994,
    "rvol": 0.53,
-   "marketPct": 0.54,
-   "excessPct": 1.23,
+   "marketPct": 0.53,
+   "excessPct": 1.29,
+   "excessSigma": 0.65
+  },
+  {
+   "ticker": "SMOP.OL",
+   "name": "Smartoptics",
+   "sector": "Tech & space",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": false,
+   "spark": [
+    46.0,
+    44.4,
+    45.0,
+    44.3,
+    43.4,
+    44.8,
+    44.8,
+    44.5,
+    43.8,
+    44.2,
+    43.1,
+    43.4,
+    44.2,
+    43.6,
+    43.4,
+    45.6,
+    46.1,
+    46.3,
+    46.3,
+    48.4,
+    47.5,
+    47.6,
+    48.3,
+    49.2,
+    47.5,
+    45.6,
+    44.1,
+    44.2,
+    45.0,
+    45.9
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 45.9,
+   "changePct": 2.0,
+   "sigma": 0.83,
+   "volume": 102348,
+   "medianVolume": 160127,
+   "rvol": 0.64,
+   "marketPct": 0.53,
+   "excessPct": 1.48,
    "excessSigma": 0.61
+  },
+  {
+   "ticker": "ALRIB.PA",
+   "name": "Riber",
+   "sector": "Tech & space",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    10.26,
+    10.3,
+    9.91,
+    9.68,
+    9.72,
+    10.36,
+    9.96,
+    10.02,
+    9.91,
+    9.53,
+    8.96,
+    8.77,
+    9.14,
+    9.03,
+    9.25,
+    9.43,
+    9.4,
+    9.47,
+    9.65,
+    9.78,
+    9.78,
+    9.96,
+    9.86,
+    9.72,
+    9.75,
+    9.45,
+    8.95,
+    8.91,
+    9.04,
+    9.21
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 9.21,
+   "changePct": 1.88,
+   "sigma": 0.75,
+   "volume": 48709,
+   "medianVolume": 70927,
+   "rvol": 0.69,
+   "marketPct": 0.53,
+   "excessPct": 1.35,
+   "excessSigma": 0.54
   },
   {
    "ticker": "TPE.DE",
@@ -7578,8 +7631,8 @@
    "volume": 17194,
    "medianVolume": 70680,
    "rvol": 0.24,
-   "marketPct": 0.54,
-   "excessPct": -0.27,
+   "marketPct": 0.53,
+   "excessPct": -0.26,
    "excessSigma": -0.07
   },
   {
@@ -7629,41 +7682,41 @@
    "volume": 9850,
    "medianVolume": 17389,
    "rvol": 0.57,
-   "marketPct": 0.54,
-   "excessPct": -0.54,
+   "marketPct": 0.53,
+   "excessPct": -0.53,
    "excessSigma": 0
   }
  ],
  "alerts": [
   {
    "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFNPZ21SYkg4bVhBTXotS3lSdHdfVEtKYUxHbEdYYzZHTEpBVDhyT1diQXN6cGM0eVdWUFlObzQ5MGlXVUNZNjlhZjVMMW93UWVFbUx3aEZWWWRvZDlaeW03YjN6LTRMZTdET2dzWkxnNktnaFp6Z0lnTVpUdWlGSlVyMDdpTDZQQS1ZRm14Z1lGcFBZQXI1WVhQbWdVMHp6VTlWaktWZG1XY3ZFY3ZNaVBId3M1NWJSRE1aeXFlR1BrT01NTlEzWTVmZnBkVGdNQkNra0phenduTm9SWUdQVE1mbw?oc=5",
-   "headline": "DAX-Prognose: Leichtes Plus, Bitcoin-Rally – Infineon, Siemens Energy, VW, Porsche, Nvidia im Fokus",
-   "english": null,
-   "lang": "de",
-   "publisher": "Der Aktionär",
+   "key": "web:https://news.google.com/rss/articles/CBMilwFBVV95cUxPc0JRc21aenkxMi1PYS1BdHpUeTlsN092UDhxSVRnXzJxdW9mVE40SHg2bmxEbVFCaFpBVEpnSzFaakZ0Mnp1ZVQ3b2RKOWdzMk5SWGo3dUFMV3NwM1pRNUpQa0VESEY0WEpYdm5kYXBNd2s5ME5wSFR6dUQ5bm1yUkIzNnNkc3Iyb3BtZWdUVU9rdXFmcTZ3?oc=5",
+   "headline": "Contratti di solidarietà per The Italian Sea Group",
+   "english": "Solidarity contracts for The Italian Sea Group",
+   "lang": "it",
+   "publisher": "Collettiva",
    "score": 2,
    "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFNPZ21SYkg4bVhBTXotS3lSdHdfVEtKYUxHbEdYYzZHTEpBVDhyT1diQXN6cGM0eVdWUFlObzQ5MGlXVUNZNjlhZjVMMW93UWVFbUx3aEZWWWRvZDlaeW03YjN6LTRMZTdET2dzWkxnNktnaFp6Z0lnTVpUdWlGSlVyMDdpTDZQQS1ZRm14Z1lGcFBZQXI1WVhQbWdVMHp6VTlWaktWZG1XY3ZFY3ZNaVBId3M1NWJSRE1aeXFlR1BrT01NTlEzWTVmZnBkVGdNQkNra0phenduTm9SWUdQVE1mbw?oc=5",
-   "published": "Tue, 25 Aug 2026 07:18:22 GMT",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPc0JRc21aenkxMi1PYS1BdHpUeTlsN092UDhxSVRnXzJxdW9mVE40SHg2bmxEbVFCaFpBVEpnSzFaakZ0Mnp1ZVQ3b2RKOWdzMk5SWGo3dUFMV3NwM1pRNUpQa0VESEY0WEpYdm5kYXBNd2s5ME5wSFR6dUQ5bm1yUkIzNnNkc3Iyb3BtZWdUVU9rdXFmcTZ3?oc=5",
+   "published": "Tue, 25 Aug 2026 09:17:20 GMT",
    "fresh": true,
-   "ticker": "P911.DE",
-   "name": "Porsche"
+   "ticker": "TISG.MI",
+   "name": "The Italian Sea Group"
   },
   {
    "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMilgFBVV95cUxQRE9KSHE1Um45aXNVTmptZDRjbFR3QnVjQlpCTkFYMmZIQnp2MU45M2loZy1GbWtRREhULUd6bURfQzFjTC1mdDFhdHVXSDNXSlRjelRXelhZX29fd0pXMmhGTDJDcHdpYms1Vk11SHRQQkNjcDZpQ2d1bThJbGJ0V3h0Y2N5ci04NlhNeXdIcHItZGo5ZHc?oc=5",
-   "headline": "Redusert resultat for Bergen Spesial Transport AS",
-   "english": null,
-   "lang": "en",
-   "publisher": "Tungt",
+   "key": "web:https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ0VHTGdRZmt2T0FqVEw3el9KdlBuLTF3ZjVZbS1EOVcyTHJwUEdXS0MtZ2RxV2ZwSTRXaXZJY1RJT2thZnpSRG1Jcm9IZEZ0d3hCQ0libWpiMHAwcDNtUmR5eVpTS3puMVQ0MC1vajZfZ0NUdjRYWGk0TTZUSTRPY0huRTdtM2VHckp0eVZhTnpab1czNkFVUXZSRk5OTm5lTVh2Y2hTX3NwSXE0MFJDM1pFaFVMelZtaGU0eVc4QQ?oc=5",
+   "headline": "«Superoptimistisk» Aker BP-sjef: – Ingen må tro dette bare blir solskinnshistorier",
+   "english": "\"Superoptimistic\" Aker BP CEO: - No one should think this will just be sunshine stories",
+   "lang": "no",
+   "publisher": "Stavanger Aftenblad",
    "score": 2,
    "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRE9KSHE1Um45aXNVTmptZDRjbFR3QnVjQlpCTkFYMmZIQnp2MU45M2loZy1GbWtRREhULUd6bURfQzFjTC1mdDFhdHVXSDNXSlRjelRXelhZX29fd0pXMmhGTDJDcHdpYms1Vk11SHRQQkNjcDZpQ2d1bThJbGJ0V3h0Y2N5ci04NlhNeXdIcHItZGo5ZHc?oc=5",
-   "published": "Tue, 25 Aug 2026 08:12:37 GMT",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ0VHTGdRZmt2T0FqVEw3el9KdlBuLTF3ZjVZbS1EOVcyTHJwUEdXS0MtZ2RxV2ZwSTRXaXZJY1RJT2thZnpSRG1Jcm9IZEZ0d3hCQ0libWpiMHAwcDNtUmR5eVpTS3puMVQ0MC1vajZfZ0NUdjRYWGk0TTZUSTRPY0huRTdtM2VHckp0eVZhTnpab1czNkFVUXZSRk5OTm5lTVh2Y2hTX3NwSXE0MFJDM1pFaFVMelZtaGU0eVc4QQ?oc=5",
+   "published": "Mon, 24 Aug 2026 08:31:00 GMT",
    "fresh": true,
-   "ticker": "DSV.CO",
-   "name": "DSV"
+   "ticker": "AKRBP.OL",
+   "name": "Aker BP"
   },
   {
    "kind": "disclosure",
@@ -7814,6 +7867,36 @@
    "fresh": false,
    "ticker": "SAAB-B.ST",
    "name": "Saab"
+  },
+  {
+   "kind": "news",
+   "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxOUTFjNXM0NkpVeUh5c0FIeUYxcWNVeXdXOUlENXRiUTlkeUJGYnlJSlBaVU9McXpUdEVTUXFuTFkxamtmVnlqNGlaT09UNDY1alBuVkc0TkJtYkpPN1NzT1JGVlVPbTVmTmgtdDhWQnN3bTVJUXU1TTZDTWNyVHp1MUhyZ2Zib29UeWhEVnhRMVlyekZVZzhidER6SXg5V3FKUTZPWXZQRXlXdldPR080?oc=5",
+   "headline": "Ray-Ban-arving trekker seg uventet: Kritiserer ledelsen",
+   "english": "Ray-Ban heir resigns unexpectedly: Criticizes management",
+   "lang": "no",
+   "publisher": "Finansavisen",
+   "score": 6,
+   "material": 3,
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUTFjNXM0NkpVeUh5c0FIeUYxcWNVeXdXOUlENXRiUTlkeUJGYnlJSlBaVU9McXpUdEVTUXFuTFkxamtmVnlqNGlaT09UNDY1alBuVkc0TkJtYkpPN1NzT1JGVlVPbTVmTmgtdDhWQnN3bTVJUXU1TTZDTWNyVHp1MUhyZ2Zib29UeWhEVnhRMVlyekZVZzhidER6SXg5V3FKUTZPWXZQRXlXdldPR080?oc=5",
+   "published": "Tue, 25 Aug 2026 10:52:26 GMT",
+   "fresh": false,
+   "ticker": "EL.PA",
+   "name": "EssilorLuxottica"
+  },
+  {
+   "kind": "news",
+   "key": "web:https://news.google.com/rss/articles/CBMiwgFBVV95cUxONEU5TkMza0RwR2ZBazRXbnZzS196WVp0TlNBdVA1S0pnc2ctYnJBd2YxRzMtWkZNQ0hkWm5qQ0ZwdldTak1TOVF1N3g0ajhINzE0ZWVEVDlBS3BDVEhRRVFvZ0pUOUlfMF9jMERGWFBCVHBVc2ZzMmlFb0JNNFNPeUd2aFp3QUZ0MnRhbXJXYVBjNTdQaTlqbWtOenF3bFdkcXNLdHNGRUlpRS1HRV94SkIwRmtCaVQwU2s0NE5fRThvUQ?oc=5",
+   "headline": "San Felice, si dimette la consigliera Paola Ferrari, al suo posto l’assessore Giorgio Bocchi",
+   "english": "San Felice, the councillor Paola Ferrari resigns, in her place the councillor Giorgio Bocchi",
+   "lang": "it",
+   "publisher": "Sul Panaro news",
+   "score": 3,
+   "material": 3,
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONEU5TkMza0RwR2ZBazRXbnZzS196WVp0TlNBdVA1S0pnc2ctYnJBd2YxRzMtWkZNQ0hkWm5qQ0ZwdldTak1TOVF1N3g0ajhINzE0ZWVEVDlBS3BDVEhRRVFvZ0pUOUlfMF9jMERGWFBCVHBVc2ZzMmlFb0JNNFNPeUd2aFp3QUZ0MnRhbXJXYVBjNTdQaTlqbWtOenF3bFdkcXNLdHNGRUlpRS1HRV94SkIwRmtCaVQwU2s0NE5fRThvUQ?oc=5",
+   "published": "Tue, 25 Aug 2026 11:24:41 GMT",
+   "fresh": false,
+   "ticker": "RACE.MI",
+   "name": "Ferrari"
   },
   {
    "kind": "news",
@@ -8204,37 +8287,7 @@
    "fresh": false,
    "ticker": "S92.DE",
    "name": "SMA Solar"
-  },
-  {
-   "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMif0FVX3lxTE43ZTIzdGRRWTVwUDZGdm9uZVV0Mms0LXktYzlxdWlrdEY3V1RnQmpjMFZUOHhHa2NiREFUM3MxbFVaa1Q4NEd6b1ozUGRUUlVwcWgyMGZIejZKLVBWZ0wyd3FhNHY4WnI1cE4yN0Rab2RQX2VwQlVUN01wRjFqbTA?oc=5",
-   "headline": "Corruption case led Scatec to terminate contract with sub-supplier",
-   "english": null,
-   "lang": "en",
-   "publisher": "EnergyWatch",
-   "score": 2,
-   "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43ZTIzdGRRWTVwUDZGdm9uZVV0Mms0LXktYzlxdWlrdEY3V1RnQmpjMFZUOHhHa2NiREFUM3MxbFVaa1Q4NEd6b1ozUGRUUlVwcWgyMGZIejZKLVBWZ0wyd3FhNHY4WnI1cE4yN0Rab2RQX2VwQlVUN01wRjFqbTA?oc=5",
-   "published": "Tue, 25 Aug 2026 10:29:00 GMT",
-   "fresh": false,
-   "ticker": "SCATC.OL",
-   "name": "Scatec"
-  },
-  {
-   "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUlRDVU52RklPTEhrdWxmc3lXZ1BIX1kySW5aOE95dTUtdkNIN0hZaEY5WnZUalVSYkZ0NVNNSTA5SWlyaGkxd2VfUEZWcXg5LTFHSDl6aFZKNUUxaWozTWU4T3lOdmZuNUlXOEF6TkZ3QU1lVUIwN3R1UmFQdGs5TE01UERTSUhwSGRKbzFyZ1pjM1Job3ZXMmhPTzBWbWpNZ1NRWXNoSENwdmVCcHg1T2lHWWRDaUQxcnVRSEhMVVI4RTdCdXBCVkpNOHM2c1lXVFJIa05kTS0yUQ?oc=5",
-   "headline": "SB1 Markets raises its price target for Scatec to 130 Norwegian kroner (120), reiterates buy",
-   "english": null,
-   "lang": "en",
-   "publisher": "marketscreener.com",
-   "score": 1,
-   "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUlRDVU52RklPTEhrdWxmc3lXZ1BIX1kySW5aOE95dTUtdkNIN0hZaEY5WnZUalVSYkZ0NVNNSTA5SWlyaGkxd2VfUEZWcXg5LTFHSDl6aFZKNUUxaWozTWU4T3lOdmZuNUlXOEF6TkZ3QU1lVUIwN3R1UmFQdGs5TE01UERTSUhwSGRKbzFyZ1pjM1Job3ZXMmhPTzBWbWpNZ1NRWXNoSENwdmVCcHg1T2lHWWRDaUQxcnVRSEhMVVI4RTdCdXBCVkpNOHM2c1lXVFJIa05kTS0yUQ?oc=5",
-   "published": "Mon, 24 Aug 2026 06:52:35 GMT",
-   "fresh": false,
-   "ticker": "SCATC.OL",
-   "name": "Scatec"
   }
  ],
- "alertsTotal": 103
+ "alertsTotal": 109
 }
