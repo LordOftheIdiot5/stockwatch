@@ -30,10 +30,16 @@ from pathlib import Path
 
 CACHE_PATH = Path(__file__).resolve().parent.parent / "data" / "translations.json"
 
-# The anonymous tier is roughly 5000 words a day and every scan shares it, so a
-# single run may not spend it all. Whatever is not translated this hour is
-# translated next hour; nothing is lost, it just arrives in English later.
-MAX_PER_RUN = 140
+# The daily word allowance is shared by every scan, so a single run must not
+# spend it all. Twelve runs a day at roughly ten words a headline puts the
+# anonymous tier at about forty headlines an hour; an address raises the
+# allowance tenfold. Whatever is not translated this hour is translated next
+# hour - nothing is lost, it arrives in English later.
+#
+# Overrun is not merely wasted: MyMemory answers a spent quota with prose in
+# the translation field, which would be cached as though it were a headline.
+ANONYMOUS_PER_RUN = 40
+IDENTIFIED_PER_RUN = 380
 MAX_CHARS = 480          # MyMemory rejects longer, and headlines never are
 
 # Languages read directly, so no translation is bought for them.
@@ -65,6 +71,7 @@ class Translator:
         # An address raises the daily allowance; without one the anonymous tier
         # applies. Set MYMEMORY_EMAIL as a repository secret to use it.
         self.email = os.environ.get("MYMEMORY_EMAIL", "").strip()
+        self.budget = IDENTIFIED_PER_RUN if self.email else ANONYMOUS_PER_RUN
 
     @staticmethod
     def key(text: str, lang: str) -> str:
@@ -81,7 +88,7 @@ class Translator:
         if cached is not None:
             self.hits += 1
             return cached
-        if self.spent >= MAX_PER_RUN or len(text) > MAX_CHARS or not text.strip():
+        if self.spent >= self.budget or len(text) > MAX_CHARS or not text.strip():
             return None
 
         url = ("https://api.mymemory.translated.net/get?q="
@@ -116,6 +123,11 @@ class Translator:
             json.dumps(self.cache, ensure_ascii=False, indent=0, sort_keys=True),
             encoding="utf-8")
 
+    def exhausted(self) -> bool:
+        return self.spent >= self.budget
+
     def report(self) -> str:
+        tier = "identified" if self.email else "anonymous"
         return (f"translations: {self.hits} cached, {self.misses} bought, "
-                f"{self.failures} unavailable, {len(self.cache)} held")
+                f"{self.failures} unavailable, {len(self.cache)} held "
+                f"({tier} budget {self.spent}/{self.budget})")

@@ -207,10 +207,34 @@ body {
 
 /* --- companies --- */
 
+.group { margin-bottom: 6px; }
+
+.group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0 2px;
+  padding: 0 4px 8px;
+  border-bottom: 1px solid var(--edge);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.group:first-child .group-head { margin-top: 0; }
+
+.group-meta { font-size: 0.66rem; letter-spacing: 0.06em; color: var(--faint); }
+.group-fresh { color: var(--accent); }
+
+.c-rvol.thin { color: var(--faint); }
+
 .companies { display: flex; flex-direction: column; }
 
 .company { border-top: 1px solid var(--edge); }
-.company:first-child { border-top: 0; }
+.group .company:first-of-type { border-top: 0; }
 
 .company > summary {
   display: grid;

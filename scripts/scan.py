@@ -45,6 +45,9 @@ NEWS_PER_TICKER = 6       # enough to read under a company, not a flood
 # someone for. Four accounts of one oil alliance belong on the page together;
 # only the one that names the event belongs in a notification.
 ALERT_MATERIAL = 2
+# The signals panel is a summary, not an archive. Everything it leaves out is
+# still on the page, under the company it belongs to.
+MAX_ALERTS_SHOWN = 40
 NEWS_PER_LOCALE = 40      # how deep to read each language's feed
 # SHARED_MIN, below, replaced a similarity threshold that could not work.
 MAX_SEEN = 4000
@@ -330,8 +333,10 @@ def main() -> int:
         companies.append({
             "ticker": data["ticker"],
             "name": entry.get("name", data["ticker"]),
+            "sector": entry.get("sector", ""),
             "exchange": data["exchange"],
             "currency": data["currency"],
+            "thin": bool(entry.get("thin")),
             "spark": spark(data["bars"]),
             "stories": [],
             **measured,
@@ -349,7 +354,10 @@ def main() -> int:
         sigma_day = abs(row["changePct"] / row["sigma"]) if row["sigma"] else 0
         row["excessSigma"] = round(row["excessPct"] / sigma_day, 2) if sigma_day else 0
         reasons = []
-        if row["rvol"] >= RVOL_ALERT:
+        # On a listing that trades a few thousand shares a day, three times the
+        # median is one retail order. The number is still shown on the page,
+        # because it is true; it just is not evidence of anything.
+        if row["rvol"] >= RVOL_ALERT and not row["thin"]:
             reasons.append(f"volume {row['rvol']}x its 20-day median")
         if abs(row["excessSigma"]) >= MOVE_SIGMA:
             direction = "up" if row["excessSigma"] > 0 else "down"
@@ -410,13 +418,17 @@ def main() -> int:
         seen.add(key)
 
     # --- open web, in every language ------------------------------------
-    queries = [(e.get("name") or e["ticker"], locales_for(e, extra)) for e in watchlist]
+    # Translation is rationed, and whoever is read first spends it. Always
+    # walking the list in the same order would mean the companies at the end
+    # never get translated at all, so the starting point moves with the hour.
+    order = watchlist[now.hour % len(watchlist):] + watchlist[:now.hour % len(watchlist)]
+    queries = [(e.get("name") or e["ticker"], locales_for(e, extra)) for e in order]
     print(f"  fetching {sum(len(l) for _, l in queries)} feeds "
           f"across {len(queries)} companies")
     harvest = sources.news_everywhere(queries, count=NEWS_PER_LOCALE)
     print(f"  {sum(len(v) for v in harvest.values())} raw items")
 
-    for entry in watchlist:
+    for entry in order:
         ticker = entry["ticker"]
         if ticker not in by_ticker:
             continue
@@ -474,7 +486,12 @@ def main() -> int:
     print(f"  {translator.report()}")
 
     fresh = [a for a in alerts if a["fresh"]]
-    companies.sort(key=lambda c: -c["rvol"])
+    # Anything with news first, then the biggest movers: with a hundred rows
+    # the ones worth opening should not be somewhere in the middle.
+    companies.sort(key=lambda c: (c.get("sector", ""),
+                                  not any(s["fresh"] for s in c["stories"]),
+                                  -len(c["stories"]),
+                                  -abs(c["excessSigma"])))
     for c in companies:
         c["stories"].sort(key=lambda s: (not s["fresh"], -(s.get("material") or 0)))
 
@@ -485,7 +502,10 @@ def main() -> int:
         "marketPct": round(market, 2),
         "languages": sorted({l for _, ls in queries for l in ls}),
         "companies": companies,
-        "alerts": sorted(alerts, key=lambda a: (not a["fresh"], a["kind"])),
+        "alerts": sorted(alerts, key=lambda a: (
+            not a["fresh"], a["kind"], -(a.get("material") or 0)
+        ))[:MAX_ALERTS_SHOWN],
+        "alertsTotal": len(alerts),
     }, indent=1, ensure_ascii=False), encoding="utf-8")
     save_seen(seen)
 

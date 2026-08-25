@@ -179,6 +179,48 @@ PUBLISHER_CASES = [
     ("Infineon hebt Prognose an", "en", "Handelsblatt", "de", "German outlet"),
     ("Castberg Sverdrup 2026", "da", "Unknown Outlet", "da",
      "nothing to go on at all: fall back to the feed"),
+    # A Nordic outlet writing in English. The publisher must not override the
+    # words, or MedWatch files its English as Danish.
+    ("ALK CFO to receive DKK 25m payout under sign-on agreement", "da",
+     "medwatch.com", "en", "Danish outlet, English article"),
+    ("Novo Nordisk's acquisition spree marred by several failed deals", "da",
+     "medwatch.com", "en", "same, and the publisher is Danish"),
+    ("SB1 Markets reiterates buy on Ellos after earnings report", "sv",
+     "marketscreener.com", "en", "English from a Swedish-served feed"),
+    # " on " is the Finnish "is" and an English preposition. Scoring it as
+    # Finnish sent English headlines to the translator as Finnish.
+    ("Siemens Energy CEO Sees Data Center Boom Lasting on Power Needs", "en",
+     "EnergyNow.com", "en", "English 'on' must not read as Finnish"),
+    ("Cadeler H1 profit declines on year-ago one-off fees", "no",
+     "Renewables Now", "en", "likewise"),
+    # Norwegian and Danish, separated by vocabulary rather than grammar.
+    ("(+) Salmars resultat svakere enn ventet", "da", "Kyst.no", "no",
+     "svakere and enn are Norwegian; svagere and end are Danish"),
+    ("Tryg frykter sparkesykkelulykker i høst", "da", "finanswatch.no", "no",
+     "frykter, not frygter"),
+    ("Advarer mot å sende barna til skolen på elsparkesykkel", "da",
+     "Groruddalen", "no", "the bare infinitive marker å is Norwegian"),
+    ("Mærsk sælger sin andel af virksomheden", "no", "", "da",
+     "and virksomhed is Danish"),
+    ("ASML boekt recordorders in het tweede kwartaal", "nl", "", "nl",
+     "a genuine tie, settled by the feed it came from"),
+    # Swedish against the other two. Spelling settles it: Swedish writes
+    # a-diaeresis and o-diaeresis where Norwegian and Danish write ae and
+    # o-slash. " mot " does not settle it - Swedish uses that word too, which
+    # is how a Swedish railway story came out Norwegian.
+    ("AI testas mot viltolyckor på järnvägen", "no", "", "sv",
+     "Swedish, and the only clue is a letter"),
+    ("Lars Wingefors sänker sitt ordförandearvode", "no", "", "sv",
+     "likewise"),
+    ("Oljetoppens drøm: – Et nytt Castberg", "sv", "", "no",
+     "and the reverse: o-slash rules Swedish out"),
+    # These isolate the spelling rule. No word in either is on any vocabulary
+    # list, so only the letters can decide - without them both fall through to
+    # whichever feed happened to serve the story.
+    ("Ökade intäkter för Mycronic i kvartalet", "no", "", "sv",
+     "Swedish by its letters alone"),
+    ("Større omsætning i selskabets nordiske forretning", "sv", "", "da",
+     "and ae/o-slash rule Swedish out, by letters alone"),
 ]
 
 # (should_read, should_alert, headline, publisher, description)

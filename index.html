@@ -28,7 +28,9 @@
         instrument's own volatility and against the day's market, so a stock
         only appears here if it did something the rest of the list did not.
         News is read in every language its companies are written about in, and
-        translated where it needs to be.
+        translated where it needs to be. Thinly traded listings show their
+        volume but raise no alert on it, because three times very little is
+        one order rather than a crowd.
       </p>
     </section>
 
@@ -162,7 +164,8 @@
             <span class="c-price mono">${fmt.format(c.close)} <span class="ccy">${esc(c.currency || "")}</span></span>
             <span class="c-move mono ${cls(c.changePct)}">${signed(c.changePct)}%</span>
             <span class="c-vs mono ${cls(c.excessPct)}" title="move net of the day's market">${signed(c.excessPct)}%</span>
-            <span class="c-rvol mono ${c.rvol >= 2.5 ? "hot-num" : ""}" title="volume vs its own 20-day median">${fmt.format(c.rvol)}x</span>
+            <span class="c-rvol mono ${c.rvol >= 2.5 && !c.thin ? "hot-num" : ""}${c.thin ? " thin" : ""}"
+                  title="${c.thin ? "volume vs its 20-day median - too thinly traded for this to mean much, so it raises no alert" : "volume vs its own 20-day median"}">${fmt.format(c.rvol)}x</span>
             ${count}
           </summary>
           <div class="c-body">
@@ -208,18 +211,45 @@
 
         const companies = d.companies || [];
         document.getElementById("marketNote").textContent =
-          `Market baseline ${signed(d.marketPct ?? 0)}% — the median move across the list. Click a company for its coverage.`;
-        document.getElementById("companies").innerHTML = companies.map(companyRow).join("");
+          `${companies.length} companies · market baseline ${signed(d.marketPct ?? 0)}%, `
+          + `the median move across the list. Click any company for its coverage.`;
+        // A hundred rows in one list is a wall. They arrived grouped by theme,
+        // so they are shown that way, and a group opens if anything in it is new.
+        const groups = [];
+        for (const c of companies) {
+          const name = c.sector || "Other";
+          let g = groups.find(x => x.name === name);
+          if (!g) groups.push(g = { name, rows: [] });
+          g.rows.push(c);
+        }
+        document.getElementById("companies").innerHTML = groups.map(g => {
+          const fresh = g.rows.reduce((n, c) => n + (c.stories || []).filter(s => s.fresh).length, 0);
+          return `
+            <section class="group" data-group="${esc(g.name.toLowerCase())}">
+              <h3 class="group-head">
+                <span>${esc(g.name)}</span>
+                <span class="group-meta mono">${g.rows.length}${fresh ? ` · <span class="group-fresh">${fresh} new</span>` : ""}</span>
+              </h3>
+              ${g.rows.map(companyRow).join("")}
+            </section>`;
+        }).join("");
 
         const filter = document.getElementById("filter");
         const noMatch = document.getElementById("noMatch");
         filter.addEventListener("input", () => {
           const q = filter.value.trim().toLowerCase();
           let shown = 0;
-          document.querySelectorAll(".company").forEach(el => {
-            const hit = !q || el.dataset.search.includes(q);
-            el.hidden = !hit;
-            if (hit) shown++;
+          document.querySelectorAll(".group").forEach(group => {
+            let inGroup = 0;
+            group.querySelectorAll(".company").forEach(el => {
+              // A sector name is a search term too: "aqua" should find the
+              // group as readily as it finds a company.
+              const hit = !q || el.dataset.search.includes(q) || group.dataset.group.includes(q);
+              el.hidden = !hit;
+              if (hit) inGroup++;
+            });
+            group.hidden = inGroup === 0;
+            shown += inGroup;
           });
           noMatch.hidden = shown > 0;
         });

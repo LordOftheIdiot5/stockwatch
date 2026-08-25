@@ -1,81 +1,953 @@
 {
   "_comment": "Chosen by scripts/select.py on liquidity, realised volatility and how often a 2-sigma day occurred. Not a view on direction.",
+  "_locales": "Each company is read in its home market's language and in English. extraLocales adds the same languages for every company; the Nordic markets report on each other constantly, so they are worth carrying.",
+  "extraLocales": [
+    "no",
+    "sv",
+    "da"
+  ],
+  "_thin": "thin marks a listing where relative volume is one order rather than a crowd. Those rows still carry price moves, filings and news; only the volume alert is withheld.",
   "tickers": [
     {
-      "ticker": "AKRBP.OL",
-      "name": "Aker BP",
+      "ticker": "ANDF.OL",
+      "name": "Andfjord Salmon",
+      "sector": "Aquaculture",
       "exchange": "Oslo",
-      "annualVolPct": 40.5,
-      "medianVolume": 1157042
+      "annualVolPct": 27.9,
+      "medianVolume": 11505,
+      "thin": true
     },
     {
-      "ticker": "SUBC.OL",
-      "name": "Subsea 7",
+      "ticker": "AFISH.OL",
+      "name": "Arctic Fish",
+      "sector": "Aquaculture",
       "exchange": "Oslo",
-      "annualVolPct": 38.8,
-      "medianVolume": 430538
+      "annualVolPct": 82.9,
+      "medianVolume": 1428,
+      "thin": true
     },
     {
-      "ticker": "EMBRAC-B.ST",
-      "name": "Embracer",
+      "ticker": "AUSS.OL",
+      "name": "Austevoll Seafood",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 21.4,
+      "medianVolume": 127581
+    },
+    {
+      "ticker": "IFISH.OL",
+      "name": "Ice Fish Farm",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 81.5,
+      "medianVolume": 29485
+    },
+    {
+      "ticker": "NOHAL.OL",
+      "name": "Nordic Halibut",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 34.5,
+      "medianVolume": 1901,
+      "thin": true
+    },
+    {
+      "ticker": "PLCAN.OL",
+      "name": "Pelican Aqua",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 43.1,
+      "medianVolume": 4000,
+      "thin": true
+    },
+    {
+      "ticker": "PROXI.OL",
+      "name": "Proximar Seafood",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 62.1,
+      "medianVolume": 160143
+    },
+    {
+      "ticker": "SALM.OL",
+      "name": "Salmar",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 30.1,
+      "medianVolume": 174391
+    },
+    {
+      "ticker": "SALME.OL",
+      "name": "Salmon Evolution",
+      "sector": "Aquaculture",
+      "exchange": "Oslo",
+      "annualVolPct": 33.2,
+      "medianVolume": 634347
+    },
+    {
+      "ticker": "AZA.ST",
+      "name": "Avanza",
+      "sector": "Banks & insurance",
       "exchange": "Stockholm",
-      "annualVolPct": 39.3,
-      "medianVolume": 608264
+      "annualVolPct": 26.8,
+      "medianVolume": 280260
     },
     {
-      "ticker": "AIR.PA",
-      "name": "Airbus",
+      "ticker": "AVARDA.ST",
+      "name": "Avarda",
+      "sector": "Banks & insurance",
+      "exchange": "Stockholm",
+      "annualVolPct": 35.0,
+      "medianVolume": 45544
+    },
+    {
+      "ticker": "GJF.OL",
+      "name": "Gjensidige",
+      "sector": "Banks & insurance",
+      "exchange": "Oslo",
+      "annualVolPct": 20.3,
+      "medianVolume": 298031
+    },
+    {
+      "ticker": "HOFI.ST",
+      "name": "Hoist Finance",
+      "sector": "Banks & insurance",
+      "exchange": "Stockholm",
+      "annualVolPct": 48.1,
+      "medianVolume": 101616
+    },
+    {
+      "ticker": "INSTA.OL",
+      "name": "Instabank",
+      "sector": "Banks & insurance",
+      "exchange": "Oslo",
+      "annualVolPct": 29.7,
+      "medianVolume": 273275
+    },
+    {
+      "ticker": "INVE-B.ST",
+      "name": "Investor AB",
+      "sector": "Banks & insurance",
+      "exchange": "Stockholm",
+      "annualVolPct": 18.7,
+      "medianVolume": 2643049
+    },
+    {
+      "ticker": "MORROW.ST",
+      "name": "Morrow bank",
+      "sector": "Banks & insurance",
+      "exchange": "Stockholm",
+      "annualVolPct": 34.8,
+      "medianVolume": 289318
+    },
+    {
+      "ticker": "NOBA.ST",
+      "name": "NOBA",
+      "sector": "Banks & insurance",
+      "exchange": "Stockholm",
+      "annualVolPct": 36.8,
+      "medianVolume": 274350
+    },
+    {
+      "ticker": "PROT.OL",
+      "name": "Protector forsikring",
+      "sector": "Banks & insurance",
+      "exchange": "Oslo",
+      "annualVolPct": 28.2,
+      "medianVolume": 92515
+    },
+    {
+      "ticker": "QLIRO.ST",
+      "name": "Qliro",
+      "sector": "Banks & insurance",
+      "exchange": "Stockholm",
+      "annualVolPct": 34.8,
+      "medianVolume": 33927
+    },
+    {
+      "ticker": "SBNOR.OL",
+      "name": "Sparebanken Norge",
+      "sector": "Banks & insurance",
+      "exchange": "Oslo",
+      "annualVolPct": 22.6,
+      "medianVolume": 109298
+    },
+    {
+      "ticker": "STB.OL",
+      "name": "Storebrand",
+      "sector": "Banks & insurance",
+      "exchange": "Oslo",
+      "annualVolPct": 20.4,
+      "medianVolume": 530154
+    },
+    {
+      "ticker": "TRYG.CO",
+      "name": "Tryg",
+      "sector": "Banks & insurance",
+      "exchange": "Copenhagen",
+      "annualVolPct": 15.4,
+      "medianVolume": 668351
+    },
+    {
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "exchange": "Milan",
+      "annualVolPct": 35.1,
+      "medianVolume": 5207065
+    },
+    {
+      "ticker": "VIG.VI",
+      "name": "Vienna Insurance Group",
+      "sector": "Banks & insurance",
+      "exchange": "Vienna",
+      "annualVolPct": 29.8,
+      "medianVolume": 38996
+    },
+    {
+      "ticker": "BONHR.OL",
+      "name": "Bonheur",
+      "sector": "Grid & energy",
+      "exchange": "Oslo",
+      "annualVolPct": 24.9,
+      "medianVolume": 20846
+    },
+    {
+      "ticker": "CLOUD.OL",
+      "name": "Cloudberry",
+      "sector": "Grid & energy",
+      "exchange": "Oslo",
+      "annualVolPct": 29.4,
+      "medianVolume": 85446
+    },
+    {
+      "ticker": "4DS.DE",
+      "name": "Daldrup & Söhne",
+      "sector": "Grid & energy",
+      "exchange": "XETRA",
+      "annualVolPct": 63.4,
+      "medianVolume": 3295,
+      "thin": true
+    },
+    {
+      "ticker": "ELI.BR",
+      "name": "Elia Group",
+      "sector": "Grid & energy",
+      "exchange": "Brussels",
+      "annualVolPct": 27.1,
+      "medianVolume": 96517
+    },
+    {
+      "ticker": "PERR.PA",
+      "name": "Gerard Perrier Industrie",
+      "sector": "Grid & energy",
       "exchange": "Paris",
-      "annualVolPct": 33.8,
-      "medianVolume": 1197714
+      "annualVolPct": 15.2,
+      "medianVolume": 506,
+      "thin": true
+    },
+    {
+      "ticker": "NKT.CO",
+      "name": "NKT A/S",
+      "sector": "Grid & energy",
+      "exchange": "Copenhagen",
+      "annualVolPct": 33.3,
+      "medianVolume": 142118
+    },
+    {
+      "ticker": "NEX.PA",
+      "name": "Nexans",
+      "sector": "Grid & energy",
+      "exchange": "Paris",
+      "annualVolPct": 37.9,
+      "medianVolume": 146277
+    },
+    {
+      "ticker": "NIBE-B.ST",
+      "name": "Nibe Industrier",
+      "sector": "Grid & energy",
+      "exchange": "Stockholm",
+      "annualVolPct": 39.1,
+      "medianVolume": 7190972
+    },
+    {
+      "ticker": "NDX1.DE",
+      "name": "Nordex",
+      "sector": "Grid & energy",
+      "exchange": "XETRA",
+      "annualVolPct": 43.8,
+      "medianVolume": 553602
+    },
+    {
+      "ticker": "PFSE.DE",
+      "name": "Pfisterer",
+      "sector": "Grid & energy",
+      "exchange": "XETRA",
+      "annualVolPct": 53.6,
+      "medianVolume": 29592
+    },
+    {
+      "ticker": "PRY.MI",
+      "name": "Prysmian",
+      "sector": "Grid & energy",
+      "exchange": "Milan",
+      "annualVolPct": 46.4,
+      "medianVolume": 1067764
+    },
+    {
+      "ticker": "S92.DE",
+      "name": "SMA Solar",
+      "sector": "Grid & energy",
+      "exchange": "XETRA",
+      "annualVolPct": 75.8,
+      "medianVolume": 129981
+    },
+    {
+      "ticker": "SCATC.OL",
+      "name": "Scatec",
+      "sector": "Grid & energy",
+      "exchange": "Oslo",
+      "annualVolPct": 33.0,
+      "medianVolume": 313845
+    },
+    {
+      "ticker": "VWS.CO",
+      "name": "Vestas",
+      "sector": "Grid & energy",
+      "exchange": "Copenhagen",
+      "annualVolPct": 44.6,
+      "medianVolume": 2183373
+    },
+    {
+      "ticker": "ZAP.OL",
+      "name": "Zaptec",
+      "sector": "Grid & energy",
+      "exchange": "Oslo",
+      "annualVolPct": 44.6,
+      "medianVolume": 308906
+    },
+    {
+      "ticker": "ALO.PA",
+      "name": "Alstom",
+      "sector": "Industry & defence",
+      "exchange": "Paris",
+      "annualVolPct": 51.7,
+      "medianVolume": 1496078
+    },
+    {
+      "ticker": "BOL.ST",
+      "name": "Boliden",
+      "sector": "Industry & defence",
+      "exchange": "Stockholm",
+      "annualVolPct": 54.6,
+      "medianVolume": 1070237
+    },
+    {
+      "ticker": "CAF.MC",
+      "name": "CAF",
+      "sector": "Industry & defence",
+      "exchange": "MCE",
+      "annualVolPct": 30.4,
+      "medianVolume": 23847
+    },
+    {
+      "ticker": "AM.PA",
+      "name": "Dassault Aviation",
+      "sector": "Industry & defence",
+      "exchange": "Paris",
+      "annualVolPct": 33.2,
+      "medianVolume": 57171
+    },
+    {
+      "ticker": "KCR.HE",
+      "name": "Konecranes",
+      "sector": "Industry & defence",
+      "exchange": "Helsinki",
+      "annualVolPct": 41.5,
+      "medianVolume": 293326
+    },
+    {
+      "ticker": "PAL.VI",
+      "name": "Palfinger",
+      "sector": "Industry & defence",
+      "exchange": "Vienna",
+      "annualVolPct": 33.4,
+      "medianVolume": 27554
+    },
+    {
+      "ticker": "PAAL-B.CO",
+      "name": "Per Aarsleff Holding",
+      "sector": "Industry & defence",
+      "exchange": "Copenhagen",
+      "annualVolPct": 31.6,
+      "medianVolume": 19114,
+      "thin": true
+    },
+    {
+      "ticker": "SAAB-B.ST",
+      "name": "Saab",
+      "sector": "Industry & defence",
+      "exchange": "Stockholm",
+      "annualVolPct": 42.0,
+      "medianVolume": 1555031
+    },
+    {
+      "ticker": "SIE.DE",
+      "name": "Siemens",
+      "sector": "Industry & defence",
+      "exchange": "XETRA",
+      "annualVolPct": 35.0,
+      "medianVolume": 1054690
+    },
+    {
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "exchange": "XETRA",
+      "annualVolPct": 64.5,
+      "medianVolume": 159982
+    },
+    {
+      "ticker": "VOS.DE",
+      "name": "Vossloh",
+      "sector": "Industry & defence",
+      "exchange": "XETRA",
+      "annualVolPct": 37.9,
+      "medianVolume": 19580,
+      "thin": true
+    },
+    {
+      "ticker": "EL.PA",
+      "name": "EssilorLuxottica",
+      "sector": "Luxury",
+      "exchange": "Paris",
+      "annualVolPct": 32.1,
+      "medianVolume": 630751
+    },
+    {
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "exchange": "Milan",
+      "annualVolPct": 33.2,
+      "medianVolume": 492343
+    },
+    {
+      "ticker": "YACHT.MI",
+      "name": "Ferretti",
+      "sector": "Luxury",
+      "exchange": "Milan",
+      "annualVolPct": 31.3,
+      "medianVolume": 360808
+    },
+    {
+      "ticker": "RMS.PA",
+      "name": "Hermes",
+      "sector": "Luxury",
+      "exchange": "Paris",
+      "annualVolPct": 38.4,
+      "medianVolume": 80402
+    },
+    {
+      "ticker": "P911.DE",
+      "name": "Porsche",
+      "sector": "Luxury",
+      "exchange": "XETRA",
+      "annualVolPct": 30.0,
+      "medianVolume": 503529
+    },
+    {
+      "ticker": "1913.HK",
+      "name": "Prada",
+      "sector": "Luxury",
+      "exchange": "HKSE",
+      "annualVolPct": 41.1,
+      "medianVolume": 1932631
+    },
+    {
+      "ticker": "SL.MI",
+      "name": "Sanlorenzo",
+      "sector": "Luxury",
+      "exchange": "Milan",
+      "annualVolPct": 31.4,
+      "medianVolume": 40271
+    },
+    {
+      "ticker": "TISG.MI",
+      "name": "The Italian Sea Group",
+      "sector": "Luxury",
+      "exchange": "Milan",
+      "annualVolPct": 146.6,
+      "medianVolume": 512063
     },
     {
       "ticker": "ASML.AS",
       "name": "ASML",
       "exchange": "Amsterdam",
       "annualVolPct": 48.2,
-      "medianVolume": 677148
+      "medianVolume": 677148,
+      "sector": "Original ten"
     },
     {
-      "ticker": "SAP.DE",
-      "name": "SAP",
-      "exchange": "XETRA",
-      "annualVolPct": 44.1,
-      "medianVolume": 2671969
+      "ticker": "AIR.PA",
+      "name": "Airbus",
+      "exchange": "Paris",
+      "annualVolPct": 33.8,
+      "medianVolume": 1197714,
+      "sector": "Original ten"
     },
     {
-      "ticker": "YAR.OL",
-      "name": "Yara",
+      "ticker": "AKRBP.OL",
+      "name": "Aker BP",
       "exchange": "Oslo",
-      "annualVolPct": 40.8,
-      "medianVolume": 543321
+      "annualVolPct": 40.5,
+      "medianVolume": 1157042,
+      "sector": "Original ten"
     },
     {
-      "ticker": "SAND.ST",
-      "name": "Sandvik",
+      "ticker": "EMBRAC-B.ST",
+      "name": "Embracer",
       "exchange": "Stockholm",
-      "annualVolPct": 37.6,
-      "medianVolume": 1855676
-    },
-    {
-      "ticker": "VOLV-B.ST",
-      "name": "Volvo B",
-      "exchange": "Stockholm",
-      "annualVolPct": 28.2,
-      "medianVolume": 2895927
+      "annualVolPct": 39.3,
+      "medianVolume": 608264,
+      "sector": "Original ten"
     },
     {
       "ticker": "IFX.DE",
       "name": "Infineon",
       "exchange": "XETRA",
       "annualVolPct": 64.0,
-      "medianVolume": 4930118
+      "medianVolume": 4930118,
+      "sector": "Original ten"
+    },
+    {
+      "ticker": "SAP.DE",
+      "name": "SAP",
+      "exchange": "XETRA",
+      "annualVolPct": 44.1,
+      "medianVolume": 2671969,
+      "sector": "Original ten"
+    },
+    {
+      "ticker": "SAND.ST",
+      "name": "Sandvik",
+      "exchange": "Stockholm",
+      "annualVolPct": 37.6,
+      "medianVolume": 1855676,
+      "sector": "Original ten"
+    },
+    {
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "exchange": "Oslo",
+      "annualVolPct": 38.8,
+      "medianVolume": 430538,
+      "sector": "Original ten"
+    },
+    {
+      "ticker": "VOLV-B.ST",
+      "name": "Volvo B",
+      "exchange": "Stockholm",
+      "annualVolPct": 28.2,
+      "medianVolume": 2895927,
+      "sector": "Original ten"
+    },
+    {
+      "ticker": "YAR.OL",
+      "name": "Yara",
+      "exchange": "Oslo",
+      "annualVolPct": 40.8,
+      "medianVolume": 543321,
+      "sector": "Original ten"
+    },
+    {
+      "ticker": "BONEX.ST",
+      "name": "Bonesupport",
+      "sector": "Pharma & medtech",
+      "exchange": "Stockholm",
+      "annualVolPct": 49.5,
+      "medianVolume": 222084
+    },
+    {
+      "ticker": "CAMX.ST",
+      "name": "Camurus",
+      "sector": "Pharma & medtech",
+      "exchange": "Stockholm",
+      "annualVolPct": 44.8,
+      "medianVolume": 92010
+    },
+    {
+      "ticker": "EUZ.DE",
+      "name": "Eckert & Ziegler",
+      "sector": "Pharma & medtech",
+      "exchange": "XETRA",
+      "annualVolPct": 31.7,
+      "medianVolume": 97447
+    },
+    {
+      "ticker": "FYB.DE",
+      "name": "Formycon",
+      "sector": "Pharma & medtech",
+      "exchange": "XETRA",
+      "annualVolPct": 54.8,
+      "medianVolume": 6733,
+      "thin": true
+    },
+    {
+      "ticker": "GMAB.CO",
+      "name": "Genmab",
+      "sector": "Pharma & medtech",
+      "exchange": "Copenhagen",
+      "annualVolPct": 33.1,
+      "medianVolume": 119409
+    },
+    {
+      "ticker": "GUBRA.CO",
+      "name": "Gubra",
+      "sector": "Pharma & medtech",
+      "exchange": "Copenhagen",
+      "annualVolPct": 51.7,
+      "medianVolume": 25126
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "name": "Novo Nordisk",
+      "sector": "Pharma & medtech",
+      "exchange": "Copenhagen",
+      "annualVolPct": 35.7,
+      "medianVolume": 4612382
+    },
+    {
+      "ticker": "OBCK.DE",
+      "name": "Ottobock",
+      "sector": "Pharma & medtech",
+      "exchange": "XETRA",
+      "annualVolPct": 43.5,
+      "medianVolume": 20890
+    },
+    {
+      "ticker": "PILA.ST",
+      "name": "Pila Pharma",
+      "sector": "Pharma & medtech",
+      "exchange": "Stockholm",
+      "annualVolPct": 98.4,
+      "medianVolume": 47421
+    },
+    {
+      "ticker": "SOBI.ST",
+      "name": "Sobi",
+      "sector": "Pharma & medtech",
+      "exchange": "Stockholm",
+      "annualVolPct": 26.5,
+      "medianVolume": 338368
+    },
+    {
+      "ticker": "TRMED.OL",
+      "name": "Thor Medical",
+      "sector": "Pharma & medtech",
+      "exchange": "Oslo",
+      "annualVolPct": 67.3,
+      "medianVolume": 1483680
+    },
+    {
+      "ticker": "VICO.ST",
+      "name": "Vicore Pharma",
+      "sector": "Pharma & medtech",
+      "exchange": "Stockholm",
+      "annualVolPct": 59.4,
+      "medianVolume": 491267
+    },
+    {
+      "ticker": "ZEAL.CO",
+      "name": "Zealand Pharma",
+      "sector": "Pharma & medtech",
+      "exchange": "Copenhagen",
+      "annualVolPct": 80.3,
+      "medianVolume": 360506
+    },
+    {
+      "ticker": "BALD-B.ST",
+      "name": "Balder",
+      "sector": "Property",
+      "exchange": "Stockholm",
+      "annualVolPct": 27.7,
+      "medianVolume": 1963046
+    },
+    {
+      "ticker": "EIOF.OL",
+      "name": "Eiendomsspar",
+      "sector": "Property",
+      "exchange": "Oslo",
+      "annualVolPct": 33.9,
+      "medianVolume": 13459,
+      "thin": true
+    },
+    {
+      "ticker": "FABG.ST",
+      "name": "Fabege",
+      "sector": "Property",
+      "exchange": "Stockholm",
+      "annualVolPct": 18.2,
+      "medianVolume": 403787
+    },
+    {
+      "ticker": "GFC.PA",
+      "name": "Gecina",
+      "sector": "Property",
+      "exchange": "Paris",
+      "annualVolPct": 19.5,
+      "medianVolume": 199136
+    },
+    {
+      "ticker": "HEBA-B.ST",
+      "name": "Heba Fastigheter",
+      "sector": "Property",
+      "exchange": "Stockholm",
+      "annualVolPct": 21.3,
+      "medianVolume": 97768
+    },
+    {
+      "ticker": "LOGI-B.ST",
+      "name": "Logistea",
+      "sector": "Property",
+      "exchange": "Stockholm",
+      "annualVolPct": 25.0,
+      "medianVolume": 556667
+    },
+    {
+      "ticker": "MRL.MC",
+      "name": "Merlin Properties",
+      "sector": "Property",
+      "exchange": "MCE",
+      "annualVolPct": 26.2,
+      "medianVolume": 1111793
+    },
+    {
+      "ticker": "VNA.DE",
+      "name": "Vonovia",
+      "sector": "Property",
+      "exchange": "XETRA",
+      "annualVolPct": 35.4,
+      "medianVolume": 2831172
+    },
+    {
+      "ticker": "BMAX.ST",
+      "name": "Byggmax",
+      "sector": "Retail",
+      "exchange": "Stockholm",
+      "annualVolPct": 28.6,
+      "medianVolume": 121004
+    },
+    {
+      "ticker": "CHEF.ST",
+      "name": "Cheffelo",
+      "sector": "Retail",
+      "exchange": "Stockholm",
+      "annualVolPct": 46.0,
+      "medianVolume": 35660
+    },
+    {
+      "ticker": "ELLOS.ST",
+      "name": "Ellos",
+      "sector": "Retail",
+      "exchange": "Stockholm",
+      "annualVolPct": 30.5,
+      "medianVolume": 31639
+    },
+    {
+      "ticker": "NELLY.ST",
+      "name": "Nelly",
+      "sector": "Retail",
+      "exchange": "Stockholm",
+      "annualVolPct": 71.9,
+      "medianVolume": 216444
+    },
+    {
+      "ticker": "CMBTO.OL",
+      "name": "CMB.TECH",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 37.9,
+      "medianVolume": 273241
+    },
+    {
+      "ticker": "CADLR.OL",
+      "name": "Cadeler",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 35.5,
+      "medianVolume": 429296
+    },
+    {
+      "ticker": "DOFG.OL",
+      "name": "DOF Group",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 27.0,
+      "medianVolume": 295853
+    },
+    {
+      "ticker": "DSV.CO",
+      "name": "DSV",
+      "sector": "Shipping & offshore",
+      "exchange": "Copenhagen",
+      "annualVolPct": 36.8,
+      "medianVolume": 344665
+    },
+    {
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 45.0,
+      "medianVolume": 868434
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "name": "Höegh Autoliners",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 41.3,
+      "medianVolume": 398983
+    },
+    {
+      "ticker": "IWS.OL",
+      "name": "IWS",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 28.3,
+      "medianVolume": 3610,
+      "thin": true
+    },
+    {
+      "ticker": "ODF.OL",
+      "name": "Odfjell",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 33.9,
+      "medianVolume": 35029
+    },
+    {
+      "ticker": "REACH.OL",
+      "name": "Reach Subsea",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 32.1,
+      "medianVolume": 178522
+    },
+    {
+      "ticker": "SOFF.OL",
+      "name": "Solstad Offshore",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 35.6,
+      "medianVolume": 131428
+    },
+    {
+      "ticker": "WAWI.OL",
+      "name": "Wallenius Wilhelmsen",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 35.7,
+      "medianVolume": 307137
+    },
+    {
+      "ticker": "WWI.OL",
+      "name": "Wilh. Wilhelmsen",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 25.3,
+      "medianVolume": 13902,
+      "thin": true
+    },
+    {
+      "ticker": "AAC.ST",
+      "name": "AAC Clyde Space",
+      "sector": "Tech & space",
+      "exchange": "Stockholm",
+      "annualVolPct": 58.5,
+      "medianVolume": 27936
+    },
+    {
+      "ticker": "AUTO.OL",
+      "name": "Autostore",
+      "sector": "Tech & space",
+      "exchange": "Oslo",
+      "annualVolPct": 58.4,
+      "medianVolume": 4307341
+    },
+    {
+      "ticker": "GOMX.ST",
+      "name": "Gomspace",
+      "sector": "Tech & space",
+      "exchange": "Stockholm",
+      "annualVolPct": 55.9,
+      "medianVolume": 514813
+    },
+    {
+      "ticker": "IVU.DE",
+      "name": "IVU Traffic Technologies",
+      "sector": "Tech & space",
+      "exchange": "XETRA",
+      "annualVolPct": 24.8,
+      "medianVolume": 9527,
+      "thin": true
+    },
+    {
+      "ticker": "MYCR.ST",
+      "name": "Mycronic",
+      "sector": "Tech & space",
+      "exchange": "Stockholm",
+      "annualVolPct": 42.4,
+      "medianVolume": 234085
+    },
+    {
+      "ticker": "OVZON.ST",
+      "name": "Ovzon",
+      "sector": "Tech & space",
+      "exchange": "Stockholm",
+      "annualVolPct": 53.2,
+      "medianVolume": 490370
+    },
+    {
+      "ticker": "TPE.DE",
+      "name": "PVA Tepla",
+      "sector": "Tech & space",
+      "exchange": "XETRA",
+      "annualVolPct": 64.0,
+      "medianVolume": 73329
+    },
+    {
+      "ticker": "ALRIB.PA",
+      "name": "Riber",
+      "sector": "Tech & space",
+      "exchange": "Paris",
+      "annualVolPct": 98.2,
+      "medianVolume": 144843
+    },
+    {
+      "ticker": "SHT-B.ST",
+      "name": "Smart High Tech",
+      "sector": "Tech & space",
+      "exchange": "Stockholm",
+      "annualVolPct": 164.9,
+      "medianVolume": 93259
+    },
+    {
+      "ticker": "SMOP.OL",
+      "name": "Smartoptics",
+      "sector": "Tech & space",
+      "exchange": "Oslo",
+      "annualVolPct": 57.1,
+      "medianVolume": 179688
+    },
+    {
+      "ticker": "SMHN.DE",
+      "name": "Suss Microtec",
+      "sector": "Tech & space",
+      "exchange": "XETRA",
+      "annualVolPct": 70.6,
+      "medianVolume": 108125
     }
-  ],
-  "_locales": "Each company is read in its home market's language and in English. extraLocales adds the same languages for every company; the Nordic markets report on each other constantly, so they are worth carrying.",
-  "extraLocales": [
-    "no",
-    "sv",
-    "da"
   ]
 }

@@ -331,43 +331,14 @@ def home_language(ticker: str) -> str:
 # Danish feed carries Norwegian papers, the Norwegian feed carries English wires.
 # Translating Norwegian as Danish mostly works - they are that close - but the
 # label shown to a reader should say what the headline actually is.
-_MARKERS = {
-    "no": (" ikke ", " ikkje ", " og ", " på ", " til ", " fra ", " som ", " har ",
-           " skal ", " kroner", " milliarder", " selskapet", "øre", "kjøp"),
-    "da": (" ikke ", " og ", " på ", " til ", " fra ", " som ", " har ", " kroner",
-           " milliarder", " selskabet", " virksomhed", " mia."),
-    "sv": (" inte ", " och ", " på ", " till ", " från ", " som ", " har ",
-           " kronor", " miljarder", " bolaget", " köp", " ökar"),
-    "de": (" der ", " die ", " das ", " und ", " für ", " mit ", " von ", " auf ",
-           " nicht ", " milliarden", " aktie"),
-    "fr": (" le ", " la ", " les ", " des ", " pour ", " avec ", " sur ", " dans ",
-           " milliards"),
-    "nl": (" het ", " een ", " van ", " voor ", " met ", " niet ", " miljard"),
-    "es": (" el ", " la ", " los ", " las ", " para ", " con ", " por ", " millones"),
-    "it": (" il ", " la ", " di ", " per ", " con ", " che ", " miliardi"),
-    "fi": (" ja ", " on ", " ei ", " että ", " miljardia", " yhtiö"),
-    "en": (" the ", " and ", " for ", " with ", " from ", " that ", " billion ",
-           " million ", " after ", " says "),
-}
-
-# Danish and Norwegian share almost every function word, so these are the ones
-# that actually separate them. Without this every Norwegian headline served by
-# the Danish feed would be labelled Danish.
-_NO_ONLY = ("olje", "nytt", "sjef", "ikkje", "sokkel", "norsk", "gjør",
-            "milliarder kroner", "øre", " mye ", " nå ", "selskapet", "kjøp")
-_DA_ONLY = ("olie", "selskab", "virksomhed", "mia. kr", "dansk", "erhverv",
-            "øget", "chef", " nyt ", "ligeledes")
-
-
-# The publisher is a far stronger signal than any word in the headline: a story
-# in Finansavisen is Norwegian whichever feed served it, and no vocabulary test
-# is needed to know that. Norwegian and Danish share almost every function word,
-# so this settles the pair that word markers struggle with.
+# The publisher is the last resort, not the first: a Danish outlet writing in
+# English would otherwise have its English filed as Danish. It settles the case
+# nothing else can - a headline with no function word in it at all.
 PUBLISHER_LANGUAGE = {
     "no": ("e24", "dn.no", "dagens naringsliv", "finansavisen", "nrk",
            "aftenposten", "hegnar", "kapital", "energiwatch.no", "sysla",
            "tu.no", "nettavisen", "vg.no", "adressa", "bt.no", "shifter",
-           "oljedirektoratet", "petro.no", "borsen.no", "intrafish.no"),
+           "kyst.no", "finanswatch.no", "intrafish.no", "petro.no", "ilaks"),
     "da": ("borsen.dk", "berlingske", "jyllands-posten", "politiken",
            "finans.dk", "shippingwatch", "energiwatch.dk", "medwatch",
            "dr.dk", "tv2.dk", "euroinvestor"),
@@ -404,40 +375,142 @@ def language_of_publisher(publisher: str) -> str | None:
     return None
 
 
-def detect_language(title: str, fallback: str, publisher: str = "") -> str:
-    """Best guess at the language of a headline, falling back to the locale it
-    was served from. Cheap on purpose - this decides a badge, not a decision."""
-    # Who published it beats anything the headline says.
-    known = language_of_publisher(publisher)
-    if known:
-        return known
+_MARKERS = {
+    "no": (" ikke ", " ikkje ", " og ", " på ", " til ", " fra ", " som ", " har ",
+           " skal ", " kroner", " milliarder", " selskapet", " etter ", " med "),
+    "da": (" ikke ", " og ", " på ", " til ", " fra ", " som ", " har ", " kroner",
+           " milliarder", " selskabet", " virksomhed", " mia.", " efter "),
+    "sv": (" inte ", " och ", " på ", " till ", " från ", " som ", " har ",
+           " kronor", " miljarder", " bolaget", " efter ", " med "),
+    "de": (" der ", " die ", " das ", " und ", " für ", " mit ", " von ", " auf ",
+           " nicht ", " milliarden", " aktie", " im ", " zum "),
+    "fr": (" le ", " la ", " les ", " des ", " pour ", " avec ", " sur ", " dans ",
+           " milliards", " une ", " est "),
+    "nl": (" het ", " een ", " van ", " voor ", " met ", " niet ", " miljard",
+           " naar ", " bij "),
+    "es": (" el ", " la ", " los ", " las ", " para ", " con ", " por ", " millones",
+           " una ", " del "),
+    "it": (" il ", " la ", " di ", " per ", " con ", " che ", " miliardi", " una ",
+           " del "),
+    # No " on " here. It is the Finnish "is", and also an English preposition,
+    # so it made "Boom Lasting on Power Needs" score Finnish.
+    "fi": (" ja ", " ei ", " että ", " sekä ", " mukaan ", " kertoo ", " kertoi ",
+           " miljoonaa ", " miljardia ", " yhtiö", " osake", " tulos"),
+    "en": (" the ", " and ", " for ", " with ", " from ", " that ", " to ", " in ",
+           " of ", " on ", " as ", " at ", " by ", " is ", " are ", " was ",
+           " after ", " says ", " said ", " over ", " its ", " under ", " into ",
+           " amid ", " ahead ", " against ", " million ", " billion ", " shares ",
+           " stock ", " quarter ", " profit ", " revenue ", " deal ", " reports "),
+}
 
+# Danish and Norwegian share almost every function word, so these are the ones
+# that actually separate them - and they are matched as substrings, because
+# Norwegian compounds freely and the tell is inside "Oljetoppens".
+# Norwegian against Danish. Not " mot ": Swedish uses it too, which is how
+# "AI testas mot viltolyckor pa jarnvagen" came out Norwegian.
+_NO_ONLY = (" å ", " enn ", "frykter", "svakere", "sterkere", "ikkje",
+            "olje", "nytt", "sjef", "sokkel", "norsk", "gjør", "høst",
+            "milliarder kroner", " mye ", " nå ", "selskapet", "kjøp")
+_DA_ONLY = (" mod ", "frygter", "svagere", "stærkere", "olie", "selskab",
+            "virksomhed", "mia. kr", "dansk", "erhverv", "øget", "chef",
+            " nyt ", "ligeledes", "efterår", " også ")
+_SV_ONLY = (" och ", " inte ", " är ", " kronor", " bolaget", " ökar", " än ",
+            " sedan ", "järnväg", "svensk", "köp", "höjer", "sänker")
+
+SCANDINAVIAN = ("no", "da", "sv")
+
+
+def _scandinavian(lowered: str, fallback: str, publisher: str = "") -> str:
+    """Which of Norwegian, Danish and Swedish.
+
+    Spelling settles this better than grammar does. Swedish writes a-diaeresis
+    and o-diaeresis where Norwegian and Danish write ae and o-slash, and the
+    three share so much vocabulary that a headline can otherwise carry no clue
+    at all. One letter in "jarnvagen" says Swedish more reliably than any word
+    in the sentence.
+    """
+    swedish_letters = sum(lowered.count(c) for c in "äö")
+    nordic_letters = sum(lowered.count(c) for c in "æø")
+    if swedish_letters and not nordic_letters:
+        return "sv"
+
+    no_hits = sum(1 for m in _NO_ONLY if m in lowered)
+    da_hits = sum(1 for m in _DA_ONLY if m in lowered)
+    sv_hits = sum(1 for m in _SV_ONLY if m in lowered)
+
+    if nordic_letters and not swedish_letters:
+        # Norwegian or Danish, so Swedish evidence is not evidence.
+        if no_hits != da_hits:
+            return "no" if no_hits > da_hits else "da"
+        # The two write the same sentence. Who printed it is the only thing
+        # left to go on, and it is a good thing to go on.
+        known = language_of_publisher(publisher)
+        if known in ("no", "da"):
+            return known
+        return fallback if fallback in ("no", "da") else "no"
+
+    best = max((no_hits, "no"), (da_hits, "da"), (sv_hits, "sv"))
+    ties = sum(1 for n in (no_hits, da_hits, sv_hits) if n == best[0])
+    if best[0] > 0 and ties == 1:
+        return best[1]
+    known = language_of_publisher(publisher)
+    if known in SCANDINAVIAN:
+        return known
+    return fallback if fallback in SCANDINAVIAN else best[1]
+
+# Enough English function words to be sure rather than lucky.
+_SURE_ENGLISH = 2
+
+
+def detect_language(title: str, fallback: str, publisher: str = "") -> str:
+    """Best guess at the language of a headline.
+
+    The order matters more than any individual test.
+
+    English first, because a Danish or Norwegian outlet writing in English is
+    common and the publisher would otherwise mislabel it: MedWatch is Danish
+    and files "ALK CFO to receive DKK 25m payout" in English.
+
+    Then the Norwegian-Danish vocabulary test, which is the pair no function
+    word can separate.
+
+    Then the full marker count, but only when one language wins outright.
+
+    The publisher last, and only when the words gave nothing away - which is
+    exactly the case it was added for, a Norwegian headline served by the
+    Danish feed with no function word in it at all.
+    """
     lowered = title.lower()
     padded = f" {lowered} "
 
-    # Norwegian and Danish first, and before the function-word test rather than
-    # after it. They share almost every function word, so the test that tells
-    # them apart is the vocabulary - and a headline can carry that tell while
-    # containing no function word at all: "Oljetoppens drom: et nytt Castberg"
-    # scored zero on every marker list and fell straight through to whichever
-    # feed had served it.
-    #
-    # Substrings, not whole words, because Norwegian compounds freely: the tell
-    # is inside "Oljetoppens", not standing beside it.
-    no_hits = sum(1 for m in _NO_ONLY if m in lowered)
-    da_hits = sum(1 for m in _DA_ONLY if m in lowered)
-    if no_hits != da_hits and max(no_hits, da_hits) > 0:
-        return "no" if no_hits > da_hits else "da"
+    english = sum(1 for m in _MARKERS["en"] if m in padded)
+    if english >= _SURE_ENGLISH:
+        return "en"
 
-    scores = {code: sum(1 for m in markers if m in padded)
-              for code, markers in _MARKERS.items()}
-    best = max(scores, key=lambda c: scores[c])
-    if scores[best] == 0:
-        return fallback
-    # A tie between the two means neither gave itself away; trust the feed.
-    if best in ("no", "da") and fallback in ("no", "da"):
-        return fallback
-    return best
+    # Spelling is decisive between the Scandinavian three and costs nothing to
+    # look at, so it comes before counting function words they share.
+    # Only when there is Scandinavian evidence to weigh. Entering this branch
+    # merely because the feed was Scandinavian sent an English headline served
+    # by the Danish feed straight to a Danish verdict without ever counting a
+    # word: "Novo Nordisk's acquisition spree marred by several failed deals".
+    scand_letters = any(c in lowered for c in "æøäå")
+    scand_markers = max(sum(1 for m in _MARKERS[c] if m in padded)
+                        for c in SCANDINAVIAN)
+    if scand_letters or scand_markers > 0:
+        other = max(sum(1 for m in _MARKERS[c] if m in padded)
+                    for c in _MARKERS if c not in SCANDINAVIAN and c != "en")
+        if scand_markers >= other or any(c in lowered for c in "æø"):
+            return _scandinavian(lowered, fallback, publisher)
+
+    scores = sorted(((sum(1 for m in ms if m in padded), code)
+                     for code, ms in _MARKERS.items()), reverse=True)
+    if scores[0][0] > 0 and scores[0][0] > scores[1][0]:
+        return scores[0][1]
+
+    known = language_of_publisher(publisher)
+    if known:
+        return known
+    return fallback
 
 
 def news(query: str, count: int = 25, locale: str = "en") -> list[dict]:
