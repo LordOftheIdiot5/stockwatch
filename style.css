@@ -5,6 +5,7 @@
   --bg: #070b16;
   --ink: #f2f7ff;
   --muted: #8ea0c4;
+  --faint: #6d7c9c;
   --accent: #3ee0c5;
   --up: #3ee0c5;
   --down: #ff7b93;
@@ -107,6 +108,29 @@ body {
   color: var(--muted);
 }
 
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  padding: 7px 14px;
+  width: 150px;
+  outline: none;
+}
+
+.filter:focus { border-color: var(--edge-lit); }
+.filter::placeholder { color: var(--faint); }
+
 /* --- alerts --- */
 
 .alerts { margin: 0; padding: 0; list-style: none; }
@@ -136,10 +160,11 @@ body {
 }
 
 .tag.reg { color: var(--accent); border-color: var(--edge-lit); background: color-mix(in srgb, var(--accent) 10%, transparent); }
-.tag.price { color: #e0c35a; border-color: rgba(224,195,90,0.4); }
-.tag.news { color: #6d8dff; border-color: rgba(109,141,255,0.4); }
+.tag.price { color: #e0c35a; border-color: rgba(224, 195, 90, 0.4); }
+.tag.news { color: #6d8dff; border-color: rgba(109, 141, 255, 0.4); }
+.tag.tiny { font-size: 0.55rem; padding: 2px 6px; margin-right: 7px; }
 
-.alert-head {
+.alert-head, .story-head {
   display: block;
   font-size: 0.94rem;
   line-height: 1.45;
@@ -147,52 +172,136 @@ body {
   text-decoration: none;
 }
 
-.alert-head:hover { color: var(--accent); }
+.alert-head:hover, .story-head:hover { color: var(--accent); }
 
-.alert-meta {
+.alert-meta, .story-meta {
   margin: 5px 0 0;
   font-family: var(--mono);
   font-size: 0.68rem;
   color: var(--muted);
 }
 
-/* --- prices --- */
-
-.table-wrap { overflow-x: auto; }
-
-.prices {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.88rem;
+/* The machine translation is what you read; the original is what was written.
+   Keeping both means a line can always be checked against its source. */
+.original {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--faint);
+  font-style: italic;
 }
 
-.prices th {
-  text-align: left;
+.lang {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--edge-lit);
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin-right: 7px;
+  vertical-align: 1px;
+}
+
+/* --- companies --- */
+
+.companies { display: flex; flex-direction: column; }
+
+.company { border-top: 1px solid var(--edge); }
+.company:first-child { border-top: 0; }
+
+.company > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 88px 96px 68px 68px 56px 34px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+.company > summary::-webkit-details-marker { display: none; }
+.company > summary:hover { background: rgba(255, 255, 255, 0.035); }
+.company > summary:focus-visible { outline: 1px solid var(--edge-lit); }
+
+.c-name { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+
+.c-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-ticker { font-size: 0.66rem; color: var(--faint); }
+
+.company.hot .c-title { color: var(--accent); }
+
+.spark { color: var(--muted); overflow: visible; }
+.spark.up { color: var(--up); }
+.spark.down { color: var(--down); }
+
+.c-price, .c-move, .c-vs, .c-rvol { text-align: right; font-size: 0.8rem; }
+.c-price { color: var(--ink); }
+.ccy { color: var(--faint); font-size: 0.72em; }
+
+.count {
+  justify-self: end;
   font-family: var(--mono);
   font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  min-width: 22px;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 999px;
+  border: 1px solid var(--edge);
   color: var(--muted);
-  font-weight: 600;
-  padding: 0 12px 10px 0;
-  border-bottom: 1px solid var(--edge);
-  white-space: nowrap;
 }
 
-.prices td {
-  padding: 11px 12px 11px 0;
-  border-bottom: 1px solid var(--edge);
-  white-space: nowrap;
+.count.has-fresh {
+  color: var(--accent);
+  border-color: var(--edge-lit);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
-.prices tr:last-child td { border-bottom: 0; }
+.c-body { padding: 4px 4px 20px 4px; }
 
-.num { text-align: right; }
+.stories { margin: 0 0 14px; padding: 0; list-style: none; }
+
+.story {
+  padding: 11px 0 11px 14px;
+  border-left: 2px solid var(--edge);
+}
+
+.story.fresh { border-left-color: var(--edge-lit); }
+
+.c-stats {
+  margin: 0;
+  font-size: 0.68rem;
+  color: var(--faint);
+  padding-left: 14px;
+}
+
+.c-stats a { color: var(--muted); }
+.c-stats a:hover { color: var(--accent); }
+
+.empty {
+  margin: 0;
+  padding: 10px 0 10px 14px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+
 .mono { font-family: var(--mono); }
-.ccy { color: var(--muted); font-size: 0.74em; }
 .up { color: var(--up); }
 .down { color: var(--down); }
-.hot { color: var(--accent); font-weight: 600; }
+.hot-num { color: var(--accent); font-weight: 600; }
 
 /* --- foot --- */
 
@@ -213,9 +322,19 @@ body {
 .foot a { color: var(--accent); text-decoration: none; }
 .foot a:hover { text-decoration: underline; }
 
-.disclaimer { color: #6d7c9c; }
+.disclaimer { color: var(--faint); }
+
+/* Narrow: the least important numbers drop out first, so the row stays one
+   line rather than becoming a horizontal scroll. */
+@media (max-width: 860px) {
+  .company > summary { grid-template-columns: minmax(0, 1fr) 96px 68px 56px 34px; }
+  .spark, .c-vs { display: none; }
+}
 
 @media (max-width: 620px) {
   .alert { grid-template-columns: 1fr; gap: 8px; }
   .tag { justify-self: start; }
+  .company > summary { grid-template-columns: minmax(0, 1fr) 72px 34px; }
+  .c-price, .c-rvol { display: none; }
+  .filter { width: 100%; }
 }

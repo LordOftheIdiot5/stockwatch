@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>stockwatch</title>
   <meta name="robots" content="noindex">
-  <meta name="description" content="Hourly scanner for European equities: price, volume and regulated disclosures.">
+  <meta name="description" content="Hourly scanner for European equities: price, volume, regulated disclosures and news in every language.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 22 L11 14 L17 19 L29 7' fill='none' stroke='%233ee0c5' stroke-width='3'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +24,11 @@
     <section class="lede-block">
       <h1>What moved, and why.</h1>
       <p class="lede">
-        Ten European names, scanned hourly. Moves are measured against each
-        instrument's own volatility and against the day's market, so a stock only
-        appears here if it did something the rest of the list did not.
+        European equities, scanned hourly. Moves are measured against each
+        instrument's own volatility and against the day's market, so a stock
+        only appears here if it did something the rest of the list did not.
+        News is read in every language its companies are written about in, and
+        translated where it needs to be.
       </p>
     </section>
 
@@ -37,32 +39,30 @@
     </section>
 
     <section class="panel">
-      <h2>Prices</h2>
-      <p class="panel-note" id="marketNote">—</p>
-      <div class="table-wrap">
-        <table class="prices">
-          <thead>
-            <tr>
-              <th>Ticker</th><th>Name</th><th class="num">Close</th>
-              <th class="num">Move</th><th class="num">vs market</th>
-              <th class="num">σ</th><th class="num">RVOL</th>
-            </tr>
-          </thead>
-          <tbody id="prices"></tbody>
-        </table>
+      <div class="panel-head">
+        <div>
+          <h2>Companies</h2>
+          <p class="panel-note" id="marketNote">—</p>
+        </div>
+        <input type="search" id="filter" class="filter" placeholder="filter…"
+               aria-label="Filter companies" autocomplete="off">
       </div>
+      <div id="companies" class="companies"></div>
+      <p class="empty" id="noMatch" hidden>Nothing matches that.</p>
     </section>
 
     <footer class="foot">
       <p>
-        Free data only: Yahoo for prices, Oslo Børs NewsWeb and MFN for regulated
-        disclosures, Google News for open-web coverage.
+        Free data only: Yahoo for prices, Oslo Børs NewsWeb and MFN for
+        regulated disclosures, Google News in
+        <span id="langCount">several</span> languages for open-web coverage,
+        MyMemory for translation.
         <a href="https://github.com/LordOftheIdiot5/stockwatch" target="_blank" rel="noopener noreferrer">Source</a>.
       </p>
       <p class="disclaimer">
-        Not advice, and not a view on where anything is going. The thresholds have
-        not been tested against forward returns, so this is a tool for noticing
-        things — nothing more.
+        Not advice, and not a view on where anything is going. The thresholds
+        have not been tested against forward returns, so this is a tool for
+        noticing things — nothing more.
       </p>
     </footer>
   </main>
@@ -72,8 +72,20 @@
     const signed = v => (v > 0 ? "+" : "") + fmt.format(v);
     const cls = v => (v > 0 ? "up" : v < 0 ? "down" : "");
 
+    // Languages read directly. Everything else leads with its translation.
+    const READABLE = new Set(["en", "no", "nb", "nn", "sv", "da", "es"]);
+    const LANG_NAME = {
+      en: "English", no: "Norwegian", nb: "Norwegian", nn: "Norwegian",
+      sv: "Swedish", da: "Danish", fi: "Finnish", de: "German", fr: "French",
+      nl: "Dutch", es: "Spanish", it: "Italian", pt: "Portuguese", pl: "Polish"
+    };
+
+    const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
     function ago(iso) {
       const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+      if (!isFinite(mins)) return "";
       if (mins < 2) return "just now";
       if (mins < 60) return mins + "m ago";
       const h = Math.round(mins / 60);
@@ -90,41 +102,127 @@
       return '<span class="tag news">news</span>';
     }
 
+    // A headline in a language the reader does not have leads with its
+    // translation, and keeps the original underneath rather than discarding it:
+    // machine translation is good enough to triage on and not to quote.
+    function headlineOf(s) {
+      const readable = READABLE.has(s.lang);
+      if (!s.english || readable) return { lead: s.headline, under: null };
+      return { lead: s.english, under: s.headline };
+    }
+
+    function sparkline(values) {
+      if (!values || values.length < 2) return "";
+      const lo = Math.min(...values), hi = Math.max(...values);
+      const span = hi - lo || 1;
+      const w = 88, h = 24;
+      const pts = values.map((v, i) => {
+        const x = (i / (values.length - 1)) * w;
+        const y = h - ((v - lo) / span) * (h - 3) - 1.5;
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(" ");
+      const rising = values[values.length - 1] >= values[0];
+      return `<svg class="spark ${rising ? "up" : "down"}" viewBox="0 0 ${w} ${h}"
+                   width="${w}" height="${h}" aria-hidden="true" focusable="false">
+                <polyline points="${pts}" fill="none" stroke="currentColor"
+                          stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>`;
+    }
+
+    function storyRow(s) {
+      const { lead, under } = headlineOf(s);
+      const lang = s.lang && s.lang !== "en"
+        ? `<span class="lang" title="${esc(LANG_NAME[s.lang] || s.lang)}">${esc(s.lang)}</span>` : "";
+      const reg = s.kind === "disclosure"
+        ? `<span class="tag reg tiny">${s.regulatory ? "regulatory" : "filing"}</span>` : "";
+      const when = s.published ? ago(s.published) : "";
+      const meta = [s.publisher, when].filter(Boolean).map(esc).join(" · ");
+      return `
+        <li class="story${s.fresh ? " fresh" : ""}">
+          <a class="story-head" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(lead)}</a>
+          ${under ? `<p class="original" lang="${esc(s.lang)}">${esc(under)}</p>` : ""}
+          <p class="story-meta">${reg}${lang}${meta}</p>
+        </li>`;
+    }
+
+    function companyRow(c) {
+      const stories = c.stories || [];
+      const fresh = stories.filter(s => s.fresh).length;
+      const count = stories.length
+        ? `<span class="count${fresh ? " has-fresh" : ""}">${stories.length}</span>` : "";
+      const hot = Math.abs(c.excessSigma) >= 2 || c.rvol >= 2.5;
+      return `
+        <details class="company${hot ? " hot" : ""}" data-search="${esc((c.name + " " + c.ticker).toLowerCase())}">
+          <summary>
+            <span class="c-name">
+              <span class="c-title">${esc(c.name)}</span>
+              <span class="c-ticker mono">${esc(c.ticker)}</span>
+            </span>
+            ${sparkline(c.spark)}
+            <span class="c-price mono">${fmt.format(c.close)} <span class="ccy">${esc(c.currency || "")}</span></span>
+            <span class="c-move mono ${cls(c.changePct)}">${signed(c.changePct)}%</span>
+            <span class="c-vs mono ${cls(c.excessPct)}" title="move net of the day's market">${signed(c.excessPct)}%</span>
+            <span class="c-rvol mono ${c.rvol >= 2.5 ? "hot-num" : ""}" title="volume vs its own 20-day median">${fmt.format(c.rvol)}x</span>
+            ${count}
+          </summary>
+          <div class="c-body">
+            ${stories.length
+              ? `<ul class="stories">${stories.map(storyRow).join("")}</ul>`
+              : `<p class="empty">Nothing published about ${esc(c.name)} in the last 48 hours.</p>`}
+            <p class="c-stats mono">
+              ${fmt.format(c.excessSigma)}σ against the market ·
+              volume ${fmt.format(c.rvol)}× its 20-day median ·
+              ${esc(c.exchange || "")}
+              <a href="https://finance.yahoo.com/quote/${encodeURIComponent(c.ticker)}"
+                 target="_blank" rel="noopener noreferrer">chart</a>
+            </p>
+          </div>
+        </details>`;
+    }
+
     fetch("data/signals.json?cb=" + Date.now())
-      .then(r => r.json())
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then(d => {
-        document.getElementById("stamp").textContent =
-          "updated " + ago(d.generated);
+        document.getElementById("stamp").textContent = "updated " + ago(d.generated);
+        document.getElementById("langCount").textContent =
+          (d.languages || []).length ? `${d.languages.length}` : "several";
 
         const alerts = d.alerts || [];
         document.getElementById("alertNote").textContent = alerts.length
-          ? `${alerts.length} across ${d.tickers} tickers`
+          ? `${alerts.length} across ${d.tickers} companies`
           : "Nothing stood out in the last scan.";
+        document.getElementById("alerts").innerHTML = alerts.map(a => {
+          const { lead, under } = headlineOf(a);
+          const lang = a.lang && a.lang !== "en"
+            ? `<span class="lang">${esc(a.lang)}</span>` : "";
+          return `
+            <li class="alert">
+              ${badge(a)}
+              <div class="alert-body">
+                <a class="alert-head" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">${esc(lead)}</a>
+                ${under ? `<p class="original" lang="${esc(a.lang)}">${esc(under)}</p>` : ""}
+                <p class="alert-meta">${lang}${esc(a.name)} · ${esc(a.ticker)}${a.publisher ? " · " + esc(a.publisher) : ""}</p>
+              </div>
+            </li>`;
+        }).join("");
 
-        document.getElementById("alerts").innerHTML = alerts.map(a => `
-          <li class="alert">
-            ${badge(a)}
-            <div class="alert-body">
-              <a class="alert-head" href="${a.url}" target="_blank" rel="noopener noreferrer">${a.headline}</a>
-              <p class="alert-meta">${a.name} · ${a.ticker}${a.publisher ? " · " + a.publisher : ""}</p>
-            </div>
-          </li>`).join("");
+        const companies = d.companies || [];
+        document.getElementById("marketNote").textContent =
+          `Market baseline ${signed(d.marketPct ?? 0)}% — the median move across the list. Click a company for its coverage.`;
+        document.getElementById("companies").innerHTML = companies.map(companyRow).join("");
 
-        const quotes = d.quotes || [];
-        if (quotes.length) {
-          document.getElementById("marketNote").textContent =
-            `Market baseline ${signed(quotes[0].marketPct)}% — the median move across the list.`;
-        }
-        document.getElementById("prices").innerHTML = quotes.map(q => `
-          <tr>
-            <td class="mono">${q.ticker}</td>
-            <td>${q.name}</td>
-            <td class="num mono">${fmt.format(q.close)} <span class="ccy">${q.currency}</span></td>
-            <td class="num mono ${cls(q.changePct)}">${signed(q.changePct)}%</td>
-            <td class="num mono ${cls(q.excessPct)}">${signed(q.excessPct)}%</td>
-            <td class="num mono ${Math.abs(q.excessSigma) >= 2 ? "hot" : ""}">${fmt.format(q.excessSigma)}</td>
-            <td class="num mono ${q.rvol >= 2.5 ? "hot" : ""}">${fmt.format(q.rvol)}x</td>
-          </tr>`).join("");
+        const filter = document.getElementById("filter");
+        const noMatch = document.getElementById("noMatch");
+        filter.addEventListener("input", () => {
+          const q = filter.value.trim().toLowerCase();
+          let shown = 0;
+          document.querySelectorAll(".company").forEach(el => {
+            const hit = !q || el.dataset.search.includes(q);
+            el.hidden = !hit;
+            if (hit) shown++;
+          });
+          noMatch.hidden = shown > 0;
+        });
       })
       .catch(() => {
         document.getElementById("stamp").textContent = "could not load data";

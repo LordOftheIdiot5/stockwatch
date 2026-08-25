@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import sources                                                   # noqa: E402
+from translate import Translator                                  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -39,7 +40,12 @@ BASELINE_DAYS = 20
 # Materiality and source quality are weighed separately in sources.py; see
 # worth_alerting there for why a single summed threshold could not work.
 NEWS_MAX_AGE_H = 48       # older than this is history, not an alert
-NEWS_PER_TICKER = 2       # a flood about one name is still a flood
+NEWS_PER_TICKER = 6       # enough to read under a company, not a flood
+# A story worth reading under a company is not automatically worth interrupting
+# someone for. Four accounts of one oil alliance belong on the page together;
+# only the one that names the event belongs in a notification.
+ALERT_MATERIAL = 2
+NEWS_PER_LOCALE = 40      # how deep to read each language's feed
 # SHARED_MIN, below, replaced a similarity threshold that could not work.
 MAX_SEEN = 4000
 
@@ -137,36 +143,78 @@ def fold(text):
     t = "".join(c for c in t if not unicodedata.combining(c))
     return t.replace("ø","o").replace("æ","ae").replace("ß","ss").replace("aa","a")
 
+# Suffixes safe to remove from a word of any length.
+_SUFFIX = ("ingen", "ing", "ene", "ed", "en")
+
+# These need length behind them. Swedish, Norwegian and Danish attach the
+# definite article to the noun, so "kvartal" and "kvartalet" are one word - two
+# Swedish reports of one chairman-fee cut stayed separate until "-et" came off.
+# But "-et" also ends "target", "market" and "budget", and "-er" ends "order".
+# The Scandinavian compounds that carry the article are long; the English words
+# they collide with are six letters or fewer.
+_SUFFIX_LONG = ("erna", "arna", "arne", "ion", "et", "er")
+_LONG_FROM = 7
+
+
 def stem(w):
-    """Crude suffix strip. 'upgrades'/'upgrade' and 'discoveries'/'discovery'
-    are one word to a reader and must be one token here."""
-    for suf in ("ingen","ies","ing","ene","ed","es","er","en","s"):
+    """Plural first, then at most one further suffix.
+
+    The order is what makes this idempotent. Stripping suffixes in a single
+    undifferentiated pass gives one word two stems - "orders" loses its "s" and
+    stops at "order", while "order" goes on to lose "er" and reaches "ord".
+    Repeating the pass instead is worse: "raises" would fall through "rais" to
+    "rai" while "raise" stops at "rais". Taking the plural off first means both
+    forms enter the second stage identical, so they must leave it identical.
+    """
+    if len(w) > 3 and w.endswith("s"):
+        w = w[:-1]
+        if len(w) > 3 and w.endswith("ie"):        # companies -> company
+            w = w[:-2] + "y"
+    pool = (_SUFFIX_LONG + _SUFFIX) if len(w) >= _LONG_FROM else _SUFFIX
+    for suf in pool:
         if len(w) - len(suf) >= 3 and w.endswith(suf):
-            w = w[:-len(suf)] + ("y" if suf == "ies" else "")
+            w = w[:-len(suf)]
             break
-    # A silent trailing 'e' survives suffix-stripping on one side only:
-    # 'upgrades' -> 'upgrad' but 'upgrade' -> 'upgrade'. Drop it from both.
+    # A silent trailing 'e' survives on one side only: 'upgrades' -> 'upgrad'
+    # but 'upgrade' -> 'upgrade'. Drop it from both.
     return w[:-1] if len(w) >= 5 and w.endswith("e") else w
 
+
 # The same event gets reported in different words. These are the equity-news
-# synonyms frequent enough to be worth collapsing; each maps to one token so
-# "raises outlook" and "lifts guidance" become the same three tokens.
-SYNONYM = {
-    "lift": "rais", "hik": "rais", "boost": "rais", "upgrad": "rais",
-    "increas": "rais", "hev": "rais", "oppjuster": "rais",
-    "lower": "cut", "slash": "cut", "reduc": "cut", "downgrad": "cut",
-    "trim": "cut", "kutt": "cut", "nedjuster": "cut",
-    "outlook": "guidanc", "forecast": "guidanc", "prognos": "guidanc",
-    "utsikt": "guidanc", "guidance": "guidanc",
-    "acquir": "acq", "acquisit": "acq", "takeov": "acq", "buyout": "acq",
-    "merg": "acq", "oppkjop": "acq", "kjop": "acq",
-    "halt": "stop", "suspend": "stop", "shutdown": "stop", "clos": "stop",
-    "stans": "stop", "steng": "stop",
-    "separation": "split", "separat": "split", "demerg": "split",
-    "spinoff": "split", "spin": "split", "divid": "split",
-    "profit": "earning", "result": "earning", "quart": "earning",
-    "resultat": "earning", "kvartal": "earning",
+# synonyms frequent enough to be worth collapsing, so that "raises outlook" and
+# "lifts guidance" reduce to the same tokens.
+#
+# Written as whole words, not stems, and put through the stemmer below. Hand
+# written stems rot: nine of them were silently unreachable, and "stans" - the
+# stem of Norwegian "stanser" - is not even its own stem. Words cannot rot,
+# because the stemmer is the same one the headlines go through.
+# Named, because the polarity veto below has to refer to them and a loose
+# string drifted once already: the canon was renamed and the veto kept looking
+# for the old token, silently merging a guidance raise with a guidance cut.
+RAISE, CUT = "raise", "cut"
+
+SYNONYM_WORDS = {
+    RAISE: ("lifts", "hikes", "boosts", "upgrades", "increases", "raises",
+              "hever", "oppjusterer", "hojer", "hoyer", "okar", "oker",
+              "hojner"),
+    CUT: ("lowers", "slashes", "reduces", "downgrades", "trims", "cutter",
+          "kutter", "nedjusterer", "senker", "sanker", "saenker", "sanka",
+          "reduserer", "reducerer", "minskar"),
+    "guidance": ("outlook", "forecast", "prognose", "utsikter", "guidance"),
+    "acq": ("acquires", "acquisition", "takeover", "buyout", "merger",
+            "oppkjop", "kjoper", "koper", "forvarv", "overtagelse"),
+    "stop": ("halts", "suspends", "shutdown", "closes", "stanser", "stenger",
+             "stopper", "lukker"),
+    "split": ("separation", "separates", "demerger", "spinoff", "delning",
+              "utskillelse"),
+    "earnings": ("profit", "results", "quarter", "resultat", "kvartal",
+                 "rapport", "earnings"),
 }
+
+# Built by running every word through the same stemmer the headlines use, so a
+# key cannot be unreachable by construction.
+SYNONYM = {stem(fold(w)): canon
+           for canon, words in SYNONYM_WORDS.items() for w in words}
 
 
 def tokens(title):
@@ -205,7 +253,7 @@ def _proper(title, subject):
 def _opposed(a, b):
     """A guidance raise and a guidance cut are never the same story, however
     much wording they share."""
-    return ("rais" in a and "cut" in b) or ("cut" in a and "rais" in b)
+    return (RAISE in a and CUT in b) or (CUT in a and RAISE in b)
 
 
 def same_story(title, others, subject):
@@ -243,41 +291,59 @@ def ticker_from_title(title: str) -> str | None:
     return match.group(1) if match else None
 
 
+def locales_for(entry: dict, extra: list[str]) -> list[str]:
+    """Which languages to ask about this company in.
+
+    Its home market always, because that is where it is covered first and in
+    most detail. English always, because that is where the wires are. Anything
+    else the watchlist asks for.
+    """
+    if entry.get("locales"):
+        return list(entry["locales"])
+    return sorted({sources.home_language(entry["ticker"]), "en"} | set(extra))
+
+
+def spark(bars: list[dict], points: int = 30) -> list[float]:
+    """Closes for a sparkline."""
+    return [round(b["close"], 4) for b in bars[-points:] if b["close"]]
+
+
 def main() -> int:
-    watchlist = load_watchlist()
+    config = json.loads((ROOT / "watchlist.json").read_text(encoding="utf-8"))
+    watchlist = config["tickers"]
+    extra = config.get("extraLocales", [])
     seen = load_seen()
     now = datetime.now(timezone.utc)
+    translator = Translator()
 
     print(f"Scanning {len(watchlist)} tickers at {now:%Y-%m-%d %H:%M} UTC")
 
-    quotes, alerts, rows_pending = [], [], []
+    # --- prices ---------------------------------------------------------
+    companies: list[dict] = []
     for entry in watchlist:
-        ticker = entry["ticker"]
-        data = sources.chart(ticker)
+        data = sources.chart(entry["ticker"])
         if not data:
             continue
         measured = score(data["bars"])
         if not measured:
             continue
-
-        row = {
+        companies.append({
             "ticker": data["ticker"],
             "name": entry.get("name", data["ticker"]),
             "exchange": data["exchange"],
             "currency": data["currency"],
+            "spark": spark(data["bars"]),
+            "stories": [],
             **measured,
-        }
-        quotes.append(row)
+        })
 
-        rows_pending.append(row)
-
-    # The market baseline is the watchlist's own median move. If everything is up
-    # three percent, a stock up four has moved one - and that is what gets scored.
-    day_moves = [r["changePct"] for r in rows_pending]
-    market = statistics.median(day_moves) if day_moves else 0.0
+    # The market baseline is the watchlist's own median move. If everything is
+    # up three percent, a stock up four has moved one - and that is what counts.
+    market = statistics.median([c["changePct"] for c in companies]) if companies else 0.0
     print(f"  market baseline: median move {market:+.2f}%")
 
-    for row in rows_pending:
+    alerts: list[dict] = []
+    for row in companies:
         row["marketPct"] = round(market, 2)
         row["excessPct"] = round(row["changePct"] - market, 2)
         sigma_day = abs(row["changePct"] / row["sigma"]) if row["sigma"] else 0
@@ -294,114 +360,142 @@ def main() -> int:
         if reasons:
             key = f"px:{row['ticker']}:{row['date']}"
             alerts.append({
-                "kind": "price",
-                "key": key,
-                "ticker": row["ticker"],
-                "name": row["name"],
-                "headline": " and ".join(reasons),
+                "kind": "price", "key": key, "ticker": row["ticker"],
+                "name": row["name"], "headline": " and ".join(reasons),
                 "url": f"https://finance.yahoo.com/quote/{row['ticker']}",
                 "fresh": key not in seen,
-                **measured,
             })
             seen.add(key)
 
-    # Disclosures, matched to the watchlist by ticker.
+    by_ticker = {c["ticker"]: c for c in companies}
+
+    # --- regulated disclosures ------------------------------------------
     symbols = {e["ticker"].split(".")[0].upper(): e for e in watchlist}
-    disclosures = sources.newsweb(120) + sources.mfn(80)
-    # What has already been reported for each name, so the same event is not
-    # told three times: once by the filing, once by its English translation,
-    # and once by the wire that picked it up.
     told: dict[str, list[str]] = {}
-    for item in disclosures:
+    for item in sources.newsweb(120) + sources.mfn(80):
         symbol = (item.get("issuer") or "").upper() or ticker_from_title(item["title"])
         if not symbol or symbol not in symbols:
             continue
         if is_routine(item["title"]):
             continue
         entry = symbols[symbol]
-        subject = entry.get("name") or entry["ticker"]
-        prior = told.setdefault(entry["ticker"], [])
-        # Companies file the same disclosure in Norwegian and English.
-        if same_story(item["title"], prior, subject):
+        ticker = entry["ticker"]
+        if ticker not in by_ticker:
             continue
-        prior.append(item["title"])
+        subject = entry.get("name") or ticker
+        lang = sources.home_language(ticker)
+        # Filings arrive in Norwegian and English; compare on English so both
+        # forms of one filing land together.
+        english = translator.english(item["title"], lang)
+        prior = told.setdefault(ticker, [])
+        compare = english or item["title"]
+        if same_story(compare, prior, subject):
+            continue
+        prior.append(compare)
+
         key = f"news:{item['source']}:{item['id']}"
-        alerts.append({
-            "kind": "disclosure",
-            "key": key,
-            "ticker": symbols[symbol]["ticker"],
-            "name": symbols[symbol].get("name", symbol),
+        story = {
+            "kind": "disclosure", "key": key,
             "headline": item["title"],
+            "english": english if english != item["title"] else None,
+            "lang": lang,
             "regulatory": item.get("regulatory"),
-            "url": item["url"],
-            "published": item.get("published"),
+            "url": item["url"], "published": item.get("published"),
+            "publisher": "Regulated filing",
+            "material": 3,
             "fresh": key not in seen,
-        })
+        }
+        by_ticker[ticker]["stories"].append(story)
+        alerts.append({**story, "ticker": ticker, "name": subject})
         seen.add(key)
 
-    # Open-web coverage, one query per name. The regulated feeds say what the
-    # company had to say; this catches what everyone else said about it - a
-    # downgrade, a counterparty announcing the same contract, a sector story.
+    # --- open web, in every language ------------------------------------
+    queries = [(e.get("name") or e["ticker"], locales_for(e, extra)) for e in watchlist]
+    print(f"  fetching {sum(len(l) for _, l in queries)} feeds "
+          f"across {len(queries)} companies")
+    harvest = sources.news_everywhere(queries, count=NEWS_PER_LOCALE)
+    print(f"  {sum(len(v) for v in harvest.values())} raw items")
+
     for entry in watchlist:
-        query = entry.get("name") or entry["ticker"]
-        # Seeded with this name's disclosures: a wire report of a filing already
-        # shown is the same story, whichever feed carried it first.
-        accepted = told.setdefault(entry["ticker"], [])
-        taken = 0
-        for item in sources.news(query, 25):
-            if not sources.worth_alerting(item):
-                continue
-            # A daily buyback tally is routine wherever it is published. This
-            # filter only ran on disclosures, so buyback stories arrived by the
-            # open web instead - which is how ASML's did.
-            if is_routine(item["title"]):
-                continue
+        ticker = entry["ticker"]
+        if ticker not in by_ticker:
+            continue
+        subject = entry.get("name") or ticker
+        accepted = told.setdefault(ticker, [])
+        kept = 0
+        # Freshest first, so the earliest account of a story is the one kept.
+        items = sorted(harvest.get(subject, []),
+                       key=lambda i: hours_old(i.get("published", "")))
+        within_language: dict[str, list[str]] = {}
+
+        for item in items:
+            if kept >= NEWS_PER_TICKER:
+                break
             if hours_old(item.get("published", "")) > NEWS_MAX_AGE_H:
                 continue
-            if same_story(item["title"], accepted, query):
+            if is_routine(item["title"]):
                 continue
-            if taken >= NEWS_PER_TICKER:
-                break
-            accepted.append(item["title"])
-            taken += 1
+            # Cheap pass first: duplicates inside one language are recognised
+            # without translation, and most duplicates are here.
+            same_lang = within_language.setdefault(item["lang"], [])
+            if same_story(item["title"], same_lang, subject):
+                continue
+            same_lang.append(item["title"])
+
+            english = translator.english(item["title"], item["lang"])
+            sources.rescore(item, english)
+            if not sources.worth_reading(item):
+                continue
+            # Then across languages, on English, where one event reported in
+            # eight markets finally collapses to one line.
+            compare = english or item["title"]
+            if same_story(compare, accepted, subject):
+                continue
+            accepted.append(compare)
+            kept += 1
+
             key = f"web:{item['id']}"
-            alerts.append({
-                "kind": "news",
-                "key": key,
-                "ticker": entry["ticker"],
-                "name": query,
+            story = {
+                "kind": "news", "key": key,
                 "headline": item["title"],
+                "english": english if english != item["title"] else None,
+                "lang": item["lang"],
                 "publisher": item.get("publisher"),
-                "score": item["score"],
-                "url": item["url"],
-                "published": item.get("published"),
+                "score": item["score"], "material": item["material"],
+                "url": item["url"], "published": item.get("published"),
                 "fresh": key not in seen,
-            })
+            }
+            by_ticker[ticker]["stories"].append(story)
+            if item["material"] >= ALERT_MATERIAL:
+                alerts.append({**story, "ticker": ticker, "name": subject})
             seen.add(key)
 
+    translator.save()
+    print(f"  {translator.report()}")
+
     fresh = [a for a in alerts if a["fresh"]]
-    quotes.sort(key=lambda q: -q["rvol"])
+    companies.sort(key=lambda c: -c["rvol"])
+    for c in companies:
+        c["stories"].sort(key=lambda s: (not s["fresh"], -(s.get("material") or 0)))
 
     DATA.mkdir(exist_ok=True)
     OUT_PATH.write_text(json.dumps({
         "generated": now.isoformat(timespec="seconds"),
         "tickers": len(watchlist),
-        "quotes": quotes,
+        "marketPct": round(market, 2),
+        "languages": sorted({l for _, ls in queries for l in ls}),
+        "companies": companies,
         "alerts": sorted(alerts, key=lambda a: (not a["fresh"], a["kind"])),
-    }, indent=1), encoding="utf-8")
+    }, indent=1, ensure_ascii=False), encoding="utf-8")
     save_seen(seen)
 
-    print(f"  {len(quotes)} quotes, {len(alerts)} alerts, {len(fresh)} of them new")
+    stories = sum(len(c["stories"]) for c in companies)
+    print(f"  {len(companies)} companies, {stories} stories, "
+          f"{len(alerts)} alerts, {len(fresh)} of them new")
     for a in fresh:
-        if a["kind"] == "news":
-            mark = f"+{a['score']}"
-        elif a.get("regulatory"):
-            mark = "REG"
-        else:
-            mark = "   "
-        print(f"  [{mark:^3}] {a['ticker']:<12} {a['headline'][:66]}")
+        tag = "REG" if a.get("regulatory") else (a.get("lang") or "px").upper()[:3]
+        print(f"  [{tag:^3}] {a['ticker']:<12} {a['headline'][:62]}")
 
-    # Hand the fresh ones to the workflow so it can decide whether to shout.
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
             fh.write(f"fresh={len(fresh)}\n")

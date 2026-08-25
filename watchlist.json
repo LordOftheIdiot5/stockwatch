@@ -71,5 +71,11 @@
       "annualVolPct": 64.0,
       "medianVolume": 4930118
     }
+  ],
+  "_locales": "Each company is read in its home market's language and in English. extraLocales adds the same languages for every company; the Nordic markets report on each other constantly, so they are worth carrying.",
+  "extraLocales": [
+    "no",
+    "sv",
+    "da"
   ]
 }

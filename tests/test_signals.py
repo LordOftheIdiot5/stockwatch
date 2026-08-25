@@ -17,7 +17,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from scan import same_story, distinctive                          # noqa: E402
-from sources import _news_score, _material, _source_weight, worth_alerting  # noqa: E402
+from sources import (_news_score, _material, _source_weight,      # noqa: E402
+                     worth_alerting, worth_reading, detect_language)
 
 # (subject, headline A, headline B, should_merge, description)
 STORY_CASES = [
@@ -142,8 +143,71 @@ ALERT_CASES = [
 ]
 
 
+# (headline, locale it was served from, expected language, description)
+LANGUAGE_CASES = [
+    # Google's locale says where a story was served, not what it is written in.
+    ("Oljetoppens drøm: – Et nytt Castberg, et nytt Sverdrup", "da", "no",
+     "Norwegian from the Danish feed, and no function word to go on"),
+    ("Ny oljeallianse: Skal jakte storfunn på norsk sokkel", "da", "no",
+     "likewise - the tell is inside a compound"),
+    ("Aker BP-sjefen: – Dette koster oss 250 millioner dollar i året", "no", "no",
+     "plainly Norwegian"),
+    ("Novo Nordisk hæver forventningerne til året", "da", "da",
+     "plainly Danish"),
+    ("Mærsk sælger sin andel af virksomheden", "da", "da",
+     "Danish vocabulary, not Norwegian"),
+    ("Embracer sänker ordförandearvodet", "sv", "sv", "Swedish"),
+    ("SAP Aktie: Kartellamt stellt Vorermittlungen ein", "de", "de", "German"),
+    ("ASML boekt recordorders in het tweede kwartaal", "nl", "nl", "Dutch"),
+    ("Airbus signe un contrat avec Lufthansa", "fr", "fr", "French"),
+    ("Nokia sai suuren tilauksen Intiasta", "fi", "fi", "Finnish"),
+    ("US Army orders second tranche of UH-72Bs", "en", "en", "English"),
+]
+
+# (should_read, should_alert, headline, publisher, description)
+READING_CASES = [
+    # The page and the notification are not the same audience.
+    (True, True, "Infineon acquires Bangalore-based C2i Semiconductors", "Evertiq",
+     "an acquisition belongs in both"),
+    # A top newsroom writing about the company at all clears the bar even with
+    # no keyword in the headline. That rule is what caught Reuters on the Balder
+    # gas find, which also named no event the vocabulary knows. The cost is
+    # stories like this one; the alternative is missing the discovery.
+    (True, True, "Aker BP opens new office in Stavanger", "E24",
+     "top-tier source with no keyword still alerts, by design"),
+    (False, False, "Sandvik opens new office in Stavanger", "Mining Technology",
+     "the same non-event from an unweighted outlet does not even get read"),
+    # The cases that actually separate the two gates. Without these, collapsing
+    # worth_reading into worth_alerting passes the whole suite.
+    (True, False, "Sandvik announces partnership with local supplier",
+     "Mining Technology", "a minor event: read it on the page, do not buzz"),
+    (True, False, "Yara launches new fertiliser range in Brazil", "Agg-Net",
+     "likewise - a launch from an unweighted outlet is coverage, not an event"),
+    (True, True, "Yara issues profit warning on ammonia margins", "Offshore Energy",
+     "same outlet, real event: both gates open"),
+    (False, False, "KOMMENTAR: HYDRO, YARA OG LAKSEAKSJER LØFTET OSLO BØRS FREDAG",
+     "E24", "a daily index column is filler in any language"),
+    (False, False, "Infineon's Stock Trades at a 39% Discount to Its High",
+     "Electronics Weekly", "valuation arithmetic is filler too"),
+]
+
+
 def main() -> int:
     failures = []
+
+    for title, served, want, label in LANGUAGE_CASES:
+        got = detect_language(title, served)
+        if got != want:
+            failures.append(
+                f"detect_language: wanted {want}, got {got} (served {served}) - {label}")
+
+    for read, alert, title, publisher, label in READING_CASES:
+        item = {"material": _material(title), "sourceWeight": _source_weight(publisher),
+                "junk": _news_score(title, publisher) == -5}
+        if worth_reading(item) != read:
+            failures.append(f"worth_reading: wanted {read} - {label} [{publisher}]")
+        if worth_alerting(item) != alert:
+            failures.append(f"worth_alerting: wanted {alert} - {label} [{publisher}]")
 
     for want, title, publisher, label in ALERT_CASES:
         item = {"material": _material(title), "sourceWeight": _source_weight(publisher),
@@ -175,14 +239,16 @@ def main() -> int:
         if not predicate(score):
             failures.append(f"_news_score: {score} fails its test - {label} [{publisher}]")
 
-    total = len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
+    total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
+             + len(LANGUAGE_CASES) + len(READING_CASES) * 2)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:
             print(f"  {f}")
         return 1
     print(f"ok  {total} checks: {len(STORY_CASES)} story pairs (both directions), "
-          f"{len(SCORE_CASES)} scores, {len(ALERT_CASES)} alert decisions")
+          f"{len(SCORE_CASES)} scores, {len(ALERT_CASES)} alert decisions, "
+          f"{len(LANGUAGE_CASES)} languages, {len(READING_CASES)} read/alert splits")
     return 0
 
 
