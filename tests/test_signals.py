@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from scan import same_story, distinctive                          # noqa: E402
 from sources import (_news_score, _material, _source_weight,      # noqa: E402
                      worth_alerting, worth_reading, detect_language)
+from translate import clean                                       # noqa: E402
 
 # (subject, headline A, headline B, should_merge, description)
 STORY_CASES = [
@@ -164,6 +165,22 @@ LANGUAGE_CASES = [
     ("US Army orders second tranche of UH-72Bs", "en", "en", "English"),
 ]
 
+# (headline, served locale, publisher, expected language, description)
+# Who published it beats anything the headline says, and settles the Norwegian
+# and Danish pair that word markers struggle with.
+PUBLISHER_CASES = [
+    ("Full drift ga resultatløft: – Et sterkt operasjonelt kvartal", "da", "E24",
+     "no", "no vocabulary tell, but E24 is Norwegian"),
+    ("Rykter om milliardordre fra Kristian Siem", "da", "Finansavisen", "no",
+     "likewise"),
+    ("Novo Nordisk hæver forventningerne", "no", "Borsen.dk", "da",
+     "and the same in the other direction"),
+    ("Embracer sänker ordförandearvodet", "da", "Di.se", "sv", "Swedish outlet"),
+    ("Infineon hebt Prognose an", "en", "Handelsblatt", "de", "German outlet"),
+    ("Castberg Sverdrup 2026", "da", "Unknown Outlet", "da",
+     "nothing to go on at all: fall back to the feed"),
+]
+
 # (should_read, should_alert, headline, publisher, description)
 READING_CASES = [
     # The page and the notification are not the same audience.
@@ -192,6 +209,20 @@ READING_CASES = [
 ]
 
 
+# (raw from the translation service, what a reader must see, description)
+# The page escapes on the way out, so anything still escaped here is shown
+# literally: "Now they don&#39;t call" appeared on the live site.
+TRANSLATION_CASES = [
+    ("Equinor CEO Anders Opedal: – Now they don&#39;t call",
+     "Equinor CEO Anders Opedal: – Now they don't call", "numeric entity"),
+    ("Equinor&#39;s group shop steward on management",
+     "Equinor's group shop steward on management", "possessive"),
+    ("Infineon &amp; Bosch sign deal", "Infineon & Bosch sign deal", "ampersand"),
+    ("  Yara halts production  ", "Yara halts production", "surrounding space"),
+    ("Nothing to unescape here", "Nothing to unescape here", "left alone"),
+]
+
+
 def stdlib_shadowing() -> list[str]:
     """Module names in scripts/ that the standard library already owns.
 
@@ -211,6 +242,11 @@ def stdlib_shadowing() -> list[str]:
 def main() -> int:
     failures = []
 
+    for raw, want, label in TRANSLATION_CASES:
+        got = clean(raw)
+        if got != want:
+            failures.append(f"clean: wanted {want!r}, got {got!r} - {label}")
+
     for name in stdlib_shadowing():
         failures.append(
             f"scripts/{name}.py shadows the standard library module '{name}' - "
@@ -221,6 +257,13 @@ def main() -> int:
         if got != want:
             failures.append(
                 f"detect_language: wanted {want}, got {got} (served {served}) - {label}")
+
+    for title, served, publisher, want, label in PUBLISHER_CASES:
+        got = detect_language(title, served, publisher)
+        if got != want:
+            failures.append(
+                f"detect_language: wanted {want}, got {got} "
+                f"(served {served}, {publisher}) - {label}")
 
     for read, alert, title, publisher, label in READING_CASES:
         item = {"material": _material(title), "sourceWeight": _source_weight(publisher),
@@ -261,7 +304,8 @@ def main() -> int:
             failures.append(f"_news_score: {score} fails its test - {label} [{publisher}]")
 
     total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
-             + len(LANGUAGE_CASES) + len(READING_CASES) * 2 + 1)
+             + len(LANGUAGE_CASES) + len(PUBLISHER_CASES)
+             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 1)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:
@@ -269,7 +313,8 @@ def main() -> int:
         return 1
     print(f"ok  {total} checks: {len(STORY_CASES)} story pairs (both directions), "
           f"{len(SCORE_CASES)} scores, {len(ALERT_CASES)} alert decisions, "
-          f"{len(LANGUAGE_CASES)} languages, {len(READING_CASES)} read/alert splits, "
+          f"{len(LANGUAGE_CASES) + len(PUBLISHER_CASES)} languages, "
+          f"{len(READING_CASES)} read/alert splits, "
           f"no stdlib shadowing")
     return 0
 

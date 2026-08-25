@@ -359,9 +359,59 @@ _DA_ONLY = ("olie", "selskab", "virksomhed", "mia. kr", "dansk", "erhverv",
             "øget", "chef", " nyt ", "ligeledes")
 
 
-def detect_language(title: str, fallback: str) -> str:
+# The publisher is a far stronger signal than any word in the headline: a story
+# in Finansavisen is Norwegian whichever feed served it, and no vocabulary test
+# is needed to know that. Norwegian and Danish share almost every function word,
+# so this settles the pair that word markers struggle with.
+PUBLISHER_LANGUAGE = {
+    "no": ("e24", "dn.no", "dagens naringsliv", "finansavisen", "nrk",
+           "aftenposten", "hegnar", "kapital", "energiwatch.no", "sysla",
+           "tu.no", "nettavisen", "vg.no", "adressa", "bt.no", "shifter",
+           "oljedirektoratet", "petro.no", "borsen.no", "intrafish.no"),
+    "da": ("borsen.dk", "berlingske", "jyllands-posten", "politiken",
+           "finans.dk", "shippingwatch", "energiwatch.dk", "medwatch",
+           "dr.dk", "tv2.dk", "euroinvestor"),
+    "sv": ("di.se", "dagens industri", "svd", "affarsvarlden", "dagens ps",
+           "placera", "privata affarer", "realtid", "svt.se", "nyteknik",
+           "borsvarlden", "aktiespararna"),
+    "de": ("boerse.de", "handelsblatt", "manager magazin", "wirtschaftswoche",
+           "faz.net", "ad-hoc-news", "finanznachrichten", "boersennews",
+           "der aktionar", "onvista"),
+    "fr": ("les echos", "la tribune", "boursorama", "zonebourse", "bfmtv",
+           "le figaro", "abcbourse"),
+    "nl": ("fd.nl", "het financieele dagblad", "beursduivel", "iex.nl",
+           "nu.nl", "belegger.nl"),
+    "fi": ("kauppalehti", "helsingin sanomat", "talouselama", "yle.fi",
+           "arvopaperi"),
+    "es": ("expansion", "cinco dias", "el economista", "eleconomista",
+           "bolsamania", "invertia"),
+    "it": ("il sole 24 ore", "milano finanza", "soldionline"),
+}
+
+_PUBLISHER_LANGUAGE = tuple(
+    (_flatten(name), code)
+    for code, names in PUBLISHER_LANGUAGE.items() for name in names)
+
+
+def language_of_publisher(publisher: str) -> str | None:
+    flat = _flatten(publisher)
+    if not flat:
+        return None
+    # Longest first so a short key cannot shadow a more specific one.
+    for name, code in sorted(_PUBLISHER_LANGUAGE, key=lambda kv: -len(kv[0])):
+        if name and name in flat:
+            return code
+    return None
+
+
+def detect_language(title: str, fallback: str, publisher: str = "") -> str:
     """Best guess at the language of a headline, falling back to the locale it
     was served from. Cheap on purpose - this decides a badge, not a decision."""
+    # Who published it beats anything the headline says.
+    known = language_of_publisher(publisher)
+    if known:
+        return known
+
     lowered = title.lower()
     padded = f" {lowered} "
 
@@ -411,7 +461,7 @@ def news(query: str, count: int = 25, locale: str = "en") -> list[dict]:
         clean = title.rsplit(" - ", 1)[0] if source and title.endswith(f"- {source}") else title
         out.append({
             "source": "web",
-            "lang": detect_language(clean, locale),
+            "lang": detect_language(clean, locale, source),
             "servedFrom": locale,
             "id": (item.findtext("link") or title),
             "title": clean,

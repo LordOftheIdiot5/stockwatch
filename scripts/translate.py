@@ -21,6 +21,7 @@ away between scans.
 """
 from __future__ import annotations
 
+import html
 import json
 import os
 import urllib.parse
@@ -37,6 +38,16 @@ MAX_CHARS = 480          # MyMemory rejects longer, and headlines never are
 
 # Languages read directly, so no translation is bought for them.
 READABLE = {"en", "no", "nb", "nn", "sv", "da", "es"}
+
+
+def clean(raw: str) -> str:
+    """Tidy one translation.
+
+    MyMemory returns HTML-escaped text, so an apostrophe comes back as &#39;.
+    The page escapes again on the way out, so without this a reader sees the
+    entity itself: "Now they don&#39;t call".
+    """
+    return html.unescape(raw or "").strip()
 
 
 class Translator:
@@ -86,7 +97,7 @@ class Translator:
             self.failures += 1
             return None
 
-        out = ((payload.get("responseData") or {}).get("translatedText") or "").strip()
+        out = clean((payload.get("responseData") or {}).get("translatedText") or "")
         status = payload.get("responseStatus")
         # A quota message comes back as prose in the translation field, so a
         # 200 is not on its own a success.
