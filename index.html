@@ -62,9 +62,24 @@
         <a href="https://github.com/LordOftheIdiot5/stockwatch" target="_blank" rel="noopener noreferrer">Source</a>.
       </p>
       <p class="disclaimer">
-        Not advice, and not a view on where anything is going. The thresholds
-        have not been tested against forward returns, so this is a tool for
-        noticing things — nothing more.
+        Not advice, and not a view on where anything is going.
+      </p>
+      <p class="disclaimer">
+        The price and volume thresholds have now been measured against two
+        years of daily bars, entering at the close after each signal:
+        <strong>they do not predict returns</strong>. Two of twenty-four
+        signal-and-horizon pairs beat the baseline over the full period, which
+        is about what twenty-four tests produce by chance — and both vanished
+        when the period was split in half, appearing only in the first year.
+        A control that peeked at the future showed up at +17%, so the
+        measurement works; there is simply nothing there.
+        <a href="https://github.com/LordOftheIdiot5/stockwatch/blob/main/scripts/backtest.py"
+           target="_blank" rel="noopener noreferrer">The method</a>, and
+        <a href="https://github.com/LordOftheIdiot5/stockwatch/blob/main/data/backtest.json"
+           target="_blank" rel="noopener noreferrer">the numbers</a>.
+        So this is a tool for noticing things quickly and reading them in one
+        place — which is what the filings and the news are for. It is not an
+        edge, and the volume column is not a forecast.
       </p>
     </footer>
   </main>
