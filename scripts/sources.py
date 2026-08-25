@@ -258,6 +258,27 @@ def rescore(item: dict, english: str | None) -> dict:
     return item
 
 
+def worth_translating(item: dict) -> bool:
+    """Whether a foreign headline is worth spending allowance on.
+
+    Materiality cannot be judged before translation, but two things can. A
+    headline matching the junk patterns is filler in any language, and a
+    publisher at the bottom of the weight table can never clear worth_reading
+    whatever the story turns out to be. Both were being translated and then
+    thrown away, which on a monthly allowance is the difference between paying
+    for what gets shown and paying for what does not.
+    """
+    if any(j in item["title"].lower() for j in JUNK):
+        return False
+    return _source_weight(item.get("publisher", "")) > -3
+
+
+def promise(item: dict) -> tuple:
+    """Sort key for spending a limited allowance on the best candidates first:
+    a better publisher, then a fresher story."""
+    return (-_source_weight(item.get("publisher", "")), item.get("_age", 0))
+
+
 def worth_reading(item: dict) -> bool:
     """Whether a story earns a place under its company on the page.
 

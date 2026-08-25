@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import sources                                                   # noqa: E402
+import translate as translate_module                              # noqa: E402
 from translate import Translator                                  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -460,6 +461,9 @@ def main() -> int:
     print(f"  {sum(len(v) for v in harvest.values())} raw items")
 
     web_candidates: dict[str, list[dict]] = {}
+    candidates_to_translate: list[dict] = []
+    # Filings first and unconditionally: a company is legally obliged to
+    # publish them, so they are the last thing to ration.
     wanted: list[tuple[str, str]] = [
         (item["title"], sources.home_language(entry["ticker"]))
         for entry, item in filings]
@@ -486,15 +490,28 @@ def main() -> int:
                 continue
             same_lang.append(item["title"])
             keep.append(item)
-            wanted.append((item["title"], item["lang"]))
         web_candidates[ticker] = keep
+        # Only pay to translate what could actually be shown, best first: the
+        # allowance is monthly, and a headline translated and then discarded is
+        # a headline that some other company does not get translated at all.
+        for item in keep:
+            if item["lang"] in translate_module.READABLE:
+                continue
+            if not sources.worth_translating(item):
+                continue
+            item["_age"] = hours_old(item.get("published", ""))
+            candidates_to_translate.append(item)
 
     # --- translate once, in batches, before anything needs it -------------
     # Gathering first is what lets the keyed providers batch at all: a cold
     # start is over a thousand headlines, which is twenty requests rather than
     # a thousand. It also means the scan cannot stall halfway through a company
     # waiting on a slow service.
+    candidates_to_translate.sort(key=sources.promise)
+    wanted.extend((i["title"], i["lang"]) for i in candidates_to_translate)
     translator.warm(wanted)
+    if (budgets := translator.budgets()):
+        print(f"  {budgets}")
 
     # --- emit disclosures --------------------------------------------------
     for entry, item in filings:

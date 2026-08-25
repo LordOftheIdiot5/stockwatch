@@ -18,8 +18,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from scan import same_story, distinctive                          # noqa: E402
 from sources import (_news_score, _material, _source_weight,      # noqa: E402
-                     worth_alerting, worth_reading, detect_language,
-                     match_short)
+                     worth_alerting, worth_reading, worth_translating,
+                     detect_language, match_short)
 from translate import clean, DeepL, Azure                         # noqa: E402
 
 # (subject, headline A, headline B, should_merge, description)
@@ -266,6 +266,61 @@ TRANSLATION_CASES = [
 ]
 
 
+def translation_budget() -> list[str]:
+    """A limited allowance must be spread across languages, and must not be
+    spent on headlines that could never be shown.
+
+    The allowance is monthly. Grouping by language and working through one at a
+    time means whichever language happens to be first takes the lot, and the
+    rest of the world goes untranslated all month. And a headline from a
+    content farm can never clear worth_reading whatever it says, so paying to
+    translate it is paying to learn nothing.
+    """
+    import translate
+    problems = []
+
+    class Fake:
+        name, batch, per_run = "fake", 2, 6
+
+        def __init__(self):
+            self.seen = []
+
+        def translate(self, texts, lang):
+            self.seen.extend((t, lang) for t in texts)
+            return [f"EN({t})" for t in texts]
+
+    translator = translate.Translator.__new__(translate.Translator)
+    translator.cache, translator.hits = {}, 0
+    translator.bought, translator.failures = 0, 0
+    fake = Fake()
+    translator.providers = [fake]
+    translator.spent = {"fake": 0}
+    translator.warm([(f"de{i}", "de") for i in range(6)]
+                    + [(f"fr{i}", "fr") for i in range(6)]
+                    + [(f"it{i}", "it") for i in range(6)])
+    spread = {}
+    for _, lang in fake.seen:
+        spread[lang] = spread.get(lang, 0) + 1
+    if len(spread) < 3:
+        problems.append(
+            f"a budget of 6 across three languages reached only {sorted(spread)} - "
+            f"one language is taking the whole allowance")
+
+    for publisher, title, want, why in (
+        ("Reuters", "Yara halts ammonia production", True, "a wire is worth paying for"),
+        ("Electronics Weekly", "Infineon wins design order", True, "so is a neutral outlet"),
+        ("gurufocus", "Infineon acquires C2i", False,
+         "a content farm can never clear worth_reading"),
+        ("simplywall.st", "Yara: 5 Things You Need To Know", False, "likewise"),
+        ("Reuters", "Infineon's Stock Trades at a 39% Discount", False,
+         "junk framing is filler in any language"),
+    ):
+        got = worth_translating({"title": title, "publisher": publisher})
+        if got != want:
+            problems.append(f"worth_translating({publisher}) gave {got}, wanted {want} - {why}")
+    return problems
+
+
 def short_register_matching() -> list[str]:
     """A company must not be given another company's short interest.
 
@@ -383,6 +438,7 @@ def main() -> int:
         if got != want:
             failures.append(f"clean: wanted {want!r}, got {got!r} - {label}")
 
+    failures.extend(translation_budget())
     failures.extend(short_register_matching())
     failures.extend(batch_pairing())
 
@@ -449,7 +505,7 @@ def main() -> int:
 
     total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
              + len(LANGUAGE_CASES) + len(PUBLISHER_CASES)
-             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 13)
+             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 19)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:

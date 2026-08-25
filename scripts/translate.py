@@ -72,16 +72,58 @@ def _post(url: str, data: bytes, headers: dict) -> dict | list | None:
 
 
 class DeepL:
-    """Free-tier keys end in ':fx' and use a different host from paid ones."""
+    """Free-tier keys end in ':fx' and use a different host from paid ones.
+
+    The free allowance is monthly, not daily, which is the awkward part: a
+    scan translating everything it can each hour would spend a month of
+    characters in a few days and then go silent until the reset. So this asks
+    DeepL what is left and paces itself over the days remaining, rather than
+    discovering the limit by hitting it.
+    """
 
     name = "deepl"
     batch = 40
     per_run = 600
 
+    # A headline plus its overhead. Used only to turn a character allowance
+    # into a headline count for pacing.
+    CHARS_PER_HEADLINE = 70
+    RUNS_PER_DAY = 12          # the schedule is hourly across market hours
+
     def __init__(self, key: str) -> None:
         self.key = key
         self.host = ("https://api-free.deepl.com" if key.endswith(":fx")
                      else "https://api.deepl.com")
+        self.usage = self._usage()
+        if self.usage:
+            used, limit = self.usage
+            self.per_run = self._pace(limit - used)
+
+    def _usage(self) -> tuple[int, int] | None:
+        request = urllib.request.Request(
+            f"{self.host}/v2/usage",
+            headers={"Authorization": f"DeepL-Auth-Key {self.key}", "User-Agent": UA})
+        try:
+            with urllib.request.urlopen(request, timeout=15) as response:
+                payload = json.loads(response.read())
+            return int(payload["character_count"]), int(payload["character_limit"])
+        except Exception:                                        # noqa: BLE001
+            return None
+
+    @classmethod
+    def _pace(cls, remaining: int, today: "date | None" = None) -> int:
+        """How many headlines this run may buy, to make the month last.
+
+        Spread over the days left rather than the whole month, so a key added
+        on the 25th is not rationed as though it had to cover the 24 days that
+        have already gone.
+        """
+        import calendar
+        from datetime import date as _date
+        today = today or _date.today()
+        days_left = calendar.monthrange(today.year, today.month)[1] - today.day + 1
+        per_run = remaining / max(days_left, 1) / cls.RUNS_PER_DAY / cls.CHARS_PER_HEADLINE
+        return max(0, min(600, int(per_run)))
 
     def translate(self, texts: list[str], lang: str) -> list[str | None]:
         body = [("target_lang", "EN-GB")]
@@ -225,12 +267,24 @@ class Translator:
             by_lang.setdefault(lang, []).append(text)
 
         for provider in self.providers:
-            for lang, texts in by_lang.items():
-                pending = [t for t in texts if self.key(t, lang) not in self.cache]
-                for start in range(0, len(pending), provider.batch):
+            # Round-robin across languages rather than finishing one before
+            # starting the next. A batch has to be one language, but taking a
+            # batch from each in turn means a tight allowance is spread across
+            # them instead of being spent entirely on whichever came first.
+            queues = {lang: [t for t in texts if self.key(t, lang) not in self.cache]
+                      for lang, texts in by_lang.items()}
+            while any(queues.values()):
+                if self.spent[provider.name] >= provider.per_run:
+                    break
+                progressed = False
+                for lang in list(queues):
+                    if not queues[lang]:
+                        continue
                     if self.spent[provider.name] >= provider.per_run:
                         break
-                    chunk = pending[start:start + provider.batch]
+                    room = provider.per_run - self.spent[provider.name]
+                    chunk = queues[lang][:min(provider.batch, room)]
+                    queues[lang] = queues[lang][len(chunk):]
                     results = provider.translate(chunk, lang)
                     got = 0
                     for text, result in zip(chunk, results):
@@ -241,12 +295,15 @@ class Translator:
                             self.failures += 1
                     self.spent[provider.name] += len(chunk)
                     self.bought += got
-                    # A whole batch failing means this provider is done for now
-                    # - spent quota, bad key, an outage - so stop asking it and
-                    # let the next one pick up the rest.
+                    progressed = progressed or got > 0
                     if got == 0:
+                        # A whole batch failing means this provider is done for
+                        # now - spent quota, bad key, an outage - so stop asking
+                        # and let the next one pick up what is left.
                         self.spent[provider.name] = provider.per_run
                         break
+                if not progressed:
+                    break
 
     def english(self, text: str, lang: str) -> str | None:
         """English for a headline, or None if it is not available yet.
@@ -265,6 +322,16 @@ class Translator:
         CACHE_PATH.write_text(
             json.dumps(self.cache, ensure_ascii=False, indent=0, sort_keys=True),
             encoding="utf-8")
+
+    def budgets(self) -> str:
+        notes = []
+        for provider in self.providers:
+            usage = getattr(provider, "usage", None)
+            if usage:
+                used, limit = usage
+                notes.append(f"{provider.name} {used:,}/{limit:,} chars this month, "
+                             f"pacing {provider.per_run}/run")
+        return "; ".join(notes)
 
     def report(self) -> str:
         used = ", ".join(f"{name} {n}" for name, n in self.spent.items() if n)
