@@ -151,6 +151,12 @@ def bootstrap_gap(flagged: list[tuple[str, float]], base: list[tuple[str, float]
     days pooled is their summed values over their summed counts. Carrying the
     values themselves meant rebuilding a forty-thousand element list two
     thousand times per test, which does not finish.
+
+    This was rewritten while the results were being read, which is where a
+    quiet arithmetic error would do the most damage. The original was left
+    running on the same data and checked against it afterwards: all 24
+    signal-and-horizon rows agree, every mean, gap and interval to two
+    decimals. The speedup changed nothing but the time.
     """
     def fold(rows):
         sums, counts = defaultdict(float), defaultdict(int)
