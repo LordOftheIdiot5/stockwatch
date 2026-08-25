@@ -361,4 +361,14 @@ body {
   .company > summary { grid-template-columns: minmax(0, 1fr) 72px 34px; }
   .c-price, .c-rvol { display: none; }
   .filter { width: 100%; }
+
+  /* A truncated company name is worse than a two-line one: "IVU Traffic
+     Technologies" and "Vienna Insurance Group" both cut off at this width,
+     and the part that disappears is the part that identifies them. */
+  .c-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.25;
+  }
 }
