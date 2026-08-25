@@ -53,6 +53,15 @@ ALERT_MATERIAL = 2
 # The signals panel is a summary, not an archive. Everything it leaves out is
 # still on the page, under the company it belongs to.
 MAX_ALERTS_SHOWN = 40
+
+# Disclosed short positions move in steps of a tenth of a percent, and the
+# reporting floor is half a percent, so a shift of this size is somebody taking
+# or closing a real position rather than noise.
+SHORT_MOVE = 0.4
+# Positions only change when someone crosses a threshold, so the register is
+# full of entries last touched months ago. Without this, every scan would
+# rediscover the same old change and call it news.
+SHORT_MAX_AGE_DAYS = 6
 NEWS_PER_LOCALE = 40      # how deep to read each language's feed
 # SHARED_MIN, below, replaced a similarity threshold that could not work.
 MAX_SEEN = 4000
@@ -65,6 +74,8 @@ ROUTINE = (
     "egne aksjer", "nokkelinformasjon", "nøkkelinformasjon",
     "finansiell kalender", "financial calendar", "share capital and votes",
     "aksjekapital og stemmer", "weekly report", "ukesrapport",
+    "rentefastsettelse", "interest rate fixing", "raentefastsaettelse",
+    "coupon fixing", "flagging", "mandatory notification",
 )
 
 
@@ -382,9 +393,47 @@ def main() -> int:
 
     by_ticker = {c["ticker"]: c for c in companies}
 
-    # --- regulated disclosures ------------------------------------------
+    # --- disclosed short positions ----------------------------------------
+    register = sources.short_positions()
+    if register:
+        print(f"  short register: {len(register)} issuers")
+    for entry in watchlist:
+        row = by_ticker.get(entry["ticker"])
+        if not row:
+            continue
+        found = sources.match_short(entry.get("name") or entry["ticker"], register)
+        if not found or found["percent"] is None:
+            continue
+        row["short"] = {"percent": found["percent"], "previous": found["previous"],
+                        "date": found["date"], "holders": found["holders"]}
+        if found["previous"] is None:
+            continue
+        change = found["percent"] - found["previous"]
+        try:
+            age = (now.date() - datetime.strptime(found["date"], "%Y-%m-%d").date()).days
+        except Exception:                                        # noqa: BLE001
+            continue
+        if abs(change) < SHORT_MOVE or age > SHORT_MAX_AGE_DAYS:
+            continue
+        direction = "raised" if change > 0 else "cut"
+        key = f"short:{row['ticker']}:{found['date']}:{found['percent']}"
+        alerts.append({
+            "kind": "short", "key": key, "ticker": row["ticker"],
+            "name": row["name"], "lang": "en",
+            "headline": (f"short interest {direction} to {found['percent']:.2f}% "
+                         f"from {found['previous']:.2f}% of share capital"),
+            "url": f"https://ssr.finanstilsynet.no/#/instrument/{found['isin']}"
+                   if found.get("isin") else "https://ssr.finanstilsynet.no/",
+            "publisher": "Finanstilsynet",
+            "material": 3,
+            "fresh": key not in seen,
+        })
+        seen.add(key)
+
+    # --- gather regulated disclosures ------------------------------------
     symbols = {e["ticker"].split(".")[0].upper(): e for e in watchlist}
     told: dict[str, list[str]] = {}
+    filings = []
     for item in sources.newsweb(120) + sources.mfn(80):
         symbol = (item.get("issuer") or "").upper() or ticker_from_title(item["title"])
         if not symbol or symbol not in symbols:
@@ -392,17 +441,70 @@ def main() -> int:
         if is_routine(item["title"]):
             continue
         entry = symbols[symbol]
+        if entry["ticker"] not in by_ticker:
+            continue
+        filings.append((entry, item))
+
+    # --- gather open web, in every language -------------------------------
+    # The reading order moves with the hour. Translation is rationed, whoever
+    # is read first spends it, and a fixed order would mean the companies at
+    # the end of the list are permanently last in the queue.
+    rotate = now.hour % len(watchlist)
+    order = watchlist[rotate:] + watchlist[:rotate]
+    queries = [(e.get("name") or e["ticker"], locales_for(e, extra)) for e in order]
+    print(f"  fetching {sum(len(l) for _, l in queries)} feeds "
+          f"across {len(queries)} companies")
+    harvest = sources.news_everywhere(queries, count=NEWS_PER_LOCALE)
+    print(f"  {sum(len(v) for v in harvest.values())} raw items")
+
+    web_candidates: dict[str, list[dict]] = {}
+    wanted: list[tuple[str, str]] = [
+        (item["title"], sources.home_language(entry["ticker"]))
+        for entry, item in filings]
+    for entry in order:
         ticker = entry["ticker"]
         if ticker not in by_ticker:
             continue
+        subject = entry.get("name") or ticker
+        keep: list[dict] = []
+        within_language: dict[str, list[str]] = {}
+        items = sorted(harvest.get(subject, []),
+                       key=lambda i: hours_old(i.get("published", "")))
+        for item in items:
+            if len(keep) >= NEWS_PER_TICKER * 3:
+                break
+            if hours_old(item.get("published", "")) > NEWS_MAX_AGE_H:
+                continue
+            if is_routine(item["title"]):
+                continue
+            # Cheap pass first: duplicates inside one language are recognised
+            # without translation, and most duplicates are here.
+            same_lang = within_language.setdefault(item["lang"], [])
+            if same_story(item["title"], same_lang, subject):
+                continue
+            same_lang.append(item["title"])
+            keep.append(item)
+            wanted.append((item["title"], item["lang"]))
+        web_candidates[ticker] = keep
+
+    # --- translate once, in batches, before anything needs it -------------
+    # Gathering first is what lets the keyed providers batch at all: a cold
+    # start is over a thousand headlines, which is twenty requests rather than
+    # a thousand. It also means the scan cannot stall halfway through a company
+    # waiting on a slow service.
+    translator.warm(wanted)
+
+    # --- emit disclosures --------------------------------------------------
+    for entry, item in filings:
+        ticker = entry["ticker"]
         subject = entry.get("name") or ticker
         lang = sources.home_language(ticker)
         # Filings arrive in Norwegian and English; compare on English so both
         # forms of one filing land together.
         english = translator.english(item["title"], lang)
-        prior = told.setdefault(ticker, [])
         compare = english or item["title"]
-        if same_story(compare, prior, subject):
+        prior = told.setdefault(ticker, [])
+        if same_story(compare, prior, subject) or compare in prior:
             continue
         prior.append(compare)
 
@@ -422,17 +524,7 @@ def main() -> int:
         alerts.append({**story, "ticker": ticker, "name": subject})
         seen.add(key)
 
-    # --- open web, in every language ------------------------------------
-    # Translation is rationed, and whoever is read first spends it. Always
-    # walking the list in the same order would mean the companies at the end
-    # never get translated at all, so the starting point moves with the hour.
-    order = watchlist[now.hour % len(watchlist):] + watchlist[:now.hour % len(watchlist)]
-    queries = [(e.get("name") or e["ticker"], locales_for(e, extra)) for e in order]
-    print(f"  fetching {sum(len(l) for _, l in queries)} feeds "
-          f"across {len(queries)} companies")
-    harvest = sources.news_everywhere(queries, count=NEWS_PER_LOCALE)
-    print(f"  {sum(len(v) for v in harvest.values())} raw items")
-
+    # --- emit open-web stories ---------------------------------------------
     for entry in order:
         ticker = entry["ticker"]
         if ticker not in by_ticker:
@@ -440,25 +532,9 @@ def main() -> int:
         subject = entry.get("name") or ticker
         accepted = told.setdefault(ticker, [])
         kept = 0
-        # Freshest first, so the earliest account of a story is the one kept.
-        items = sorted(harvest.get(subject, []),
-                       key=lambda i: hours_old(i.get("published", "")))
-        within_language: dict[str, list[str]] = {}
-
-        for item in items:
+        for item in web_candidates.get(ticker, []):
             if kept >= NEWS_PER_TICKER:
                 break
-            if hours_old(item.get("published", "")) > NEWS_MAX_AGE_H:
-                continue
-            if is_routine(item["title"]):
-                continue
-            # Cheap pass first: duplicates inside one language are recognised
-            # without translation, and most duplicates are here.
-            same_lang = within_language.setdefault(item["lang"], [])
-            if same_story(item["title"], same_lang, subject):
-                continue
-            same_lang.append(item["title"])
-
             english = translator.english(item["title"], item["lang"])
             sources.rescore(item, english)
             if not sources.worth_reading(item):
@@ -466,7 +542,7 @@ def main() -> int:
             # Then across languages, on English, where one event reported in
             # eight markets finally collapses to one line.
             compare = english or item["title"]
-            if same_story(compare, accepted, subject):
+            if same_story(compare, accepted, subject) or compare in accepted:
                 continue
             accepted.append(compare)
             kept += 1

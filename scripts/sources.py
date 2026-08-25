@@ -571,3 +571,87 @@ def news_everywhere(queries: list[tuple[str, list[str]]], count: int = 40,
         for name, items in pool.map(one, jobs):
             out[name].extend(items)
     return out
+
+
+# --- short selling ----------------------------------------------------------
+# Finanstilsynet publishes every disclosed net short position in a Norwegian
+# instrument, free and without a key. Anything at or above 0.5% of share capital
+# must be reported, so the register is a complete picture of the part of short
+# interest that is public - and it is a different kind of signal from price,
+# volume or news: it is what professionals have actually put money behind.
+#
+# Sweden and Denmark publish the same data under the same EU rule, but behind
+# pages that build themselves in the browser rather than an endpoint a scan can
+# read. Norway is 36 of the names on this list, so it is worth having alone.
+
+_SSR_URL = "https://ssr.finanstilsynet.no/api/v2/instruments"
+
+# Words that identify an industry rather than a company. Matching on these puts
+# Andfjord Salmon's short interest under Salmon Evolution.
+_GENERIC = {"salmon", "seafood", "fish", "farm", "farming", "bank", "energy",
+            "offshore", "shipping", "group", "holding", "holdings", "asa", "as",
+            "ltd", "limited", "international", "norge", "norway", "nordic"}
+
+
+def _issuer_key(name: str) -> str:
+    import re
+    import unicodedata
+    folded = "".join(c for c in unicodedata.normalize("NFKD", name.lower())
+                     if not unicodedata.combining(c))
+    folded = folded.replace("ø", "o").replace("æ", "ae").replace("å", "a")
+    words = [w for w in re.findall(r"[a-z0-9]+", folded)
+             if w not in {"asa", "as", "a/s", "sa", "se", "nv", "plc", "ab",
+                          "oyj", "ag", "holding", "holdings", "group", "ltd",
+                          "limited"}]
+    return " ".join(words)
+
+
+def short_positions() -> dict[str, dict]:
+    """Disclosed net short positions, keyed by a normalised issuer name.
+
+    Each entry carries the latest disclosed percentage and the one before it,
+    so a change can be reported rather than a level - a name sitting at 2% for
+    a year is not news, and a move from 0.6% to 2% is.
+    """
+    try:
+        payload = json.loads(_get(_SSR_URL))
+    except Exception as error:                                   # noqa: BLE001
+        print(f"  ! short register: {error}")
+        return {}
+
+    out = {}
+    for instrument in payload:
+        events = sorted(instrument.get("events") or [], key=lambda e: e.get("date") or "")
+        if not events:
+            continue
+        latest = events[-1]
+        previous = events[-2] if len(events) > 1 else None
+        out[_issuer_key(instrument.get("issuerName", ""))] = {
+            "issuer": instrument.get("issuerName"),
+            "isin": instrument.get("isin"),
+            "percent": latest.get("shortPercent"),
+            "previous": previous.get("shortPercent") if previous else None,
+            "date": (latest.get("date") or "")[:10],
+            "holders": latest.get("activePositions"),
+        }
+    return out
+
+
+def match_short(name: str, register: dict[str, dict]) -> dict | None:
+    """Find a company in the register without matching on its industry.
+
+    Token overlap is too loose here: "Andfjord Salmon" and "Salmon Evolution"
+    share a word that describes what they farm, not who they are, and the naive
+    match reported one company's short interest under the other's name.
+    """
+    key = _issuer_key(name)
+    if not key:
+        return None
+    if key in register:
+        return register[key]
+    # One name may carry a qualifier the other omits - "Yara" against "Yara
+    # International" - but only as a whole leading phrase, never a shared word.
+    for other, entry in register.items():
+        if other.startswith(key + " ") or key.startswith(other + " "):
+            return entry
+    return None

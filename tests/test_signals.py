@@ -18,8 +18,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from scan import same_story, distinctive                          # noqa: E402
 from sources import (_news_score, _material, _source_weight,      # noqa: E402
-                     worth_alerting, worth_reading, detect_language)
-from translate import clean                                       # noqa: E402
+                     worth_alerting, worth_reading, detect_language,
+                     match_short)
+from translate import clean, DeepL, Azure                         # noqa: E402
 
 # (subject, headline A, headline B, should_merge, description)
 STORY_CASES = [
@@ -265,6 +266,81 @@ TRANSLATION_CASES = [
 ]
 
 
+def short_register_matching() -> list[str]:
+    """A company must not be given another company's short interest.
+
+    Token overlap is far too loose for this: "Andfjord Salmon" and "Salmon
+    Evolution" share the word for what they farm, not for who they are, and the
+    first version of this reported one company's disclosed position under the
+    other's name - with a real number, a real date, and a real source, which is
+    exactly what makes it dangerous.
+    """
+    register = {
+        "salmon evolution": {"issuer": "SALMON EVOLUTION ASA", "percent": 2.58},
+        "yara international": {"issuer": "YARA INTERNATIONAL", "percent": 0.51},
+        "aker bp": {"issuer": "AKER BP", "percent": 0.71},
+        "proximar seafood": {"issuer": "PROXIMAR SEAFOOD", "percent": 2.26},
+    }
+    cases = [
+        ("Salmon Evolution", "SALMON EVOLUTION ASA", "exact"),
+        ("Yara", "YARA INTERNATIONAL", "a leading phrase may be extended"),
+        ("Aker BP", "AKER BP", "exact, two words"),
+        ("Andfjord Salmon", None, "shares only the industry word"),
+        ("Austevoll Seafood", None, "likewise"),
+        ("Nordic Halibut", None, "no entry at all"),
+        ("Evolution", None, "a trailing word is not a leading phrase"),
+    ]
+    problems = []
+    for name, want, why in cases:
+        got = match_short(name, register)
+        issuer = got["issuer"] if got else None
+        if issuer != want:
+            problems.append(
+                f"match_short({name!r}) gave {issuer!r}, wanted {want!r} - {why}")
+    return problems
+
+
+def batch_pairing() -> list[str]:
+    """A batching provider must never mis-pair a translation to a headline.
+
+    Both keyed providers send forty headlines in one request and match the
+    replies back by position. If a service returns a short list - a partial
+    failure, a filtered item, a truncated response - then zipping the two
+    together silently attaches each translation to the wrong headline, and the
+    result is cached under the wrong key and shown as though it were right.
+    That is worse than no translation at all, and invisible.
+    """
+    import translate
+
+    problems = []
+    sent = ["eins", "zwei", "drei"]
+
+    for name, provider, short, full in (
+        ("deepl", DeepL("k:fx"),
+         {"translations": [{"text": "one"}, {"text": "two"}]},
+         {"translations": [{"text": "one"}, {"text": "two"}, {"text": "three"}]}),
+        ("azure", Azure("k"),
+         [{"translations": [{"text": "one"}]}],
+         [{"translations": [{"text": "one"}]}, {"translations": [{"text": "two"}]},
+          {"translations": [{"text": "three"}]}]),
+    ):
+        original = translate._post
+        try:
+            translate._post = lambda *a, **k: short
+            got = provider.translate(sent, "de")
+            if any(g is not None for g in got):
+                problems.append(
+                    f"{name}: a short reply produced {got} instead of discarding "
+                    f"the batch - translations would be mis-paired")
+            translate._post = lambda *a, **k: full
+            got = provider.translate(sent, "de")
+            if got != ["one", "two", "three"]:
+                problems.append(f"{name}: a complete reply returned {got}")
+        finally:
+            translate._post = original
+    return problems
+
+
 def unpersisted_state() -> list[str]:
     """Files the scan must carry between runs but git would throw away.
 
@@ -306,6 +382,9 @@ def main() -> int:
         got = clean(raw)
         if got != want:
             failures.append(f"clean: wanted {want!r}, got {got!r} - {label}")
+
+    failures.extend(short_register_matching())
+    failures.extend(batch_pairing())
 
     for name in unpersisted_state():
         failures.append(
@@ -370,7 +449,7 @@ def main() -> int:
 
     total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
              + len(LANGUAGE_CASES) + len(PUBLISHER_CASES)
-             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 2)
+             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 13)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:

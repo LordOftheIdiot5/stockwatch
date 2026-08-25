@@ -56,9 +56,9 @@
     <footer class="foot">
       <p>
         Free data only: Yahoo for prices, Oslo Børs NewsWeb and MFN for
-        regulated disclosures, Google News in
-        <span id="langCount">several</span> languages for open-web coverage,
-        MyMemory for translation.
+        regulated disclosures, Finanstilsynet for disclosed short positions,
+        Google News in <span id="langCount">several</span> languages for
+        open-web coverage.
         <a href="https://github.com/LordOftheIdiot5/stockwatch" target="_blank" rel="noopener noreferrer">Source</a>.
       </p>
       <p class="disclaimer">
@@ -96,6 +96,7 @@
 
     function badge(a) {
       if (a.kind === "price") return '<span class="tag price">price</span>';
+      if (a.kind === "short") return '<span class="tag short">short</span>';
       if (a.kind === "disclosure") {
         return a.regulatory
           ? '<span class="tag reg">regulatory</span>'
@@ -175,6 +176,8 @@
             <p class="c-stats mono">
               ${fmt.format(c.excessSigma)}σ against the market ·
               volume ${fmt.format(c.rvol)}× its 20-day median ·
+              ${c.short ? `<span class="short-note">${fmt.format(c.short.percent)}% disclosed short${
+                   c.short.holders ? ` across ${c.short.holders}` : ""} as of ${esc(c.short.date)}</span> · ` : ""}
               ${esc(c.exchange || "")}
               <a href="https://finance.yahoo.com/quote/${encodeURIComponent(c.ticker)}"
                  target="_blank" rel="noopener noreferrer">chart</a>

@@ -36,6 +36,11 @@ jobs:
       - name: Scan
         id: scan
         env:
+          # Whichever of these exist are used, best first, and the scan works
+          # with none of them set. See scripts/translate.py.
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          AZURE_TRANSLATOR_KEY: ${{ secrets.AZURE_TRANSLATOR_KEY }}
+          AZURE_TRANSLATOR_REGION: ${{ secrets.AZURE_TRANSLATOR_REGION }}
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: python scripts/scan.py
 
