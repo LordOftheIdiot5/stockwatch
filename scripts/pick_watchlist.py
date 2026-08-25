@@ -1,5 +1,11 @@
 """Pick watchlist candidates on measurable properties, not opinion.
 
+Named pick_watchlist rather than select because a module called select.py in
+this directory shadows the standard library's select, which socket and urllib
+are built on. Nothing here imports it, but tests/ and scripts/ both put this
+directory on sys.path, so every scheduled run died before it reached its first
+line. See tests/test_signals.py, which now refuses any name the stdlib owns.
+
 This does not try to guess which shares will rise - nobody can do that, and a
 scanner does not need it. It selects for instruments where the scanner has
 something to detect:
@@ -112,7 +118,7 @@ def main() -> int:
 
     out = Path(__file__).resolve().parent.parent / "watchlist.json"
     out.write_text(json.dumps({
-        "_comment": "Chosen by scripts/select.py on liquidity, realised volatility "
+        "_comment": "Chosen by scripts/pick_watchlist.py on liquidity, realised volatility "
                     "and how often a 2-sigma day occurred. Not a view on direction.",
         "tickers": [
             {"ticker": r["ticker"], "name": r["name"], "exchange": r["exchange"],

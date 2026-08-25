@@ -192,8 +192,29 @@ READING_CASES = [
 ]
 
 
+def stdlib_shadowing() -> list[str]:
+    """Module names in scripts/ that the standard library already owns.
+
+    A file called select.py here shadowed the stdlib select module, which socket
+    and urllib import. Nothing referenced it - it was enough that it sat in a
+    directory on sys.path. Every scheduled run failed at import for eight hours
+    while the tests passed locally, because on Windows the modules it breaks had
+    already been imported before the path was extended.
+    """
+    scripts = Path(__file__).resolve().parent.parent / "scripts"
+    return sorted(
+        path.stem for path in scripts.glob("*.py")
+        if path.stem in sys.stdlib_module_names
+    )
+
+
 def main() -> int:
     failures = []
+
+    for name in stdlib_shadowing():
+        failures.append(
+            f"scripts/{name}.py shadows the standard library module '{name}' - "
+            f"rename it, or anything importing '{name}' gets this file instead")
 
     for title, served, want, label in LANGUAGE_CASES:
         got = detect_language(title, served)
@@ -240,7 +261,7 @@ def main() -> int:
             failures.append(f"_news_score: {score} fails its test - {label} [{publisher}]")
 
     total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
-             + len(LANGUAGE_CASES) + len(READING_CASES) * 2)
+             + len(LANGUAGE_CASES) + len(READING_CASES) * 2 + 1)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:
@@ -248,7 +269,8 @@ def main() -> int:
         return 1
     print(f"ok  {total} checks: {len(STORY_CASES)} story pairs (both directions), "
           f"{len(SCORE_CASES)} scores, {len(ALERT_CASES)} alert decisions, "
-          f"{len(LANGUAGE_CASES)} languages, {len(READING_CASES)} read/alert splits")
+          f"{len(LANGUAGE_CASES)} languages, {len(READING_CASES)} read/alert splits, "
+          f"no stdlib shadowing")
     return 0
 
 

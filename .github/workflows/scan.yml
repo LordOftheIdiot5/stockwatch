@@ -11,6 +11,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: scan
@@ -19,6 +21,8 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
+    outputs:
+      fresh: ${{ steps.scan.outputs.fresh }}
     steps:
       - uses: actions/checkout@v4
 
@@ -31,6 +35,8 @@ jobs:
 
       - name: Scan
         id: scan
+        env:
+          MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: python scripts/scan.py
 
       - name: Notify
@@ -47,3 +53,38 @@ jobs:
           git add data/
           git diff --staged --quiet || git commit -m "scan: $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
+
+  # This job is the reason the page could go stale while every scan succeeded.
+  #
+  # A push made with the built-in GITHUB_TOKEN does not start another workflow -
+  # GitHub blocks that so a workflow cannot retrigger itself forever. The commit
+  # above therefore lands fresh data on main, and the Deploy workflow, which
+  # listens for pushes, never hears it. The repository would update hourly while
+  # the published page kept serving whatever a human last pushed by hand.
+  #
+  # So the scan publishes its own results rather than waiting to be noticed.
+  deploy:
+    needs: scan
+    runs-on: ubuntu-latest
+    # The same group the Deploy workflow uses, so a scheduled publish and a
+    # hand pushed one queue behind each other instead of racing for the
+    # environment - they would otherwise be serialised only by luck.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Explicitly main, not the workflow's own SHA: that commit predates the
+      # one the scan just pushed, so checking it out would publish the data this
+      # run has already replaced.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
