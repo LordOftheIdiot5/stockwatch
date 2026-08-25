@@ -177,7 +177,9 @@
               ${fmt.format(c.excessSigma)}σ against the market ·
               volume ${fmt.format(c.rvol)}× its 20-day median ·
               ${c.short ? `<span class="short-note">${fmt.format(c.short.percent)}% disclosed short${
-                   c.short.holders ? ` across ${c.short.holders}` : ""} as of ${esc(c.short.date)}</span> · ` : ""}
+                   c.short.holders > 1 ? ` across ${c.short.holders} funds` : ""}${
+                   c.short.largest ? `, largest ${esc(c.short.largest)} at ${fmt.format(c.short.largestPercent)}%` : ""
+                 } as of ${esc(c.short.date)}</span> · ` : ""}
               ${esc(c.exchange || "")}
               <a href="https://finance.yahoo.com/quote/${encodeURIComponent(c.ticker)}"
                  target="_blank" rel="noopener noreferrer">chart</a>

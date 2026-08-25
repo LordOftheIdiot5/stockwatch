@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-25T12:05:03+00:00",
+ "generated": "2026-08-25T12:06:37+00:00",
  "tickers": 116,
- "marketPct": 0.48,
+ "marketPct": 0.44,
  "languages": [
   "da",
   "de",
@@ -52,7 +52,7 @@
     510.0,
     509.5,
     526.5,
-    549.0
+    548.5
    ],
    "stories": [
     {
@@ -117,7 +117,7 @@
      "score": 5,
      "material": 2,
      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ0NjU2ZpUjNFaUpuLWdRb0pBQ2YtTzVtRVFqNkNMZ083VmtadkJySkpGc293RmMtcVBVaVNudDd1a04zUmh1N0EyaU1YSWg5S01TQVVfWVlmZ04xLWF0OTF3VE9XYmcya2tTdndGWWJ0NWo4N21pZlhzNXRrR0NydTdxaHZ0c09GZjVIQXhpdlZCM25aRzEwUGI1ZzhidU1yeTQzaXRiV29Pa19E?oc=5",
-     "published": "Tue, 25 Aug 2026 08:48:50 GMT",
+     "published": "Tue, 25 Aug 2026 10:18:51 GMT",
      "fresh": false
     },
     {
@@ -148,33 +148,22 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 549.0,
-   "changePct": 4.27,
-   "sigma": 2.68,
-   "volume": 292963,
+   "close": 548.5,
+   "changePct": 4.18,
+   "sigma": 2.62,
+   "volume": 294551,
    "medianVolume": 153395,
-   "rvol": 1.91,
-   "marketPct": 0.48,
-   "excessPct": 3.78,
-   "excessSigma": 2.37,
+   "rvol": 1.92,
+   "marketPct": 0.44,
+   "excessPct": 3.73,
+   "excessSigma": 2.34,
    "short": {
     "percent": 1.01,
     "previous": 1.51,
     "date": "2026-06-11",
-    "holders": [
-     {
-      "date": "2025-08-06T00:00:00",
-      "shortPercent": 0.51,
-      "shares": 683968,
-      "positionHolder": "Caisse de dépôt et placement du Québec"
-     },
-     {
-      "date": "2026-02-27T00:00:00",
-      "shortPercent": 0.5,
-      "shares": 681971,
-      "positionHolder": "JPMorgan Asset Management (UK) Ltd"
-     }
-    ]
+    "holders": 2,
+    "largest": "Caisse de dépôt et placement du Québec",
+    "largestPercent": 0.51
    }
   },
   {
@@ -238,9 +227,9 @@
    "volume": 46777,
    "medianVolume": 12254,
    "rvol": 3.82,
-   "marketPct": 0.48,
-   "excessPct": -3.88,
-   "excessSigma": -0.89
+   "marketPct": 0.44,
+   "excessPct": -3.83,
+   "excessSigma": -0.88
   },
   {
    "ticker": "ANDF.OL",
@@ -303,8 +292,8 @@
    "volume": 7927,
    "medianVolume": 15251,
    "rvol": 0.52,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
+   "marketPct": 0.44,
+   "excessPct": -0.44,
    "excessSigma": 0
   },
   {
@@ -344,19 +333,19 @@
     83.3,
     83.9,
     86.3,
-    88.9
+    88.7
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 88.9,
-   "changePct": 3.01,
-   "sigma": 2.23,
-   "volume": 102715,
+   "close": 88.7,
+   "changePct": 2.78,
+   "sigma": 2.06,
+   "volume": 102930,
    "medianVolume": 112322,
-   "rvol": 0.91,
-   "marketPct": 0.48,
-   "excessPct": 2.52,
-   "excessSigma": 1.87
+   "rvol": 0.92,
+   "marketPct": 0.44,
+   "excessPct": 2.33,
+   "excessSigma": 1.73
   },
   {
    "ticker": "PROXI.OL",
@@ -405,9 +394,9 @@
    "volume": 485913,
    "medianVolume": 99043,
    "rvol": 4.91,
-   "marketPct": 0.48,
-   "excessPct": 2.97,
-   "excessSigma": 0.84
+   "marketPct": 0.44,
+   "excessPct": 3.01,
+   "excessSigma": 0.85
   },
   {
    "ticker": "AFISH.OL",
@@ -456,9 +445,9 @@
    "volume": 586,
    "medianVolume": 799,
    "rvol": 0.73,
-   "marketPct": 0.48,
-   "excessPct": -3.56,
-   "excessSigma": -0.74
+   "marketPct": 0.44,
+   "excessPct": -3.52,
+   "excessSigma": -0.73
   },
   {
    "ticker": "SALME.OL",
@@ -507,39 +496,16 @@
    "volume": 574405,
    "medianVolume": 747767,
    "rvol": 0.77,
-   "marketPct": 0.48,
-   "excessPct": -0.86,
-   "excessSigma": -0.38,
+   "marketPct": 0.44,
+   "excessPct": -0.82,
+   "excessSigma": -0.37,
    "short": {
     "percent": 2.58,
     "previous": 2.71,
     "date": "2026-08-19",
-    "holders": [
-     {
-      "date": "2026-08-19T00:00:00",
-      "shortPercent": 0.98,
-      "shares": 5432240,
-      "positionHolder": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP"
-     },
-     {
-      "date": "2026-05-05T00:00:00",
-      "shortPercent": 0.51,
-      "shares": 2877236,
-      "positionHolder": "ActusRayPartners Limited"
-     },
-     {
-      "date": "2026-07-01T00:00:00",
-      "shortPercent": 0.5,
-      "shares": 2774234,
-      "positionHolder": "GSA CAPITAL PARTNERS LLP"
-     },
-     {
-      "date": "2026-07-17T00:00:00",
-      "shortPercent": 0.59,
-      "shares": 3318541,
-      "positionHolder": "TWO SIGMA INVESTMENTS, LP"
-     }
-    ]
+    "holders": 4,
+    "largest": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
+    "largestPercent": 0.98
    }
   },
   {
@@ -589,8 +555,8 @@
    "volume": 1759,
    "medianVolume": 3130,
    "rvol": 0.56,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
+   "marketPct": 0.44,
+   "excessPct": -0.44,
    "excessSigma": 0
   },
   {
@@ -640,8 +606,8 @@
    "volume": 1722,
    "medianVolume": 5275,
    "rvol": 0.33,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
+   "marketPct": 0.44,
+   "excessPct": -0.44,
    "excessSigma": 0
   },
   {
@@ -715,12 +681,12 @@
    "close": 155.0,
    "changePct": 0.91,
    "sigma": 1.54,
-   "volume": 103025,
+   "volume": 103092,
    "medianVolume": 575734,
    "rvol": 0.18,
-   "marketPct": 0.48,
-   "excessPct": 0.43,
-   "excessSigma": 0.73
+   "marketPct": 0.44,
+   "excessPct": 0.47,
+   "excessSigma": 0.8
   },
   {
    "ticker": "STB.OL",
@@ -780,12 +746,12 @@
    "close": 205.6,
    "changePct": 1.88,
    "sigma": 2.35,
-   "volume": 222570,
+   "volume": 223016,
    "medianVolume": 410598,
    "rvol": 0.54,
-   "marketPct": 0.48,
-   "excessPct": 1.4,
-   "excessSigma": 1.75
+   "marketPct": 0.44,
+   "excessPct": 1.44,
+   "excessSigma": 1.8
   },
   {
    "ticker": "UCG.MI",
@@ -824,7 +790,7 @@
     82.37,
     82.82,
     83.03,
-    84.48
+    84.53
    ],
    "stories": [
     {
@@ -842,15 +808,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 84.48,
-   "changePct": 1.75,
-   "sigma": 1.44,
-   "volume": 1229433,
+   "close": 84.53,
+   "changePct": 1.81,
+   "sigma": 1.49,
+   "volume": 1240209,
    "medianVolume": 3605862,
    "rvol": 0.34,
-   "marketPct": 0.48,
-   "excessPct": 1.27,
-   "excessSigma": 1.05
+   "marketPct": 0.44,
+   "excessPct": 1.37,
+   "excessSigma": 1.13
   },
   {
    "ticker": "NOBA.ST",
@@ -913,9 +879,9 @@
    "volume": 52566,
    "medianVolume": 179842,
    "rvol": 0.29,
-   "marketPct": 0.48,
-   "excessPct": -1.04,
-   "excessSigma": -0.84
+   "marketPct": 0.44,
+   "excessPct": -1.0,
+   "excessSigma": -0.8
   },
   {
    "ticker": "GJF.OL",
@@ -978,9 +944,9 @@
    "volume": 44077,
    "medianVolume": 180108,
    "rvol": 0.24,
-   "marketPct": 0.48,
-   "excessPct": -0.28,
-   "excessSigma": -0.37
+   "marketPct": 0.44,
+   "excessPct": -0.23,
+   "excessSigma": -0.31
   },
   {
    "ticker": "SBNOR.OL",
@@ -1026,12 +992,12 @@
    "close": 205.35,
    "changePct": 6.22,
    "sigma": 4.3,
-   "volume": 124699,
+   "volume": 124705,
    "medianVolume": 105319,
    "rvol": 1.18,
-   "marketPct": 0.48,
-   "excessPct": 5.73,
-   "excessSigma": 3.96
+   "marketPct": 0.44,
+   "excessPct": 5.77,
+   "excessSigma": 3.99
   },
   {
    "ticker": "HOFI.ST",
@@ -1080,9 +1046,9 @@
    "volume": 335847,
    "medianVolume": 105117,
    "rvol": 3.19,
-   "marketPct": 0.48,
-   "excessPct": 3.31,
-   "excessSigma": 3.06
+   "marketPct": 0.44,
+   "excessPct": 3.35,
+   "excessSigma": 3.09
   },
   {
    "ticker": "PROT.OL",
@@ -1121,19 +1087,19 @@
     476.8,
     475.8,
     478.2,
-    491.4
+    491.2
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 491.4,
-   "changePct": 2.76,
-   "sigma": 1.69,
-   "volume": 25092,
+   "close": 491.2,
+   "changePct": 2.72,
+   "sigma": 1.67,
+   "volume": 25222,
    "medianVolume": 53848,
    "rvol": 0.47,
-   "marketPct": 0.48,
-   "excessPct": 2.27,
-   "excessSigma": 1.39
+   "marketPct": 0.44,
+   "excessPct": 2.28,
+   "excessSigma": 1.4
   },
   {
    "ticker": "MORROW.ST",
@@ -1182,9 +1148,9 @@
    "volume": 224327,
    "medianVolume": 412104,
    "rvol": 0.54,
-   "marketPct": 0.48,
-   "excessPct": 2.06,
-   "excessSigma": 1.29
+   "marketPct": 0.44,
+   "excessPct": 2.1,
+   "excessSigma": 1.31
   },
   {
    "ticker": "INSTA.OL",
@@ -1230,12 +1196,12 @@
    "close": 4.99,
    "changePct": -0.99,
    "sigma": -0.78,
-   "volume": 84126,
+   "volume": 84128,
    "medianVolume": 412726,
    "rvol": 0.2,
-   "marketPct": 0.48,
-   "excessPct": -1.48,
-   "excessSigma": -1.17
+   "marketPct": 0.44,
+   "excessPct": -1.44,
+   "excessSigma": -1.13
   },
   {
    "ticker": "QLIRO.ST",
@@ -1284,9 +1250,60 @@
    "volume": 17886,
    "medianVolume": 31119,
    "rvol": 0.57,
-   "marketPct": 0.48,
-   "excessPct": -2.15,
-   "excessSigma": -1.09
+   "marketPct": 0.44,
+   "excessPct": -2.1,
+   "excessSigma": -1.06
+  },
+  {
+   "ticker": "AVARDA.ST",
+   "name": "Avarda",
+   "sector": "Banks & insurance",
+   "exchange": "Stockholm",
+   "currency": "SEK",
+   "thin": false,
+   "spark": [
+    193.6,
+    186.2,
+    188.8,
+    183.0,
+    186.6,
+    186.6,
+    188.2,
+    183.4,
+    187.6,
+    188.8,
+    187.4,
+    185.2,
+    186.8,
+    187.8,
+    189.0,
+    192.6,
+    192.4,
+    193.6,
+    192.4,
+    192.4,
+    197.0,
+    202.0,
+    203.5,
+    203.5,
+    206.0,
+    200.0,
+    195.2,
+    196.0,
+    201.0,
+    200.0
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 200.0,
+   "changePct": -0.5,
+   "sigma": -0.34,
+   "volume": 6286,
+   "medianVolume": 33329,
+   "rvol": 0.19,
+   "marketPct": 0.44,
+   "excessPct": -0.94,
+   "excessSigma": -0.64
   },
   {
    "ticker": "VIG.VI",
@@ -1335,9 +1352,9 @@
    "volume": 3646,
    "medianVolume": 37998,
    "rvol": 0.1,
-   "marketPct": 0.48,
-   "excessPct": 0.36,
-   "excessSigma": 0.22
+   "marketPct": 0.44,
+   "excessPct": 0.41,
+   "excessSigma": 0.25
   },
   {
    "ticker": "AZA.ST",
@@ -1376,19 +1393,19 @@
     391.5,
     396.2,
     400.0,
-    402.6
+    402.5
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 402.6,
-   "changePct": 0.65,
-   "sigma": 0.79,
-   "volume": 79737,
+   "close": 402.5,
+   "changePct": 0.62,
+   "sigma": 0.76,
+   "volume": 79836,
    "medianVolume": 213592,
    "rvol": 0.37,
-   "marketPct": 0.48,
-   "excessPct": 0.17,
-   "excessSigma": 0.21
+   "marketPct": 0.44,
+   "excessPct": 0.18,
+   "excessSigma": 0.22
   },
   {
    "ticker": "INVE-B.ST",
@@ -1427,70 +1444,19 @@
     410.2,
     410.05,
     413.1,
-    415.15
+    415.1
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 415.15,
-   "changePct": 0.5,
-   "sigma": 0.81,
-   "volume": 889477,
+   "close": 415.1,
+   "changePct": 0.48,
+   "sigma": 0.79,
+   "volume": 889926,
    "medianVolume": 2245090,
    "rvol": 0.4,
-   "marketPct": 0.48,
-   "excessPct": 0.02,
-   "excessSigma": 0.03
-  },
-  {
-   "ticker": "AVARDA.ST",
-   "name": "Avarda",
-   "sector": "Banks & insurance",
-   "exchange": "Stockholm",
-   "currency": "SEK",
-   "thin": false,
-   "spark": [
-    193.6,
-    186.2,
-    188.8,
-    183.0,
-    186.6,
-    186.6,
-    188.2,
-    183.4,
-    187.6,
-    188.8,
-    187.4,
-    185.2,
-    186.8,
-    187.8,
-    189.0,
-    192.6,
-    192.4,
-    193.6,
-    192.4,
-    192.4,
-    197.0,
-    202.0,
-    203.5,
-    203.5,
-    206.0,
-    200.0,
-    195.2,
-    196.0,
-    201.0,
-    201.0
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 201.0,
-   "changePct": 0.0,
-   "sigma": 0.0,
-   "volume": 6251,
-   "medianVolume": 33329,
-   "rvol": 0.19,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
-   "excessSigma": 0
+   "marketPct": 0.44,
+   "excessPct": 0.04,
+   "excessSigma": 0.07
   },
   {
    "ticker": "SCATC.OL",
@@ -1529,7 +1495,7 @@
     94.95,
     96.6,
     96.75,
-    99.3
+    99.25
    ],
    "stories": [
     {
@@ -1599,27 +1565,22 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 99.3,
-   "changePct": 2.64,
-   "sigma": 1.85,
-   "volume": 393708,
+   "close": 99.25,
+   "changePct": 2.58,
+   "sigma": 1.81,
+   "volume": 398907,
    "medianVolume": 331179,
-   "rvol": 1.19,
-   "marketPct": 0.48,
-   "excessPct": 2.16,
-   "excessSigma": 1.51,
+   "rvol": 1.2,
+   "marketPct": 0.44,
+   "excessPct": 2.14,
+   "excessSigma": 1.5,
    "short": {
     "percent": 0.59,
     "previous": 0.6,
     "date": "2026-08-20",
-    "holders": [
-     {
-      "date": "2026-08-20T00:00:00",
-      "shortPercent": 0.59,
-      "shares": 953774,
-      "positionHolder": "Acadian Asset Management LLC"
-     }
-    ]
+    "holders": 1,
+    "largest": "Acadian Asset Management LLC",
+    "largestPercent": 0.59
    }
   },
   {
@@ -1659,7 +1620,7 @@
     123.6,
     122.55,
     124.0,
-    122.45
+    122.55
    ],
    "stories": [
     {
@@ -1716,15 +1677,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 122.45,
-   "changePct": -1.25,
-   "sigma": -0.52,
-   "volume": 446006,
+   "close": 122.55,
+   "changePct": -1.17,
+   "sigma": -0.49,
+   "volume": 447069,
    "medianVolume": 1227843,
    "rvol": 0.36,
-   "marketPct": 0.48,
-   "excessPct": -1.73,
-   "excessSigma": -0.72
+   "marketPct": 0.44,
+   "excessPct": -1.61,
+   "excessSigma": -0.67
   },
   {
    "ticker": "NIBE-B.ST",
@@ -1763,7 +1724,7 @@
     37.96,
     38.59,
     41.99,
-    42.8
+    42.81
    ],
    "stories": [
     {
@@ -1820,15 +1781,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 42.8,
-   "changePct": 1.93,
-   "sigma": 0.85,
-   "volume": 3692764,
+   "close": 42.81,
+   "changePct": 1.95,
+   "sigma": 0.86,
+   "volume": 3694500,
    "medianVolume": 4535248,
    "rvol": 0.81,
-   "marketPct": 0.48,
-   "excessPct": 1.44,
-   "excessSigma": 0.63
+   "marketPct": 0.44,
+   "excessPct": 1.5,
+   "excessSigma": 0.66
   },
   {
    "ticker": "VWS.CO",
@@ -1917,9 +1878,9 @@
    "volume": 478250,
    "medianVolume": 1960385,
    "rvol": 0.24,
-   "marketPct": 0.48,
-   "excessPct": 1.58,
-   "excessSigma": 0.33
+   "marketPct": 0.44,
+   "excessPct": 1.62,
+   "excessSigma": 0.34
   },
   {
    "ticker": "S92.DE",
@@ -1958,7 +1919,7 @@
     57.4,
     57.6,
     56.8,
-    55.9
+    55.75
    ],
    "stories": [
     {
@@ -1989,15 +1950,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 55.9,
-   "changePct": -1.58,
-   "sigma": -0.45,
-   "volume": 11292,
+   "close": 55.75,
+   "changePct": -1.85,
+   "sigma": -0.52,
+   "volume": 11393,
    "medianVolume": 77784,
    "rvol": 0.15,
-   "marketPct": 0.48,
-   "excessPct": -2.06,
-   "excessSigma": -0.59
+   "marketPct": 0.44,
+   "excessPct": -2.29,
+   "excessSigma": -0.64
   },
   {
    "ticker": "4DS.DE",
@@ -2060,9 +2021,9 @@
    "volume": 3652,
    "medianVolume": 1091,
    "rvol": 3.35,
-   "marketPct": 0.48,
-   "excessPct": -6.62,
-   "excessSigma": -2.76
+   "marketPct": 0.44,
+   "excessPct": -6.58,
+   "excessSigma": -2.74
   },
   {
    "ticker": "ZAP.OL",
@@ -2125,21 +2086,16 @@
    "volume": 431755,
    "medianVolume": 229394,
    "rvol": 1.88,
-   "marketPct": 0.48,
-   "excessPct": 1.64,
-   "excessSigma": 0.84,
+   "marketPct": 0.44,
+   "excessPct": 1.68,
+   "excessSigma": 0.86,
    "short": {
     "percent": 1.23,
     "previous": 1.31,
     "date": "2026-08-21",
-    "holders": [
-     {
-      "date": "2026-08-21T00:00:00",
-      "shortPercent": 1.23,
-      "shares": 1077964,
-      "positionHolder": "CITADEL ADVISORS LLC"
-     }
-    ]
+    "holders": 1,
+    "largest": "CITADEL ADVISORS LLC",
+    "largestPercent": 1.23
    }
   },
   {
@@ -2200,12 +2156,77 @@
    "close": 39.46,
    "changePct": 1.49,
    "sigma": 0.55,
-   "volume": 42289,
+   "volume": 42384,
    "medianVolume": 487629,
    "rvol": 0.09,
-   "marketPct": 0.48,
-   "excessPct": 1.0,
-   "excessSigma": 0.37
+   "marketPct": 0.44,
+   "excessPct": 1.04,
+   "excessSigma": 0.38
+  },
+  {
+   "ticker": "NEX.PA",
+   "name": "Nexans",
+   "sector": "Grid & energy",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    135.8,
+    136.0,
+    133.9,
+    135.3,
+    133.4,
+    134.8,
+    134.1,
+    133.8,
+    132.2,
+    130.3,
+    124.1,
+    128.6,
+    131.6,
+    131.8,
+    129.2,
+    132.9,
+    138.1,
+    140.5,
+    139.6,
+    137.9,
+    138.8,
+    144.7,
+    142.5,
+    140.0,
+    140.9,
+    138.0,
+    138.1,
+    138.5,
+    141.8,
+    141.7
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
+     "headline": "Tills elektrikern skiljer dem åt. Nexans lanserar hybridkabel som förenklar installationer",
+     "english": "Until the electrician separates them. Nexans launches hybrid cable to simplify installations",
+     "lang": "sv",
+     "publisher": "dagensinfrastruktur -",
+     "score": 1,
+     "material": 1,
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
+     "published": "Tue, 25 Aug 2026 07:15:57 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 141.7,
+   "changePct": -0.07,
+   "sigma": -0.03,
+   "volume": 23342,
+   "medianVolume": 178951,
+   "rvol": 0.13,
+   "marketPct": 0.44,
+   "excessPct": -0.51,
+   "excessSigma": -0.22
   },
   {
    "ticker": "PFSE.DE",
@@ -2268,9 +2289,9 @@
    "volume": 4433,
    "medianVolume": 29819,
    "rvol": 0.15,
-   "marketPct": 0.48,
-   "excessPct": -0.76,
-   "excessSigma": -0.2
+   "marketPct": 0.44,
+   "excessPct": -0.71,
+   "excessSigma": -0.18
   },
   {
    "ticker": "ELI.BR",
@@ -2309,7 +2330,7 @@
     125.3,
     127.0,
     126.5,
-    127.1
+    127.0
    ],
    "stories": [
     {
@@ -2327,80 +2348,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 127.1,
-   "changePct": 0.47,
-   "sigma": 0.25,
-   "volume": 6312,
+   "close": 127.0,
+   "changePct": 0.4,
+   "sigma": 0.21,
+   "volume": 6440,
    "medianVolume": 89603,
    "rvol": 0.07,
-   "marketPct": 0.48,
-   "excessPct": -0.02,
-   "excessSigma": -0.01
-  },
-  {
-   "ticker": "NEX.PA",
-   "name": "Nexans",
-   "sector": "Grid & energy",
-   "exchange": "Paris",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    135.8,
-    136.0,
-    133.9,
-    135.3,
-    133.4,
-    134.8,
-    134.1,
-    133.8,
-    132.2,
-    130.3,
-    124.1,
-    128.6,
-    131.6,
-    131.8,
-    129.2,
-    132.9,
-    138.1,
-    140.5,
-    139.6,
-    137.9,
-    138.8,
-    144.7,
-    142.5,
-    140.0,
-    140.9,
-    138.0,
-    138.1,
-    138.5,
-    141.8,
-    141.8
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
-     "headline": "Tills elektrikern skiljer dem åt. Nexans lanserar hybridkabel som förenklar installationer",
-     "english": "Until the electrician separates them. Nexans launches hybrid cable to simplify installations",
-     "lang": "sv",
-     "publisher": "dagensinfrastruktur -",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb0V5el9vaWR5TkJ6WC1HcGZZVUJDcGlaSmRhMnhjdTBxWXNTLTc1dmNySm0xamdDd0pBQ2Y0Rl9OLVdjdEljY1VlOFBHSF8tZDFvelpPOG96dUFKdFg2V0ZDSTl1cGh4UXZwdS10QUhFWmhPQThzOWk0MW9NeHZpejVJbThwZHVObTUxVWVSaG11TmRNX3N0aEpBeFNFem1kWjM3UVdwRXlIQmtiRVk0eTJVOVIxMzRKR3hoeUo4QnpKUjNaTHo0Q3otbk1aQU5jWWc?oc=5",
-     "published": "Tue, 25 Aug 2026 07:15:57 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-08-25",
-   "close": 141.8,
-   "changePct": 0.0,
-   "sigma": 0.0,
-   "volume": 23339,
-   "medianVolume": 178951,
-   "rvol": 0.13,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
-   "excessSigma": 0
+   "marketPct": 0.44,
+   "excessPct": -0.04,
+   "excessSigma": -0.02
   },
   {
    "ticker": "CLOUD.OL",
@@ -2449,9 +2405,9 @@
    "volume": 14518,
    "medianVolume": 111969,
    "rvol": 0.13,
-   "marketPct": 0.48,
-   "excessPct": -1.07,
-   "excessSigma": -0.87
+   "marketPct": 0.44,
+   "excessPct": -1.03,
+   "excessSigma": -0.84
   },
   {
    "ticker": "BONHR.OL",
@@ -2500,9 +2456,9 @@
    "volume": 6714,
    "medianVolume": 15451,
    "rvol": 0.43,
-   "marketPct": 0.48,
-   "excessPct": 0.74,
-   "excessSigma": 0.66
+   "marketPct": 0.44,
+   "excessPct": 0.79,
+   "excessSigma": 0.7
   },
   {
    "ticker": "NKT.CO",
@@ -2541,19 +2497,19 @@
     944.0,
     930.5,
     933.0,
-    940.0
+    939.5
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 940.0,
-   "changePct": 0.75,
-   "sigma": 0.38,
-   "volume": 30150,
+   "close": 939.5,
+   "changePct": 0.7,
+   "sigma": 0.35,
+   "volume": 30162,
    "medianVolume": 145252,
    "rvol": 0.21,
-   "marketPct": 0.48,
-   "excessPct": 0.27,
-   "excessSigma": 0.14
+   "marketPct": 0.44,
+   "excessPct": 0.26,
+   "excessSigma": 0.13
   },
   {
    "ticker": "PERR.PA",
@@ -2602,8 +2558,8 @@
    "volume": 599,
    "medianVolume": 808,
    "rvol": 0.74,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
+   "marketPct": 0.44,
+   "excessPct": -0.44,
    "excessSigma": 0
   },
   {
@@ -2719,9 +2675,9 @@
    "volume": 34255,
    "medianVolume": 184137,
    "rvol": 0.19,
-   "marketPct": 0.48,
-   "excessPct": -0.81,
-   "excessSigma": -0.2
+   "marketPct": 0.44,
+   "excessPct": -0.77,
+   "excessSigma": -0.19
   },
   {
    "ticker": "SAAB-B.ST",
@@ -2760,7 +2716,7 @@
     675.9,
     666.5,
     655.2,
-    642.5
+    642.6
    ],
    "stories": [
     {
@@ -2817,15 +2773,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 642.5,
-   "changePct": -1.94,
+   "close": 642.6,
+   "changePct": -1.92,
    "sigma": -1.19,
-   "volume": 359812,
+   "volume": 360098,
    "medianVolume": 1752304,
    "rvol": 0.21,
-   "marketPct": 0.48,
-   "excessPct": -2.42,
-   "excessSigma": -1.48
+   "marketPct": 0.44,
+   "excessPct": -2.36,
+   "excessSigma": -1.46
   },
   {
    "ticker": "CAF.MC",
@@ -2914,87 +2870,9 @@
    "volume": 7034,
    "medianVolume": 25663,
    "rvol": 0.27,
-   "marketPct": 0.48,
-   "excessPct": 1.44,
-   "excessSigma": 0.55
-  },
-  {
-   "ticker": "ALO.PA",
-   "name": "Alstom",
-   "sector": "Industry & defence",
-   "exchange": "Paris",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    15.25,
-    15.62,
-    15.91,
-    15.705,
-    15.845,
-    15.965,
-    16.125,
-    16.025,
-    16.01,
-    16.21,
-    16.33,
-    16.39,
-    16.01,
-    16.08,
-    16.545,
-    16.84,
-    16.555,
-    16.925,
-    16.66,
-    16.3,
-    16.38,
-    16.2,
-    15.985,
-    16.23,
-    16.075,
-    15.8,
-    15.875,
-    15.825,
-    15.99,
-    16.3
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMijAFBVV95cUxPWkw2aVJodEhjWmxMWVpfT1RvXzM2cExOc0hlRTNwUW96UTB1cmtSTV9zVDZSM0lYTUtiVFUzZUhKM0Ytb0tUeVNRYUpyNDRrS0ZNSGhyTE00WTBVTFFCN29fdC1xTnpINm9EeTFVTE9nWUNlZXlHcENJR2JWeF9iMGRnb0VSSzYtaUhLcg?oc=5",
-     "headline": "AI testas mot viltolyckor på järnvägen",
-     "english": "AI tested against wildlife accidents on the railway",
-     "lang": "sv",
-     "publisher": "JARNVAGSnyheter.se",
-     "score": 3,
-     "material": 3,
-     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWkw2aVJodEhjWmxMWVpfT1RvXzM2cExOc0hlRTNwUW96UTB1cmtSTV9zVDZSM0lYTUtiVFUzZUhKM0Ytb0tUeVNRYUpyNDRrS0ZNSGhyTE00WTBVTFFCN29fdC1xTnpINm9EeTFVTE9nWUNlZXlHcENJR2JWeF9iMGRnb0VSSzYtaUhLcg?oc=5",
-     "published": "Mon, 24 Aug 2026 15:24:33 GMT",
-     "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMitAFBVV95cUxPTHVOUHg0aUtaLTYyREpzQlNxQWJTdm9BS19YNkpySFVPNDdJU2lYVklLZ1QtSUNzNTNGRzJ1eVc5U2dyNXJxaXAyU0lyRjJveVdhYzFpcVZ1TUZxNm1mSDlWazdLQWtySXFJd1UxQWdDV2hGNE1oMzdDalgtY3FwU09jWThfTHBOb25QOFlpM1g5SEl3bFJjbVpMSEpsejdWOGJqc0k1ckxLWUN4ZkhWVlFISTM?oc=5",
-     "headline": "Arabie saoudite : Alstom et CMA CGM signent près d’un milliard d’euros d’accords dans les transports",
-     "english": "Saudi Arabia: Alstom and CMA CGM sign nearly one billion euros of transport agreements",
-     "lang": "fr",
-     "publisher": "Enderi",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTHVOUHg0aUtaLTYyREpzQlNxQWJTdm9BS19YNkpySFVPNDdJU2lYVklLZ1QtSUNzNTNGRzJ1eVc5U2dyNXJxaXAyU0lyRjJveVdhYzFpcVZ1TUZxNm1mSDlWazdLQWtySXFJd1UxQWdDV2hGNE1oMzdDalgtY3FwU09jWThfTHBOb25QOFlpM1g5SEl3bFJjbVpMSEpsejdWOGJqc0k1ckxLWUN4ZkhWVlFISTM?oc=5",
-     "published": "Tue, 25 Aug 2026 10:12:50 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-08-25",
-   "close": 16.3,
-   "changePct": 1.94,
-   "sigma": 1.28,
-   "volume": 257745,
-   "medianVolume": 969123,
-   "rvol": 0.27,
-   "marketPct": 0.48,
-   "excessPct": 1.46,
-   "excessSigma": 0.96
+   "marketPct": 0.44,
+   "excessPct": 1.48,
+   "excessSigma": 0.57
   },
   {
    "ticker": "SIE.DE",
@@ -3067,11 +2945,89 @@
    "close": 286.2,
    "changePct": 2.09,
    "sigma": 1.25,
-   "volume": 223371,
+   "volume": 223750,
    "medianVolume": 807554,
    "rvol": 0.28,
-   "marketPct": 0.48,
-   "excessPct": 1.6,
+   "marketPct": 0.44,
+   "excessPct": 1.65,
+   "excessSigma": 0.99
+  },
+  {
+   "ticker": "ALO.PA",
+   "name": "Alstom",
+   "sector": "Industry & defence",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    15.25,
+    15.62,
+    15.91,
+    15.705,
+    15.845,
+    15.965,
+    16.125,
+    16.025,
+    16.01,
+    16.21,
+    16.33,
+    16.39,
+    16.01,
+    16.08,
+    16.545,
+    16.84,
+    16.555,
+    16.925,
+    16.66,
+    16.3,
+    16.38,
+    16.2,
+    15.985,
+    16.23,
+    16.075,
+    15.8,
+    15.875,
+    15.825,
+    15.99,
+    16.295
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMijAFBVV95cUxPWkw2aVJodEhjWmxMWVpfT1RvXzM2cExOc0hlRTNwUW96UTB1cmtSTV9zVDZSM0lYTUtiVFUzZUhKM0Ytb0tUeVNRYUpyNDRrS0ZNSGhyTE00WTBVTFFCN29fdC1xTnpINm9EeTFVTE9nWUNlZXlHcENJR2JWeF9iMGRnb0VSSzYtaUhLcg?oc=5",
+     "headline": "AI testas mot viltolyckor på järnvägen",
+     "english": "AI tested against wildlife accidents on the railway",
+     "lang": "sv",
+     "publisher": "JARNVAGSnyheter.se",
+     "score": 3,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWkw2aVJodEhjWmxMWVpfT1RvXzM2cExOc0hlRTNwUW96UTB1cmtSTV9zVDZSM0lYTUtiVFUzZUhKM0Ytb0tUeVNRYUpyNDRrS0ZNSGhyTE00WTBVTFFCN29fdC1xTnpINm9EeTFVTE9nWUNlZXlHcENJR2JWeF9iMGRnb0VSSzYtaUhLcg?oc=5",
+     "published": "Mon, 24 Aug 2026 15:24:33 GMT",
+     "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMitAFBVV95cUxPTHVOUHg0aUtaLTYyREpzQlNxQWJTdm9BS19YNkpySFVPNDdJU2lYVklLZ1QtSUNzNTNGRzJ1eVc5U2dyNXJxaXAyU0lyRjJveVdhYzFpcVZ1TUZxNm1mSDlWazdLQWtySXFJd1UxQWdDV2hGNE1oMzdDalgtY3FwU09jWThfTHBOb25QOFlpM1g5SEl3bFJjbVpMSEpsejdWOGJqc0k1ckxLWUN4ZkhWVlFISTM?oc=5",
+     "headline": "Arabie saoudite : Alstom et CMA CGM signent près d’un milliard d’euros d’accords dans les transports",
+     "english": "Saudi Arabia: Alstom and CMA CGM sign nearly one billion euros of transport agreements",
+     "lang": "fr",
+     "publisher": "Enderi",
+     "score": 1,
+     "material": 1,
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTHVOUHg0aUtaLTYyREpzQlNxQWJTdm9BS19YNkpySFVPNDdJU2lYVklLZ1QtSUNzNTNGRzJ1eVc5U2dyNXJxaXAyU0lyRjJveVdhYzFpcVZ1TUZxNm1mSDlWazdLQWtySXFJd1UxQWdDV2hGNE1oMzdDalgtY3FwU09jWThfTHBOb25QOFlpM1g5SEl3bFJjbVpMSEpsejdWOGJqc0k1ckxLWUN4ZkhWVlFISTM?oc=5",
+     "published": "Tue, 25 Aug 2026 10:12:50 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-08-25",
+   "close": 16.295,
+   "changePct": 1.91,
+   "sigma": 1.26,
+   "volume": 258779,
+   "medianVolume": 969123,
+   "rvol": 0.27,
+   "marketPct": 0.44,
+   "excessPct": 1.46,
    "excessSigma": 0.96
   },
   {
@@ -3135,9 +3091,9 @@
    "volume": 11540,
    "medianVolume": 18845,
    "rvol": 0.61,
-   "marketPct": 0.48,
-   "excessPct": 0.43,
-   "excessSigma": 0.32
+   "marketPct": 0.44,
+   "excessPct": 0.47,
+   "excessSigma": 0.35
   },
   {
    "ticker": "BOL.ST",
@@ -3197,12 +3153,12 @@
    "close": 569.8,
    "changePct": 0.74,
    "sigma": 0.37,
-   "volume": 219568,
+   "volume": 219921,
    "medianVolume": 1009277,
    "rvol": 0.22,
-   "marketPct": 0.48,
-   "excessPct": 0.26,
-   "excessSigma": 0.13
+   "marketPct": 0.44,
+   "excessPct": 0.3,
+   "excessSigma": 0.15
   },
   {
    "ticker": "KCR.HE",
@@ -3241,19 +3197,19 @@
     27.66,
     27.62,
     28.58,
-    29.46
+    29.5
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 29.46,
-   "changePct": 3.08,
-   "sigma": 2.14,
-   "volume": 76170,
+   "close": 29.5,
+   "changePct": 3.22,
+   "sigma": 2.24,
+   "volume": 76612,
    "medianVolume": 285821,
    "rvol": 0.27,
-   "marketPct": 0.48,
-   "excessPct": 2.6,
-   "excessSigma": 1.81
+   "marketPct": 0.44,
+   "excessPct": 2.78,
+   "excessSigma": 1.93
   },
   {
    "ticker": "VOS.DE",
@@ -3299,12 +3255,12 @@
    "close": 58.45,
    "changePct": 2.45,
    "sigma": 1.75,
-   "volume": 5028,
+   "volume": 5035,
    "medianVolume": 19948,
    "rvol": 0.25,
-   "marketPct": 0.48,
-   "excessPct": 1.97,
-   "excessSigma": 1.41
+   "marketPct": 0.44,
+   "excessPct": 2.01,
+   "excessSigma": 1.44
   },
   {
    "ticker": "AM.PA",
@@ -3353,9 +3309,9 @@
    "volume": 3858,
    "medianVolume": 44121,
    "rvol": 0.09,
-   "marketPct": 0.48,
-   "excessPct": -1.23,
-   "excessSigma": -0.9
+   "marketPct": 0.44,
+   "excessPct": -1.19,
+   "excessSigma": -0.87
   },
   {
    "ticker": "PAL.VI",
@@ -3404,9 +3360,9 @@
    "volume": 16012,
    "medianVolume": 34898,
    "rvol": 0.46,
-   "marketPct": 0.48,
-   "excessPct": 1.67,
-   "excessSigma": 0.65
+   "marketPct": 0.44,
+   "excessPct": 1.71,
+   "excessSigma": 0.67
   },
   {
    "ticker": "EL.PA",
@@ -3445,7 +3401,7 @@
     163.45,
     161.2,
     163.2,
-    160.4
+    160.25
    ],
    "stories": [
     {
@@ -3515,15 +3471,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 160.4,
-   "changePct": -1.72,
-   "sigma": -1.02,
-   "volume": 177093,
+   "close": 160.25,
+   "changePct": -1.81,
+   "sigma": -1.07,
+   "volume": 177657,
    "medianVolume": 697394,
    "rvol": 0.25,
-   "marketPct": 0.48,
-   "excessPct": -2.21,
-   "excessSigma": -1.31
+   "marketPct": 0.44,
+   "excessPct": -2.25,
+   "excessSigma": -1.33
   },
   {
    "ticker": "RACE.MI",
@@ -3562,7 +3518,7 @@
     362.5,
     364.15,
     371.1,
-    357.8
+    357.6
    ],
    "stories": [
     {
@@ -3603,31 +3559,18 @@
      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JNEl2Y044WGlzVGJ4c2ZlX0prOTJQOGxRU0o0UUg2RVF3THpBWnJiSER3MFJnbUVlM2s3U1RpVnVOQmZoZ1lFLVFMSlh1eXhPcFljVEs1Zi02UHR6RVZuaVdzb0RTS2dpMGc?oc=5",
      "published": "Tue, 25 Aug 2026 06:35:52 GMT",
      "fresh": false
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZUN0N0hJYUd2aFM3UVczcDBGaXJSTC1wZWRJc0pfV0dPSDZHTjJHb3NxNlgyelQ4YUg1bjBQT05KdFNyMnZka251R0ljTC05VnNRM2pSa210bW1xdnVYeUdabTZFclVJTTN2elNQZEJxb2I4NHo4U01jTURFWlF4OG43R1YtTzN0cDd0QklBVGVOSVNWTDl1ZDRGS2Rzc0pCVm1UXzJDRXJLaGQzNXhiSmxET1VIdHZCUjY0?oc=5",
-     "headline": "Alba Larsen, la ragazza più veloce del mondo: «Sarò la prima donna a vincere in Formula 1»",
-     "english": "Alba Larsen, the fastest girl in the world: \"I will be the first woman to win in Formula 1\"",
-     "lang": "it",
-     "publisher": "Style Magazine",
-     "score": 2,
-     "material": 0,
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZUN0N0hJYUd2aFM3UVczcDBGaXJSTC1wZWRJc0pfV0dPSDZHTjJHb3NxNlgyelQ4YUg1bjBQT05KdFNyMnZka251R0ljTC05VnNRM2pSa210bW1xdnVYeUdabTZFclVJTTN2elNQZEJxb2I4NHo4U01jTURFWlF4OG43R1YtTzN0cDd0QklBVGVOSVNWTDl1ZDRGS2Rzc0pCVm1UXzJDRXJLaGQzNXhiSmxET1VIdHZCUjY0?oc=5",
-     "published": "Tue, 25 Aug 2026 09:24:41 GMT",
-     "fresh": false
     }
    ],
    "date": "2026-08-25",
-   "close": 357.8,
-   "changePct": -3.58,
-   "sigma": -3.24,
-   "volume": 176971,
+   "close": 357.6,
+   "changePct": -3.64,
+   "sigma": -3.29,
+   "volume": 177121,
    "medianVolume": 443588,
    "rvol": 0.4,
-   "marketPct": 0.48,
-   "excessPct": -4.07,
-   "excessSigma": -3.68
+   "marketPct": 0.44,
+   "excessPct": -4.08,
+   "excessSigma": -3.69
   },
   {
    "ticker": "P911.DE",
@@ -3666,7 +3609,7 @@
     44.65,
     44.6,
     45.01,
-    43.77
+    43.81
    ],
    "stories": [
     {
@@ -3697,15 +3640,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 43.77,
-   "changePct": -2.75,
-   "sigma": -1.91,
-   "volume": 64021,
+   "close": 43.81,
+   "changePct": -2.67,
+   "sigma": -1.85,
+   "volume": 64834,
    "medianVolume": 344033,
    "rvol": 0.19,
-   "marketPct": 0.48,
-   "excessPct": -3.23,
-   "excessSigma": -2.24
+   "marketPct": 0.44,
+   "excessPct": -3.11,
+   "excessSigma": -2.15
   },
   {
    "ticker": "TISG.MI",
@@ -3768,9 +3711,9 @@
    "volume": 101264,
    "medianVolume": 690454,
    "rvol": 0.15,
-   "marketPct": 0.48,
-   "excessPct": 3.42,
-   "excessSigma": 0.56
+   "marketPct": 0.44,
+   "excessPct": 3.46,
+   "excessSigma": 0.57
   },
   {
    "ticker": "YACHT.MI",
@@ -3819,9 +3762,9 @@
    "volume": 44833,
    "medianVolume": 238748,
    "rvol": 0.19,
-   "marketPct": 0.48,
-   "excessPct": -1.0,
-   "excessSigma": -0.73
+   "marketPct": 0.44,
+   "excessPct": -0.96,
+   "excessSigma": -0.7
   },
   {
    "ticker": "RMS.PA",
@@ -3860,70 +3803,19 @@
     1582.5,
     1549.5,
     1573.0,
-    1577.5
+    1576.0
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 1577.5,
-   "changePct": 0.29,
-   "sigma": 0.09,
-   "volume": 18810,
+   "close": 1576.0,
+   "changePct": 0.19,
+   "sigma": 0.06,
+   "volume": 18887,
    "medianVolume": 78750,
    "rvol": 0.24,
-   "marketPct": 0.48,
-   "excessPct": -0.2,
-   "excessSigma": -0.06
-  },
-  {
-   "ticker": "1913.HK",
-   "name": "Prada",
-   "sector": "Luxury",
-   "exchange": "HKSE",
-   "currency": "HKD",
-   "thin": false,
-   "spark": [
-    41.0,
-    40.96,
-    41.16,
-    41.24,
-    41.54,
-    41.1,
-    40.38,
-    38.7,
-    38.9,
-    37.98,
-    38.48,
-    37.9,
-    43.26,
-    43.58,
-    44.48,
-    45.5,
-    44.92,
-    44.1,
-    44.48,
-    43.58,
-    42.22,
-    42.2,
-    41.66,
-    41.28,
-    41.54,
-    40.9,
-    41.24,
-    41.1,
-    40.78,
-    40.9
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 40.9,
-   "changePct": 0.29,
-   "sigma": 0.08,
-   "volume": 329511,
-   "medianVolume": 1363052,
-   "rvol": 0.24,
-   "marketPct": 0.48,
-   "excessPct": -0.2,
-   "excessSigma": -0.06
+   "marketPct": 0.44,
+   "excessPct": -0.25,
+   "excessSigma": -0.08
   },
   {
    "ticker": "SL.MI",
@@ -3972,9 +3864,60 @@
    "volume": 5441,
    "medianVolume": 29637,
    "rvol": 0.18,
-   "marketPct": 0.48,
-   "excessPct": 0.04,
-   "excessSigma": 0.03
+   "marketPct": 0.44,
+   "excessPct": 0.08,
+   "excessSigma": 0.06
+  },
+  {
+   "ticker": "1913.HK",
+   "name": "Prada",
+   "sector": "Luxury",
+   "exchange": "HKSE",
+   "currency": "HKD",
+   "thin": false,
+   "spark": [
+    41.0,
+    40.96,
+    41.16,
+    41.24,
+    41.54,
+    41.1,
+    40.38,
+    38.7,
+    38.9,
+    37.98,
+    38.48,
+    37.9,
+    43.26,
+    43.58,
+    44.48,
+    45.5,
+    44.92,
+    44.1,
+    44.48,
+    43.58,
+    42.22,
+    42.2,
+    41.66,
+    41.28,
+    41.54,
+    40.9,
+    41.24,
+    41.1,
+    40.78,
+    40.9
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 40.9,
+   "changePct": 0.29,
+   "sigma": 0.08,
+   "volume": 329511,
+   "medianVolume": 1363052,
+   "rvol": 0.24,
+   "marketPct": 0.44,
+   "excessPct": -0.15,
+   "excessSigma": -0.04
   },
   {
    "ticker": "AIR.PA",
@@ -4013,7 +3956,7 @@
     208.05,
     204.8,
     203.7,
-    207.1
+    207.05
    ],
    "stories": [
     {
@@ -4096,13 +4039,13 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 207.1,
-   "changePct": 1.67,
-   "sigma": 1.13,
-   "volume": 214903,
+   "close": 207.05,
+   "changePct": 1.64,
+   "sigma": 1.12,
+   "volume": 215874,
    "medianVolume": 769853,
    "rvol": 0.28,
-   "marketPct": 0.48,
+   "marketPct": 0.44,
    "excessPct": 1.19,
    "excessSigma": 0.81
   },
@@ -4219,21 +4162,16 @@
    "volume": 470566,
    "medianVolume": 769769,
    "rvol": 0.61,
-   "marketPct": 0.48,
-   "excessPct": -3.38,
-   "excessSigma": -2.77,
+   "marketPct": 0.44,
+   "excessPct": -3.34,
+   "excessSigma": -2.74,
    "short": {
     "percent": 0.71,
     "previous": 1.21,
     "date": "2026-07-14",
-    "holders": [
-     {
-      "date": "2025-04-08T00:00:00",
-      "shortPercent": 0.71,
-      "shares": 4505000,
-      "positionHolder": "KGH Ltd"
-     }
-    ]
+    "holders": 1,
+    "largest": "KGH Ltd",
+    "largestPercent": 0.71
    }
   },
   {
@@ -4273,7 +4211,7 @@
     437.2,
     433.0,
     450.1,
-    461.0
+    460.0
    ],
    "stories": [
     {
@@ -4317,27 +4255,22 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 461.0,
-   "changePct": 2.42,
-   "sigma": 1.28,
-   "volume": 205222,
+   "close": 460.0,
+   "changePct": 2.2,
+   "sigma": 1.16,
+   "volume": 211532,
    "medianVolume": 489854,
-   "rvol": 0.42,
-   "marketPct": 0.48,
-   "excessPct": 1.94,
-   "excessSigma": 1.03,
+   "rvol": 0.43,
+   "marketPct": 0.44,
+   "excessPct": 1.76,
+   "excessSigma": 0.93,
    "short": {
     "percent": 0.51,
     "previous": 1.09,
     "date": "2026-08-21",
-    "holders": [
-     {
-      "date": "2026-08-07T00:00:00",
-      "shortPercent": 0.51,
-      "shares": 1307828,
-      "positionHolder": "BLACKROCK ADVISORS, LLC"
-     }
-    ]
+    "holders": 1,
+    "largest": "BLACKROCK ADVISORS, LLC",
+    "largestPercent": 0.51
    }
   },
   {
@@ -4377,7 +4310,7 @@
     185.9,
     185.64,
     188.12,
-    186.66
+    186.76
    ],
    "stories": [
     {
@@ -4421,15 +4354,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 186.66,
-   "changePct": -0.78,
-   "sigma": -0.37,
-   "volume": 496893,
+   "close": 186.76,
+   "changePct": -0.72,
+   "sigma": -0.34,
+   "volume": 501079,
    "medianVolume": 2913239,
    "rvol": 0.17,
-   "marketPct": 0.48,
-   "excessPct": -1.27,
-   "excessSigma": -0.6
+   "marketPct": 0.44,
+   "excessPct": -1.17,
+   "excessSigma": -0.55
   },
   {
    "ticker": "IFX.DE",
@@ -4468,7 +4401,7 @@
     54.98,
     55.41,
     55.97,
-    55.67
+    55.64
    ],
    "stories": [
     {
@@ -4512,14 +4445,14 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 55.67,
-   "changePct": -0.54,
-   "sigma": -0.14,
-   "volume": 886527,
+   "close": 55.64,
+   "changePct": -0.59,
+   "sigma": -0.15,
+   "volume": 887328,
    "medianVolume": 3924640,
    "rvol": 0.23,
-   "marketPct": 0.48,
-   "excessPct": -1.02,
+   "marketPct": 0.44,
+   "excessPct": -1.03,
    "excessSigma": -0.26
   },
   {
@@ -4559,7 +4492,7 @@
     358.5,
     368.7,
     380.8,
-    399.2
+    399.0
    ],
    "stories": [
     {
@@ -4590,15 +4523,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 399.2,
-   "changePct": 4.83,
-   "sigma": 3.06,
-   "volume": 540071,
+   "close": 399.0,
+   "changePct": 4.78,
+   "sigma": 3.03,
+   "volume": 545570,
    "medianVolume": 1594451,
    "rvol": 0.34,
-   "marketPct": 0.48,
-   "excessPct": 4.34,
-   "excessSigma": 2.75
+   "marketPct": 0.44,
+   "excessPct": 4.33,
+   "excessSigma": 2.74
   },
   {
    "ticker": "EMBRAC-B.ST",
@@ -4637,7 +4570,7 @@
     73.12,
     72.06,
     75.06,
-    76.08
+    76.16
    ],
    "stories": [
     {
@@ -4655,15 +4588,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 76.08,
-   "changePct": 1.36,
-   "sigma": 0.47,
-   "volume": 314624,
+   "close": 76.16,
+   "changePct": 1.47,
+   "sigma": 0.51,
+   "volume": 315725,
    "medianVolume": 719794,
    "rvol": 0.44,
-   "marketPct": 0.48,
-   "excessPct": 0.88,
-   "excessSigma": 0.3
+   "marketPct": 0.44,
+   "excessPct": 1.02,
+   "excessSigma": 0.35
   },
   {
    "ticker": "SUBC.OL",
@@ -4726,9 +4659,9 @@
    "volume": 25331,
    "medianVolume": 319291,
    "rvol": 0.08,
-   "marketPct": 0.48,
-   "excessPct": -0.3,
-   "excessSigma": -0.15
+   "marketPct": 0.44,
+   "excessPct": -0.26,
+   "excessSigma": -0.13
   },
   {
    "ticker": "VOLV-B.ST",
@@ -4767,19 +4700,19 @@
     338.2,
     340.0,
     342.8,
-    351.1
+    351.3
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 351.1,
-   "changePct": 2.42,
-   "sigma": 2.18,
-   "volume": 737619,
+   "close": 351.3,
+   "changePct": 2.48,
+   "sigma": 2.23,
+   "volume": 738475,
    "medianVolume": 2604368,
    "rvol": 0.28,
-   "marketPct": 0.48,
-   "excessPct": 1.94,
-   "excessSigma": 1.75
+   "marketPct": 0.44,
+   "excessPct": 2.04,
+   "excessSigma": 1.83
   },
   {
    "ticker": "ASML.AS",
@@ -4818,19 +4751,19 @@
     1507.6,
     1505.4,
     1506.0,
-    1512.0
+    1512.2
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 1512.0,
-   "changePct": 0.4,
-   "sigma": 0.16,
-   "volume": 116005,
+   "close": 1512.2,
+   "changePct": 0.41,
+   "sigma": 0.17,
+   "volume": 116230,
    "medianVolume": 547104,
    "rvol": 0.21,
-   "marketPct": 0.48,
-   "excessPct": -0.08,
-   "excessSigma": -0.03
+   "marketPct": 0.44,
+   "excessPct": -0.03,
+   "excessSigma": -0.01
   },
   {
    "ticker": "NOVO-B.CO",
@@ -4869,22 +4802,9 @@
     299.45,
     296.15,
     300.85,
-    305.8
+    305.7
    ],
    "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMib0FVX3lxTE1peXZ1bVJPWkZYTVlDQ3pwQzkxWEhVWmNMVXFBRWJ6dl9lVTVCRTZFRzdFeFlTN0tRc2lDMTdjQjVqQmpTTTc0djdjT29lSVA2ejZKUGtxZ3B6LTFobFg3REF2bVdVaU1lY09jWkttQQ?oc=5",
-     "headline": "Novo Nordisk’s acquisition spree marred by several failed deals",
-     "english": null,
-     "lang": "en",
-     "publisher": "medwatch.com",
-     "score": 3,
-     "material": 3,
-     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1peXZ1bVJPWkZYTVlDQ3pwQzkxWEhVWmNMVXFBRWJ6dl9lVTVCRTZFRzdFeFlTN0tRc2lDMTdjQjVqQmpTTTc0djdjT29lSVA2ejZKUGtxZ3B6LTFobFg3REF2bVdVaU1lY09jWkttQQ?oc=5",
-     "published": "Mon, 24 Aug 2026 09:20:00 GMT",
-     "fresh": false
-    },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMib0FVX3lxTE5JbXVZbXNXNlRFZEpMUUVxeFBlNFBGY196UTJfbzBEVkM1YW1DLUp3T1FkS0FISGVqaUdfa1pKckpBRzlOWXZQc1A1SllXcWhEdGQyeml6LUYzMTJSaEZzYWJ0dmZkU1ZqRFIyRUlJbw?oc=5",
@@ -4926,13 +4846,13 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 305.8,
-   "changePct": 1.65,
-   "sigma": 0.66,
-   "volume": 1509348,
+   "close": 305.7,
+   "changePct": 1.61,
+   "sigma": 0.65,
+   "volume": 1511005,
    "medianVolume": 3720715,
    "rvol": 0.41,
-   "marketPct": 0.48,
+   "marketPct": 0.44,
    "excessPct": 1.17,
    "excessSigma": 0.47
   },
@@ -4973,7 +4893,7 @@
     5.72,
     6.37,
     6.69,
-    6.8
+    6.79
    ],
    "stories": [
     {
@@ -5004,27 +4924,22 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 6.8,
-   "changePct": 1.64,
-   "sigma": 0.22,
-   "volume": 2765795,
+   "close": 6.79,
+   "changePct": 1.49,
+   "sigma": 0.2,
+   "volume": 2766207,
    "medianVolume": 6265307,
    "rvol": 0.44,
-   "marketPct": 0.48,
-   "excessPct": 1.15,
-   "excessSigma": 0.15,
+   "marketPct": 0.44,
+   "excessPct": 1.04,
+   "excessSigma": 0.14,
    "short": {
     "percent": 0.5,
     "previous": 0,
     "date": "2026-06-24",
-    "holders": [
-     {
-      "date": "2026-06-24T00:00:00",
-      "shortPercent": 0.5,
-      "shares": 1816507,
-      "positionHolder": "GSA CAPITAL PARTNERS LLP"
-     }
-    ]
+    "holders": 1,
+    "largest": "GSA CAPITAL PARTNERS LLP",
+    "largestPercent": 0.5
    }
   },
   {
@@ -5088,9 +5003,9 @@
    "volume": 7795,
    "medianVolume": 11067,
    "rvol": 0.7,
-   "marketPct": 0.48,
-   "excessPct": 1.7,
-   "excessSigma": 1.32
+   "marketPct": 0.44,
+   "excessPct": 1.74,
+   "excessSigma": 1.35
   },
   {
    "ticker": "ZEAL.CO",
@@ -5150,12 +5065,12 @@
    "close": 324.5,
    "changePct": 1.03,
    "sigma": 0.43,
-   "volume": 262032,
+   "volume": 262346,
    "medianVolume": 322811,
    "rvol": 0.81,
-   "marketPct": 0.48,
-   "excessPct": 0.55,
-   "excessSigma": 0.23
+   "marketPct": 0.44,
+   "excessPct": 0.59,
+   "excessSigma": 0.25
   },
   {
    "ticker": "EUZ.DE",
@@ -5204,9 +5119,9 @@
    "volume": 45225,
    "medianVolume": 86374,
    "rvol": 0.52,
-   "marketPct": 0.48,
-   "excessPct": -3.12,
-   "excessSigma": -2.99
+   "marketPct": 0.44,
+   "excessPct": -3.08,
+   "excessSigma": -2.95
   },
   {
    "ticker": "PILA.ST",
@@ -5255,9 +5170,9 @@
    "volume": 35169,
    "medianVolume": 32452,
    "rvol": 1.08,
-   "marketPct": 0.48,
-   "excessPct": -14.31,
-   "excessSigma": -1.99
+   "marketPct": 0.44,
+   "excessPct": -14.28,
+   "excessSigma": -1.98
   },
   {
    "ticker": "VICO.ST",
@@ -5296,19 +5211,19 @@
     11.12,
     11.04,
     11.0,
-    10.62
+    10.64
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 10.62,
-   "changePct": -3.45,
-   "sigma": -1.61,
-   "volume": 873958,
+   "close": 10.64,
+   "changePct": -3.27,
+   "sigma": -1.52,
+   "volume": 876810,
    "medianVolume": 464264,
-   "rvol": 1.88,
-   "marketPct": 0.48,
-   "excessPct": -3.94,
-   "excessSigma": -1.84
+   "rvol": 1.89,
+   "marketPct": 0.44,
+   "excessPct": -3.71,
+   "excessSigma": -1.72
   },
   {
    "ticker": "CAMX.ST",
@@ -5357,9 +5272,9 @@
    "volume": 14336,
    "medianVolume": 53488,
    "rvol": 0.27,
-   "marketPct": 0.48,
-   "excessPct": -2.0,
-   "excessSigma": -1.46
+   "marketPct": 0.44,
+   "excessPct": -1.96,
+   "excessSigma": -1.43
   },
   {
    "ticker": "BONEX.ST",
@@ -5398,19 +5313,19 @@
     226.2,
     228.0,
     218.6,
-    223.6
+    223.4
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 223.6,
-   "changePct": 2.29,
-   "sigma": 1.1,
-   "volume": 57655,
+   "close": 223.4,
+   "changePct": 2.2,
+   "sigma": 1.06,
+   "volume": 97905,
    "medianVolume": 125100,
-   "rvol": 0.46,
-   "marketPct": 0.48,
-   "excessPct": 1.81,
-   "excessSigma": 0.87
+   "rvol": 0.78,
+   "marketPct": 0.44,
+   "excessPct": 1.76,
+   "excessSigma": 0.85
   },
   {
    "ticker": "FYB.DE",
@@ -5459,60 +5374,9 @@
    "volume": 879,
    "medianVolume": 2854,
    "rvol": 0.31,
-   "marketPct": 0.48,
-   "excessPct": -0.79,
-   "excessSigma": -0.51
-  },
-  {
-   "ticker": "GMAB.CO",
-   "name": "Genmab",
-   "sector": "Pharma & medtech",
-   "exchange": "Copenhagen",
-   "currency": "DKK",
-   "thin": false,
-   "spark": [
-    1860.0,
-    1896.0,
-    1890.5,
-    1869.0,
-    1847.0,
-    1852.5,
-    1911.0,
-    1904.0,
-    1878.5,
-    1908.0,
-    1908.0,
-    1867.0,
-    1844.0,
-    1858.5,
-    1846.0,
-    1878.0,
-    1892.0,
-    1877.0,
-    1999.0,
-    1992.0,
-    1993.0,
-    2037.0,
-    2025.0,
-    2027.0,
-    2104.0,
-    2104.0,
-    2152.0,
-    2141.0,
-    2151.0,
-    2157.0
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 2157.0,
-   "changePct": 0.28,
-   "sigma": 0.14,
-   "volume": 31147,
-   "medianVolume": 103057,
-   "rvol": 0.3,
-   "marketPct": 0.48,
-   "excessPct": -0.2,
-   "excessSigma": -0.1
+   "marketPct": 0.44,
+   "excessPct": -0.75,
+   "excessSigma": -0.48
   },
   {
    "ticker": "GUBRA.CO",
@@ -5561,9 +5425,60 @@
    "volume": 22407,
    "medianVolume": 18991,
    "rvol": 1.18,
-   "marketPct": 0.48,
-   "excessPct": 0.22,
-   "excessSigma": 0.09
+   "marketPct": 0.44,
+   "excessPct": 0.27,
+   "excessSigma": 0.11
+  },
+  {
+   "ticker": "GMAB.CO",
+   "name": "Genmab",
+   "sector": "Pharma & medtech",
+   "exchange": "Copenhagen",
+   "currency": "DKK",
+   "thin": false,
+   "spark": [
+    1860.0,
+    1896.0,
+    1890.5,
+    1869.0,
+    1847.0,
+    1852.5,
+    1911.0,
+    1904.0,
+    1878.5,
+    1908.0,
+    1908.0,
+    1867.0,
+    1844.0,
+    1858.5,
+    1846.0,
+    1878.0,
+    1892.0,
+    1877.0,
+    1999.0,
+    1992.0,
+    1993.0,
+    2037.0,
+    2025.0,
+    2027.0,
+    2104.0,
+    2104.0,
+    2152.0,
+    2141.0,
+    2151.0,
+    2158.0
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 2158.0,
+   "changePct": 0.33,
+   "sigma": 0.17,
+   "volume": 31157,
+   "medianVolume": 103057,
+   "rvol": 0.3,
+   "marketPct": 0.44,
+   "excessPct": -0.11,
+   "excessSigma": -0.06
   },
   {
    "ticker": "SOBI.ST",
@@ -5602,19 +5517,19 @@
     465.6,
     461.4,
     460.0,
-    461.6
+    461.8
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 461.6,
-   "changePct": 0.35,
-   "sigma": 0.16,
-   "volume": 81923,
+   "close": 461.8,
+   "changePct": 0.39,
+   "sigma": 0.18,
+   "volume": 84436,
    "medianVolume": 319859,
    "rvol": 0.26,
-   "marketPct": 0.48,
-   "excessPct": -0.14,
-   "excessSigma": -0.06
+   "marketPct": 0.44,
+   "excessPct": -0.05,
+   "excessSigma": -0.02
   },
   {
    "ticker": "FABG.ST",
@@ -5653,7 +5568,7 @@
     75.55,
     75.25,
     75.6,
-    74.5
+    74.25
    ],
    "stories": [
     {
@@ -5671,15 +5586,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 74.5,
-   "changePct": -1.46,
-   "sigma": -1.79,
-   "volume": 146851,
+   "close": 74.25,
+   "changePct": -1.79,
+   "sigma": -2.2,
+   "volume": 148038,
    "medianVolume": 278367,
    "rvol": 0.53,
-   "marketPct": 0.48,
-   "excessPct": -1.94,
-   "excessSigma": -2.38
+   "marketPct": 0.44,
+   "excessPct": -2.23,
+   "excessSigma": -2.74
   },
   {
    "ticker": "MRL.MC",
@@ -5739,12 +5654,12 @@
    "close": 13.96,
    "changePct": -0.99,
    "sigma": -0.74,
-   "volume": 92808,
+   "volume": 92561,
    "medianVolume": 809254,
    "rvol": 0.11,
-   "marketPct": 0.48,
-   "excessPct": -1.48,
-   "excessSigma": -1.11
+   "marketPct": 0.44,
+   "excessPct": -1.44,
+   "excessSigma": -1.08
   },
   {
    "ticker": "LOGI-B.ST",
@@ -5793,9 +5708,9 @@
    "volume": 123715,
    "medianVolume": 437776,
    "rvol": 0.28,
-   "marketPct": 0.48,
-   "excessPct": -1.52,
-   "excessSigma": -1.67
+   "marketPct": 0.44,
+   "excessPct": -1.48,
+   "excessSigma": -1.62
   },
   {
    "ticker": "HEBA-B.ST",
@@ -5844,9 +5759,9 @@
    "volume": 40290,
    "medianVolume": 64005,
    "rvol": 0.63,
-   "marketPct": 0.48,
-   "excessPct": 0.95,
-   "excessSigma": 1.54
+   "marketPct": 0.44,
+   "excessPct": 0.99,
+   "excessSigma": 1.61
   },
   {
    "ticker": "BALD-B.ST",
@@ -5895,9 +5810,9 @@
    "volume": 409487,
    "medianVolume": 2088972,
    "rvol": 0.2,
-   "marketPct": 0.48,
-   "excessPct": -1.08,
-   "excessSigma": -0.88
+   "marketPct": 0.44,
+   "excessPct": -1.04,
+   "excessSigma": -0.85
   },
   {
    "ticker": "VNA.DE",
@@ -5936,19 +5851,19 @@
     20.07,
     19.985,
     20.06,
-    19.945
+    19.94
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 19.945,
-   "changePct": -0.57,
-   "sigma": -0.45,
-   "volume": 695145,
+   "close": 19.94,
+   "changePct": -0.6,
+   "sigma": -0.47,
+   "volume": 697866,
    "medianVolume": 2185236,
    "rvol": 0.32,
-   "marketPct": 0.48,
-   "excessPct": -1.05,
-   "excessSigma": -0.83
+   "marketPct": 0.44,
+   "excessPct": -1.04,
+   "excessSigma": -0.81
   },
   {
    "ticker": "GFC.PA",
@@ -5994,12 +5909,12 @@
    "close": 72.65,
    "changePct": 0.14,
    "sigma": 0.15,
-   "volume": 30138,
+   "volume": 30322,
    "medianVolume": 189345,
    "rvol": 0.16,
-   "marketPct": 0.48,
-   "excessPct": -0.34,
-   "excessSigma": -0.36
+   "marketPct": 0.44,
+   "excessPct": -0.3,
+   "excessSigma": -0.32
   },
   {
    "ticker": "EIOF.OL",
@@ -6048,8 +5963,8 @@
    "volume": 5497,
    "medianVolume": 11025,
    "rvol": 0.5,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
+   "marketPct": 0.44,
+   "excessPct": -0.44,
    "excessSigma": 0
   },
   {
@@ -6092,6 +6007,19 @@
     57.7
    ],
    "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vWlpCUF9fUnZtelJRdjB6TndZMDVEX0ZHNUdOU1hIR0dOdnFzd0lPYkpzWVY4Uk5ZM0JXN3hlVi1EVWlSRXp3VktKYnJMZGlKSFplS3IxZ2dXRWc?oc=5",
+     "headline": "Stilla resultat för Ellos – analytiker: ”Man trillar inte av stolen”",
+     "english": null,
+     "lang": "sv",
+     "publisher": "EFN",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vWlpCUF9fUnZtelJRdjB6TndZMDVEX0ZHNUdOU1hIR0dOdnFzd0lPYkpzWVY4Uk5ZM0JXN3hlVi1EVWlSRXp3VktKYnJMZGlKSFplS3IxZ2dXRWc?oc=5",
+     "published": "Tue, 25 Aug 2026 11:25:35 GMT",
+     "fresh": true
+    },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxNTnhRZ3RCWkFhTzVwUXRWZzFTa3RyZk9UZk51MEpfRWFndks2dkdHMXJkSV9aYWZUVzV4bW5hQThsODJ1VndMLXV6NzFlbTY4ODlsOE1pbFpaYmp6MGZDeWFlQy1PdjhhVnA4ZXZ0MHRmbjd0Rm1MODA3V292X3Z0bU1uSjVoWWd0TEpGX0tyb3hOUWY4YnhuTFZsQnUyQnU3eWpoRXNOX3JjSlBxMG1J?oc=5",
@@ -6152,9 +6080,9 @@
    "volume": 32861,
    "medianVolume": 28508,
    "rvol": 1.15,
-   "marketPct": 0.48,
-   "excessPct": 2.01,
-   "excessSigma": 0.88
+   "marketPct": 0.44,
+   "excessPct": 2.05,
+   "excessSigma": 0.9
   },
   {
    "ticker": "NELLY.ST",
@@ -6203,9 +6131,9 @@
    "volume": 105463,
    "medianVolume": 102646,
    "rvol": 1.03,
-   "marketPct": 0.48,
-   "excessPct": 3.2,
-   "excessSigma": 2.02
+   "marketPct": 0.44,
+   "excessPct": 3.24,
+   "excessSigma": 2.04
   },
   {
    "ticker": "CHEF.ST",
@@ -6254,9 +6182,9 @@
    "volume": 41500,
    "medianVolume": 24093,
    "rvol": 1.72,
-   "marketPct": 0.48,
-   "excessPct": 1.9,
-   "excessSigma": 1.48
+   "marketPct": 0.44,
+   "excessPct": 1.94,
+   "excessSigma": 1.52
   },
   {
    "ticker": "BMAX.ST",
@@ -6295,19 +6223,19 @@
     51.2,
     51.2,
     52.0,
-    52.8
+    52.7
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 52.8,
-   "changePct": 1.54,
-   "sigma": 1.34,
-   "volume": 32125,
+   "close": 52.7,
+   "changePct": 1.35,
+   "sigma": 1.18,
+   "volume": 32224,
    "medianVolume": 73617,
    "rvol": 0.44,
-   "marketPct": 0.48,
-   "excessPct": 1.06,
-   "excessSigma": 0.92
+   "marketPct": 0.44,
+   "excessPct": 0.91,
+   "excessSigma": 0.8
   },
   {
    "ticker": "CADLR.OL",
@@ -6448,27 +6376,16 @@
    "volume": 526411,
    "medianVolume": 261374,
    "rvol": 2.01,
-   "marketPct": 0.48,
-   "excessPct": 5.38,
-   "excessSigma": 3.23,
+   "marketPct": 0.44,
+   "excessPct": 5.42,
+   "excessSigma": 3.26,
    "short": {
     "percent": 1.3,
     "previous": 0.8,
     "date": "2026-08-13",
-    "holders": [
-     {
-      "date": "2026-07-28T00:00:00",
-      "shortPercent": 0.8,
-      "shares": 3101753,
-      "positionHolder": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP"
-     },
-     {
-      "date": "2026-08-13T00:00:00",
-      "shortPercent": 0.5,
-      "shares": 1930675,
-      "positionHolder": "CONNOR, CLARK & LUNN INVESTMENT MANAGEMENT LTD."
-     }
-    ]
+    "holders": 2,
+    "largest": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
+    "largestPercent": 0.8
    }
   },
   {
@@ -6508,7 +6425,7 @@
     413.3,
     406.8,
     413.9,
-    403.7
+    403.8
    ],
    "stories": [
     {
@@ -6552,15 +6469,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 403.7,
-   "changePct": -2.46,
-   "sigma": -1.04,
-   "volume": 262960,
+   "close": 403.8,
+   "changePct": -2.44,
+   "sigma": -1.03,
+   "volume": 267755,
    "medianVolume": 647988,
    "rvol": 0.41,
-   "marketPct": 0.48,
-   "excessPct": -2.94,
-   "excessSigma": -1.24
+   "marketPct": 0.44,
+   "excessPct": -2.88,
+   "excessSigma": -1.22
   },
   {
    "ticker": "CMBTO.OL",
@@ -6636,9 +6553,9 @@
    "volume": 88106,
    "medianVolume": 282290,
    "rvol": 0.31,
-   "marketPct": 0.48,
-   "excessPct": -1.54,
-   "excessSigma": -1.03
+   "marketPct": 0.44,
+   "excessPct": -1.5,
+   "excessSigma": -1.0
   },
   {
    "ticker": "DSV.CO",
@@ -6714,9 +6631,9 @@
    "volume": 58131,
    "medianVolume": 424888,
    "rvol": 0.14,
-   "marketPct": 0.48,
-   "excessPct": -0.16,
-   "excessSigma": -0.11
+   "marketPct": 0.44,
+   "excessPct": -0.12,
+   "excessSigma": -0.08
   },
   {
    "ticker": "ODF.OL",
@@ -6755,7 +6672,7 @@
     112.6,
     112.4,
     118.6,
-    120.4
+    120.2
    ],
    "stories": [
     {
@@ -6773,15 +6690,15 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 120.4,
-   "changePct": 1.52,
-   "sigma": 0.83,
-   "volume": 44617,
+   "close": 120.2,
+   "changePct": 1.35,
+   "sigma": 0.73,
+   "volume": 44877,
    "medianVolume": 36313,
-   "rvol": 1.23,
-   "marketPct": 0.48,
-   "excessPct": 1.04,
-   "excessSigma": 0.57
+   "rvol": 1.24,
+   "marketPct": 0.44,
+   "excessPct": 0.91,
+   "excessSigma": 0.49
   },
   {
    "ticker": "HAUTO.OL",
@@ -6820,7 +6737,7 @@
     192.3,
     169.5,
     173.6,
-    172.0
+    172.3
    ],
    "stories": [
     {
@@ -6838,28 +6755,74 @@
     }
    ],
    "date": "2026-08-25",
-   "close": 172.0,
-   "changePct": -0.92,
-   "sigma": -0.27,
-   "volume": 210946,
+   "close": 172.3,
+   "changePct": -0.75,
+   "sigma": -0.22,
+   "volume": 211949,
    "medianVolume": 354758,
-   "rvol": 0.59,
-   "marketPct": 0.48,
-   "excessPct": -1.41,
-   "excessSigma": -0.41,
+   "rvol": 0.6,
+   "marketPct": 0.44,
+   "excessPct": -1.19,
+   "excessSigma": -0.35,
    "short": {
     "percent": 0.69,
     "previous": 1.29,
     "date": "2026-07-22",
-    "holders": [
-     {
-      "date": "2026-07-22T00:00:00",
-      "shortPercent": 0.69,
-      "shares": 1329111,
-      "positionHolder": "TWO SIGMA INVESTMENTS, LP"
-     }
-    ]
+    "holders": 1,
+    "largest": "TWO SIGMA INVESTMENTS, LP",
+    "largestPercent": 0.69
    }
+  },
+  {
+   "ticker": "SOFF.OL",
+   "name": "Solstad Offshore",
+   "sector": "Shipping & offshore",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": false,
+   "spark": [
+    67.6,
+    68.9,
+    67.8,
+    63.8,
+    67.3,
+    67.4,
+    68.0,
+    68.1,
+    68.6,
+    67.8,
+    66.2,
+    67.1,
+    68.3,
+    67.8,
+    66.9,
+    67.8,
+    66.7,
+    67.0,
+    68.3,
+    69.3,
+    68.4,
+    69.0,
+    69.8,
+    70.3,
+    70.4,
+    70.9,
+    69.2,
+    69.6,
+    69.3,
+    68.4
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 68.4,
+   "changePct": -1.3,
+   "sigma": -0.97,
+   "volume": 46288,
+   "medianVolume": 89371,
+   "rvol": 0.52,
+   "marketPct": 0.44,
+   "excessPct": -1.75,
+   "excessSigma": -1.31
   },
   {
    "ticker": "IWS.OL",
@@ -6908,60 +6871,9 @@
    "volume": 6488,
    "medianVolume": 2252,
    "rvol": 2.88,
-   "marketPct": 0.48,
-   "excessPct": 1.73,
-   "excessSigma": 1.26
-  },
-  {
-   "ticker": "SOFF.OL",
-   "name": "Solstad Offshore",
-   "sector": "Shipping & offshore",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": false,
-   "spark": [
-    67.6,
-    68.9,
-    67.8,
-    63.8,
-    67.3,
-    67.4,
-    68.0,
-    68.1,
-    68.6,
-    67.8,
-    66.2,
-    67.1,
-    68.3,
-    67.8,
-    66.9,
-    67.8,
-    66.7,
-    67.0,
-    68.3,
-    69.3,
-    68.4,
-    69.0,
-    69.8,
-    70.3,
-    70.4,
-    70.9,
-    69.2,
-    69.6,
-    69.3,
-    68.5
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 68.5,
-   "changePct": -1.15,
-   "sigma": -0.86,
-   "volume": 46274,
-   "medianVolume": 89371,
-   "rvol": 0.52,
-   "marketPct": 0.48,
-   "excessPct": -1.63,
-   "excessSigma": -1.22
+   "marketPct": 0.44,
+   "excessPct": 1.77,
+   "excessSigma": 1.29
   },
   {
    "ticker": "WWI.OL",
@@ -7010,9 +6922,9 @@
    "volume": 7777,
    "medianVolume": 11892,
    "rvol": 0.65,
-   "marketPct": 0.48,
-   "excessPct": 1.39,
-   "excessSigma": 1.18
+   "marketPct": 0.44,
+   "excessPct": 1.43,
+   "excessSigma": 1.22
   },
   {
    "ticker": "REACH.OL",
@@ -7061,9 +6973,9 @@
    "volume": 213117,
    "medianVolume": 209184,
    "rvol": 1.02,
-   "marketPct": 0.48,
-   "excessPct": 2.56,
-   "excessSigma": 0.97
+   "marketPct": 0.44,
+   "excessPct": 2.6,
+   "excessSigma": 0.99
   },
   {
    "ticker": "DOFG.OL",
@@ -7112,14 +7024,16 @@
    "volume": 114990,
    "medianVolume": 299621,
    "rvol": 0.38,
-   "marketPct": 0.48,
-   "excessPct": -1.39,
-   "excessSigma": -0.96,
+   "marketPct": 0.44,
+   "excessPct": -1.34,
+   "excessSigma": -0.92,
    "short": {
     "percent": 0,
     "previous": 0.5,
     "date": "2026-02-05",
-    "holders": []
+    "holders": 0,
+    "largest": null,
+    "largestPercent": null
    }
   },
   {
@@ -7159,24 +7073,26 @@
     165.8,
     159.4,
     165.5,
-    167.4
+    167.2
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 167.4,
-   "changePct": 1.15,
-   "sigma": 0.58,
-   "volume": 173819,
+   "close": 167.2,
+   "changePct": 1.03,
+   "sigma": 0.52,
+   "volume": 178045,
    "medianVolume": 305352,
-   "rvol": 0.57,
-   "marketPct": 0.48,
-   "excessPct": 0.66,
-   "excessSigma": 0.33,
+   "rvol": 0.58,
+   "marketPct": 0.44,
+   "excessPct": 0.59,
+   "excessSigma": 0.3,
    "short": {
     "percent": 0,
     "previous": 0.5,
     "date": "2025-06-06",
-    "holders": []
+    "holders": 0,
+    "largest": null,
+    "largestPercent": null
    }
   },
   {
@@ -7240,27 +7156,16 @@
    "volume": 2839987,
    "medianVolume": 4398539,
    "rvol": 0.65,
-   "marketPct": 0.48,
-   "excessPct": 0.97,
-   "excessSigma": 0.2,
+   "marketPct": 0.44,
+   "excessPct": 1.02,
+   "excessSigma": 0.21,
    "short": {
     "percent": 2.2,
     "previous": 2.7,
     "date": "2025-12-05",
-    "holders": [
-     {
-      "date": "2024-09-02T00:00:00",
-      "shortPercent": 1.5,
-      "shares": 51559268,
-      "positionHolder": "Lingotto Investment Management LLP"
-     },
-     {
-      "date": "2025-04-17T00:00:00",
-      "shortPercent": 0.7,
-      "shares": 24184920,
-      "positionHolder": "Yiheng Capital Management, L.P."
-     }
-    ]
+    "holders": 2,
+    "largest": "Lingotto Investment Management LLP",
+    "largestPercent": 1.5
    }
   },
   {
@@ -7300,19 +7205,19 @@
     39.48,
     40.22,
     40.16,
-    41.6
+    41.56
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 41.6,
-   "changePct": 3.59,
-   "sigma": 1.96,
-   "volume": 221636,
+   "close": 41.56,
+   "changePct": 3.49,
+   "sigma": 1.91,
+   "volume": 222037,
    "medianVolume": 303654,
    "rvol": 0.73,
-   "marketPct": 0.48,
-   "excessPct": 3.1,
-   "excessSigma": 1.69
+   "marketPct": 0.44,
+   "excessPct": 3.05,
+   "excessSigma": 1.67
   },
   {
    "ticker": "SHT-B.ST",
@@ -7358,11 +7263,11 @@
    "close": 23.5,
    "changePct": -8.02,
    "sigma": -1.39,
-   "volume": 72303,
+   "volume": 72403,
    "medianVolume": 61597,
-   "rvol": 1.17,
-   "marketPct": 0.48,
-   "excessPct": -8.5,
+   "rvol": 1.18,
+   "marketPct": 0.44,
+   "excessPct": -8.46,
    "excessSigma": -1.47
   },
   {
@@ -7412,60 +7317,9 @@
    "volume": 262448,
    "medianVolume": 384867,
    "rvol": 0.68,
-   "marketPct": 0.48,
-   "excessPct": -3.07,
-   "excessSigma": -1.43
-  },
-  {
-   "ticker": "SMHN.DE",
-   "name": "Suss Microtec",
-   "sector": "Tech & space",
-   "exchange": "XETRA",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    87.9,
-    82.7,
-    83.1,
-    79.3,
-    76.9,
-    84.05,
-    84.15,
-    79.8,
-    79.15,
-    74.3,
-    69.8,
-    69.2,
-    73.1,
-    74.4,
-    74.8,
-    79.5,
-    78.7,
-    79.1,
-    83.2,
-    77.3,
-    79.15,
-    83.15,
-    83.9,
-    83.5,
-    84.65,
-    77.8,
-    72.9,
-    72.2,
-    73.45,
-    70.75
-   ],
-   "stories": [],
-   "date": "2026-08-25",
-   "close": 70.75,
-   "changePct": -3.68,
-   "sigma": -0.88,
-   "volume": 18423,
-   "medianVolume": 92079,
-   "rvol": 0.2,
-   "marketPct": 0.48,
-   "excessPct": -4.17,
-   "excessSigma": -1.0
+   "marketPct": 0.44,
+   "excessPct": -3.03,
+   "excessSigma": -1.42
   },
   {
    "ticker": "IVU.DE",
@@ -7514,9 +7368,60 @@
    "volume": 5322,
    "medianVolume": 9918,
    "rvol": 0.54,
-   "marketPct": 0.48,
-   "excessPct": 1.17,
-   "excessSigma": 0.99
+   "marketPct": 0.44,
+   "excessPct": 1.21,
+   "excessSigma": 1.03
+  },
+  {
+   "ticker": "SMHN.DE",
+   "name": "Suss Microtec",
+   "sector": "Tech & space",
+   "exchange": "XETRA",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    87.9,
+    82.7,
+    83.1,
+    79.3,
+    76.9,
+    84.05,
+    84.15,
+    79.8,
+    79.15,
+    74.3,
+    69.8,
+    69.2,
+    73.1,
+    74.4,
+    74.8,
+    79.5,
+    78.7,
+    79.1,
+    83.2,
+    77.3,
+    79.15,
+    83.15,
+    83.9,
+    83.5,
+    84.65,
+    77.8,
+    72.9,
+    72.2,
+    73.45,
+    70.75
+   ],
+   "stories": [],
+   "date": "2026-08-25",
+   "close": 70.75,
+   "changePct": -3.68,
+   "sigma": -0.88,
+   "volume": 18423,
+   "medianVolume": 92079,
+   "rvol": 0.2,
+   "marketPct": 0.44,
+   "excessPct": -4.12,
+   "excessSigma": -0.99
   },
   {
    "ticker": "SMOP.OL",
@@ -7565,9 +7470,9 @@
    "volume": 104770,
    "medianVolume": 160127,
    "rvol": 0.65,
-   "marketPct": 0.48,
-   "excessPct": 1.74,
-   "excessSigma": 0.72
+   "marketPct": 0.44,
+   "excessPct": 1.78,
+   "excessSigma": 0.74
   },
   {
    "ticker": "MYCR.ST",
@@ -7606,19 +7511,19 @@
     314.2,
     316.2,
     318.0,
-    323.6
+    324.0
    ],
    "stories": [],
    "date": "2026-08-25",
-   "close": 323.6,
-   "changePct": 1.76,
-   "sigma": 0.88,
-   "volume": 99837,
+   "close": 324.0,
+   "changePct": 1.89,
+   "sigma": 0.94,
+   "volume": 100030,
    "medianVolume": 185994,
    "rvol": 0.54,
-   "marketPct": 0.48,
-   "excessPct": 1.27,
-   "excessSigma": 0.64
+   "marketPct": 0.44,
+   "excessPct": 1.44,
+   "excessSigma": 0.72
   },
   {
    "ticker": "ALRIB.PA",
@@ -7667,9 +7572,9 @@
    "volume": 52064,
    "medianVolume": 70927,
    "rvol": 0.73,
-   "marketPct": 0.48,
-   "excessPct": 1.62,
-   "excessSigma": 0.64
+   "marketPct": 0.44,
+   "excessPct": 1.66,
+   "excessSigma": 0.66
   },
   {
    "ticker": "TPE.DE",
@@ -7715,12 +7620,12 @@
    "close": 29.72,
    "changePct": 0.34,
    "sigma": 0.09,
-   "volume": 18229,
+   "volume": 18342,
    "medianVolume": 70680,
    "rvol": 0.26,
-   "marketPct": 0.48,
-   "excessPct": -0.14,
-   "excessSigma": -0.04
+   "marketPct": 0.44,
+   "excessPct": -0.1,
+   "excessSigma": -0.03
   },
   {
    "ticker": "AAC.ST",
@@ -7766,15 +7671,30 @@
    "close": 117.8,
    "changePct": 0.0,
    "sigma": 0.0,
-   "volume": 9942,
+   "volume": 9943,
    "medianVolume": 17389,
    "rvol": 0.57,
-   "marketPct": 0.48,
-   "excessPct": -0.48,
+   "marketPct": 0.44,
+   "excessPct": -0.44,
    "excessSigma": 0
   }
  ],
  "alerts": [
+  {
+   "kind": "news",
+   "key": "web:https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vWlpCUF9fUnZtelJRdjB6TndZMDVEX0ZHNUdOU1hIR0dOdnFzd0lPYkpzWVY4Uk5ZM0JXN3hlVi1EVWlSRXp3VktKYnJMZGlKSFplS3IxZ2dXRWc?oc=5",
+   "headline": "Stilla resultat för Ellos – analytiker: ”Man trillar inte av stolen”",
+   "english": null,
+   "lang": "sv",
+   "publisher": "EFN",
+   "score": 2,
+   "material": 2,
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vWlpCUF9fUnZtelJRdjB6TndZMDVEX0ZHNUdOU1hIR0dOdnFzd0lPYkpzWVY4Uk5ZM0JXN3hlVi1EVWlSRXp3VktKYnJMZGlKSFplS3IxZ2dXRWc?oc=5",
+   "published": "Tue, 25 Aug 2026 11:25:35 GMT",
+   "fresh": true,
+   "ticker": "ELLOS.ST",
+   "name": "Ellos"
+  },
   {
    "kind": "disclosure",
    "key": "news:newsweb:680682",
@@ -8074,21 +7994,6 @@
    "fresh": false,
    "ticker": "SAP.DE",
    "name": "SAP"
-  },
-  {
-   "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMib0FVX3lxTE1peXZ1bVJPWkZYTVlDQ3pwQzkxWEhVWmNMVXFBRWJ6dl9lVTVCRTZFRzdFeFlTN0tRc2lDMTdjQjVqQmpTTTc0djdjT29lSVA2ejZKUGtxZ3B6LTFobFg3REF2bVdVaU1lY09jWkttQQ?oc=5",
-   "headline": "Novo Nordisk’s acquisition spree marred by several failed deals",
-   "english": null,
-   "lang": "en",
-   "publisher": "medwatch.com",
-   "score": 3,
-   "material": 3,
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1peXZ1bVJPWkZYTVlDQ3pwQzkxWEhVWmNMVXFBRWJ6dl9lVTVCRTZFRzdFeFlTN0tRc2lDMTdjQjVqQmpTTTc0djdjT29lSVA2ejZKUGtxZ3B6LTFobFg3REF2bVdVaU1lY09jWkttQQ?oc=5",
-   "published": "Mon, 24 Aug 2026 09:20:00 GMT",
-   "fresh": false,
-   "ticker": "NOVO-B.CO",
-   "name": "Novo Nordisk"
   },
   {
    "kind": "news",

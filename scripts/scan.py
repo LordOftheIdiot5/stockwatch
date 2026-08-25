@@ -405,7 +405,9 @@ def main() -> int:
         if not found or found["percent"] is None:
             continue
         row["short"] = {"percent": found["percent"], "previous": found["previous"],
-                        "date": found["date"], "holders": found["holders"]}
+                        "date": found["date"], "holders": found["holders"],
+                        "largest": found.get("largest"),
+                        "largestPercent": found.get("largestPercent")}
         if found["previous"] is None:
             continue
         change = found["percent"] - found["previous"]

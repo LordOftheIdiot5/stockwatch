@@ -626,13 +626,21 @@ def short_positions() -> dict[str, dict]:
             continue
         latest = events[-1]
         previous = events[-2] if len(events) > 1 else None
+        # activePositions is the list of funds holding the position, not a
+        # count of them - each with its own percentage and name. Who is short
+        # is more interesting than how many, so keep the largest and the count
+        # rather than the whole array, which would bloat every scan's output.
+        positions = sorted(latest.get("activePositions") or [],
+                           key=lambda h: -(h.get("shortPercent") or 0))
         out[_issuer_key(instrument.get("issuerName", ""))] = {
             "issuer": instrument.get("issuerName"),
             "isin": instrument.get("isin"),
             "percent": latest.get("shortPercent"),
             "previous": previous.get("shortPercent") if previous else None,
             "date": (latest.get("date") or "")[:10],
-            "holders": latest.get("activePositions"),
+            "holders": len(positions),
+            "largest": (positions[0].get("positionHolder") if positions else None),
+            "largestPercent": (positions[0].get("shortPercent") if positions else None),
         }
     return out
 
