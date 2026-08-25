@@ -266,6 +266,63 @@ TRANSLATION_CASES = [
 ]
 
 
+def feed_is_valid_xml() -> list[str]:
+    """The feed has to parse, and its guids have to be unique.
+
+    A feed reader that meets malformed XML shows nothing and says nothing -
+    there is no error to notice, the alerts simply stop arriving. And a
+    duplicate guid makes a reader either hide a real story or re-announce an
+    old one every hour, which is the failure that makes people unsubscribe.
+    """
+    import xml.etree.ElementTree as ET
+
+    import feed as feed_module
+
+    sample = {
+        "generated": "2026-08-25T12:00:00+00:00", "tickers": 116,
+        "alerts": [
+            {"kind": "news", "key": "web:1", "ticker": "IFX.DE", "name": "Infineon",
+             "headline": "Infineon & Bosch <sign> deal", "english": None,
+             "lang": "en", "publisher": "Reuters", "url": "https://x/1",
+             "published": "Tue, 25 Aug 2026 09:00:00 +0000"},
+            {"kind": "disclosure", "key": "news:mfn:2", "ticker": "SALM.OL",
+             "name": "Salmar", "headline": "Salmars resultat", "lang": "no",
+             "english": "Salmar's results", "url": "https://x/2",
+             "published": None, "regulatory": True},
+            {"kind": "short", "key": "short:YAR.OL:2026-08-25:0.51",
+             "ticker": "YAR.OL", "name": "Yara", "lang": "en",
+             "headline": "short interest cut to 0.51%", "url": "https://x/3"},
+        ],
+    }
+    problems = []
+    original = feed_module.SIGNALS
+    try:
+        import json as _json
+        import tempfile
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False,
+                                         encoding="utf-8") as handle:
+            _json.dump(sample, handle)
+            feed_module.SIGNALS = Path(handle.name)
+        xml = feed_module.build()
+        root = ET.fromstring(xml)                    # raises if malformed
+        items = root.findall(".//item")
+        if len(items) != len(sample["alerts"]):
+            problems.append(f"feed has {len(items)} items, wanted {len(sample['alerts'])}")
+        guids = [i.findtext("guid") for i in items]
+        if len(set(guids)) != len(guids):
+            problems.append("feed guids are not unique - readers will repeat or hide stories")
+        if any(not i.findtext("link") or not i.findtext("pubDate") for i in items):
+            problems.append("a feed item is missing its link or date")
+        titles = " ".join(i.findtext("title") or "" for i in items)
+        if "Salmar's results" not in titles:
+            problems.append("a translated headline should lead in the feed title")
+    except ET.ParseError as error:
+        problems.append(f"feed is not valid XML: {error}")
+    finally:
+        feed_module.SIGNALS = original
+    return problems
+
+
 def translation_budget() -> list[str]:
     """A limited allowance must be spread across languages, and must not be
     spent on headlines that could never be shown.
@@ -438,6 +495,7 @@ def main() -> int:
         if got != want:
             failures.append(f"clean: wanted {want!r}, got {got!r} - {label}")
 
+    failures.extend(feed_is_valid_xml())
     failures.extend(translation_budget())
     failures.extend(short_register_matching())
     failures.extend(batch_pairing())
@@ -505,7 +563,7 @@ def main() -> int:
 
     total = (len(STORY_CASES) * 2 + len(SCORE_CASES) + len(ALERT_CASES)
              + len(LANGUAGE_CASES) + len(PUBLISHER_CASES)
-             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 19)
+             + len(READING_CASES) * 2 + len(TRANSLATION_CASES) + 23)
     if failures:
         print(f"FAIL  {len(failures)} of {total}\n")
         for f in failures:

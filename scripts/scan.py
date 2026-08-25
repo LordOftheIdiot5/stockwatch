@@ -24,6 +24,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
+import feed                                                      # noqa: E402
 import sources                                                   # noqa: E402
 import translate as translate_module                              # noqa: E402
 from translate import Translator                                  # noqa: E402
@@ -608,6 +609,9 @@ def main() -> int:
         "alertsTotal": len(alerts),
     }, indent=1, ensure_ascii=False), encoding="utf-8")
     save_seen(seen)
+    # The feed is derived from what was just written, so it is built here
+    # rather than as a separate step that could be skipped or fall behind.
+    feed.main()
 
     stories = sum(len(c["stories"]) for c in companies)
     print(f"  {len(companies)} companies, {stories} stories, "

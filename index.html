@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="stockwatch signals" href="feed.xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,8 +36,13 @@
     </section>
 
     <section class="panel">
-      <h2>Signals</h2>
-      <p class="panel-note" id="alertNote">—</p>
+      <div class="panel-head">
+        <div>
+          <h2>Signals</h2>
+          <p class="panel-note" id="alertNote">—</p>
+        </div>
+        <a class="feed-link" href="feed.xml">RSS</a>
+      </div>
       <ul class="alerts" id="alerts"></ul>
     </section>
 
