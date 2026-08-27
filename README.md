@@ -48,3 +48,23 @@ reacting inside a minute. That needs a machine you control.
 **No backtest yet.** The thresholds are starting points, not settings known to
 work. Until forward returns are measured against the signals it emits, this is
 a tool for noticing things, not for acting on them.
+
+## Scheduling
+
+The scan declares a cron, but GitHub's scheduled workflows are best effort.
+Observed behaviour on this repo: firings drifting forty minutes or more,
+individual hours dropped, and on 2026-08-27 every firing dropped for eighteen
+hours while the workflow sat enabled and every prior run showed success.
+Nothing is broken in that state, so nothing reports it - the page just goes
+stale.
+
+`deploy/` puts the clock somewhere that keeps time. A systemd timer on a VPS
+dispatches the workflow hourly across market hours; the scan itself still runs
+on GitHub, so `DEEPL_API_KEY` and any other repository secrets stay where they
+are and the scan logic is untouched.
+
+    sudo bash deploy/install.sh
+
+The cron stays in the workflow as a fallback: if the VPS is down, best effort
+beats nothing. When both fire, the trigger sees a run already in progress and
+skips, so the overlap is harmless.

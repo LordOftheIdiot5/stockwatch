@@ -1,0 +1,28 @@
+# Fires the scan on the hour across European market hours.
+#
+# Mirrors the cron the workflow still declares ("5 6-17 * * 1-5"), which is
+# left in place as a fallback: if this machine is down, GitHub's best-effort
+# schedule is better than nothing. When both fire, trigger.sh sees a run
+# already in progress and skips, so the overlap is harmless.
+#
+# The window is deliberately wide. Cron is UTC and does not know about daylight
+# saving, so 06:00-17:00 UTC covers 07:00-18:00 CET in winter and 08:00-19:00
+# CEST in summer, bracketing Oslo, Stockholm, XETRA, Paris and London in both
+# halves of the year.
+
+[Unit]
+Description=Trigger the stockwatch scan
+
+[Timer]
+OnCalendar=Mon-Fri *-*-* 06..17:05:00
+# Fire on start if a firing was missed while the machine was off. Without this
+# a reboot at 09:00 silently skips that hour, which is the exact failure this
+# whole thing exists to avoid.
+Persistent=true
+# Spread the load a little. Every timer on the box firing on the same second
+# is how a small VPS gets a thundering herd of its own making.
+RandomizedDelaySec=90
+Unit=stockwatch-scan.service
+
+[Install]
+WantedBy=timers.target

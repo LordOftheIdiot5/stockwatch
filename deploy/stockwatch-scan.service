@@ -1,0 +1,27 @@
+# Runs once per timer firing and exits. No daemon: this only sends one API
+# request, and a long-lived process would be a worse way to do that.
+
+[Unit]
+Description=Trigger the stockwatch scan on GitHub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/stockwatch/deploy/trigger.sh
+EnvironmentFile=/etc/stockwatch-trigger.env
+
+# It holds a token and talks to one API. It needs nothing else.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+# No write access anywhere - the scan runs on GitHub, not here.
+ReadWritePaths=
+
+StandardOutput=journal
+StandardError=journal
