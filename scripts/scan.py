@@ -38,6 +38,7 @@ DATA = ROOT / "data"
 # it: nineteen alerts, nineteen of them "new", twelve times a day.
 SEEN_PATH = DATA / "seen.json"
 OUT_PATH = DATA / "signals.json"
+CONTEXT_PATH = DATA / "context.json"
 
 # Thresholds. Deliberately not tuned - nothing here has been backtested yet, so
 # these are starting points to be measured, not settings that are known to work.
@@ -608,6 +609,21 @@ def main() -> int:
         ))[:MAX_ALERTS_SHOWN],
         "alertsTotal": len(alerts),
     }, indent=1, ensure_ascii=False), encoding="utf-8")
+
+    # Market context: the commodities and freight rates several of these
+    # companies are effectively a leveraged bet on. Written to its own file so
+    # a failure here cannot cost the scan - the company signals are the
+    # product, this is background.
+    try:
+        import context
+
+        CONTEXT_PATH.write_text(
+            json.dumps({"generated": now.isoformat(timespec="seconds"), **context.build()},
+                       indent=1, ensure_ascii=False),
+            encoding="utf-8",
+        )
+    except Exception as error:                                   # noqa: BLE001
+        print(f"context failed (continuing): {error}")
     save_seen(seen)
     # The feed is derived from what was just written, so it is built here
     # rather than as a separate step that could be skipped or fall behind.

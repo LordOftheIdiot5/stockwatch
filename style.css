@@ -390,3 +390,44 @@ body {
     line-height: 1.25;
   }
 }
+
+/* Market context: commodities, freight and share-class spreads.
+   Dense on purpose - this is background for reading the company rows, so it
+   should be scannable in one glance rather than invite study. */
+.context { display: grid; gap: 1.4rem; }
+@media (min-width: 60rem) { .context { grid-template-columns: 1fr 1fr; } }
+
+.c-block h3 { margin: 0 0 .5rem; font-size: .78rem; text-transform: uppercase;
+              letter-spacing: .08em; opacity: .6; font-weight: 600; }
+.c-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.c-table th { text-align: right; font-size: .68rem; text-transform: uppercase;
+              letter-spacing: .05em; opacity: .45; font-weight: 600;
+              padding: 0 0 .3rem .5rem; }
+.c-table th:first-child { text-align: left; }
+.c-table td { padding: .3rem 0 .3rem .5rem; text-align: right;
+              border-top: 1px solid currentColor; border-color: color-mix(in srgb, currentColor 10%, transparent); }
+.c-name { text-align: left !important; }
+.c-unit { opacity: .4; font-size: .7rem; margin-left: .3rem; }
+.c-last { font-size: .88rem; }
+.c-pct { font-size: .84rem; opacity: .55; }
+.c-pct.pos { color: #2e7d32; opacity: 1; }
+.c-pct.neg { color: #c62828; opacity: 1; }
+
+/* Where it sits in its own year. A dot near the right edge is a metal at its
+   high, which is a different story from the same day's percentage move. */
+.c-bar { display: inline-block; position: relative; width: 3.2rem; height: .5rem;
+         border-radius: 999px;
+         background: color-mix(in srgb, currentColor 12%, transparent); }
+.c-bar i { position: absolute; top: 50%; width: .45rem; height: .45rem;
+           margin: -.225rem 0 0 -.225rem; border-radius: 50%;
+           background: currentColor; opacity: .75; }
+
+.c-proxy { font-size: .6rem; text-transform: uppercase; letter-spacing: .06em;
+           opacity: .45; margin-left: .4rem; border: 1px solid currentColor;
+           border-radius: 3px; padding: 0 .25rem; }
+.c-note { font-size: .72rem; opacity: .5; margin: .5rem 0 0; line-height: 1.45; }
+
+@media (prefers-color-scheme: dark) {
+  .c-pct.pos { color: #66bb6a; }
+  .c-pct.neg { color: #ef5350; }
+}

@@ -46,6 +46,16 @@
       <ul class="alerts" id="alerts"></ul>
     </section>
 
+    <section class="panel" id="contextPanel" hidden>
+      <div class="panel-head">
+        <div>
+          <h2>Market context</h2>
+          <p class="panel-note" id="contextNote">—</p>
+        </div>
+      </div>
+      <div id="context" class="context"></div>
+    </section>
+
     <section class="panel">
       <div class="panel-head">
         <div>
@@ -208,6 +218,67 @@
           </div>
         </details>`;
     }
+
+    // Year position says more than a percentage: 0 is the year's low, 100 its
+    // high. A metal at 97 is a different story from one at 11 even if both
+    // moved the same amount today.
+    function contextRow(item) {
+      const day = item.changePct, month = item.monthPct;
+      const cls = v => v == null ? "" : v < 0 ? " neg" : v > 0 ? " pos" : "";
+      const sign = v => v == null ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
+      return `<tr>
+        <td class="c-name">${esc(item.name)}${item.proxy ? '<span class="c-proxy">proxy</span>' : ""}</td>
+        <td class="c-last">${item.last.toLocaleString()}<span class="c-unit">${esc(item.unit || "")}</span></td>
+        <td class="c-pct${cls(day)}">${sign(day)}</td>
+        <td class="c-pct${cls(month)}">${sign(month)}</td>
+        <td class="c-year"><span class="c-bar"><i style="left:${item.yearPosition ?? 50}%"></i></span></td>
+      </tr>`;
+    }
+
+    function contextTable(title, rows, note) {
+      if (!rows.length) return "";
+      return `<div class="c-block">
+        <h3>${esc(title)}</h3>
+        <table class="c-table">
+          <thead><tr><th></th><th>Last</th><th>1d</th><th>1m</th><th>Year range</th></tr></thead>
+          <tbody>${rows.map(contextRow).join("")}</tbody>
+        </table>
+        ${note ? `<p class="c-note">${esc(note)}</p>` : ""}
+      </div>`;
+    }
+
+    fetch("data/context.json?cb=" + Date.now())
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(d => {
+        const metals = (d.commodities || []).filter(c => c.group === "metals");
+        const energy = (d.commodities || []).filter(c => c.group === "energy");
+        let html = contextTable("Metals", metals)
+                 + contextTable("Energy", energy)
+                 + contextTable("Freight", d.freight || [], d._freightNote);
+
+        // Share classes are a spread and where it sits, never an instruction.
+        const classes = (d.shareClasses || []).filter(c => c.tradableRange);
+        if (classes.length) {
+          html += `<div class="c-block"><h3>A/B share spreads</h3>
+            <table class="c-table"><thead><tr>
+              <th></th><th>A</th><th>B</th><th>A/B</th><th>vs 1y mean</th>
+            </tr></thead><tbody>` +
+            classes.map(c => `<tr>
+              <td class="c-name">${esc(c.name)}</td>
+              <td class="c-last">${c.aPrice.toLocaleString()}</td>
+              <td class="c-last">${c.bPrice.toLocaleString()}</td>
+              <td class="c-last">${c.ratio.toFixed(4)}</td>
+              <td class="c-pct${Math.abs(c.z) >= 2 ? " pos" : ""}">${c.z >= 0 ? "+" : ""}${c.z.toFixed(2)}σ</td>
+            </tr>`).join("") +
+            `</tbody></table><p class="c-note">${esc(d._shareClassNote || "")}</p></div>`;
+        }
+
+        document.getElementById("context").innerHTML = html;
+        document.getElementById("contextNote").textContent =
+          "Commodities and freight the watchlist is exposed to.";
+        document.getElementById("contextPanel").hidden = false;
+      })
+      .catch(() => { /* Context is background. Its absence must not be an error. */ });
 
     fetch("data/signals.json?cb=" + Date.now())
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
