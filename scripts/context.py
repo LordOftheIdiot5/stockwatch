@@ -48,7 +48,13 @@ COMMODITIES = [
     ("ALI=F", "Aluminium", "metals", "USD/t"),
     ("PL=F", "Platinum", "metals", "USD/oz"),
     ("PA=F", "Palladium", "metals", "USD/oz"),
-    ("JJN", "Nickel (ETN)", "metals", "USD"),
+    # Nickel has no free spot feed that holds up. JJN quotes on a short window
+    # and goes empty over a year, so it is unusable here. NIKL is the closest
+    # available thing and it is miners rather than metal - equity beta, not the
+    # price of nickel - so it is flagged proxy and named for what it is. Worth
+    # carrying anyway: Bluelake's largest deposit is nickel, and nothing else
+    # on this page speaks to it at all.
+    ("NIKL", "Nickel miners", "metals", "USD", True),
     ("TIO=F", "Iron ore 62% Fe", "metals", "USD/t"),
     ("BZ=F", "Brent crude", "energy", "USD/bbl"),
     ("CL=F", "WTI crude", "energy", "USD/bbl"),
@@ -125,11 +131,18 @@ def _quote(ticker: str) -> dict | None:
 
 def commodities() -> list[dict]:
     out = []
-    for ticker, name, group, unit in COMMODITIES:
+    for entry in COMMODITIES:
+        ticker, name, group, unit = entry[:4]
+        proxy = entry[4] if len(entry) > 4 else False
         quote = _quote(ticker)
         if quote:
-            out.append({"ticker": ticker, "name": name, "group": group,
-                        "unit": unit, **quote})
+            row = {"ticker": ticker, "name": name, "group": group,
+                   "unit": unit, **quote}
+            if proxy:
+                # Same badge the freight rows carry, for the same reason: the
+                # reader has to be able to tell a price from a stand-in.
+                row["proxy"] = True
+            out.append(row)
     return out
 
 
