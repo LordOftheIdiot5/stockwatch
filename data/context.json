@@ -1,0 +1,217 @@
+{
+ "generated": "2026-08-28T21:54:03+00:00",
+ "commodities": [
+  {
+   "ticker": "GC=F",
+   "name": "Gold",
+   "group": "metals",
+   "unit": "USD/oz",
+   "last": 4504.1001,
+   "changePct": -2.29,
+   "monthPct": 9.85,
+   "yearPosition": 57,
+   "yearLow": 3431.8,
+   "yearHigh": 5318.3999
+  },
+  {
+   "ticker": "SI=F",
+   "name": "Silver",
+   "group": "metals",
+   "unit": "USD/oz",
+   "last": 67.09,
+   "changePct": -3.37,
+   "monthPct": 14.07,
+   "yearPosition": 37,
+   "yearLow": 39.19,
+   "yearHigh": 115.08
+  },
+  {
+   "ticker": "HG=F",
+   "name": "Copper",
+   "group": "metals",
+   "unit": "USD/lb",
+   "last": 6.64,
+   "changePct": 0.8,
+   "monthPct": 3.03,
+   "yearPosition": 97,
+   "yearLow": 4.4635,
+   "yearHigh": 6.7095
+  },
+  {
+   "ticker": "ZNC=F",
+   "name": "Zinc",
+   "group": "metals",
+   "unit": "USD/t",
+   "last": 3950.0,
+   "changePct": 0.0,
+   "monthPct": 3.95,
+   "yearPosition": 100,
+   "yearLow": 2297.0,
+   "yearHigh": 3950.0
+  },
+  {
+   "ticker": "ALI=F",
+   "name": "Aluminium",
+   "group": "metals",
+   "unit": "USD/t",
+   "last": 3388.25,
+   "changePct": 0.92,
+   "monthPct": 0.67,
+   "yearPosition": 53,
+   "yearLow": 2488.75,
+   "yearHigh": 4195.0
+  },
+  {
+   "ticker": "PL=F",
+   "name": "Platinum",
+   "group": "metals",
+   "unit": "USD/oz",
+   "last": 1833.5,
+   "changePct": -0.64,
+   "monthPct": 10.99,
+   "yearPosition": 32,
+   "yearLow": 1356.4,
+   "yearHigh": 2852.3999
+  },
+  {
+   "ticker": "PA=F",
+   "name": "Palladium",
+   "group": "metals",
+   "unit": "USD/oz",
+   "last": 1446.0,
+   "changePct": 8.1,
+   "monthPct": 11.04,
+   "yearPosition": 32,
+   "yearLow": 1104.6,
+   "yearHigh": 2169.8999
+  },
+  {
+   "ticker": "TIO=F",
+   "name": "Iron ore 62% Fe",
+   "group": "metals",
+   "unit": "USD/t",
+   "last": 95.68,
+   "changePct": 0.1,
+   "monthPct": -2.64,
+   "yearPosition": 11,
+   "yearLow": 93.66,
+   "yearHigh": 111.42
+  },
+  {
+   "ticker": "BZ=F",
+   "name": "Brent crude",
+   "group": "energy",
+   "unit": "USD/bbl",
+   "last": 88.29,
+   "changePct": -1.57,
+   "monthPct": -0.83,
+   "yearPosition": 49,
+   "yearLow": 58.92,
+   "yearHigh": 118.35
+  },
+  {
+   "ticker": "CL=F",
+   "name": "WTI crude",
+   "group": "energy",
+   "unit": "USD/bbl",
+   "last": 83.44,
+   "changePct": -0.11,
+   "monthPct": -0.18,
+   "yearPosition": 49,
+   "yearLow": 55.27,
+   "yearHigh": 112.95
+  },
+  {
+   "ticker": "NG=F",
+   "name": "Natural gas",
+   "group": "energy",
+   "unit": "USD/MMBtu",
+   "last": 2.881,
+   "changePct": -0.89,
+   "monthPct": 4.46,
+   "yearPosition": 7,
+   "yearLow": 2.523,
+   "yearHigh": 7.46
+  },
+  {
+   "ticker": "URA",
+   "name": "Uranium (ETF)",
+   "group": "energy",
+   "unit": "USD",
+   "last": 45.57,
+   "changePct": -5.79,
+   "monthPct": 14.73,
+   "yearPosition": 33,
+   "yearLow": 37.52,
+   "yearHigh": 61.81
+  }
+ ],
+ "freight": [
+  {
+   "ticker": "BDRY",
+   "name": "Dry bulk freight",
+   "note": "tracks dry bulk futures",
+   "proxy": true,
+   "last": 15.52,
+   "changePct": 4.72,
+   "monthPct": 16.17,
+   "yearPosition": 100,
+   "yearLow": 7.51,
+   "yearHigh": 15.52
+  },
+  {
+   "ticker": "BWET",
+   "name": "Tanker freight",
+   "note": "tracks tanker futures",
+   "proxy": true,
+   "last": 426.38,
+   "changePct": 0.27,
+   "monthPct": 61.57,
+   "yearPosition": 91,
+   "yearLow": 12.63,
+   "yearHigh": 468.41
+  },
+  {
+   "ticker": "BOAT",
+   "name": "Shipping equities",
+   "note": "global shipping companies",
+   "proxy": true,
+   "last": 48.98,
+   "changePct": 0.04,
+   "monthPct": 10.34,
+   "yearPosition": 94,
+   "yearLow": 29.272,
+   "yearHigh": 50.19
+  }
+ ],
+ "shareClasses": [
+  {
+   "name": "Investor",
+   "a": "INVE-A.ST",
+   "b": "INVE-B.ST",
+   "aPrice": 412.6,
+   "bPrice": 417.2,
+   "ratio": 0.989,
+   "meanRatio": 0.9914,
+   "sd": 0.0057,
+   "z": -0.43,
+   "days": 251,
+   "tradableRange": true
+  },
+  {
+   "name": "Volvo",
+   "a": "VOLV-A.ST",
+   "b": "VOLV-B.ST",
+   "aPrice": 349.2,
+   "bPrice": 348.4,
+   "ratio": 1.0023,
+   "meanRatio": 1.0002,
+   "sd": 0.0015,
+   "z": 1.45,
+   "days": 251,
+   "tradableRange": false
+  }
+ ],
+ "_freightNote": "The Baltic indices are a licensed product with no free feed. These are ETFs holding freight futures - they move with rates rather than with shipping equities, but carry roll cost and tracking error and can diverge from spot.",
+ "_shareClassNote": "Ratio of the A price to the B price, with how far today sits from its own one-year mean. This is an observation, not a recommendation: a spread can stay unusual for months, and whether switching is worth anything depends on tax, holding period and whether the votes matter to you."
+}
