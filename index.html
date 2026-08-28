@@ -261,14 +261,18 @@
         if (classes.length) {
           html += `<div class="c-block"><h3>A/B share spreads</h3>
             <table class="c-table"><thead><tr>
-              <th></th><th>A</th><th>B</th><th>A/B</th><th>vs 1y mean</th>
+              <th></th><th>A/B</th><th>1y range</th><th>vs mean</th>
             </tr></thead><tbody>` +
             classes.map(c => `<tr>
-              <td class="c-name">${esc(c.name)}</td>
-              <td class="c-last">${c.aPrice.toLocaleString()}</td>
-              <td class="c-last">${c.bPrice.toLocaleString()}</td>
+              <td class="c-name">${esc(c.name)}${
+                // A drifting spread has no mean to revert to, so its z-score
+                // describes the drift rather than an opportunity. Marked here
+                // because the largest z-scores are usually the drifting ones.
+                c.stationary ? "" : '<span class="c-proxy">drifting</span>'}</td>
               <td class="c-last">${c.ratio.toFixed(4)}</td>
-              <td class="c-pct${Math.abs(c.z) >= 2 ? " pos" : ""}">${c.z >= 0 ? "+" : ""}${c.z.toFixed(2)}σ</td>
+              <td class="c-pct">${c.rangePct.toFixed(2)}%</td>
+              <td class="c-pct${c.stationary && Math.abs(c.z) >= 1.5 ? " pos" : ""}">${
+                c.stationary ? `${c.z >= 0 ? "+" : ""}${c.z.toFixed(2)}σ` : "—"}</td>
             </tr>`).join("") +
             `</tbody></table><p class="c-note">${esc(d._shareClassNote || "")}</p></div>`;
         }

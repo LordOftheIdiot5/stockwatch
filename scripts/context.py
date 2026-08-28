@@ -73,9 +73,25 @@ FREIGHT = [
 # see. Adding a pair whose classes track to 0.1% would produce a signal that is
 # always inside the cost of acting on it.
 SHARE_CLASSES = [
+    # Norwegian shipping, which the first pass missed entirely by only looking
+    # at Swedish names. These carry the widest spreads on the list by some way.
+    ("WWI.OL", "WWIB.OL", "Wilh. Wilhelmsen"),
+    ("ODF.OL", "ODFB.OL", "Odfjell"),
+    ("MAERSK-A.CO", "MAERSK-B.CO", "Maersk"),
+    ("ATCO-A.ST", "ATCO-B.ST", "Atlas Copco"),
+    ("SSAB-A.ST", "SSAB-B.ST", "SSAB"),
+    ("ERIC-A.ST", "ERIC-B.ST", "Ericsson"),
+    ("SKF-A.ST", "SKF-B.ST", "SKF"),
+    ("HUSQ-A.ST", "HUSQ-B.ST", "Husqvarna"),
+    ("SCA-A.ST", "SCA-B.ST", "SCA"),
+    ("KINV-A.ST", "KINV-B.ST", "Kinnevik"),
     ("INVE-A.ST", "INVE-B.ST", "Investor"),
     ("VOLV-A.ST", "VOLV-B.ST", "Volvo"),
 ]
+
+# Both classes need real volume. A spread computed against a class that trades
+# a few hundred shares a day is measuring stale quotes, not a price.
+MIN_CLASS_VOLUME = 3000
 
 
 def _chart(ticker: str, rng: str = "1y", interval: str = "1d") -> dict | None:
@@ -181,6 +197,14 @@ def share_classes() -> list[dict]:
         if len(shared) < 60:
             continue
 
+        def volumes(data):
+            return [v for v in (data["indicators"]["quote"][0].get("volume") or []) if v]
+
+        a_volume = statistics.median(volumes(a_data) or [0])
+        b_volume = statistics.median(volumes(b_data) or [0])
+        if min(a_volume, b_volume) < MIN_CLASS_VOLUME:
+            continue
+
         ratios = [a_closes[s] / b_closes[s] for s in shared]
         mean = statistics.mean(ratios)
         deviation = statistics.pstdev(ratios)
@@ -189,7 +213,22 @@ def share_classes() -> list[dict]:
         # is exactly where it normally sits.
         z = (current - mean) / deviation if deviation else 0.0
 
+        # A z-score assumes the spread oscillates around a stable level. Some
+        # do not: Kinnevik's ratio walked from 1.04 to 1.30 and back to 1.11
+        # over a year, so its "mean" is just the average of a drift and a
+        # z-score of zero against it would read as "normal" when the series has
+        # no normal. Comparing the two halves catches that - if the level has
+        # moved by more than a standard deviation, the mean is not a level the
+        # spread returns to and the z-score should not be read as one.
+        midpoint = len(ratios) // 2
+        first_half = statistics.mean(ratios[:midpoint])
+        second_half = statistics.mean(ratios[midpoint:])
+        drift = abs(second_half - first_half)
+        stationary = bool(deviation and drift < deviation)
+
         out.append({
+            "stationary": stationary,
+            "driftPct": round((second_half / first_half - 1) * 100, 2),
             "name": name,
             "a": a_ticker,
             "b": b_ticker,
@@ -204,7 +243,11 @@ def share_classes() -> list[dict]:
             # it is a curiosity, not an opportunity. Two standard deviations of
             # under 0.5% will not cover spread, fees and tax.
             "tradableRange": bool(deviation * 2 / mean > 0.005),
+            "rangePct": round(deviation * 2 / mean * 100, 2),
         })
+    # Widest spread first: that ordering answers the question someone opening
+    # this panel is actually asking.
+    out.sort(key=lambda r: -r["rangePct"])
     return out
 
 
@@ -227,9 +270,12 @@ def build() -> dict:
         ),
         "_shareClassNote": (
             "Ratio of the A price to the B price, with how far today sits from "
-            "its own one-year mean. This is an observation, not a "
-            "recommendation: a spread can stay unusual for months, and whether "
-            "switching is worth anything depends on tax, holding period and "
-            "whether the votes matter to you."
+            "its own one-year mean. Pairs marked drifting have no stable mean "
+            "to revert to - their level has moved over the year, so the "
+            "standard-deviation figure describes the drift rather than an "
+            "opportunity. This is an observation, not a recommendation: a "
+            "spread can stay unusual for months, and whether switching is worth "
+            "anything depends on tax, holding period and whether the votes "
+            "matter to you."
         ),
     }
