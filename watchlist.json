@@ -222,7 +222,7 @@
     },
     {
       "ticker": "4DS.DE",
-      "name": "Daldrup & Söhne",
+      "name": "Daldrup & S\u00f6hne",
       "sector": "Grid & energy",
       "exchange": "XETRA",
       "annualVolPct": 63.4,
@@ -804,7 +804,7 @@
     },
     {
       "ticker": "HAUTO.OL",
-      "name": "Höegh Autoliners",
+      "name": "H\u00f6egh Autoliners",
       "sector": "Shipping & offshore",
       "exchange": "Oslo",
       "annualVolPct": 41.3,
@@ -973,6 +973,22 @@
       "exchange": "Stockholm",
       "annualVolPct": 75.4,
       "medianVolume": 382851
+    },
+    {
+      "ticker": "BEAMMW-B.ST",
+      "name": "BeammWave",
+      "sector": "Tech & space",
+      "exchange": "Stockholm",
+      "annualVolPct": 88.4,
+      "medianVolume": 98426
+    },
+    {
+      "ticker": "IBAB.BR",
+      "name": "Ion Beam Applications",
+      "sector": "Pharma & medtech",
+      "exchange": "Brussels",
+      "annualVolPct": 32.7,
+      "medianVolume": 23290
     }
   ]
 }
