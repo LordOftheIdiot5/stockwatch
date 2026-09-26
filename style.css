@@ -431,3 +431,32 @@ body {
   .c-pct.pos { color: #66bb6a; }
   .c-pct.neg { color: #ef5350; }
 }
+
+/* Scan staleness. Loud on purpose: the small "updated 3d ago" stamp in
+   the masthead was always technically correct and always overlooked. */
+.stale-bar {
+  display: none;
+  margin: 0 0 22px;
+  padding: 13px 17px;
+  border: 1px solid color-mix(in srgb, var(--down) 45%, transparent);
+  border-left: 3px solid var(--down);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--down) 9%, transparent);
+  color: var(--down);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.stale-bar.show { display: block; }
+.stale-bar b { color: var(--ink); }
+.stale-bar .detail {
+  color: var(--muted);
+  font-size: .78rem;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+.stale-bar code {
+  font-family: var(--mono);
+  color: var(--ink);
+}
+/* The masthead stamp agrees with the bar rather than contradicting it. */
+.stamp.stale { color: var(--down); }

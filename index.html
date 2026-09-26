@@ -22,6 +22,8 @@
       <span class="stamp" id="stamp">loading…</span>
     </header>
 
+    <div class="stale-bar" id="staleBar"></div>
+
     <section class="lede-block">
       <h1>What moved, and why.</h1>
       <p class="lede">
@@ -115,6 +117,28 @@
 
     const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
       ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    // The scan runs Mon-Fri, hourly at :05 between 06:05 and 17:05 UTC.
+    // Count the slots that should have fired since the data was written,
+    // rather than measuring elapsed clock time: the Friday-to-Monday gap is a
+    // legitimate sixty-one hours, so an hours-based rule would fire every
+    // weekend and be ignored by the time it mattered.
+    function missedSlots(iso) {
+      const since = new Date(iso);
+      if (!isFinite(since)) return 0;
+      const t = new Date(since);
+      t.setUTCMinutes(5, 0, 0);
+      t.setUTCHours(t.getUTCHours() + 1);
+      let missed = 0;
+      const now = Date.now();
+      // Bounded so a wildly old or malformed timestamp cannot spin the page.
+      for (let i = 0; i < 24 * 400 && t.getTime() <= now; i++) {
+        const day = t.getUTCDay(), hour = t.getUTCHours();
+        if (day >= 1 && day <= 5 && hour >= 6 && hour <= 17) missed++;
+        t.setUTCHours(t.getUTCHours() + 1);
+      }
+      return missed;
+    }
 
     function ago(iso) {
       const mins = Math.round((Date.now() - new Date(iso)) / 60000);
@@ -287,7 +311,26 @@
     fetch("data/signals.json?cb=" + Date.now())
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then(d => {
-        document.getElementById("stamp").textContent = "updated " + ago(d.generated);
+        const stamp = document.getElementById("stamp");
+        stamp.textContent = "updated " + ago(d.generated);
+
+        // Two missed slots, not one: a single dropped run is a transient and
+        // firing on it would train you to ignore the bar.
+        const missed = missedSlots(d.generated);
+        if (missed >= 2) {
+          stamp.classList.add("stale");
+          const bar = document.getElementById("staleBar");
+          bar.innerHTML =
+            "<b>These numbers are stale.</b> The last scan finished " +
+            ago(d.generated) + ", and " + missed +
+            " scheduled runs have been missed since." +
+            "<div class=\"detail\">Scans run weekdays, hourly from 06:05 to " +
+            "17:05 UTC. Check the trigger with " +
+            "<code>systemctl status stockwatch-scan</code> on the VPS - the " +
+            "last two outages were a dropped GitHub schedule and an expired " +
+            "token, and neither reported itself as an error.</div>";
+          bar.classList.add("show");
+        }
         document.getElementById("langCount").textContent =
           (d.languages || []).length ? `${d.languages.length}` : "several";
 
