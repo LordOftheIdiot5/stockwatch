@@ -20,13 +20,18 @@ concurrency:
 
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    # Pinned, where the deploy job below is not. This one runs unattended
+    # on a schedule and a change underneath it shows up as stale data
+    # rather than as a failure anyone notices. ubuntu-latest began
+    # migrating to Ubuntu 26 on 2026-10-19; moving is fine, but on a day
+    # we choose.
+    runs-on: ubuntu-24.04
     outputs:
       fresh: ${{ steps.scan.outputs.fresh }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -84,12 +89,12 @@ jobs:
       # Explicitly main, not the workflow's own SHA: that commit predates the
       # one the scan just pushed, so checking it out would publish the data this
       # run has already replaced.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: .
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
