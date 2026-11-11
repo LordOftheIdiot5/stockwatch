@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-11T13:57:48+00:00",
+ "generated": "2026-11-11T14:05:26+00:00",
  "tickers": 138,
- "marketPct": 0.43,
+ "marketPct": 0.4,
  "languages": [
   "da",
   "de",
@@ -99,12 +99,12 @@
    "close": 89.3,
    "changePct": -1.0,
    "sigma": -0.46,
-   "volume": 82899,
+   "volume": 84233,
    "medianVolume": 108578,
-   "rvol": 0.76,
-   "marketPct": 0.43,
-   "excessPct": -1.43,
-   "excessSigma": -0.66
+   "rvol": 0.78,
+   "marketPct": 0.4,
+   "excessPct": -1.4,
+   "excessSigma": -0.64
   },
   {
    "ticker": "SALME.OL",
@@ -143,7 +143,7 @@
     2.2,
     2.175,
     2.1,
-    2.455
+    2.465
    ],
    "stories": [
     {
@@ -174,15 +174,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 2.455,
-   "changePct": 16.9,
-   "sigma": 4.47,
-   "volume": 2467852,
+   "close": 2.465,
+   "changePct": 17.38,
+   "sigma": 4.6,
+   "volume": 2471592,
    "medianVolume": 1162707,
-   "rvol": 2.12,
-   "marketPct": 0.43,
-   "excessPct": 16.47,
-   "excessSigma": 4.36,
+   "rvol": 2.13,
+   "marketPct": 0.4,
+   "excessPct": 16.98,
+   "excessSigma": 4.49,
    "short": {
     "percent": 2.62,
     "previous": 2.59,
@@ -253,8 +253,8 @@
    "volume": 1000,
    "medianVolume": 286,
    "rvol": 3.5,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0
   },
   {
@@ -318,9 +318,9 @@
    "volume": 26279,
    "medianVolume": 25550,
    "rvol": 1.03,
-   "marketPct": 0.43,
-   "excessPct": -2.0,
-   "excessSigma": -1.31
+   "marketPct": 0.4,
+   "excessPct": -1.97,
+   "excessSigma": -1.29
   },
   {
    "ticker": "NOHAL.OL",
@@ -369,9 +369,9 @@
    "volume": 8966,
    "medianVolume": 207,
    "rvol": 43.31,
-   "marketPct": 0.43,
-   "excessPct": 4.05,
-   "excessSigma": 2.4
+   "marketPct": 0.4,
+   "excessPct": 4.08,
+   "excessSigma": 2.42
   },
   {
    "ticker": "PLCAN.OL",
@@ -417,12 +417,12 @@
    "close": 13.8,
    "changePct": -0.72,
    "sigma": -0.76,
-   "volume": 8798,
+   "volume": 9298,
    "medianVolume": 5902,
-   "rvol": 1.49,
-   "marketPct": 0.43,
-   "excessPct": -1.15,
-   "excessSigma": -1.21
+   "rvol": 1.58,
+   "marketPct": 0.4,
+   "excessPct": -1.12,
+   "excessSigma": -1.18
   },
   {
    "ticker": "AFISH.OL",
@@ -471,9 +471,9 @@
    "volume": 3625,
    "medianVolume": 839,
    "rvol": 4.32,
-   "marketPct": 0.43,
-   "excessPct": -4.03,
-   "excessSigma": -0.93
+   "marketPct": 0.4,
+   "excessPct": -4.0,
+   "excessSigma": -0.92
   },
   {
    "ticker": "KLDVK.OL",
@@ -522,8 +522,8 @@
    "volume": 29091,
    "medianVolume": 17909,
    "rvol": 1.62,
-   "marketPct": 0.43,
-   "excessPct": -9.13,
+   "marketPct": 0.4,
+   "excessPct": -9.1,
    "excessSigma": -0.92
   },
   {
@@ -573,8 +573,8 @@
    "volume": 4637991,
    "medianVolume": 5085818,
    "rvol": 0.91,
-   "marketPct": 0.43,
-   "excessPct": -13.63,
+   "marketPct": 0.4,
+   "excessPct": -13.6,
    "excessSigma": -0.62
   },
   {
@@ -614,19 +614,19 @@
     572.5,
     582.0,
     592.0,
-    589.0
+    590.0
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 589.0,
-   "changePct": -0.51,
-   "sigma": -0.33,
-   "volume": 44946,
+   "close": 590.0,
+   "changePct": -0.34,
+   "sigma": -0.22,
+   "volume": 45126,
    "medianVolume": 160046,
    "rvol": 0.28,
-   "marketPct": 0.43,
-   "excessPct": -0.94,
-   "excessSigma": -0.61,
+   "marketPct": 0.4,
+   "excessPct": -0.74,
+   "excessSigma": -0.48,
    "short": {
     "percent": 1.72,
     "previous": 1.61,
@@ -673,7 +673,7 @@
     76.8,
     81.62,
     83.55,
-    83.72
+    83.7
    ],
    "stories": [
     {
@@ -704,19 +704,6 @@
     },
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUWc0bE5GUFV1bXRSVmtSY3VUWEFGbGxxQ2xZTXRQX0tnRHRjRkstVzhGbi1fMHZMbXVibDB6SVZnUjBBbnl1TmUzR05WdlB4MkVVTkdEZ0RITWs5d1F1YS1hbVo0RXB1Wk4zVEFzU2lvZld4TjdXc05uVjhoWlhram9YWUJfRGJadkJtQXMxTWQzdm9mNFZ4d0Z1cWZGZkZXZ3FZc2FJUWo?oc=5",
-     "headline": "Dividendi a Piazza Affari: le cedole in arrivo tra novembre e dicembre",
-     "english": "Dividends in Piazza Affari: coupons coming between November and December",
-     "lang": "it",
-     "publisher": "Morningstar",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUWc0bE5GUFV1bXRSVmtSY3VUWEFGbGxxQ2xZTXRQX0tnRHRjRkstVzhGbi1fMHZMbXVibDB6SVZnUjBBbnl1TmUzR05WdlB4MkVVTkdEZ0RITWs5d1F1YS1hbVo0RXB1Wk4zVEFzU2lvZld4TjdXc05uVjhoWlhram9YWUJfRGJadkJtQXMxTWQzdm9mNFZ4d0Z1cWZGZkZXZ3FZc2FJUWo?oc=5",
-     "published": "Tue, 10 Nov 2026 15:11:06 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMi3AFBVV95cUxOUFd4aDFobzZmWFBKYkdVOHM1NERDbU5Pa1BxNUpJeVIwbGF6cy16eWZRcW9QOEE5QlhMWnl5QWNINENLQlEyUU00a1pueG1hdGt6SzNudkFNNUhtdGpGMnF6UENtTGNxcjRiQ05xMFJLT05yUmlrb0lsVFdja3I1UExlcUxicFZocG5rMnc4OUlHWFJDQjE2N19WVU5rWlNabE5jLTBQODZ6T09ZcTA5ZUNGTzFKVVp3aGlEUFVNdW16c3c3X1JFTU5EN1JyckpJTnNjcTVVdTdHQThn?oc=5",
      "headline": "Unicredit lancia un’obbligazione retail con cedole fino all’8% e taglio minimo da 1.000 euro",
      "english": "Unicredit launches a retail bond with coupons of up to 8% and a minimum denomination of 1,000 euros",
@@ -743,14 +730,14 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 83.72,
-   "changePct": 0.2,
-   "sigma": 0.08,
-   "volume": 2236517,
+   "close": 83.7,
+   "changePct": 0.18,
+   "sigma": 0.07,
+   "volume": 2242763,
    "medianVolume": 4294047,
    "rvol": 0.52,
-   "marketPct": 0.43,
-   "excessPct": -0.23,
+   "marketPct": 0.4,
+   "excessPct": -0.22,
    "excessSigma": -0.09
   },
   {
@@ -790,7 +777,7 @@
     4.9,
     4.88,
     4.85,
-    4.83
+    4.84
    ],
    "stories": [
     {
@@ -808,15 +795,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 4.83,
-   "changePct": -0.41,
-   "sigma": -0.63,
-   "volume": 10864,
+   "close": 4.84,
+   "changePct": -0.21,
+   "sigma": -0.31,
+   "volume": 11864,
    "medianVolume": 82382,
-   "rvol": 0.13,
-   "marketPct": 0.43,
-   "excessPct": -0.84,
-   "excessSigma": -1.29
+   "rvol": 0.14,
+   "marketPct": 0.4,
+   "excessPct": -0.61,
+   "excessSigma": -0.9
   },
   {
    "ticker": "SBNOR.OL",
@@ -876,12 +863,12 @@
    "close": 207.35,
    "changePct": -0.72,
    "sigma": -0.53,
-   "volume": 28901,
+   "volume": 29205,
    "medianVolume": 85494,
    "rvol": 0.34,
-   "marketPct": 0.43,
-   "excessPct": -1.15,
-   "excessSigma": -0.85
+   "marketPct": 0.4,
+   "excessPct": -1.12,
+   "excessSigma": -0.82
   },
   {
    "ticker": "INVE-B.ST",
@@ -920,7 +907,7 @@
     428.15,
     429.6,
     431.05,
-    435.0
+    435.15
    ],
    "stories": [
     {
@@ -938,15 +925,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 435.0,
-   "changePct": 0.92,
-   "sigma": 0.8,
-   "volume": 1228034,
+   "close": 435.15,
+   "changePct": 0.95,
+   "sigma": 0.83,
+   "volume": 1246255,
    "medianVolume": 2545763,
-   "rvol": 0.48,
-   "marketPct": 0.43,
-   "excessPct": 0.49,
-   "excessSigma": 0.43
+   "rvol": 0.49,
+   "marketPct": 0.4,
+   "excessPct": 0.55,
+   "excessSigma": 0.48
   },
   {
    "ticker": "VIG.VI",
@@ -985,7 +972,7 @@
     71.3,
     73.1,
     74.2,
-    76.2
+    76.1
    ],
    "stories": [
     {
@@ -1029,15 +1016,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 76.2,
-   "changePct": 2.7,
-   "sigma": 1.45,
-   "volume": 59886,
+   "close": 76.1,
+   "changePct": 2.56,
+   "sigma": 1.37,
+   "volume": 59890,
    "medianVolume": 33140,
    "rvol": 1.81,
-   "marketPct": 0.43,
-   "excessPct": 2.27,
-   "excessSigma": 1.22
+   "marketPct": 0.4,
+   "excessPct": 2.16,
+   "excessSigma": 1.16
   },
   {
    "ticker": "STB.OL",
@@ -1076,7 +1063,7 @@
     200.0,
     204.0,
     206.4,
-    205.4
+    205.6
    ],
    "stories": [
     {
@@ -1094,15 +1081,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 205.4,
-   "changePct": -0.48,
-   "sigma": -0.38,
-   "volume": 143867,
+   "close": 205.6,
+   "changePct": -0.39,
+   "sigma": -0.31,
+   "volume": 150092,
    "medianVolume": 587608,
-   "rvol": 0.24,
-   "marketPct": 0.43,
-   "excessPct": -0.91,
-   "excessSigma": -0.72
+   "rvol": 0.26,
+   "marketPct": 0.4,
+   "excessPct": -0.79,
+   "excessSigma": -0.63
   },
   {
    "ticker": "QLIRO.ST",
@@ -1165,8 +1152,8 @@
    "volume": 1036696,
    "medianVolume": 47046,
    "rvol": 22.04,
-   "marketPct": 0.43,
-   "excessPct": 0.45,
+   "marketPct": 0.4,
+   "excessPct": 0.48,
    "excessSigma": 0.03
   },
   {
@@ -1216,9 +1203,9 @@
    "volume": 70276,
    "medianVolume": 88898,
    "rvol": 0.79,
-   "marketPct": 0.43,
-   "excessPct": -1.55,
-   "excessSigma": -1.41
+   "marketPct": 0.4,
+   "excessPct": -1.52,
+   "excessSigma": -1.38
   },
   {
    "ticker": "HOFI.ST",
@@ -1267,9 +1254,9 @@
    "volume": 37972,
    "medianVolume": 111807,
    "rvol": 0.34,
-   "marketPct": 0.43,
-   "excessPct": -1.38,
-   "excessSigma": -0.54
+   "marketPct": 0.4,
+   "excessPct": -1.35,
+   "excessSigma": -0.53
   },
   {
    "ticker": "MORROW.ST",
@@ -1308,19 +1295,19 @@
     16.04,
     16.54,
     16.48,
-    16.42
+    16.44
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 16.42,
-   "changePct": -0.36,
-   "sigma": -0.21,
-   "volume": 230303,
+   "close": 16.44,
+   "changePct": -0.24,
+   "sigma": -0.14,
+   "volume": 230418,
    "medianVolume": 323270,
    "rvol": 0.71,
-   "marketPct": 0.43,
-   "excessPct": -0.79,
-   "excessSigma": -0.46
+   "marketPct": 0.4,
+   "excessPct": -0.64,
+   "excessSigma": -0.37
   },
   {
    "ticker": "NOBA.ST",
@@ -1359,19 +1346,19 @@
     94.2,
     96.0,
     96.0,
-    95.8
+    95.9
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 95.8,
-   "changePct": -0.21,
-   "sigma": -0.13,
-   "volume": 300647,
+   "close": 95.9,
+   "changePct": -0.1,
+   "sigma": -0.07,
+   "volume": 300988,
    "medianVolume": 354718,
    "rvol": 0.85,
-   "marketPct": 0.43,
-   "excessPct": -0.64,
-   "excessSigma": -0.4
+   "marketPct": 0.4,
+   "excessPct": -0.5,
+   "excessSigma": -0.35
   },
   {
    "ticker": "GJF.OL",
@@ -1417,63 +1404,12 @@
    "close": 276.0,
    "changePct": -0.07,
    "sigma": -0.05,
-   "volume": 41290,
+   "volume": 42226,
    "medianVolume": 346123,
    "rvol": 0.12,
-   "marketPct": 0.43,
-   "excessPct": -0.5,
-   "excessSigma": -0.36
-  },
-  {
-   "ticker": "AVARDA.ST",
-   "name": "Avarda",
-   "sector": "Banks & insurance",
-   "exchange": "Stockholm",
-   "currency": "SEK",
-   "thin": false,
-   "spark": [
-    198.0,
-    197.8,
-    200.5,
-    199.2,
-    195.6,
-    194.8,
-    195.2,
-    196.4,
-    197.2,
-    212.5,
-    217.5,
-    221.0,
-    212.5,
-    212.0,
-    215.0,
-    209.0,
-    209.0,
-    210.0,
-    212.0,
-    216.0,
-    217.5,
-    215.5,
-    217.0,
-    218.0,
-    223.5,
-    224.0,
-    222.0,
-    230.5,
-    233.0,
-    233.5
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 233.5,
-   "changePct": 0.21,
-   "sigma": 0.12,
-   "volume": 31451,
-   "medianVolume": 64268,
-   "rvol": 0.49,
-   "marketPct": 0.43,
-   "excessPct": -0.22,
-   "excessSigma": -0.13
+   "marketPct": 0.4,
+   "excessPct": -0.47,
+   "excessSigma": -0.34
   },
   {
    "ticker": "AZA.ST",
@@ -1512,19 +1448,70 @@
     368.5,
     379.2,
     378.0,
-    379.7
+    379.5
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 379.7,
-   "changePct": 0.45,
-   "sigma": 0.3,
-   "volume": 94026,
+   "close": 379.5,
+   "changePct": 0.4,
+   "sigma": 0.26,
+   "volume": 94447,
    "medianVolume": 312309,
    "rvol": 0.3,
-   "marketPct": 0.43,
-   "excessPct": 0.02,
-   "excessSigma": 0.01
+   "marketPct": 0.4,
+   "excessPct": 0.0,
+   "excessSigma": 0.0
+  },
+  {
+   "ticker": "AVARDA.ST",
+   "name": "Avarda",
+   "sector": "Banks & insurance",
+   "exchange": "Stockholm",
+   "currency": "SEK",
+   "thin": false,
+   "spark": [
+    198.0,
+    197.8,
+    200.5,
+    199.2,
+    195.6,
+    194.8,
+    195.2,
+    196.4,
+    197.2,
+    212.5,
+    217.5,
+    221.0,
+    212.5,
+    212.0,
+    215.0,
+    209.0,
+    209.0,
+    210.0,
+    212.0,
+    216.0,
+    217.5,
+    215.5,
+    217.0,
+    218.0,
+    223.5,
+    224.0,
+    222.0,
+    230.5,
+    233.0,
+    233.0
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 233.0,
+   "changePct": 0.0,
+   "sigma": 0.0,
+   "volume": 31693,
+   "medianVolume": 64268,
+   "rvol": 0.49,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
+   "excessSigma": 0
   },
   {
    "ticker": "TRYG.CO",
@@ -1570,11 +1557,11 @@
    "close": 163.4,
    "changePct": 0.0,
    "sigma": 0.0,
-   "volume": 144163,
+   "volume": 146896,
    "medianVolume": 757989,
    "rvol": 0.19,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0
   },
   {
@@ -1614,7 +1601,7 @@
     288.5,
     294.8,
     301.9,
-    303.2
+    303.1
    ],
    "stories": [
     {
@@ -1658,13 +1645,13 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 303.2,
-   "changePct": 0.43,
-   "sigma": 0.38,
-   "volume": 224119,
+   "close": 303.1,
+   "changePct": 0.4,
+   "sigma": 0.35,
+   "volume": 226530,
    "medianVolume": 659173,
    "rvol": 0.34,
-   "marketPct": 0.43,
+   "marketPct": 0.4,
    "excessPct": 0.0,
    "excessSigma": 0.0
   },
@@ -1739,11 +1726,11 @@
    "close": 222.0,
    "changePct": 0.0,
    "sigma": 0.0,
-   "volume": 76003,
+   "volume": 77097,
    "medianVolume": 74201,
-   "rvol": 1.02,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "rvol": 1.04,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0
   },
   {
@@ -1807,9 +1794,9 @@
    "volume": 24949,
    "medianVolume": 13146,
    "rvol": 1.9,
-   "marketPct": 0.43,
-   "excessPct": 0.67,
-   "excessSigma": 0.4
+   "marketPct": 0.4,
+   "excessPct": 0.7,
+   "excessSigma": 0.42
   },
   {
    "ticker": "QBEN.ST",
@@ -1872,9 +1859,9 @@
    "volume": 4421,
    "medianVolume": 28251,
    "rvol": 0.16,
-   "marketPct": 0.43,
-   "excessPct": -1.51,
-   "excessSigma": -0.64
+   "marketPct": 0.4,
+   "excessPct": -1.48,
+   "excessSigma": -0.63
   },
   {
    "ticker": "RAIL.ST",
@@ -1920,11 +1907,11 @@
    "close": 32.3,
    "changePct": -3.0,
    "sigma": -0.87,
-   "volume": 23320,
+   "volume": 23325,
    "medianVolume": 16665,
    "rvol": 1.4,
-   "marketPct": 0.43,
-   "excessPct": -3.43,
+   "marketPct": 0.4,
+   "excessPct": -3.4,
    "excessSigma": -0.99
   },
   {
@@ -1974,9 +1961,9 @@
    "volume": 249806,
    "medianVolume": 839670,
    "rvol": 0.3,
-   "marketPct": 0.43,
-   "excessPct": 0.61,
-   "excessSigma": 0.72
+   "marketPct": 0.4,
+   "excessPct": 0.64,
+   "excessSigma": 0.75
   },
   {
    "ticker": "NRC.OL",
@@ -2015,19 +2002,19 @@
     9.12,
     9.15,
     9.08,
-    9.24
+    9.17
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 9.24,
-   "changePct": 1.76,
-   "sigma": 0.57,
-   "volume": 190526,
+   "close": 9.17,
+   "changePct": 0.99,
+   "sigma": 0.32,
+   "volume": 190787,
    "medianVolume": 377893,
    "rvol": 0.5,
-   "marketPct": 0.43,
-   "excessPct": 1.33,
-   "excessSigma": 0.43,
+   "marketPct": 0.4,
+   "excessPct": 0.59,
+   "excessSigma": 0.19,
    "short": {
     "percent": 0,
     "previous": 0.52,
@@ -2084,9 +2071,9 @@
    "volume": 30995,
    "medianVolume": 26670,
    "rvol": 1.16,
-   "marketPct": 0.43,
-   "excessPct": 0.07,
-   "excessSigma": 0.05
+   "marketPct": 0.4,
+   "excessPct": 0.1,
+   "excessSigma": 0.08
   },
   {
    "ticker": "VWS.CO",
@@ -2125,7 +2112,7 @@
     209.9,
     207.0,
     198.6,
-    189.95
+    190.2
    ],
    "stories": [
     {
@@ -2208,15 +2195,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 189.95,
-   "changePct": -4.36,
-   "sigma": -2.21,
-   "volume": 5829720,
+   "close": 190.2,
+   "changePct": -4.23,
+   "sigma": -2.14,
+   "volume": 5876288,
    "medianVolume": 2055290,
-   "rvol": 2.84,
-   "marketPct": 0.43,
-   "excessPct": -4.79,
-   "excessSigma": -2.43
+   "rvol": 2.86,
+   "marketPct": 0.4,
+   "excessPct": -4.63,
+   "excessSigma": -2.34
   },
   {
    "ticker": "ORSTED.CO",
@@ -2255,7 +2242,7 @@
     148.7,
     147.25,
     144.7,
-    144.0
+    144.05
    ],
    "stories": [
     {
@@ -2299,15 +2286,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 144.0,
-   "changePct": -0.48,
-   "sigma": -0.26,
-   "volume": 218692,
+   "close": 144.05,
+   "changePct": -0.45,
+   "sigma": -0.24,
+   "volume": 219965,
    "medianVolume": 1334673,
    "rvol": 0.16,
-   "marketPct": 0.43,
-   "excessPct": -0.91,
-   "excessSigma": -0.49
+   "marketPct": 0.4,
+   "excessPct": -0.85,
+   "excessSigma": -0.45
   },
   {
    "ticker": "NDX1.DE",
@@ -2346,7 +2333,7 @@
     42.98,
     42.96,
     41.52,
-    41.72
+    41.66
    ],
    "stories": [
     {
@@ -2390,15 +2377,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 41.72,
-   "changePct": 0.48,
-   "sigma": 0.14,
-   "volume": 138784,
+   "close": 41.66,
+   "changePct": 0.34,
+   "sigma": 0.1,
+   "volume": 139735,
    "medianVolume": 478716,
    "rvol": 0.29,
-   "marketPct": 0.43,
-   "excessPct": 0.05,
-   "excessSigma": 0.01
+   "marketPct": 0.4,
+   "excessPct": -0.06,
+   "excessSigma": -0.02
   },
   {
    "ticker": "NKT.CO",
@@ -2437,7 +2424,7 @@
     840.0,
     867.0,
     869.0,
-    884.5
+    883.0
    ],
    "stories": [
     {
@@ -2468,15 +2455,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 884.5,
-   "changePct": 1.78,
-   "sigma": 0.88,
-   "volume": 64223,
+   "close": 883.0,
+   "changePct": 1.61,
+   "sigma": 0.79,
+   "volume": 64520,
    "medianVolume": 181684,
-   "rvol": 0.35,
-   "marketPct": 0.43,
-   "excessPct": 1.35,
-   "excessSigma": 0.67
+   "rvol": 0.36,
+   "marketPct": 0.4,
+   "excessPct": 1.21,
+   "excessSigma": 0.59
   },
   {
    "ticker": "PFSE.DE",
@@ -2539,9 +2526,9 @@
    "volume": 63987,
    "medianVolume": 54931,
    "rvol": 1.16,
-   "marketPct": 0.43,
-   "excessPct": 0.64,
-   "excessSigma": 0.2
+   "marketPct": 0.4,
+   "excessPct": 0.67,
+   "excessSigma": 0.21
   },
   {
    "ticker": "S92.DE",
@@ -2580,7 +2567,7 @@
     51.15,
     49.4,
     47.96,
-    48.56
+    48.5
    ],
    "stories": [
     {
@@ -2598,15 +2585,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 48.56,
-   "changePct": 1.25,
-   "sigma": 0.28,
-   "volume": 15432,
+   "close": 48.5,
+   "changePct": 1.13,
+   "sigma": 0.25,
+   "volume": 15548,
    "medianVolume": 113074,
    "rvol": 0.14,
-   "marketPct": 0.43,
-   "excessPct": 0.82,
-   "excessSigma": 0.18
+   "marketPct": 0.4,
+   "excessPct": 0.73,
+   "excessSigma": 0.16
   },
   {
    "ticker": "NIBE-B.ST",
@@ -2645,19 +2632,19 @@
     44.94,
     44.8,
     44.87,
-    44.13
+    43.99
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 44.13,
-   "changePct": -1.65,
-   "sigma": -1.53,
-   "volume": 6393738,
+   "close": 43.99,
+   "changePct": -1.96,
+   "sigma": -1.82,
+   "volume": 6453019,
    "medianVolume": 4543770,
-   "rvol": 1.41,
-   "marketPct": 0.43,
-   "excessPct": -2.08,
-   "excessSigma": -1.93
+   "rvol": 1.42,
+   "marketPct": 0.4,
+   "excessPct": -2.36,
+   "excessSigma": -2.19
   },
   {
    "ticker": "NEX.PA",
@@ -2696,19 +2683,19 @@
     123.5,
     125.8,
     127.6,
-    131.9
+    132.1
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 131.9,
-   "changePct": 3.37,
-   "sigma": 1.03,
-   "volume": 84124,
+   "close": 132.1,
+   "changePct": 3.53,
+   "sigma": 1.08,
+   "volume": 84886,
    "medianVolume": 160570,
-   "rvol": 0.52,
-   "marketPct": 0.43,
-   "excessPct": 2.94,
-   "excessSigma": 0.9
+   "rvol": 0.53,
+   "marketPct": 0.4,
+   "excessPct": 3.13,
+   "excessSigma": 0.96
   },
   {
    "ticker": "1AST.DE",
@@ -2757,9 +2744,9 @@
    "volume": 18350,
    "medianVolume": 28916,
    "rvol": 0.63,
-   "marketPct": 0.43,
-   "excessPct": 3.11,
-   "excessSigma": 0.83
+   "marketPct": 0.4,
+   "excessPct": 3.14,
+   "excessSigma": 0.84
   },
   {
    "ticker": "PRY.MI",
@@ -2805,12 +2792,12 @@
    "close": 110.9,
    "changePct": 3.45,
    "sigma": 0.9,
-   "volume": 491334,
+   "volume": 496814,
    "medianVolume": 1508011,
    "rvol": 0.33,
-   "marketPct": 0.43,
-   "excessPct": 3.02,
-   "excessSigma": 0.79
+   "marketPct": 0.4,
+   "excessPct": 3.05,
+   "excessSigma": 0.8
   },
   {
    "ticker": "BONHR.OL",
@@ -2849,19 +2836,19 @@
     262.0,
     266.0,
     274.0,
-    279.0
+    279.5
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 279.0,
-   "changePct": 1.82,
-   "sigma": 0.85,
-   "volume": 77032,
+   "close": 279.5,
+   "changePct": 2.01,
+   "sigma": 0.93,
+   "volume": 78515,
    "medianVolume": 26962,
-   "rvol": 2.86,
-   "marketPct": 0.43,
-   "excessPct": 1.39,
-   "excessSigma": 0.65
+   "rvol": 2.91,
+   "marketPct": 0.4,
+   "excessPct": 1.61,
+   "excessSigma": 0.74
   },
   {
    "ticker": "CLOUD.OL",
@@ -2907,12 +2894,12 @@
    "close": 13.1,
    "changePct": 1.55,
    "sigma": 0.72,
-   "volume": 305592,
+   "volume": 318267,
    "medianVolume": 168398,
-   "rvol": 1.81,
-   "marketPct": 0.43,
-   "excessPct": 1.12,
-   "excessSigma": 0.52
+   "rvol": 1.89,
+   "marketPct": 0.4,
+   "excessPct": 1.15,
+   "excessSigma": 0.53
   },
   {
    "ticker": "SCATC.OL",
@@ -2951,19 +2938,19 @@
     86.85,
     90.95,
     91.3,
-    90.45
+    90.5
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 90.45,
-   "changePct": -0.93,
-   "sigma": -0.16,
-   "volume": 450043,
+   "close": 90.5,
+   "changePct": -0.88,
+   "sigma": -0.15,
+   "volume": 451558,
    "medianVolume": 1173071,
    "rvol": 0.38,
-   "marketPct": 0.43,
-   "excessPct": -1.36,
-   "excessSigma": -0.23,
+   "marketPct": 0.4,
+   "excessPct": -1.28,
+   "excessSigma": -0.22,
    "short": {
     "percent": 3.77,
     "previous": 3.69,
@@ -3020,68 +3007,9 @@
    "volume": 5332,
    "medianVolume": 83457,
    "rvol": 0.06,
-   "marketPct": 0.43,
-   "excessPct": -0.06,
-   "excessSigma": -0.05
-  },
-  {
-   "ticker": "ZAP.OL",
-   "name": "Zaptec",
-   "sector": "Grid & energy",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": false,
-   "spark": [
-    64.0,
-    65.5,
-    64.3,
-    65.0,
-    61.8,
-    61.8,
-    61.2,
-    59.7,
-    58.9,
-    57.9,
-    55.0,
-    57.0,
-    55.5,
-    56.0,
-    57.1,
-    58.3,
-    56.4,
-    58.3,
-    59.0,
-    62.2,
-    62.4,
-    61.0,
-    61.7,
-    61.9,
-    54.6,
-    54.1,
-    55.5,
-    58.3,
-    58.4,
-    58.6
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 58.6,
-   "changePct": 0.34,
-   "sigma": 0.09,
-   "volume": 218195,
-   "medianVolume": 407120,
-   "rvol": 0.54,
-   "marketPct": 0.43,
-   "excessPct": -0.09,
-   "excessSigma": -0.02,
-   "short": {
-    "percent": 1.48,
-    "previous": 1.55,
-    "date": "2026-11-06",
-    "holders": 1,
-    "largest": "CITADEL ADVISORS LLC",
-    "largestPercent": 1.48
-   }
+   "marketPct": 0.4,
+   "excessPct": -0.03,
+   "excessSigma": -0.02
   },
   {
    "ticker": "4DS.DE",
@@ -3130,9 +3058,68 @@
    "volume": 47,
    "medianVolume": 2761,
    "rvol": 0.02,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0
+  },
+  {
+   "ticker": "ZAP.OL",
+   "name": "Zaptec",
+   "sector": "Grid & energy",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": false,
+   "spark": [
+    64.0,
+    65.5,
+    64.3,
+    65.0,
+    61.8,
+    61.8,
+    61.2,
+    59.7,
+    58.9,
+    57.9,
+    55.0,
+    57.0,
+    55.5,
+    56.0,
+    57.1,
+    58.3,
+    56.4,
+    58.3,
+    59.0,
+    62.2,
+    62.4,
+    61.0,
+    61.7,
+    61.9,
+    54.6,
+    54.1,
+    55.5,
+    58.3,
+    58.4,
+    58.4
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 58.4,
+   "changePct": 0.0,
+   "sigma": 0.0,
+   "volume": 232939,
+   "medianVolume": 407120,
+   "rvol": 0.57,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
+   "excessSigma": 0,
+   "short": {
+    "percent": 1.48,
+    "previous": 1.55,
+    "date": "2026-11-06",
+    "holders": 1,
+    "largest": "CITADEL ADVISORS LLC",
+    "largestPercent": 1.48
+   }
   },
   {
    "ticker": "SAAB-B.ST",
@@ -3171,7 +3158,7 @@
     605.0,
     639.5,
     651.3,
-    641.1
+    641.6
    ],
    "stories": [
     {
@@ -3254,15 +3241,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 641.1,
-   "changePct": -1.57,
-   "sigma": -0.66,
-   "volume": 613590,
+   "close": 641.6,
+   "changePct": -1.49,
+   "sigma": -0.62,
+   "volume": 624586,
    "medianVolume": 1281959,
-   "rvol": 0.48,
-   "marketPct": 0.43,
-   "excessPct": -2.0,
-   "excessSigma": -0.84
+   "rvol": 0.49,
+   "marketPct": 0.4,
+   "excessPct": -1.89,
+   "excessSigma": -0.79
   },
   {
    "ticker": "SIE.DE",
@@ -3301,7 +3288,7 @@
     263.65,
     271.0,
     271.55,
-    275.5
+    275.4
    ],
    "stories": [
     {
@@ -3384,13 +3371,13 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 275.5,
-   "changePct": 1.45,
-   "sigma": 0.7,
-   "volume": 286718,
+   "close": 275.4,
+   "changePct": 1.42,
+   "sigma": 0.68,
+   "volume": 290752,
    "medianVolume": 949668,
-   "rvol": 0.3,
-   "marketPct": 0.43,
+   "rvol": 0.31,
+   "marketPct": 0.4,
    "excessPct": 1.02,
    "excessSigma": 0.49
   },
@@ -3431,7 +3418,7 @@
     11.69,
     12.14,
     12.545,
-    12.255
+    12.225
    ],
    "stories": [
     {
@@ -3501,15 +3488,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 12.255,
-   "changePct": -2.31,
-   "sigma": -1.05,
-   "volume": 1625663,
+   "close": 12.225,
+   "changePct": -2.55,
+   "sigma": -1.16,
+   "volume": 1651739,
    "medianVolume": 1891047,
-   "rvol": 0.86,
-   "marketPct": 0.43,
-   "excessPct": -2.74,
-   "excessSigma": -1.25
+   "rvol": 0.87,
+   "marketPct": 0.4,
+   "excessPct": -2.95,
+   "excessSigma": -1.34
   },
   {
    "ticker": "TKMS.DE",
@@ -3548,7 +3535,7 @@
     78.2,
     81.8,
     82.7,
-    82.5
+    82.6
    ],
    "stories": [
     {
@@ -3618,15 +3605,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 82.5,
-   "changePct": -0.24,
-   "sigma": -0.09,
-   "volume": 55429,
+   "close": 82.6,
+   "changePct": -0.12,
+   "sigma": -0.04,
+   "volume": 55931,
    "medianVolume": 125935,
    "rvol": 0.44,
-   "marketPct": 0.43,
-   "excessPct": -0.67,
-   "excessSigma": -0.25
+   "marketPct": 0.4,
+   "excessPct": -0.52,
+   "excessSigma": -0.17
   },
   {
    "ticker": "MTRS.ST",
@@ -3665,7 +3652,7 @@
     128.95,
     132.85,
     133.8,
-    135.7
+    136.05
    ],
    "stories": [
     {
@@ -3709,15 +3696,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 135.7,
-   "changePct": 1.42,
-   "sigma": 0.47,
-   "volume": 796272,
+   "close": 136.05,
+   "changePct": 1.68,
+   "sigma": 0.55,
+   "volume": 808191,
    "medianVolume": 1010614,
-   "rvol": 0.79,
-   "marketPct": 0.43,
-   "excessPct": 0.99,
-   "excessSigma": 0.33
+   "rvol": 0.8,
+   "marketPct": 0.4,
+   "excessPct": 1.28,
+   "excessSigma": 0.42
   },
   {
    "ticker": "CAF.MC",
@@ -3756,7 +3743,7 @@
     76.0,
     77.5,
     77.5,
-    69.6
+    69.3
    ],
    "stories": [
     {
@@ -3774,15 +3761,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 69.6,
-   "changePct": -10.19,
-   "sigma": -6.2,
-   "volume": 131098,
+   "close": 69.3,
+   "changePct": -10.58,
+   "sigma": -6.44,
+   "volume": 132653,
    "medianVolume": 19431,
-   "rvol": 6.75,
-   "marketPct": 0.43,
-   "excessPct": -10.62,
-   "excessSigma": -6.46
+   "rvol": 6.83,
+   "marketPct": 0.4,
+   "excessPct": -10.98,
+   "excessSigma": -6.68
   },
   {
    "ticker": "KCR.HE",
@@ -3821,7 +3808,7 @@
     28.02,
     28.9,
     29.42,
-    29.78
+    29.76
    ],
    "stories": [
     {
@@ -3839,15 +3826,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 29.78,
-   "changePct": 1.22,
-   "sigma": 0.48,
-   "volume": 79926,
+   "close": 29.76,
+   "changePct": 1.16,
+   "sigma": 0.46,
+   "volume": 80372,
    "medianVolume": 333545,
    "rvol": 0.24,
-   "marketPct": 0.43,
-   "excessPct": 0.79,
-   "excessSigma": 0.31
+   "marketPct": 0.4,
+   "excessPct": 0.76,
+   "excessSigma": 0.3
   },
   {
    "ticker": "ALO.PA",
@@ -3907,11 +3894,11 @@
    "close": 10.52,
    "changePct": 0.67,
    "sigma": 0.11,
-   "volume": 525001,
+   "volume": 527383,
    "medianVolume": 1590821,
    "rvol": 0.33,
-   "marketPct": 0.43,
-   "excessPct": 0.24,
+   "marketPct": 0.4,
+   "excessPct": 0.27,
    "excessSigma": 0.04
   },
   {
@@ -3951,19 +3938,19 @@
     301.0,
     309.6,
     312.4,
-    308.0
+    307.6
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 308.0,
-   "changePct": -1.41,
-   "sigma": -1.15,
-   "volume": 7980,
+   "close": 307.6,
+   "changePct": -1.54,
+   "sigma": -1.26,
+   "volume": 8077,
    "medianVolume": 49765,
    "rvol": 0.16,
-   "marketPct": 0.43,
-   "excessPct": -1.84,
-   "excessSigma": -1.5
+   "marketPct": 0.4,
+   "excessPct": -1.94,
+   "excessSigma": -1.59
   },
   {
    "ticker": "VOS.DE",
@@ -4002,19 +3989,19 @@
     50.0,
     51.05,
     51.2,
-    50.0
+    49.94
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 50.0,
-   "changePct": -2.34,
-   "sigma": -1.05,
-   "volume": 13618,
+   "close": 49.94,
+   "changePct": -2.46,
+   "sigma": -1.11,
+   "volume": 13669,
    "medianVolume": 34781,
    "rvol": 0.39,
-   "marketPct": 0.43,
-   "excessPct": -2.77,
-   "excessSigma": -1.24
+   "marketPct": 0.4,
+   "excessPct": -2.86,
+   "excessSigma": -1.29
   },
   {
    "ticker": "BOL.ST",
@@ -4053,19 +4040,19 @@
     503.4,
     519.8,
     515.2,
-    524.0
+    523.2
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 524.0,
-   "changePct": 1.71,
-   "sigma": 0.69,
-   "volume": 610810,
+   "close": 523.2,
+   "changePct": 1.55,
+   "sigma": 0.63,
+   "volume": 618424,
    "medianVolume": 1389980,
    "rvol": 0.44,
-   "marketPct": 0.43,
-   "excessPct": 1.28,
-   "excessSigma": 0.52
+   "marketPct": 0.4,
+   "excessPct": 1.15,
+   "excessSigma": 0.47
   },
   {
    "ticker": "PAAL-B.CO",
@@ -4104,19 +4091,19 @@
     701.0,
     715.0,
     710.0,
-    716.0
+    717.0
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 716.0,
-   "changePct": 0.85,
-   "sigma": 0.47,
-   "volume": 5634,
+   "close": 717.0,
+   "changePct": 0.99,
+   "sigma": 0.54,
+   "volume": 5792,
    "medianVolume": 23541,
-   "rvol": 0.24,
-   "marketPct": 0.43,
-   "excessPct": 0.42,
-   "excessSigma": 0.23
+   "rvol": 0.25,
+   "marketPct": 0.4,
+   "excessPct": 0.59,
+   "excessSigma": 0.32
   },
   {
    "ticker": "PAL.VI",
@@ -4165,9 +4152,9 @@
    "volume": 14515,
    "medianVolume": 43932,
    "rvol": 0.33,
-   "marketPct": 0.43,
-   "excessPct": -0.25,
-   "excessSigma": -0.17
+   "marketPct": 0.4,
+   "excessPct": -0.22,
+   "excessSigma": -0.15
   },
   {
    "ticker": "YACHT.MI",
@@ -4206,7 +4193,7 @@
     2.546,
     2.552,
     2.61,
-    2.588
+    2.592
    ],
    "stories": [
     {
@@ -4250,15 +4237,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 2.588,
-   "changePct": -0.84,
-   "sigma": -0.58,
-   "volume": 71116,
+   "close": 2.592,
+   "changePct": -0.69,
+   "sigma": -0.47,
+   "volume": 71921,
    "medianVolume": 163176,
    "rvol": 0.44,
-   "marketPct": 0.43,
-   "excessPct": -1.27,
-   "excessSigma": -0.88
+   "marketPct": 0.4,
+   "excessPct": -1.09,
+   "excessSigma": -0.74
   },
   {
    "ticker": "P911.DE",
@@ -4297,7 +4284,7 @@
     47.06,
     46.38,
     46.06,
-    46.13
+    46.07
    ],
    "stories": [
     {
@@ -4341,15 +4328,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 46.13,
-   "changePct": 0.15,
-   "sigma": 0.08,
-   "volume": 85318,
+   "close": 46.07,
+   "changePct": 0.02,
+   "sigma": 0.01,
+   "volume": 86093,
    "medianVolume": 484728,
    "rvol": 0.18,
-   "marketPct": 0.43,
-   "excessPct": -0.28,
-   "excessSigma": -0.15
+   "marketPct": 0.4,
+   "excessPct": -0.38,
+   "excessSigma": -0.19
   },
   {
    "ticker": "RMS.PA",
@@ -4388,7 +4375,7 @@
     1362.5,
     1353.5,
     1345.5,
-    1350.0
+    1351.0
    ],
    "stories": [
     {
@@ -4419,80 +4406,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 1350.0,
-   "changePct": 0.33,
-   "sigma": 0.15,
-   "volume": 16312,
+   "close": 1351.0,
+   "changePct": 0.41,
+   "sigma": 0.18,
+   "volume": 16373,
    "medianVolume": 83484,
    "rvol": 0.2,
-   "marketPct": 0.43,
-   "excessPct": -0.1,
-   "excessSigma": -0.05
-  },
-  {
-   "ticker": "SL.MI",
-   "name": "Sanlorenzo",
-   "sector": "Luxury",
-   "exchange": "Milan",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    35.92,
-    35.72,
-    35.7,
-    36.1,
-    35.54,
-    35.02,
-    35.0,
-    34.9,
-    34.72,
-    35.54,
-    35.44,
-    36.02,
-    35.28,
-    34.4,
-    35.04,
-    34.26,
-    34.3,
-    35.12,
-    35.84,
-    36.04,
-    35.78,
-    35.26,
-    36.08,
-    36.34,
-    36.86,
-    36.12,
-    36.52,
-    37.1,
-    37.24,
-    37.6
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxQMWp0bmM3ZFJqdE82T1VIbURXb0FXdEh0TFM5eHVQdTNiUG0waFZvZzljS21MSXc3UDFUNzNrV3lsMTczUkFLZVJjQ2RSWGJFQlZTeHJtYjd2a0ExYWFBRll2UzZMb21lc2tNNzdkSGdscWRRR2g0Qzg1TTVOczZFQ2VVZ0kwQU9KMHN5NnFPRlhtOGtiY0o0VlNYY3h3Ty1KNEVJbmhpbVozRVU0MC1N?oc=5",
-     "headline": "Sanlorenzo 1150 Explorer: 197-Foot Explorer Yacht, Specs and Launch",
-     "english": null,
-     "lang": "en",
-     "publisher": "stupidDOPE",
-     "score": 1,
-     "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMWp0bmM3ZFJqdE82T1VIbURXb0FXdEh0TFM5eHVQdTNiUG0waFZvZzljS21MSXc3UDFUNzNrV3lsMTczUkFLZVJjQ2RSWGJFQlZTeHJtYjd2a0ExYWFBRll2UzZMb21lc2tNNzdkSGdscWRRR2g0Qzg1TTVOczZFQ2VVZ0kwQU9KMHN5NnFPRlhtOGtiY0o0VlNYY3h3Ty1KNEVJbmhpbVozRVU0MC1N?oc=5",
-     "published": "Wed, 11 Nov 2026 13:34:58 GMT",
-     "fresh": true
-    }
-   ],
-   "date": "2026-11-11",
-   "close": 37.6,
-   "changePct": 0.97,
-   "sigma": 0.6,
-   "volume": 5485,
-   "medianVolume": 25255,
-   "rvol": 0.22,
-   "marketPct": 0.43,
-   "excessPct": 0.54,
-   "excessSigma": 0.33
+   "marketPct": 0.4,
+   "excessPct": 0.01,
+   "excessSigma": 0.0
   },
   {
    "ticker": "TISG.MI",
@@ -4555,9 +4477,74 @@
    "volume": 0,
    "medianVolume": 534033,
    "rvol": 0.0,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0
+  },
+  {
+   "ticker": "SL.MI",
+   "name": "Sanlorenzo",
+   "sector": "Luxury",
+   "exchange": "Milan",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    35.92,
+    35.72,
+    35.7,
+    36.1,
+    35.54,
+    35.02,
+    35.0,
+    34.9,
+    34.72,
+    35.54,
+    35.44,
+    36.02,
+    35.28,
+    34.4,
+    35.04,
+    34.26,
+    34.3,
+    35.12,
+    35.84,
+    36.04,
+    35.78,
+    35.26,
+    36.08,
+    36.34,
+    36.86,
+    36.12,
+    36.52,
+    37.1,
+    37.24,
+    37.54
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxQMWp0bmM3ZFJqdE82T1VIbURXb0FXdEh0TFM5eHVQdTNiUG0waFZvZzljS21MSXc3UDFUNzNrV3lsMTczUkFLZVJjQ2RSWGJFQlZTeHJtYjd2a0ExYWFBRll2UzZMb21lc2tNNzdkSGdscWRRR2g0Qzg1TTVOczZFQ2VVZ0kwQU9KMHN5NnFPRlhtOGtiY0o0VlNYY3h3Ty1KNEVJbmhpbVozRVU0MC1N?oc=5",
+     "headline": "Sanlorenzo 1150 Explorer: 197-Foot Explorer Yacht, Specs and Launch",
+     "english": null,
+     "lang": "en",
+     "publisher": "stupidDOPE",
+     "score": 1,
+     "material": 1,
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMWp0bmM3ZFJqdE82T1VIbURXb0FXdEh0TFM5eHVQdTNiUG0waFZvZzljS21MSXc3UDFUNzNrV3lsMTczUkFLZVJjQ2RSWGJFQlZTeHJtYjd2a0ExYWFBRll2UzZMb21lc2tNNzdkSGdscWRRR2g0Qzg1TTVOczZFQ2VVZ0kwQU9KMHN5NnFPRlhtOGtiY0o0VlNYY3h3Ty1KNEVJbmhpbVozRVU0MC1N?oc=5",
+     "published": "Wed, 11 Nov 2026 13:34:58 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-11-11",
+   "close": 37.54,
+   "changePct": 0.81,
+   "sigma": 0.5,
+   "volume": 5644,
+   "medianVolume": 25255,
+   "rvol": 0.22,
+   "marketPct": 0.4,
+   "excessPct": 0.41,
+   "excessSigma": 0.25
   },
   {
    "ticker": "1913.HK",
@@ -4620,9 +4607,9 @@
    "volume": 755450,
    "medianVolume": 1141702,
    "rvol": 0.66,
-   "marketPct": 0.43,
-   "excessPct": 0.12,
-   "excessSigma": 0.07
+   "marketPct": 0.4,
+   "excessPct": 0.15,
+   "excessSigma": 0.08
   },
   {
    "ticker": "RACE.MI",
@@ -4668,12 +4655,12 @@
    "close": 379.2,
    "changePct": 1.85,
    "sigma": 1.32,
-   "volume": 107669,
+   "volume": 109131,
    "medianVolume": 327583,
    "rvol": 0.33,
-   "marketPct": 0.43,
-   "excessPct": 1.42,
-   "excessSigma": 1.01
+   "marketPct": 0.4,
+   "excessPct": 1.45,
+   "excessSigma": 1.03
   },
   {
    "ticker": "EL.PA",
@@ -4712,19 +4699,19 @@
     193.8,
     190.6,
     187.6,
-    181.95
+    181.8
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 181.95,
-   "changePct": -3.01,
-   "sigma": -0.76,
-   "volume": 289488,
+   "close": 181.8,
+   "changePct": -3.09,
+   "sigma": -0.78,
+   "volume": 292847,
    "medianVolume": 900856,
-   "rvol": 0.32,
-   "marketPct": 0.43,
-   "excessPct": -3.44,
-   "excessSigma": -0.87
+   "rvol": 0.33,
+   "marketPct": 0.4,
+   "excessPct": -3.49,
+   "excessSigma": -0.88
   },
   {
    "ticker": "BLUE.ST",
@@ -4773,9 +4760,9 @@
    "volume": 195625,
    "medianVolume": 317496,
    "rvol": 0.62,
-   "marketPct": 0.43,
-   "excessPct": -1.65,
-   "excessSigma": -0.46
+   "marketPct": 0.4,
+   "excessPct": -1.62,
+   "excessSigma": -0.45
   },
   {
    "ticker": "IFX.DE",
@@ -4814,7 +4801,7 @@
     45.755,
     48.625,
     49.05,
-    52.23
+    52.07
    ],
    "stories": [
     {
@@ -4884,15 +4871,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 52.23,
-   "changePct": 6.48,
-   "sigma": 1.68,
-   "volume": 2720854,
+   "close": 52.07,
+   "changePct": 6.16,
+   "sigma": 1.59,
+   "volume": 2760737,
    "medianVolume": 3858647,
-   "rvol": 0.71,
-   "marketPct": 0.43,
-   "excessPct": 6.05,
-   "excessSigma": 1.57
+   "rvol": 0.72,
+   "marketPct": 0.4,
+   "excessPct": 5.76,
+   "excessSigma": 1.49
   },
   {
    "ticker": "EMBRAC-B.ST",
@@ -4931,7 +4918,7 @@
     95.66,
     96.48,
     100.5,
-    101.6
+    102.0
    ],
    "stories": [
     {
@@ -5001,15 +4988,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 101.6,
-   "changePct": 1.09,
-   "sigma": 0.62,
-   "volume": 1987460,
+   "close": 102.0,
+   "changePct": 1.49,
+   "sigma": 0.84,
+   "volume": 2040799,
    "medianVolume": 448588,
-   "rvol": 4.43,
-   "marketPct": 0.43,
-   "excessPct": 0.66,
-   "excessSigma": 0.38
+   "rvol": 4.55,
+   "marketPct": 0.4,
+   "excessPct": 1.09,
+   "excessSigma": 0.61
   },
   {
    "ticker": "SAP.DE",
@@ -5048,9 +5035,22 @@
     210.75,
     211.65,
     209.95,
-    210.25
+    210.3
    ],
    "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcy1abVhNcTV2NzVRUDRkRkxiNHBvd3RVQklNM1ZQRkFsTE9QQmExTDItc3p1WW5qdFN5NlZqbkV5a3BkYmh3UzV5ZTdvNUdZWld6d19MRDZsbS15LWtKbVg3cGd1a2FvOE5SUFBrRFFIenBDQjNYM2NFd25wUmpFNXpPT0xrbHZSZEpta05hNXpiN0V1YWg5eWpSQzZHVVBwRk41RGxlRVMyQ25lbDZ1V25WZ21Fb1F3Zkt5WU04MjFuUXM4bnZvVnJwemZfcXByLTNiUkhJUQ?oc=5",
+     "headline": "Softwarehersteller: SAP-Aufsichtsrat legt nach US-Sanktionen Mandat nieder",
+     "english": "Software manufacturer: SAP Supervisory Board resigns after US sanctions",
+     "lang": "de",
+     "publisher": "Handelsblatt",
+     "score": 3,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcy1abVhNcTV2NzVRUDRkRkxiNHBvd3RVQklNM1ZQRkFsTE9QQmExTDItc3p1WW5qdFN5NlZqbkV5a3BkYmh3UzV5ZTdvNUdZWld6d19MRDZsbS15LWtKbVg3cGd1a2FvOE5SUFBrRFFIenBDQjNYM2NFd25wUmpFNXpPT0xrbHZSZEpta05hNXpiN0V1YWg5eWpSQzZHVVBwRk41RGxlRVMyQ25lbDZ1V25WZ21Fb1F3Zkt5WU04MjFuUXM4bnZvVnJwemZfcXByLTNiUkhJUQ?oc=5",
+     "published": "Wed, 11 Nov 2026 12:29:04 GMT",
+     "fresh": true
+    },
     {
      "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMigAFBVV95cUxOSGRjWEY4akp4V0MtNlNRRW5iVXgtNDFWWExub3N3ZXZLYVltQ0gtUzUtSlBHd2gtN2FtYUJLRERRazdCanltTURLcTNlUGQ1TWJRZ0R1NUdRQm1HTE11Q0hoWGs1SHUzdVNaSjdQZGNmNUFXcC04YlRtT1J5R2NUVdIBhgFBVV95cUxNMndUOC1VMTFWNklwbjhtdnc0bnNST2tNdFZBZVhpazZsTlFReml0Wkx2VU1ldmJCWmVfcmtuRkFSZnR1T2lXN3lZTTJ5aVFUdURSUXo2cWZTWHV1bEVTdVlqcFFoVTdEbUJYLXNERktZc1dicUFCb29RcHRuN1pKUzJ1RjU0UQ?oc=5",
@@ -5062,19 +5062,6 @@
      "material": 3,
      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOSGRjWEY4akp4V0MtNlNRRW5iVXgtNDFWWExub3N3ZXZLYVltQ0gtUzUtSlBHd2gtN2FtYUJLRERRazdCanltTURLcTNlUGQ1TWJRZ0R1NUdRQm1HTE11Q0hoWGs1SHUzdVNaSjdQZGNmNUFXcC04YlRtT1J5R2NUVdIBhgFBVV95cUxNMndUOC1VMTFWNklwbjhtdnc0bnNST2tNdFZBZVhpazZsTlFReml0Wkx2VU1ldmJCWmVfcmtuRkFSZnR1T2lXN3lZTTJ5aVFUdURSUXo2cWZTWHV1bEVTdVlqcFFoVTdEbUJYLXNERktZc1dicUFCb29RcHRuN1pKUzJ1RjU0UQ?oc=5",
      "published": "Wed, 11 Nov 2026 09:08:29 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMihwFBVV95cUxPbVY4R09rd2JFUktwWjJubGw0cGtnZnpmRzVPSE5xOTJQeDEwWXNjRF9JeFcxNGZQcmZmQlpEWlB1Tk5Pb2lsV3MtQlMwaU41RnN5bzllMG4xQVQwOTh2aWowOGhqM2tEbHJNTXg5SWl5QllVbS1COEV3dFl1NDhXbVJ2YU95YzA?oc=5",
-     "headline": "SAP-Aktie: JPMorgan erhöht Kursziel um 100 € – jetzt +31%?",
-     "english": "SAP share: JPMorgan increases price target by €100 – now +31%?",
-     "lang": "de",
-     "publisher": "sharedeals.de",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbVY4R09rd2JFUktwWjJubGw0cGtnZnpmRzVPSE5xOTJQeDEwWXNjRF9JeFcxNGZQcmZmQlpEWlB1Tk5Pb2lsV3MtQlMwaU41RnN5bzllMG4xQVQwOTh2aWowOGhqM2tEbHJNTXg5SWl5QllVbS1COEV3dFl1NDhXbVJ2YU95YzA?oc=5",
-     "published": "Wed, 11 Nov 2026 06:37:52 GMT",
      "fresh": true
     },
     {
@@ -5105,15 +5092,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 210.25,
-   "changePct": 0.14,
-   "sigma": 0.08,
-   "volume": 358620,
+   "close": 210.3,
+   "changePct": 0.17,
+   "sigma": 0.1,
+   "volume": 361931,
    "medianVolume": 2038247,
    "rvol": 0.18,
-   "marketPct": 0.43,
-   "excessPct": -0.29,
-   "excessSigma": -0.17
+   "marketPct": 0.4,
+   "excessPct": -0.23,
+   "excessSigma": -0.14
   },
   {
    "ticker": "AIR.PA",
@@ -5152,7 +5139,7 @@
     196.4,
     206.0,
     208.25,
-    208.7
+    208.6
    ],
    "stories": [
     {
@@ -5209,15 +5196,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 208.7,
-   "changePct": 0.22,
-   "sigma": 0.11,
-   "volume": 220299,
+   "close": 208.6,
+   "changePct": 0.17,
+   "sigma": 0.08,
+   "volume": 222058,
    "medianVolume": 1152567,
    "rvol": 0.19,
-   "marketPct": 0.43,
-   "excessPct": -0.21,
-   "excessSigma": -0.1
+   "marketPct": 0.4,
+   "excessPct": -0.23,
+   "excessSigma": -0.11
   },
   {
    "ticker": "AKRBP.OL",
@@ -5256,7 +5243,7 @@
     316.8,
     313.0,
     314.6,
-    320.5
+    321.1
    ],
    "stories": [
     {
@@ -5287,15 +5274,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 320.5,
-   "changePct": 1.88,
-   "sigma": 0.68,
-   "volume": 589680,
+   "close": 321.1,
+   "changePct": 2.07,
+   "sigma": 0.75,
+   "volume": 611208,
    "medianVolume": 1126950,
-   "rvol": 0.52,
-   "marketPct": 0.43,
-   "excessPct": 1.45,
-   "excessSigma": 0.52,
+   "rvol": 0.54,
+   "marketPct": 0.4,
+   "excessPct": 1.67,
+   "excessSigma": 0.61,
    "short": {
     "percent": 0.84,
     "previous": 0.71,
@@ -5342,7 +5329,7 @@
     1283.6,
     1343.8,
     1361.0,
-    1398.6
+    1396.4
    ],
    "stories": [
     {
@@ -5360,15 +5347,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 1398.6,
-   "changePct": 2.76,
-   "sigma": 0.87,
-   "volume": 231890,
+   "close": 1396.4,
+   "changePct": 2.6,
+   "sigma": 0.82,
+   "volume": 235293,
    "medianVolume": 646148,
    "rvol": 0.36,
-   "marketPct": 0.43,
-   "excessPct": 2.33,
-   "excessSigma": 0.73
+   "marketPct": 0.4,
+   "excessPct": 2.2,
+   "excessSigma": 0.69
   },
   {
    "ticker": "YAR.OL",
@@ -5407,7 +5394,7 @@
     401.0,
     411.7,
     403.5,
-    406.9
+    407.1
    ],
    "stories": [
     {
@@ -5425,15 +5412,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 406.9,
-   "changePct": 0.84,
-   "sigma": 0.61,
-   "volume": 125982,
+   "close": 407.1,
+   "changePct": 0.89,
+   "sigma": 0.65,
+   "volume": 126327,
    "medianVolume": 460940,
    "rvol": 0.27,
-   "marketPct": 0.43,
-   "excessPct": 0.41,
-   "excessSigma": 0.3,
+   "marketPct": 0.4,
+   "excessPct": 0.49,
+   "excessSigma": 0.36,
    "short": {
     "percent": 0.7,
     "previous": 1.28,
@@ -5480,7 +5467,7 @@
     357.4,
     362.9,
     366.2,
-    374.8
+    374.4
    ],
    "stories": [
     {
@@ -5498,15 +5485,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 374.8,
-   "changePct": 2.35,
-   "sigma": 1.23,
-   "volume": 321881,
+   "close": 374.4,
+   "changePct": 2.24,
+   "sigma": 1.17,
+   "volume": 322810,
    "medianVolume": 2017762,
    "rvol": 0.16,
-   "marketPct": 0.43,
-   "excessPct": 1.92,
-   "excessSigma": 1.0
+   "marketPct": 0.4,
+   "excessPct": 1.84,
+   "excessSigma": 0.96
   },
   {
    "ticker": "SUBC.OL",
@@ -5545,7 +5532,7 @@
     304.8,
     317.8,
     315.2,
-    323.0
+    322.2
    ],
    "stories": [
     {
@@ -5563,15 +5550,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 323.0,
-   "changePct": 2.47,
-   "sigma": 1.05,
-   "volume": 103969,
+   "close": 322.2,
+   "changePct": 2.22,
+   "sigma": 0.94,
+   "volume": 105449,
    "medianVolume": 294227,
-   "rvol": 0.35,
-   "marketPct": 0.43,
-   "excessPct": 2.04,
-   "excessSigma": 0.87
+   "rvol": 0.36,
+   "marketPct": 0.4,
+   "excessPct": 1.82,
+   "excessSigma": 0.77
   },
   {
    "ticker": "VOLV-B.ST",
@@ -5610,17 +5597,17 @@
     312.8,
     316.3,
     321.2,
-    324.0
+    323.9
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 324.0,
-   "changePct": 0.87,
-   "sigma": 0.74,
-   "volume": 1017408,
+   "close": 323.9,
+   "changePct": 0.84,
+   "sigma": 0.71,
+   "volume": 1058222,
    "medianVolume": 3432238,
-   "rvol": 0.3,
-   "marketPct": 0.43,
+   "rvol": 0.31,
+   "marketPct": 0.4,
    "excessPct": 0.44,
    "excessSigma": 0.37
   },
@@ -5661,7 +5648,7 @@
     269.45,
     272.8,
     271.5,
-    273.6
+    273.3
    ],
    "stories": [
     {
@@ -5705,15 +5692,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 273.6,
-   "changePct": 0.77,
-   "sigma": 0.36,
-   "volume": 1167822,
+   "close": 273.3,
+   "changePct": 0.66,
+   "sigma": 0.3,
+   "volume": 1180910,
    "medianVolume": 4282223,
-   "rvol": 0.27,
-   "marketPct": 0.43,
-   "excessPct": 0.34,
-   "excessSigma": 0.16
+   "rvol": 0.28,
+   "marketPct": 0.4,
+   "excessPct": 0.26,
+   "excessSigma": 0.12
   },
   {
    "ticker": "GUBRA.CO",
@@ -5799,12 +5786,12 @@
    "close": 296.4,
    "changePct": 0.47,
    "sigma": 0.12,
-   "volume": 29629,
+   "volume": 29985,
    "medianVolume": 57114,
    "rvol": 0.52,
-   "marketPct": 0.43,
-   "excessPct": 0.04,
-   "excessSigma": 0.01
+   "marketPct": 0.4,
+   "excessPct": 0.07,
+   "excessSigma": 0.02
   },
   {
    "ticker": "HNSA.ST",
@@ -5843,20 +5830,20 @@
     39.46,
     41.3,
     38.94,
-    43.2
+    43.5
    ],
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi3wFBVV95cUxPQm50T3Fyc1lBdEV2bWxKeGxmRXpZX2xuMW5NcGh5QzlEYWs0amRGeEVOZ0Fsem5NMDlRdTBRWFZmSUY5QzhZdTRvZm4wU3N5cUMtZWRrdWJYVldjcEVFUmF6Z3BTbEpxU2VFdGZMTENONkJmWFFvT2RSSjB1Mzc3VldybThZSURXbDA2LW5OeDVtNmdrQ2JHNkc1eE5KRTlaQTF1anJ2N01wSEhDYU1XOTNzd29RMUpMLVEtdGFBRUlQU3pNNkRRWUwySFJMdms2aTBHcE9xOTMzM09pdnZJ?oc=5",
+     "key": "web:https://news.google.com/rss/articles/CBMijwFBVV95cUxPUTkzdjJLMUxHcmJJd083c2tKYmpzOVlTSmpxR2Z3N3pCSXpNWVJWMjlubmk4VG83VTVOTjJTUldZQW1ZLUxnNExaSTJhckU1WUtJYk1rX29FbzYwU0lkekN4WkVGUzUxaWpoc3NmUTQ3S242T0tSNXZtRmxCYkt0UGZLOVhRUVg5bTZOT01hTQ?oc=5",
      "headline": "Hansa Biopharma Reports Third Quarter and Interim Year to Date 2026 Financial Results",
      "english": null,
      "lang": "en",
-     "publisher": "TradingView",
-     "score": 0,
+     "publisher": "Yahoo Finance Singapore",
+     "score": 2,
      "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPQm50T3Fyc1lBdEV2bWxKeGxmRXpZX2xuMW5NcGh5QzlEYWs0amRGeEVOZ0Fsem5NMDlRdTBRWFZmSUY5QzhZdTRvZm4wU3N5cUMtZWRrdWJYVldjcEVFUmF6Z3BTbEpxU2VFdGZMTENONkJmWFFvT2RSSjB1Mzc3VldybThZSURXbDA2LW5OeDVtNmdrQ2JHNkc1eE5KRTlaQTF1anJ2N01wSEhDYU1XOTNzd29RMUpMLVEtdGFBRUlQU3pNNkRRWUwySFJMdms2aTBHcE9xOTMzM09pdnZJ?oc=5",
-     "published": "Wed, 11 Nov 2026 07:25:07 GMT",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUTkzdjJLMUxHcmJJd083c2tKYmpzOVlTSmpxR2Z3N3pCSXpNWVJWMjlubmk4VG83VTVOTjJTUldZQW1ZLUxnNExaSTJhckU1WUtJYk1rX29FbzYwU0lkekN4WkVGUzUxaWpoc3NmUTQ3S242T0tSNXZtRmxCYkt0UGZLOVhRUVg5bTZOT01hTQ?oc=5",
+     "published": "Wed, 11 Nov 2026 06:37:00 GMT",
      "fresh": true
     },
     {
@@ -5874,15 +5861,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 43.2,
-   "changePct": 10.94,
-   "sigma": 3.58,
-   "volume": 1598205,
+   "close": 43.5,
+   "changePct": 11.71,
+   "sigma": 3.83,
+   "volume": 1605080,
    "medianVolume": 452091,
-   "rvol": 3.54,
-   "marketPct": 0.43,
-   "excessPct": 10.51,
-   "excessSigma": 3.44
+   "rvol": 3.55,
+   "marketPct": 0.4,
+   "excessPct": 11.31,
+   "excessSigma": 3.7
   },
   {
    "ticker": "ZEAL.CO",
@@ -5921,7 +5908,7 @@
     232.9,
     245.0,
     249.6,
-    245.5
+    245.4
    ],
    "stories": [
     {
@@ -5952,15 +5939,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 245.5,
-   "changePct": -1.64,
-   "sigma": -0.89,
-   "volume": 135827,
+   "close": 245.4,
+   "changePct": -1.68,
+   "sigma": -0.91,
+   "volume": 137885,
    "medianVolume": 359555,
    "rvol": 0.38,
-   "marketPct": 0.43,
-   "excessPct": -2.07,
-   "excessSigma": -1.12
+   "marketPct": 0.4,
+   "excessPct": -2.08,
+   "excessSigma": -1.13
   },
   {
    "ticker": "EUZ.DE",
@@ -6033,12 +6020,12 @@
    "close": 13.78,
    "changePct": -0.29,
    "sigma": -0.17,
-   "volume": 25822,
+   "volume": 25841,
    "medianVolume": 90824,
    "rvol": 0.28,
-   "marketPct": 0.43,
-   "excessPct": -0.72,
-   "excessSigma": -0.42
+   "marketPct": 0.4,
+   "excessPct": -0.69,
+   "excessSigma": -0.4
   },
   {
    "ticker": "GMAB.CO",
@@ -6077,7 +6064,7 @@
     3527.0,
     3661.0,
     3581.0,
-    3546.0
+    3550.0
    ],
    "stories": [
     {
@@ -6108,15 +6095,80 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 3546.0,
-   "changePct": -0.98,
-   "sigma": -0.13,
-   "volume": 63253,
+   "close": 3550.0,
+   "changePct": -0.87,
+   "sigma": -0.12,
+   "volume": 64063,
    "medianVolume": 167848,
    "rvol": 0.38,
-   "marketPct": 0.43,
-   "excessPct": -1.41,
-   "excessSigma": -0.19
+   "marketPct": 0.4,
+   "excessPct": -1.27,
+   "excessSigma": -0.18
+  },
+  {
+   "ticker": "EKTA-B.ST",
+   "name": "Elekta",
+   "sector": "Pharma & medtech",
+   "exchange": "Stockholm",
+   "currency": "SEK",
+   "thin": false,
+   "spark": [
+    52.05,
+    51.6,
+    52.95,
+    53.3,
+    53.3,
+    52.9,
+    54.45,
+    55.1,
+    55.4,
+    55.3,
+    55.55,
+    57.05,
+    55.95,
+    55.8,
+    55.9,
+    56.3,
+    57.6,
+    58.5,
+    57.45,
+    59.5,
+    58.5,
+    59.7,
+    59.1,
+    58.4,
+    60.15,
+    61.2,
+    60.75,
+    59.45,
+    62.15,
+    62.2
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMizAFBVV95cUxPNlBwb2JYTTFTaTk1dXFQbWtQanlIUElUVGJKUjRrUS1qMXlhd2JTUmlDUnpIaHEyeFp2MC1CLUhoYjBpWUZvS1J1UUl0T0VKVVhVLU53QlB1bHhTOXpRSW1ELXJIdVZRR0JfYmNTcVRDdFo4TVREODd1c2lkSWtZQ2dlRXpTVHJaYXVoYWJHbUZKUm5KRC15aDlRMVVLMW9uVmtCWDhwN0RNdFdQSlF4UTNVT2FtNUM0YUFrVW1XUDk2aVRiUUlPNjV4UWI?oc=5",
+     "headline": "Goldman Sachs raises price target for Elekta to 52 kronor (50), reiterates sell - BN",
+     "english": null,
+     "lang": "en",
+     "publisher": "www.marketscreener.com",
+     "score": 1,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNlBwb2JYTTFTaTk1dXFQbWtQanlIUElUVGJKUjRrUS1qMXlhd2JTUmlDUnpIaHEyeFp2MC1CLUhoYjBpWUZvS1J1UUl0T0VKVVhVLU53QlB1bHhTOXpRSW1ELXJIdVZRR0JfYmNTcVRDdFo4TVREODd1c2lkSWtZQ2dlRXpTVHJaYXVoYWJHbUZKUm5KRC15aDlRMVVLMW9uVmtCWDhwN0RNdFdQSlF4UTNVT2FtNUM0YUFrVW1XUDk2aVRiUUlPNjV4UWI?oc=5",
+     "published": "Wed, 11 Nov 2026 05:51:25 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-11-11",
+   "close": 62.2,
+   "changePct": 0.08,
+   "sigma": 0.04,
+   "volume": 401880,
+   "medianVolume": 1085300,
+   "rvol": 0.37,
+   "marketPct": 0.4,
+   "excessPct": -0.32,
+   "excessSigma": -0.16
   },
   {
    "ticker": "OBCK.DE",
@@ -6176,77 +6228,12 @@
    "close": 46.6,
    "changePct": 0.43,
    "sigma": 0.37,
-   "volume": 15883,
+   "volume": 15920,
    "medianVolume": 24777,
    "rvol": 0.64,
-   "marketPct": 0.43,
-   "excessPct": 0.0,
-   "excessSigma": 0.0
-  },
-  {
-   "ticker": "EKTA-B.ST",
-   "name": "Elekta",
-   "sector": "Pharma & medtech",
-   "exchange": "Stockholm",
-   "currency": "SEK",
-   "thin": false,
-   "spark": [
-    52.05,
-    51.6,
-    52.95,
-    53.3,
-    53.3,
-    52.9,
-    54.45,
-    55.1,
-    55.4,
-    55.3,
-    55.55,
-    57.05,
-    55.95,
-    55.8,
-    55.9,
-    56.3,
-    57.6,
-    58.5,
-    57.45,
-    59.5,
-    58.5,
-    59.7,
-    59.1,
-    58.4,
-    60.15,
-    61.2,
-    60.75,
-    59.45,
-    62.15,
-    62.15
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMizAFBVV95cUxPNlBwb2JYTTFTaTk1dXFQbWtQanlIUElUVGJKUjRrUS1qMXlhd2JTUmlDUnpIaHEyeFp2MC1CLUhoYjBpWUZvS1J1UUl0T0VKVVhVLU53QlB1bHhTOXpRSW1ELXJIdVZRR0JfYmNTcVRDdFo4TVREODd1c2lkSWtZQ2dlRXpTVHJaYXVoYWJHbUZKUm5KRC15aDlRMVVLMW9uVmtCWDhwN0RNdFdQSlF4UTNVT2FtNUM0YUFrVW1XUDk2aVRiUUlPNjV4UWI?oc=5",
-     "headline": "Goldman Sachs raises price target for Elekta to 52 kronor (50), reiterates sell - BN",
-     "english": null,
-     "lang": "en",
-     "publisher": "www.marketscreener.com",
-     "score": 1,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNlBwb2JYTTFTaTk1dXFQbWtQanlIUElUVGJKUjRrUS1qMXlhd2JTUmlDUnpIaHEyeFp2MC1CLUhoYjBpWUZvS1J1UUl0T0VKVVhVLU53QlB1bHhTOXpRSW1ELXJIdVZRR0JfYmNTcVRDdFo4TVREODd1c2lkSWtZQ2dlRXpTVHJaYXVoYWJHbUZKUm5KRC15aDlRMVVLMW9uVmtCWDhwN0RNdFdQSlF4UTNVT2FtNUM0YUFrVW1XUDk2aVRiUUlPNjV4UWI?oc=5",
-     "published": "Wed, 11 Nov 2026 05:51:25 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-11-11",
-   "close": 62.15,
-   "changePct": 0.0,
-   "sigma": 0.0,
-   "volume": 393308,
-   "medianVolume": 1085300,
-   "rvol": 0.36,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
-   "excessSigma": 0
+   "marketPct": 0.4,
+   "excessPct": 0.03,
+   "excessSigma": 0.03
   },
   {
    "ticker": "IBAB.BR",
@@ -6292,12 +6279,12 @@
    "close": 16.64,
    "changePct": 3.35,
    "sigma": 2.42,
-   "volume": 5165,
+   "volume": 5190,
    "medianVolume": 13681,
    "rvol": 0.38,
-   "marketPct": 0.43,
-   "excessPct": 2.92,
-   "excessSigma": 2.11
+   "marketPct": 0.4,
+   "excessPct": 2.95,
+   "excessSigma": 2.13
   },
   {
    "ticker": "NANEXA.ST",
@@ -6346,9 +6333,9 @@
    "volume": 921389,
    "medianVolume": 620425,
    "rvol": 1.49,
-   "marketPct": 0.43,
-   "excessPct": -2.68,
-   "excessSigma": -1.24
+   "marketPct": 0.4,
+   "excessPct": -2.65,
+   "excessSigma": -1.22
   },
   {
    "ticker": "PILA.ST",
@@ -6397,9 +6384,9 @@
    "volume": 15422,
    "medianVolume": 13215,
    "rvol": 1.17,
-   "marketPct": 0.43,
-   "excessPct": -4.51,
-   "excessSigma": -0.69
+   "marketPct": 0.4,
+   "excessPct": -4.48,
+   "excessSigma": -0.68
   },
   {
    "ticker": "CAMX.ST",
@@ -6445,12 +6432,12 @@
    "close": 732.0,
    "changePct": 1.31,
    "sigma": 0.65,
-   "volume": 35371,
+   "volume": 37379,
    "medianVolume": 85469,
-   "rvol": 0.41,
-   "marketPct": 0.43,
-   "excessPct": 0.88,
-   "excessSigma": 0.44
+   "rvol": 0.44,
+   "marketPct": 0.4,
+   "excessPct": 0.91,
+   "excessSigma": 0.45
   },
   {
    "ticker": "FYB.DE",
@@ -6489,19 +6476,19 @@
     14.1,
     14.5,
     14.82,
-    14.7
+    14.5
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 14.7,
-   "changePct": -0.81,
-   "sigma": -0.14,
-   "volume": 10405,
+   "close": 14.5,
+   "changePct": -2.16,
+   "sigma": -0.38,
+   "volume": 10853,
    "medianVolume": 2750,
-   "rvol": 3.78,
-   "marketPct": 0.43,
-   "excessPct": -1.24,
-   "excessSigma": -0.21
+   "rvol": 3.95,
+   "marketPct": 0.4,
+   "excessPct": -2.56,
+   "excessSigma": -0.45
   },
   {
    "ticker": "SOBI.ST",
@@ -6540,19 +6527,19 @@
     498.2,
     496.6,
     480.2,
-    483.4
+    484.0
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 483.4,
-   "changePct": 0.67,
-   "sigma": 0.41,
-   "volume": 63726,
+   "close": 484.0,
+   "changePct": 0.79,
+   "sigma": 0.49,
+   "volume": 65900,
    "medianVolume": 422226,
-   "rvol": 0.15,
-   "marketPct": 0.43,
-   "excessPct": 0.24,
-   "excessSigma": 0.15
+   "rvol": 0.16,
+   "marketPct": 0.4,
+   "excessPct": 0.39,
+   "excessSigma": 0.24
   },
   {
    "ticker": "BONEX.ST",
@@ -6591,19 +6578,19 @@
     320.6,
     324.2,
     314.4,
-    316.8
+    317.2
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 316.8,
-   "changePct": 0.76,
-   "sigma": 0.13,
-   "volume": 93009,
+   "close": 317.2,
+   "changePct": 0.89,
+   "sigma": 0.15,
+   "volume": 96794,
    "medianVolume": 348175,
-   "rvol": 0.27,
-   "marketPct": 0.43,
-   "excessPct": 0.33,
-   "excessSigma": 0.06
+   "rvol": 0.28,
+   "marketPct": 0.4,
+   "excessPct": 0.49,
+   "excessSigma": 0.08
   },
   {
    "ticker": "VICO.ST",
@@ -6642,19 +6629,19 @@
     10.22,
     10.82,
     10.98,
-    11.02
+    11.04
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 11.02,
-   "changePct": 0.36,
-   "sigma": 0.11,
-   "volume": 830801,
+   "close": 11.04,
+   "changePct": 0.55,
+   "sigma": 0.16,
+   "volume": 837223,
    "medianVolume": 1110156,
    "rvol": 0.75,
-   "marketPct": 0.43,
-   "excessPct": -0.07,
-   "excessSigma": -0.02
+   "marketPct": 0.4,
+   "excessPct": 0.15,
+   "excessSigma": 0.04
   },
   {
    "ticker": "TRMED.OL",
@@ -6703,8 +6690,8 @@
    "volume": 876202,
    "medianVolume": 2228420,
    "rvol": 0.39,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0,
    "short": {
     "percent": 1.7,
@@ -6752,7 +6739,7 @@
     16.9,
     17.23,
     17.1,
-    16.975
+    16.965
    ],
    "stories": [
     {
@@ -6822,15 +6809,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 16.975,
-   "changePct": -0.73,
-   "sigma": -0.54,
-   "volume": 1000475,
+   "close": 16.965,
+   "changePct": -0.79,
+   "sigma": -0.58,
+   "volume": 1041345,
    "medianVolume": 3961963,
-   "rvol": 0.25,
-   "marketPct": 0.43,
-   "excessPct": -1.16,
-   "excessSigma": -0.86
+   "rvol": 0.26,
+   "marketPct": 0.4,
+   "excessPct": -1.19,
+   "excessSigma": -0.87
   },
   {
    "ticker": "MRL.MC",
@@ -6869,7 +6856,7 @@
     11.6,
     11.7,
     11.83,
-    11.86
+    11.81
    ],
    "stories": [
     {
@@ -6883,7 +6870,7 @@
      "material": 2,
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdDd4V1hNc1dBeXVGZmg0dlJXdkY4dWFoVXVpWTVwZHFYdHV3QzJkNTZodTktRzFoVE94OGp1WkpkS2hUUEd1d0V1ekk4UDNHUE5QRzVoY1VWVXV4bkpEc1J5N0tqNmpLbVc0Y3BZNkthdFhXT18ydzU1ZTNjXzZ6NmlWX0ZiX3FjRVNHaXNlUVlBeHpwTDdKd3BBR1JIcEN0dzRXN3ZQTGlpSHc?oc=5",
      "published": "Wed, 11 Nov 2026 13:29:34 GMT",
-     "fresh": true
+     "fresh": false
     },
     {
      "kind": "news",
@@ -6900,15 +6887,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 11.86,
-   "changePct": 0.25,
-   "sigma": 0.13,
-   "volume": 1121220,
+   "close": 11.81,
+   "changePct": -0.17,
+   "sigma": -0.09,
+   "volume": 1141892,
    "medianVolume": 1380852,
-   "rvol": 0.81,
-   "marketPct": 0.43,
-   "excessPct": -0.18,
-   "excessSigma": -0.09
+   "rvol": 0.83,
+   "marketPct": 0.4,
+   "excessPct": -0.57,
+   "excessSigma": -0.3
   },
   {
    "ticker": "BALD-B.ST",
@@ -6947,19 +6934,70 @@
     52.92,
     53.82,
     54.04,
-    52.74
+    52.66
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 52.74,
-   "changePct": -2.41,
-   "sigma": -1.24,
-   "volume": 540445,
+   "close": 52.66,
+   "changePct": -2.55,
+   "sigma": -1.31,
+   "volume": 542391,
    "medianVolume": 2242088,
    "rvol": 0.24,
-   "marketPct": 0.43,
-   "excessPct": -2.84,
-   "excessSigma": -1.46
+   "marketPct": 0.4,
+   "excessPct": -2.95,
+   "excessSigma": -1.52
+  },
+  {
+   "ticker": "GFC.PA",
+   "name": "Gecina",
+   "sector": "Property",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    60.05,
+    59.4,
+    60.2,
+    61.55,
+    60.9,
+    60.2,
+    60.6,
+    61.1,
+    63.1,
+    62.7,
+    62.55,
+    62.9,
+    62.1,
+    61.9,
+    62.45,
+    63.85,
+    63.9,
+    63.95,
+    63.65,
+    63.45,
+    64.2,
+    64.25,
+    65.35,
+    64.55,
+    65.45,
+    65.6,
+    65.95,
+    65.9,
+    65.5,
+    64.9
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 64.9,
+   "changePct": -0.92,
+   "sigma": -1.01,
+   "volume": 75823,
+   "medianVolume": 209197,
+   "rvol": 0.36,
+   "marketPct": 0.4,
+   "excessPct": -1.32,
+   "excessSigma": -1.45
   },
   {
    "ticker": "FABG.ST",
@@ -7008,111 +7046,9 @@
    "volume": 187028,
    "medianVolume": 438383,
    "rvol": 0.43,
-   "marketPct": 0.43,
-   "excessPct": -1.84,
-   "excessSigma": -1.36
-  },
-  {
-   "ticker": "GFC.PA",
-   "name": "Gecina",
-   "sector": "Property",
-   "exchange": "Paris",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    60.05,
-    59.4,
-    60.2,
-    61.55,
-    60.9,
-    60.2,
-    60.6,
-    61.1,
-    63.1,
-    62.7,
-    62.55,
-    62.9,
-    62.1,
-    61.9,
-    62.45,
-    63.85,
-    63.9,
-    63.95,
-    63.65,
-    63.45,
-    64.2,
-    64.25,
-    65.35,
-    64.55,
-    65.45,
-    65.6,
-    65.95,
-    65.9,
-    65.5,
-    65.0
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 65.0,
-   "changePct": -0.76,
-   "sigma": -0.84,
-   "volume": 75668,
-   "medianVolume": 209197,
-   "rvol": 0.36,
-   "marketPct": 0.43,
-   "excessPct": -1.19,
-   "excessSigma": -1.32
-  },
-  {
-   "ticker": "HEBA-B.ST",
-   "name": "Heba Fastigheter",
-   "sector": "Property",
-   "exchange": "Stockholm",
-   "currency": "SEK",
-   "thin": false,
-   "spark": [
-    23.3,
-    23.25,
-    23.5,
-    23.5,
-    23.4,
-    23.35,
-    23.15,
-    23.05,
-    23.1,
-    23.45,
-    23.3,
-    23.8,
-    23.65,
-    23.85,
-    22.45,
-    22.15,
-    22.6,
-    22.2,
-    22.05,
-    21.8,
-    21.85,
-    21.8,
-    22.7,
-    22.6,
-    23.05,
-    23.5,
-    23.55,
-    23.7,
-    23.75,
-    23.45
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 23.45,
-   "changePct": -1.26,
-   "sigma": -0.63,
-   "volume": 117380,
-   "medianVolume": 305911,
-   "rvol": 0.38,
-   "marketPct": 0.43,
-   "excessPct": -1.69,
-   "excessSigma": -0.84
+   "marketPct": 0.4,
+   "excessPct": -1.81,
+   "excessSigma": -1.34
   },
   {
    "ticker": "LOGI-B.ST",
@@ -7151,19 +7087,70 @@
     14.56,
     14.74,
     14.98,
-    14.7
+    14.68
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 14.7,
-   "changePct": -1.87,
-   "sigma": -0.68,
-   "volume": 384355,
+   "close": 14.68,
+   "changePct": -2.0,
+   "sigma": -0.73,
+   "volume": 384569,
    "medianVolume": 1262308,
    "rvol": 0.3,
-   "marketPct": 0.43,
-   "excessPct": -2.3,
-   "excessSigma": -0.84
+   "marketPct": 0.4,
+   "excessPct": -2.4,
+   "excessSigma": -0.88
+  },
+  {
+   "ticker": "HEBA-B.ST",
+   "name": "Heba Fastigheter",
+   "sector": "Property",
+   "exchange": "Stockholm",
+   "currency": "SEK",
+   "thin": false,
+   "spark": [
+    23.3,
+    23.25,
+    23.5,
+    23.5,
+    23.4,
+    23.35,
+    23.15,
+    23.05,
+    23.1,
+    23.45,
+    23.3,
+    23.8,
+    23.65,
+    23.85,
+    22.45,
+    22.15,
+    22.6,
+    22.2,
+    22.05,
+    21.8,
+    21.85,
+    21.8,
+    22.7,
+    22.6,
+    23.05,
+    23.5,
+    23.55,
+    23.7,
+    23.75,
+    23.5
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 23.5,
+   "changePct": -1.05,
+   "sigma": -0.52,
+   "volume": 118429,
+   "medianVolume": 305911,
+   "rvol": 0.39,
+   "marketPct": 0.4,
+   "excessPct": -1.45,
+   "excessSigma": -0.72
   },
   {
    "ticker": "EIOF.OL",
@@ -7212,8 +7199,8 @@
    "volume": 5192,
    "medianVolume": 3008,
    "rvol": 1.73,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
    "excessSigma": 0
   },
   {
@@ -7258,6 +7245,19 @@
    "stories": [
     {
      "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiugFBVV95cUxPZ3JFTllVRTROb0tQTlp1TzVvSTZwckd5TlhNR2JGWDYzWFZ1cXo3RS1TZ1VfUExJRktZZjVaNVRWQ3llMnZiNV9RaHZQQ3p1dmYydWp6Szk4ZnpXVDJTd0hISHFnTmJxR2RodDJQOVBrLWlfa1ZhZGxKZFlIVEh0ME5DSG43LWZtT2FiMF8xc0syYW1zUWhpQlBjMWVWNHpwb3IyOUlYMmh2MjNpV0NWUDBWNTdmS1cwS1E?oc=5",
+     "headline": "SB1 raises price target for Ellos, sees continued margin potential",
+     "english": null,
+     "lang": "en",
+     "publisher": "www.marketscreener.com",
+     "score": 1,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZ3JFTllVRTROb0tQTlp1TzVvSTZwckd5TlhNR2JGWDYzWFZ1cXo3RS1TZ1VfUExJRktZZjVaNVRWQ3llMnZiNV9RaHZQQ3p1dmYydWp6Szk4ZnpXVDJTd0hISHFnTmJxR2RodDJQOVBrLWlfa1ZhZGxKZFlIVEh0ME5DSG43LWZtT2FiMF8xc0syYW1zUWhpQlBjMWVWNHpwb3IyOUlYMmh2MjNpV0NWUDBWNTdmS1cwS1E?oc=5",
+     "published": "Wed, 11 Nov 2026 13:48:26 GMT",
+     "fresh": true
+    },
+    {
+     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUFdvdUhsMHo3ZFRtam5mQ0dJR2tsUFZ4WlhLV0dreE1qdG5CY1R5U2dOQzBrWmZsc2Q5UGRCREx3TklVWG5BVGNZYjJkYV9Qa2R5YTZtQy1LelJDSTRmMG1QdVFjaXViZHA5dXNMMnRFQzhhN0huVUFJNDVYN3UwRDNxbGdJMWFCdGlB?oc=5",
      "headline": "Ellos ökar omsättning och rörelseresultat",
      "english": null,
@@ -7277,9 +7277,9 @@
    "volume": 27915,
    "medianVolume": 4773,
    "rvol": 5.85,
-   "marketPct": 0.43,
-   "excessPct": -1.4,
-   "excessSigma": -0.62
+   "marketPct": 0.4,
+   "excessPct": -1.37,
+   "excessSigma": -0.61
   },
   {
    "ticker": "CHEF.ST",
@@ -7318,19 +7318,19 @@
     81.4,
     82.0,
     82.5,
-    84.8
+    85.0
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 84.8,
-   "changePct": 2.79,
-   "sigma": 1.02,
-   "volume": 99324,
+   "close": 85.0,
+   "changePct": 3.03,
+   "sigma": 1.11,
+   "volume": 100233,
    "medianVolume": 70172,
-   "rvol": 1.42,
-   "marketPct": 0.43,
-   "excessPct": 2.36,
-   "excessSigma": 0.86
+   "rvol": 1.43,
+   "marketPct": 0.4,
+   "excessPct": 2.63,
+   "excessSigma": 0.96
   },
   {
    "ticker": "BOHUS.OL",
@@ -7379,9 +7379,9 @@
    "volume": 40536,
    "medianVolume": 83277,
    "rvol": 0.49,
-   "marketPct": 0.43,
-   "excessPct": -1.29,
-   "excessSigma": -0.51
+   "marketPct": 0.4,
+   "excessPct": -1.26,
+   "excessSigma": -0.5
   },
   {
    "ticker": "NELLY.ST",
@@ -7420,19 +7420,19 @@
     34.0,
     34.02,
     34.1,
-    33.24
+    33.3
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 33.24,
-   "changePct": -2.52,
-   "sigma": -0.42,
-   "volume": 92208,
+   "close": 33.3,
+   "changePct": -2.35,
+   "sigma": -0.39,
+   "volume": 92362,
    "medianVolume": 60663,
    "rvol": 1.52,
-   "marketPct": 0.43,
-   "excessPct": -2.95,
-   "excessSigma": -0.49
+   "marketPct": 0.4,
+   "excessPct": -2.75,
+   "excessSigma": -0.46
   },
   {
    "ticker": "BMAX.ST",
@@ -7481,9 +7481,9 @@
    "volume": 55394,
    "medianVolume": 235230,
    "rvol": 0.24,
-   "marketPct": 0.43,
-   "excessPct": -0.73,
-   "excessSigma": -0.27
+   "marketPct": 0.4,
+   "excessPct": -0.7,
+   "excessSigma": -0.26
   },
   {
    "ticker": "DSV.CO",
@@ -7522,7 +7522,7 @@
     1470.0,
     1447.0,
     1433.0,
-    1442.0
+    1444.0
    ],
    "stories": [
     {
@@ -7592,15 +7592,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 1442.0,
-   "changePct": 0.63,
-   "sigma": 0.17,
-   "volume": 86814,
+   "close": 1444.0,
+   "changePct": 0.77,
+   "sigma": 0.21,
+   "volume": 87943,
    "medianVolume": 480606,
    "rvol": 0.18,
-   "marketPct": 0.43,
-   "excessPct": 0.2,
-   "excessSigma": 0.05
+   "marketPct": 0.4,
+   "excessPct": 0.37,
+   "excessSigma": 0.1
   },
   {
    "ticker": "ODF.OL",
@@ -7639,7 +7639,7 @@
     115.6,
     119.4,
     117.4,
-    118.4
+    118.2
    ],
    "stories": [
     {
@@ -7670,15 +7670,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 118.4,
-   "changePct": 0.85,
-   "sigma": 0.38,
-   "volume": 10155,
+   "close": 118.2,
+   "changePct": 0.68,
+   "sigma": 0.31,
+   "volume": 10188,
    "medianVolume": 41350,
    "rvol": 0.25,
-   "marketPct": 0.43,
-   "excessPct": 0.42,
-   "excessSigma": 0.19
+   "marketPct": 0.4,
+   "excessPct": 0.28,
+   "excessSigma": 0.13
   },
   {
    "ticker": "HAUTO.OL",
@@ -7738,12 +7738,12 @@
    "close": 175.5,
    "changePct": 3.3,
    "sigma": 1.98,
-   "volume": 97370,
+   "volume": 97825,
    "medianVolume": 328862,
    "rvol": 0.3,
-   "marketPct": 0.43,
-   "excessPct": 2.87,
-   "excessSigma": 1.72,
+   "marketPct": 0.4,
+   "excessPct": 2.9,
+   "excessSigma": 1.74,
    "short": {
     "percent": 0,
     "previous": 0.59,
@@ -7790,33 +7790,33 @@
     424.7,
     432.7,
     417.9,
-    431.7
+    431.1
    ],
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi6AFBVV95cUxOWnFZd2xaVFI5WTZBWUxTVjBDRU9jdFFRbWV4YW0ybXlacXNPMXM3TG1YQmtNUExJUC1TcFhLRVZLY0w0MkZ0Q2JPSTk3a0NoSU1aeUVkc2tralFNS2l2OUUzc2djUmpNSHVCdWJEV2c5bUpKYjQ1eTY2aEdSR2R1NzBnaFZMUXJ1dkx0WGxacGFkQnRSOFFnRGNQNFVBTWpvNzUtbzZfV1JsOWVyR2x5WG90LUxpZnZhSFlwNHYwUHJNYnRQMWNhWkdvRjZXdFJ2eDVLMDB4WHctZVMyeVpWel8xWWFaTmQ5?oc=5",
+     "key": "web:https://news.google.com/rss/articles/CBMi7wFBVV95cUxOYVBUekJhaThPQk4tR2N3NDRwOVFUSnlkQUplcTdDNzI2ZDd5YWpWdWgxMmY3X05vUnQzZ2FpTFp3UmNmOHFCRWVFSU5yWi1maFVBcm1BMzZnS1FCSEFkTDF5eXNjOUNqV2pYczFWaW1sNnhnZ19WOGdHNDhWeFd0MFZldnhld3JIM1BxQUgzOGI5dURWT0pJRkEydmYybXBySkJvSjJSWmZ5NV9PcHVrN1R4aGxrazBSaWFDeXJVUEhXTGk5a3BxS2czcmVvcTc4ZjRrbm52VGhneENZZTQzalctY21yZkU0clBKOW1pbw?oc=5",
      "headline": "Axonify Launches Analytics Assistant, Putting Actionable, Real-time Frontline Data a Question Away",
      "english": null,
      "lang": "en",
-     "publisher": "Business Wire",
+     "publisher": "Morningstar",
      "score": 1,
      "material": 1,
-     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOWnFZd2xaVFI5WTZBWUxTVjBDRU9jdFFRbWV4YW0ybXlacXNPMXM3TG1YQmtNUExJUC1TcFhLRVZLY0w0MkZ0Q2JPSTk3a0NoSU1aeUVkc2tralFNS2l2OUUzc2djUmpNSHVCdWJEV2c5bUpKYjQ1eTY2aEdSR2R1NzBnaFZMUXJ1dkx0WGxacGFkQnRSOFFnRGNQNFVBTWpvNzUtbzZfV1JsOWVyR2x5WG90LUxpZnZhSFlwNHYwUHJNYnRQMWNhWkdvRjZXdFJ2eDVLMDB4WHctZVMyeVpWel8xWWFaTmQ5?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOYVBUekJhaThPQk4tR2N3NDRwOVFUSnlkQUplcTdDNzI2ZDd5YWpWdWgxMmY3X05vUnQzZ2FpTFp3UmNmOHFCRWVFSU5yWi1maFVBcm1BMzZnS1FCSEFkTDF5eXNjOUNqV2pYczFWaW1sNnhnZ19WOGdHNDhWeFd0MFZldnhld3JIM1BxQUgzOGI5dURWT0pJRkEydmYybXBySkJvSjJSWmZ5NV9PcHVrN1R4aGxrazBSaWFDeXJVUEhXTGk5a3BxS2czcmVvcTc4ZjRrbm52VGhneENZZTQzalctY21yZkU0clBKOW1pbw?oc=5",
      "published": "Wed, 11 Nov 2026 13:00:00 GMT",
      "fresh": true
     }
    ],
    "date": "2026-11-11",
-   "close": 431.7,
-   "changePct": 3.3,
-   "sigma": 1.2,
-   "volume": 498468,
+   "close": 431.1,
+   "changePct": 3.16,
+   "sigma": 1.15,
+   "volume": 511031,
    "medianVolume": 943956,
-   "rvol": 0.53,
-   "marketPct": 0.43,
-   "excessPct": 2.87,
-   "excessSigma": 1.04
+   "rvol": 0.54,
+   "marketPct": 0.4,
+   "excessPct": 2.76,
+   "excessSigma": 1.0
   },
   {
    "ticker": "REACH.OL",
@@ -7879,9 +7879,9 @@
    "volume": 90022,
    "medianVolume": 196011,
    "rvol": 0.46,
-   "marketPct": 0.43,
-   "excessPct": 1.52,
-   "excessSigma": 0.66
+   "marketPct": 0.4,
+   "excessPct": 1.55,
+   "excessSigma": 0.68
   },
   {
    "ticker": "IWS.OL",
@@ -7944,9 +7944,9 @@
    "volume": 330,
    "medianVolume": 2569,
    "rvol": 0.13,
-   "marketPct": 0.43,
-   "excessPct": -0.1,
-   "excessSigma": -0.08
+   "marketPct": 0.4,
+   "excessPct": -0.07,
+   "excessSigma": -0.06
   },
   {
    "ticker": "WWI.OL",
@@ -8006,85 +8006,12 @@
    "close": 891.0,
    "changePct": 0.45,
    "sigma": 0.21,
-   "volume": 4541,
+   "volume": 4548,
    "medianVolume": 19538,
    "rvol": 0.23,
-   "marketPct": 0.43,
-   "excessPct": 0.02,
-   "excessSigma": 0.01
-  },
-  {
-   "ticker": "CADLR.OL",
-   "name": "Cadeler",
-   "sector": "Shipping & offshore",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": false,
-   "spark": [
-    55.35,
-    55.0,
-    53.85,
-    52.1,
-    51.65,
-    53.2,
-    52.5,
-    52.6,
-    52.1,
-    51.25,
-    52.0,
-    52.05,
-    51.15,
-    52.0,
-    50.1,
-    52.2,
-    52.45,
-    53.65,
-    57.35,
-    58.2,
-    59.35,
-    58.2,
-    59.0,
-    58.65,
-    59.0,
-    64.7,
-    61.0,
-    58.2,
-    58.05,
-    58.05
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiswFBVV95cUxNZWRmS0NiYXZRTmVGT3NILTE4TUk0c255WElLdnRQS1l4ZW0ycXBkWGdfSGYwcmN3NGJOanFwSktHajdXQmhscmhfYkl2TFJZNmpRZnN3UmVPT0Ria0hfa0FOSFEzSjdUYzZBc3RLNVpKTE9EcW13cm1ETlZBeHh4RF9hcnBWUHZNU21MY2lXaTNXRTk2RHBaaC1OOG5sTm9pUk9yV01rdGNlR2M4NmJVQlJ1dw?oc=5",
-     "headline": "Hampidjan stock gains offshore wind order from Cadeler",
-     "english": null,
-     "lang": "en",
-     "publisher": "ad-hoc-news.de",
-     "score": 0,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZWRmS0NiYXZRTmVGT3NILTE4TUk0c255WElLdnRQS1l4ZW0ycXBkWGdfSGYwcmN3NGJOanFwSktHajdXQmhscmhfYkl2TFJZNmpRZnN3UmVPT0Ria0hfa0FOSFEzSjdUYzZBc3RLNVpKTE9EcW13cm1ETlZBeHh4RF9hcnBWUHZNU21MY2lXaTNXRTk2RHBaaC1OOG5sTm9pUk9yV01rdGNlR2M4NmJVQlJ1dw?oc=5",
-     "published": "Wed, 11 Nov 2026 02:35:17 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-11-05",
-   "close": 58.05,
-   "changePct": 0.0,
-   "sigma": 0.0,
-   "volume": 0,
-   "medianVolume": 542005,
-   "rvol": 0.0,
-   "marketPct": 0.43,
-   "excessPct": -0.43,
-   "excessSigma": 0,
-   "short": {
-    "percent": 0.8,
-    "previous": 0.75,
-    "date": "2026-11-09",
-    "holders": 1,
-    "largest": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
-    "largestPercent": 0.8
-   }
+   "marketPct": 0.4,
+   "excessPct": 0.05,
+   "excessSigma": 0.02
   },
   {
    "ticker": "WAWI.OL",
@@ -8123,19 +8050,19 @@
     160.1,
     162.8,
     159.0,
-    163.9
+    163.7
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 163.9,
-   "changePct": 3.08,
-   "sigma": 1.88,
-   "volume": 107228,
+   "close": 163.7,
+   "changePct": 2.96,
+   "sigma": 1.81,
+   "volume": 108440,
    "medianVolume": 267176,
-   "rvol": 0.4,
-   "marketPct": 0.43,
-   "excessPct": 2.65,
-   "excessSigma": 1.62,
+   "rvol": 0.41,
+   "marketPct": 0.4,
+   "excessPct": 2.56,
+   "excessSigma": 1.57,
    "short": {
     "percent": 0,
     "previous": 0.5,
@@ -8192,9 +8119,9 @@
    "volume": 166681,
    "medianVolume": 303097,
    "rvol": 0.55,
-   "marketPct": 0.43,
-   "excessPct": 2.73,
-   "excessSigma": 1.08
+   "marketPct": 0.4,
+   "excessPct": 2.76,
+   "excessSigma": 1.09
   },
   {
    "ticker": "DOFG.OL",
@@ -8233,19 +8160,19 @@
     122.1,
     124.7,
     127.5,
-    130.4
+    130.3
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 130.4,
-   "changePct": 2.27,
-   "sigma": 1.1,
-   "volume": 102127,
+   "close": 130.3,
+   "changePct": 2.2,
+   "sigma": 1.06,
+   "volume": 104883,
    "medianVolume": 280625,
-   "rvol": 0.36,
-   "marketPct": 0.43,
-   "excessPct": 1.84,
-   "excessSigma": 0.89,
+   "rvol": 0.37,
+   "marketPct": 0.4,
+   "excessPct": 1.8,
+   "excessSigma": 0.87,
    "short": {
     "percent": 0,
     "previous": 0.5,
@@ -8292,19 +8219,19 @@
     356.8,
     358.4,
     351.0,
-    359.8
+    359.4
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 359.8,
-   "changePct": 2.51,
-   "sigma": 1.08,
-   "volume": 22880,
+   "close": 359.4,
+   "changePct": 2.39,
+   "sigma": 1.03,
+   "volume": 22884,
    "medianVolume": 63892,
    "rvol": 0.36,
-   "marketPct": 0.43,
-   "excessPct": 2.08,
-   "excessSigma": 0.89
+   "marketPct": 0.4,
+   "excessPct": 1.99,
+   "excessSigma": 0.86
   },
   {
    "ticker": "KCC.OL",
@@ -8353,9 +8280,9 @@
    "volume": 58614,
    "medianVolume": 105300,
    "rvol": 0.56,
-   "marketPct": 0.43,
-   "excessPct": 1.89,
-   "excessSigma": 0.76
+   "marketPct": 0.4,
+   "excessPct": 1.92,
+   "excessSigma": 0.77
   },
   {
    "ticker": "SOFF.OL",
@@ -8394,19 +8321,78 @@
     68.3,
     67.7,
     68.5,
-    69.5
+    69.4
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 69.5,
-   "changePct": 1.46,
-   "sigma": 0.65,
-   "volume": 67862,
+   "close": 69.4,
+   "changePct": 1.31,
+   "sigma": 0.58,
+   "volume": 67872,
    "medianVolume": 89251,
    "rvol": 0.76,
-   "marketPct": 0.43,
-   "excessPct": 1.03,
-   "excessSigma": 0.46
+   "marketPct": 0.4,
+   "excessPct": 0.91,
+   "excessSigma": 0.4
+  },
+  {
+   "ticker": "CADLR.OL",
+   "name": "Cadeler",
+   "sector": "Shipping & offshore",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": false,
+   "spark": [
+    55.35,
+    55.0,
+    53.85,
+    52.1,
+    51.65,
+    53.2,
+    52.5,
+    52.6,
+    52.1,
+    51.25,
+    52.0,
+    52.05,
+    51.15,
+    52.0,
+    50.1,
+    52.2,
+    52.45,
+    53.65,
+    57.35,
+    58.2,
+    59.35,
+    58.2,
+    59.0,
+    58.65,
+    59.0,
+    64.7,
+    61.0,
+    58.2,
+    58.05,
+    58.05
+   ],
+   "stories": [],
+   "date": "2026-11-05",
+   "close": 58.05,
+   "changePct": 0.0,
+   "sigma": 0.0,
+   "volume": 0,
+   "medianVolume": 542005,
+   "rvol": 0.0,
+   "marketPct": 0.4,
+   "excessPct": -0.4,
+   "excessSigma": 0,
+   "short": {
+    "percent": 0.8,
+    "previous": 0.75,
+    "date": "2026-11-09",
+    "holders": 1,
+    "largest": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
+    "largestPercent": 0.8
+   }
   },
   {
    "ticker": "SMHN.DE",
@@ -8445,7 +8431,7 @@
     44.2,
     45.5,
     47.8,
-    51.05
+    50.85
    ],
    "stories": [
     {
@@ -8489,15 +8475,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 51.05,
-   "changePct": 6.8,
-   "sigma": 1.45,
-   "volume": 42367,
+   "close": 50.85,
+   "changePct": 6.38,
+   "sigma": 1.36,
+   "volume": 43032,
    "medianVolume": 137134,
    "rvol": 0.31,
-   "marketPct": 0.43,
-   "excessPct": 6.37,
-   "excessSigma": 1.36
+   "marketPct": 0.4,
+   "excessPct": 5.98,
+   "excessSigma": 1.27
   },
   {
    "ticker": "BEAMMW-B.ST",
@@ -8536,7 +8522,7 @@
     17.7,
     17.54,
     17.48,
-    19.26
+    19.02
    ],
    "stories": [
     {
@@ -8567,15 +8553,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 19.26,
-   "changePct": 10.18,
-   "sigma": 2.83,
-   "volume": 208193,
+   "close": 19.02,
+   "changePct": 8.81,
+   "sigma": 2.45,
+   "volume": 214573,
    "medianVolume": 72022,
-   "rvol": 2.89,
-   "marketPct": 0.43,
-   "excessPct": 9.75,
-   "excessSigma": 2.71
+   "rvol": 2.98,
+   "marketPct": 0.4,
+   "excessPct": 8.41,
+   "excessSigma": 2.34
   },
   {
    "ticker": "AUTO.OL",
@@ -8614,7 +8600,7 @@
     14.15,
     15.75,
     15.61,
-    16.2
+    16.18
    ],
    "stories": [
     {
@@ -8645,15 +8631,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 16.2,
-   "changePct": 3.78,
-   "sigma": 1.18,
-   "volume": 3223365,
+   "close": 16.18,
+   "changePct": 3.65,
+   "sigma": 1.14,
+   "volume": 3520289,
    "medianVolume": 3969665,
-   "rvol": 0.81,
-   "marketPct": 0.43,
-   "excessPct": 3.35,
-   "excessSigma": 1.05,
+   "rvol": 0.89,
+   "marketPct": 0.4,
+   "excessPct": 3.25,
+   "excessSigma": 1.02,
    "short": {
     "percent": 2.1,
     "previous": 2.2,
@@ -8700,7 +8686,7 @@
     27.28,
     26.98,
     26.08,
-    26.6
+    26.62
    ],
    "stories": [
     {
@@ -8731,15 +8717,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 26.6,
-   "changePct": 1.99,
-   "sigma": 0.4,
-   "volume": 22588,
+   "close": 26.62,
+   "changePct": 2.07,
+   "sigma": 0.42,
+   "volume": 22611,
    "medianVolume": 77936,
    "rvol": 0.29,
-   "marketPct": 0.43,
-   "excessPct": 1.56,
-   "excessSigma": 0.31
+   "marketPct": 0.4,
+   "excessPct": 1.67,
+   "excessSigma": 0.34
   },
   {
    "ticker": "MYCR.ST",
@@ -8778,7 +8764,7 @@
     278.8,
     283.0,
     291.0,
-    300.8
+    300.4
    ],
    "stories": [
     {
@@ -8796,15 +8782,15 @@
     }
    ],
    "date": "2026-11-11",
-   "close": 300.8,
-   "changePct": 3.37,
-   "sigma": 1.27,
-   "volume": 107722,
+   "close": 300.4,
+   "changePct": 3.23,
+   "sigma": 1.22,
+   "volume": 108258,
    "medianVolume": 342567,
-   "rvol": 0.31,
-   "marketPct": 0.43,
-   "excessPct": 2.94,
-   "excessSigma": 1.11
+   "rvol": 0.32,
+   "marketPct": 0.4,
+   "excessPct": 2.83,
+   "excessSigma": 1.07
   },
   {
    "ticker": "IVU.DE",
@@ -8843,19 +8829,19 @@
     26.7,
     26.5,
     26.6,
-    27.6
+    27.3
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 27.6,
-   "changePct": 3.76,
-   "sigma": 1.9,
-   "volume": 6098,
+   "close": 27.3,
+   "changePct": 2.63,
+   "sigma": 1.33,
+   "volume": 6693,
    "medianVolume": 10745,
-   "rvol": 0.57,
-   "marketPct": 0.43,
-   "excessPct": 3.33,
-   "excessSigma": 1.68
+   "rvol": 0.62,
+   "marketPct": 0.4,
+   "excessPct": 2.23,
+   "excessSigma": 1.13
   },
   {
    "ticker": "AAC.ST",
@@ -8894,19 +8880,19 @@
     98.7,
     101.4,
     104.2,
-    108.2
+    108.0
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 108.2,
-   "changePct": 3.84,
-   "sigma": 1.05,
-   "volume": 45617,
+   "close": 108.0,
+   "changePct": 3.65,
+   "sigma": 1.0,
+   "volume": 45627,
    "medianVolume": 17884,
    "rvol": 2.55,
-   "marketPct": 0.43,
-   "excessPct": 3.41,
-   "excessSigma": 0.93
+   "marketPct": 0.4,
+   "excessPct": 3.25,
+   "excessSigma": 0.89
   },
   {
    "ticker": "ALRIB.PA",
@@ -8945,70 +8931,19 @@
     5.81,
     6.06,
     6.13,
-    6.37
+    6.36
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 6.37,
-   "changePct": 3.92,
-   "sigma": 0.78,
-   "volume": 50311,
+   "close": 6.36,
+   "changePct": 3.75,
+   "sigma": 0.75,
+   "volume": 50743,
    "medianVolume": 96801,
    "rvol": 0.52,
-   "marketPct": 0.43,
-   "excessPct": 3.49,
-   "excessSigma": 0.69
-  },
-  {
-   "ticker": "GOMX.ST",
-   "name": "Gomspace",
-   "sector": "Tech & space",
-   "exchange": "Stockholm",
-   "currency": "SEK",
-   "thin": false,
-   "spark": [
-    11.17,
-    11.0,
-    11.04,
-    10.37,
-    10.17,
-    9.705,
-    10.24,
-    9.9,
-    9.86,
-    10.39,
-    10.29,
-    12.46,
-    12.42,
-    12.18,
-    11.8,
-    11.39,
-    11.24,
-    11.33,
-    12.67,
-    12.51,
-    13.35,
-    12.8,
-    12.33,
-    12.28,
-    12.2,
-    11.06,
-    11.55,
-    12.6,
-    13.14,
-    13.74
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 13.74,
-   "changePct": 4.57,
-   "sigma": 0.68,
-   "volume": 218507,
-   "medianVolume": 367967,
-   "rvol": 0.59,
-   "marketPct": 0.43,
-   "excessPct": 4.14,
-   "excessSigma": 0.62
+   "marketPct": 0.4,
+   "excessPct": 3.35,
+   "excessSigma": 0.67
   },
   {
    "ticker": "SHT-B.ST",
@@ -9057,9 +8992,60 @@
    "volume": 37911,
    "medianVolume": 32156,
    "rvol": 1.18,
-   "marketPct": 0.43,
-   "excessPct": 1.47,
-   "excessSigma": 0.5
+   "marketPct": 0.4,
+   "excessPct": 1.5,
+   "excessSigma": 0.51
+  },
+  {
+   "ticker": "GOMX.ST",
+   "name": "Gomspace",
+   "sector": "Tech & space",
+   "exchange": "Stockholm",
+   "currency": "SEK",
+   "thin": false,
+   "spark": [
+    11.17,
+    11.0,
+    11.04,
+    10.37,
+    10.17,
+    9.705,
+    10.24,
+    9.9,
+    9.86,
+    10.39,
+    10.29,
+    12.46,
+    12.42,
+    12.18,
+    11.8,
+    11.39,
+    11.24,
+    11.33,
+    12.67,
+    12.51,
+    13.35,
+    12.8,
+    12.33,
+    12.28,
+    12.2,
+    11.06,
+    11.55,
+    12.6,
+    13.14,
+    13.53
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 13.53,
+   "changePct": 2.97,
+   "sigma": 0.44,
+   "volume": 225950,
+   "medianVolume": 367967,
+   "rvol": 0.61,
+   "marketPct": 0.4,
+   "excessPct": 2.57,
+   "excessSigma": 0.38
   },
   {
    "ticker": "OVZON.ST",
@@ -9098,19 +9084,19 @@
     36.6,
     37.9,
     39.22,
-    38.86
+    38.98
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 38.86,
-   "changePct": -0.92,
-   "sigma": -0.28,
-   "volume": 142798,
+   "close": 38.98,
+   "changePct": -0.61,
+   "sigma": -0.19,
+   "volume": 143298,
    "medianVolume": 503652,
    "rvol": 0.28,
-   "marketPct": 0.43,
-   "excessPct": -1.35,
-   "excessSigma": -0.41
+   "marketPct": 0.4,
+   "excessPct": -1.01,
+   "excessSigma": -0.31
   },
   {
    "ticker": "SMOP.OL",
@@ -9159,9 +9145,9 @@
    "volume": 95288,
    "medianVolume": 257691,
    "rvol": 0.37,
-   "marketPct": 0.43,
-   "excessPct": 0.7,
-   "excessSigma": 0.14
+   "marketPct": 0.4,
+   "excessPct": 0.73,
+   "excessSigma": 0.15
   }
  ],
  "alerts": [
@@ -9317,6 +9303,21 @@
   },
   {
    "kind": "news",
+   "key": "web:https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcy1abVhNcTV2NzVRUDRkRkxiNHBvd3RVQklNM1ZQRkFsTE9QQmExTDItc3p1WW5qdFN5NlZqbkV5a3BkYmh3UzV5ZTdvNUdZWld6d19MRDZsbS15LWtKbVg3cGd1a2FvOE5SUFBrRFFIenBDQjNYM2NFd25wUmpFNXpPT0xrbHZSZEpta05hNXpiN0V1YWg5eWpSQzZHVVBwRk41RGxlRVMyQ25lbDZ1V25WZ21Fb1F3Zkt5WU04MjFuUXM4bnZvVnJwemZfcXByLTNiUkhJUQ?oc=5",
+   "headline": "Softwarehersteller: SAP-Aufsichtsrat legt nach US-Sanktionen Mandat nieder",
+   "english": "Software manufacturer: SAP Supervisory Board resigns after US sanctions",
+   "lang": "de",
+   "publisher": "Handelsblatt",
+   "score": 3,
+   "material": 3,
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcy1abVhNcTV2NzVRUDRkRkxiNHBvd3RVQklNM1ZQRkFsTE9QQmExTDItc3p1WW5qdFN5NlZqbkV5a3BkYmh3UzV5ZTdvNUdZWld6d19MRDZsbS15LWtKbVg3cGd1a2FvOE5SUFBrRFFIenBDQjNYM2NFd25wUmpFNXpPT0xrbHZSZEpta05hNXpiN0V1YWg5eWpSQzZHVVBwRk41RGxlRVMyQ25lbDZ1V25WZ21Fb1F3Zkt5WU04MjFuUXM4bnZvVnJwemZfcXByLTNiUkhJUQ?oc=5",
+   "published": "Wed, 11 Nov 2026 12:29:04 GMT",
+   "fresh": true,
+   "ticker": "SAP.DE",
+   "name": "SAP"
+  },
+  {
+   "kind": "news",
    "key": "web:https://news.google.com/rss/articles/CBMigAFBVV95cUxOSGRjWEY4akp4V0MtNlNRRW5iVXgtNDFWWExub3N3ZXZLYVltQ0gtUzUtSlBHd2gtN2FtYUJLRERRazdCanltTURLcTNlUGQ1TWJRZ0R1NUdRQm1HTE11Q0hoWGs1SHUzdVNaSjdQZGNmNUFXcC04YlRtT1J5R2NUVdIBhgFBVV95cUxNMndUOC1VMTFWNklwbjhtdnc0bnNST2tNdFZBZVhpazZsTlFReml0Wkx2VU1ldmJCWmVfcmtuRkFSZnR1T2lXN3lZTTJ5aVFUdURSUXo2cWZTWHV1bEVTdVlqcFFoVTdEbUJYLXNERktZc1dicUFCb29RcHRuN1pKUzJ1RjU0UQ?oc=5",
    "headline": "Critical SAP PROXYGATE and ICM2SHELL Vulnerabilities Allow Server Takeover Without Authentication",
    "english": null,
@@ -9401,21 +9402,6 @@
    "material": 2,
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSndpNmpuaS05RUdSLWUtT0owakF1YU9YU0QxcjhBSWFEZjJOVHMyYTRGQWJacnJVT0ZtSmtsSHExTG1OOV9kc0lKVzV3Yk9lM0dQLXl5eWNYdEY2dnZ0Q25jU0F1MUxxWnNZLWRkRG1kOHl0a1NzWHlmNWhneE9sUWtuOWdpc0xVZlAzT20tR0V4Rks0TUZCYzRaQjltZXVhMEp6OW5Gbw?oc=5",
    "published": "Wed, 11 Nov 2026 07:27:31 GMT",
-   "fresh": true,
-   "ticker": "UCG.MI",
-   "name": "Unicredit"
-  },
-  {
-   "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUWc0bE5GUFV1bXRSVmtSY3VUWEFGbGxxQ2xZTXRQX0tnRHRjRkstVzhGbi1fMHZMbXVibDB6SVZnUjBBbnl1TmUzR05WdlB4MkVVTkdEZ0RITWs5d1F1YS1hbVo0RXB1Wk4zVEFzU2lvZld4TjdXc05uVjhoWlhram9YWUJfRGJadkJtQXMxTWQzdm9mNFZ4d0Z1cWZGZkZXZ3FZc2FJUWo?oc=5",
-   "headline": "Dividendi a Piazza Affari: le cedole in arrivo tra novembre e dicembre",
-   "english": "Dividends in Piazza Affari: coupons coming between November and December",
-   "lang": "it",
-   "publisher": "Morningstar",
-   "score": 2,
-   "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUWc0bE5GUFV1bXRSVmtSY3VUWEFGbGxxQ2xZTXRQX0tnRHRjRkstVzhGbi1fMHZMbXVibDB6SVZnUjBBbnl1TmUzR05WdlB4MkVVTkdEZ0RITWs5d1F1YS1hbVo0RXB1Wk4zVEFzU2lvZld4TjdXc05uVjhoWlhram9YWUJfRGJadkJtQXMxTWQzdm9mNFZ4d0Z1cWZGZkZXZ3FZc2FJUWo?oc=5",
-   "published": "Tue, 10 Nov 2026 15:11:06 GMT",
    "fresh": true,
    "ticker": "UCG.MI",
    "name": "Unicredit"
