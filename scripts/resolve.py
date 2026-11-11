@@ -34,9 +34,15 @@ UA = "Mozilla/5.0 (compatible; stockwatch/1.0; +https://nordl.dev)"
 
 # European venues, best first. A company listed in several places should be
 # followed where it is domiciled: that is where its filings and its press are.
+#
+# ".IR" is Euronext Dublin and was missing, which sent every Irish company to
+# London instead: Glenveagh resolved to GLV.L on 36,507 shares a day when
+# GVR.IR trades 1,029,889 - the same company, 28 times the liquidity, and the
+# market its filings and its press actually come from.
 VENUE_RANK = {
     ".OL": 1, ".ST": 1, ".CO": 1, ".HE": 1, ".IC": 1,
     ".DE": 2, ".PA": 2, ".AS": 2, ".BR": 2, ".MI": 2, ".MC": 2, ".LS": 2,
+    ".IR": 2,
     ".VI": 3, ".SW": 3, ".L": 3, ".F": 4, ".MU": 5, ".BE": 5, ".HM": 5,
     ".DU": 5, ".SG": 5, ".STU": 5, ".HA": 5,
 }

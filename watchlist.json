@@ -327,6 +327,23 @@
       "medianVolume": 308906
     },
     {
+      "ticker": "1AST.DE",
+      "name": "ASTA Energy Solutions",
+      "sector": "Grid & energy",
+      "exchange": "XETRA",
+      "annualVolPct": 59.7,
+      "medianVolume": 17868,
+      "thin": true
+    },
+    {
+      "ticker": "ORSTED.CO",
+      "name": "\u00d8rsted",
+      "sector": "Grid & energy",
+      "exchange": "Copenhagen",
+      "annualVolPct": 31.0,
+      "medianVolume": 1190532
+    },
+    {
       "ticker": "ALO.PA",
       "name": "Alstom",
       "sector": "Industry & defence",
@@ -415,6 +432,14 @@
       "annualVolPct": 37.9,
       "medianVolume": 19580,
       "thin": true
+    },
+    {
+      "ticker": "MTRS.ST",
+      "name": "Munters",
+      "sector": "Industry & defence",
+      "exchange": "Stockholm",
+      "annualVolPct": 42.3,
+      "medianVolume": 507505
     },
     {
       "ticker": "EL.PA",
@@ -666,6 +691,14 @@
       "medianVolume": 360506
     },
     {
+      "ticker": "HNSA.ST",
+      "name": "Hansa Biopharma",
+      "sector": "Pharma & medtech",
+      "exchange": "Stockholm",
+      "annualVolPct": 69.4,
+      "medianVolume": 443348
+    },
+    {
       "ticker": "BALD-B.ST",
       "name": "Balder",
       "sector": "Property",
@@ -761,6 +794,14 @@
       "exchange": "Stockholm",
       "annualVolPct": 71.9,
       "medianVolume": 216444
+    },
+    {
+      "ticker": "BOHUS.OL",
+      "name": "Bohus",
+      "sector": "Retail",
+      "exchange": "Oslo",
+      "annualVolPct": 33.7,
+      "medianVolume": 61637
     },
     {
       "ticker": "CMBTO.OL",
@@ -859,6 +900,22 @@
       "annualVolPct": 25.3,
       "medianVolume": 13902,
       "thin": true
+    },
+    {
+      "ticker": "DNORD.CO",
+      "name": "D/S Norden",
+      "sector": "Shipping & offshore",
+      "exchange": "Copenhagen",
+      "annualVolPct": 38.7,
+      "medianVolume": 56172
+    },
+    {
+      "ticker": "KCC.OL",
+      "name": "Klaveness Combination Carriers",
+      "sector": "Shipping & offshore",
+      "exchange": "Oslo",
+      "annualVolPct": 32.1,
+      "medianVolume": 57382
     },
     {
       "ticker": "AAC.ST",
@@ -1005,6 +1062,72 @@
       "exchange": "Milan",
       "annualVolPct": 36.8,
       "medianVolume": 2288797
+    },
+    {
+      "ticker": "AFG.OL",
+      "name": "AF Gruppen",
+      "sector": "Construction",
+      "exchange": "Oslo",
+      "annualVolPct": 19.1,
+      "medianVolume": 25172
+    },
+    {
+      "ticker": "GVR.IR",
+      "name": "Glenveagh Properties",
+      "sector": "Construction",
+      "exchange": "Dublin",
+      "annualVolPct": 23.1,
+      "medianVolume": 1029889
+    },
+    {
+      "ticker": "NRC.OL",
+      "name": "NRC Group",
+      "sector": "Construction",
+      "exchange": "Oslo",
+      "annualVolPct": 46.6,
+      "medianVolume": 354078
+    },
+    {
+      "ticker": "QBEN.ST",
+      "name": "Qben Infra",
+      "sector": "Construction",
+      "exchange": "Stockholm",
+      "annualVolPct": 45.0,
+      "medianVolume": 23576
+    },
+    {
+      "ticker": "RAIL.ST",
+      "name": "Railcare",
+      "sector": "Construction",
+      "exchange": "Stockholm",
+      "annualVolPct": 35.2,
+      "medianVolume": 15322,
+      "thin": true
+    },
+    {
+      "ticker": "SBO.OL",
+      "name": "Selvaag Bolig",
+      "sector": "Construction",
+      "exchange": "Oslo",
+      "annualVolPct": 21.5,
+      "medianVolume": 14885,
+      "thin": true
+    },
+    {
+      "ticker": "SKA-B.ST",
+      "name": "Skanska",
+      "sector": "Construction",
+      "exchange": "Stockholm",
+      "annualVolPct": 21.3,
+      "medianVolume": 643668
+    },
+    {
+      "ticker": "VEI.OL",
+      "name": "Veidekke",
+      "sector": "Construction",
+      "exchange": "Oslo",
+      "annualVolPct": 18.5,
+      "medianVolume": 58347
     }
   ]
 }
