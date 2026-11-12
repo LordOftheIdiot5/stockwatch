@@ -84,3 +84,14 @@ class SourceTelemetryTests(unittest.TestCase):
         self.assertEqual(provider('https://api3.oslo.oslobors.no/v1/newsreader/list'),'Oslo NewsWeb')
         self.assertEqual(provider('https://news.google.com/rss/search?q=ASML'),'Google News')
         self.assertEqual(provider('https://ssr.finanstilsynet.no/api/v2/instruments'),'Finanstilsynet shorts')
+
+class HistoryValidationTests(unittest.TestCase):
+    def test_history_rows_are_source_data_and_ordered(self):
+        from build_history import validate_bars
+        bars=validate_bars([{'date':'2026-11-12','close':20,'volume':100},
+                            {'date':'2026-11-11','close':18,'volume':20},
+                            {'date':'2026-11-11','close':999,'volume':1},
+                            {'date':'2026-11-10','close':-1,'volume':5},
+                            {'date':'unparseable','close':4,'volume':5}])
+        self.assertEqual([b['date'] for b in bars],['2026-11-11','2026-11-12'])
+        self.assertEqual(bars[0]['close'],18)

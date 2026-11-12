@@ -32,6 +32,17 @@ Copy `index.html`, the four HTML pages, `research.js`, `research.css`, `scripts/
 
 The new index provides navigation to the research pages while continuing to load the existing V2 `app.js` and `style.css`.
 
+## Historical price cache and financial fundamentals
+
+The optional scripts `scripts/build_history.py` and `scripts/import_fundamentals.py` are included. Neither fabricates figures nor runs on the hourly scan. The history builder calls the existing Yahoo chart endpoint to retrieve dated, unadjusted daily closes and volume:
+
+```sh
+python scripts/build_history.py --limit 20
+python scripts/build_history.py --full --refresh-days 7
+```
+
+Compare charts are empty until real dated history files exist under `data/history/`. A commercial product must confirm market-data redistribution rights or use a licensed provider. Source-linked financial data can be imported from `data/fundamentals-template.csv` using `scripts/import_fundamentals.py`; the initial JSON contains no invented ratios.
+
 ## Follow-ups
 
 1. Move archival history out of Git when it grows; consider Cloudflare R2 or a small API if the feed becomes large.
