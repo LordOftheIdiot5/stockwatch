@@ -1,406 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stockwatch</title>
-  <meta name="robots" content="noindex">
-  <meta name="description" content="Hourly scanner for European equities: price, volume, regulated disclosures and news in every language.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 22 L11 14 L17 19 L29 7' fill='none' stroke='%233ee0c5' stroke-width='3'/%3E%3C/svg%3E">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a101b">
+  <meta name="description" content="European stocks, market movements, filings, and news in one clear dashboard.">
+  <title>Stockwatch — European Market Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c1522'/%3E%3Cpath d='M5 22l7-7 5 4L27 8' fill='none' stroke='%234be0b8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="alternate" type="application/rss+xml" title="stockwatch signals" href="feed.xml">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="aurora" aria-hidden="true"></div>
-
-  <main class="page">
-    <header class="masthead">
-      <span class="wordmark">stock<span>watch</span></span>
-      <span class="stamp" id="stamp">loading…</span>
-    </header>
-
-    <div class="stale-bar" id="staleBar"></div>
-
-    <section class="lede-block">
-      <h1>What moved, and why.</h1>
-      <p class="lede">
-        European equities, scanned hourly. Moves are measured against each
-        instrument's own volatility and against the day's market, so a stock
-        only appears here if it did something the rest of the list did not.
-        News is read in every language its companies are written about in, and
-        translated where it needs to be. Thinly traded listings show their
-        volume but raise no alert on it, because three times very little is
-        one order rather than a crowd.
-      </p>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <div>
-          <h2>Signals</h2>
-          <p class="panel-note" id="alertNote">—</p>
-        </div>
-        <a class="feed-link" href="feed.xml">RSS</a>
+<body data-theme="dark">
+<div class="layout">
+  <aside class="sidebar" aria-label="Main navigation">
+    <a href="#overview" class="brand" aria-label="Stockwatch home"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M4 23 12 14l5 5L28 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-word">stock<span>watch</span><small>EUROPEAN MARKETS</small></span></a>
+    <div class="sidebar-label">WORKSPACE</div>
+    <nav class="nav-menu" aria-label="Sections">
+      <a href="#overview" class="nav-item active" data-section="overview"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Overview</a>
+      <a href="#markets" class="nav-item" data-section="markets"><svg viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-9"/><path d="M16 6h5v5"/></svg>Market movers</a>
+      <a href="#alerts" class="nav-item" data-section="alerts"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"/><path d="M10 21h4"/></svg>News & filings</a>
+      <a href="#watchlist" class="nav-item" data-section="watchlist"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2-5.5-2.9-5.5 2.9 1-6.2L3 9.6l6.2-.9Z"/></svg>Stock screener</a>
+      <a href="#drivers" class="nav-item" data-section="drivers"><svg viewBox="0 0 24 24"><path d="M3 17h18M3 12h18M3 7h18"/></svg>Market drivers</a>
+      <a href="#shorts" class="nav-item" data-section="shorts"><svg viewBox="0 0 24 24"><path d="M4 4v16h16M7 16l4-4 3 2 5-7"/></svg>Short interest</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-label">MARKET COVERAGE</div>
+      <div class="coverage-line"><span class="dot"></span><span id="nav-coverage">European exchanges</span></div>
+      <div class="side-note">Price moves, unusual volume, company disclosures and news. One place to check.</div>
+      <button class="nav-method" id="methodButton"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.3"/></svg>Data & methodology</button>
+      <div class="side-footer">Independent market monitor <span>·</span> Not investment advice</div>
+    </div>
+  </aside>
+  <div class="main-shell">
+    <div class="ticker-tape" id="tickerTape"><span class="tape-title"><span class="dot"></span>MARKET CONTEXT</span><span class="tape-loading">Loading market context…</span></div>
+    <header class="topbar"><div class="mobile-brand"><span class="brand-mark">↗</span>stock<span>watch</span></div><div class="breadcrumb">Workspace <span>/</span> <strong>Market overview</strong></div><div class="top-actions"><label class="global-search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="topSearch" type="search" placeholder="Search stocks…" autocomplete="off" aria-label="Search stocks"><kbd>/</kbd></label><button class="icon-button" id="themeButton" title="Toggle light / dark mode" aria-label="Toggle light / dark mode"><svg viewBox="0 0 24 24"><path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z"/></svg></button><a href="feed.xml" class="rss-link" title="RSS feed">RSS <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="4" cy="20" r="1"/></svg></a></div></header>
+    <main id="overview" class="content">
+      <div class="data-warning" id="qualityBanner" hidden></div>
+      <div id="demoBanner" class="demo-banner" hidden><span class="preview-dot"></span><b>Design preview</b> — using a selected snapshot from 12 Nov 2026, not live prices. The production version connects to the scanner automatically.</div>
+      <div class="page-header"><div><div class="eyebrow"><span class="tiny-pulse"></span> EUROPEAN EQUITIES <span class="tiny-sep">/</span> MARKET OVERVIEW</div><h1>Markets at a glance<span class="title-dot">.</span></h1><p>What moved, what matters, and the news behind it.</p></div><div class="update-wrap"><span class="update-label">LATEST SCAN</span><span id="lastUpdated" class="last-updated">Loading…</span><span id="dataState" class="data-state"><i></i> Scanner data</span></div></div>
+      <div class="stats-grid" id="statsGrid"><div class="stat-card skeleton">Loading market data…</div></div>
+      <div class="section-grid" id="markets">
+        <section class="panel movers-panel"><div class="section-heading"><div><div class="micro-heading">PRICE ACTION</div><h2>Top movers <span class="section-detail">Today</span></h2></div><div class="segmented" role="group" aria-label="Mover direction"><button data-direction="gainers" class="active">Gainers</button><button data-direction="losers">Losers</button></div></div><div class="movers-labels"><span>COMPANY</span><span>30D TREND</span><span>LAST PRICE</span><span>1D CHANGE</span></div><div class="movers-list" id="moversList"><p class="loading">Loading companies…</p></div></section>
+        <section class="panel feed-panel" id="alerts"><div class="section-heading"><div><div class="micro-heading">COMPANY INTELLIGENCE</div><h2>News & filings</h2></div><a href="feed.xml" class="panel-link">RSS feed ↗</a></div><div class="feed-tabs"><button data-feed="all" class="active">All updates</button><button data-feed="disclosure">Filings</button><button data-feed="news">News</button><button data-feed="price">Price signals</button><button data-feed="short">Short positions</button></div><div class="feed-list" id="feedList"><p class="loading">Loading updates…</p></div><button id="moreAlerts" class="view-more">Show more updates <span>↓</span></button></section>
       </div>
-      <ul class="alerts" id="alerts"></ul>
-    </section>
-
-    <section class="panel" id="contextPanel" hidden>
-      <div class="panel-head">
-        <div>
-          <h2>Market context</h2>
-          <p class="panel-note" id="contextNote">—</p>
-        </div>
+      <section class="panel screener-panel" id="watchlist"><div class="section-heading screener-heading"><div><div class="micro-heading">STOCK SCREENER</div><h2>Explore companies <span class="section-detail" id="resultCount"></span></h2></div><div class="screener-tools"><select id="exchangeFilter" aria-label="Filter by exchange"><option value="all">All exchanges</option></select><select id="sortFilter" aria-label="Sort stocks"><option value="absChange">Biggest moves</option><option value="gainers">Top gainers</option><option value="losers">Top losers</option><option value="rvol">Highest volume spike</option><option value="name">Company name</option><option value="market">Relative move</option></select></div></div><div class="table-shortcuts"><div class="chip-group"><button data-list="all" class="active">All stocks</button><button data-list="unusual">Unusual activity</button><button data-list="favorites">☆ My watchlist</button><button data-list="missing">Unavailable</button></div><div class="table-hint">Select a company to see its detail <span>↗</span></div></div><div class="sector-strip" id="sectorStrip" aria-label="Filter by sector"></div><div class="table-scroll"><table class="stocks-table"><thead><tr><th style="width:34px"></th><th>COMPANY</th><th>EXCHANGE</th><th>LAST PRICE</th><th>1D CHANGE</th><th>30D TREND</th><th>REL. VOLUME <span title="Volume versus its 20-day median">ⓘ</span></th></tr></thead><tbody id="stockRows"></tbody></table></div><div class="table-footer"><span id="tableFooter">Showing tracked companies</span><button id="downloadCsv" class="link-button">Download visible rows · CSV ↓</button></div></section>
+      <section class="panel drivers-panel" id="drivers">
+        <div class="section-heading"><div><div class="micro-heading">REAL-MARKET CONTEXT</div><h2>Market drivers <span class="section-detail">Commodities · Freight · Share classes</span></h2></div><span class="quiet-caption" id="contextDate">Daily data</span></div>
+        <div class="feed-tabs driver-tabs"><button class="active" data-driver="all">All markets</button><button data-driver="metals">Metals</button><button data-driver="energy">Energy</button><button data-driver="freight">Freight</button><button data-driver="spreads">A/B shares</button></div>
+        <div id="driversContent" class="drivers-content"></div>
+      </section>
+      <div class="lower-grid">
+        <section class="panel context-panel" id="shorts"><div class="section-heading"><div><div class="micro-heading">REGULATORY DATA</div><h2>Disclosed short positions</h2></div><span class="quiet-caption" id="shortCount">Latest register</span></div><div id="shortList" class="short-list"><p class="empty">Loading…</p></div><p class="context-note">Published short positions only. This is not total short interest; positions below reporting thresholds are not included.</p></section>
+        <section class="panel about-panel"><div class="micro-heading">CLEARLY SOURCED</div><h2>Facts first.<br><span>Signals second.</span></h2><p>Compare price movement with source-backed company coverage. Price and volume activity is descriptive, not predictive.</p><button id="methodButton2" class="method-link">Data sources and methodology ↗</button><div class="about-lines"><span>Source-linked disclosures</span><span>Actual daily closes</span><span>Missing data shown openly</span></div></section>
       </div>
-      <div id="context" class="context"></div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <div>
-          <h2>Companies</h2>
-          <p class="panel-note" id="marketNote">—</p>
-        </div>
-        <input type="search" id="filter" class="filter" placeholder="filter…"
-               aria-label="Filter companies" autocomplete="off">
-      </div>
-      <div id="companies" class="companies"></div>
-      <p class="empty" id="noMatch" hidden>Nothing matches that.</p>
-    </section>
-
-    <footer class="foot">
-      <p>
-        Free data only: Yahoo for prices, Oslo Børs NewsWeb and MFN for
-        regulated disclosures, Finanstilsynet for disclosed short positions,
-        Google News in <span id="langCount">several</span> languages for
-        open-web coverage.
-        <a href="https://github.com/LordOftheIdiot5/stockwatch" target="_blank" rel="noopener noreferrer">Source</a>.
-      </p>
-      <p class="disclaimer">
-        Not advice, and not a view on where anything is going.
-      </p>
-      <p class="disclaimer">
-        The price and volume thresholds have now been measured against two
-        years of daily bars, entering at the close after each signal:
-        <strong>they do not predict returns</strong>. Two of twenty-four
-        signal-and-horizon pairs beat the baseline over the full period, which
-        is about what twenty-four tests produce by chance — and both vanished
-        when the period was split in half, appearing only in the first year.
-        A control that peeked at the future showed up at +17%, so the
-        measurement works; there is simply nothing there.
-        <a href="https://github.com/LordOftheIdiot5/stockwatch/blob/main/scripts/backtest.py"
-           target="_blank" rel="noopener noreferrer">The method</a>, and
-        <a href="https://github.com/LordOftheIdiot5/stockwatch/blob/main/data/backtest.json"
-           target="_blank" rel="noopener noreferrer">the numbers</a>.
-        So this is a tool for noticing things quickly and reading them in one
-        place — which is what the filings and the news are for. It is not an
-        edge, and the volume column is not a forecast.
-      </p>
-    </footer>
-  </main>
-
-  <script>
-    const fmt = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 });
-    const signed = v => (v > 0 ? "+" : "") + fmt.format(v);
-    const cls = v => (v > 0 ? "up" : v < 0 ? "down" : "");
-
-    // Languages read directly. Everything else leads with its translation.
-    const READABLE = new Set(["en", "no", "nb", "nn", "sv", "da", "es"]);
-    const LANG_NAME = {
-      en: "English", no: "Norwegian", nb: "Norwegian", nn: "Norwegian",
-      sv: "Swedish", da: "Danish", fi: "Finnish", de: "German", fr: "French",
-      nl: "Dutch", es: "Spanish", it: "Italian", pt: "Portuguese", pl: "Polish"
-    };
-
-    const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
-    // The scan runs Mon-Fri, hourly at :05 between 06:05 and 17:05 UTC.
-    // Count the slots that should have fired since the data was written,
-    // rather than measuring elapsed clock time: the Friday-to-Monday gap is a
-    // legitimate sixty-one hours, so an hours-based rule would fire every
-    // weekend and be ignored by the time it mattered.
-    function missedSlots(iso) {
-      const since = new Date(iso);
-      if (!isFinite(since)) return 0;
-      const t = new Date(since);
-      t.setUTCMinutes(5, 0, 0);
-      t.setUTCHours(t.getUTCHours() + 1);
-      let missed = 0;
-      const now = Date.now();
-      // Bounded so a wildly old or malformed timestamp cannot spin the page.
-      for (let i = 0; i < 24 * 400 && t.getTime() <= now; i++) {
-        const day = t.getUTCDay(), hour = t.getUTCHours();
-        if (day >= 1 && day <= 5 && hour >= 6 && hour <= 17) missed++;
-        t.setUTCHours(t.getUTCHours() + 1);
-      }
-      return missed;
-    }
-
-    function ago(iso) {
-      const mins = Math.round((Date.now() - new Date(iso)) / 60000);
-      if (!isFinite(mins)) return "";
-      if (mins < 2) return "just now";
-      if (mins < 60) return mins + "m ago";
-      const h = Math.round(mins / 60);
-      return h < 24 ? h + "h ago" : Math.round(h / 24) + "d ago";
-    }
-
-    function badge(a) {
-      if (a.kind === "price") return '<span class="tag price">price</span>';
-      if (a.kind === "short") return '<span class="tag short">short</span>';
-      if (a.kind === "disclosure") {
-        return a.regulatory
-          ? '<span class="tag reg">regulatory</span>'
-          : '<span class="tag">disclosure</span>';
-      }
-      return '<span class="tag news">news</span>';
-    }
-
-    // A headline in a language the reader does not have leads with its
-    // translation, and keeps the original underneath rather than discarding it:
-    // machine translation is good enough to triage on and not to quote.
-    function headlineOf(s) {
-      const readable = READABLE.has(s.lang);
-      if (!s.english || readable) return { lead: s.headline, under: null };
-      return { lead: s.english, under: s.headline };
-    }
-
-    function sparkline(values) {
-      if (!values || values.length < 2) return "";
-      const lo = Math.min(...values), hi = Math.max(...values);
-      const span = hi - lo || 1;
-      const w = 88, h = 24;
-      const pts = values.map((v, i) => {
-        const x = (i / (values.length - 1)) * w;
-        const y = h - ((v - lo) / span) * (h - 3) - 1.5;
-        return `${x.toFixed(1)},${y.toFixed(1)}`;
-      }).join(" ");
-      const rising = values[values.length - 1] >= values[0];
-      return `<svg class="spark ${rising ? "up" : "down"}" viewBox="0 0 ${w} ${h}"
-                   width="${w}" height="${h}" aria-hidden="true" focusable="false">
-                <polyline points="${pts}" fill="none" stroke="currentColor"
-                          stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg>`;
-    }
-
-    function storyRow(s) {
-      const { lead, under } = headlineOf(s);
-      const lang = s.lang && s.lang !== "en"
-        ? `<span class="lang" title="${esc(LANG_NAME[s.lang] || s.lang)}">${esc(s.lang)}</span>` : "";
-      const reg = s.kind === "disclosure"
-        ? `<span class="tag reg tiny">${s.regulatory ? "regulatory" : "filing"}</span>` : "";
-      const when = s.published ? ago(s.published) : "";
-      const meta = [s.publisher, when].filter(Boolean).map(esc).join(" · ");
-      return `
-        <li class="story${s.fresh ? " fresh" : ""}">
-          <a class="story-head" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(lead)}</a>
-          ${under ? `<p class="original" lang="${esc(s.lang)}">${esc(under)}</p>` : ""}
-          <p class="story-meta">${reg}${lang}${meta}</p>
-        </li>`;
-    }
-
-    function companyRow(c) {
-      const stories = c.stories || [];
-      const fresh = stories.filter(s => s.fresh).length;
-      const count = stories.length
-        ? `<span class="count${fresh ? " has-fresh" : ""}">${stories.length}</span>` : "";
-      const hot = Math.abs(c.excessSigma) >= 2 || c.rvol >= 2.5;
-      return `
-        <details class="company${hot ? " hot" : ""}" data-search="${esc((c.name + " " + c.ticker).toLowerCase())}">
-          <summary>
-            <span class="c-name">
-              <span class="c-title">${esc(c.name)}</span>
-              <span class="c-ticker mono">${esc(c.ticker)}</span>
-            </span>
-            ${sparkline(c.spark)}
-            <span class="c-price mono">${fmt.format(c.close)} <span class="ccy">${esc(c.currency || "")}</span></span>
-            <span class="c-move mono ${cls(c.changePct)}">${signed(c.changePct)}%</span>
-            <span class="c-vs mono ${cls(c.excessPct)}" title="move net of the day's market">${signed(c.excessPct)}%</span>
-            <span class="c-rvol mono ${c.rvol >= 2.5 && !c.thin ? "hot-num" : ""}${c.thin ? " thin" : ""}"
-                  title="${c.thin ? "volume vs its 20-day median - too thinly traded for this to mean much, so it raises no alert" : "volume vs its own 20-day median"}">${fmt.format(c.rvol)}x</span>
-            ${count}
-          </summary>
-          <div class="c-body">
-            ${stories.length
-              ? `<ul class="stories">${stories.map(storyRow).join("")}</ul>`
-              : `<p class="empty">Nothing published about ${esc(c.name)} in the last 48 hours.</p>`}
-            <p class="c-stats mono">
-              ${fmt.format(c.excessSigma)}σ against the market ·
-              volume ${fmt.format(c.rvol)}× its 20-day median ·
-              ${c.short ? `<span class="short-note">${fmt.format(c.short.percent)}% disclosed short${
-                   c.short.holders > 1 ? ` across ${c.short.holders} funds` : ""}${
-                   c.short.largest ? `, largest ${esc(c.short.largest)} at ${fmt.format(c.short.largestPercent)}%` : ""
-                 } as of ${esc(c.short.date)}</span> · ` : ""}
-              ${esc(c.exchange || "")}
-              <a href="https://finance.yahoo.com/quote/${encodeURIComponent(c.ticker)}"
-                 target="_blank" rel="noopener noreferrer">chart</a>
-            </p>
-          </div>
-        </details>`;
-    }
-
-    // Year position says more than a percentage: 0 is the year's low, 100 its
-    // high. A metal at 97 is a different story from one at 11 even if both
-    // moved the same amount today.
-    function contextRow(item) {
-      const day = item.changePct, month = item.monthPct;
-      const cls = v => v == null ? "" : v < 0 ? " neg" : v > 0 ? " pos" : "";
-      const sign = v => v == null ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
-      return `<tr>
-        <td class="c-name">${esc(item.name)}${item.proxy ? '<span class="c-proxy">proxy</span>' : ""}</td>
-        <td class="c-last">${item.last.toLocaleString()}<span class="c-unit">${esc(item.unit || "")}</span></td>
-        <td class="c-pct${cls(day)}">${sign(day)}</td>
-        <td class="c-pct${cls(month)}">${sign(month)}</td>
-        <td class="c-year"><span class="c-bar"><i style="left:${item.yearPosition ?? 50}%"></i></span></td>
-      </tr>`;
-    }
-
-    function contextTable(title, rows, note) {
-      if (!rows.length) return "";
-      return `<div class="c-block">
-        <h3>${esc(title)}</h3>
-        <table class="c-table">
-          <thead><tr><th></th><th>Last</th><th>1d</th><th>1m</th><th>Year range</th></tr></thead>
-          <tbody>${rows.map(contextRow).join("")}</tbody>
-        </table>
-        ${note ? `<p class="c-note">${esc(note)}</p>` : ""}
-      </div>`;
-    }
-
-    fetch("data/context.json?cb=" + Date.now())
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(d => {
-        const metals = (d.commodities || []).filter(c => c.group === "metals");
-        const energy = (d.commodities || []).filter(c => c.group === "energy");
-        let html = contextTable("Metals", metals)
-                 + contextTable("Energy", energy)
-                 + contextTable("Freight", d.freight || [], d._freightNote);
-
-        // Share classes are a spread and where it sits, never an instruction.
-        const classes = (d.shareClasses || []).filter(c => c.tradableRange);
-        if (classes.length) {
-          html += `<div class="c-block"><h3>A/B share spreads</h3>
-            <table class="c-table"><thead><tr>
-              <th></th><th>A/B</th><th>1y range</th><th>vs mean</th>
-            </tr></thead><tbody>` +
-            classes.map(c => `<tr>
-              <td class="c-name">${esc(c.name)}${
-                // A drifting spread has no mean to revert to, so its z-score
-                // describes the drift rather than an opportunity. Marked here
-                // because the largest z-scores are usually the drifting ones.
-                c.stationary ? "" : '<span class="c-proxy">drifting</span>'}</td>
-              <td class="c-last">${c.ratio.toFixed(4)}</td>
-              <td class="c-pct">${c.rangePct.toFixed(2)}%</td>
-              <td class="c-pct${c.stationary && Math.abs(c.z) >= 1.5 ? " pos" : ""}">${
-                c.stationary ? `${c.z >= 0 ? "+" : ""}${c.z.toFixed(2)}σ` : "—"}</td>
-            </tr>`).join("") +
-            `</tbody></table><p class="c-note">${esc(d._shareClassNote || "")}</p></div>`;
-        }
-
-        document.getElementById("context").innerHTML = html;
-        document.getElementById("contextNote").textContent =
-          "Commodities and freight the watchlist is exposed to.";
-        document.getElementById("contextPanel").hidden = false;
-      })
-      .catch(() => { /* Context is background. Its absence must not be an error. */ });
-
-    fetch("data/signals.json?cb=" + Date.now())
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(d => {
-        const stamp = document.getElementById("stamp");
-        stamp.textContent = "updated " + ago(d.generated);
-
-        // Two missed slots, not one: a single dropped run is a transient and
-        // firing on it would train you to ignore the bar.
-        const missed = missedSlots(d.generated);
-        if (missed >= 2) {
-          stamp.classList.add("stale");
-          const bar = document.getElementById("staleBar");
-          bar.innerHTML =
-            "<b>These numbers are stale.</b> The last scan finished " +
-            ago(d.generated) + ", and " + missed +
-            " scheduled runs have been missed since." +
-            "<div class=\"detail\">Scans run weekdays, hourly from 06:05 to " +
-            "17:05 UTC. Check the trigger with " +
-            "<code>systemctl status stockwatch-scan</code> on the VPS - the " +
-            "last two outages were a dropped GitHub schedule and an expired " +
-            "token, and neither reported itself as an error.</div>";
-          bar.classList.add("show");
-        }
-        document.getElementById("langCount").textContent =
-          (d.languages || []).length ? `${d.languages.length}` : "several";
-
-        const alerts = d.alerts || [];
-        document.getElementById("alertNote").textContent = alerts.length
-          ? `${alerts.length} across ${d.tickers} companies`
-          : "Nothing stood out in the last scan.";
-        document.getElementById("alerts").innerHTML = alerts.map(a => {
-          const { lead, under } = headlineOf(a);
-          const lang = a.lang && a.lang !== "en"
-            ? `<span class="lang">${esc(a.lang)}</span>` : "";
-          return `
-            <li class="alert">
-              ${badge(a)}
-              <div class="alert-body">
-                <a class="alert-head" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">${esc(lead)}</a>
-                ${under ? `<p class="original" lang="${esc(a.lang)}">${esc(under)}</p>` : ""}
-                <p class="alert-meta">${lang}${esc(a.name)} · ${esc(a.ticker)}${a.publisher ? " · " + esc(a.publisher) : ""}</p>
-              </div>
-            </li>`;
-        }).join("");
-
-        const companies = d.companies || [];
-        document.getElementById("marketNote").textContent =
-          `${companies.length} companies · market baseline ${signed(d.marketPct ?? 0)}%, `
-          + `the median move across the list. Click any company for its coverage.`;
-        // A hundred rows in one list is a wall. They arrived grouped by theme,
-        // so they are shown that way, and a group opens if anything in it is new.
-        const groups = [];
-        for (const c of companies) {
-          const name = c.sector || "Other";
-          let g = groups.find(x => x.name === name);
-          if (!g) groups.push(g = { name, rows: [] });
-          g.rows.push(c);
-        }
-        document.getElementById("companies").innerHTML = groups.map(g => {
-          const fresh = g.rows.reduce((n, c) => n + (c.stories || []).filter(s => s.fresh).length, 0);
-          return `
-            <section class="group" data-group="${esc(g.name.toLowerCase())}">
-              <h3 class="group-head">
-                <span>${esc(g.name)}</span>
-                <span class="group-meta mono">${g.rows.length}${fresh ? ` · <span class="group-fresh">${fresh} new</span>` : ""}</span>
-              </h3>
-              ${g.rows.map(companyRow).join("")}
-            </section>`;
-        }).join("");
-
-        const filter = document.getElementById("filter");
-        const noMatch = document.getElementById("noMatch");
-        filter.addEventListener("input", () => {
-          const q = filter.value.trim().toLowerCase();
-          let shown = 0;
-          document.querySelectorAll(".group").forEach(group => {
-            let inGroup = 0;
-            group.querySelectorAll(".company").forEach(el => {
-              // A sector name is a search term too: "aqua" should find the
-              // group as readily as it finds a company.
-              const hit = !q || el.dataset.search.includes(q) || group.dataset.group.includes(q);
-              el.hidden = !hit;
-              if (hit) inGroup++;
-            });
-            group.hidden = inGroup === 0;
-            shown += inGroup;
-          });
-          noMatch.hidden = shown > 0;
-        });
-      })
-      .catch(() => {
-        document.getElementById("stamp").textContent = "could not load data";
-      });
-  </script>
+      <footer class="footer"><span>© Stockwatch · Market monitoring, not investment advice</span><div><button id="methodButton3">Methodology</button><a href="https://github.com/LordOftheIdiot5/stockwatch" target="_blank" rel="noopener noreferrer">GitHub source ↗</a></div></footer>
+    </main>
+  </div>
+</div>
+<div id="drawerOverlay" class="drawer-overlay" hidden></div><aside class="stock-drawer" id="stockDrawer" aria-label="Stock details" aria-modal="true" role="dialog" hidden><div class="drawer-head"><span class="drawer-kicker">STOCK DETAILS</span><button id="drawerClose" aria-label="Close stock details">✕</button></div><div id="drawerContent"></div></aside>
+<div id="methodOverlay" class="method-overlay" hidden><div class="method-modal" role="dialog" aria-modal="true" aria-labelledby="methodTitle"><button id="methodClose" class="modal-close" aria-label="Close">✕</button><div class="micro-heading">THE METHODOLOGY</div><h2 id="methodTitle">What these signals mean</h2><p><b>Price change.</b> Percentage movement from the prior closing price. Prices are sourced from Yahoo's chart endpoint and are not tick-by-tick market quotes.</p><p><b>Unusual activity.</b> Daily move compared with the watchlist median and each stock's own volatility; relative volume compared with its 20-day median. Thinly traded shares are not volume-alerted.</p><p><b>News & filings.</b> Company disclosures and selected news links are grouped by stock. Automated matching and translation can make errors; verify important items against the original source.</p><p><b>No predictive claim.</b> Historical backtesting did not establish a reliable trading edge from the price and volume thresholds.</p><div class="modal-actions"><a target="_blank" rel="noopener noreferrer" href="https://github.com/LordOftheIdiot5/stockwatch/blob/main/scripts/backtest.py">Read the backtest ↗</a><a target="_blank" rel="noopener noreferrer" href="https://github.com/LordOftheIdiot5/stockwatch">View source ↗</a></div></div></div>
+<script src="app.js" defer></script>
 </body>
 </html>
