@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import re
+import hashlib
 from collections import Counter
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
@@ -75,7 +76,8 @@ def collect_news(snapshot):
         if not link.startswith('https://'): continue
         date=iso(story.get('published')) or iso(snapshot.get('generated'))
         if not date: continue
-        key=str(story.get('key') or f'{ticker}:{link}')
+        raw_key=str(story.get('key') or link)
+        key=ticker+':'+hashlib.sha256(raw_key.encode('utf-8')).hexdigest()
         out.append(dict(id=key,ticker=ticker,name=name,sector=companies.get(ticker,{}).get('sector',''),
                         type=story['kind'],headline=title,english=story.get('english'),
                         publisher=story.get('publisher') or '',url=link,published=date,
@@ -166,6 +168,8 @@ def build(root=ROOT, now=None):
     prev=json.loads(old_path.read_text(encoding='utf-8')).get('items',[]) if old_path.exists() else []
     news=merge_news(prev,collect_news(snapshot),now)
     archive=dict(generated=iso(now),items=news,retentionDays=RETENTION_DAYS)
+    latest=dict(generated=iso(now),items=news[:100],totalStored=len(news),limit=100)
+    (folder/'news-latest.json').write_text(json.dumps(latest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     events=extract_events(news,now)
     # Allow curated, source-linked entries; never overwrite or fabricate them.
     manual_path=folder/'events-manual.json'

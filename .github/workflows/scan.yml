@@ -38,8 +38,8 @@ jobs:
       - name: Test signal logic
         run: python tests/test_signals.py
 
-      - name: Test research pipeline
-        run: python -m unittest discover -s tests -p test_research_data.py
+      - name: Test research pipeline and archive imports
+        run: python -m unittest discover -s tests -p 'test_*.py'
 
       - name: Scan
         id: scan
@@ -54,6 +54,15 @@ jobs:
 
       - name: Build research archive, calendar and data health
         run: python scripts/build_research_data.py
+
+      - name: Preserve news history as Git-backed monthly partitions
+        run: python scripts/build_monthly_archive.py
+
+      - name: Optional database archive ingestion
+        env:
+          STOCKWATCH_ARCHIVE_URL: ${{ secrets.STOCKWATCH_ARCHIVE_URL }}
+          STOCKWATCH_ARCHIVE_TOKEN: ${{ secrets.STOCKWATCH_ARCHIVE_TOKEN }}
+        run: python scripts/push_archive.py
 
       - name: Notify
         if: steps.scan.outputs.fresh != '0'
