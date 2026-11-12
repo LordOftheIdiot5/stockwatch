@@ -1,0 +1,10 @@
+name = "stockwatch-research-api"
+main = "worker/index.js"
+compatibility_date = "2026-11-13"
+workers_dev = true
+
+# Use the REAL ID returned by wrangler d1 create.
+[[d1_databases]]
+binding = "DB"
+database_name = "stockwatch-research"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

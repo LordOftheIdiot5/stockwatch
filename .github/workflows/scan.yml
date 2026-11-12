@@ -41,6 +41,9 @@ jobs:
       - name: Test research pipeline and archive imports
         run: python -m unittest discover -s tests -p 'test_*.py'
 
+      - name: Test Cloudflare D1 Worker API
+        run: node --test tests/test_worker.mjs
+
       - name: Scan
         id: scan
         env:
