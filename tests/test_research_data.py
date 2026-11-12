@@ -64,3 +64,23 @@ class ResearchPipelineTests(unittest.TestCase):
             self.assertEqual(len(loads((root/'data'/'news-archive.json').read_text())['items']),1)
 
 if __name__=='__main__':unittest.main()
+
+class SourceTelemetryTests(unittest.TestCase):
+    def test_transport_state_distinguishes_errors(self):
+        from build_research_data import _provider_status
+        v=_provider_status({'providers': {
+            'Yahoo prices': {'requests':12,'succeeded':12,'failed':0},
+            'MFN filings': {'requests':3,'succeeded':2,'failed':1},
+            'Google News': {'requests':2,'succeeded':0,'failed':2},
+            'Oslo NewsWeb': {'requests':0,'succeeded':0,'failed':0}
+        }})
+        self.assertEqual(v['Yahoo prices'],'requests_ok')
+        self.assertEqual(v['MFN filings'],'request_errors')
+        self.assertEqual(v['Google News'],'requests_failed')
+        self.assertEqual(v['Oslo NewsWeb'],'not_observed')
+    def test_provider_classification(self):
+        from source_telemetry import provider
+        self.assertEqual(provider('https://query1.finance.yahoo.com/v8/finance/chart/ASML.AS'),'Yahoo prices')
+        self.assertEqual(provider('https://api3.oslo.oslobors.no/v1/newsreader/list'),'Oslo NewsWeb')
+        self.assertEqual(provider('https://news.google.com/rss/search?q=ASML'),'Google News')
+        self.assertEqual(provider('https://ssr.finanstilsynet.no/api/v2/instruments'),'Finanstilsynet shorts')

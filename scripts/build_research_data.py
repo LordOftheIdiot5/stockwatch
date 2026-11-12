@@ -124,7 +124,21 @@ def extract_events(news, now):
     return events
 
 
-def build_health(snapshot,watchlist,context,now):
+def _provider_status(transport):
+    keys=('Yahoo prices','Oslo NewsWeb','MFN filings','Google News','Finanstilsynet shorts')
+    providers=(transport or {}).get('providers',{})
+    result={}
+    for key in keys:
+        d=providers.get(key)
+        if not d: result[key]='not_instrumented'; continue
+        total=int(d.get('requests') or 0)
+        ok=int(d.get('succeeded') or 0)
+        failed=int(d.get('failed') or 0)
+        result[key]='not_observed' if total==0 else 'requests_ok' if failed==0 else 'request_errors' if ok else 'requests_failed'
+    return result
+
+
+def build_health(snapshot,watchlist,context,now, transport=None):
     quotes={x['ticker']:x for x in snapshot.get('companies',[]) if x.get('close') is not None}
     universe=watchlist.get('tickers',[])
     exchange=Counter((x.get('exchange') or 'Unknown') for x in universe)
@@ -137,8 +151,9 @@ def build_health(snapshot,watchlist,context,now):
                 contextAgeHours=source_age(context.get('generated')),
                 tracked=len(universe),priced=len(quotes),missing=[dict(ticker=x['ticker'],name=x.get('name',''),exchange=x.get('exchange','')) for x in universe if x['ticker'] not in quotes],
                 exchanges=exchanges,storedStories=sum(len(x.get('stories') or []) for x in snapshot.get('companies',[])),
-                caveat='Individual publisher/source success is not separately instrumented by the existing scanner. An overall successful scan does not verify each feed.',
-                sourceStatus={k:'not_instrumented' for k in ['Yahoo prices','Oslo NewsWeb','MFN filings','Google News','Finanstilsynet shorts']})
+                caveat='Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.',
+                sourceStatus=_provider_status(transport),
+                sourceRequests=(transport or {}).get('providers',{}))
 
 
 def build(root=ROOT, now=None):
@@ -161,7 +176,9 @@ def build(root=ROOT, now=None):
                 if str(event['date'])>=str(now.date()): events.append(event)
     events=list({x['id']:x for x in events if x.get('id')}.values())
     events.sort(key=lambda x:(x['date'],x['name']))
-    health=build_health(snapshot,watchlist,context,now)
+    transport_path=folder/'request-health.json'
+    transport=json.loads(transport_path.read_text(encoding='utf-8')) if transport_path.exists() else None
+    health=build_health(snapshot,watchlist,context,now,transport)
     for file,payload in [('news-archive.json',archive),('events.json',dict(generated=iso(now),items=events)),('source-health.json',health)]:
         (folder/file).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Archive: {len(news)} stories | Calendar: {len(events)} sourced events | Health: {health["priced"]}/{health["tracked"]} prices')

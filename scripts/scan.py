@@ -28,6 +28,8 @@ import feed                                                      # noqa: E402
 import sources                                                   # noqa: E402
 import translate as translate_module                              # noqa: E402
 from translate import Translator                                  # noqa: E402
+import source_telemetry                                            # noqa: E402
+source_telemetry.install(sources)
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -624,6 +626,10 @@ def main() -> int:
         )
     except Exception as error:                                   # noqa: BLE001
         print(f"context failed (continuing): {error}")
+    try:
+        source_telemetry.save(DATA / 'request-health.json')
+    except Exception as error:                                   # noqa: BLE001
+        print(f'source telemetry unavailable: {error}')
     save_seen(seen)
     # The feed is derived from what was just written, so it is built here
     # rather than as a separate step that could be skipped or fall behind.

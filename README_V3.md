@@ -20,7 +20,7 @@ Add this step after the `Scan` step (before the existing `Commit results` step) 
 
 On its first run, this writes `data/news-archive.json`, `data/events.json` and `data/source-health.json`. Subsequent runs deduplicate archive records, retain the latest 180 days (max 20,000), and update health. GitHub's existing `git add data/` includes these files. The input is *only* actual scanner output.
 
-Add a tested step after the existing scanner test to run:
+The scanner also installs `source_telemetry` around its existing `_get` function, emitting `data/request-health.json` at the end of each run. The builder merges this with the completeness and freshness health report. Add a tested step after the existing scanner test to run:
 
 ```shell
 python -m unittest discover -s tests -p test_research_data.py
@@ -37,5 +37,5 @@ The new index provides navigation to the research pages while continuing to load
 1. Move archival history out of Git when it grows; consider Cloudflare R2 or a small API if the feed becomes large.
 2. Add durable issuer identifiers (LEI/ISIN/FIGI) and source-specific company mapping to tighten news attribution.
 3. Obtain licensed corporate financials and historical prices before presenting full multi-year comparisons or valuation ratios.
-4. Instrument each underlying feed's success/failure and latency for reliable source-level monitoring.
+4. Extend request telemetry with parser-level validity and independent source-freshness checks. HTTP success alone is insufficient.
 5. Expand the calendar from official filings or a licensed financial-events feed, with review status for parser-derived dates.
