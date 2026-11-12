@@ -38,6 +38,9 @@ jobs:
       - name: Test signal logic
         run: python tests/test_signals.py
 
+      - name: Test research pipeline
+        run: python -m unittest discover -s tests -p test_research_data.py
+
       - name: Scan
         id: scan
         env:
@@ -48,6 +51,9 @@ jobs:
           AZURE_TRANSLATOR_REGION: ${{ secrets.AZURE_TRANSLATOR_REGION }}
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: python scripts/scan.py
+
+      - name: Build research archive, calendar and data health
+        run: python scripts/build_research_data.py
 
       - name: Notify
         if: steps.scan.outputs.fresh != '0'
