@@ -92,9 +92,45 @@ async function loadD1Health(){
  el.innerHTML='<span class="pill '+(health.articles?'good':'warn')+'">'+health.articles+' archived articles</span> · '+(health.articles?'Persistent news database is populated.':'Database is connected but news ingestion is not yet complete.');
  }catch{el.innerHTML='<span class="pill warn">Database status unavailable</span> · Git-backed monthly archive remains available.';}
 }
+async function loadOfficialSourceHealth(){
+ const host=document.createElement('section');host.className='panel';host.id='officialDataPanel';
+ host.innerHTML='<div class="panelhead"><h2>Official open-data sources</h2><span class="count">No-key feeds and registered integrations</span></div><div id="officialStatusBody" class="note" aria-live="polite">Checking official source status…</div>';
+ $('app').appendChild(host);
+ const body=$('officialStatusBody');
+ const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json')]);
+ const source=responses[0].status==='fulfilled'?responses[0].value:null;
+ const registered=responses[1].status==='fulfilled'?responses[1].value:null;
+ if(!source&&!registered){body.textContent='Official-source import has not run yet. Scanner and news data remain independent.';return}
+ const names={norges_bank:'Norges Bank',ecb:'European Central Bank',eurostat:'Eurostat',world_bank:'World Bank',finanstilsynet:'Finanstilsynet shorts',gleif:'GLEIF LEI',brreg:'Brønnøysundregistrene',openfigi:'OpenFIGI',entsoe:'ENTSO-E Transparency'};
+ const safeStatus=s=>String(s||'not_checked').replace(/_/g,' ');
+ const sourceRows=(source?.sources||[]).map(x=>({name:names[x.id]||x.name||x.id,status:x.status,
+    detail:x.records!=null?x.records+' observations':x.candidates!=null?x.candidates+' unverified identity candidates':x.error||'',
+    url:x.documentation,last:x.lastSuccessAt,license:x.license}));
+ for(const [id,v] of Object.entries(registered?.sources||{})){
+  sourceRows.push({name:names[id]||id,status:v.status,
+    detail:id==='openfigi'?(v.candidateCount||0)+' possible FIGI matches (not issuer-verified)':
+      id==='entsoe'?(v.pointsChecked||0)+' points checked privately (no rates published)':'',
+    url:v.sourceUrl,last:registered?.generated,license:id==='entsoe'?'Raw observations withheld pending item-specific permission':'OpenFIGI reference identifiers'});
+ }
+ const statusHtml=sourceRows.map(x=>{
+  const u=validLink(x.url);
+  const cls=x.status==='ok'?'good':x.status==='error'||x.status==='partial_error'?'warn':'';
+  return '<tr><td><b>'+esc(x.name)+'</b><small>'+esc(x.license||'')+'</small></td>'+
+    '<td><span class="pill '+cls+'">'+esc(safeStatus(x.status))+'</span></td>'+
+    '<td>'+esc(x.detail||'—')+'</td>'+
+    '<td>'+esc(x.last?date(x.last):'Not yet')+'</td>'+
+    '<td>'+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">Documentation ↗</a>':'—')+'</td></tr>'
+ }).join('');
+ body.innerHTML='<p>Statistical sources are independent of stock prices, shipping-rate licensing and the main market scan. Preserved old observations can be stale if a provider fails.</p>'+
+ '<div class="tablewrap"><table><thead><tr><th>Provider</th><th>Import status</th><th>Details</th><th>Last success</th><th>Source</th></tr></thead><tbody>'+
+ statusHtml+'</tbody></table></div>'+
+ '<p class="note">Official data updated '+esc(source?.generated?date(source.generated):'not yet')+
+ ' · '+(source?.series?.length||0)+' dated indicator series · issuer matches are candidates until externally verified.'+
+ ' <a href="data/open-data.json" target="_blank" rel="noopener noreferrer">Download source-linked observations ↗</a></p>';
+}
 async function main(){const results=await Promise.allSettled([fetchJson('data/signals.json'),fetchJson('data/context.json'),fetchJson('watchlist.json'),fetchJson('data/news-latest.json'),fetchJson('data/events.json'),fetchJson('data/source-health.json')]);const get=i=>results[i].status==='fulfilled'?results[i].value:null;
  state.signals=get(0);state.context=get(1);state.watchlist=get(2)?.tickers||[];state.archive=get(3);if(!state.archive){try{state.archive=await fetchJson('data/news-archive.json')}catch{}}state.events=get(4);state.health=get(5);
  if(!state.signals||!state.watchlist.length){showError('The Stockwatch scanner dataset is unavailable. This page does not generate mock figures.');return}
- if(page==='news')showNews();else if(page==='calendar')showCalendar();else if(page==='compare')await showCompare();else if(page==='health'){showHealth();await loadD1Health();}else showError('Unknown research page');}
+ if(page==='news')showNews();else if(page==='calendar')showCalendar();else if(page==='compare')await showCompare();else if(page==='health'){showHealth();await loadD1Health();await loadOfficialSourceHealth();}else showError('Unknown research page');}
 main().catch(e=>{showError('Could not load this research page: '+e.message);console.error(e)});
 })();

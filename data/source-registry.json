@@ -2,11 +2,96 @@
   "version": "2026-11-13",
   "purpose": "Documented research sources, licensing and integration status; no implied redistribution rights",
   "sources": [
-    {"name":"Finanstilsynet short selling register","category":"Short positions","url":"https://ssr.finanstilsynet.no/","status":"Existing scanner connector","publicationPolicy":"Public disclosure register; obey terms and report thresholds"},
-    {"name":"Norges Bank open data","category":"FX and rates","url":"https://www.norges-bank.no/en/topics/Statistics/open-data/","status":"Candidate for future licensed integration","publicationPolicy":"Open data API; attribution and series definitions required"},
-    {"name":"Sveriges Riksbank API","category":"FX and monetary policy","url":"https://www.riksbank.se/en-gb/statistics/interest-rates-and-exchange-rates/retrieving-interest-rates-and-exchange-rates-via-api/faq--the-api-for-interest-rates-and-exchange-rates/","status":"Verified open commercial-use candidate; not yet ingested","publicationPolicy":"Official FAQ permits commercial reuse; source attribution applies to unprocessed series"},
-    {"name":"Euronext company notices","category":"Issuer identifiers and disclosures","url":"https://live.euronext.com/","status":"Official cross-check source","publicationPolicy":"Issuer facts and notices, not a blanket live-feed or redistribution licence"},
-    {"name":"Baltic Exchange","category":"Shipping benchmarks","url":"https://www.balticexchange.com/en/data-services/Methodology/market-data.html","status":"Route definitions only; live benchmark prices blocked pending commercial licence","publicationPolicy":"Subscription and redistribution licence required"},
-    {"name":"EODData","category":"Equity history and fundamentals","url":"https://www.eoddata.com/products/DataFeed.aspx","status":"Private connectivity test only; not a public stock price feed","publicationPolicy":"Personal plans do not permit commercial public display; commercial agreement required"}
+    {
+      "name": "Finanstilsynet short selling register",
+      "category": "Short positions",
+      "url": "https://ssr.finanstilsynet.no/",
+      "status": "Existing scanner connector + new official API cross-reference using verified ISIN only",
+      "publicationPolicy": "Public disclosure register; obey terms and report thresholds"
+    },
+    {
+      "name": "Norges Bank open data",
+      "category": "FX and rates",
+      "url": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
+      "status": "Official-data daily importer; pending first verified production fetch",
+      "publicationPolicy": "Open data API; attribution and series definitions required"
+    },
+    {
+      "name": "Sveriges Riksbank API",
+      "category": "FX and monetary policy",
+      "url": "https://www.riksbank.se/en-gb/statistics/interest-rates-and-exchange-rates/retrieving-interest-rates-and-exchange-rates-via-api/faq--the-api-for-interest-rates-and-exchange-rates/",
+      "status": "Verified open commercial-use candidate; not yet ingested",
+      "publicationPolicy": "Official FAQ permits commercial reuse; source attribution applies to unprocessed series"
+    },
+    {
+      "name": "Euronext company notices",
+      "category": "Issuer identifiers and disclosures",
+      "url": "https://live.euronext.com/",
+      "status": "Official cross-check source",
+      "publicationPolicy": "Issuer facts and notices, not a blanket live-feed or redistribution licence"
+    },
+    {
+      "name": "Baltic Exchange",
+      "category": "Shipping benchmarks",
+      "url": "https://www.balticexchange.com/en/data-services/Methodology/market-data.html",
+      "status": "Route definitions only; live benchmark prices blocked pending commercial licence",
+      "publicationPolicy": "Subscription and redistribution licence required"
+    },
+    {
+      "name": "EODData",
+      "category": "Equity history and fundamentals",
+      "url": "https://www.eoddata.com/products/DataFeed.aspx",
+      "status": "Private connectivity test only; not a public stock price feed",
+      "publicationPolicy": "Personal plans do not permit commercial public display; commercial agreement required"
+    },
+    {
+      "name": "GLEIF LEI API",
+      "category": "Reference identifiers",
+      "url": "https://api.gleif.org/api/v1/lei-records",
+      "status": "Open-data integration; unique normalized exact names only, candidate matches not verified",
+      "publicationPolicy": "GLEIF CC0, see source; do not equate legal-name similarity with a known issuer."
+    },
+    {
+      "name": "Brønnøysundregistrene Enhetsregisteret",
+      "category": "Norwegian business registry",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter",
+      "status": "Open-data integration; candidate organization matches without personal records",
+      "publicationPolicy": "NLOD 2.0, attribution; do not treat name-only matches as confirmed."
+    },
+    {
+      "name": "ECB SDMX API",
+      "category": "FX",
+      "url": "https://data-api.ecb.europa.eu/service/data/EXR/",
+      "status": "Official-data daily importer",
+      "publicationPolicy": "ECB reuse terms; attribute and verify series-specific restrictions."
+    },
+    {
+      "name": "World Bank Indicators API",
+      "category": "Global macroeconomic data",
+      "url": "https://api.worldbank.org/v2/",
+      "status": "Official-data daily importer",
+      "publicationPolicy": "World Bank WDI licensing with third-party indicator exceptions."
+    },
+    {
+      "name": "Eurostat JSON-stat API",
+      "category": "European harmonized inflation",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr",
+      "status": "Official-data daily importer",
+      "publicationPolicy": "Eurostat license terms and exceptions; attribute Eurostat."
+    },
+    {
+      "name": "OpenFIGI v3",
+      "category": "Share identifiers",
+      "url": "https://www.openfigi.com/api/documentation",
+      "status": "Connector implemented; awaiting user's Actions secret",
+      "publicationPolicy": "Reference symbology candidates only; not legal-entity verified or market quote rights."
+    },
+    {
+      "name": "ENTSO-E Transparency Platform",
+      "category": "Electricity grid",
+      "url": "https://transparency.entsoe.eu/",
+      "status": "Private no-price-publishing connectivity probe implemented; awaiting REST token",
+      "publicationPolicy": "Individual datasets and primary-owner rights must be verified; raw prices not published."
+    }
   ]
 }
