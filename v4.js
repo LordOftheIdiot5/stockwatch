@@ -116,6 +116,16 @@ async function renderUNCTADConnectivity(){
  };
  select.addEventListener('change',draw);draw();
 }
+function voyageCostScenario(v){
+ const seaDays=(v.distance+v.ballast)/v.speed/24;
+ const fuelTonnes=seaDays*v.burn+v.portDays*v.portBurn;
+ const fuelUSD=fuelTonnes*v.fuel;
+ const hireUSD=(seaDays+v.portDays)*v.hire;
+ const subtotal=fuelUSD+hireUSD+v.portFees+v.other;
+ const total=subtotal*(1+v.contingency/100);
+ return {seaDays,fuelTonnes,fuelUSD,hireUSD,subtotal,total,perTonne:total/v.cargo};
+}
+
 function renderVoyageEstimator(){
  const host=$('v4app');if(!host)return;
  const usdRoutes=state.routes.filter(r=>r.category==='Dry bulk'&&r.unit==='USD/tonne');
@@ -144,13 +154,7 @@ function renderVoyageEstimator(){
  const form=$('voyageForm'),result=$('voyageResult');
  function calculate(){
   let vars={};for(const [id,,defaultValue,min,max] of fields){const n=Number($('voyage_'+id).value);if(!Number.isFinite(n)||n<min||n>max){result.textContent='Enter valid finite values within the displayed field limits.';return}vars[id]=n}
-  const seaDays=(vars.distance+vars.ballast)/vars.speed/24;
-  const fuelTonnes=seaDays*vars.burn+vars.portDays*vars.portBurn;
-  const fuelUSD=fuelTonnes*vars.fuel;
-  const hireUSD=(seaDays+vars.portDays)*vars.hire;
-  const subtotal=fuelUSD+hireUSD+vars.portFees+vars.other;
-  const total=subtotal*(1+vars.contingency/100);
-  const perTonne=total/vars.cargo;
+  const {seaDays,fuelTonnes,fuelUSD,hireUSD,subtotal,total,perTonne}=voyageCostScenario(vars);
   const money=x=>x.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
   result.innerHTML='<div class="sw-grid4">'+
    stat('Modeled total cost',money(total),'USD · scenario estimate')+
