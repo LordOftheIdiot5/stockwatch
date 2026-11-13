@@ -33,3 +33,12 @@ test('valid article upsert is idempotent',async()=>{
   assert.equal(result.status,200);assert.equal((await result.json()).accepted,1);
   assert.match(query,/ON CONFLICT\(id\)/);assert.equal(bound[1],'ABC.OL');assert.equal(batches,1);
 });
+
+test('ingestion compares normalized BOM-prefixed secret without accepting wrong tokens',async()=>{
+  const db={prepare(sql){return {bind(...v){return {}}}},async batch(stmts){}};
+  const data={items:[{id:'A',ticker:'A.OL',headline:'Valid news',type:'news',url:'https://example.com/news',published:'2026-11-13T00:00:00Z'}]};
+  const good=await worker.fetch(req('/api/news/ingest',{method:'POST',headers:{authorization:'Bearer secret'},body:JSON.stringify(data)}),{DB:db,NEWS_INGEST_TOKEN:'\ufeffsecret\n'});
+  assert.equal(good.status,200);
+  const bad=await worker.fetch(req('/api/news/ingest',{method:'POST',headers:{authorization:'Bearer wrong'},body:JSON.stringify(data)}),{DB:db,NEWS_INGEST_TOKEN:'\ufeffsecret\n'});
+  assert.equal(bad.status,403);
+});

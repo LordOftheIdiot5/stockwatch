@@ -4,9 +4,18 @@ from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-from push_archive import load_items,pack_batches
+from push_archive import load_items,pack_batches,clean_token
 
 class IngestTests(unittest.TestCase):
+    def test_clean_token_removes_bom_without_weakening_validation(self):
+        token = '0123456789abcdef' * 4
+        self.assertEqual(clean_token('\ufeff' + token + '\n'), token)
+        self.assertEqual(clean_token(token), token)
+        with self.assertRaises(ValueError):
+            clean_token(token + '💥')
+        with self.assertRaises(ValueError):
+            clean_token('not-a-token')
+
     def test_batches_under_size_and_count_limits(self):
         items=[{'id':str(i),'published':'2026-11-12T12:00:00Z','url':'https://example.com','headline':'x'*700} for i in range(215)]
         parts=list(pack_batches(items,max_bytes=14000))

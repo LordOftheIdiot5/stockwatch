@@ -75,9 +75,24 @@ function showHealth(){const h=state.health||fallbackHealth(),days=x=>x==null||!N
  const exchange=(h.exchanges||[]).map(x=>`<tr><td>${esc(x.name)}</td><td>${x.priced}</td><td>${x.total}</td><td>${x.missing?`<span class="pill warn">${x.missing} missing</span>`:'<span class="pill good">Complete</span>'}</td></tr>`).join('');
  const statuses=Object.entries(h.sourceStatus||{}).map(([n,v])=>{const m=(h.sourceRequests||{})[n];const status={not_instrumented:'Not instrumented',not_observed:'Not requested this scan',requests_ok:'Requests succeeded',request_errors:'Partial request failures',requests_failed:'All requests failed'}[v]||v;const counts=m?.requests?` · ${m.succeeded||0}/${m.requests} responses`:'';return `<div class="statusline"><b>${esc(n)}<small style="display:block;color:var(--muted);font-weight:400">${esc(counts)}</small></b><span class="pill ${v==='requests_ok'?'good':['request_errors','requests_failed'].includes(v)?'warn':''}">${esc(status)}</span></div>`}).join('');
  $('app').innerHTML=`${age>24?'<div class="notice">The latest scan is more than 24 hours old. Do not treat quotes below as current.</div>':''}${counts}<div class="panel"><div class="panelhead"><h2>Exchange quote coverage</h2><span class="count">Latest scanner output</span></div><div class="tablewrap"><table><thead><tr><th>Exchange</th><th>Priced</th><th>Tracked</th><th>Status</th></tr></thead><tbody>${exchange}</tbody></table></div></div><div class="panel"><div class="panelhead"><h2>Missing company prices</h2><span class="count">Never silently excluded</span></div><div class="tablewrap"><table><thead><tr><th>Company</th><th>Ticker</th><th>Exchange</th><th>Issue</th></tr></thead><tbody>${missing}</tbody></table></div></div><div class="panel"><div class="panelhead"><h2>Source-level monitoring</h2><span class="count">No false healthy indicators</span></div><div class="statuslist">${statuses}</div><div class="note">${esc(h.caveat||'Individual upstream feed status is unavailable until source-level telemetry is installed.')}</div></div><p class="tagline">Latest scan: ${date(h.latestScan)} · Market context age: ${days(h.contextAgeHours)} · This status page is descriptive, not an uptime guarantee.</p>`}
+async function loadD1Health(){
+ const panel=document.createElement('div');panel.className='panel';
+ panel.innerHTML='<div class="panelhead"><h2>Cloudflare D1 news archive</h2><span class="count">Live database status</span></div><div class="note" id="d1ArchiveStatus" aria-live="polite">Checking database connectivity…</div>';
+ $('app').appendChild(panel);
+ const el=$('d1ArchiveStatus');
+ try{
+  const response=await fetch('https://stockwatch-research-api.gauchovidar.workers.dev/api/health',{cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const health=await response.json();
+  if(health.status!=='ok'||!Number.isInteger(health.articles)||health.articles<0)throw Error('Unexpected database response');
+  el.innerHTML='<span class="pill '+(health.articles?'good':'warn')+'">'+health.articles+' archived articles</span> · '+(health.articles?'Persistent database is populated.':'Database is connected but no news has been ingested yet.');
+ }catch{
+  el.innerHTML='<span class="pill warn">Database status unavailable</span> · Git-backed monthly news records remain available.';
+ }
+}
 async function main(){const results=await Promise.allSettled([fetchJson('data/signals.json'),fetchJson('data/context.json'),fetchJson('watchlist.json'),fetchJson('data/news-latest.json'),fetchJson('data/events.json'),fetchJson('data/source-health.json')]);const get=i=>results[i].status==='fulfilled'?results[i].value:null;
  state.signals=get(0);state.context=get(1);state.watchlist=get(2)?.tickers||[];state.archive=get(3);if(!state.archive){try{state.archive=await fetchJson('data/news-archive.json')}catch{}}state.events=get(4);state.health=get(5);
  if(!state.signals||!state.watchlist.length){showError('The Stockwatch scanner dataset is unavailable. This page does not generate mock figures.');return}
- if(page==='news')showNews();else if(page==='calendar')showCalendar();else if(page==='compare')await showCompare();else if(page==='health')showHealth();else showError('Unknown research page');}
+ if(page==='news')showNews();else if(page==='calendar')showCalendar();else if(page==='compare')await showCompare();else if(page==='health'){showHealth();await loadD1Health();}else showError('Unknown research page');}
 main().catch(e=>{showError('Could not load this research page: '+e.message);console.error(e)});
 })();

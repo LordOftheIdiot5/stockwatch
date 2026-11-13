@@ -62,6 +62,7 @@ jobs:
         run: python scripts/build_monthly_archive.py
 
       - name: Optional database archive ingestion
+        id: archive_ingest
         # Never block scanner commits / site freshness when the external D1 API is down.
         continue-on-error: true
         env:
@@ -69,6 +70,10 @@ jobs:
           STOCKWATCH_ARCHIVE_URL: https://stockwatch-research-api.gauchovidar.workers.dev/api/news/ingest
           STOCKWATCH_ARCHIVE_TOKEN: ${{ secrets.STOCKWATCH_ARCHIVE_TOKEN }}
         run: python scripts/push_archive.py
+
+      - name: Warn when database ingestion fails
+        if: always() && steps.archive_ingest.outcome == 'failure'
+        run: echo "::warning title=Cloudflare D1 ingestion failed::News is preserved in Git, but the D1 upload failed. See the previous step."
 
       - name: Notify
         if: steps.scan.outputs.fresh != '0'

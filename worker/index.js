@@ -23,8 +23,8 @@ export default {async fetch(request,env){const url=new URL(request.url);const pa
  }
  if(path==='/api/news/ingest'&&request.method==='POST'){
   // Token configured only as a Worker secret, never in client-facing HTML or logs.
-  if(!env.NEWS_INGEST_TOKEN)return json({error:'not_configured'},503);
-  const authorization=request.headers.get('authorization')||'';if(authorization!==`Bearer ${env.NEWS_INGEST_TOKEN}`)return json({error:'forbidden'},403);
+  const secret=String(env.NEWS_INGEST_TOKEN||'').replace(/^\uFEFF+/, '').trim();if(!secret)return json({error:'not_configured'},503);
+  const authorization=request.headers.get('authorization')||'';if(authorization!==`Bearer ${secret}`)return json({error:'forbidden'},403);
   if(+(request.headers.get('content-length')||0)>450000)return json({error:'too_large'},413);
   let payload;try{const raw=await request.text();if(new TextEncoder().encode(raw).length>450000)return json({error:'too_large'},413);payload=JSON.parse(raw)}catch{return json({error:'invalid_json'},400)}
   if(!payload||!Array.isArray(payload.items)||payload.items.length>150||payload.items.some(x=>!validItem(x)))return json({error:'invalid_items'},400);

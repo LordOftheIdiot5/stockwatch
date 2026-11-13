@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -63,13 +64,21 @@ def pack_batches(items, *, max_bytes=MAX_PAYLOAD_BYTES):
     if batch:
         yield batch
 
+def clean_token(value):
+    """Trim Windows PowerShell BOM artifacts; never log or echo the secret."""
+    token = (value or '').lstrip('\ufeff').strip()
+    if token and not re.fullmatch(r'[0-9a-fA-F]{64}', token):
+        raise ValueError('Invalid archive token encoding: rotate with deploy/repair-archive-secret.ps1')
+    return token
+
+
 def main(argv=None, root=ROOT):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--backfill', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args(argv)
     dest = os.getenv('STOCKWATCH_ARCHIVE_URL', '').strip()
-    token = os.getenv('STOCKWATCH_ARCHIVE_TOKEN', '')
+    token = clean_token(os.getenv('STOCKWATCH_ARCHIVE_TOKEN', ''))
     if not args.dry_run and (not dest or not token):
         print('D1 archive push disabled: URL/token not configured; Git archive remains available')
         return 0
