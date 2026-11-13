@@ -1,8 +1,778 @@
 {
-  "generated": "2026-11-13T02:18:46Z",
+  "generated": "2026-11-13T02:31:11Z",
   "mode": "weekly",
   "notice": "Official statistical series, not tradable live security prices or freight quotations.",
   "series": [
+    {
+      "key": "NE.EXP.GNFS.ZS:CN",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "CN",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 21.0712,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 18.1398
+        },
+        {
+          "date": "2020-01-01",
+          "value": 18.2696
+        },
+        {
+          "date": "2021-01-01",
+          "value": 19.4351
+        },
+        {
+          "date": "2022-01-01",
+          "value": 20.2278
+        },
+        {
+          "date": "2023-01-01",
+          "value": 19.4023
+        },
+        {
+          "date": "2024-01-01",
+          "value": 20.4428
+        },
+        {
+          "date": "2025-01-01",
+          "value": 21.0712
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:DE",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "DE",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 40.4348,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 42.3402
+        },
+        {
+          "date": "2020-01-01",
+          "value": 39.1198
+        },
+        {
+          "date": "2021-01-01",
+          "value": 42.5198
+        },
+        {
+          "date": "2022-01-01",
+          "value": 45.6284
+        },
+        {
+          "date": "2023-01-01",
+          "value": 42.9673
+        },
+        {
+          "date": "2024-01-01",
+          "value": 41.4341
+        },
+        {
+          "date": "2025-01-01",
+          "value": 40.4348
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:DK",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "DK",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 70.1171,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 58.9506
+        },
+        {
+          "date": "2020-01-01",
+          "value": 55.0369
+        },
+        {
+          "date": "2021-01-01",
+          "value": 59.2073
+        },
+        {
+          "date": "2022-01-01",
+          "value": 70.7552
+        },
+        {
+          "date": "2023-01-01",
+          "value": 69.3144
+        },
+        {
+          "date": "2024-01-01",
+          "value": 71.002
+        },
+        {
+          "date": "2025-01-01",
+          "value": 70.1171
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:FI",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "FI",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 42.3267,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 40.6183
+        },
+        {
+          "date": "2020-01-01",
+          "value": 36.2143
+        },
+        {
+          "date": "2021-01-01",
+          "value": 39.9218
+        },
+        {
+          "date": "2022-01-01",
+          "value": 46.2848
+        },
+        {
+          "date": "2023-01-01",
+          "value": 42.7684
+        },
+        {
+          "date": "2024-01-01",
+          "value": 41.9032
+        },
+        {
+          "date": "2025-01-01",
+          "value": 42.3267
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:FR",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "FR",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 33.3928,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 32.8895
+        },
+        {
+          "date": "2020-01-01",
+          "value": 28.5572
+        },
+        {
+          "date": "2021-01-01",
+          "value": 31.288
+        },
+        {
+          "date": "2022-01-01",
+          "value": 36.616
+        },
+        {
+          "date": "2023-01-01",
+          "value": 34.4563
+        },
+        {
+          "date": "2024-01-01",
+          "value": 33.8898
+        },
+        {
+          "date": "2025-01-01",
+          "value": 33.3928
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:GB",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "GB",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 30.597,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 31.9029
+        },
+        {
+          "date": "2020-01-01",
+          "value": 29.9487
+        },
+        {
+          "date": "2021-01-01",
+          "value": 29.2894
+        },
+        {
+          "date": "2022-01-01",
+          "value": 34.0619
+        },
+        {
+          "date": "2023-01-01",
+          "value": 31.9123
+        },
+        {
+          "date": "2024-01-01",
+          "value": 31.0561
+        },
+        {
+          "date": "2025-01-01",
+          "value": 30.597
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:NO",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "NO",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 45.373,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 35.6951
+        },
+        {
+          "date": "2020-01-01",
+          "value": 31.3464
+        },
+        {
+          "date": "2021-01-01",
+          "value": 41.7847
+        },
+        {
+          "date": "2022-01-01",
+          "value": 53.5795
+        },
+        {
+          "date": "2023-01-01",
+          "value": 46.405
+        },
+        {
+          "date": "2024-01-01",
+          "value": 46.3795
+        },
+        {
+          "date": "2025-01-01",
+          "value": 45.373
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:SE",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "SE",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 53.2286,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 48.2887
+        },
+        {
+          "date": "2020-01-01",
+          "value": 44.2874
+        },
+        {
+          "date": "2021-01-01",
+          "value": 47.4842
+        },
+        {
+          "date": "2022-01-01",
+          "value": 54.3121
+        },
+        {
+          "date": "2023-01-01",
+          "value": 55.1959
+        },
+        {
+          "date": "2024-01-01",
+          "value": 54.4971
+        },
+        {
+          "date": "2025-01-01",
+          "value": 53.2286
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NE.EXP.GNFS.ZS:US",
+      "provider": "world_bank",
+      "label": "Exports of goods and services",
+      "country": "US",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "period": "2024-01-01",
+      "value": 10.9747,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 11.7892
+        },
+        {
+          "date": "2020-01-01",
+          "value": 10.1231
+        },
+        {
+          "date": "2021-01-01",
+          "value": 10.8267
+        },
+        {
+          "date": "2022-01-01",
+          "value": 11.6541
+        },
+        {
+          "date": "2023-01-01",
+          "value": 11.0507
+        },
+        {
+          "date": "2024-01-01",
+          "value": 10.9747
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NE.EXP.GNFS.ZS?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:CN",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "CN",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 4.9599,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 6.0674
+        },
+        {
+          "date": "2020-01-01",
+          "value": 2.3395
+        },
+        {
+          "date": "2021-01-01",
+          "value": 8.5704
+        },
+        {
+          "date": "2022-01-01",
+          "value": 3.1339
+        },
+        {
+          "date": "2023-01-01",
+          "value": 5.416
+        },
+        {
+          "date": "2024-01-01",
+          "value": 4.9583
+        },
+        {
+          "date": "2025-01-01",
+          "value": 4.9599
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:DE",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "DE",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 0.2396,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 0.9777
+        },
+        {
+          "date": "2020-01-01",
+          "value": -4.1319
+        },
+        {
+          "date": "2021-01-01",
+          "value": 3.91
+        },
+        {
+          "date": "2022-01-01",
+          "value": 1.8093
+        },
+        {
+          "date": "2023-01-01",
+          "value": -0.8696
+        },
+        {
+          "date": "2024-01-01",
+          "value": -0.4959
+        },
+        {
+          "date": "2025-01-01",
+          "value": 0.2396
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:DK",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "DK",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 2.9284,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 1.7114
+        },
+        {
+          "date": "2020-01-01",
+          "value": -1.7801
+        },
+        {
+          "date": "2021-01-01",
+          "value": 6.5003
+        },
+        {
+          "date": "2022-01-01",
+          "value": 0.4438
+        },
+        {
+          "date": "2023-01-01",
+          "value": 0.6046
+        },
+        {
+          "date": "2024-01-01",
+          "value": 3.4778
+        },
+        {
+          "date": "2025-01-01",
+          "value": 2.9284
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:FI",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "FI",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 0.1734,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 1.3497
+        },
+        {
+          "date": "2020-01-01",
+          "value": -2.491
+        },
+        {
+          "date": "2021-01-01",
+          "value": 2.6763
+        },
+        {
+          "date": "2022-01-01",
+          "value": 0.763
+        },
+        {
+          "date": "2023-01-01",
+          "value": -1.2897
+        },
+        {
+          "date": "2024-01-01",
+          "value": 0.3746
+        },
+        {
+          "date": "2025-01-01",
+          "value": 0.1734
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:FR",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "FR",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 0.8409,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 2.0274
+        },
+        {
+          "date": "2020-01-01",
+          "value": -7.4406
+        },
+        {
+          "date": "2021-01-01",
+          "value": 6.8823
+        },
+        {
+          "date": "2022-01-01",
+          "value": 2.7168
+        },
+        {
+          "date": "2023-01-01",
+          "value": 1.4392
+        },
+        {
+          "date": "2024-01-01",
+          "value": 1.1905
+        },
+        {
+          "date": "2025-01-01",
+          "value": 0.8409
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:GB",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "GB",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 1.3884,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 1.2563
+        },
+        {
+          "date": "2020-01-01",
+          "value": -10.0479
+        },
+        {
+          "date": "2021-01-01",
+          "value": 8.5431
+        },
+        {
+          "date": "2022-01-01",
+          "value": 5.1497
+        },
+        {
+          "date": "2023-01-01",
+          "value": 0.2717
+        },
+        {
+          "date": "2024-01-01",
+          "value": 1.0803
+        },
+        {
+          "date": "2025-01-01",
+          "value": 1.3884
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:NO",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "NO",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 1.0853,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 1.4697
+        },
+        {
+          "date": "2020-01-01",
+          "value": -1.3606
+        },
+        {
+          "date": "2021-01-01",
+          "value": 4.1431
+        },
+        {
+          "date": "2022-01-01",
+          "value": 4.0804
+        },
+        {
+          "date": "2023-01-01",
+          "value": 0.3527
+        },
+        {
+          "date": "2024-01-01",
+          "value": 1.4237
+        },
+        {
+          "date": "2025-01-01",
+          "value": 1.0853
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:SE",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "SE",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 1.5432,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 2.6082
+        },
+        {
+          "date": "2020-01-01",
+          "value": -1.9338
+        },
+        {
+          "date": "2021-01-01",
+          "value": 5.2259
+        },
+        {
+          "date": "2022-01-01",
+          "value": 1.2554
+        },
+        {
+          "date": "2023-01-01",
+          "value": -0.2041
+        },
+        {
+          "date": "2024-01-01",
+          "value": 1.0178
+        },
+        {
+          "date": "2025-01-01",
+          "value": 1.5432
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
+    {
+      "key": "NY.GDP.MKTP.KD.ZG:US",
+      "provider": "world_bank",
+      "label": "GDP annual growth",
+      "country": "US",
+      "unit": "% annual",
+      "frequency": "annual",
+      "period": "2025-01-01",
+      "value": 2.1614,
+      "history": [
+        {
+          "date": "2019-01-01",
+          "value": 2.5838
+        },
+        {
+          "date": "2020-01-01",
+          "value": -2.0814
+        },
+        {
+          "date": "2021-01-01",
+          "value": 6.152
+        },
+        {
+          "date": "2022-01-01",
+          "value": 2.5242
+        },
+        {
+          "date": "2023-01-01",
+          "value": 2.9344
+        },
+        {
+          "date": "2024-01-01",
+          "value": 2.7932
+        },
+        {
+          "date": "2025-01-01",
+          "value": 2.1614
+        }
+      ],
+      "sourceUrl": "https://api.worldbank.org/v2/country/NO;SE;DK;FI;DE;FR;GB;US;CN/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2019:2026&per_page=500",
+      "observedAt": "2026-11-13T02:30:41Z",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions"
+    },
     {
       "key": "fx:EUR/NOK",
       "provider": "norges_bank",
@@ -359,7 +1129,7 @@
         }
       ],
       "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.EUR.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-16",
-      "observedAt": "2026-11-13T02:17:59Z",
+      "observedAt": "2026-11-13T02:30:39Z",
       "license": "NLOD 2.0"
     },
     {
@@ -734,7 +1504,7 @@
         }
       ],
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata&lastNObservations=90",
-      "observedAt": "2026-11-13T02:18:01Z",
+      "observedAt": "2026-11-13T02:30:41Z",
       "license": "ECB statistics free reuse, attribution; third-party exceptions"
     },
     {
@@ -1093,7 +1863,7 @@
         }
       ],
       "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-16",
-      "observedAt": "2026-11-13T02:17:59Z",
+      "observedAt": "2026-11-13T02:30:39Z",
       "license": "NLOD 2.0"
     },
     {
@@ -1196,7 +1966,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-13T02:18:25Z",
+      "observedAt": "2026-11-13T02:30:43Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -1295,7 +2065,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DK&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-13T02:18:24Z",
+      "observedAt": "2026-11-13T02:30:43Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -1398,7 +2168,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=FR&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-13T02:18:25Z",
+      "observedAt": "2026-11-13T02:30:44Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -1497,7 +2267,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=NO&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-13T02:18:24Z",
+      "observedAt": "2026-11-13T02:30:42Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -1596,7 +2366,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=SE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-13T02:18:24Z",
+      "observedAt": "2026-11-13T02:30:42Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     }
   ],
@@ -1607,11 +2377,11 @@
       "license": "NLOD 2.0; no personal/role data collected",
       "documentation": "https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html",
       "status": "ok",
-      "lastSuccessAt": "2026-11-13T02:18:46Z",
-      "lastAttemptAt": "2026-11-13T02:18:46Z",
+      "lastSuccessAt": "2026-11-13T02:31:11Z",
+      "lastAttemptAt": "2026-11-13T02:31:11Z",
       "error": null,
       "attempted": 12,
-      "candidates": 8
+      "candidates": 17
     },
     {
       "id": "ecb",
@@ -1619,8 +2389,8 @@
       "license": "ECB statistics free reuse, attribution; third-party exceptions",
       "documentation": "https://data.ecb.europa.eu/help/api/data-examples",
       "status": "ok",
-      "lastSuccessAt": "2026-11-13T02:18:01Z",
-      "lastAttemptAt": "2026-11-13T02:17:59Z",
+      "lastSuccessAt": "2026-11-13T02:30:41Z",
+      "lastAttemptAt": "2026-11-13T02:30:39Z",
       "records": 1,
       "error": null
     },
@@ -1630,8 +2400,8 @@
       "license": "Eurostat reuse policy; dataset exceptions apply",
       "documentation": "https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-introduction",
       "status": "ok",
-      "lastSuccessAt": "2026-11-13T02:18:25Z",
-      "lastAttemptAt": "2026-11-13T02:18:23Z",
+      "lastSuccessAt": "2026-11-13T02:30:44Z",
+      "lastAttemptAt": "2026-11-13T02:30:41Z",
       "records": 5,
       "error": null
     },
@@ -1641,8 +2411,8 @@
       "license": "NLOD 2.0; only publicly disclosed positions",
       "documentation": "https://ssr.finanstilsynet.no/api/v2/",
       "status": "ok",
-      "lastSuccessAt": "2026-11-13T02:18:27Z",
-      "lastAttemptAt": "2026-11-13T02:18:25Z",
+      "lastSuccessAt": "2026-11-13T02:30:47Z",
+      "lastAttemptAt": "2026-11-13T02:30:44Z",
       "records": 103,
       "error": null
     },
@@ -1652,11 +2422,11 @@
       "license": "CC0 public reference data",
       "documentation": "https://www.gleif.org/en/lei-data/gleif-api",
       "status": "ok",
-      "lastSuccessAt": "2026-11-13T02:18:46Z",
-      "lastAttemptAt": "2026-11-13T02:18:46Z",
+      "lastSuccessAt": "2026-11-13T02:31:11Z",
+      "lastAttemptAt": "2026-11-13T02:31:11Z",
       "error": null,
       "attempted": 12,
-      "candidates": 8
+      "candidates": 13
     },
     {
       "id": "norges_bank",
@@ -1664,8 +2434,8 @@
       "license": "NLOD 2.0",
       "documentation": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
       "status": "ok",
-      "lastSuccessAt": "2026-11-13T02:17:59Z",
-      "lastAttemptAt": "2026-11-13T02:17:59Z",
+      "lastSuccessAt": "2026-11-13T02:30:39Z",
+      "lastAttemptAt": "2026-11-13T02:30:38Z",
       "records": 2,
       "error": null
     },
@@ -1674,10 +2444,11 @@
       "name": "World Bank WDI",
       "license": "CC BY 4.0, subject to indicator-level third-party exceptions",
       "documentation": "https://data.worldbank.org/summary-terms-of-use",
-      "status": "error",
-      "lastSuccessAt": null,
-      "lastAttemptAt": "2026-11-13T02:18:01Z",
-      "error": "TimeoutError"
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:30:41Z",
+      "lastAttemptAt": "2026-11-13T02:30:41Z",
+      "error": null,
+      "records": 18
     }
   ],
   "identityCandidates": [
@@ -1872,6 +2643,174 @@
       "ticker": "PROT.OL",
       "searchedName": "Protector forsikring",
       "checkedAt": "2026-11-13T02:18:46Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "549300GGE58VFJE5KJ70",
+      "legalName": "INSTABANK ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/549300GGE58VFJE5KJ70",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "INSTA.OL",
+      "searchedName": "Instabank",
+      "checkedAt": "2026-11-13T02:30:49Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "2138006QFV6OJMYQC847",
+      "legalName": "QLIRO AB",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/2138006QFV6OJMYQC847",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "QLIRO.ST",
+      "searchedName": "Qliro",
+      "checkedAt": "2026-11-13T02:30:53Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "213800M7T3CYVZ3ZRT12",
+      "legalName": "SPAREBANKEN NORGE",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/213800M7T3CYVZ3ZRT12",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "SBNOR.OL",
+      "searchedName": "Sparebanken Norge",
+      "checkedAt": "2026-11-13T02:30:54Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "832554332",
+      "legalName": "SPAREBANKEN NORGE",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/832554332",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "SBNOR.OL",
+      "searchedName": "Sparebanken Norge",
+      "checkedAt": "2026-11-13T02:30:55Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5967007LIEEXZX7NA051",
+      "legalName": "STOREBRAND ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZX7NA051",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "STB.OL",
+      "searchedName": "Storebrand",
+      "checkedAt": "2026-11-13T02:30:56Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "916300484",
+      "legalName": "STOREBRAND ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/916300484",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "STB.OL",
+      "searchedName": "Storebrand",
+      "checkedAt": "2026-11-13T02:30:57Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "213800ZRS8AC4LSTCE39",
+      "legalName": "TRYG A/S",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/213800ZRS8AC4LSTCE39",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "TRYG.CO",
+      "searchedName": "Tryg",
+      "checkedAt": "2026-11-13T02:30:58Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "830357432",
+      "legalName": "Bonheur ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/830357432",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "BONHR.OL",
+      "searchedName": "Bonheur",
+      "checkedAt": "2026-11-13T02:31:01Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "990918546",
+      "legalName": "SCATEC ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/990918546",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "SCATC.OL",
+      "searchedName": "Scatec",
+      "checkedAt": "2026-11-13T02:31:03Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "999164137",
+      "legalName": "ZAPTEC ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/999164137",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "ZAP.OL",
+      "searchedName": "Zaptec",
+      "checkedAt": "2026-11-13T02:31:04Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "989795848",
+      "legalName": "AKER BP ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/989795848",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "AKRBP.OL",
+      "searchedName": "Aker BP",
+      "checkedAt": "2026-11-13T02:31:05Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "994297422",
+      "legalName": "THOR MEDICAL ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/994297422",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "TRMED.OL",
+      "searchedName": "Thor Medical",
+      "checkedAt": "2026-11-13T02:31:09Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "932064308",
+      "legalName": "EIENDOMSSPAR AS",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/932064308",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "EIOF.OL",
+      "searchedName": "Eiendomsspar",
+      "checkedAt": "2026-11-13T02:31:10Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "992618175",
+      "legalName": "BOHUS ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/992618175",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "BOHUS.OL",
+      "searchedName": "Bohus",
+      "checkedAt": "2026-11-13T02:31:11Z"
     }
   ],
   "identityLookups": [
@@ -2017,6 +2956,150 @@
       "ticker": "PROT.OL",
       "provider": "brreg",
       "checkedAt": "2026-11-13T02:18:46Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "HOFI.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:48Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:49Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "INVE-B.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:50Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "MORROW.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:50Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "NOBA.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:51Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "PROT.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:52Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "QLIRO.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:53Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "SBNOR.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:54Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "SBNOR.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:30:55Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "STB.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:56Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "STB.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:30:57Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "TRYG.CO",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:58Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "UCG.MI",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:30:59Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "VIG.VI",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:31:00Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "BONHR.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:01Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "CLOUD.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:02Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "SCATC.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:03Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "ZAP.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:04Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "AKRBP.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:05Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "SUBC.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:06Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "YAR.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:07Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "TRMED.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:09Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "EIOF.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:10Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "BOHUS.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:31:11Z",
       "result": "candidate"
     }
   ],

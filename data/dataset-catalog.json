@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T02:18:46Z",
+  "generated": "2026-11-13T02:31:29Z",
   "datasets": [
     {
       "name": "European issuer directory",
@@ -40,13 +40,13 @@
     {
       "name": "Official macroeconomic and FX observations",
       "path": "data/open-data.json",
-      "records": 8,
+      "records": 26,
       "license": "Attributed per original source and series; official-source exception policies apply"
     },
     {
       "name": "OpenFIGI instrument identity candidates",
       "path": "data/registered-source-status.json",
-      "records": 0,
+      "records": 102,
       "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
     }
   ]
