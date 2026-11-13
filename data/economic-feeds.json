@@ -1,0 +1,15 @@
+{
+  "generated": null,
+  "notice": "Pending first authenticated FRED/EIA import; no fabricated readings.",
+  "series": [],
+  "sources": {
+    "fred": {
+      "status": "awaiting_key",
+      "sourceUrl": "https://fred.stlouisfed.org/"
+    },
+    "eia": {
+      "status": "awaiting_key",
+      "sourceUrl": "https://www.eia.gov/opendata/"
+    }
+  }
+}
