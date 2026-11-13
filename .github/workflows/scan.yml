@@ -90,13 +90,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/notify.py
 
-      - name: Commit results
-        run: |
-          git config user.name "stockwatch"
-          git config user.email "actions@github.com"
-          git add data/
-          git diff --staged --quiet || git commit -m "scan: $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+      - name: Commit results without overwriting other refresh jobs
+        run: python scripts/publish_data.py --mode scan
 
   # This job is the reason the page could go stale while every scan succeeded.
   #
