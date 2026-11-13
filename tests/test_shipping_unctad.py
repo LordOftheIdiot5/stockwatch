@@ -13,7 +13,7 @@ class UNCTADShippingTests(unittest.TestCase):
         head = "Month,Economy Label,Index (average M2 2023 = 100),Growth rate year on year\n"
         return head + "".join(
             f"{period},{name},{val},1.0\n"
-            for name in list(s.COUNTRIES)[:6]
+            for name in list(s.COUNTRIES)[:12]
             for period,val in (("2026M08","123.45"),("2026M09","130.72"))
         )
 
@@ -34,7 +34,7 @@ class UNCTADShippingTests(unittest.TestCase):
             with mock.patch.object(s,"fetch_csv",return_value=self.sample()):
                 result=s.build(root)
             self.assertEqual(result["source"]["status"],"ok")
-            self.assertEqual(len(result["series"]),6)
+            self.assertEqual(len(result["series"]),12)
             self.assertTrue(all(not x["isActualRate"] for x in result["series"]))
             self.assertTrue(all("CC BY 3.0 IGO" in x["license"] for x in result["series"]))
 
