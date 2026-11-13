@@ -342,7 +342,7 @@ def build(root=ROOT, mode="auto", now=None):
     dest = root / "data/open-data.json"
     now = now or datetime.now(timezone.utc)
     if mode == "auto":
-        mode = "weekly" if now.weekday() == 0 else "daily"
+        mode = "weekly" if now.weekday() in (0, 4) else "daily"
     try:
         previous = json.loads(dest.read_text(encoding="utf8"))
     except (OSError, ValueError):
