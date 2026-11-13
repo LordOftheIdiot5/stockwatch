@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T21:21:50Z",
+  "generated": "2026-11-13T21:41:21Z",
   "items": [
     {
       "id": "FRO.OL:f9e8038e5ea658d3d406d967e5247fccfb1813427bd21be8da78b255c2be827d",
@@ -149,6 +149,25 @@
       "regulatory": false,
       "match": "name_mentioned",
       "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "AIR.PA:f58dc812eb6c3d6cd0fd9970e89bce04c0f9932f2fc63167d48728a1f1fe25a3",
+      "ticker": "AIR.PA",
+      "name": "Airbus",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Plane Strikes Runway Twice with Its Tail in Shocking Video During Landing Attempt",
+      "english": null,
+      "publisher": "People.com",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPeG56eFJoVDNmOUM4YWdsMG8wVzlQTFg1a2Z2dG9nZ0tSN3g2clJxTkIydzMxb3hwYnctVUZFdm1rNzRta1A2QWVkMDd0R3p2VlVGdllVYWx3d0FjMmNJbFhYNm9tTTE2SkFqRWxEN1VaSXVaQkR1di1tQ3dHa19RaERlbXdZZ3A5cTk4TWtpUFRUNTFxWkdVaUc4d2d5eVlRcXVQdw?oc=5",
+      "published": "2026-11-13T18:17:38Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
@@ -382,6 +401,25 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "FCT.MI:7a4118786b111087b429aded92664982af72b33f91843debe94ec219478f3eb7",
+      "ticker": "FCT.MI",
+      "name": "Fincantieri",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Azioni Fincantieri: giù in Borsa dopo i conti dei nove mesi e la guidance alzata (13 novembre 2026)",
+      "english": "Fincantieri shares: down on the stock market after the nine-month results and raised guidance (November 13, 2026)",
+      "publisher": "Finanza Report",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWGxyRmVzSXRXd2xZZ29uV3lfTHdLbkFYemtmREJETndUeW42NFJBUzhDZnktcHdkMVl1Vl9uRm43c2FrR3lQRHBlSFlWekVZT0VrdmwxQTRXMmotSnFSeUpQQkJZQk5WbWRXamM5VDJEcUNKX0dGc3FmUnVXTnRhM0cwdkh2Ykk2MFdLckVsclFxN1FPY3hDc25sRTFBeU0?oc=5",
+      "published": "2026-11-13T17:01:29Z",
+      "lang": "it",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Guidance",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "MRL.MC:7557c8674c7750bf835f50a98991b72cf17072c2390c6d5234a5cff11c5daa57",
