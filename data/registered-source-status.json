@@ -1,0 +1,15 @@
+{
+  "generated": null,
+  "notice": "OpenFIGI/ENTSO-E secret activation pending. No personal-use market data is published.",
+  "sources": {
+    "openfigi": {
+      "status": "awaiting_key",
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    "entsoe": {
+      "status": "awaiting_token",
+      "sourceUrl": "https://transparency.entsoe.eu/"
+    }
+  },
+  "figiCandidates": []
+}
