@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - feature/stockwatch-open-official-data-20261113
+      - feature/stockwatch-worldbank-port-traffic-20261113
     paths:
       - scripts/open_data.py
       - scripts/registered_sources.py
