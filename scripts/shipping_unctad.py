@@ -119,7 +119,7 @@ def build(root=ROOT):
     try:
         data = parse_csv(fetch_csv())
         valid = {k: values for k, values in data.items() if len(values) >= 2}
-        if len(valid) < 5:
+        if len(valid) < 10:
             raise ValueError("unctad_insufficient_country_history")
         series = []
         for name in COUNTRIES:
