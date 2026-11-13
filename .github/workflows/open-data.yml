@@ -33,6 +33,13 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Validate registered connector contracts
         run: python -m unittest discover -s tests -p 'test_registered_sources.py'
+      - name: Validate frontend JavaScript
+        run: |
+          node --check v4.js
+          node --check research.js
+      - name: Validate official no-key API requests on development branch
+        if: github.ref == 'refs/heads/feature/stockwatch-open-official-data-20261113'
+        run: python scripts/open_data.py --mode daily
       - name: Fetch official no-key and registered-source data
         if: github.ref == 'refs/heads/main'
         env:
