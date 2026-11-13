@@ -23,3 +23,16 @@ Run locally (requires network):
 python -m unittest discover -s tests -p 'test_shipping_open.py' -v
 python scripts/shipping_open.py
 ```
+
+## World Bank annual container-port activity (TEU)
+- `scripts/shipping_ports.py` fetches World Bank WDI indicator `IS.SHP.GOOD.TU` through the official JSON API, with country-level and World series; this is **container throughput**, not freight prices, vessel earnings or daily port calls.
+- World Bank labels this indicator **CC BY 4.0**, sourced from UNCTAD. Each exported series attributes World Bank WDI and UNCTAD, links to the indicator and license terms, and retains original observation years. See https://data.worldbank.org/indicator/IS.SHP.GOOD.TU and https://www.worldbank.org/ext/en/legal/terms-conditions/datasets .
+- The importer validates provider indicator, country codes, finite positive TEU observations and annual dates, rejects insufficient coverage, and preserves existing dated observations when the API fails. It writes `data/shipping-ports.json` and updates the dataset catalog.
+- The scheduled official-data workflow refreshes the dataset on weekdays. Shipping & Freight shows a separate annual country selection and TEU history; Data Health independently reports World Bank API status.
+- **Caveat:** TEUs count transshipments and empty containers; annual totals are not live container throughput, port capacity, or current prices. Do not sum countries with the World aggregate or equate TEU volumes to Baltic freight benchmarks.
+
+Local validation:
+```bash
+python -m unittest discover -s tests -p 'test_shipping_ports.py' -v
+python scripts/shipping_ports.py
+```

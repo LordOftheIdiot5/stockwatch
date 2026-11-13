@@ -7,16 +7,19 @@ on:
     branches:
       - main
       - feature/stockwatch-open-official-data-20261113
+      - feature/stockwatch-worldbank-port-traffic-20261113
     paths:
       - scripts/open_data.py
       - scripts/registered_sources.py
       - scripts/economic_feeds.py
       - scripts/shipping_open.py
+      - scripts/shipping_ports.py
       - scripts/publish_data.py
       - tests/test_open_data.py
       - tests/test_registered_sources.py
       - tests/test_economic_feeds.py
       - tests/test_shipping_open.py
+      - tests/test_shipping_ports.py
       - tests/test_publish_data.py
       - .github/workflows/open-data.yml
 permissions:
@@ -46,6 +49,20 @@ jobs:
       - name: Validate official no-key API requests on development branch
         if: github.ref == 'refs/heads/feature/stockwatch-open-official-data-20261113'
         run: python scripts/open_data.py --mode daily
+      - name: Verify live World Bank TEU import (feature branch only)
+        if: github.ref == 'refs/heads/feature/stockwatch-worldbank-port-traffic-20261113'
+        run: |
+          python scripts/shipping_ports.py
+          python - <<'PY'
+          import json
+          p=json.load(open('data/shipping-ports.json',encoding='utf-8'))
+          s=p['source']
+          assert s['status']=='ok', f"World Bank import failed: {s}"
+          assert len(p['series']) >= 5
+          assert all(x['isActualRate'] is False and x['unit']=='TEU'
+                     for x in p['series'])
+          print('World Bank live TEU series:',len(p['series']))
+          PY
       - name: Fetch official no-key and registered-source data
         if: github.ref == 'refs/heads/main'
         env:
@@ -58,6 +75,7 @@ jobs:
           python scripts/registered_sources.py
           python scripts/economic_feeds.py
           python scripts/shipping_open.py
+          python scripts/shipping_ports.py
       - name: Commit official-source datasets without racing the market scanner
         if: github.ref == 'refs/heads/main'
         run: python scripts/publish_data.py --mode official
