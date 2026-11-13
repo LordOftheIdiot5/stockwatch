@@ -33,6 +33,17 @@ class V4Structure(unittest.TestCase):
   self.assertIn("fetchJson('data/shipping-ports.json')",health)
   self.assertIn('NOT freight prices',health)
 
+ def test_unctad_and_voyage_calculator_are_distinct_from_rates(self):
+  js=(ROOT/'v4.js').read_text(encoding='utf-8')
+  health=(ROOT/'research.js').read_text(encoding='utf-8')
+  self.assertIn('renderUNCTADConnectivity()',js)
+  self.assertIn('renderVoyageEstimator()',js)
+  self.assertIn('renderPortWatchPermission()',js)
+  self.assertIn("get('data/shipping-connectivity.json')",js)
+  self.assertIn("fetchJson('data/shipping-connectivity.json')",health)
+  self.assertIn('permission_required',health)
+  self.assertIn('NOT Baltic assessment',js)
+
  def test_db_schema_has_source_traceability(self):
   con=sqlite3.connect(':memory:')
   con.executescript((ROOT/'database/0001_core.sql').read_text())

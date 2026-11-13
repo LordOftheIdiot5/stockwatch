@@ -21,6 +21,7 @@ OFFICIAL = frozenset({
     "data/economic-feeds.json",
     "data/shipping-open.json",
     "data/shipping-ports.json",
+    "data/shipping-connectivity.json",
 })
 CATALOG = "data/dataset-catalog.json"
 
