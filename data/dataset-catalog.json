@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T18:20:45Z",
+  "generated": "2026-11-13T18:31:07Z",
   "datasets": [
     {
       "name": "European issuer directory",
@@ -16,7 +16,7 @@
     {
       "name": "Historical article index",
       "path": "data/news-store/index.json",
-      "records": 318,
+      "records": 332,
       "license": "Git-backed source-linked metadata; inspect original publisher terms"
     },
     {
@@ -36,18 +36,6 @@
       "path": "data/source-health.json",
       "records": 138,
       "license": "Original scanner telemetry"
-    },
-    {
-      "name": "Official macroeconomic and FX observations",
-      "path": "data/open-data.json",
-      "records": 26,
-      "license": "Attributed per original source and series; official-source exception policies apply"
-    },
-    {
-      "name": "OpenFIGI instrument identity candidates",
-      "path": "data/registered-source-status.json",
-      "records": 102,
-      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
     }
   ]
 }

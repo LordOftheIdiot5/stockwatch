@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-13T17:06:46Z",
-  "latestScan": "2026-11-13T17:05:36+00:00",
+  "generated": "2026-11-13T18:31:07Z",
+  "latestScan": "2026-11-13T18:29:56+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "tracked": 138,
@@ -86,7 +86,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 155,
+  "storedStories": 162,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -100,53 +100,53 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 157.4,
+      "avgLatencyMs": 141.7,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 802.1,
+      "avgLatencyMs": 661.8,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1375.0,
+      "avgLatencyMs": 1189.1,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
       "succeeded": 594,
       "failed": 0,
-      "avgLatencyMs": 349.1,
+      "avgLatencyMs": 381.8,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2165.6,
+      "avgLatencyMs": 2297.1,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 318,
-    "relevant": 243,
-    "review": 69,
-    "duplicates": 7,
+    "total": 332,
+    "relevant": 251,
+    "review": 72,
+    "duplicates": 11,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 64,
+      "Earnings / results": 65,
       "Dividends": 5,
-      "M&A": 7,
-      "Guidance": 13,
+      "M&A": 8,
+      "Guidance": 15,
       "Contracts": 14,
       "Capital & ownership": 0,
-      "Management": 11,
-      "General": 204
+      "Management": 13,
+      "General": 212
     }
   },
   "freightRoutes": {
