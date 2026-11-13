@@ -121,3 +121,24 @@ Only after the authentication check succeeds should you dispatch a new
 and never prints the secret. A 403 means the stored GitHub secret does not
 match the Worker secret or an upstream rule is denying the request;
 inspect the safe error category in the smoke-test log.
+
+## Cloudflare workers.dev Browser Integrity Check (Python urllib)
+
+Cloudflare-managed `*.workers.dev` hosts apply Browser Integrity Check. Python
+`urllib.request` defaults to a `Python-urllib/x.y` User-Agent and may be
+blocked at the edge with HTTP 403 / Cloudflare error 1010, **before the Worker
+executes**. This block does not appear in Worker invocation logs. It is not a
+GitHub data quota or necessarily a bad bearer token.
+
+The GitHub archive uploader and zero-record authentication probe now identify
+themselves as `StockwatchResearch/1.0 (+https://stocks.nordl.dev)` using a
+descriptive `User-Agent` header. Do not rotate healthy secrets as the first
+response to this error. Verify the dedicated smoke test first:
+
+```powershell
+gh workflow run archive-d1-check.yml --repo LordOftheIdiot5/stockwatch --ref main
+gh run list --repo LordOftheIdiot5/stockwatch --workflow archive-d1-check.yml --limit 1
+```
+
+Once verified, launch the normal scan to push 7 days of news. Cloudflare
+documentation: https://developers.cloudflare.com/workers/configuration/routing/workers-dev/
