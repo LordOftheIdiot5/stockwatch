@@ -77,3 +77,21 @@ Before any commercial import, obtain a written license detailing website/public 
 ## A/B analytics and visuals
 
 The A/B page renders a sourced one-year **statistical reference band** from the existing scanner's mean/standard deviation and the current A/B ratio. It is explicitly labeled **NOT a historical price chart**. When licensed same-day price bars for both share classes are present, a separate historical ratio chart supports 1M/3M/1Y/all controls. No synthetic historical chart or guessed sample points are generated.
+
+## D1 ingestion repair — Windows PowerShell BOM
+
+If a GitHub Scan job reports success while `/api/health` still shows `articles: 0`, inspect the `Optional database archive ingestion` step. A `UnicodeEncodeError` mentioning `\\ufeff` indicates an extra BOM in the GitHub secret.
+
+With the existing `wrangler.toml` and authenticated `npx wrangler whoami` / `gh auth status`, **do not recreate the D1 database**. Rotate the Worker and GitHub ingest token together using a BOM-free ASCII input file:
+
+```powershell
+git fetch origin
+git switch main
+git pull --ff-only
+.\\deploy\\repair-archive-secret.ps1 -ArchiveUrl "https://stockwatch-research-api.gauchovidar.workers.dev/api/news/ingest"
+gh workflow run scan.yml --repo LordOftheIdiot5/stockwatch --ref main
+```
+
+The repair script generates a new 256-bit token, writes it only to short-lived temporary files, and passes it to both CLIs over raw standard input. No secret is printed, stored in Git, or published by the browser. Remove obsolete temporary files if the process is interrupted. The workflow now emits a warning if upload fails without blocking scanner data commits.
+
+The Data health page independently checks the live D1 article count. An empty database is not equivalent to a healthy ingest pipeline; watch for a count greater than zero after the scan.
