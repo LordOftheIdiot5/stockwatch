@@ -18,20 +18,10 @@ npx wrangler deploy --config wrangler.toml
 if ($LASTEXITCODE -ne 0) { throw 'Worker deployment failed.' }
 if (-not $ArchiveUrl) { $ArchiveUrl = Read-Host 'Paste the deployed HTTPS Worker URL ending in /api/news/ingest' }
 if ($ArchiveUrl -notmatch '^https://[^\s]+/api/news/ingest$') { throw 'Invalid HTTPS ingestion URL.' }
-# Windows PowerShell 5.1 and PowerShell 7 compatible cryptographic token.
-# Do not print or save this secret in the repository.
-$bytes = New-Object byte[] 32
-$rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
-try { $rng.GetBytes($bytes) } finally { $rng.Dispose() }
-$token = -join ($bytes | ForEach-Object { $_.ToString('x2') })
-try {
-  $token | npx wrangler secret put NEWS_INGEST_TOKEN --config wrangler.toml
-  if ($LASTEXITCODE -ne 0) { throw 'Cloudflare secret setup failed.' }
-  $token | gh secret set STOCKWATCH_ARCHIVE_TOKEN --repo $Repository
-  if ($LASTEXITCODE -ne 0) { throw 'GitHub token secret setup failed.' }
-  $ArchiveUrl | gh secret set STOCKWATCH_ARCHIVE_URL --repo $Repository
-  if ($LASTEXITCODE -ne 0) { throw 'GitHub URL secret setup failed.' }
-} finally { $token = $null }
+# Route both secrets through BOM-free ASCII stdin; Windows PowerShell piping
+# directly to native commands can prepend U+FEFF and break HTTP auth.
+& .\\deploy\\repair-archive-secret.ps1 -ArchiveUrl $ArchiveUrl -Repository $Repository
+if ($LASTEXITCODE -and $LASTEXITCODE -ne 0) { throw 'Secret configuration failed.' }
 $health = Invoke-RestMethod -Uri $ArchiveUrl.Replace('/api/news/ingest','/api/health') -Method Get
 if ($health.status -ne 'ok') { throw 'Worker health check did not return status=ok.' }
 Write-Host 'Cloudflare D1 connected and Worker health check passed.'
