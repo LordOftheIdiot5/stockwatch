@@ -20,7 +20,7 @@ if (-not $ArchiveUrl) { $ArchiveUrl = Read-Host 'Paste the deployed HTTPS Worker
 if ($ArchiveUrl -notmatch '^https://[^\s]+/api/news/ingest$') { throw 'Invalid HTTPS ingestion URL.' }
 # Route both secrets through BOM-free ASCII stdin; Windows PowerShell piping
 # directly to native commands can prepend U+FEFF and break HTTP auth.
-& .\\deploy\\repair-archive-secret.ps1 -ArchiveUrl $ArchiveUrl -Repository $Repository
+& .\deploy\repair-archive-secret.ps1 -ArchiveUrl $ArchiveUrl -Repository $Repository
 if ($LASTEXITCODE -and $LASTEXITCODE -ne 0) { throw 'Secret configuration failed.' }
 $health = Invoke-RestMethod -Uri $ArchiveUrl.Replace('/api/news/ingest','/api/health') -Method Get
 if ($health.status -ne 'ok') { throw 'Worker health check did not return status=ok.' }
