@@ -1,10 +1,1198 @@
 {
-  "generated": null,
-  "notice": "Annual World Bank container port TEU statistics, not freight rates. Awaiting first verified importer run.",
+  "generated": "2026-11-13T21:39:57Z",
+  "notice": "Annual country container-port throughput in TEUs; NOT spot freight rates, charter earnings, daily vessel movements or Baltic benchmarks.",
   "source": {
-    "status": "not_checked",
+    "status": "ok",
     "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
-    "lastSuccessAt": null
+    "lastSuccessAt": "2026-11-13T21:39:57Z",
+    "series": 15,
+    "observations": 225
   },
-  "series": []
+  "series": [
+    {
+      "key": "worldbank:container-port-teu:WLD",
+      "countryCode": "WLD",
+      "label": "World container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 913279048.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 547127645.26
+        },
+        {
+          "date": "2011-12-31",
+          "value": 593376139.89
+        },
+        {
+          "date": "2012-12-31",
+          "value": 623441761.259
+        },
+        {
+          "date": "2013-12-31",
+          "value": 643970054.627
+        },
+        {
+          "date": "2014-12-31",
+          "value": 675126025.766
+        },
+        {
+          "date": "2015-12-31",
+          "value": 684527381.96
+        },
+        {
+          "date": "2016-12-31",
+          "value": 700903754.366
+        },
+        {
+          "date": "2017-12-31",
+          "value": 746691932.43
+        },
+        {
+          "date": "2018-12-31",
+          "value": 784294634.377
+        },
+        {
+          "date": "2019-12-31",
+          "value": 803124175.651
+        },
+        {
+          "date": "2020-12-31",
+          "value": 791062136.625
+        },
+        {
+          "date": "2021-12-31",
+          "value": 844570038.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 850416540.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 853611611.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 913279048.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:CHN",
+      "countryCode": "CHN",
+      "label": "China container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 299703800.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 136044183.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 151800937.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 165939400.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 176607144.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 187291913.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 195509165.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 202830580.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 218712874.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 229127700.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 237570000.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 240480000.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 256945700.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 268790000.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 278759834.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 299703800.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:SGP",
+      "countryCode": "SGP",
+      "label": "Singapore container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 41124100.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 28431100.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 29937700.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 31649400.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 32578700.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 33869300.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 30922300.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 30903600.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 33666600.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 36599200.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 37195000.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 36870900.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 37571200.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 37289600.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 39010000.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 41124100.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:USA",
+      "countryCode": "USA",
+      "label": "United States container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 59707490.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 40266221.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 40813311.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 41880574.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 42842995.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 44635035.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 46496985.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 46940227.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 50196165.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 52994177.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 54236516.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 53059014.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 60874671.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 61191458.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 54618858.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 59707490.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:NLD",
+      "countryCode": "NLD",
+      "label": "Netherlands container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 14517179.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 11334566.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 12024928.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 12034495.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 11751977.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 12456588.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 12400607.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 12612142.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 13992474.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 14802257.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 15198050.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 14757227.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 15781756.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 14929333.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 14111298.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 14517179.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:DEU",
+      "countryCode": "DEU",
+      "label": "Germany container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 13294081.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 13037702.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 15199723.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 15269690.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 15401010.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 15842604.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 14988243.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 15126366.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 15163474.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 15123221.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 15022386.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 13946212.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 14710963.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 13733867.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 12608856.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 13294081.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:NOR",
+      "countryCode": "NOR",
+      "label": "Norway container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 862983.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 636086.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 670407.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 687821.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 707041.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 728372.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 735753.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 716916.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 764093.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 802364.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 837457.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 835398.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 881238.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 933300.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 882560.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 862983.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:SWE",
+      "countryCode": "SWE",
+      "label": "Sweden container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 1640487.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 1397145.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 1495064.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 1501991.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 1455537.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 1471086.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 1457679.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 1509886.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 1557281.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 1600175.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 1623363.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 1612953.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 1635183.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 1631248.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 1598378.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 1640487.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:DNK",
+      "countryCode": "DNK",
+      "label": "Denmark container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 935848.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 698012.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 782554.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 763945.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 752489.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 750598.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 753643.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 715076.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 820139.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 833857.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 880039.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 933622.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 1054552.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 1079406.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 926423.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 935848.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:GBR",
+      "countryCode": "GBR",
+      "label": "United Kingdom container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 9621469.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 8224935.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 8142319.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 7978028.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 8248439.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 9509757.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 9760060.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 10200229.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 10239674.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 10315140.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 10508000.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 9732000.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 10290181.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 9749676.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 9090140.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 9621469.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:JPN",
+      "countryCode": "JPN",
+      "label": "Japan container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 21886683.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 20016486.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 20631007.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 21167525.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 21442040.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 21662814.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 21094824.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 21678076.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 22795433.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 23424446.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 23276482.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 21568959.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 22353354.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 22462583.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 21499023.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 21886683.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:KOR",
+      "countryCode": "KOR",
+      "label": "South Korea container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 31850924.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 19202172.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 21610491.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 22559272.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 23463109.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 24798794.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 25477299.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 25945418.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 27420698.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 28874930.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 28959959.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 28834192.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 29786900.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 28502044.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 30003141.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 31850924.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:IND",
+      "countryCode": "IND",
+      "label": "India container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 23898000.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 9235765.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 9878067.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 10017480.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 10571320.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 11652174.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 12318610.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 13724110.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 15450523.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 16996593.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 17487621.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 17597062.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 19561769.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 19717168.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 22208000.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 23898000.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:ARE",
+      "countryCode": "ARE",
+      "label": "United Arab Emirates container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 23466906.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 15140524.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 17028713.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 18063296.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 18657222.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 20186679.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 21238293.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 20652200.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 19089706.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 18696000.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 18802000.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 18720000.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 19236164.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 20391675.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 21531172.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 23466906.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    },
+    {
+      "key": "worldbank:container-port-teu:VNM",
+      "countryCode": "VNM",
+      "label": "Viet Nam container port throughput",
+      "provider": "World Bank WDI (source: UNCTAD)",
+      "category": "Container port activity",
+      "unit": "TEU",
+      "frequency": "annual",
+      "sourceUrl": "https://data.worldbank.org/indicator/IS.SHP.GOOD.TU",
+      "licenseUrl": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required",
+      "period": "2024",
+      "value": 24423183.0,
+      "history": [
+        {
+          "date": "2010-12-31",
+          "value": 6431032.0
+        },
+        {
+          "date": "2011-12-31",
+          "value": 6885023.0
+        },
+        {
+          "date": "2012-12-31",
+          "value": 7505641.0
+        },
+        {
+          "date": "2013-12-31",
+          "value": 8035812.0
+        },
+        {
+          "date": "2014-12-31",
+          "value": 9473429.0
+        },
+        {
+          "date": "2015-12-31",
+          "value": 10615391.0
+        },
+        {
+          "date": "2016-12-31",
+          "value": 11282230.0
+        },
+        {
+          "date": "2017-12-31",
+          "value": 12382524.0
+        },
+        {
+          "date": "2018-12-31",
+          "value": 13394390.0
+        },
+        {
+          "date": "2019-12-31",
+          "value": 15297028.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 16394723.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 19821048.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 20519284.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 21069746.0
+        },
+        {
+          "date": "2024-12-31",
+          "value": 24423183.0
+        }
+      ],
+      "observedAt": "2026-11-13T21:39:57Z",
+      "isActualRate": false,
+      "isBalticBenchmark": false
+    }
+  ]
 }

@@ -1,24 +1,6 @@
 {
-  "generated": "2026-11-13T21:21:54Z",
+  "generated": "2026-11-13T21:39:58Z",
   "datasets": [
-    {
-      "name": "Official macroeconomic and FX observations",
-      "path": "data/open-data.json",
-      "records": 26,
-      "license": "Attributed per original source and series; official-source exception policies apply"
-    },
-    {
-      "name": "OpenFIGI instrument identity candidates",
-      "path": "data/registered-source-status.json",
-      "records": 102,
-      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
-    },
-    {
-      "name": "USDA weekly ocean-grain freight cost indices",
-      "path": "data/shipping-open.json",
-      "records": 328,
-      "license": "USDA AMS source-attributed index observations; not commercial freight quotes"
-    },
     {
       "name": "European issuer directory",
       "path": "data/issuer-identities.json",
@@ -54,6 +36,30 @@
       "path": "data/source-health.json",
       "records": 138,
       "license": "Original scanner telemetry"
+    },
+    {
+      "name": "Official macroeconomic and FX observations",
+      "path": "data/open-data.json",
+      "records": 26,
+      "license": "Attributed per original source and series; official-source exception policies apply"
+    },
+    {
+      "name": "OpenFIGI instrument identity candidates",
+      "path": "data/registered-source-status.json",
+      "records": 102,
+      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
+    },
+    {
+      "name": "USDA weekly ocean-grain freight cost indices",
+      "path": "data/shipping-open.json",
+      "records": 328,
+      "license": "USDA AMS source-attributed index observations; not commercial freight quotes"
+    },
+    {
+      "name": "World Bank annual container-port traffic (TEU)",
+      "path": "data/shipping-ports.json",
+      "records": 225,
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required"
     }
   ]
 }
