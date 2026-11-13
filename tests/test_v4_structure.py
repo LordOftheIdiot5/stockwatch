@@ -44,6 +44,21 @@ class V4Structure(unittest.TestCase):
   self.assertIn('permission_required',health)
   self.assertIn('NOT Baltic assessment',js)
 
+ def test_theme_aware_native_select_options_and_voyage_inputs(self):
+  css=(ROOT/'v4.css').read_text(encoding='utf-8')
+  js=(ROOT/'v4.js').read_text(encoding='utf-8')
+  # Native dropdown option colors must agree with the site theme.
+  self.assertNotIn('.sw-controls select option{color:#13243b}',css)
+  self.assertIn('.sw-controls select option{background-color:var(--sw-surface);color:var(--sw-text)}',css)
+  self.assertIn('body[data-theme="dark"] select{color-scheme:dark}',css)
+  self.assertIn('body[data-theme="light"] select{color-scheme:light}',css)
+  self.assertIn('.sw-content select option:checked{background-color:var(--sw-card-hi);color:var(--sw-text)}',css)
+  # Voyage calculator uses --sw-* for BOTH light and dark mode.
+  self.assertIn('class="sw-voyage-input"',js)
+  self.assertIn('#voyageEstimator .sw-voyage-input',css)
+  self.assertNotIn('background:var(--surface,#121e30)',js)
+  self.assertNotIn('color:var(--text,#fff)',js)
+  
  def test_db_schema_has_source_traceability(self):
   con=sqlite3.connect(':memory:')
   con.executescript((ROOT/'database/0001_core.sql').read_text())
