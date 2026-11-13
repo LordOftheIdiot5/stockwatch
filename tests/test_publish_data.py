@@ -38,6 +38,22 @@ class PublishDataTests(unittest.TestCase):
         self.assertEqual(records["data/news-latest.json"],90)
         self.assertEqual(records["data/source-health.json"],138)
 
+    def test_worldbank_port_refresh_is_official_only(self):
+        remote=json.dumps({"datasets":[
+            {"path":"data/shipping-ports.json","records":4},
+            {"path":"data/news-latest.json","records":100},
+        ]}).encode()
+        incoming=json.dumps({"datasets":[
+            {"path":"data/shipping-ports.json","records":240},
+            {"path":"data/news-latest.json","records":10},
+        ]}).encode()
+        official=json.loads(publish_data.merge_catalog(remote,incoming,"official"))
+        scanner=json.loads(publish_data.merge_catalog(remote,incoming,"scan"))
+        self.assertEqual({x["path"]:x["records"] for x in official["datasets"]},
+                         {"data/shipping-ports.json":240,"data/news-latest.json":100})
+        self.assertEqual({x["path"]:x["records"] for x in scanner["datasets"]},
+                         {"data/shipping-ports.json":4,"data/news-latest.json":10})
+
     def test_invalid_catalog_falls_back_safely(self):
         result=json.loads(publish_data.merge_catalog(b"not-json",self.incoming,"official"))
         self.assertEqual(len(result["datasets"]),2)
