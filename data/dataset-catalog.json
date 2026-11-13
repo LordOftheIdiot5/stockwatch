@@ -1,0 +1,41 @@
+{
+  "generated": "2026-11-13T01:39:52Z",
+  "datasets": [
+    {
+      "name": "European issuer directory",
+      "path": "data/issuer-identities.json",
+      "records": 138,
+      "license": "Original watchlist identities; underlying exchange identifiers subject to source terms"
+    },
+    {
+      "name": "Latest company news",
+      "path": "data/news-latest.json",
+      "records": 100,
+      "license": "Metadata and outbound source links, not reproduced articles"
+    },
+    {
+      "name": "Historical article index",
+      "path": "data/news-store/index.json",
+      "records": 154,
+      "license": "Git-backed source-linked metadata; inspect original publisher terms"
+    },
+    {
+      "name": "A/B indicator observations",
+      "path": "data/spread-observations.json",
+      "records": 12,
+      "license": "Derived research indicators; no raw historical OHLCV"
+    },
+    {
+      "name": "Freight route definitions",
+      "path": "data/freight-routes.json",
+      "records": 30,
+      "license": "Route metadata only; Baltic benchmark quotes require a redistribution license"
+    },
+    {
+      "name": "Source quality",
+      "path": "data/source-health.json",
+      "records": 138,
+      "license": "Original scanner telemetry"
+    }
+  ]
+}

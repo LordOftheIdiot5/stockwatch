@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-13T01:12:31+00:00",
+ "generated": "2026-11-13T01:39:00+00:00",
  "tickers": 138,
- "marketPct": 0.62,
+ "marketPct": 0.69,
  "languages": [
   "da",
   "de",
@@ -15,84 +15,6 @@
   "sv"
  ],
  "companies": [
-  {
-   "ticker": "PROXI.OL",
-   "name": "Proximar Seafood",
-   "sector": "Aquaculture",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": false,
-   "spark": [
-    0.449,
-    0.445,
-    0.448,
-    0.44,
-    0.434,
-    0.43,
-    0.449,
-    0.42,
-    0.429,
-    0.436,
-    0.428,
-    0.434,
-    0.42,
-    0.449,
-    0.429,
-    0.413,
-    0.419,
-    0.431,
-    0.0498,
-    0.046,
-    0.0392,
-    0.0412,
-    0.054,
-    0.051,
-    0.0568,
-    0.0524,
-    0.052,
-    0.05,
-    0.05,
-    0.0476
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiqwFBVV95cUxQS3BBTWtrSFRqYy1RVXFnc2lTcEh5UHJkSzZTbTRsQ2FGYXJhTXBlSk5sci1hUl9oU29fbnZFZWZkRkFDTTZJenpvb3JESXA5UVAwOWswNEM4RTJFcG5KTmhNWmFyTGhvZU1MRG9DSnlyMUUwOGZvTnRpMDVoVXhYV2VWTlZGaWFIbWNfS0xsb1JyWmc3S0VQa2Q3NWd4VVUyY1lYTmczT1llY1E?oc=5",
-     "headline": "Proximar jobber med en redningsplan – har kjøpt seg noen uker til",
-     "english": null,
-     "lang": "no",
-     "publisher": "Intrafish",
-     "score": 2,
-     "material": 0,
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQS3BBTWtrSFRqYy1RVXFnc2lTcEh5UHJkSzZTbTRsQ2FGYXJhTXBlSk5sci1hUl9oU29fbnZFZWZkRkFDTTZJenpvb3JESXA5UVAwOWswNEM4RTJFcG5KTmhNWmFyTGhvZU1MRG9DSnlyMUUwOGZvTnRpMDVoVXhYV2VWTlZGaWFIbWNfS0xsb1JyWmc3S0VQa2Q3NWd4VVUyY1lYTmczT1llY1E?oc=5",
-     "published": "Wed, 11 Nov 2026 20:57:59 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxQVWo4WG1vSjBOcUZvVW42QXlrekxwM1dSVlhteUlveHM1UmdjTUl4UWNva3hqenJ2b1BOTlZTLXJ5c2RMcE1Wa29JNDJmd3k0aWVHWlNYTUxWeGNER2VTMVBjQXBkZFhDaU5jd1h5R24zckVoR216eGdYRGxMRzc4TGRlSmdKLVY2STVNNm9FaWRENllPd3llXzZDcGZ1NTduNTNWMTh6QzlJRTVnckxV?oc=5",
-     "headline": "Proximar buys itself a few more weeks as it works on rescue plan",
-     "english": null,
-     "lang": "en",
-     "publisher": "IntraFish",
-     "score": 2,
-     "material": 0,
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVWo4WG1vSjBOcUZvVW42QXlrekxwM1dSVlhteUlveHM1UmdjTUl4UWNva3hqenJ2b1BOTlZTLXJ5c2RMcE1Wa29JNDJmd3k0aWVHWlNYTUxWeGNER2VTMVBjQXBkZFhDaU5jd1h5R24zckVoR216eGdYRGxMRzc4TGRlSmdKLVY2STVNNm9FaWRENllPd3llXzZDcGZ1NTduNTNWMTh6QzlJRTVnckxV?oc=5",
-     "published": "Thu, 12 Nov 2026 07:39:46 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-11-11",
-   "close": 0.0476,
-   "changePct": -4.8,
-   "sigma": -0.22,
-   "volume": 6200733,
-   "medianVolume": 5085818,
-   "rvol": 1.22,
-   "marketPct": 0.62,
-   "excessPct": -5.42,
-   "excessSigma": -0.25
-  },
   {
    "ticker": "ISLAX.OL",
    "name": "Icelandic Salmon",
@@ -167,8 +89,8 @@
    "volume": 1000,
    "medianVolume": 286,
    "rvol": 3.5,
-   "marketPct": 0.62,
-   "excessPct": -0.62,
+   "marketPct": 0.69,
+   "excessPct": -0.69,
    "excessSigma": 0
   },
   {
@@ -232,9 +154,9 @@
    "volume": 3250623,
    "medianVolume": 1162707,
    "rvol": 2.8,
-   "marketPct": 0.62,
-   "excessPct": 16.28,
-   "excessSigma": 4.31,
+   "marketPct": 0.69,
+   "excessPct": 16.21,
+   "excessSigma": 4.29,
    "short": {
     "percent": 2.62,
     "previous": 2.59,
@@ -305,9 +227,74 @@
    "volume": 157603,
    "medianVolume": 108578,
    "rvol": 1.45,
-   "marketPct": 0.62,
-   "excessPct": -0.73,
-   "excessSigma": -0.33
+   "marketPct": 0.69,
+   "excessPct": -0.8,
+   "excessSigma": -0.36
+  },
+  {
+   "ticker": "PROXI.OL",
+   "name": "Proximar Seafood",
+   "sector": "Aquaculture",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": false,
+   "spark": [
+    0.449,
+    0.445,
+    0.448,
+    0.44,
+    0.434,
+    0.43,
+    0.449,
+    0.42,
+    0.429,
+    0.436,
+    0.428,
+    0.434,
+    0.42,
+    0.449,
+    0.429,
+    0.413,
+    0.419,
+    0.431,
+    0.0498,
+    0.046,
+    0.0392,
+    0.0412,
+    0.054,
+    0.051,
+    0.0568,
+    0.0524,
+    0.052,
+    0.05,
+    0.05,
+    0.0476
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxQVWo4WG1vSjBOcUZvVW42QXlrekxwM1dSVlhteUlveHM1UmdjTUl4UWNva3hqenJ2b1BOTlZTLXJ5c2RMcE1Wa29JNDJmd3k0aWVHWlNYTUxWeGNER2VTMVBjQXBkZFhDaU5jd1h5R24zckVoR216eGdYRGxMRzc4TGRlSmdKLVY2STVNNm9FaWRENllPd3llXzZDcGZ1NTduNTNWMTh6QzlJRTVnckxV?oc=5",
+     "headline": "Proximar buys itself a few more weeks as it works on rescue plan",
+     "english": null,
+     "lang": "en",
+     "publisher": "IntraFish",
+     "score": 2,
+     "material": 0,
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVWo4WG1vSjBOcUZvVW42QXlrekxwM1dSVlhteUlveHM1UmdjTUl4UWNva3hqenJ2b1BOTlZTLXJ5c2RMcE1Wa29JNDJmd3k0aWVHWlNYTUxWeGNER2VTMVBjQXBkZFhDaU5jd1h5R24zckVoR216eGdYRGxMRzc4TGRlSmdKLVY2STVNNm9FaWRENllPd3llXzZDcGZ1NTduNTNWMTh6QzlJRTVnckxV?oc=5",
+     "published": "Thu, 12 Nov 2026 07:39:46 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-11-11",
+   "close": 0.0476,
+   "changePct": -4.8,
+   "sigma": -0.22,
+   "volume": 6200733,
+   "medianVolume": 5085818,
+   "rvol": 1.22,
+   "marketPct": 0.69,
+   "excessPct": -5.48,
+   "excessSigma": -0.25
   },
   {
    "ticker": "ANDF.OL",
@@ -356,9 +343,9 @@
    "volume": 33385,
    "medianVolume": 25550,
    "rvol": 1.31,
-   "marketPct": 0.62,
-   "excessPct": -2.59,
-   "excessSigma": -1.68
+   "marketPct": 0.69,
+   "excessPct": -2.66,
+   "excessSigma": -1.73
   },
   {
    "ticker": "PLCAN.OL",
@@ -407,9 +394,9 @@
    "volume": 10024,
    "medianVolume": 5902,
    "rvol": 1.7,
-   "marketPct": 0.62,
-   "excessPct": -1.34,
-   "excessSigma": -1.41
+   "marketPct": 0.69,
+   "excessPct": -1.41,
+   "excessSigma": -1.49
   },
   {
    "ticker": "KLDVK.OL",
@@ -458,60 +445,9 @@
    "volume": 31296,
    "medianVolume": 17909,
    "rvol": 1.75,
-   "marketPct": 0.62,
-   "excessPct": -4.1,
-   "excessSigma": -0.41
-  },
-  {
-   "ticker": "AFISH.OL",
-   "name": "Arctic Fish",
-   "sector": "Aquaculture",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": true,
-   "spark": [
-    24.2,
-    24.0,
-    26.8,
-    26.2,
-    26.2,
-    24.4,
-    24.4,
-    24.0,
-    23.2,
-    23.2,
-    24.0,
-    24.6,
-    24.6,
-    25.0,
-    24.8,
-    24.8,
-    25.0,
-    25.8,
-    25.8,
-    23.2,
-    24.0,
-    23.4,
-    22.0,
-    23.6,
-    23.6,
-    23.6,
-    21.2,
-    21.4,
-    22.2,
-    22.6
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 22.6,
-   "changePct": 1.8,
-   "sigma": 0.41,
-   "volume": 4124,
-   "medianVolume": 839,
-   "rvol": 4.91,
-   "marketPct": 0.62,
-   "excessPct": 1.18,
-   "excessSigma": 0.27
+   "marketPct": 0.69,
+   "excessPct": -4.17,
+   "excessSigma": -0.42
   },
   {
    "ticker": "SALM.OL",
@@ -560,9 +496,9 @@
    "volume": 129833,
    "medianVolume": 160046,
    "rvol": 0.81,
-   "marketPct": 0.62,
-   "excessPct": -0.37,
-   "excessSigma": -0.24,
+   "marketPct": 0.69,
+   "excessPct": -0.44,
+   "excessSigma": -0.28,
    "short": {
     "percent": 1.72,
     "previous": 1.61,
@@ -571,6 +507,57 @@
     "largest": "JPMORGAN ASSET MANAGEMENT (UK) LIMITED",
     "largestPercent": 0.61
    }
+  },
+  {
+   "ticker": "AFISH.OL",
+   "name": "Arctic Fish",
+   "sector": "Aquaculture",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": true,
+   "spark": [
+    24.2,
+    24.0,
+    26.8,
+    26.2,
+    26.2,
+    24.4,
+    24.4,
+    24.0,
+    23.2,
+    23.2,
+    24.0,
+    24.6,
+    24.6,
+    25.0,
+    24.8,
+    24.8,
+    25.0,
+    25.8,
+    25.8,
+    23.2,
+    24.0,
+    23.4,
+    22.0,
+    23.6,
+    23.6,
+    23.6,
+    21.2,
+    21.4,
+    22.2,
+    22.6
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 22.6,
+   "changePct": 1.8,
+   "sigma": 0.41,
+   "volume": 4124,
+   "medianVolume": 839,
+   "rvol": 4.91,
+   "marketPct": 0.69,
+   "excessPct": 1.11,
+   "excessSigma": 0.25
   },
   {
    "ticker": "NOHAL.OL",
@@ -619,8 +606,8 @@
    "volume": 0,
    "medianVolume": 207,
    "rvol": 0.0,
-   "marketPct": 0.62,
-   "excessPct": -0.62,
+   "marketPct": 0.69,
+   "excessPct": -0.69,
    "excessSigma": 0
   },
   {
@@ -710,9 +697,9 @@
    "volume": 88844,
    "medianVolume": 33140,
    "rvol": 2.68,
-   "marketPct": 0.62,
-   "excessPct": 2.88,
-   "excessSigma": 1.55
+   "marketPct": 0.69,
+   "excessPct": 2.81,
+   "excessSigma": 1.51
   },
   {
    "ticker": "MORROW.ST",
@@ -801,9 +788,9 @@
    "volume": 498920,
    "medianVolume": 323270,
    "rvol": 1.54,
-   "marketPct": 0.62,
-   "excessPct": -0.74,
-   "excessSigma": -0.43
+   "marketPct": 0.69,
+   "excessPct": -0.81,
+   "excessSigma": -0.47
   },
   {
    "ticker": "UCG.MI",
@@ -892,9 +879,9 @@
    "volume": 6688290,
    "medianVolume": 4294047,
    "rvol": 1.56,
-   "marketPct": 0.62,
-   "excessPct": 0.21,
-   "excessSigma": 0.08
+   "marketPct": 0.69,
+   "excessPct": 0.14,
+   "excessSigma": 0.06
   },
   {
    "ticker": "STB.OL",
@@ -970,9 +957,9 @@
    "volume": 389362,
    "medianVolume": 587608,
    "rvol": 0.66,
-   "marketPct": 0.62,
-   "excessPct": -1.2,
-   "excessSigma": -0.95
+   "marketPct": 0.69,
+   "excessPct": -1.27,
+   "excessSigma": -1.01
   },
   {
    "ticker": "QLIRO.ST",
@@ -1035,9 +1022,9 @@
    "volume": 1541539,
    "medianVolume": 47046,
    "rvol": 32.77,
-   "marketPct": 0.62,
-   "excessPct": 2.01,
-   "excessSigma": 0.11
+   "marketPct": 0.69,
+   "excessPct": 1.94,
+   "excessSigma": 0.1
   },
   {
    "ticker": "INSTA.OL",
@@ -1086,9 +1073,9 @@
    "volume": 25414,
    "medianVolume": 82382,
    "rvol": 0.31,
-   "marketPct": 0.62,
-   "excessPct": -1.03,
-   "excessSigma": -1.58
+   "marketPct": 0.69,
+   "excessPct": -1.09,
+   "excessSigma": -1.67
   },
   {
    "ticker": "PROT.OL",
@@ -1137,9 +1124,9 @@
    "volume": 105949,
    "medianVolume": 88898,
    "rvol": 1.19,
-   "marketPct": 0.62,
-   "excessPct": -1.58,
-   "excessSigma": -1.43
+   "marketPct": 0.69,
+   "excessPct": -1.65,
+   "excessSigma": -1.5
   },
   {
    "ticker": "SBNOR.OL",
@@ -1188,9 +1175,9 @@
    "volume": 76656,
    "medianVolume": 85494,
    "rvol": 0.9,
-   "marketPct": 0.62,
-   "excessPct": -1.31,
-   "excessSigma": -0.97
+   "marketPct": 0.69,
+   "excessPct": -1.38,
+   "excessSigma": -1.02
   },
   {
    "ticker": "HOFI.ST",
@@ -1239,9 +1226,9 @@
    "volume": 80125,
    "medianVolume": 111807,
    "rvol": 0.72,
-   "marketPct": 0.62,
-   "excessPct": -2.23,
-   "excessSigma": -0.86
+   "marketPct": 0.69,
+   "excessPct": -2.29,
+   "excessSigma": -0.88
   },
   {
    "ticker": "NOBA.ST",
@@ -1290,9 +1277,9 @@
    "volume": 1136121,
    "medianVolume": 354718,
    "rvol": 3.2,
-   "marketPct": 0.62,
-   "excessPct": -1.24,
-   "excessSigma": -0.8
+   "marketPct": 0.69,
+   "excessPct": -1.31,
+   "excessSigma": -0.85
   },
   {
    "ticker": "TRYG.CO",
@@ -1341,9 +1328,9 @@
    "volume": 581787,
    "medianVolume": 757989,
    "rvol": 0.77,
-   "marketPct": 0.62,
-   "excessPct": -0.44,
-   "excessSigma": -0.64
+   "marketPct": 0.69,
+   "excessPct": -0.51,
+   "excessSigma": -0.74
   },
   {
    "ticker": "AZA.ST",
@@ -1392,60 +1379,9 @@
    "volume": 235368,
    "medianVolume": 312309,
    "rvol": 0.75,
-   "marketPct": 0.62,
-   "excessPct": -0.46,
-   "excessSigma": -0.32
-  },
-  {
-   "ticker": "INVE-B.ST",
-   "name": "Investor AB",
-   "sector": "Banks & insurance",
-   "exchange": "Stockholm",
-   "currency": "SEK",
-   "thin": false,
-   "spark": [
-    400.1,
-    405.05,
-    403.8,
-    411.0,
-    407.5,
-    406.55,
-    412.05,
-    413.1,
-    416.15,
-    417.85,
-    413.25,
-    422.6,
-    420.95,
-    413.7,
-    418.85,
-    409.05,
-    412.0,
-    418.45,
-    423.55,
-    427.2,
-    426.6,
-    427.1,
-    428.2,
-    428.5,
-    434.4,
-    433.9,
-    428.15,
-    429.6,
-    431.05,
-    435.25
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 435.25,
-   "changePct": 0.97,
-   "sigma": 0.85,
-   "volume": 2833618,
-   "medianVolume": 2545763,
-   "rvol": 1.11,
-   "marketPct": 0.62,
-   "excessPct": 0.35,
-   "excessSigma": 0.31
+   "marketPct": 0.69,
+   "excessPct": -0.53,
+   "excessSigma": -0.36
   },
   {
    "ticker": "AVARDA.ST",
@@ -1494,9 +1430,60 @@
    "volume": 52944,
    "medianVolume": 64268,
    "rvol": 0.82,
-   "marketPct": 0.62,
-   "excessPct": -0.41,
-   "excessSigma": -0.23
+   "marketPct": 0.69,
+   "excessPct": -0.48,
+   "excessSigma": -0.27
+  },
+  {
+   "ticker": "INVE-B.ST",
+   "name": "Investor AB",
+   "sector": "Banks & insurance",
+   "exchange": "Stockholm",
+   "currency": "SEK",
+   "thin": false,
+   "spark": [
+    400.1,
+    405.05,
+    403.8,
+    411.0,
+    407.5,
+    406.55,
+    412.05,
+    413.1,
+    416.15,
+    417.85,
+    413.25,
+    422.6,
+    420.95,
+    413.7,
+    418.85,
+    409.05,
+    412.0,
+    418.45,
+    423.55,
+    427.2,
+    426.6,
+    427.1,
+    428.2,
+    428.5,
+    434.4,
+    433.9,
+    428.15,
+    429.6,
+    431.05,
+    435.25
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 435.25,
+   "changePct": 0.97,
+   "sigma": 0.85,
+   "volume": 2833618,
+   "medianVolume": 2545763,
+   "rvol": 1.11,
+   "marketPct": 0.69,
+   "excessPct": 0.28,
+   "excessSigma": 0.25
   },
   {
    "ticker": "GJF.OL",
@@ -1545,9 +1532,9 @@
    "volume": 205323,
    "medianVolume": 346123,
    "rvol": 0.59,
-   "marketPct": 0.62,
-   "excessPct": -0.26,
-   "excessSigma": -0.17
+   "marketPct": 0.69,
+   "excessPct": -0.33,
+   "excessSigma": -0.21
   },
   {
    "ticker": "VEI.OL",
@@ -1649,9 +1636,9 @@
    "volume": 110692,
    "medianVolume": 74201,
    "rvol": 1.49,
-   "marketPct": 0.62,
-   "excessPct": -0.17,
-   "excessSigma": -0.14
+   "marketPct": 0.69,
+   "excessPct": -0.24,
+   "excessSigma": -0.2
   },
   {
    "ticker": "SKA-B.ST",
@@ -1740,9 +1727,9 @@
    "volume": 836231,
    "medianVolume": 659173,
    "rvol": 1.27,
-   "marketPct": 0.62,
-   "excessPct": 0.41,
-   "excessSigma": 0.36
+   "marketPct": 0.69,
+   "excessPct": 0.34,
+   "excessSigma": 0.3
   },
   {
    "ticker": "RAIL.ST",
@@ -1791,60 +1778,9 @@
    "volume": 23570,
    "medianVolume": 16665,
    "rvol": 1.41,
-   "marketPct": 0.62,
-   "excessPct": -3.62,
-   "excessSigma": -1.05
-  },
-  {
-   "ticker": "SBO.OL",
-   "name": "Selvaag Bolig",
-   "sector": "Construction",
-   "exchange": "Oslo",
-   "currency": "NOK",
-   "thin": true,
-   "spark": [
-    31.2,
-    30.85,
-    30.5,
-    30.2,
-    30.15,
-    30.2,
-    29.95,
-    30.05,
-    30.0,
-    30.2,
-    30.3,
-    30.25,
-    30.85,
-    30.65,
-    30.95,
-    31.3,
-    30.8,
-    30.95,
-    31.5,
-    31.5,
-    31.7,
-    31.9,
-    31.3,
-    31.45,
-    33.0,
-    32.8,
-    31.65,
-    31.9,
-    31.85,
-    32.45
-   ],
-   "stories": [],
-   "date": "2026-11-11",
-   "close": 32.45,
-   "changePct": 1.88,
-   "sigma": 1.13,
-   "volume": 26766,
-   "medianVolume": 13146,
-   "rvol": 2.04,
-   "marketPct": 0.62,
-   "excessPct": 1.26,
-   "excessSigma": 0.76
+   "marketPct": 0.69,
+   "excessPct": -3.69,
+   "excessSigma": -1.07
   },
   {
    "ticker": "QBEN.ST",
@@ -1893,9 +1829,60 @@
    "volume": 6368,
    "medianVolume": 28251,
    "rvol": 0.23,
-   "marketPct": 0.62,
-   "excessPct": -1.7,
-   "excessSigma": -0.72
+   "marketPct": 0.69,
+   "excessPct": -1.77,
+   "excessSigma": -0.75
+  },
+  {
+   "ticker": "SBO.OL",
+   "name": "Selvaag Bolig",
+   "sector": "Construction",
+   "exchange": "Oslo",
+   "currency": "NOK",
+   "thin": true,
+   "spark": [
+    31.2,
+    30.85,
+    30.5,
+    30.2,
+    30.15,
+    30.2,
+    29.95,
+    30.05,
+    30.0,
+    30.2,
+    30.3,
+    30.25,
+    30.85,
+    30.65,
+    30.95,
+    31.3,
+    30.8,
+    30.95,
+    31.5,
+    31.5,
+    31.7,
+    31.9,
+    31.3,
+    31.45,
+    33.0,
+    32.8,
+    31.65,
+    31.9,
+    31.85,
+    32.45
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 32.45,
+   "changePct": 1.88,
+   "sigma": 1.13,
+   "volume": 26766,
+   "medianVolume": 13146,
+   "rvol": 2.04,
+   "marketPct": 0.69,
+   "excessPct": 1.19,
+   "excessSigma": 0.72
   },
   {
    "ticker": "AFG.OL",
@@ -1944,9 +1931,9 @@
    "volume": 52698,
    "medianVolume": 26670,
    "rvol": 1.98,
-   "marketPct": 0.62,
-   "excessPct": 0.87,
-   "excessSigma": 0.68
+   "marketPct": 0.69,
+   "excessPct": 0.8,
+   "excessSigma": 0.62
   },
   {
    "ticker": "NRC.OL",
@@ -1995,9 +1982,9 @@
    "volume": 228428,
    "medianVolume": 377893,
    "rvol": 0.6,
-   "marketPct": 0.62,
-   "excessPct": 1.03,
-   "excessSigma": 0.33,
+   "marketPct": 0.69,
+   "excessPct": 0.96,
+   "excessSigma": 0.31,
    "short": {
     "percent": 0,
     "previous": 0.52,
@@ -2054,9 +2041,9 @@
    "volume": 572241,
    "medianVolume": 839670,
    "rvol": 0.68,
-   "marketPct": 0.62,
-   "excessPct": 0.0,
-   "excessSigma": 0.0
+   "marketPct": 0.69,
+   "excessPct": -0.07,
+   "excessSigma": -0.08
   },
   {
    "ticker": "VWS.CO",
@@ -2184,9 +2171,9 @@
    "volume": 8807186,
    "medianVolume": 2055290,
    "rvol": 4.29,
-   "marketPct": 0.62,
-   "excessPct": -4.42,
-   "excessSigma": -2.23
+   "marketPct": 0.69,
+   "excessPct": -4.48,
+   "excessSigma": -2.26
   },
   {
    "ticker": "NDX1.DE",
@@ -2301,9 +2288,9 @@
    "volume": 548826,
    "medianVolume": 478716,
    "rvol": 1.15,
-   "marketPct": 0.62,
-   "excessPct": 0.2,
-   "excessSigma": 0.06
+   "marketPct": 0.69,
+   "excessPct": 0.13,
+   "excessSigma": 0.04
   },
   {
    "ticker": "S92.DE",
@@ -2418,9 +2405,9 @@
    "volume": 70422,
    "medianVolume": 113074,
    "rvol": 0.62,
-   "marketPct": 0.62,
-   "excessPct": -0.04,
-   "excessSigma": -0.01
+   "marketPct": 0.69,
+   "excessPct": -0.11,
+   "excessSigma": -0.02
   },
   {
    "ticker": "NEX.PA",
@@ -2483,74 +2470,9 @@
    "volume": 255323,
    "medianVolume": 160570,
    "rvol": 1.59,
-   "marketPct": 0.62,
-   "excessPct": 3.53,
-   "excessSigma": 1.08
-  },
-  {
-   "ticker": "1AST.DE",
-   "name": "ASTA Energy Solutions",
-   "sector": "Grid & energy",
-   "exchange": "XETRA",
-   "currency": "EUR",
-   "thin": true,
-   "spark": [
-    58.8,
-    58.8,
-    57.8,
-    61.8,
-    60.8,
-    57.4,
-    58.4,
-    58.8,
-    57.8,
-    55.4,
-    51.8,
-    52.6,
-    54.4,
-    54.4,
-    52.4,
-    49.4,
-    46.9,
-    49.8,
-    51.2,
-    51.4,
-    52.2,
-    48.8,
-    48.5,
-    50.0,
-    49.9,
-    47.9,
-    49.6,
-    51.0,
-    50.8,
-    52.4
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMibEFVX3lxTFBvLWZla3VlU3hKVi1CU2hkN2hySjVkeWlEekh0aEpJWTJsdU4wSm1WTmp6MW1HdmJIZHB2eXNPQXZKTERpcGMwRHFPaDJkRFpxd2VNaEJjU3cwcWVGMXpsUGF2SkdrTGN3ZVZsdA?oc=5",
-     "headline": "ASTA Energy Solutions AG (1AST.HA) Analyst insights, Price targets and Recommendations",
-     "english": null,
-     "lang": "en",
-     "publisher": "Yahoo Finance UK",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvLWZla3VlU3hKVi1CU2hkN2hySjVkeWlEekh0aEpJWTJsdU4wSm1WTmp6MW1HdmJIZHB2eXNPQXZKTERpcGMwRHFPaDJkRFpxd2VNaEJjU3cwcWVGMXpsUGF2SkdrTGN3ZVZsdA?oc=5",
-     "published": "Wed, 11 Nov 2026 22:59:53 GMT",
-     "fresh": true
-    }
-   ],
-   "date": "2026-11-11",
-   "close": 52.4,
-   "changePct": 3.15,
-   "sigma": 0.85,
-   "volume": 37948,
-   "medianVolume": 28916,
-   "rvol": 1.31,
-   "marketPct": 0.62,
-   "excessPct": 2.53,
-   "excessSigma": 0.68
+   "marketPct": 0.69,
+   "excessPct": 3.47,
+   "excessSigma": 1.06
   },
   {
    "ticker": "PFSE.DE",
@@ -2613,9 +2535,60 @@
    "volume": 18269,
    "medianVolume": 58295,
    "rvol": 0.31,
-   "marketPct": 0.62,
-   "excessPct": 0.36,
-   "excessSigma": 0.11
+   "marketPct": 0.69,
+   "excessPct": 0.29,
+   "excessSigma": 0.09
+  },
+  {
+   "ticker": "ALPER.PA",
+   "name": "Gerard Perrier Industrie",
+   "sector": "Grid & energy",
+   "exchange": "Paris",
+   "currency": "EUR",
+   "thin": true,
+   "spark": [
+    74.6,
+    73.0,
+    72.8,
+    72.8,
+    72.2,
+    72.0,
+    72.2,
+    73.2,
+    72.4,
+    70.2,
+    69.4,
+    66.2,
+    69.4,
+    69.4,
+    67.6,
+    66.6,
+    65.4,
+    65.8,
+    70.0,
+    70.0,
+    70.2,
+    70.2,
+    69.8,
+    69.6,
+    69.2,
+    69.8,
+    69.4,
+    70.0,
+    69.6,
+    72.0
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 72.0,
+   "changePct": 3.45,
+   "sigma": 1.49,
+   "volume": 1495,
+   "medianVolume": 1363,
+   "rvol": 1.1,
+   "marketPct": 0.69,
+   "excessPct": 2.77,
+   "excessSigma": 1.2
   },
   {
    "ticker": "BONHR.OL",
@@ -2664,9 +2637,9 @@
    "volume": 93442,
    "medianVolume": 26962,
    "rvol": 3.47,
-   "marketPct": 0.62,
-   "excessPct": 2.3,
-   "excessSigma": 1.06
+   "marketPct": 0.69,
+   "excessPct": 2.23,
+   "excessSigma": 1.03
   },
   {
    "ticker": "PRY.MI",
@@ -2715,9 +2688,9 @@
    "volume": 1152410,
    "medianVolume": 1508011,
    "rvol": 0.76,
-   "marketPct": 0.62,
-   "excessPct": 3.67,
-   "excessSigma": 0.95
+   "marketPct": 0.69,
+   "excessPct": 3.6,
+   "excessSigma": 0.93
   },
   {
    "ticker": "NIBE-B.ST",
@@ -2766,9 +2739,9 @@
    "volume": 9609641,
    "medianVolume": 4543770,
    "rvol": 2.11,
-   "marketPct": 0.62,
-   "excessPct": -0.91,
-   "excessSigma": -0.85
+   "marketPct": 0.69,
+   "excessPct": -0.98,
+   "excessSigma": -0.91
   },
   {
    "ticker": "ORSTED.CO",
@@ -2817,60 +2790,60 @@
    "volume": 1017795,
    "medianVolume": 1334673,
    "rvol": 0.76,
-   "marketPct": 0.62,
-   "excessPct": -1.31,
-   "excessSigma": -0.7
+   "marketPct": 0.69,
+   "excessPct": -1.38,
+   "excessSigma": -0.74
   },
   {
-   "ticker": "NKT.CO",
-   "name": "NKT A/S",
+   "ticker": "1AST.DE",
+   "name": "ASTA Energy Solutions",
    "sector": "Grid & energy",
-   "exchange": "Copenhagen",
-   "currency": "DKK",
-   "thin": false,
+   "exchange": "XETRA",
+   "currency": "EUR",
+   "thin": true,
    "spark": [
-    868.0,
-    893.0,
-    895.5,
-    892.0,
-    856.0,
-    855.0,
-    859.0,
-    867.0,
-    862.0,
-    848.5,
-    849.5,
-    849.5,
-    824.0,
-    826.5,
-    834.5,
-    801.5,
-    806.0,
-    821.0,
-    840.5,
-    855.5,
-    874.0,
-    839.0,
-    847.0,
-    848.5,
-    834.0,
-    823.0,
-    840.0,
-    867.0,
-    869.0,
-    885.0
+    58.8,
+    58.8,
+    57.8,
+    61.8,
+    60.8,
+    57.4,
+    58.4,
+    58.8,
+    57.8,
+    55.4,
+    51.8,
+    52.6,
+    54.4,
+    54.4,
+    52.4,
+    49.4,
+    46.9,
+    49.8,
+    51.2,
+    51.4,
+    52.2,
+    48.8,
+    48.5,
+    50.0,
+    49.9,
+    47.9,
+    49.6,
+    51.0,
+    50.8,
+    52.4
    ],
    "stories": [],
    "date": "2026-11-11",
-   "close": 885.0,
-   "changePct": 1.84,
-   "sigma": 0.9,
-   "volume": 135144,
-   "medianVolume": 181684,
-   "rvol": 0.74,
-   "marketPct": 0.62,
-   "excessPct": 1.22,
-   "excessSigma": 0.6
+   "close": 52.4,
+   "changePct": 3.15,
+   "sigma": 0.85,
+   "volume": 37948,
+   "medianVolume": 28916,
+   "rvol": 1.31,
+   "marketPct": 0.69,
+   "excessPct": 2.46,
+   "excessSigma": 0.66
   },
   {
    "ticker": "ZAP.OL",
@@ -2919,9 +2892,9 @@
    "volume": 398459,
    "medianVolume": 407120,
    "rvol": 0.98,
-   "marketPct": 0.62,
-   "excessPct": -2.16,
-   "excessSigma": -0.56,
+   "marketPct": 0.69,
+   "excessPct": -2.23,
+   "excessSigma": -0.58,
    "short": {
     "percent": 1.5,
     "previous": 1.48,
@@ -2930,6 +2903,57 @@
     "largest": "CITADEL ADVISORS LLC",
     "largestPercent": 1.5
    }
+  },
+  {
+   "ticker": "NKT.CO",
+   "name": "NKT A/S",
+   "sector": "Grid & energy",
+   "exchange": "Copenhagen",
+   "currency": "DKK",
+   "thin": false,
+   "spark": [
+    868.0,
+    893.0,
+    895.5,
+    892.0,
+    856.0,
+    855.0,
+    859.0,
+    867.0,
+    862.0,
+    848.5,
+    849.5,
+    849.5,
+    824.0,
+    826.5,
+    834.5,
+    801.5,
+    806.0,
+    821.0,
+    840.5,
+    855.5,
+    874.0,
+    839.0,
+    847.0,
+    848.5,
+    834.0,
+    823.0,
+    840.0,
+    867.0,
+    869.0,
+    885.0
+   ],
+   "stories": [],
+   "date": "2026-11-11",
+   "close": 885.0,
+   "changePct": 1.84,
+   "sigma": 0.9,
+   "volume": 135144,
+   "medianVolume": 181684,
+   "rvol": 0.74,
+   "marketPct": 0.69,
+   "excessPct": 1.16,
+   "excessSigma": 0.57
   },
   {
    "ticker": "CLOUD.OL",
@@ -2978,9 +3002,9 @@
    "volume": 427627,
    "medianVolume": 168398,
    "rvol": 2.54,
-   "marketPct": 0.62,
-   "excessPct": 0.93,
-   "excessSigma": 0.43
+   "marketPct": 0.69,
+   "excessPct": 0.86,
+   "excessSigma": 0.4
   },
   {
    "ticker": "SCATC.OL",
@@ -3029,9 +3053,9 @@
    "volume": 760155,
    "medianVolume": 1173071,
    "rvol": 0.65,
-   "marketPct": 0.62,
-   "excessPct": -2.15,
-   "excessSigma": -0.37,
+   "marketPct": 0.69,
+   "excessPct": -2.21,
+   "excessSigma": -0.38,
    "short": {
     "percent": 3.96,
     "previous": 3.89,
@@ -3088,9 +3112,9 @@
    "volume": 54608,
    "medianVolume": 83457,
    "rvol": 0.65,
-   "marketPct": 0.62,
-   "excessPct": -0.02,
-   "excessSigma": -0.02
+   "marketPct": 0.69,
+   "excessPct": -0.09,
+   "excessSigma": -0.07
   },
   {
    "ticker": "4DS.DE",
@@ -3139,8 +3163,8 @@
    "volume": 171,
    "medianVolume": 2761,
    "rvol": 0.06,
-   "marketPct": 0.62,
-   "excessPct": -0.62,
+   "marketPct": 0.69,
+   "excessPct": -0.69,
    "excessSigma": 0
   },
   {
@@ -3269,9 +3293,9 @@
    "volume": 3399377,
    "medianVolume": 1891047,
    "rvol": 1.8,
-   "marketPct": 0.62,
-   "excessPct": -4.17,
-   "excessSigma": -1.89
+   "marketPct": 0.69,
+   "excessPct": -4.23,
+   "excessSigma": -1.92
   },
   {
    "ticker": "SIE.DE",
@@ -3377,6 +3401,19 @@
      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQclhTZ0FOSTI0emw4cXBrMXY4ajI4SXVlR0dIdmhrcEVYSEZFNGtQbERJNFoydTVpSjI5TWVfVXgxMk0wYmpva0R0NHVYWUctT2dZcFFIUmVoeEFUWmFuNGd6akxyX2RtSkFmaWNMb0E2TWFVRjgzaG93Nng4WjR4R3JvenRjOTk0dHEtbzNuRzE5eVRkRFZlTUYxNDFlRXFVYm52d0RPaGxjTTJW?oc=5",
      "published": "Thu, 12 Nov 2026 18:31:21 GMT",
      "fresh": false
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMirwFBVV95cUxQMmlrR1RzUk9Rc2xFcG1faTdyN3UyRHRZM1JQbkpHYnNkQTJUVFhTTjlVcGhId1JsbGdYNEdlem02QnBzd2pBdEhCZl9DX0VTNnNFNl9udUplajFFdlIzWEM5bklNYTJBb3MtdlI0dU1KdmxfcXJmQkJQMVAxRHZkMkJ5b0hya05JdTd3RkJUZlM1RnB4RXJxcHBaRjdVVDJsLXRWYzllV3lyUllJcmtj?oc=5",
+     "headline": "Nvidias CEO-Frage, Allianz und Siemens mit Rekorden",
+     "english": "Nvidia's CEO question, Allianz and Siemens with record results",
+     "lang": "de",
+     "publisher": "Onvista",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMmlrR1RzUk9Rc2xFcG1faTdyN3UyRHRZM1JQbkpHYnNkQTJUVFhTTjlVcGhId1JsbGdYNEdlem02QnBzd2pBdEhCZl9DX0VTNnNFNl9udUplajFFdlIzWEM5bklNYTJBb3MtdlI0dU1KdmxfcXJmQkJQMVAxRHZkMkJ5b0hya05JdTd3RkJUZlM1RnB4RXJxcHBaRjdVVDJsLXRWYzllV3lyUllJcmtj?oc=5",
+     "published": "Thu, 12 Nov 2026 11:57:00 GMT",
+     "fresh": false
     }
    ],
    "date": "2026-11-11",
@@ -3386,9 +3423,9 @@
    "volume": 1098060,
    "medianVolume": 949668,
    "rvol": 1.16,
-   "marketPct": 0.62,
-   "excessPct": 1.39,
-   "excessSigma": 0.67
+   "marketPct": 0.69,
+   "excessPct": 1.32,
+   "excessSigma": 0.64
   },
   {
    "ticker": "MTRS.ST",
@@ -3464,9 +3501,9 @@
    "volume": 1645467,
    "medianVolume": 1010614,
    "rvol": 1.63,
-   "marketPct": 0.62,
-   "excessPct": 1.58,
-   "excessSigma": 0.52
+   "marketPct": 0.69,
+   "excessPct": 1.52,
+   "excessSigma": 0.5
   },
   {
    "ticker": "KCR.HE",
@@ -3542,9 +3579,9 @@
    "volume": 371346,
    "medianVolume": 333545,
    "rvol": 1.11,
-   "marketPct": 0.62,
-   "excessPct": 0.33,
-   "excessSigma": 0.13
+   "marketPct": 0.69,
+   "excessPct": 0.26,
+   "excessSigma": 0.1
   },
   {
    "ticker": "CAF.MC",
@@ -3607,9 +3644,9 @@
    "volume": 220654,
    "medianVolume": 19431,
    "rvol": 11.36,
-   "marketPct": 0.62,
-   "excessPct": -12.49,
-   "excessSigma": -7.6
+   "marketPct": 0.69,
+   "excessPct": -12.55,
+   "excessSigma": -7.63
   },
   {
    "ticker": "SAAB-B.ST",
@@ -3672,9 +3709,9 @@
    "volume": 1092168,
    "medianVolume": 1281959,
    "rvol": 0.85,
-   "marketPct": 0.62,
-   "excessPct": -2.14,
-   "excessSigma": -0.9
+   "marketPct": 0.69,
+   "excessPct": -2.21,
+   "excessSigma": -0.93
   },
   {
    "ticker": "AM.PA",
@@ -3723,9 +3760,9 @@
    "volume": 39601,
    "medianVolume": 49765,
    "rvol": 0.8,
-   "marketPct": 0.62,
-   "excessPct": -2.16,
-   "excessSigma": -1.77
+   "marketPct": 0.69,
+   "excessPct": -2.23,
+   "excessSigma": -1.82
   },
   {
    "ticker": "VOS.DE",
@@ -3774,9 +3811,9 @@
    "volume": 26193,
    "medianVolume": 34781,
    "rvol": 0.75,
-   "marketPct": 0.62,
-   "excessPct": -3.86,
-   "excessSigma": -1.74
+   "marketPct": 0.69,
+   "excessPct": -3.93,
+   "excessSigma": -1.77
   },
   {
    "ticker": "TKMS.DE",
@@ -3825,9 +3862,9 @@
    "volume": 124860,
    "medianVolume": 125935,
    "rvol": 0.99,
-   "marketPct": 0.62,
-   "excessPct": -3.04,
-   "excessSigma": -1.12
+   "marketPct": 0.69,
+   "excessPct": -3.1,
+   "excessSigma": -1.14
   },
   {
    "ticker": "PAL.VI",
@@ -3876,9 +3913,9 @@
    "volume": 28251,
    "medianVolume": 43932,
    "rvol": 0.64,
-   "marketPct": 0.62,
-   "excessPct": 0.63,
-   "excessSigma": 0.44
+   "marketPct": 0.69,
+   "excessPct": 0.56,
+   "excessSigma": 0.39
   },
   {
    "ticker": "BOL.ST",
@@ -3927,9 +3964,9 @@
    "volume": 1214271,
    "medianVolume": 1389980,
    "rvol": 0.87,
-   "marketPct": 0.62,
-   "excessPct": 0.66,
-   "excessSigma": 0.27
+   "marketPct": 0.69,
+   "excessPct": 0.59,
+   "excessSigma": 0.24
   },
   {
    "ticker": "ALO.PA",
@@ -3978,9 +4015,9 @@
    "volume": 1847464,
    "medianVolume": 1590821,
    "rvol": 1.16,
-   "marketPct": 0.62,
-   "excessPct": -0.91,
-   "excessSigma": -0.16
+   "marketPct": 0.69,
+   "excessPct": -0.98,
+   "excessSigma": -0.17
   },
   {
    "ticker": "PAAL-B.CO",
@@ -4029,9 +4066,9 @@
    "volume": 21896,
    "medianVolume": 23541,
    "rvol": 0.93,
-   "marketPct": 0.62,
-   "excessPct": 0.23,
-   "excessSigma": 0.13
+   "marketPct": 0.69,
+   "excessPct": 0.16,
+   "excessSigma": 0.09
   },
   {
    "ticker": "SL.MI",
@@ -4120,9 +4157,9 @@
    "volume": 26357,
    "medianVolume": 25255,
    "rvol": 1.04,
-   "marketPct": 0.62,
-   "excessPct": 0.94,
-   "excessSigma": 0.58
+   "marketPct": 0.69,
+   "excessPct": 0.88,
+   "excessSigma": 0.55
   },
   {
    "ticker": "YACHT.MI",
@@ -4198,9 +4235,87 @@
    "volume": 125765,
    "medianVolume": 163176,
    "rvol": 0.77,
-   "marketPct": 0.62,
-   "excessPct": -1.69,
-   "excessSigma": -1.17
+   "marketPct": 0.69,
+   "excessPct": -1.76,
+   "excessSigma": -1.22
+  },
+  {
+   "ticker": "P911.DE",
+   "name": "Porsche",
+   "sector": "Luxury",
+   "exchange": "XETRA",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    43.02,
+    43.0,
+    42.98,
+    42.53,
+    42.67,
+    40.96,
+    41.54,
+    42.2,
+    41.35,
+    41.38,
+    41.37,
+    42.16,
+    41.98,
+    42.74,
+    42.96,
+    42.96,
+    41.6,
+    41.33,
+    42.9,
+    44.68,
+    46.12,
+    46.72,
+    46.41,
+    46.04,
+    46.94,
+    47.24,
+    47.06,
+    46.38,
+    46.06,
+    46.18
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi0AFBVV95cUxPV0tKYlVJeThvdmcwVldFeThDemRzQXBhbEFsX3VRQVV3TzlZcHZMWldURFcwanVQV3FHTW96VVppYlhNRkR1dFh0Rk9HOVkyUkdXWHNsTEhtMzdSYzZqcjQzTEx4WVRaUC05RG4yY1I0WVNpY2JlTWtTdHF1MG9qNXV3Mk56RDhkSUZqZzhYMEJtajEyVFROSjBGVkdNSVpWVldibnplSWlJdnZCNThJcGhfcGI3R2xzY1p3X1ZhMW1ZTkpleFJUOVEzbTFUWlVW?oc=5",
+     "headline": "„Das wäre fatal“ – Porsche-Betriebsrat warnt vor dem Aus für Altersteilzeit",
+     "english": "\"That would be fatal\" – Porsche Works Council warns against the end of partial retirement",
+     "lang": "de",
+     "publisher": "swp.de",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPV0tKYlVJeThvdmcwVldFeThDemRzQXBhbEFsX3VRQVV3TzlZcHZMWldURFcwanVQV3FHTW96VVppYlhNRkR1dFh0Rk9HOVkyUkdXWHNsTEhtMzdSYzZqcjQzTEx4WVRaUC05RG4yY1I0WVNpY2JlTWtTdHF1MG9qNXV3Mk56RDhkSUZqZzhYMEJtajEyVFROSjBGVkdNSVpWVldibnplSWlJdnZCNThJcGhfcGI3R2xzY1p3X1ZhMW1ZTkpleFJUOVEzbTFUWlVW?oc=5",
+     "published": "Thu, 12 Nov 2026 12:33:31 GMT",
+     "fresh": true
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMivAFBVV95cUxQZTlCd0QxOTRKWk1KY3lBZGNyVElRbU5lck1xMGRTWUJ1aURxbU0zbHRqcWt1bG5VYjBsU1MwTEE4cVZHdGZ6UmRlU0VXdjJQTkNBUE9xTUZLVG1Gd1Z6aGFYWVNPRnJnLUxGeFdHYWlmb0ZZUTJDMmQ4QlpEQm4xRU41TUROcW9jQWdIVC0yVVNuVi03LTZEeklKVzBhbTB5WHJHb0djMFVQaXlZTXpzdjhkR0ZveHZsZ1YwNg?oc=5",
+     "headline": "Schwerbehinderung: Porsche-Fahrer unter Verdacht: Gericht ordnet Prüfung des Ausweises an",
+     "english": "Severe disability: Porsche driver under suspicion: Court orders license to be checked",
+     "lang": "fr",
+     "publisher": "Gegen Hartz IV",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZTlCd0QxOTRKWk1KY3lBZGNyVElRbU5lck1xMGRTWUJ1aURxbU0zbHRqcWt1bG5VYjBsU1MwTEE4cVZHdGZ6UmRlU0VXdjJQTkNBUE9xTUZLVG1Gd1Z6aGFYWVNPRnJnLUxGeFdHYWlmb0ZZUTJDMmQ4QlpEQm4xRU41TUROcW9jQWdIVC0yVVNuVi03LTZEeklKVzBhbTB5WHJHb0djMFVQaXlZTXpzdjhkR0ZveHZsZ1YwNg?oc=5",
+     "published": "Thu, 12 Nov 2026 15:44:35 GMT",
+     "fresh": false
+    }
+   ],
+   "date": "2026-11-11",
+   "close": 46.18,
+   "changePct": 0.26,
+   "sigma": 0.14,
+   "volume": 295480,
+   "medianVolume": 484728,
+   "rvol": 0.61,
+   "marketPct": 0.69,
+   "excessPct": -0.43,
+   "excessSigma": -0.23
   },
   {
    "ticker": "RACE.MI",
@@ -4276,9 +4391,9 @@
    "volume": 402407,
    "medianVolume": 327583,
    "rvol": 1.23,
-   "marketPct": 0.62,
-   "excessPct": 0.23,
-   "excessSigma": 0.16
+   "marketPct": 0.69,
+   "excessPct": 0.16,
+   "excessSigma": 0.11
   },
   {
    "ticker": "TISG.MI",
@@ -4354,8 +4469,8 @@
    "volume": 0,
    "medianVolume": 564810,
    "rvol": 0.0,
-   "marketPct": 0.62,
-   "excessPct": -0.62,
+   "marketPct": 0.69,
+   "excessPct": -0.69,
    "excessSigma": 0
   },
   {
@@ -4419,74 +4534,9 @@
    "volume": 1142460,
    "medianVolume": 1100686,
    "rvol": 1.04,
-   "marketPct": 0.62,
-   "excessPct": -0.42,
-   "excessSigma": -0.23
-  },
-  {
-   "ticker": "P911.DE",
-   "name": "Porsche",
-   "sector": "Luxury",
-   "exchange": "XETRA",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    43.02,
-    43.0,
-    42.98,
-    42.53,
-    42.67,
-    40.96,
-    41.54,
-    42.2,
-    41.35,
-    41.38,
-    41.37,
-    42.16,
-    41.98,
-    42.74,
-    42.96,
-    42.96,
-    41.6,
-    41.33,
-    42.9,
-    44.68,
-    46.12,
-    46.72,
-    46.41,
-    46.04,
-    46.94,
-    47.24,
-    47.06,
-    46.38,
-    46.06,
-    46.18
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMivAFBVV95cUxQZTlCd0QxOTRKWk1KY3lBZGNyVElRbU5lck1xMGRTWUJ1aURxbU0zbHRqcWt1bG5VYjBsU1MwTEE4cVZHdGZ6UmRlU0VXdjJQTkNBUE9xTUZLVG1Gd1Z6aGFYWVNPRnJnLUxGeFdHYWlmb0ZZUTJDMmQ4QlpEQm4xRU41TUROcW9jQWdIVC0yVVNuVi03LTZEeklKVzBhbTB5WHJHb0djMFVQaXlZTXpzdjhkR0ZveHZsZ1YwNg?oc=5",
-     "headline": "Schwerbehinderung: Porsche-Fahrer unter Verdacht: Gericht ordnet Prüfung des Ausweises an",
-     "english": "Severe disability: Porsche driver under suspicion: Court orders license to be checked",
-     "lang": "fr",
-     "publisher": "Gegen Hartz IV",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZTlCd0QxOTRKWk1KY3lBZGNyVElRbU5lck1xMGRTWUJ1aURxbU0zbHRqcWt1bG5VYjBsU1MwTEE4cVZHdGZ6UmRlU0VXdjJQTkNBUE9xTUZLVG1Gd1Z6aGFYWVNPRnJnLUxGeFdHYWlmb0ZZUTJDMmQ4QlpEQm4xRU41TUROcW9jQWdIVC0yVVNuVi03LTZEeklKVzBhbTB5WHJHb0djMFVQaXlZTXpzdjhkR0ZveHZsZ1YwNg?oc=5",
-     "published": "Thu, 12 Nov 2026 15:44:35 GMT",
-     "fresh": false
-    }
-   ],
-   "date": "2026-11-11",
-   "close": 46.18,
-   "changePct": 0.26,
-   "sigma": 0.14,
-   "volume": 295480,
-   "medianVolume": 484728,
-   "rvol": 0.61,
-   "marketPct": 0.62,
-   "excessPct": -0.36,
-   "excessSigma": -0.19
+   "marketPct": 0.69,
+   "excessPct": -0.49,
+   "excessSigma": -0.27
   },
   {
    "ticker": "EL.PA",
@@ -4535,9 +4585,9 @@
    "volume": 793468,
    "medianVolume": 900856,
    "rvol": 0.88,
-   "marketPct": 0.62,
-   "excessPct": -3.31,
-   "excessSigma": -0.84
+   "marketPct": 0.69,
+   "excessPct": -3.38,
+   "excessSigma": -0.85
   },
   {
    "ticker": "RMS.PA",
@@ -4586,9 +4636,9 @@
    "volume": 51583,
    "medianVolume": 83484,
    "rvol": 0.62,
-   "marketPct": 0.62,
-   "excessPct": -0.03,
-   "excessSigma": -0.01
+   "marketPct": 0.69,
+   "excessPct": -0.1,
+   "excessSigma": -0.04
   },
   {
    "ticker": "BLUE.ST",
@@ -4651,9 +4701,9 @@
    "volume": 129105,
    "medianVolume": 307478,
    "rvol": 0.42,
-   "marketPct": 0.62,
-   "excessPct": -0.97,
-   "excessSigma": -0.28
+   "marketPct": 0.69,
+   "excessPct": -1.04,
+   "excessSigma": -0.3
   },
   {
    "ticker": "AIR.PA",
@@ -4768,9 +4818,113 @@
    "volume": 928916,
    "medianVolume": 1152567,
    "rvol": 0.81,
-   "marketPct": 0.62,
-   "excessPct": 0.56,
-   "excessSigma": 0.28
+   "marketPct": 0.69,
+   "excessPct": 0.49,
+   "excessSigma": 0.24
+  },
+  {
+   "ticker": "ASML.AS",
+   "name": "ASML",
+   "sector": "Original ten",
+   "exchange": "Amsterdam",
+   "currency": "EUR",
+   "thin": false,
+   "spark": [
+    1597.0,
+    1653.0,
+    1656.2,
+    1636.4,
+    1610.2,
+    1630.6,
+    1601.6,
+    1575.8,
+    1509.6,
+    1528.2,
+    1464.2,
+    1477.2,
+    1496.0,
+    1455.4,
+    1493.8,
+    1419.6,
+    1407.2,
+    1430.0,
+    1470.0,
+    1489.6,
+    1504.8,
+    1412.8,
+    1408.0,
+    1385.0,
+    1337.6,
+    1250.0,
+    1283.6,
+    1343.8,
+    1361.0,
+    1403.8
+   ],
+   "stories": [
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMi2AFBVV95cUxQN05EQS1UeG5UcE5SbmkxcmFiSkJQS2otaGlncGNTaU5Sb3NkcFgwSnJNRURiZGZzVDFtclJvWVQ3N1pmVEtydFB4T3ZtemV3RGxxRHdnVGpIeVlHQ3U1VUotSS1ZckpuYXlyQ2lnLVM2NElwUnBvc3VEdGZzNHcyY0JqbWNuN19wQU5Jb0NlM0RWZHJTeGd1b200TU51cTRRb2FtTl9hTkdETlFBb2FLMEQ5YjVDNUZmXzA4WVMwNlBQa1NrQUpnNGY0N2tfLTYwVnRSOTNXRkY?oc=5",
+     "headline": "LIVE | ASML, ASMI en Besi trekken AEX omhoog; wapenfabrikant CSG onderuit na winstwaarschuwing",
+     "english": "LIVE | ASML, ASMI and Besi pull AEX up; weapon manufacturer CSG down after profit warning",
+     "lang": "nl",
+     "publisher": "De Telegraaf",
+     "score": 3,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQN05EQS1UeG5UcE5SbmkxcmFiSkJQS2otaGlncGNTaU5Sb3NkcFgwSnJNRURiZGZzVDFtclJvWVQ3N1pmVEtydFB4T3ZtemV3RGxxRHdnVGpIeVlHQ3U1VUotSS1ZckpuYXlyQ2lnLVM2NElwUnBvc3VEdGZzNHcyY0JqbWNuN19wQU5Jb0NlM0RWZHJTeGd1b200TU51cTRRb2FtTl9hTkdETlFBb2FLMEQ5YjVDNUZmXzA4WVMwNlBQa1NrQUpnNGY0N2tfLTYwVnRSOTNXRkY?oc=5",
+     "published": "Wed, 11 Nov 2026 10:50:31 GMT",
+     "fresh": true
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiigFBVV95cUxNVFFXWjBkeGFURDg1NXptaFlsdHp2ekVOVWRKM0VHX05FNU9fVHd5N29iNDZ2N3E5b3B3bG9BLXEwbHJTQW5IQ2lnSWNOQUZvN08ycmM1MHZmOFI5S0ozLWVFMk5MZElmLXhqUlRVOU9KU0xadHdXNGRvV3MzUzgtckJlQW9MTGpnbUE?oc=5",
+     "headline": "Beurzen onder druk na vertrek Nvidia-topman, ASML hard onderuit",
+     "english": "Stock markets under pressure following the departure of Nvidia's CEO, ASML takes a hard hit",
+     "lang": "nl",
+     "publisher": "Newsbit",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNVFFXWjBkeGFURDg1NXptaFlsdHp2ekVOVWRKM0VHX05FNU9fVHd5N29iNDZ2N3E5b3B3bG9BLXEwbHJTQW5IQ2lnSWNOQUZvN08ycmM1MHZmOFI5S0ozLWVFMk5MZElmLXhqUlRVOU9KU0xadHdXNGRvV3MzUzgtckJlQW9MTGpnbUE?oc=5",
+     "published": "Thu, 12 Nov 2026 14:28:00 GMT",
+     "fresh": true
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiigFBVV95cUxQNWJ6VG5ub0JyUFI4ck5Qb3A2M2NCNVh5VkdjZmhub0VZb25zQndfcFVYV0ZDbDhMSVFMNFpzaG43V2FjRHBBNnRGOWk0WG0wajZ2Y3lsVmQxR1ZIT19xZUdNMDNYc2N6SlBJcGhETDZ2RkJra09KOThmRWhqdk9IVlZ1RlBLN2p2SFE?oc=5",
+     "headline": "ASML Capitalizes on AI Boom with Record Earnings",
+     "english": null,
+     "lang": "en",
+     "publisher": "Intellectia AI",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNWJ6VG5ub0JyUFI4ck5Qb3A2M2NCNVh5VkdjZmhub0VZb25zQndfcFVYV0ZDbDhMSVFMNFpzaG43V2FjRHBBNnRGOWk0WG0wajZ2Y3lsVmQxR1ZIT19xZUdNMDNYc2N6SlBJcGhETDZ2RkJra09KOThmRWhqdk9IVlZ1RlBLN2p2SFE?oc=5",
+     "published": "Thu, 12 Nov 2026 14:26:34 GMT",
+     "fresh": true
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMixgFBVV95cUxOMW1VQ1JJNDFHcTRYenF1X1dGNjlybnJCM1VZY0xPMVljZGZPR3g4TEVPUmlJcTlyZFF0Q0YwVXhKSFhEWjR5TDJGS1Jmc21CX2hyVlhaaXFPNmptLW4xeTY2bllsSW5TRmxMaTNjOFk3UGNzNGxvUHpIZlJPNzYzT1hId1dhMU5tYWMwWUtrR3JTanAxaGhqRXFsOGdVZUsxeTR3Z09tZjhQZFJCNzNPcmUxU3B3RDBTTFZvVWlib1BhWG1SWGc?oc=5",
+     "headline": "Help wanted: AI firms court ex-spies as Nvidia crisis spotlights security risks",
+     "english": null,
+     "lang": "en",
+     "publisher": "Reuters",
+     "score": 3,
+     "material": 0,
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOMW1VQ1JJNDFHcTRYenF1X1dGNjlybnJCM1VZY0xPMVljZGZPR3g4TEVPUmlJcTlyZFF0Q0YwVXhKSFhEWjR5TDJGS1Jmc21CX2hyVlhaaXFPNmptLW4xeTY2bllsSW5TRmxMaTNjOFk3UGNzNGxvUHpIZlJPNzYzT1hId1dhMU5tYWMwWUtrR3JTanAxaGhqRXFsOGdVZUsxeTR3Z09tZjhQZFJCNzNPcmUxU3B3RDBTTFZvVWlib1BhWG1SWGc?oc=5",
+     "published": "Thu, 12 Nov 2026 20:31:18 GMT",
+     "fresh": true
+    }
+   ],
+   "date": "2026-11-11",
+   "close": 1403.8,
+   "changePct": 3.14,
+   "sigma": 0.99,
+   "volume": 664165,
+   "medianVolume": 646148,
+   "rvol": 1.03,
+   "marketPct": 0.69,
+   "excessPct": 2.46,
+   "excessSigma": 0.78
   },
   {
    "ticker": "IFX.DE",
@@ -4859,100 +5013,9 @@
    "volume": 6249211,
    "medianVolume": 3858647,
    "rvol": 1.62,
-   "marketPct": 0.62,
-   "excessPct": 5.64,
-   "excessSigma": 1.46
-  },
-  {
-   "ticker": "ASML.AS",
-   "name": "ASML",
-   "sector": "Original ten",
-   "exchange": "Amsterdam",
-   "currency": "EUR",
-   "thin": false,
-   "spark": [
-    1597.0,
-    1653.0,
-    1656.2,
-    1636.4,
-    1610.2,
-    1630.6,
-    1601.6,
-    1575.8,
-    1509.6,
-    1528.2,
-    1464.2,
-    1477.2,
-    1496.0,
-    1455.4,
-    1493.8,
-    1419.6,
-    1407.2,
-    1430.0,
-    1470.0,
-    1489.6,
-    1504.8,
-    1412.8,
-    1408.0,
-    1385.0,
-    1337.6,
-    1250.0,
-    1283.6,
-    1343.8,
-    1361.0,
-    1403.8
-   ],
-   "stories": [
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi2AFBVV95cUxQN05EQS1UeG5UcE5SbmkxcmFiSkJQS2otaGlncGNTaU5Sb3NkcFgwSnJNRURiZGZzVDFtclJvWVQ3N1pmVEtydFB4T3ZtemV3RGxxRHdnVGpIeVlHQ3U1VUotSS1ZckpuYXlyQ2lnLVM2NElwUnBvc3VEdGZzNHcyY0JqbWNuN19wQU5Jb0NlM0RWZHJTeGd1b200TU51cTRRb2FtTl9hTkdETlFBb2FLMEQ5YjVDNUZmXzA4WVMwNlBQa1NrQUpnNGY0N2tfLTYwVnRSOTNXRkY?oc=5",
-     "headline": "LIVE | ASML, ASMI en Besi trekken AEX omhoog; wapenfabrikant CSG onderuit na winstwaarschuwing",
-     "english": "LIVE | ASML, ASMI and Besi pull AEX up; weapon manufacturer CSG down after profit warning",
-     "lang": "nl",
-     "publisher": "De Telegraaf",
-     "score": 3,
-     "material": 3,
-     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQN05EQS1UeG5UcE5SbmkxcmFiSkJQS2otaGlncGNTaU5Sb3NkcFgwSnJNRURiZGZzVDFtclJvWVQ3N1pmVEtydFB4T3ZtemV3RGxxRHdnVGpIeVlHQ3U1VUotSS1ZckpuYXlyQ2lnLVM2NElwUnBvc3VEdGZzNHcyY0JqbWNuN19wQU5Jb0NlM0RWZHJTeGd1b200TU51cTRRb2FtTl9hTkdETlFBb2FLMEQ5YjVDNUZmXzA4WVMwNlBQa1NrQUpnNGY0N2tfLTYwVnRSOTNXRkY?oc=5",
-     "published": "Wed, 11 Nov 2026 10:50:31 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiigFBVV95cUxNVFFXWjBkeGFURDg1NXptaFlsdHp2ekVOVWRKM0VHX05FNU9fVHd5N29iNDZ2N3E5b3B3bG9BLXEwbHJTQW5IQ2lnSWNOQUZvN08ycmM1MHZmOFI5S0ozLWVFMk5MZElmLXhqUlRVOU9KU0xadHdXNGRvV3MzUzgtckJlQW9MTGpnbUE?oc=5",
-     "headline": "Beurzen onder druk na vertrek Nvidia-topman, ASML hard onderuit",
-     "english": "Stock markets under pressure following the departure of Nvidia's CEO, ASML takes a hard hit",
-     "lang": "nl",
-     "publisher": "Newsbit",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNVFFXWjBkeGFURDg1NXptaFlsdHp2ekVOVWRKM0VHX05FNU9fVHd5N29iNDZ2N3E5b3B3bG9BLXEwbHJTQW5IQ2lnSWNOQUZvN08ycmM1MHZmOFI5S0ozLWVFMk5MZElmLXhqUlRVOU9KU0xadHdXNGRvV3MzUzgtckJlQW9MTGpnbUE?oc=5",
-     "published": "Thu, 12 Nov 2026 14:28:00 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMiigFBVV95cUxQNWJ6VG5ub0JyUFI4ck5Qb3A2M2NCNVh5VkdjZmhub0VZb25zQndfcFVYV0ZDbDhMSVFMNFpzaG43V2FjRHBBNnRGOWk0WG0wajZ2Y3lsVmQxR1ZIT19xZUdNMDNYc2N6SlBJcGhETDZ2RkJra09KOThmRWhqdk9IVlZ1RlBLN2p2SFE?oc=5",
-     "headline": "ASML Capitalizes on AI Boom with Record Earnings",
-     "english": null,
-     "lang": "en",
-     "publisher": "Intellectia AI",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNWJ6VG5ub0JyUFI4ck5Qb3A2M2NCNVh5VkdjZmhub0VZb25zQndfcFVYV0ZDbDhMSVFMNFpzaG43V2FjRHBBNnRGOWk0WG0wajZ2Y3lsVmQxR1ZIT19xZUdNMDNYc2N6SlBJcGhETDZ2RkJra09KOThmRWhqdk9IVlZ1RlBLN2p2SFE?oc=5",
-     "published": "Thu, 12 Nov 2026 14:26:34 GMT",
-     "fresh": true
-    }
-   ],
-   "date": "2026-11-11",
-   "close": 1403.8,
-   "changePct": 3.14,
-   "sigma": 0.99,
-   "volume": 664165,
-   "medianVolume": 646148,
-   "rvol": 1.03,
-   "marketPct": 0.62,
-   "excessPct": 2.52,
-   "excessSigma": 0.79
+   "marketPct": 0.69,
+   "excessPct": 5.57,
+   "excessSigma": 1.44
   },
   {
    "ticker": "EMBRAC-B.ST",
@@ -5041,9 +5104,9 @@
    "volume": 2944660,
    "medianVolume": 448588,
    "rvol": 6.56,
-   "marketPct": 0.62,
-   "excessPct": -0.12,
-   "excessSigma": -0.07
+   "marketPct": 0.69,
+   "excessPct": -0.19,
+   "excessSigma": -0.11
   },
   {
    "ticker": "SAND.ST",
@@ -5119,9 +5182,9 @@
    "volume": 1063222,
    "medianVolume": 2017762,
    "rvol": 0.53,
-   "marketPct": 0.62,
-   "excessPct": 1.43,
-   "excessSigma": 0.75
+   "marketPct": 0.69,
+   "excessPct": 1.36,
+   "excessSigma": 0.71
   },
   {
    "ticker": "YAR.OL",
@@ -5197,9 +5260,9 @@
    "volume": 485587,
    "medianVolume": 460940,
    "rvol": 1.05,
-   "marketPct": 0.62,
-   "excessPct": 0.69,
-   "excessSigma": 0.5,
+   "marketPct": 0.69,
+   "excessPct": 0.62,
+   "excessSigma": 0.45,
    "short": {
     "percent": 0.7,
     "previous": 1.28,
@@ -5270,9 +5333,9 @@
    "volume": 1428544,
    "medianVolume": 2038247,
    "rvol": 0.7,
-   "marketPct": 0.62,
-   "excessPct": -0.14,
-   "excessSigma": -0.08
+   "marketPct": 0.69,
+   "excessPct": -0.21,
+   "excessSigma": -0.12
   },
   {
    "ticker": "AKRBP.OL",
@@ -5321,9 +5384,9 @@
    "volume": 1721609,
    "medianVolume": 1126950,
    "rvol": 1.53,
-   "marketPct": 0.62,
-   "excessPct": 1.8,
-   "excessSigma": 0.65,
+   "marketPct": 0.69,
+   "excessPct": 1.73,
+   "excessSigma": 0.63,
    "short": {
     "percent": 0.84,
     "previous": 0.71,
@@ -5380,9 +5443,9 @@
    "volume": 241705,
    "medianVolume": 294227,
    "rvol": 0.82,
-   "marketPct": 0.62,
-   "excessPct": 1.54,
-   "excessSigma": 0.65
+   "marketPct": 0.69,
+   "excessPct": 1.48,
+   "excessSigma": 0.62
   },
   {
    "ticker": "VOLV-B.ST",
@@ -5431,9 +5494,9 @@
    "volume": 2945660,
    "medianVolume": 3432238,
    "rvol": 0.86,
-   "marketPct": 0.62,
-   "excessPct": -0.03,
-   "excessSigma": -0.03
+   "marketPct": 0.69,
+   "excessPct": -0.1,
+   "excessSigma": -0.08
   },
   {
    "ticker": "HNSA.ST",
@@ -5561,9 +5624,9 @@
    "volume": 2231790,
    "medianVolume": 452091,
    "rvol": 4.94,
-   "marketPct": 0.62,
-   "excessPct": 14.33,
-   "excessSigma": 4.69
+   "marketPct": 0.69,
+   "excessPct": 14.26,
+   "excessSigma": 4.66
   },
   {
    "ticker": "ZEAL.CO",
@@ -5665,9 +5728,9 @@
    "volume": 370225,
    "medianVolume": 359555,
    "rvol": 1.03,
-   "marketPct": 0.62,
-   "excessPct": -2.42,
-   "excessSigma": -1.32
+   "marketPct": 0.69,
+   "excessPct": -2.49,
+   "excessSigma": -1.36
   },
   {
    "ticker": "NOVO-B.CO",
@@ -5711,19 +5774,6 @@
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMizgFBVV95cUxOSTdBTVFwbnpLMTl2Uy1IbUV0SThWY0wxR3Z1QjBBcjV1TldZM2xiVUJ3aF9EVU92WXE5WFN3dFZ6UEhsTUd3dDNJRURwUUVPUm5peTM4NmhpVVlKeHdXektmdGxnUC1BOVFXNk16ZDlPaDVReWI1azk1eWZZcjFUWG1hTFh2UFJINDBRc0htZ1BGSWFjNWlZWlJzMzRJVFgwMVQ1djFHWEZCS09zVDN3c1NienBSWXk2dndHRUMtS0dPNTBwNUpqc3V2VmF4QQ?oc=5",
-     "headline": "No more needles: Eli Lilly wins China nod for first oral GLP-1 weight-loss drug",
-     "english": null,
-     "lang": "en",
-     "publisher": "South China Morning Post",
-     "score": 2,
-     "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSTdBTVFwbnpLMTl2Uy1IbUV0SThWY0wxR3Z1QjBBcjV1TldZM2xiVUJ3aF9EVU92WXE5WFN3dFZ6UEhsTUd3dDNJRURwUUVPUm5peTM4NmhpVVlKeHdXektmdGxnUC1BOVFXNk16ZDlPaDVReWI1azk1eWZZcjFUWG1hTFh2UFJINDBRc0htZ1BGSWFjNWlZWlJzMzRJVFgwMVQ1djFHWEZCS09zVDN3c1NienBSWXk2dndHRUMtS0dPNTBwNUpqc3V2VmF4QQ?oc=5",
-     "published": "Fri, 13 Nov 2026 01:01:06 GMT",
-     "fresh": true
-    },
-    {
-     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMickFVX3lxTFB3dk9FMTVRY3pValkwZk5xTTVPZVZHS2xWb3dQdlhyOE5pcWNackJyTmg1NUtaTzhUZ0tJOUpwSHpzbFVha2NISkZBbHBTX05vYnJHRzlxWXV0NHFlenJtVjltYVFCa283TkhJNTBRY0YwUQ?oc=5",
      "headline": "Novo Nordisk höjer prognosen – Wegovy-pillret lyfter aktien",
      "english": "Novo Nordisk higher forecasts – Wegovy-pillret lyfter shares",
@@ -5747,6 +5797,19 @@
      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcmh2TGR5N0tIZWRROVFGV3JWbjJnRmtUaDBwOTdMSVNOR2oyN1VyRnc1WVJzTVhGNHhtWFJoTS05QlB0WjJ5NFFLaHpBRXVub1N2akF2SnNjdWEyQmQzMjdFQmhFZlEwSE5DeTZRTl9PaXVsOW9MR3B1dUZzUEFSVjhxUlNsSWd4dU1aX2M5bnVBTzJwdk5sZHhHNWZYcVBqc0ptVkJ3?oc=5",
      "published": "Wed, 11 Nov 2026 15:06:49 GMT",
      "fresh": true
+    },
+    {
+     "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMizgFBVV95cUxOSTdBTVFwbnpLMTl2Uy1IbUV0SThWY0wxR3Z1QjBBcjV1TldZM2xiVUJ3aF9EVU92WXE5WFN3dFZ6UEhsTUd3dDNJRURwUUVPUm5peTM4NmhpVVlKeHdXektmdGxnUC1BOVFXNk16ZDlPaDVReWI1azk1eWZZcjFUWG1hTFh2UFJINDBRc0htZ1BGSWFjNWlZWlJzMzRJVFgwMVQ1djFHWEZCS09zVDN3c1NienBSWXk2dndHRUMtS0dPNTBwNUpqc3V2VmF4QQ?oc=5",
+     "headline": "No more needles: Eli Lilly wins China nod for first oral GLP-1 weight-loss drug",
+     "english": null,
+     "lang": "en",
+     "publisher": "South China Morning Post",
+     "score": 2,
+     "material": 2,
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSTdBTVFwbnpLMTl2Uy1IbUV0SThWY0wxR3Z1QjBBcjV1TldZM2xiVUJ3aF9EVU92WXE5WFN3dFZ6UEhsTUd3dDNJRURwUUVPUm5peTM4NmhpVVlKeHdXektmdGxnUC1BOVFXNk16ZDlPaDVReWI1azk1eWZZcjFUWG1hTFh2UFJINDBRc0htZ1BGSWFjNWlZWlJzMzRJVFgwMVQ1djFHWEZCS09zVDN3c1NienBSWXk2dndHRUMtS0dPNTBwNUpqc3V2VmF4QQ?oc=5",
+     "published": "Fri, 13 Nov 2026 01:01:06 GMT",
+     "fresh": false
     }
    ],
    "date": "2026-11-11",
@@ -5756,9 +5819,9 @@
    "volume": 4332889,
    "medianVolume": 4282223,
    "rvol": 1.01,
-   "marketPct": 0.62,
-   "excessPct": -0.18,
-   "excessSigma": -0.08
+   "marketPct": 0.69,
+   "excessPct": -0.25,
+   "excessSigma": -0.11
   },
   {
    "ticker": "FYB.DE",
@@ -5802,15 +5865,15 @@
    "stories": [
     {
      "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcGhFVEh6aDZ0TjVsZHRNUFFzLWd0ZmJUNXAyV3BYazNQMHBHeUw1UUxMaWpfeEw0bUZmTTBjbGJ4UzVrV2oxeDhwcHVtLXlBaEc5Mnp0RHBDOUc5SFRwVDM1Uk5PUTVoc2xabVgyOUJGWEEwWEZlbXpPb3NkTUFXYlRsOWhXTldTRktoU0xpc2JhZUdYMHEzYmZxNkdxLW9mWlNYaWVuQ3ZtdW1XVWM2Y3dnZlpzMkJWSm9FZ0FWZU56ZUVhVzBPX3ZMTUNHcUVFLWpGMg?oc=5",
-     "headline": "Earnings call transcript: Formycon Q3 2026 revenue jumps, but impairments weigh",
-     "english": null,
-     "lang": "en",
-     "publisher": "Investing.com Canada",
+     "key": "web:https://news.google.com/rss/articles/CBMi4gFBVV95cUxNT2RkRDFhYnBuQWRjalROSmVnY2M2ZXhNck5ITVVOS2hlNXFqSnd0M3RuRG1LQ2tkMzZvRFFCOUFITlZzVTUwSWViM1JpY0hLblFHVXhMeHlHbHh5V3pqWHBFS1YtWTc1NHhRTjUxOFdTWUZHUHRrOF9BWXcwS3h5YjRvU3Zpc1pJVlJzXzZrSXFZSnM2NWs0aWk4ZDRyTFdVMi1PbUFoMllRMWdWbkJYNGd3eXJweXNCODRxRGVva3A5aHFDbzB0endKNEU4b1VzaFcyQjVQTWxWT3BmZm0ya2hn?oc=5",
+     "headline": "Earnings Call: Formycon verdoppelt Neunmonatsumsatz – Hohe Wertberichtigungen belasten Ausblick",
+     "english": "Earnings Call: Formycon Doubles Nine-Month Sales – High Value Adjustments Weigh on Outlook",
+     "lang": "de",
+     "publisher": "Investing.com Deutsch",
      "score": 1,
      "material": 2,
-     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcGhFVEh6aDZ0TjVsZHRNUFFzLWd0ZmJUNXAyV3BYazNQMHBHeUw1UUxMaWpfeEw0bUZmTTBjbGJ4UzVrV2oxeDhwcHVtLXlBaEc5Mnp0RHBDOUc5SFRwVDM1Uk5PUTVoc2xabVgyOUJGWEEwWEZlbXpPb3NkTUFXYlRsOWhXTldTRktoU0xpc2JhZUdYMHEzYmZxNkdxLW9mWlNYaWVuQ3ZtdW1XVWM2Y3dnZlpzMkJWSm9FZ0FWZU56ZUVhVzBPX3ZMTUNHcUVFLWpGMg?oc=5",
-     "published": "Thu, 12 Nov 2026 15:59:59 GMT",
+     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNT2RkRDFhYnBuQWRjalROSmVnY2M2ZXhNck5ITVVOS2hlNXFqSnd0M3RuRG1LQ2tkMzZvRFFCOUFITlZzVTUwSWViM1JpY0hLblFHVXhMeHlHbHh5V3pqWHBFS1YtWTc1NHhRTjUxOFdTWUZHUHRrOF9BWXcwS3h5YjRvU3Zpc1pJVlJzXzZrSXFZSnM2NWs0aWk4ZDRyTFdVMi1PbUFoMllRMWdWbkJYNGd3eXJweXNCODRxRGVva3A5aHFDbzB0endKNEU4b1VzaFcyQjVQTWxWT3BmZm0ya2hn?oc=5",
+     "published": "Thu, 12 Nov 2026 15:54:00 GMT",
      "fresh": true
     },
     {
@@ -5847,9 +5910,9 @@
    "volume": 12039,
    "medianVolume": 2750,
    "rvol": 4.38,
-   "marketPct": 0.62,
-   "excessPct": 0.32,
-   "excessSigma": 0.06
+   "marketPct": 0.69,
+   "excessPct": 0.25,
+   "excessSigma": 0.05
   },
   {
    "ticker": "OBCK.DE",
@@ -5925,9 +5988,9 @@
    "volume": 32088,
    "medianVolume": 24777,
    "rvol": 1.3,
-   "marketPct": 0.62,
-   "excessPct": 0.67,
-   "excessSigma": 0.57
+   "marketPct": 0.69,
+   "excessPct": 0.6,
+   "excessSigma": 0.51
   },
   {
    "ticker": "EUZ.DE",
@@ -6003,9 +6066,9 @@
    "volume": 78172,
    "medianVolume": 90824,
    "rvol": 0.86,
-   "marketPct": 0.62,
-   "excessPct": 0.18,
-   "excessSigma": 0.1
+   "marketPct": 0.69,
+   "excessPct": 0.11,
+   "excessSigma": 0.06
   },
   {
    "ticker": "GUBRA.CO",
@@ -6068,9 +6131,9 @@
    "volume": 56220,
    "medianVolume": 57114,
    "rvol": 0.98,
-   "marketPct": 0.62,
-   "excessPct": 0.13,
-   "excessSigma": 0.03
+   "marketPct": 0.69,
+   "excessPct": 0.06,
+   "excessSigma": 0.02
   },
   {
    "ticker": "IBAB.BR",
@@ -6119,9 +6182,9 @@
    "volume": 12092,
    "medianVolume": 13681,
    "rvol": 0.88,
-   "marketPct": 0.62,
-   "excessPct": 4.22,
-   "excessSigma": 3.05
+   "marketPct": 0.69,
+   "excessPct": 4.15,
+   "excessSigma": 3.0
   },
   {
    "ticker": "NANEXA.ST",
@@ -6170,9 +6233,9 @@
    "volume": 1270681,
    "medianVolume": 620425,
    "rvol": 2.05,
-   "marketPct": 0.62,
-   "excessPct": 1.73,
-   "excessSigma": 0.8
+   "marketPct": 0.69,
+   "excessPct": 1.67,
+   "excessSigma": 0.77
   },
   {
    "ticker": "PILA.ST",
@@ -6221,9 +6284,9 @@
    "volume": 16312,
    "medianVolume": 13215,
    "rvol": 1.23,
-   "marketPct": 0.62,
-   "excessPct": -4.7,
-   "excessSigma": -0.71
+   "marketPct": 0.69,
+   "excessPct": -4.77,
+   "excessSigma": -0.72
   },
   {
    "ticker": "CAMX.ST",
@@ -6272,9 +6335,9 @@
    "volume": 110293,
    "medianVolume": 85469,
    "rvol": 1.29,
-   "marketPct": 0.62,
-   "excessPct": 1.39,
-   "excessSigma": 0.68
+   "marketPct": 0.69,
+   "excessPct": 1.32,
+   "excessSigma": 0.65
   },
   {
    "ticker": "TRMED.OL",
@@ -6323,9 +6386,9 @@
    "volume": 1140797,
    "medianVolume": 2228420,
    "rvol": 0.51,
-   "marketPct": 0.62,
-   "excessPct": -1.22,
-   "excessSigma": -0.49,
+   "marketPct": 0.69,
+   "excessPct": -1.29,
+   "excessSigma": -0.52,
    "short": {
     "percent": 1.7,
     "previous": 1.63,
@@ -6382,9 +6445,9 @@
    "volume": 2596285,
    "medianVolume": 1085300,
    "rvol": 2.39,
-   "marketPct": 0.62,
-   "excessPct": -0.94,
-   "excessSigma": -0.47
+   "marketPct": 0.69,
+   "excessPct": -1.01,
+   "excessSigma": -0.51
   },
   {
    "ticker": "VICO.ST",
@@ -6433,9 +6496,9 @@
    "volume": 1157731,
    "medianVolume": 1110156,
    "rvol": 1.04,
-   "marketPct": 0.62,
-   "excessPct": 1.57,
-   "excessSigma": 0.46
+   "marketPct": 0.69,
+   "excessPct": 1.5,
+   "excessSigma": 0.44
   },
   {
    "ticker": "SOBI.ST",
@@ -6484,9 +6547,9 @@
    "volume": 471710,
    "medianVolume": 422226,
    "rvol": 1.12,
-   "marketPct": 0.62,
-   "excessPct": 0.5,
-   "excessSigma": 0.31
+   "marketPct": 0.69,
+   "excessPct": 0.44,
+   "excessSigma": 0.27
   },
   {
    "ticker": "BONEX.ST",
@@ -6535,9 +6598,9 @@
    "volume": 203148,
    "medianVolume": 348175,
    "rvol": 0.58,
-   "marketPct": 0.62,
-   "excessPct": 1.29,
-   "excessSigma": 0.22
+   "marketPct": 0.69,
+   "excessPct": 1.22,
+   "excessSigma": 0.2
   },
   {
    "ticker": "GMAB.CO",
@@ -6586,9 +6649,9 @@
    "volume": 200905,
    "medianVolume": 167848,
    "rvol": 1.2,
-   "marketPct": 0.62,
-   "excessPct": -1.18,
-   "excessSigma": -0.17
+   "marketPct": 0.69,
+   "excessPct": -1.25,
+   "excessSigma": -0.18
   },
   {
    "ticker": "VNA.DE",
@@ -6703,9 +6766,9 @@
    "volume": 2400363,
    "medianVolume": 3961963,
    "rvol": 0.61,
-   "marketPct": 0.62,
-   "excessPct": -1.18,
-   "excessSigma": -0.86
+   "marketPct": 0.69,
+   "excessPct": -1.25,
+   "excessSigma": -0.92
   },
   {
    "ticker": "MRL.MC",
@@ -6781,9 +6844,9 @@
    "volume": 2105682,
    "medianVolume": 1380852,
    "rvol": 1.52,
-   "marketPct": 0.62,
-   "excessPct": -0.03,
-   "excessSigma": -0.02
+   "marketPct": 0.69,
+   "excessPct": -0.1,
+   "excessSigma": -0.05
   },
   {
    "ticker": "EIOF.OL",
@@ -6832,9 +6895,9 @@
    "volume": 21960,
    "medianVolume": 3008,
    "rvol": 7.3,
-   "marketPct": 0.62,
-   "excessPct": 4.09,
-   "excessSigma": 2.98
+   "marketPct": 0.69,
+   "excessPct": 4.03,
+   "excessSigma": 2.93
   },
   {
    "ticker": "GFC.PA",
@@ -6883,9 +6946,9 @@
    "volume": 209993,
    "medianVolume": 209197,
    "rvol": 1.0,
-   "marketPct": 0.62,
-   "excessPct": -1.61,
-   "excessSigma": -1.77
+   "marketPct": 0.69,
+   "excessPct": -1.68,
+   "excessSigma": -1.85
   },
   {
    "ticker": "BALD-B.ST",
@@ -6934,9 +6997,9 @@
    "volume": 1816992,
    "medianVolume": 2242088,
    "rvol": 0.81,
-   "marketPct": 0.62,
-   "excessPct": -2.54,
-   "excessSigma": -1.31
+   "marketPct": 0.69,
+   "excessPct": -2.6,
+   "excessSigma": -1.34
   },
   {
    "ticker": "FABG.ST",
@@ -6985,9 +7048,9 @@
    "volume": 373840,
    "medianVolume": 438383,
    "rvol": 0.85,
-   "marketPct": 0.62,
-   "excessPct": -1.66,
-   "excessSigma": -1.23
+   "marketPct": 0.69,
+   "excessPct": -1.73,
+   "excessSigma": -1.28
   },
   {
    "ticker": "LOGI-B.ST",
@@ -7036,9 +7099,9 @@
    "volume": 651774,
    "medianVolume": 1262308,
    "rvol": 0.52,
-   "marketPct": 0.62,
-   "excessPct": -2.22,
-   "excessSigma": -0.82
+   "marketPct": 0.69,
+   "excessPct": -2.29,
+   "excessSigma": -0.84
   },
   {
    "ticker": "HEBA-B.ST",
@@ -7087,9 +7150,9 @@
    "volume": 154241,
    "medianVolume": 305911,
    "rvol": 0.5,
-   "marketPct": 0.62,
-   "excessPct": -1.25,
-   "excessSigma": -0.62
+   "marketPct": 0.69,
+   "excessPct": -1.31,
+   "excessSigma": -0.64
   },
   {
    "ticker": "NELLY.ST",
@@ -7152,9 +7215,9 @@
    "volume": 107114,
    "medianVolume": 60663,
    "rvol": 1.77,
-   "marketPct": 0.62,
-   "excessPct": -3.38,
-   "excessSigma": -0.56
+   "marketPct": 0.69,
+   "excessPct": -3.44,
+   "excessSigma": -0.57
   },
   {
    "ticker": "ELLOS.ST",
@@ -7217,9 +7280,9 @@
    "volume": 35673,
    "medianVolume": 4773,
    "rvol": 7.47,
-   "marketPct": 0.62,
-   "excessPct": -2.23,
-   "excessSigma": -0.98
+   "marketPct": 0.69,
+   "excessPct": -2.29,
+   "excessSigma": -1.01
   },
   {
    "ticker": "CHEF.ST",
@@ -7268,9 +7331,9 @@
    "volume": 140299,
    "medianVolume": 70172,
    "rvol": 2.0,
-   "marketPct": 0.62,
-   "excessPct": 2.77,
-   "excessSigma": 1.01
+   "marketPct": 0.69,
+   "excessPct": 2.71,
+   "excessSigma": 0.99
   },
   {
    "ticker": "BOHUS.OL",
@@ -7319,9 +7382,9 @@
    "volume": 71370,
    "medianVolume": 83277,
    "rvol": 0.86,
-   "marketPct": 0.62,
-   "excessPct": -2.1,
-   "excessSigma": -0.84
+   "marketPct": 0.69,
+   "excessPct": -2.17,
+   "excessSigma": -0.87
   },
   {
    "ticker": "BMAX.ST",
@@ -7370,9 +7433,9 @@
    "volume": 97961,
    "medianVolume": 235230,
    "rvol": 0.42,
-   "marketPct": 0.62,
-   "excessPct": -1.82,
-   "excessSigma": -0.67
+   "marketPct": 0.69,
+   "excessPct": -1.89,
+   "excessSigma": -0.69
   },
   {
    "ticker": "DOFG.OL",
@@ -7500,9 +7563,9 @@
    "volume": 235288,
    "medianVolume": 280625,
    "rvol": 0.84,
-   "marketPct": 0.62,
-   "excessPct": 2.13,
-   "excessSigma": 1.02,
+   "marketPct": 0.69,
+   "excessPct": 2.06,
+   "excessSigma": 0.99,
    "short": {
     "percent": 0,
     "previous": 0.5,
@@ -7625,9 +7688,9 @@
    "volume": 864180,
    "medianVolume": 943956,
    "rvol": 0.92,
-   "marketPct": 0.62,
-   "excessPct": 4.12,
-   "excessSigma": 1.5
+   "marketPct": 0.69,
+   "excessPct": 4.05,
+   "excessSigma": 1.47
   },
   {
    "ticker": "CMBTO.OL",
@@ -7703,9 +7766,9 @@
    "volume": 289175,
    "medianVolume": 303097,
    "rvol": 0.95,
-   "marketPct": 0.62,
-   "excessPct": 3.81,
-   "excessSigma": 1.51
+   "marketPct": 0.69,
+   "excessPct": 3.74,
+   "excessSigma": 1.48
   },
   {
    "ticker": "CADLR.OL",
@@ -7781,8 +7844,8 @@
    "volume": 0,
    "medianVolume": 542005,
    "rvol": 0.0,
-   "marketPct": 0.62,
-   "excessPct": -0.62,
+   "marketPct": 0.69,
+   "excessPct": -0.69,
    "excessSigma": 0,
    "short": {
     "percent": 0.79,
@@ -7840,9 +7903,9 @@
    "volume": 250199,
    "medianVolume": 267176,
    "rvol": 0.94,
-   "marketPct": 0.62,
-   "excessPct": 3.47,
-   "excessSigma": 2.12,
+   "marketPct": 0.69,
+   "excessPct": 3.4,
+   "excessSigma": 2.08,
    "short": {
     "percent": 0,
     "previous": 0.5,
@@ -7899,9 +7962,9 @@
    "volume": 206847,
    "medianVolume": 328862,
    "rvol": 0.63,
-   "marketPct": 0.62,
-   "excessPct": 3.32,
-   "excessSigma": 2.0,
+   "marketPct": 0.69,
+   "excessPct": 3.25,
+   "excessSigma": 1.95,
    "short": {
     "percent": 0,
     "previous": 0.59,
@@ -7958,9 +8021,9 @@
    "volume": 81098,
    "medianVolume": 105300,
    "rvol": 0.77,
-   "marketPct": 0.62,
-   "excessPct": 2.66,
-   "excessSigma": 1.07
+   "marketPct": 0.69,
+   "excessPct": 2.59,
+   "excessSigma": 1.04
   },
   {
    "ticker": "DNORD.CO",
@@ -8009,9 +8072,9 @@
    "volume": 55426,
    "medianVolume": 63892,
    "rvol": 0.87,
-   "marketPct": 0.62,
-   "excessPct": 2.23,
-   "excessSigma": 0.95
+   "marketPct": 0.69,
+   "excessPct": 2.17,
+   "excessSigma": 0.93
   },
   {
    "ticker": "REACH.OL",
@@ -8060,9 +8123,9 @@
    "volume": 133401,
    "medianVolume": 196011,
    "rvol": 0.68,
-   "marketPct": 0.62,
-   "excessPct": 1.86,
-   "excessSigma": 0.82
+   "marketPct": 0.69,
+   "excessPct": 1.79,
+   "excessSigma": 0.79
   },
   {
    "ticker": "SOFF.OL",
@@ -8111,9 +8174,9 @@
    "volume": 110566,
    "medianVolume": 89251,
    "rvol": 1.24,
-   "marketPct": 0.62,
-   "excessPct": 1.42,
-   "excessSigma": 0.63
+   "marketPct": 0.69,
+   "excessPct": 1.35,
+   "excessSigma": 0.6
   },
   {
    "ticker": "ODF.OL",
@@ -8162,9 +8225,9 @@
    "volume": 34685,
    "medianVolume": 41350,
    "rvol": 0.84,
-   "marketPct": 0.62,
-   "excessPct": 1.25,
-   "excessSigma": 0.56
+   "marketPct": 0.69,
+   "excessPct": 1.19,
+   "excessSigma": 0.53
   },
   {
    "ticker": "DSV.CO",
@@ -8213,9 +8276,9 @@
    "volume": 315798,
    "medianVolume": 480606,
    "rvol": 0.66,
-   "marketPct": 0.62,
-   "excessPct": 1.82,
-   "excessSigma": 0.51
+   "marketPct": 0.69,
+   "excessPct": 1.75,
+   "excessSigma": 0.49
   },
   {
    "ticker": "IWS.OL",
@@ -8264,9 +8327,9 @@
    "volume": 330,
    "medianVolume": 2569,
    "rvol": 0.13,
-   "marketPct": 0.62,
-   "excessPct": -0.29,
-   "excessSigma": -0.25
+   "marketPct": 0.69,
+   "excessPct": -0.36,
+   "excessSigma": -0.31
   },
   {
    "ticker": "WWI.OL",
@@ -8315,9 +8378,9 @@
    "volume": 182545,
    "medianVolume": 19538,
    "rvol": 9.34,
-   "marketPct": 0.62,
-   "excessPct": 0.28,
-   "excessSigma": 0.13
+   "marketPct": 0.69,
+   "excessPct": 0.21,
+   "excessSigma": 0.1
   },
   {
    "ticker": "BEAMMW-B.ST",
@@ -8393,9 +8456,9 @@
    "volume": 257517,
    "medianVolume": 72022,
    "rvol": 3.58,
-   "marketPct": 0.62,
-   "excessPct": 7.5,
-   "excessSigma": 2.09
+   "marketPct": 0.69,
+   "excessPct": 7.43,
+   "excessSigma": 2.07
   },
   {
    "ticker": "AAC.ST",
@@ -8471,9 +8534,9 @@
    "volume": 68112,
    "medianVolume": 17884,
    "rvol": 3.81,
-   "marketPct": 0.62,
-   "excessPct": 2.07,
-   "excessSigma": 0.56
+   "marketPct": 0.69,
+   "excessPct": 2.0,
+   "excessSigma": 0.54
   },
   {
    "ticker": "ALRIB.PA",
@@ -8536,9 +8599,9 @@
    "volume": 84822,
    "medianVolume": 96801,
    "rvol": 0.88,
-   "marketPct": 0.62,
-   "excessPct": 5.74,
-   "excessSigma": 1.15
+   "marketPct": 0.69,
+   "excessPct": 5.68,
+   "excessSigma": 1.13
   },
   {
    "ticker": "TPE.DE",
@@ -8601,9 +8664,9 @@
    "volume": 79405,
    "medianVolume": 77936,
    "rvol": 1.02,
-   "marketPct": 0.62,
-   "excessPct": 0.53,
-   "excessSigma": 0.11
+   "marketPct": 0.69,
+   "excessPct": 0.46,
+   "excessSigma": 0.09
   },
   {
    "ticker": "SMHN.DE",
@@ -8652,9 +8715,9 @@
    "volume": 124131,
    "medianVolume": 137134,
    "rvol": 0.91,
-   "marketPct": 0.62,
-   "excessPct": 8.17,
-   "excessSigma": 1.74
+   "marketPct": 0.69,
+   "excessPct": 8.1,
+   "excessSigma": 1.72
   },
   {
    "ticker": "MYCR.ST",
@@ -8703,9 +8766,9 @@
    "volume": 298072,
    "medianVolume": 342567,
    "rvol": 0.87,
-   "marketPct": 0.62,
-   "excessPct": 3.3,
-   "excessSigma": 1.24
+   "marketPct": 0.69,
+   "excessPct": 3.23,
+   "excessSigma": 1.21
   },
   {
    "ticker": "AUTO.OL",
@@ -8754,9 +8817,9 @@
    "volume": 5887901,
    "medianVolume": 3969665,
    "rvol": 1.48,
-   "marketPct": 0.62,
-   "excessPct": 2.84,
-   "excessSigma": 0.89,
+   "marketPct": 0.69,
+   "excessPct": 2.77,
+   "excessSigma": 0.86,
    "short": {
     "percent": 2.1,
     "previous": 2.2,
@@ -8813,9 +8876,9 @@
    "volume": 12477,
    "medianVolume": 10745,
    "rvol": 1.16,
-   "marketPct": 0.62,
-   "excessPct": 1.64,
-   "excessSigma": 0.83
+   "marketPct": 0.69,
+   "excessPct": 1.57,
+   "excessSigma": 0.79
   },
   {
    "ticker": "OVZON.ST",
@@ -8864,9 +8927,9 @@
    "volume": 236756,
    "medianVolume": 503652,
    "rvol": 0.47,
-   "marketPct": 0.62,
-   "excessPct": -2.25,
-   "excessSigma": -0.69
+   "marketPct": 0.69,
+   "excessPct": -2.31,
+   "excessSigma": -0.71
   },
   {
    "ticker": "GOMX.ST",
@@ -8915,9 +8978,9 @@
    "volume": 334422,
    "medianVolume": 367967,
    "rvol": 0.91,
-   "marketPct": 0.62,
-   "excessPct": 2.8,
-   "excessSigma": 0.42
+   "marketPct": 0.69,
+   "excessPct": 2.73,
+   "excessSigma": 0.41
   },
   {
    "ticker": "SHT-B.ST",
@@ -8966,9 +9029,9 @@
    "volume": 61180,
    "medianVolume": 32156,
    "rvol": 1.9,
-   "marketPct": 0.62,
-   "excessPct": -0.79,
-   "excessSigma": -0.28
+   "marketPct": 0.69,
+   "excessPct": -0.86,
+   "excessSigma": -0.3
   },
   {
    "ticker": "SMOP.OL",
@@ -9017,9 +9080,9 @@
    "volume": 124216,
    "medianVolume": 257691,
    "rvol": 0.48,
-   "marketPct": 0.62,
-   "excessPct": 0.51,
-   "excessSigma": 0.1
+   "marketPct": 0.69,
+   "excessPct": 0.44,
+   "excessSigma": 0.09
   }
  ],
  "alerts": [
@@ -9370,21 +9433,6 @@
   },
   {
    "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMibEFVX3lxTFBvLWZla3VlU3hKVi1CU2hkN2hySjVkeWlEekh0aEpJWTJsdU4wSm1WTmp6MW1HdmJIZHB2eXNPQXZKTERpcGMwRHFPaDJkRFpxd2VNaEJjU3cwcWVGMXpsUGF2SkdrTGN3ZVZsdA?oc=5",
-   "headline": "ASTA Energy Solutions AG (1AST.HA) Analyst insights, Price targets and Recommendations",
-   "english": null,
-   "lang": "en",
-   "publisher": "Yahoo Finance UK",
-   "score": 2,
-   "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvLWZla3VlU3hKVi1CU2hkN2hySjVkeWlEekh0aEpJWTJsdU4wSm1WTmp6MW1HdmJIZHB2eXNPQXZKTERpcGMwRHFPaDJkRFpxd2VNaEJjU3cwcWVGMXpsUGF2SkdrTGN3ZVZsdA?oc=5",
-   "published": "Wed, 11 Nov 2026 22:59:53 GMT",
-   "fresh": true,
-   "ticker": "1AST.DE",
-   "name": "ASTA Energy Solutions"
-  },
-  {
-   "kind": "news",
    "key": "web:https://news.google.com/rss/articles/CBMinwFBVV95cUxPVDVycEVOWnU0Y2c4SC1neHdCclpSODhRU3gzeFBKTFpUOHJGbzNIZ1p4TlNFbmlkZzZZa3FvMGxwRFpEZE04bV95cUI1WE1abnRnM0FkLUk1bjdrNjVmMW1SQ3dYdkFGcmNmOFMzSTYtSEtxRDNTLXo3VkxxMy1NRHpwcWZVbXhacWMydVdVVWhTc0RlRXN1eS1tNmlfWlU?oc=5",
    "headline": "Konecranes gains ground in Peru with order for ESP.6 mobile harbor crane",
    "english": null,
@@ -9517,6 +9565,21 @@
    "fresh": true,
    "ticker": "RACE.MI",
    "name": "Ferrari"
+  },
+  {
+   "kind": "news",
+   "key": "web:https://news.google.com/rss/articles/CBMi0AFBVV95cUxPV0tKYlVJeThvdmcwVldFeThDemRzQXBhbEFsX3VRQVV3TzlZcHZMWldURFcwanVQV3FHTW96VVppYlhNRkR1dFh0Rk9HOVkyUkdXWHNsTEhtMzdSYzZqcjQzTEx4WVRaUC05RG4yY1I0WVNpY2JlTWtTdHF1MG9qNXV3Mk56RDhkSUZqZzhYMEJtajEyVFROSjBGVkdNSVpWVldibnplSWlJdnZCNThJcGhfcGI3R2xzY1p3X1ZhMW1ZTkpleFJUOVEzbTFUWlVW?oc=5",
+   "headline": "„Das wäre fatal“ – Porsche-Betriebsrat warnt vor dem Aus für Altersteilzeit",
+   "english": "\"That would be fatal\" – Porsche Works Council warns against the end of partial retirement",
+   "lang": "de",
+   "publisher": "swp.de",
+   "score": 2,
+   "material": 2,
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPV0tKYlVJeThvdmcwVldFeThDemRzQXBhbEFsX3VRQVV3TzlZcHZMWldURFcwanVQV3FHTW96VVppYlhNRkR1dFh0Rk9HOVkyUkdXWHNsTEhtMzdSYzZqcjQzTEx4WVRaUC05RG4yY1I0WVNpY2JlTWtTdHF1MG9qNXV3Mk56RDhkSUZqZzhYMEJtajEyVFROSjBGVkdNSVpWVldibnplSWlJdnZCNThJcGhfcGI3R2xzY1p3X1ZhMW1ZTkpleFJUOVEzbTFUWlVW?oc=5",
+   "published": "Thu, 12 Nov 2026 12:33:31 GMT",
+   "fresh": true,
+   "ticker": "P911.DE",
+   "name": "Porsche"
   },
   {
    "kind": "news",
