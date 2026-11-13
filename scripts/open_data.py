@@ -145,7 +145,7 @@ def parse_eurostat(payload, expected_geo="NO"):
         period = str(labels.get("time") or "")
         if not re.fullmatch(r"20\d\d-\d\d", period):
             continue
-        if labels.get("coicop") not in ("CP00", None):
+        if labels.get("coicop") not in ("CP00", None) or labels.get("coicop18") not in ("TOTAL", None):
             continue
         if labels.get("unit") not in ("RCH_A", None):
             continue
@@ -208,8 +208,8 @@ def eurostat():
     result = []
     for country in ("NO", "SE", "DK", "DE", "FR"):
         url = ("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/"
-               "prc_hicp_manr?format=JSON&geo=" + country
-               + "&coicop=CP00&sinceTimePeriod=2025-01&lang=EN")
+               "prc_hicp_minr?format=JSON&geo=" + country
+               + "&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN")
         history = parse_eurostat(fetch_json(url), country)
         x = obs("eurostat", "hicp_yoy:" + country,
                 "Harmonised consumer prices, annual rate", country,
@@ -218,12 +218,12 @@ def eurostat():
             result.append(x)
     return result
 
-def public_shorts():
+def public_shorts(root=ROOT):
     url = "https://ssr.finanstilsynet.no/api/v2/instruments"
     data = fetch_json(url, max_bytes=12000000)
     if not isinstance(data, list):
         raise ValueError("invalid_ssr_payload")
-    directory = json.loads((ROOT/"data/issuer-identities.json").read_text(encoding="utf8"))
+    directory = json.loads((root/"data/issuer-identities.json").read_text(encoding="utf8"))
     known = {str(x.get("isin") or "").upper(): x for x in directory.get("entities", [])
              if re.fullmatch("[A-Z]{2}[A-Z0-9]{10}", str(x.get("isin") or "").upper())}
     rows = []
@@ -307,14 +307,12 @@ def identity_candidates(previous, watchlist, limit=12):
     return out[:300], attempted, errors
 
 def build(root=ROOT, mode="auto", now=None):
-    global ROOT, DEST
-    ROOT = root
-    DEST = root / "data/open-data.json"
+    dest = root / "data/open-data.json"
     now = now or datetime.now(timezone.utc)
     if mode == "auto":
         mode = "weekly" if now.weekday() == 0 else "daily"
     try:
-        previous = json.loads(DEST.read_text(encoding="utf8"))
+        previous = json.loads(dest.read_text(encoding="utf8"))
     except (OSError, ValueError):
         previous = {}
     stored = {x["key"]:x for x in previous.get("series") or [] if x.get("key")}
@@ -327,7 +325,7 @@ def build(root=ROOT, mode="auto", now=None):
         ("ecb", lambda:[fx_ecb()]),
         ("world_bank", world_bank),
         ("eurostat", eurostat),
-        ("finanstilsynet", public_shorts),
+        ("finanstilsynet", lambda:public_shorts(root)),
     ]
     shorts = previous.get("publicShorts") or None
     for provider, action in tasks:
@@ -372,8 +370,8 @@ def build(root=ROOT, mode="auto", now=None):
               "identityCandidates":candidates,
               "identityNote":"Unverified name-search suggestions, never automatically linked to issuers.",
               "publicShorts":shorts}
-    DEST.parent.mkdir(parents=True, exist_ok=True)
-    DEST.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
     print("Official open data: {} series; {} candidate identity matches; source status: {}".format(
         len(stored),len(candidates),",".join(x["id"]+"="+x["status"] for x in result["sources"])))
     return result
