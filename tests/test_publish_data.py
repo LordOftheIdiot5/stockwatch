@@ -54,6 +54,22 @@ class PublishDataTests(unittest.TestCase):
         self.assertEqual({x["path"]:x["records"] for x in scanner["datasets"]},
                          {"data/shipping-ports.json":4,"data/news-latest.json":10})
 
+    def test_unctad_connectivity_treated_as_official_source(self):
+        remote=json.dumps({"datasets":[
+            {"path":"data/shipping-connectivity.json","records":20},
+            {"path":"data/news-latest.json","records":100},
+        ]}).encode()
+        incoming=json.dumps({"datasets":[
+            {"path":"data/shipping-connectivity.json","records":350},
+            {"path":"data/news-latest.json","records":1},
+        ]}).encode()
+        official=json.loads(publish_data.merge_catalog(remote,incoming,"official"))
+        scanned=json.loads(publish_data.merge_catalog(remote,incoming,"scan"))
+        self.assertEqual({x["path"]:x["records"] for x in official["datasets"]},
+                         {"data/shipping-connectivity.json":350,"data/news-latest.json":100})
+        self.assertEqual({x["path"]:x["records"] for x in scanned["datasets"]},
+                         {"data/shipping-connectivity.json":20,"data/news-latest.json":1})
+
     def test_invalid_catalog_falls_back_safely(self):
         result=json.loads(publish_data.merge_catalog(b"not-json",self.incoming,"official"))
         self.assertEqual(len(result["datasets"]),2)
