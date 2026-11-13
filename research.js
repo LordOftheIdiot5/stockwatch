@@ -97,10 +97,11 @@ async function loadOfficialSourceHealth(){
  host.innerHTML='<div class="panelhead"><h2>Official open-data sources</h2><span class="count">No-key feeds and registered integrations</span></div><div id="officialStatusBody" class="note" aria-live="polite">Checking official source status…</div>';
  $('app').appendChild(host);
  const body=$('officialStatusBody');
- const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json')]);
+ const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json'),fetchJson('data/economic-feeds.json')]);
  const source=responses[0].status==='fulfilled'?responses[0].value:null;
  const registered=responses[1].status==='fulfilled'?responses[1].value:null;
- if(!source&&!registered){body.textContent='Official-source import has not run yet. Scanner and news data remain independent.';return}
+ const economic=responses[2].status==='fulfilled'?responses[2].value:null;
+ if(!source&&!registered&&!economic){body.textContent='Official-source import has not run yet. Scanner and news data remain independent.';return}
  const names={norges_bank:'Norges Bank',ecb:'European Central Bank',eurostat:'Eurostat',world_bank:'World Bank',finanstilsynet:'Finanstilsynet shorts',gleif:'GLEIF LEI',brreg:'Brønnøysundregistrene',openfigi:'OpenFIGI',entsoe:'ENTSO-E Transparency'};
  const safeStatus=s=>String(s||'not_checked').replace(/_/g,' ');
  const sourceRows=(source?.sources||[]).map(x=>({name:names[x.id]||x.name||x.id,status:x.status,
@@ -111,6 +112,12 @@ async function loadOfficialSourceHealth(){
     detail:id==='openfigi'?(v.candidateCount||0)+' possible FIGI matches (not issuer-verified)':
       id==='entsoe'?(v.status==='error'?('HTTP '+(v.httpStatus||'—')+' · '+(v.diagnostic||v.errorType||'upstream error')):((v.pointsChecked||0)+' points checked privately (no rates published)')):'',
     url:v.sourceUrl,last:registered?.generated,license:id==='entsoe'?'Raw observations withheld pending item-specific permission':'OpenFIGI reference identifiers'});
+ }
+ for(const [id,v] of Object.entries(economic?.sources||{})){
+  sourceRows.push({name:id==='fred'?'FRED / Federal Reserve':id==='eia'?'US Energy Information Administration':id,
+    status:v.status,detail:(v.records||0)+' of '+(v.expected||0)+' official series'+(v.errors?.length?' · '+v.errors.length+' source issues':''),
+    url:v.sourceUrl,last:v.lastSuccessAt,
+    license:'Official government-origin indicators; verify per-series reuse permissions'});
  }
  const statusHtml=sourceRows.map(x=>{
   const u=validLink(x.url);
@@ -125,7 +132,7 @@ async function loadOfficialSourceHealth(){
  '<div class="tablewrap"><table><thead><tr><th>Provider</th><th>Import status</th><th>Details</th><th>Last success</th><th>Source</th></tr></thead><tbody>'+
  statusHtml+'</tbody></table></div>'+
  '<p class="note">Official data updated '+esc(source?.generated?date(source.generated):'not yet')+
- ' · '+(source?.series?.length||0)+' dated indicator series · issuer matches are candidates until externally verified.'+
+ ' · '+((source?.series?.length||0)+(economic?.series?.length||0))+' dated indicator series · issuer matches are candidates until externally verified.'+
  ' <a href="data/open-data.json" target="_blank" rel="noopener noreferrer">Download source-linked observations ↗</a></p>';
 }
 async function main(){const results=await Promise.allSettled([fetchJson('data/signals.json'),fetchJson('data/context.json'),fetchJson('watchlist.json'),fetchJson('data/news-latest.json'),fetchJson('data/events.json'),fetchJson('data/source-health.json')]);const get=i=>results[i].status==='fulfilled'?results[i].value:null;

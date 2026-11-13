@@ -30,7 +30,7 @@ The daily official-data refresh also runs automatically on weekdays. GitHub Acti
 
 ## EODData and FRED
 
-EODData's account described as **personal use only** must not feed Stockwatch's public or commercial database. `scripts/eoddata_private_probe.py` remains only for permitted personal evaluation; do not configure its key as a production secret. FRED is intentionally not connected until account/key approval.
+EODData's account described as **personal use only** must not feed Stockwatch's public or commercial database. `scripts/eoddata_private_probe.py` remains only for permitted personal evaluation; do not configure its key as a production secret.
 
 ## Data catalog and reliability
 
@@ -48,3 +48,27 @@ Official source policies:
 - Brønnøysundregistrene: https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html
 - OpenFIGI: https://www.openfigi.com/api/documentation
 - ENTSO-E: https://transparencyplatform.zendesk.com/hc/en-us/articles/12845911031188-How-to-get-security-token
+
+## FRED and EIA (free registered credentials)
+
+Both connectors are implemented in `scripts/economic_feeds.py`. Initial series:
+- FRED: DGS2 and DGS10 Treasury yields, DFF federal funds rate, UNRATE unemployment.
+- EIA: Europe Brent crude (RBRTE) and Cushing WTI crude (RWTC) daily spot observations.
+
+The new public `data/economic-feeds.json` contains only real dated observations, explicit source links and provider health. Failed updates preserve the old original observation timestamps. FRED data is not automatically licensed for redistribution: these initial series are from government-origin publishers, and additional series need rights checks. None are executable investment quotes.
+
+**On your authenticated Windows PC, install the API keys securely:**
+
+```powershell
+git switch main
+git pull --ff-only origin main
+.\deploy\set-official-api-key.ps1 -Provider fred
+.\deploy\set-official-api-key.ps1 -Provider eia
+gh workflow run open-data.yml --repo LordOftheIdiot5/stockwatch --ref main
+```
+
+This stores `STOCKWATCH_FRED_API_KEY` and `STOCKWATCH_EIA_API_KEY` in GitHub Actions secrets. Do not paste them into chat or commit them. View import status on the Stockwatch Data Health page and dated oil/yield charts under Commodities.
+
+Documentation:
+- FRED API observations: https://fred.stlouisfed.org/docs/api/fred/series_observations.html
+- EIA APIv2: https://www.eia.gov/opendata/documentation.php
