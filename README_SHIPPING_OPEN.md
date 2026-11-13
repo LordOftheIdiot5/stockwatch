@@ -36,3 +36,17 @@ Local validation:
 python -m unittest discover -s tests -p 'test_shipping_ports.py' -v
 python scripts/shipping_ports.py
 ```
+
+## V5 · UNCTAD monthly connectivity and independent voyage cost scenarios
+- `scripts/shipping_unctad.py` obtains the official keyless `US.LSCI_M` 7z bulk archive, extracts the CSV with pinned `py7zr`, validates monthly country histories and publishes `data/shipping-connectivity.json`. No synthetic values or Baltic prices are generated. UNCTAD Data Hub is credited under CC BY 3.0 IGO. Connectivity index base: Q1 2023 average = 100; not USD/tonne, daily vessel calls or spot freight rates. Source: https://unctadstat.unctad.org/datacentre/dataviewer/US.LSCI_M . Terms: https://unctadstat.unctad.org/EN/About.html#TERMS_OF_USE .
+- The Shipping UI charts published monthly country series separately from the USDA index and World Bank annual TEU throughput. Data Health reports freshness and errors independently.
+- The voyage calculator models total loaded + ballast sailing days, underway/port fuel use, vessel hire, port costs, other costs and contingency. Inputs are **hypothetical illustrative defaults**, not external quotes or source-backed route distances. The selection of a Baltic route does not automatically set distance or create a benchmark price. Bunker cost is user-entered, **not** a derived EIA crude quote.
+- IMF PortWatch is linked as a research source; automated collection and public display are deliberately **disabled** pending written permission for commercial use/systematic downloads, as required by https://www.imf.org/en/About/copyright-and-terms . No license or data stream is assumed.
+- Container connectivity relates to liner shipping; do not present it as a directly comparable freight assessment for dry-bulk Capesize, Panamax or tankers.
+
+Validation:
+```bash
+python -m unittest discover -s tests -p 'test_shipping_unctad.py' -v
+node --test tests/test_voyage_math.mjs
+python scripts/shipping_unctad.py
+```
