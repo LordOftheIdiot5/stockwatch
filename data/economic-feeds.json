@@ -1,14 +1,16 @@
 {
-  "generated": null,
-  "notice": "Pending first authenticated FRED/EIA import; no fabricated readings.",
+  "generated": "2026-11-13T18:18:18Z",
+  "notice": "Official dated observations, not tradable quotes; per-series reuse rights apply.",
   "series": [],
   "sources": {
     "fred": {
       "status": "awaiting_key",
+      "lastSuccessAt": null,
       "sourceUrl": "https://fred.stlouisfed.org/"
     },
     "eia": {
       "status": "awaiting_key",
+      "lastSuccessAt": null,
       "sourceUrl": "https://www.eia.gov/opendata/"
     }
   }
