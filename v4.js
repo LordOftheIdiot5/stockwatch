@@ -71,6 +71,30 @@ async function renderUSDAOceanIndices(){
  };
  select.addEventListener('change',draw);draw();
 }
+
+async function renderWorldBankPortTraffic(){
+ const host=$('v4app');if(!host)return;
+ const panel=document.createElement('section');panel.className='sw-panel';panel.id='worldBankPortTraffic';
+ panel.innerHTML='<div class="sw-panel-hd"><div><h2>Global container-port activity</h2><small>World Bank / UNCTAD · annual container throughput (TEU) · not freight prices</small></div></div><div class="sw-panel-pad"><div class="sw-note" id="worldBankPortContent">Checking annual container-port activity…</div></div>';
+ const routePanel=$('routeCompare');if(routePanel)routePanel.parentNode.insertBefore(panel,routePanel);else host.appendChild(panel);
+ const target=$('worldBankPortContent');
+ let data;try{data=await get('data/shipping-ports.json')}catch{target.textContent='World Bank annual throughput importer has not published data yet.';return}
+ const series=(data?.series||[]).filter(x=>x&&x.isActualRate===false&&x.unit==='TEU'&&x.frequency==='annual'&&Array.isArray(x.history)&&x.history.length);
+ if(!series.length){target.textContent='No verified annual port-throughput observations yet. This is not a freight quotation. Check Data Health for the official-source status.';return}
+ const status=data.source?.status;
+ target.innerHTML='<p class="sw-meta">Country-level annual TEU totals include empty containers and transshipments. This is an activity indicator, not a live rate, vessel count, or port capacity. '
+ +(status==='ok'?'World Bank source refresh succeeded.':'The last refresh is unavailable; dated historical observations are shown unchanged.')+'</p>'
+ +'<div class="sw-grid4">'+series.slice(0,4).map(x=>stat(E(x.countryCode==='WLD'?'World':x.label),N(x.value,0),'TEU · '+E(x.period||'unknown year'))).join('')+'</div>'
+ +'<div class="sw-controls"><label for="portCountrySelect">Select country / aggregate</label><select id="portCountrySelect">'+series.map((x,i)=>'<option value="'+i+'">'+E(x.label)+'</option>').join('')+'</select></div>'
+ +'<div id="worldBankPortChart"></div><p class="sw-meta">Source: <a href="https://data.worldbank.org/indicator/IS.SHP.GOOD.TU" target="_blank" rel="noopener noreferrer">World Bank WDI / UNCTAD</a> · <a href="https://www.worldbank.org/ext/en/legal/terms-conditions/datasets" target="_blank" rel="noopener noreferrer">CC BY 4.0 and dataset terms</a>. These annual country totals are not comparable to daily Baltic, Braemar or Freightos shipping-rate quotations.</p>';
+ const select=$('portCountrySelect'),chart=$('worldBankPortChart');
+ const draw=()=>{const x=series[Number(select.value)||0];if(!x)return;
+  const bars=x.history.filter(p=>p&&/^20\d{2}-12-31$/.test(p.date)&&Number.isFinite(Number(p.value))&&Number(p.value)>0).map(p=>({date:p.date,value:p.value}));
+  chart.innerHTML=lineGraph(bars,{label:x.label+' · annual container port traffic (TEU)',empty:'At least two annual observations are required for a chart.'})
+ };
+ select.addEventListener('change',draw);draw();
+}
+
 function switchEstimate(p, direction, holding, feePct, slippagePct, flatFee){
  const from=direction==='A-to-B'?Number(p.aPrice):Number(p.bPrice);
  const to=direction==='A-to-B'?Number(p.bPrice):Number(p.aPrice);
@@ -160,6 +184,6 @@ async function renderOpenMacro(){
  select.addEventListener('change',paint);paint();
 }
 function nav(){let theme;try{theme=localStorage.getItem('stockwatch-theme')}catch{}theme=theme==='light'?'light':'dark';document.body.dataset.theme=theme;$('swTheme').textContent=theme==='light'?'☀':'☾';$('swTheme').onclick=()=>{let now=document.body.dataset.theme==='light'?'dark':'light';document.body.dataset.theme=now;$('swTheme').textContent=now==='light'?'☀':'☾';try{localStorage.setItem('stockwatch-theme',now)}catch{}};$('swSearchForm').addEventListener('submit',e=>{e.preventDefault();let q=$('swGlobalSearch').value.trim();location.href='stocks.html'+(q?'?q='+encodeURIComponent(q):'')});document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();$('swGlobalSearch').focus()}})}
-async function init(){nav();const files=[['signals','data/signals.json'],['context','data/context.json'],['watchlist','watchlist.json'],['routes','data/freight-routes.json'],['archive','data/news-latest.json'],['health','data/source-health.json'],['fundamentals','data/fundamentals.json'],['observations','data/spread-observations.json']];const data=await Promise.all(files.map(async([k,p])=>{try{return [k,await get(p)]}catch{return [k,null]}}));const o=Object.fromEntries(data);state.signals=o.signals;state.context=o.context;state.watchlist=o.watchlist?.tickers||[];state.routes=o.routes?.routes||[];state.archive=o.archive;state.health=o.health;state.fundamentals=o.fundamentals?.companies||{};state.observations=o.observations;const label=$('swRefreshLabel');if(state.signals?.generated)label.textContent='Updated '+timeAge(state.signals.generated);else label.textContent='Data unavailable';if(state.signals?.generated)$('swSourceStatus').textContent='Last scan '+fmtDate(state.signals.generated);tape();if(['news','calendar','compare','health'].includes(page))return;if(!state.watchlist.length||!state.signals){$('v4app').innerHTML='<div class="sw-note sw-notice">The scanner dataset is unavailable. The interface does not invent market data.</div>';return}if(page==='index')overview();else if(page==='stocks')stocks();else if(page==='spreads')await spreads();else if(page==='shipping'){shipping();await renderUSDAOceanIndices();}else if(page==='commodities'){commodities();await renderOpenMacro();}else if(page==='shorts')shorts()}
+async function init(){nav();const files=[['signals','data/signals.json'],['context','data/context.json'],['watchlist','watchlist.json'],['routes','data/freight-routes.json'],['archive','data/news-latest.json'],['health','data/source-health.json'],['fundamentals','data/fundamentals.json'],['observations','data/spread-observations.json']];const data=await Promise.all(files.map(async([k,p])=>{try{return [k,await get(p)]}catch{return [k,null]}}));const o=Object.fromEntries(data);state.signals=o.signals;state.context=o.context;state.watchlist=o.watchlist?.tickers||[];state.routes=o.routes?.routes||[];state.archive=o.archive;state.health=o.health;state.fundamentals=o.fundamentals?.companies||{};state.observations=o.observations;const label=$('swRefreshLabel');if(state.signals?.generated)label.textContent='Updated '+timeAge(state.signals.generated);else label.textContent='Data unavailable';if(state.signals?.generated)$('swSourceStatus').textContent='Last scan '+fmtDate(state.signals.generated);tape();if(['news','calendar','compare','health'].includes(page))return;if(!state.watchlist.length||!state.signals){$('v4app').innerHTML='<div class="sw-note sw-notice">The scanner dataset is unavailable. The interface does not invent market data.</div>';return}if(page==='index')overview();else if(page==='stocks')stocks();else if(page==='spreads')await spreads();else if(page==='shipping'){shipping();await renderUSDAOceanIndices();await renderWorldBankPortTraffic();}else if(page==='commodities'){commodities();await renderOpenMacro();}else if(page==='shorts')shorts()}
 init().catch(e=>{if($('v4app'))$('v4app').innerHTML=`<div class="sw-note sw-notice">Could not render this page: ${E(e.message)}</div>`;console.error(e)});
 })();
