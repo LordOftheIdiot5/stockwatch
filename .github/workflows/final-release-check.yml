@@ -28,6 +28,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Worker API and A/B finance tests
         run: node --test tests/test_worker.mjs tests/test_final_js.mjs
+      - name: Independent voyage model tests
+        run: node --test tests/test_voyage_math.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
