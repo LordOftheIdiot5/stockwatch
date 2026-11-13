@@ -110,14 +110,13 @@ async function renderOpenMacro(){
  host.innerHTML='<div class="sw-panel-pad"><div class="sw-section-row"><h2>Official macro & FX datasets</h2><a class="sw-textlink" href="health.html">Data sources & reliability ↗</a></div><p class="sw-meta">Official statistics and reference rates, not executable trading quotes. Original source attribution is shown with each series.</p><div id="macroSeriesContent" class="sw-note">Loading official data…</div></div>';
  app.appendChild(host);
  const area=$('macroSeriesContent');
- let payload;
- try{payload=await get('data/open-data.json')}catch{
-  area.textContent='First official-data import is pending. Existing market data remains available.';return;
- }
- const series=(payload.series||[]).filter(x=>x&&Array.isArray(x.history)&&x.history.length&&Number.isFinite(Number(x.value)));
+ const results=await Promise.allSettled([get('data/open-data.json'),get('data/economic-feeds.json')]);
+ const merged=results.flatMap(r=>r.status==='fulfilled'?(r.value.series||[]):[]);
+ const series=merged.filter(x=>x&&Array.isArray(x.history)&&x.history.length&&Number.isFinite(Number(x.value)));
  if(!series.length){area.textContent='No validated official observations have been collected yet. Source health will show which feeds are pending.';return}
  const preferred=series.filter(x=>x.key.startsWith('fx:')||x.key.startsWith('hicp_yoy:')||x.key.includes('NY.GDP.MKTP.KD.ZG'));
- const chosen=(preferred.length?preferred:series).slice(0,30);
+ const economics=series.filter(x=>x.key.startsWith('fred:')||x.key.startsWith('eia:'));
+ const chosen=[...economics,...preferred,...series].filter((x,i,a)=>a.findIndex(y=>y.key===x.key)===i).slice(0,60);
  area.innerHTML='<div class="sw-filter-row"><label for="officialSeriesSelect">Official time series</label><select id="officialSeriesSelect" aria-label="Choose an official statistical series">'+chosen.map((x,i)=>'<option value="'+i+'">'+E(x.label)+' · '+E(x.country)+'</option>').join('')+'</select></div><div id="officialSeriesDetails"></div>';
  const select=$('officialSeriesSelect'),detail=$('officialSeriesDetails');
  const paint=()=>{
