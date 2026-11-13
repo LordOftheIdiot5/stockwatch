@@ -1,7 +1,6 @@
 import json
 import re
 from pathlib import Path
-from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 PREV=ROOT/'preview'
 FILES={'data/signals.json','data/context.json','watchlist.json','data/freight-routes.json','data/news-archive.json','data/news-latest.json','data/events.json','data/source-health.json','data/fundamentals.json'}
@@ -19,6 +18,7 @@ def load(page,name):
     page.wait_for_timeout(250)
 
 def main():
+ from playwright.sync_api import sync_playwright
  with sync_playwright() as p:
   b=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox'])
   for width,height,name in [(1440,950,'index.html'),(390,844,'index.html'),(1440,900,'stocks.html'),(1440,900,'shipping.html'),(1440,900,'spreads.html'),(1440,900,'news.html'),(390,844,'news.html'),(1440,900,'compare.html'),(1440,900,'calendar.html'),(1440,900,'health.html'),(1440,900,'shorts.html'),(1440,900,'commodities.html')]:
