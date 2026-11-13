@@ -1,6 +1,24 @@
 {
-  "generated": "2026-11-13T18:55:16Z",
+  "generated": "2026-11-13T18:56:43Z",
   "datasets": [
+    {
+      "name": "Official macroeconomic and FX observations",
+      "path": "data/open-data.json",
+      "records": 26,
+      "license": "Attributed per original source and series; official-source exception policies apply"
+    },
+    {
+      "name": "OpenFIGI instrument identity candidates",
+      "path": "data/registered-source-status.json",
+      "records": 102,
+      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
+    },
+    {
+      "name": "USDA weekly ocean-grain freight cost indices",
+      "path": "data/shipping-open.json",
+      "records": 328,
+      "license": "USDA AMS source-attributed index observations; not commercial freight quotes"
+    },
     {
       "name": "European issuer directory",
       "path": "data/issuer-identities.json",
@@ -16,7 +34,7 @@
     {
       "name": "Historical article index",
       "path": "data/news-store/index.json",
-      "records": 336,
+      "records": 337,
       "license": "Git-backed source-linked metadata; inspect original publisher terms"
     },
     {
@@ -36,24 +54,6 @@
       "path": "data/source-health.json",
       "records": 138,
       "license": "Original scanner telemetry"
-    },
-    {
-      "name": "Official macroeconomic and FX observations",
-      "path": "data/open-data.json",
-      "records": 26,
-      "license": "Attributed per original source and series; official-source exception policies apply"
-    },
-    {
-      "name": "OpenFIGI instrument identity candidates",
-      "path": "data/registered-source-status.json",
-      "records": 102,
-      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
-    },
-    {
-      "name": "USDA weekly ocean-grain freight cost indices",
-      "path": "data/shipping-open.json",
-      "records": 328,
-      "license": "USDA AMS source-attributed index observations; not commercial freight quotes"
     }
   ]
 }
