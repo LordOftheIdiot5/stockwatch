@@ -96,6 +96,25 @@ class OpenDataTests(unittest.TestCase):
             self.assertEqual(status["gleif"]["status"],"not_checked")
             self.assertEqual(json.loads((root/"data/open-data.json").read_text())["mode"],"daily")
 
+    def test_temporary_502_is_retried_but_403_is_not(self):
+        import urllib.error
+        from unittest import mock
+        class FakeResponse:
+            def __enter__(self): return self
+            def __exit__(self,*args): return False
+            def read(self,n): return b'ok'
+        retryable=urllib.error.HTTPError("https://example.org",502,"Bad Gateway",None,None)
+        forbidden=urllib.error.HTTPError("https://example.org",403,"Forbidden",None,None)
+        with mock.patch.object(o.urllib.request,"urlopen",side_effect=[retryable,FakeResponse()]) as op, \
+             mock.patch.object(o.time,"sleep") as sleep:
+            self.assertEqual(o.get_bytes("https://example.org"),b'ok')
+            self.assertEqual(op.call_count,2)
+            sleep.assert_called_once()
+        with mock.patch.object(o.urllib.request,"urlopen",side_effect=forbidden) as op:
+            with self.assertRaises(urllib.error.HTTPError):
+                o.get_bytes("https://example.org")
+            self.assertEqual(op.call_count,1)
+
     def test_network_client_has_descriptive_user_agent_and_size_cap(self):
         class FakeResponse:
             def __init__(self,p): self.p=p
