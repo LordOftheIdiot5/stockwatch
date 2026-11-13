@@ -1,10 +1,12 @@
 from __future__ import annotations
-import json,sys,tempfile,unittest
+import json,sys,tempfile,unittest,os
+from unittest import mock
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-from push_archive import load_items,pack_batches,clean_token
+from push_archive import load_items,pack_batches,clean_token,USER_AGENT,main as push_main
+from verify_archive_auth import main as verify_main, EXPECTED_URL
 
 class IngestTests(unittest.TestCase):
     def test_clean_token_removes_bom_without_weakening_validation(self):
@@ -34,5 +36,31 @@ class IngestTests(unittest.TestCase):
             now=datetime(2026,11,13,tzinfo=timezone.utc)
             self.assertEqual([x['id'] for x in load_items(root,backfill=True,now=now)],['old','new'])
             self.assertEqual([x['id'] for x in load_items(root,now=now)],['new'])
+
+
+    def test_push_archive_uses_descriptive_user_agent(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);(root/'data').mkdir()
+            item={'id':'ABC','published':datetime.now(timezone.utc).isoformat(),'url':'https://example.org/news',
+                  'ticker':'ABC.OL','headline':'Real headline','type':'news'}
+            (root/'data/news-archive.json').write_text(json.dumps({'items':[item]}))
+            with mock.patch.dict(os.environ,{'STOCKWATCH_ARCHIVE_URL':EXPECTED_URL,'STOCKWATCH_ARCHIVE_TOKEN':'a'*64}), \
+                 mock.patch('urllib.request.urlopen') as urlopen:
+                urlopen.return_value.__enter__.return_value.status=200
+                urlopen.return_value.__enter__.return_value.read.return_value=b'{"accepted":1}'
+                self.assertEqual(push_main([],root),0)
+                req=urlopen.call_args.args[0]
+                self.assertEqual(req.get_header('User-agent'),USER_AGENT)
+                self.assertEqual(req.get_method(),'POST')
+
+    def test_auth_probe_uses_descriptive_user_agent(self):
+        with mock.patch.dict(os.environ,{'STOCKWATCH_ARCHIVE_URL':EXPECTED_URL,'STOCKWATCH_ARCHIVE_TOKEN':'a'*64}), \
+             mock.patch('urllib.request.urlopen') as urlopen:
+            urlopen.return_value.__enter__.return_value.status=200
+            urlopen.return_value.__enter__.return_value.read.return_value=b'{"accepted":0}'
+            self.assertEqual(verify_main(),0)
+            req=urlopen.call_args.args[0]
+            self.assertEqual(req.get_header('User-agent'),USER_AGENT)
+            self.assertEqual(req.get_method(),'POST')
 
 if __name__=='__main__': unittest.main()
