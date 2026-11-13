@@ -12,11 +12,13 @@ on:
       - scripts/registered_sources.py
       - scripts/economic_feeds.py
       - scripts/shipping_open.py
+      - scripts/shipping_ports.py
       - scripts/publish_data.py
       - tests/test_open_data.py
       - tests/test_registered_sources.py
       - tests/test_economic_feeds.py
       - tests/test_shipping_open.py
+      - tests/test_shipping_ports.py
       - tests/test_publish_data.py
       - .github/workflows/open-data.yml
 permissions:
@@ -58,6 +60,7 @@ jobs:
           python scripts/registered_sources.py
           python scripts/economic_feeds.py
           python scripts/shipping_open.py
+          python scripts/shipping_ports.py
       - name: Commit official-source datasets without racing the market scanner
         if: github.ref == 'refs/heads/main'
         run: python scripts/publish_data.py --mode official
