@@ -1,0 +1,143 @@
+{
+  "generated": "2026-11-13T00:39:17Z",
+  "latestScan": "2026-11-13T00:38:15+00:00",
+  "scanAgeHours": 0.02,
+  "contextAgeHours": 0.02,
+  "tracked": 138,
+  "priced": 137,
+  "missing": [
+    {
+      "ticker": "PERR.PA",
+      "name": "Gerard Perrier Industrie",
+      "exchange": "Paris"
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "Amsterdam",
+      "total": 1,
+      "priced": 1,
+      "missing": 0
+    },
+    {
+      "name": "Brussels",
+      "total": 2,
+      "priced": 2,
+      "missing": 0
+    },
+    {
+      "name": "Copenhagen",
+      "total": 11,
+      "priced": 11,
+      "missing": 0
+    },
+    {
+      "name": "Dublin",
+      "total": 1,
+      "priced": 1,
+      "missing": 0
+    },
+    {
+      "name": "HKSE",
+      "total": 1,
+      "priced": 1,
+      "missing": 0
+    },
+    {
+      "name": "Helsinki",
+      "total": 1,
+      "priced": 1,
+      "missing": 0
+    },
+    {
+      "name": "MCE",
+      "total": 2,
+      "priced": 2,
+      "missing": 0
+    },
+    {
+      "name": "Milan",
+      "total": 7,
+      "priced": 7,
+      "missing": 0
+    },
+    {
+      "name": "Oslo",
+      "total": 43,
+      "priced": 43,
+      "missing": 0
+    },
+    {
+      "name": "Paris",
+      "total": 9,
+      "priced": 8,
+      "missing": 1
+    },
+    {
+      "name": "Stockholm",
+      "total": 40,
+      "priced": 40,
+      "missing": 0
+    },
+    {
+      "name": "Vienna",
+      "total": 2,
+      "priced": 2,
+      "missing": 0
+    },
+    {
+      "name": "XETRA",
+      "total": 18,
+      "priced": 18,
+      "missing": 0
+    }
+  ],
+  "storedStories": 142,
+  "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
+  "sourceStatus": {
+    "Yahoo prices": "request_errors",
+    "Oslo NewsWeb": "requests_ok",
+    "MFN filings": "requests_ok",
+    "Google News": "requests_ok",
+    "Finanstilsynet shorts": "requests_ok"
+  },
+  "sourceRequests": {
+    "Yahoo prices": {
+      "requests": 138,
+      "succeeded": 137,
+      "failed": 1,
+      "avgLatencyMs": 138.4,
+      "errorTypes": {
+        "HTTPError": 1
+      }
+    },
+    "Oslo NewsWeb": {
+      "requests": 1,
+      "succeeded": 1,
+      "failed": 0,
+      "avgLatencyMs": 517.2,
+      "errorTypes": {}
+    },
+    "MFN filings": {
+      "requests": 1,
+      "succeeded": 1,
+      "failed": 0,
+      "avgLatencyMs": 1805.0,
+      "errorTypes": {}
+    },
+    "Google News": {
+      "requests": 594,
+      "succeeded": 594,
+      "failed": 0,
+      "avgLatencyMs": 352.5,
+      "errorTypes": {}
+    },
+    "Finanstilsynet shorts": {
+      "requests": 1,
+      "succeeded": 1,
+      "failed": 0,
+      "avgLatencyMs": 2289.0,
+      "errorTypes": {}
+    }
+  }
+}
