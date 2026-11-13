@@ -97,10 +97,11 @@ async function loadOfficialSourceHealth(){
  host.innerHTML='<div class="panelhead"><h2>Official open-data sources</h2><span class="count">No-key feeds and registered integrations</span></div><div id="officialStatusBody" class="note" aria-live="polite">Checking official source status…</div>';
  $('app').appendChild(host);
  const body=$('officialStatusBody');
- const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json'),fetchJson('data/economic-feeds.json')]);
+ const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json'),fetchJson('data/economic-feeds.json'),fetchJson('data/shipping-open.json')]);
  const source=responses[0].status==='fulfilled'?responses[0].value:null;
  const registered=responses[1].status==='fulfilled'?responses[1].value:null;
  const economic=responses[2].status==='fulfilled'?responses[2].value:null;
+ const shipping=responses[3].status==='fulfilled'?responses[3].value:null;
  if(!source&&!registered&&!economic){body.textContent='Official-source import has not run yet. Scanner and news data remain independent.';return}
  const names={norges_bank:'Norges Bank',ecb:'European Central Bank',eurostat:'Eurostat',world_bank:'World Bank',finanstilsynet:'Finanstilsynet shorts',gleif:'GLEIF LEI',brreg:'Brønnøysundregistrene',openfigi:'OpenFIGI',entsoe:'ENTSO-E Transparency'};
  const safeStatus=s=>String(s||'not_checked').replace(/_/g,' ');
@@ -118,6 +119,13 @@ async function loadOfficialSourceHealth(){
     status:v.status,detail:(v.records||0)+' of '+(v.expected||0)+' official series'+(v.errors?.length?' · '+v.errors.length+' source issues':''),
     url:v.sourceUrl,last:v.lastSuccessAt,
     license:'Official government-origin indicators; verify per-series reuse permissions'});
+ }
+ if(shipping?.source){
+  const item=shipping.source;
+  sourceRows.push({name:'USDA ocean-grain shipping indices',status:item.status,
+    detail:(shipping.series||[]).length+' weekly index series (2017=100); NOT voyage-rate prices',
+    url:item.sourceUrl,last:item.lastSuccessAt,
+    license:'USDA AMS attributed aggregate indices; underlying source limitations apply'});
  }
  const statusHtml=sourceRows.map(x=>{
   const u=validLink(x.url);

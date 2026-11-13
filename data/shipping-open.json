@@ -1,0 +1,24 @@
+{
+  "generated": null,
+  "notice": "USDA weekly grain ocean freight indices: 2017=100. Not actual USD/tonne freight quotes.",
+  "source": {
+    "status": "pending",
+    "sourceUrl": "https://agtransport.usda.gov/Transportation-Costs/Grain-Transportation-Cost-Indicators/8uye-ieij",
+    "lastSuccessAt": null
+  },
+  "series": [],
+  "relatedSources": [
+    {
+      "name": "USDA Bulk Grain Ocean Freight Rates",
+      "url": "https://agtransport.usda.gov/Bulk/Bulk-Grain-Ocean-Freight-Rates/ehic-wtxb",
+      "status": "link_only",
+      "reason": "Third-party O'Neil Commodity Consulting raw rates require rights review"
+    },
+    {
+      "name": "Baltic Exchange",
+      "url": "https://www.balticexchange.com/en/data-services/Methodology/market-data.html",
+      "status": "license_required",
+      "reason": "Public display license for route price history required"
+    }
+  ]
+}
