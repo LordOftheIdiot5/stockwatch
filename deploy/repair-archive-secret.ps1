@@ -29,6 +29,10 @@ try {
   if ($github.ExitCode -ne 0) { throw 'GitHub token secret rotation failed.' }
   $url = Start-Process -FilePath 'cmd.exe' -ArgumentList "/d /c gh secret set STOCKWATCH_ARCHIVE_URL --repo $Repository" -RedirectStandardInput $urlPath -NoNewWindow -Wait -PassThru
   if ($url.ExitCode -ne 0) { throw 'GitHub URL secret update failed.' }
+  # Prove the Worker accepts this exact token without writing any article.
+  # Wrangler can otherwise report success after receiving empty stdin.
+  $probe = Invoke-RestMethod -Uri $ArchiveUrl -Method Post -ContentType 'application/json' -Body '{"items":[]}' -Headers @{ Authorization = "Bearer $token" }
+  if ($probe.accepted -ne 0) { throw 'Worker ingestion authentication probe did not pass.' }
 } finally {
   if (Test-Path $tokenPath) { Remove-Item -LiteralPath $tokenPath -Force }
   if (Test-Path $urlPath) { Remove-Item -LiteralPath $urlPath -Force }
