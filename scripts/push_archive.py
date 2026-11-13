@@ -17,6 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MAX_PAYLOAD_BYTES = 440_000
 MAX_ITEMS_PER_BATCH = 100
+# Cloudflare workers.dev blocks default Python urllib User-Agent (Error 1010).
+USER_AGENT = 'StockwatchResearch/1.0 (+https://stocks.nordl.dev)'
 
 def _published(item):
     try:
@@ -91,7 +93,7 @@ def main(argv=None, root=ROOT):
         if not args.dry_run:
             payload = json.dumps({'items': batch}, ensure_ascii=False, separators=(',', ':')).encode('utf8')
             request = urllib.request.Request(dest,data=payload,headers={
-                'Content-Type':'application/json','Authorization':'Bearer '+token},method='POST')
+                'Content-Type':'application/json','Authorization':'Bearer '+token,'User-Agent':USER_AGENT},method='POST')
             try:
                 with urllib.request.urlopen(request,timeout=30) as response:
                     if response.status != 200:
@@ -103,7 +105,11 @@ def main(argv=None, root=ROOT):
                 # Report only the Worker's public error code, never the token.
                 error_code = 'unknown'
                 try:
-                    error_code = json.loads(exc.read(2048)).get('error', 'unknown')
+                    body = exc.read(2048)
+                    if b'Error 1010' in body or b'error code: 1010' in body.lower():
+                        error_code = 'cloudflare_browser_integrity_check'
+                    else:
+                        error_code = json.loads(body).get('error', 'unknown')
                 except (ValueError, TypeError):
                     pass
                 raise RuntimeError(f'D1 ingestion rejected request: HTTP {exc.code} ({error_code})') from None

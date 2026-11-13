@@ -9,7 +9,7 @@ import sys
 import urllib.error
 import urllib.request
 
-from push_archive import clean_token
+from push_archive import clean_token, USER_AGENT
 
 EXPECTED_URL = "https://stockwatch-research-api.gauchovidar.workers.dev/api/news/ingest"
 
@@ -23,7 +23,7 @@ def main():
     req = urllib.request.Request(
         url,
         data=b'{"items":[]}',
-        headers={"Content-Type": "application/json", "Authorization": "Bearer " + token},
+        headers={"Content-Type": "application/json", "Authorization": "Bearer " + token, "User-Agent": USER_AGENT},
         method="POST"
     )
     try:
@@ -34,7 +34,11 @@ def main():
     except urllib.error.HTTPError as exc:
         error_code = "unknown"
         try:
-            error_code = json.loads(exc.read(2048)).get("error", "unknown")
+            body = exc.read(2048)
+            if b'Error 1010' in body or b'error code: 1010' in body.lower():
+                error_code = "cloudflare_browser_integrity_check"
+            else:
+                error_code = json.loads(body).get("error", "unknown")
         except (ValueError, TypeError):
             pass
         raise SystemExit(f"D1 authentication probe failed: HTTP {exc.code} ({error_code})")
