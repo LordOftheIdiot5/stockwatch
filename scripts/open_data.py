@@ -280,7 +280,9 @@ def brreg_candidate(name):
 
 def identity_candidates(previous, watchlist, limit=12):
     old = previous.get("identityCandidates") or []
-    existing = {(x.get("ticker"), x.get("provider")) for x in old}
+    lookups = previous.get("identityLookups") or []
+    existing = {(x.get("ticker"), x.get("provider")) for x in lookups}
+    existing.update((x.get("ticker"), x.get("provider")) for x in old)
     out = list(old)
     attempted = {"gleif": 0, "brreg": 0}
     errors = {"gleif": [], "brreg": []}
@@ -300,11 +302,13 @@ def identity_candidates(previous, watchlist, limit=12):
                 if candidate:
                     candidate.update(ticker=ticker, searchedName=name, checkedAt=utcnow())
                     out.append(candidate)
-                    existing.add((ticker, provider))
+                lookups.append({"ticker":ticker,"provider":provider,"checkedAt":utcnow(),
+                                "result":"candidate" if candidate else "no_unique_match"})
+                existing.add((ticker, provider))
             except (OSError, ValueError, KeyError, TypeError) as error:
                 errors[provider].append(type(error).__name__)
             time.sleep(0.2)
-    return out[:300], attempted, errors
+    return out[:300], lookups[:400], attempted, errors
 
 def build(root=ROOT, mode="auto", now=None):
     dest = root / "data/open-data.json"
@@ -350,9 +354,10 @@ def build(root=ROOT, mode="auto", now=None):
         except (OSError, ValueError, KeyError, TypeError, urllib.error.HTTPError) as error:
             status.update(status="error", error=type(error).__name__)
     candidates = previous.get("identityCandidates") or []
+    lookups = previous.get("identityLookups") or []
     if mode == "weekly":
         directory = json.loads((root/"watchlist.json").read_text(encoding="utf8"))
-        candidates, attempted, errors = identity_candidates(previous, directory)
+        candidates, lookups, attempted, errors = identity_candidates(previous, directory)
         for provider in ("gleif", "brreg"):
             status = statuses[provider]
             status["lastAttemptAt"] = utcnow()
@@ -368,6 +373,7 @@ def build(root=ROOT, mode="auto", now=None):
               "series":sorted(stored.values(),key=lambda x:x["key"]),
               "sources":sorted(statuses.values(),key=lambda x:x["id"]),
               "identityCandidates":candidates,
+              "identityLookups":lookups,
               "identityNote":"Unverified name-search suggestions, never automatically linked to issuers.",
               "publicShorts":shorts}
     dest.parent.mkdir(parents=True, exist_ok=True)
