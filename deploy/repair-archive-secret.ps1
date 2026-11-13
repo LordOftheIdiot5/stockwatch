@@ -19,27 +19,28 @@ $token = -join ($bytes | ForEach-Object { $_.ToString('x2') })
 # PowerShell pipelines may add a UTF-8 BOM. Use raw ASCII stdin instead.
 # Do not include the token in the command arguments, console output or Git.
 $tokenPath = Join-Path $env:TEMP ('stockwatch-ingest-' + [guid]::NewGuid().ToString('N') + '.txt')
-$urlPath = Join-Path $env:TEMP ('stockwatch-url-' + [guid]::NewGuid().ToString('N') + '.txt')
+$envPath = Join-Path $env:TEMP ('stockwatch-github-' + [guid]::NewGuid().ToString('N') + '.env')
 try {
   [IO.File]::WriteAllText($tokenPath, $token, [Text.Encoding]::ASCII)
-  [IO.File]::WriteAllText($urlPath, $ArchiveUrl, [Text.Encoding]::ASCII)
+  # GitHub CLI loads both secrets from a BOM-free ASCII dotenv file. This
+  # avoids a separate PowerShell/native-command stdin conversion for GitHub.
+  $dotenv = "STOCKWATCH_ARCHIVE_TOKEN=$token" + "`n" + "STOCKWATCH_ARCHIVE_URL=$ArchiveUrl" + "`n"
+  [IO.File]::WriteAllText($envPath, $dotenv, [Text.Encoding]::ASCII)
   $worker = Start-Process -FilePath 'cmd.exe' -ArgumentList '/d /c npx wrangler secret put NEWS_INGEST_TOKEN --config wrangler.toml' -RedirectStandardInput $tokenPath -NoNewWindow -Wait -PassThru
   if ($worker.ExitCode -ne 0) { throw 'Cloudflare secret rotation failed.' }
-  $github = Start-Process -FilePath 'cmd.exe' -ArgumentList "/d /c gh secret set STOCKWATCH_ARCHIVE_TOKEN --repo $Repository" -RedirectStandardInput $tokenPath -NoNewWindow -Wait -PassThru
-  if ($github.ExitCode -ne 0) { throw 'GitHub token secret rotation failed.' }
-  $url = Start-Process -FilePath 'cmd.exe' -ArgumentList "/d /c gh secret set STOCKWATCH_ARCHIVE_URL --repo $Repository" -RedirectStandardInput $urlPath -NoNewWindow -Wait -PassThru
-  if ($url.ExitCode -ne 0) { throw 'GitHub URL secret update failed.' }
+  & gh secret set --repo $Repository --env-file $envPath
+  if ($LASTEXITCODE -ne 0) { throw 'GitHub token/URL secret rotation failed.' }
   # Prove the Worker accepts this exact token without writing any article.
   # Wrangler can otherwise report success after receiving empty stdin.
   $probe = Invoke-RestMethod -Uri $ArchiveUrl -Method Post -ContentType 'application/json' -Body '{"items":[]}' -Headers @{ Authorization = "Bearer $token" }
   if ($probe.accepted -ne 0) { throw 'Worker ingestion authentication probe did not pass.' }
 } finally {
   if (Test-Path $tokenPath) { Remove-Item -LiteralPath $tokenPath -Force }
-  if (Test-Path $urlPath) { Remove-Item -LiteralPath $urlPath -Force }
+  if (Test-Path $envPath) { Remove-Item -LiteralPath $envPath -Force }
   $token = $null
   [Array]::Clear($bytes, 0, $bytes.Length)
 }
 $health = Invoke-RestMethod -Uri $ArchiveUrl.Replace('/api/news/ingest', '/api/health') -Method Get
 if ($health.status -ne 'ok') { throw 'Worker D1 health check did not pass.' }
 Write-Host 'Cloudflare/GitHub secrets rotated with byte-exact ASCII input. Database is healthy.'
-Write-Host 'Next: gh workflow run scan.yml --repo LordOftheIdiot5/stockwatch --ref main'
+Write-Host 'Next: gh workflow run archive-d1-check.yml --repo LordOftheIdiot5/stockwatch --ref main'
