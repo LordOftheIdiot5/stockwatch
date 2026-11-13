@@ -143,6 +143,23 @@ def entsoe_probe(token):
             "license":"Pending verification of applicable ENTSO-E data item and primary-owner rights",
             "sourceUrl":"https://transparency.entsoe.eu/"}
 
+def update_catalog(root, count):
+    path=root/"data/dataset-catalog.json"
+    try:
+        catalog=json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError,OSError):
+        catalog={"datasets":[]}
+    entries=catalog.setdefault("datasets",[])
+    if not isinstance(entries,list):
+        raise ValueError("invalid_dataset_catalog")
+    record={"name":"OpenFIGI instrument identity candidates",
+            "path":"data/registered-source-status.json","records":count,
+            "license":"OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"}
+    catalog["datasets"]=[x for x in entries if x.get("path")!=record["path"]]+[record]
+    catalog["generated"]=current_time()
+    path.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+
 def build(root=ROOT):
     output=root/"data/registered-source-status.json"
     directory=json.loads((root/"data/issuer-identities.json").read_text(encoding="utf-8"))
@@ -179,6 +196,7 @@ def build(root=ROOT):
             "sources":entries,"figiCandidates":records[:150]}
     output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    update_catalog(root,len(records))
     print("Registered sources: "+", ".join(k+"="+v["status"] for k,v in entries.items()))
     return result
 
