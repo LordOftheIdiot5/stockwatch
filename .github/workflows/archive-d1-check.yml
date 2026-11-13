@@ -1,0 +1,20 @@
+name: Verify D1 news archive authentication
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Check D1 Worker authentication (no data written)
+        env:
+          STOCKWATCH_ARCHIVE_URL: ${{ secrets.STOCKWATCH_ARCHIVE_URL }}
+          STOCKWATCH_ARCHIVE_TOKEN: ${{ secrets.STOCKWATCH_ARCHIVE_TOKEN }}
+        run: python scripts/verify_archive_auth.py
