@@ -18,9 +18,12 @@ npx wrangler deploy --config wrangler.toml
 if ($LASTEXITCODE -ne 0) { throw 'Worker deployment failed.' }
 if (-not $ArchiveUrl) { $ArchiveUrl = Read-Host 'Paste the deployed HTTPS Worker URL ending in /api/news/ingest' }
 if ($ArchiveUrl -notmatch '^https://[^\s]+/api/news/ingest$') { throw 'Invalid HTTPS ingestion URL.' }
+# Windows PowerShell 5.1 and PowerShell 7 compatible cryptographic token.
+# Do not print or save this secret in the repository.
 $bytes = New-Object byte[] 32
-[System.Security.Cryptography.RandomNumberGenerator]::Fill($bytes)
-$token = [Convert]::ToHexString($bytes)
+$rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+try { $rng.GetBytes($bytes) } finally { $rng.Dispose() }
+$token = -join ($bytes | ForEach-Object { $_.ToString('x2') })
 try {
   $token | npx wrangler secret put NEWS_INGEST_TOKEN --config wrangler.toml
   if ($LASTEXITCODE -ne 0) { throw 'Cloudflare secret setup failed.' }
