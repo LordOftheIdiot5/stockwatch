@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T21:41:21Z",
+  "generated": "2026-11-13T22:02:39Z",
   "items": [
     {
       "id": "FRO.OL:f9e8038e5ea658d3d406d967e5247fccfb1813427bd21be8da78b255c2be827d",
@@ -1411,6 +1411,25 @@
       "priority": "normal"
     },
     {
+      "id": "MRL.MC:88d1ce2ec3b2368248c3fabeac1df55b89ec2c05cc1a7d61c21b91aa27e65745",
+      "ticker": "MRL.MC",
+      "name": "Merlin Properties",
+      "sector": "Property",
+      "type": "news",
+      "headline": "Acciones de Merlin: cuentas, dividendo y cómo comprarlas",
+      "english": null,
+      "publisher": "Rankia",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdDd4V1hNc1dBeXVGZmg0dlJXdkY4dWFoVXVpWTVwZHFYdHV3QzJkNTZodTktRzFoVE94OGp1WkpkS2hUUEd1d0V1ekk4UDNHUE5QRzVoY1VWVXV4bkpEc1J5N0tqNmpLbVc0Y3BZNkthdFhXT18ydzU1ZTNjXzZ6NmlWX0ZiX3FjRVNHaXNlUVlBeHpwTDdKd3BBR1JIcEN0dzRXN3ZQTGlpSHc?oc=5",
+      "published": "2026-11-13T11:41:09Z",
+      "lang": "es",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "BONHR.OL:9ccfbb29827950aa329811730caa258778bcdb4328e167b069e601dccc0d8ce2",
       "ticker": "BONHR.OL",
       "name": "Bonheur",
@@ -1885,33 +1904,14 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "AIR.PA:a0b0d3edea1383921d76f0566d11cbd440aa4b423a77f254f161ba76cc5b5196",
-      "ticker": "AIR.PA",
-      "name": "Airbus",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Magnifica Air places order for 10 ACJ220-300 aircraft",
-      "english": null,
-      "publisher": "Business Jet Interiors",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRjBETDNOUXg2UmxTc05MZ2FncUFudnlkRm5vbkFOemdkTHFMSTUyU0Q3UnNuNExKLVNjLTYtSXdXZFdBU1RrNFlpQ2NkTUtQb196N1EwazQzZE9Dd3VBbHZsNk1odGN4QjFVYWoyN3ZWUkhBVUFjdTlPWGtGYUFKRVdvM29sOHVXbmExdUlINGhxbUQ5NEhhanhaOVF2QTVRWW5oQ0RfS216QXhONDhydkp2bDAyRW9wZnBabzNTUEhwU3hwM3E5cmNSaw?oc=5",
-      "published": "2026-11-13T10:12:23Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "Contracts",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 351,
+  "totalStored": 353,
   "limit": 100,
   "quality": {
-    "total": 351,
-    "relevant": 265,
-    "review": 77,
+    "total": 353,
+    "relevant": 266,
+    "review": 78,
     "duplicates": 12,
     "issuerLinked": 0,
     "categories": {
@@ -1922,7 +1922,7 @@
       "Contracts": 16,
       "Capital & ownership": 0,
       "Management": 14,
-      "General": 224
+      "General": 226
     }
   }
 }
