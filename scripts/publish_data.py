@@ -44,13 +44,13 @@ def merge_catalog(remote, generated, mode):
     remote = read_catalog(remote)
     generated = read_catalog(generated)
     managed = (lambda path: path in OFFICIAL) if mode == "official" else (lambda path: path not in OFFICIAL)
-    items = [entry for entry in remote["datasets"] if
-             isinstance(entry, dict) and not managed(entry.get("path"))]
     incoming = [entry for entry in generated["datasets"] if
                 isinstance(entry, dict) and managed(entry.get("path"))]
     index = {entry.get("path") for entry in incoming}
-    # Any unrelated record on remote is retained; de-duplicate by data path.
-    items = [entry for entry in items if entry.get("path") not in index]
+    # Replace only records this run explicitly updated; retain all unrelated
+    # remote rows, including scanner rows omitted from a partial snapshot.
+    items = [entry for entry in remote["datasets"] if
+             isinstance(entry, dict) and entry.get("path") not in index]
     remote["datasets"] = items + incoming
     remote["generated"] = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     return (json.dumps(remote, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
