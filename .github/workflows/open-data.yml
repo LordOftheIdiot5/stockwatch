@@ -1,0 +1,71 @@
+name: Refresh official open data
+on:
+  schedule:
+    - cron: "40 4 * * 1-5"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - feature/stockwatch-open-official-data-20261113
+    paths:
+      - scripts/open_data.py
+      - scripts/registered_sources.py
+      - tests/test_open_data.py
+      - tests/test_registered_sources.py
+      - .github/workflows/open-data.yml
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: scan
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Test official source integration
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Validate registered connector contracts
+        run: python -m unittest discover -s tests -p 'test_registered_sources.py'
+      - name: Fetch official no-key and registered-source data
+        if: github.ref == 'refs/heads/main'
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+          STOCKWATCH_ENTSOE_TOKEN: ${{ secrets.STOCKWATCH_ENTSOE_TOKEN }}
+        run: |
+          python scripts/open_data.py --mode auto
+          python scripts/registered_sources.py
+      - name: Commit official-source datasets
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "stockwatch"
+          git config user.email "actions@github.com"
+          git add data/open-data.json data/registered-source-status.json
+          git diff --staged --quiet || git commit -m "open-data: official source refresh"
+          git push
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: refresh
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v5
