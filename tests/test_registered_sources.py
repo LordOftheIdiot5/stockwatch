@@ -63,6 +63,23 @@ class RegisteredSourceTests(unittest.TestCase):
             self.assertFalse(x["publicDisplay"])
             self.assertNotIn("34.21",json.dumps(x))
 
+    def test_entsoe_http_status_is_saved_without_token_or_secret_url(self):
+        import urllib.error
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/"data").mkdir()
+            (root/"data/issuer-identities.json").write_text('{"entities":[]}')
+            exposed_url="https://web-api.tp.entsoe.eu/api?securityToken=PRIVATE-TEST-TOKEN"
+            http=urllib.error.HTTPError(exposed_url,403,"Forbidden",None,None)
+            with mock.patch.dict(os.environ,{"STOCKWATCH_ENTSOE_TOKEN":"PRIVATE-TEST-TOKEN"},clear=True), \
+                 mock.patch.object(m,"entsoe_probe",side_effect=http):
+                result=m.build(root)
+            entsoe=result["sources"]["entsoe"]
+            self.assertEqual(entsoe["httpStatus"],403)
+            self.assertEqual(entsoe["diagnostic"],"token_not_authorized")
+            serialized=json.dumps(result)
+            self.assertNotIn("PRIVATE-TEST-TOKEN",serialized)
+            self.assertNotIn("securityToken",serialized)
+
     def test_missing_keys_are_reported_without_exposing_env(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/"data").mkdir()
