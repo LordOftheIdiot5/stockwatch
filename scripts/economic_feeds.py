@@ -1,5 +1,5 @@
 """Official FRED/EIA series importer; credentials from GitHub Actions only."""
-import json,math,os,re,urllib.parse,urllib.request,urllib.error
+import json,math,os,re,urllib.parse,urllib.request,urllib.error,time
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -8,11 +8,20 @@ EIA={'RBRTE':('Brent crude spot price','USD/barrel'),'RWTC':('WTI Cushing crude 
 UA='StockwatchResearch/1.0 (+https://stocks.nordl.dev)'
 def timestamp():
     return datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')
-def request(url):
-    with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':UA,'Accept':'application/json'}),timeout=22) as response:
-        raw=response.read(2000001)
-        if len(raw)>2000000: raise ValueError('too_many_bytes')
-    return json.loads(raw)
+def request(url,timeout=22,attempts=1):
+    """Retry only temporary transport/API failures; never disclose token URLs."""
+    req=urllib.request.Request(url,headers={'User-Agent':UA,'Accept':'application/json'})
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(req,timeout=timeout) as response:
+                raw=response.read(2000001)
+                if len(raw)>2000000: raise ValueError('too_many_bytes')
+            return json.loads(raw)
+        except urllib.error.HTTPError as err:
+            if attempt==attempts-1 or err.code not in (429,500,502,503,504):raise
+        except (TimeoutError,urllib.error.URLError):
+            if attempt==attempts-1:raise
+        time.sleep(2*(attempt+1))
 def number(value):
     try:
         n=float(value)
@@ -35,7 +44,7 @@ def fred(key,series_id):
         'FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights')
 def eia(key,series_id):
     params=urllib.parse.urlencode([('api_key',key),('frequency','daily'),('data[0]','value'),('facets[series][]',series_id),('sort[0][column]','period'),('sort[0][direction]','desc'),('length','370')])
-    data=request('https://api.eia.gov/v2/petroleum/pri/spt/data/?'+params)
+    data=request('https://api.eia.gov/v2/petroleum/pri/spt/data/?'+params,timeout=60,attempts=2)
     raw=data.get('response',{}).get('data')
     if not isinstance(raw,list):raise ValueError('invalid_eia_response')
     rows=history([r for r in raw if r.get('series')==series_id],'period','value')
