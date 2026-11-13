@@ -2,12 +2,12 @@
 # Git history, PowerShell command history, or a permanent local file.
 param(
   [Parameter(Mandatory=$true)]
-  [ValidateSet('openfigi','entsoe')]
+  [ValidateSet('openfigi','entsoe','fred','eia')]
   [string]$Provider,
   [string]$Repository='LordOftheIdiot5/stockwatch'
 )
 $ErrorActionPreference='Stop'
-$names=@{openfigi='STOCKWATCH_OPENFIGI_KEY';entsoe='STOCKWATCH_ENTSOE_TOKEN'}
+$names=@{openfigi='STOCKWATCH_OPENFIGI_KEY';entsoe='STOCKWATCH_ENTSOE_TOKEN';fred='STOCKWATCH_FRED_API_KEY';eia='STOCKWATCH_EIA_API_KEY'}
 $name=$names[$Provider]
 if(-not (Get-Command gh -ErrorAction SilentlyContinue)){throw 'GitHub CLI is not installed.'}
 $secure=Read-Host "Paste the $Provider API key or token (hidden input)" -AsSecureString
