@@ -1,11 +1,2030 @@
 {
-  "generated": null,
-  "mode": "pending",
-  "notice": "Official statistics only, not live security prices or freight rates. First importer run pending.",
-  "series": [],
-  "sources": [],
-  "identityCandidates": [],
-  "identityLookups": [],
-  "identityNote": "Unverified name-search suggestions, never auto-linked to issuers",
-  "publicShorts": null
+  "generated": "2026-11-13T02:18:46Z",
+  "mode": "weekly",
+  "notice": "Official statistical series, not tradable live security prices or freight quotations.",
+  "series": [
+    {
+      "key": "fx:EUR/NOK",
+      "provider": "norges_bank",
+      "label": "EUR/NOK reference rate",
+      "country": "NO",
+      "unit": "NOK per EUR",
+      "frequency": "business_day",
+      "period": "2026-11-12",
+      "value": 10.563,
+      "history": [
+        {
+          "date": "2026-07-16",
+          "value": 11.064
+        },
+        {
+          "date": "2026-07-17",
+          "value": 11.039
+        },
+        {
+          "date": "2026-07-20",
+          "value": 11.042
+        },
+        {
+          "date": "2026-07-21",
+          "value": 10.987
+        },
+        {
+          "date": "2026-07-22",
+          "value": 10.947
+        },
+        {
+          "date": "2026-07-23",
+          "value": 10.9525
+        },
+        {
+          "date": "2026-07-24",
+          "value": 10.888
+        },
+        {
+          "date": "2026-07-27",
+          "value": 10.9845
+        },
+        {
+          "date": "2026-07-28",
+          "value": 11.0055
+        },
+        {
+          "date": "2026-07-29",
+          "value": 10.998
+        },
+        {
+          "date": "2026-07-30",
+          "value": 10.9758
+        },
+        {
+          "date": "2026-07-31",
+          "value": 10.942
+        },
+        {
+          "date": "2026-08-03",
+          "value": 10.9965
+        },
+        {
+          "date": "2026-08-04",
+          "value": 10.9925
+        },
+        {
+          "date": "2026-08-05",
+          "value": 10.9835
+        },
+        {
+          "date": "2026-08-06",
+          "value": 11.0003
+        },
+        {
+          "date": "2026-08-07",
+          "value": 10.975
+        },
+        {
+          "date": "2026-08-10",
+          "value": 10.986
+        },
+        {
+          "date": "2026-08-11",
+          "value": 10.9705
+        },
+        {
+          "date": "2026-08-12",
+          "value": 10.936
+        },
+        {
+          "date": "2026-08-13",
+          "value": 10.986
+        },
+        {
+          "date": "2026-08-14",
+          "value": 10.9325
+        },
+        {
+          "date": "2026-08-17",
+          "value": 10.9235
+        },
+        {
+          "date": "2026-08-18",
+          "value": 10.9025
+        },
+        {
+          "date": "2026-08-19",
+          "value": 10.9105
+        },
+        {
+          "date": "2026-08-20",
+          "value": 10.9025
+        },
+        {
+          "date": "2026-08-21",
+          "value": 10.8675
+        },
+        {
+          "date": "2026-08-24",
+          "value": 10.8645
+        },
+        {
+          "date": "2026-08-25",
+          "value": 10.892
+        },
+        {
+          "date": "2026-08-26",
+          "value": 10.8845
+        },
+        {
+          "date": "2026-08-27",
+          "value": 10.877
+        },
+        {
+          "date": "2026-08-28",
+          "value": 10.8595
+        },
+        {
+          "date": "2026-08-31",
+          "value": 10.832
+        },
+        {
+          "date": "2026-09-01",
+          "value": 10.8185
+        },
+        {
+          "date": "2026-09-02",
+          "value": 10.809
+        },
+        {
+          "date": "2026-09-03",
+          "value": 10.8063
+        },
+        {
+          "date": "2026-09-04",
+          "value": 10.8035
+        },
+        {
+          "date": "2026-09-07",
+          "value": 10.774
+        },
+        {
+          "date": "2026-09-08",
+          "value": 10.745
+        },
+        {
+          "date": "2026-09-09",
+          "value": 10.6975
+        },
+        {
+          "date": "2026-09-10",
+          "value": 10.7635
+        },
+        {
+          "date": "2026-09-11",
+          "value": 10.7805
+        },
+        {
+          "date": "2026-09-14",
+          "value": 10.767
+        },
+        {
+          "date": "2026-09-15",
+          "value": 10.785
+        },
+        {
+          "date": "2026-09-16",
+          "value": 10.7885
+        },
+        {
+          "date": "2026-09-17",
+          "value": 10.825
+        },
+        {
+          "date": "2026-09-18",
+          "value": 10.8095
+        },
+        {
+          "date": "2026-09-21",
+          "value": 10.813
+        },
+        {
+          "date": "2026-09-22",
+          "value": 10.801
+        },
+        {
+          "date": "2026-09-23",
+          "value": 10.799
+        },
+        {
+          "date": "2026-09-24",
+          "value": 10.7895
+        },
+        {
+          "date": "2026-09-25",
+          "value": 10.84
+        },
+        {
+          "date": "2026-09-28",
+          "value": 10.817
+        },
+        {
+          "date": "2026-09-29",
+          "value": 10.8735
+        },
+        {
+          "date": "2026-09-30",
+          "value": 10.9015
+        },
+        {
+          "date": "2026-10-01",
+          "value": 10.875
+        },
+        {
+          "date": "2026-10-02",
+          "value": 10.8315
+        },
+        {
+          "date": "2026-10-05",
+          "value": 10.7575
+        },
+        {
+          "date": "2026-10-06",
+          "value": 10.778
+        },
+        {
+          "date": "2026-10-07",
+          "value": 10.712
+        },
+        {
+          "date": "2026-10-08",
+          "value": 10.717
+        },
+        {
+          "date": "2026-10-09",
+          "value": 10.7155
+        },
+        {
+          "date": "2026-10-12",
+          "value": 10.6955
+        },
+        {
+          "date": "2026-10-13",
+          "value": 10.6685
+        },
+        {
+          "date": "2026-10-14",
+          "value": 10.6035
+        },
+        {
+          "date": "2026-10-15",
+          "value": 10.652
+        },
+        {
+          "date": "2026-10-16",
+          "value": 10.624
+        },
+        {
+          "date": "2026-10-19",
+          "value": 10.5555
+        },
+        {
+          "date": "2026-10-20",
+          "value": 10.5245
+        },
+        {
+          "date": "2026-10-21",
+          "value": 10.512
+        },
+        {
+          "date": "2026-10-22",
+          "value": 10.488
+        },
+        {
+          "date": "2026-10-23",
+          "value": 10.4665
+        },
+        {
+          "date": "2026-10-26",
+          "value": 10.4545
+        },
+        {
+          "date": "2026-10-27",
+          "value": 10.3885
+        },
+        {
+          "date": "2026-10-28",
+          "value": 10.3475
+        },
+        {
+          "date": "2026-10-29",
+          "value": 10.3315
+        },
+        {
+          "date": "2026-10-30",
+          "value": 10.312
+        },
+        {
+          "date": "2026-11-02",
+          "value": 10.3775
+        },
+        {
+          "date": "2026-11-03",
+          "value": 10.3185
+        },
+        {
+          "date": "2026-11-04",
+          "value": 10.397
+        },
+        {
+          "date": "2026-11-05",
+          "value": 10.4365
+        },
+        {
+          "date": "2026-11-06",
+          "value": 10.526
+        },
+        {
+          "date": "2026-11-09",
+          "value": 10.5325
+        },
+        {
+          "date": "2026-11-10",
+          "value": 10.6155
+        },
+        {
+          "date": "2026-11-11",
+          "value": 10.6145
+        },
+        {
+          "date": "2026-11-12",
+          "value": 10.563
+        }
+      ],
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.EUR.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-16",
+      "observedAt": "2026-11-13T02:17:59Z",
+      "license": "NLOD 2.0"
+    },
+    {
+      "key": "fx:EUR/USD",
+      "provider": "ecb",
+      "label": "EUR/USD reference rate",
+      "country": "EU",
+      "unit": "USD per EUR",
+      "frequency": "business_day",
+      "period": "2026-11-12",
+      "value": 1.1081,
+      "history": [
+        {
+          "date": "2026-07-10",
+          "value": 1.143
+        },
+        {
+          "date": "2026-07-13",
+          "value": 1.1424
+        },
+        {
+          "date": "2026-07-14",
+          "value": 1.1405
+        },
+        {
+          "date": "2026-07-15",
+          "value": 1.1406
+        },
+        {
+          "date": "2026-07-16",
+          "value": 1.1467
+        },
+        {
+          "date": "2026-07-17",
+          "value": 1.1435
+        },
+        {
+          "date": "2026-07-20",
+          "value": 1.1426
+        },
+        {
+          "date": "2026-07-21",
+          "value": 1.1418
+        },
+        {
+          "date": "2026-07-22",
+          "value": 1.1408
+        },
+        {
+          "date": "2026-07-23",
+          "value": 1.1392
+        },
+        {
+          "date": "2026-07-24",
+          "value": 1.1377
+        },
+        {
+          "date": "2026-07-27",
+          "value": 1.1389
+        },
+        {
+          "date": "2026-07-28",
+          "value": 1.1367
+        },
+        {
+          "date": "2026-07-29",
+          "value": 1.138
+        },
+        {
+          "date": "2026-07-30",
+          "value": 1.1476
+        },
+        {
+          "date": "2026-07-31",
+          "value": 1.1485
+        },
+        {
+          "date": "2026-08-03",
+          "value": 1.1535
+        },
+        {
+          "date": "2026-08-04",
+          "value": 1.1515
+        },
+        {
+          "date": "2026-08-05",
+          "value": 1.1554
+        },
+        {
+          "date": "2026-08-06",
+          "value": 1.1542
+        },
+        {
+          "date": "2026-08-07",
+          "value": 1.1535
+        },
+        {
+          "date": "2026-08-10",
+          "value": 1.1555
+        },
+        {
+          "date": "2026-08-11",
+          "value": 1.154
+        },
+        {
+          "date": "2026-08-12",
+          "value": 1.1545
+        },
+        {
+          "date": "2026-08-13",
+          "value": 1.1534
+        },
+        {
+          "date": "2026-08-14",
+          "value": 1.1567
+        },
+        {
+          "date": "2026-08-17",
+          "value": 1.1593
+        },
+        {
+          "date": "2026-08-18",
+          "value": 1.1576
+        },
+        {
+          "date": "2026-08-19",
+          "value": 1.1605
+        },
+        {
+          "date": "2026-08-20",
+          "value": 1.1681
+        },
+        {
+          "date": "2026-08-21",
+          "value": 1.1699
+        },
+        {
+          "date": "2026-08-24",
+          "value": 1.1664
+        },
+        {
+          "date": "2026-08-25",
+          "value": 1.1662
+        },
+        {
+          "date": "2026-08-26",
+          "value": 1.1669
+        },
+        {
+          "date": "2026-08-27",
+          "value": 1.1645
+        },
+        {
+          "date": "2026-08-28",
+          "value": 1.1643
+        },
+        {
+          "date": "2026-08-31",
+          "value": 1.1596
+        },
+        {
+          "date": "2026-09-01",
+          "value": 1.159
+        },
+        {
+          "date": "2026-09-02",
+          "value": 1.1578
+        },
+        {
+          "date": "2026-09-03",
+          "value": 1.1615
+        },
+        {
+          "date": "2026-09-04",
+          "value": 1.1622
+        },
+        {
+          "date": "2026-09-07",
+          "value": 1.1622
+        },
+        {
+          "date": "2026-09-08",
+          "value": 1.1614
+        },
+        {
+          "date": "2026-09-09",
+          "value": 1.1652
+        },
+        {
+          "date": "2026-09-10",
+          "value": 1.1616
+        },
+        {
+          "date": "2026-09-11",
+          "value": 1.1592
+        },
+        {
+          "date": "2026-09-14",
+          "value": 1.1551
+        },
+        {
+          "date": "2026-09-15",
+          "value": 1.1539
+        },
+        {
+          "date": "2026-09-16",
+          "value": 1.1537
+        },
+        {
+          "date": "2026-09-17",
+          "value": 1.1481
+        },
+        {
+          "date": "2026-09-18",
+          "value": 1.146
+        },
+        {
+          "date": "2026-09-21",
+          "value": 1.149
+        },
+        {
+          "date": "2026-09-22",
+          "value": 1.1463
+        },
+        {
+          "date": "2026-09-23",
+          "value": 1.1411
+        },
+        {
+          "date": "2026-09-24",
+          "value": 1.1367
+        },
+        {
+          "date": "2026-09-25",
+          "value": 1.1403
+        },
+        {
+          "date": "2026-09-28",
+          "value": 1.1378
+        },
+        {
+          "date": "2026-09-29",
+          "value": 1.1355
+        },
+        {
+          "date": "2026-09-30",
+          "value": 1.1355
+        },
+        {
+          "date": "2026-10-01",
+          "value": 1.1298
+        },
+        {
+          "date": "2026-10-02",
+          "value": 1.1225
+        },
+        {
+          "date": "2026-10-05",
+          "value": 1.1204
+        },
+        {
+          "date": "2026-10-06",
+          "value": 1.1269
+        },
+        {
+          "date": "2026-10-07",
+          "value": 1.1177
+        },
+        {
+          "date": "2026-10-08",
+          "value": 1.1186
+        },
+        {
+          "date": "2026-10-09",
+          "value": 1.1206
+        },
+        {
+          "date": "2026-10-12",
+          "value": 1.1181
+        },
+        {
+          "date": "2026-10-13",
+          "value": 1.1188
+        },
+        {
+          "date": "2026-10-14",
+          "value": 1.1195
+        },
+        {
+          "date": "2026-10-15",
+          "value": 1.1208
+        },
+        {
+          "date": "2026-10-16",
+          "value": 1.1253
+        },
+        {
+          "date": "2026-10-19",
+          "value": 1.1225
+        },
+        {
+          "date": "2026-10-20",
+          "value": 1.1215
+        },
+        {
+          "date": "2026-10-21",
+          "value": 1.1234
+        },
+        {
+          "date": "2026-10-22",
+          "value": 1.1205
+        },
+        {
+          "date": "2026-10-23",
+          "value": 1.1193
+        },
+        {
+          "date": "2026-10-26",
+          "value": 1.1188
+        },
+        {
+          "date": "2026-10-27",
+          "value": 1.115
+        },
+        {
+          "date": "2026-10-28",
+          "value": 1.1133
+        },
+        {
+          "date": "2026-10-29",
+          "value": 1.113
+        },
+        {
+          "date": "2026-10-30",
+          "value": 1.1172
+        },
+        {
+          "date": "2026-11-02",
+          "value": 1.1216
+        },
+        {
+          "date": "2026-11-03",
+          "value": 1.1179
+        },
+        {
+          "date": "2026-11-04",
+          "value": 1.1267
+        },
+        {
+          "date": "2026-11-05",
+          "value": 1.1224
+        },
+        {
+          "date": "2026-11-06",
+          "value": 1.1165
+        },
+        {
+          "date": "2026-11-09",
+          "value": 1.1193
+        },
+        {
+          "date": "2026-11-10",
+          "value": 1.1214
+        },
+        {
+          "date": "2026-11-11",
+          "value": 1.1127
+        },
+        {
+          "date": "2026-11-12",
+          "value": 1.1081
+        }
+      ],
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata&lastNObservations=90",
+      "observedAt": "2026-11-13T02:18:01Z",
+      "license": "ECB statistics free reuse, attribution; third-party exceptions"
+    },
+    {
+      "key": "fx:USD/NOK",
+      "provider": "norges_bank",
+      "label": "USD/NOK reference rate",
+      "country": "NO",
+      "unit": "NOK per USD",
+      "frequency": "business_day",
+      "period": "2026-11-12",
+      "value": 9.5325,
+      "history": [
+        {
+          "date": "2026-07-16",
+          "value": 9.6486
+        },
+        {
+          "date": "2026-07-17",
+          "value": 9.6537
+        },
+        {
+          "date": "2026-07-20",
+          "value": 9.6639
+        },
+        {
+          "date": "2026-07-21",
+          "value": 9.6225
+        },
+        {
+          "date": "2026-07-22",
+          "value": 9.5959
+        },
+        {
+          "date": "2026-07-23",
+          "value": 9.6142
+        },
+        {
+          "date": "2026-07-24",
+          "value": 9.5702
+        },
+        {
+          "date": "2026-07-27",
+          "value": 9.6448
+        },
+        {
+          "date": "2026-07-28",
+          "value": 9.682
+        },
+        {
+          "date": "2026-07-29",
+          "value": 9.6643
+        },
+        {
+          "date": "2026-07-30",
+          "value": 9.5641
+        },
+        {
+          "date": "2026-07-31",
+          "value": 9.5272
+        },
+        {
+          "date": "2026-08-03",
+          "value": 9.5332
+        },
+        {
+          "date": "2026-08-04",
+          "value": 9.5462
+        },
+        {
+          "date": "2026-08-05",
+          "value": 9.5062
+        },
+        {
+          "date": "2026-08-06",
+          "value": 9.5307
+        },
+        {
+          "date": "2026-08-07",
+          "value": 9.5145
+        },
+        {
+          "date": "2026-08-10",
+          "value": 9.5076
+        },
+        {
+          "date": "2026-08-11",
+          "value": 9.5065
+        },
+        {
+          "date": "2026-08-12",
+          "value": 9.4725
+        },
+        {
+          "date": "2026-08-13",
+          "value": 9.5249
+        },
+        {
+          "date": "2026-08-14",
+          "value": 9.4515
+        },
+        {
+          "date": "2026-08-17",
+          "value": 9.4225
+        },
+        {
+          "date": "2026-08-18",
+          "value": 9.4182
+        },
+        {
+          "date": "2026-08-19",
+          "value": 9.4016
+        },
+        {
+          "date": "2026-08-20",
+          "value": 9.3335
+        },
+        {
+          "date": "2026-08-21",
+          "value": 9.2893
+        },
+        {
+          "date": "2026-08-24",
+          "value": 9.3146
+        },
+        {
+          "date": "2026-08-25",
+          "value": 9.3397
+        },
+        {
+          "date": "2026-08-26",
+          "value": 9.3277
+        },
+        {
+          "date": "2026-08-27",
+          "value": 9.3405
+        },
+        {
+          "date": "2026-08-28",
+          "value": 9.3271
+        },
+        {
+          "date": "2026-08-31",
+          "value": 9.3412
+        },
+        {
+          "date": "2026-09-01",
+          "value": 9.3343
+        },
+        {
+          "date": "2026-09-02",
+          "value": 9.3358
+        },
+        {
+          "date": "2026-09-03",
+          "value": 9.3037
+        },
+        {
+          "date": "2026-09-04",
+          "value": 9.2957
+        },
+        {
+          "date": "2026-09-07",
+          "value": 9.2703
+        },
+        {
+          "date": "2026-09-08",
+          "value": 9.2518
+        },
+        {
+          "date": "2026-09-09",
+          "value": 9.1808
+        },
+        {
+          "date": "2026-09-10",
+          "value": 9.2661
+        },
+        {
+          "date": "2026-09-11",
+          "value": 9.2999
+        },
+        {
+          "date": "2026-09-14",
+          "value": 9.3213
+        },
+        {
+          "date": "2026-09-15",
+          "value": 9.3466
+        },
+        {
+          "date": "2026-09-16",
+          "value": 9.3512
+        },
+        {
+          "date": "2026-09-17",
+          "value": 9.4286
+        },
+        {
+          "date": "2026-09-18",
+          "value": 9.4324
+        },
+        {
+          "date": "2026-09-21",
+          "value": 9.4108
+        },
+        {
+          "date": "2026-09-22",
+          "value": 9.4225
+        },
+        {
+          "date": "2026-09-23",
+          "value": 9.4637
+        },
+        {
+          "date": "2026-09-24",
+          "value": 9.492
+        },
+        {
+          "date": "2026-09-25",
+          "value": 9.5063
+        },
+        {
+          "date": "2026-09-28",
+          "value": 9.5069
+        },
+        {
+          "date": "2026-09-29",
+          "value": 9.576
+        },
+        {
+          "date": "2026-09-30",
+          "value": 9.6006
+        },
+        {
+          "date": "2026-10-01",
+          "value": 9.6256
+        },
+        {
+          "date": "2026-10-02",
+          "value": 9.6494
+        },
+        {
+          "date": "2026-10-05",
+          "value": 9.6015
+        },
+        {
+          "date": "2026-10-06",
+          "value": 9.5643
+        },
+        {
+          "date": "2026-10-07",
+          "value": 9.584
+        },
+        {
+          "date": "2026-10-08",
+          "value": 9.5807
+        },
+        {
+          "date": "2026-10-09",
+          "value": 9.5623
+        },
+        {
+          "date": "2026-10-12",
+          "value": 9.5658
+        },
+        {
+          "date": "2026-10-13",
+          "value": 9.5357
+        },
+        {
+          "date": "2026-10-14",
+          "value": 9.4716
+        },
+        {
+          "date": "2026-10-15",
+          "value": 9.5039
+        },
+        {
+          "date": "2026-10-16",
+          "value": 9.441
+        },
+        {
+          "date": "2026-10-19",
+          "value": 9.4036
+        },
+        {
+          "date": "2026-10-20",
+          "value": 9.3843
+        },
+        {
+          "date": "2026-10-21",
+          "value": 9.3573
+        },
+        {
+          "date": "2026-10-22",
+          "value": 9.3601
+        },
+        {
+          "date": "2026-10-23",
+          "value": 9.3509
+        },
+        {
+          "date": "2026-10-26",
+          "value": 9.3444
+        },
+        {
+          "date": "2026-10-27",
+          "value": 9.317
+        },
+        {
+          "date": "2026-10-28",
+          "value": 9.2944
+        },
+        {
+          "date": "2026-10-29",
+          "value": 9.2826
+        },
+        {
+          "date": "2026-10-30",
+          "value": 9.2302
+        },
+        {
+          "date": "2026-11-02",
+          "value": 9.2524
+        },
+        {
+          "date": "2026-11-03",
+          "value": 9.2303
+        },
+        {
+          "date": "2026-11-04",
+          "value": 9.2278
+        },
+        {
+          "date": "2026-11-05",
+          "value": 9.2984
+        },
+        {
+          "date": "2026-11-06",
+          "value": 9.4277
+        },
+        {
+          "date": "2026-11-09",
+          "value": 9.4099
+        },
+        {
+          "date": "2026-11-10",
+          "value": 9.4663
+        },
+        {
+          "date": "2026-11-11",
+          "value": 9.5394
+        },
+        {
+          "date": "2026-11-12",
+          "value": 9.5325
+        }
+      ],
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-16",
+      "observedAt": "2026-11-13T02:17:59Z",
+      "license": "NLOD 2.0"
+    },
+    {
+      "key": "hicp_yoy:DE",
+      "provider": "eurostat",
+      "label": "Harmonised consumer prices, annual rate",
+      "country": "DE",
+      "unit": "% year-on-year",
+      "frequency": "monthly",
+      "period": "2026-10-01",
+      "value": 2.8,
+      "history": [
+        {
+          "date": "2025-01-01",
+          "value": 2.8
+        },
+        {
+          "date": "2025-02-01",
+          "value": 2.6
+        },
+        {
+          "date": "2025-03-01",
+          "value": 2.3
+        },
+        {
+          "date": "2025-04-01",
+          "value": 2.2
+        },
+        {
+          "date": "2025-05-01",
+          "value": 2.1
+        },
+        {
+          "date": "2025-06-01",
+          "value": 2.0
+        },
+        {
+          "date": "2025-07-01",
+          "value": 1.9
+        },
+        {
+          "date": "2025-08-01",
+          "value": 2.0
+        },
+        {
+          "date": "2025-09-01",
+          "value": 2.3
+        },
+        {
+          "date": "2025-10-01",
+          "value": 2.3
+        },
+        {
+          "date": "2025-11-01",
+          "value": 2.5
+        },
+        {
+          "date": "2025-12-01",
+          "value": 2.0
+        },
+        {
+          "date": "2026-01-01",
+          "value": 2.1
+        },
+        {
+          "date": "2026-02-01",
+          "value": 2.0
+        },
+        {
+          "date": "2026-03-01",
+          "value": 2.8
+        },
+        {
+          "date": "2026-04-01",
+          "value": 2.9
+        },
+        {
+          "date": "2026-05-01",
+          "value": 2.7
+        },
+        {
+          "date": "2026-06-01",
+          "value": 2.4
+        },
+        {
+          "date": "2026-07-01",
+          "value": 2.8
+        },
+        {
+          "date": "2026-08-01",
+          "value": 2.9
+        },
+        {
+          "date": "2026-09-01",
+          "value": 3.3
+        },
+        {
+          "date": "2026-10-01",
+          "value": 2.8
+        }
+      ],
+      "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
+      "observedAt": "2026-11-13T02:18:25Z",
+      "license": "Eurostat reuse policy; dataset exceptions apply"
+    },
+    {
+      "key": "hicp_yoy:DK",
+      "provider": "eurostat",
+      "label": "Harmonised consumer prices, annual rate",
+      "country": "DK",
+      "unit": "% year-on-year",
+      "frequency": "monthly",
+      "period": "2026-09-01",
+      "value": 2.1,
+      "history": [
+        {
+          "date": "2025-01-01",
+          "value": 1.4
+        },
+        {
+          "date": "2025-02-01",
+          "value": 2.0
+        },
+        {
+          "date": "2025-03-01",
+          "value": 1.4
+        },
+        {
+          "date": "2025-04-01",
+          "value": 1.5
+        },
+        {
+          "date": "2025-05-01",
+          "value": 1.5
+        },
+        {
+          "date": "2025-06-01",
+          "value": 1.8
+        },
+        {
+          "date": "2025-07-01",
+          "value": 2.2
+        },
+        {
+          "date": "2025-08-01",
+          "value": 1.9
+        },
+        {
+          "date": "2025-09-01",
+          "value": 2.2
+        },
+        {
+          "date": "2025-10-01",
+          "value": 2.1
+        },
+        {
+          "date": "2025-11-01",
+          "value": 2.0
+        },
+        {
+          "date": "2025-12-01",
+          "value": 1.9
+        },
+        {
+          "date": "2026-01-01",
+          "value": 0.6
+        },
+        {
+          "date": "2026-02-01",
+          "value": 0.5
+        },
+        {
+          "date": "2026-03-01",
+          "value": 1.0
+        },
+        {
+          "date": "2026-04-01",
+          "value": 1.2
+        },
+        {
+          "date": "2026-05-01",
+          "value": 1.8
+        },
+        {
+          "date": "2026-06-01",
+          "value": 1.8
+        },
+        {
+          "date": "2026-07-01",
+          "value": 1.6
+        },
+        {
+          "date": "2026-08-01",
+          "value": 2.0
+        },
+        {
+          "date": "2026-09-01",
+          "value": 2.1
+        }
+      ],
+      "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DK&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
+      "observedAt": "2026-11-13T02:18:24Z",
+      "license": "Eurostat reuse policy; dataset exceptions apply"
+    },
+    {
+      "key": "hicp_yoy:FR",
+      "provider": "eurostat",
+      "label": "Harmonised consumer prices, annual rate",
+      "country": "FR",
+      "unit": "% year-on-year",
+      "frequency": "monthly",
+      "period": "2026-10-01",
+      "value": 3.8,
+      "history": [
+        {
+          "date": "2025-01-01",
+          "value": 1.8
+        },
+        {
+          "date": "2025-02-01",
+          "value": 0.9
+        },
+        {
+          "date": "2025-03-01",
+          "value": 0.9
+        },
+        {
+          "date": "2025-04-01",
+          "value": 0.9
+        },
+        {
+          "date": "2025-05-01",
+          "value": 0.6
+        },
+        {
+          "date": "2025-06-01",
+          "value": 0.9
+        },
+        {
+          "date": "2025-07-01",
+          "value": 0.9
+        },
+        {
+          "date": "2025-08-01",
+          "value": 0.8
+        },
+        {
+          "date": "2025-09-01",
+          "value": 1.1
+        },
+        {
+          "date": "2025-10-01",
+          "value": 0.8
+        },
+        {
+          "date": "2025-11-01",
+          "value": 0.8
+        },
+        {
+          "date": "2025-12-01",
+          "value": 0.7
+        },
+        {
+          "date": "2026-01-01",
+          "value": 0.4
+        },
+        {
+          "date": "2026-02-01",
+          "value": 1.1
+        },
+        {
+          "date": "2026-03-01",
+          "value": 2.0
+        },
+        {
+          "date": "2026-04-01",
+          "value": 2.5
+        },
+        {
+          "date": "2026-05-01",
+          "value": 2.8
+        },
+        {
+          "date": "2026-06-01",
+          "value": 2.0
+        },
+        {
+          "date": "2026-07-01",
+          "value": 2.4
+        },
+        {
+          "date": "2026-08-01",
+          "value": 2.6
+        },
+        {
+          "date": "2026-09-01",
+          "value": 3.4
+        },
+        {
+          "date": "2026-10-01",
+          "value": 3.8
+        }
+      ],
+      "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=FR&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
+      "observedAt": "2026-11-13T02:18:25Z",
+      "license": "Eurostat reuse policy; dataset exceptions apply"
+    },
+    {
+      "key": "hicp_yoy:NO",
+      "provider": "eurostat",
+      "label": "Harmonised consumer prices, annual rate",
+      "country": "NO",
+      "unit": "% year-on-year",
+      "frequency": "monthly",
+      "period": "2026-09-01",
+      "value": 3.4,
+      "history": [
+        {
+          "date": "2025-01-01",
+          "value": 1.9
+        },
+        {
+          "date": "2025-02-01",
+          "value": 3.2
+        },
+        {
+          "date": "2025-03-01",
+          "value": 2.3
+        },
+        {
+          "date": "2025-04-01",
+          "value": 2.1
+        },
+        {
+          "date": "2025-05-01",
+          "value": 2.8
+        },
+        {
+          "date": "2025-06-01",
+          "value": 2.7
+        },
+        {
+          "date": "2025-07-01",
+          "value": 3.1
+        },
+        {
+          "date": "2025-08-01",
+          "value": 3.5
+        },
+        {
+          "date": "2025-09-01",
+          "value": 3.6
+        },
+        {
+          "date": "2025-10-01",
+          "value": 2.9
+        },
+        {
+          "date": "2025-11-01",
+          "value": 2.7
+        },
+        {
+          "date": "2025-12-01",
+          "value": 3.0
+        },
+        {
+          "date": "2026-01-01",
+          "value": 3.5
+        },
+        {
+          "date": "2026-02-01",
+          "value": 2.6
+        },
+        {
+          "date": "2026-03-01",
+          "value": 3.6
+        },
+        {
+          "date": "2026-04-01",
+          "value": 3.4
+        },
+        {
+          "date": "2026-05-01",
+          "value": 3.1
+        },
+        {
+          "date": "2026-06-01",
+          "value": 2.6
+        },
+        {
+          "date": "2026-07-01",
+          "value": 2.9
+        },
+        {
+          "date": "2026-08-01",
+          "value": 3.2
+        },
+        {
+          "date": "2026-09-01",
+          "value": 3.4
+        }
+      ],
+      "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=NO&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
+      "observedAt": "2026-11-13T02:18:24Z",
+      "license": "Eurostat reuse policy; dataset exceptions apply"
+    },
+    {
+      "key": "hicp_yoy:SE",
+      "provider": "eurostat",
+      "label": "Harmonised consumer prices, annual rate",
+      "country": "SE",
+      "unit": "% year-on-year",
+      "frequency": "monthly",
+      "period": "2026-09-01",
+      "value": 1.0,
+      "history": [
+        {
+          "date": "2025-01-01",
+          "value": 2.0
+        },
+        {
+          "date": "2025-02-01",
+          "value": 2.8
+        },
+        {
+          "date": "2025-03-01",
+          "value": 2.1
+        },
+        {
+          "date": "2025-04-01",
+          "value": 2.1
+        },
+        {
+          "date": "2025-05-01",
+          "value": 2.3
+        },
+        {
+          "date": "2025-06-01",
+          "value": 2.9
+        },
+        {
+          "date": "2025-07-01",
+          "value": 3.1
+        },
+        {
+          "date": "2025-08-01",
+          "value": 3.4
+        },
+        {
+          "date": "2025-09-01",
+          "value": 3.2
+        },
+        {
+          "date": "2025-10-01",
+          "value": 3.1
+        },
+        {
+          "date": "2025-11-01",
+          "value": 2.2
+        },
+        {
+          "date": "2025-12-01",
+          "value": 2.1
+        },
+        {
+          "date": "2026-01-01",
+          "value": 2.0
+        },
+        {
+          "date": "2026-02-01",
+          "value": 1.7
+        },
+        {
+          "date": "2026-03-01",
+          "value": 1.5
+        },
+        {
+          "date": "2026-04-01",
+          "value": 0.5
+        },
+        {
+          "date": "2026-05-01",
+          "value": 1.1
+        },
+        {
+          "date": "2026-06-01",
+          "value": 1.0
+        },
+        {
+          "date": "2026-07-01",
+          "value": 0.3
+        },
+        {
+          "date": "2026-08-01",
+          "value": 0.3
+        },
+        {
+          "date": "2026-09-01",
+          "value": 1.0
+        }
+      ],
+      "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=SE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
+      "observedAt": "2026-11-13T02:18:24Z",
+      "license": "Eurostat reuse policy; dataset exceptions apply"
+    }
+  ],
+  "sources": [
+    {
+      "id": "brreg",
+      "name": "Brønnøysundregistrene",
+      "license": "NLOD 2.0; no personal/role data collected",
+      "documentation": "https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:18:46Z",
+      "lastAttemptAt": "2026-11-13T02:18:46Z",
+      "error": null,
+      "attempted": 12,
+      "candidates": 8
+    },
+    {
+      "id": "ecb",
+      "name": "European Central Bank",
+      "license": "ECB statistics free reuse, attribution; third-party exceptions",
+      "documentation": "https://data.ecb.europa.eu/help/api/data-examples",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:18:01Z",
+      "lastAttemptAt": "2026-11-13T02:17:59Z",
+      "records": 1,
+      "error": null
+    },
+    {
+      "id": "eurostat",
+      "name": "Eurostat",
+      "license": "Eurostat reuse policy; dataset exceptions apply",
+      "documentation": "https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-introduction",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:18:25Z",
+      "lastAttemptAt": "2026-11-13T02:18:23Z",
+      "records": 5,
+      "error": null
+    },
+    {
+      "id": "finanstilsynet",
+      "name": "Finanstilsynet SSR",
+      "license": "NLOD 2.0; only publicly disclosed positions",
+      "documentation": "https://ssr.finanstilsynet.no/api/v2/",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:18:27Z",
+      "lastAttemptAt": "2026-11-13T02:18:25Z",
+      "records": 103,
+      "error": null
+    },
+    {
+      "id": "gleif",
+      "name": "GLEIF LEI",
+      "license": "CC0 public reference data",
+      "documentation": "https://www.gleif.org/en/lei-data/gleif-api",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:18:46Z",
+      "lastAttemptAt": "2026-11-13T02:18:46Z",
+      "error": null,
+      "attempted": 12,
+      "candidates": 8
+    },
+    {
+      "id": "norges_bank",
+      "name": "Norges Bank",
+      "license": "NLOD 2.0",
+      "documentation": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-13T02:17:59Z",
+      "lastAttemptAt": "2026-11-13T02:17:59Z",
+      "records": 2,
+      "error": null
+    },
+    {
+      "id": "world_bank",
+      "name": "World Bank WDI",
+      "license": "CC BY 4.0, subject to indicator-level third-party exceptions",
+      "documentation": "https://data.worldbank.org/summary-terms-of-use",
+      "status": "error",
+      "lastSuccessAt": null,
+      "lastAttemptAt": "2026-11-13T02:18:01Z",
+      "error": "TimeoutError"
+    }
+  ],
+  "identityCandidates": [
+    {
+      "provider": "brreg",
+      "orgNumber": "932201070",
+      "legalName": "ANDFJORD SALMON AS",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/932201070",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "ANDF.OL",
+      "searchedName": "Andfjord Salmon",
+      "checkedAt": "2026-11-13T02:18:29Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "549300WIEAOXRI8H0046",
+      "legalName": "ARCTIC FISH HOLDING AS",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/549300WIEAOXRI8H0046",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "AFISH.OL",
+      "searchedName": "Arctic Fish",
+      "checkedAt": "2026-11-13T02:18:30Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5967007LIEEXZXFFDC03",
+      "legalName": "AUSTEVOLL SEAFOOD ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXFFDC03",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "AUSS.OL",
+      "searchedName": "Austevoll Seafood",
+      "checkedAt": "2026-11-13T02:18:31Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "929975200",
+      "legalName": "AUSTEVOLL SEAFOOD ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/929975200",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "AUSS.OL",
+      "searchedName": "Austevoll Seafood",
+      "checkedAt": "2026-11-13T02:18:32Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "98450040PEERA56F3E42",
+      "legalName": "KALDVIK AS",
+      "registrationStatus": "LAPSED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/98450040PEERA56F3E42",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "KLDVK.OL",
+      "searchedName": "Kaldvik",
+      "checkedAt": "2026-11-13T02:18:33Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "924824913",
+      "legalName": "KALDVIK AS",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/924824913",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "KLDVK.OL",
+      "searchedName": "Kaldvik",
+      "checkedAt": "2026-11-13T02:18:34Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "894500K853DDTPY1SE30",
+      "legalName": "NORDIC HALIBUT AS",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/894500K853DDTPY1SE30",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "NOHAL.OL",
+      "searchedName": "Nordic Halibut",
+      "checkedAt": "2026-11-13T02:18:34Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "974526441",
+      "legalName": "NORDIC HALIBUT AS",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/974526441",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "NOHAL.OL",
+      "searchedName": "Nordic Halibut",
+      "checkedAt": "2026-11-13T02:18:35Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "213800MS7YC1XTISON88",
+      "legalName": "PELICAN AQUA HOLDING PLC",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/213800MS7YC1XTISON88",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "PLCAN.OL",
+      "searchedName": "Pelican Aqua",
+      "checkedAt": "2026-11-13T02:18:36Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5493006J8UNWCDMAQW02",
+      "legalName": "PROXIMAR SEAFOOD AS",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5493006J8UNWCDMAQW02",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "PROXI.OL",
+      "searchedName": "Proximar Seafood",
+      "checkedAt": "2026-11-13T02:18:37Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "915565697",
+      "legalName": "PROXIMAR SEAFOOD AS",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/915565697",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "PROXI.OL",
+      "searchedName": "Proximar Seafood",
+      "checkedAt": "2026-11-13T02:18:38Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "549300P2OB7L255PF765",
+      "legalName": "SALMON EVOLUTION ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/549300P2OB7L255PF765",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "SALME.OL",
+      "searchedName": "Salmon Evolution",
+      "checkedAt": "2026-11-13T02:18:40Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "925344877",
+      "legalName": "SALMON EVOLUTION ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/925344877",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "SALME.OL",
+      "searchedName": "Salmon Evolution",
+      "checkedAt": "2026-11-13T02:18:41Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5299001NVHCUQLWS9D54",
+      "legalName": "Avarda AB",
+      "registrationStatus": "RETIRED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5299001NVHCUQLWS9D54",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "AVARDA.ST",
+      "searchedName": "Avarda",
+      "checkedAt": "2026-11-13T02:18:43Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "816914582",
+      "legalName": "INSTABANK ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/816914582",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "INSTA.OL",
+      "searchedName": "Instabank",
+      "checkedAt": "2026-11-13T02:18:45Z"
+    },
+    {
+      "provider": "brreg",
+      "orgNumber": "985279721",
+      "legalName": "PROTECTOR FORSIKRING ASA",
+      "registrationStatus": "registered",
+      "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/enheter/985279721",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "PROT.OL",
+      "searchedName": "Protector forsikring",
+      "checkedAt": "2026-11-13T02:18:46Z"
+    }
+  ],
+  "identityLookups": [
+    {
+      "ticker": "ANDF.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:28Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "ANDF.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:29Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "AFISH.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:30Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "AFISH.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:31Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "AUSS.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:31Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "AUSS.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:32Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "KLDVK.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:33Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "KLDVK.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:34Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "NOHAL.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:34Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "NOHAL.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:35Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "PLCAN.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:36Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "PLCAN.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:37Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "PROXI.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:37Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "PROXI.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:38Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "SALM.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:39Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "SALM.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:40Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "SALME.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:40Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "SALME.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:41Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "AZA.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:42Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "AVARDA.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:43Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "GJF.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-13T02:18:44Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "GJF.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:44Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:45Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "PROT.OL",
+      "provider": "brreg",
+      "checkedAt": "2026-11-13T02:18:46Z",
+      "result": "candidate"
+    }
+  ],
+  "identityNote": "Unverified name-search suggestions, never automatically linked to issuers.",
+  "publicShorts": {
+    "trackedInRegister": 103,
+    "matchedByVerifiedIsin": [],
+    "note": "Only public ≥0.5% positions; absence is not zero short interest.",
+    "sourceUrl": "https://ssr.finanstilsynet.no/api/v2/instruments"
+  }
 }
