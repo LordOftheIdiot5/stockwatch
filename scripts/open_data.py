@@ -372,6 +372,8 @@ def build(root=ROOT, mode="auto", now=None):
                 status.update(status="empty", error="no_valid_records")
         except (OSError, ValueError, KeyError, TypeError, urllib.error.HTTPError) as error:
             status.update(status="error", error=type(error).__name__)
+            if isinstance(error, urllib.error.HTTPError):
+                status["httpStatus"] = int(error.code)
     candidates = previous.get("identityCandidates") or []
     lookups = previous.get("identityLookups") or []
     if mode == "weekly":
@@ -399,7 +401,7 @@ def build(root=ROOT, mode="auto", now=None):
     dest.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
     update_catalog(root, len(result["series"]))
     print("Official open data: {} series; {} candidate identity matches; source status: {}".format(
-        len(stored),len(candidates),",".join(x["id"]+"="+x["status"] for x in result["sources"])))
+        len(stored),len(candidates),",".join(x["id"]+"="+x["status"]+((":"+str(x.get("httpStatus") or x.get("error"))) if x["status"]=="error" else "") for x in result["sources"])))
     return result
 
 if __name__ == "__main__":
