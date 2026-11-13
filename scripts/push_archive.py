@@ -10,6 +10,7 @@ import json
 import os
 import re
 import urllib.request
+import urllib.error
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -91,12 +92,21 @@ def main(argv=None, root=ROOT):
             payload = json.dumps({'items': batch}, ensure_ascii=False, separators=(',', ':')).encode('utf8')
             request = urllib.request.Request(dest,data=payload,headers={
                 'Content-Type':'application/json','Authorization':'Bearer '+token},method='POST')
-            with urllib.request.urlopen(request,timeout=30) as response:
-                if response.status != 200:
-                    raise RuntimeError(f'Database ingestion returned HTTP {response.status}')
-                result = json.loads(response.read())
-                if result.get('accepted') != len(batch):
-                    raise RuntimeError('Database ingestion did not acknowledge the full batch')
+            try:
+                with urllib.request.urlopen(request,timeout=30) as response:
+                    if response.status != 200:
+                        raise RuntimeError(f'Database ingestion returned HTTP {response.status}')
+                    result = json.loads(response.read())
+                    if result.get('accepted') != len(batch):
+                        raise RuntimeError('Database ingestion did not acknowledge the full batch')
+            except urllib.error.HTTPError as exc:
+                # Report only the Worker's public error code, never the token.
+                error_code = 'unknown'
+                try:
+                    error_code = json.loads(exc.read(2048)).get('error', 'unknown')
+                except (ValueError, TypeError):
+                    pass
+                raise RuntimeError(f'D1 ingestion rejected request: HTTP {exc.code} ({error_code})') from None
         total += len(batch)
     print(f'{"Validated" if args.dry_run else "Uploaded"} {total} unique news records'
           + (' (full backfill)' if args.backfill else ' (rolling 7 days)'))
