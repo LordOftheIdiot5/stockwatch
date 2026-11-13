@@ -58,7 +58,6 @@ jobs:
         if: github.ref == 'refs/heads/feature/stockwatch-worldbank-port-traffic-20261113'
         run: |
           python scripts/shipping_ports.py
-          python scripts/shipping_unctad.py
           python - <<'PY'
           import json
           p=json.load(open('data/shipping-ports.json',encoding='utf-8'))
@@ -94,6 +93,7 @@ jobs:
           python scripts/economic_feeds.py
           python scripts/shipping_open.py
           python scripts/shipping_ports.py
+          python scripts/shipping_unctad.py
       - name: Commit official-source datasets without racing the market scanner
         if: github.ref == 'refs/heads/main'
         run: python scripts/publish_data.py --mode official
