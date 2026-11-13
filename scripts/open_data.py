@@ -310,6 +310,25 @@ def identity_candidates(previous, watchlist, limit=12):
             time.sleep(0.2)
     return out[:300], lookups[:400], attempted, errors
 
+def update_catalog(root, series_count):
+    path = root / "data/dataset-catalog.json"
+    try:
+        catalog = json.loads(path.read_text(encoding="utf8"))
+    except (OSError, ValueError):
+        catalog = {"datasets":[]}
+    entries = catalog.setdefault("datasets", [])
+    if not isinstance(entries, list):
+        raise ValueError("invalid_dataset_catalog")
+    new = {"name":"Official macroeconomic and FX observations",
+           "path":"data/open-data.json","records":series_count,
+           "license":"Attributed per original source and series; official-source exception policies apply"}
+    entries = [x for x in entries if x.get("path")!=new["path"]]
+    entries.append(new)
+    catalog["datasets"] = entries
+    catalog["generated"] = utcnow()
+    path.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
+
+
 def build(root=ROOT, mode="auto", now=None):
     dest = root / "data/open-data.json"
     now = now or datetime.now(timezone.utc)
@@ -378,6 +397,7 @@ def build(root=ROOT, mode="auto", now=None):
               "publicShorts":shorts}
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
+    update_catalog(root, len(result["series"]))
     print("Official open data: {} series; {} candidate identity matches; source status: {}".format(
         len(stored),len(candidates),",".join(x["id"]+"="+x["status"] for x in result["sources"])))
     return result
