@@ -97,11 +97,12 @@ async function loadOfficialSourceHealth(){
  host.innerHTML='<div class="panelhead"><h2>Official open-data sources</h2><span class="count">No-key feeds and registered integrations</span></div><div id="officialStatusBody" class="note" aria-live="polite">Checking official source status…</div>';
  $('app').appendChild(host);
  const body=$('officialStatusBody');
- const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json'),fetchJson('data/economic-feeds.json'),fetchJson('data/shipping-open.json')]);
+ const responses=await Promise.allSettled([fetchJson('data/open-data.json'),fetchJson('data/registered-source-status.json'),fetchJson('data/economic-feeds.json'),fetchJson('data/shipping-open.json'),fetchJson('data/shipping-ports.json')]);
  const source=responses[0].status==='fulfilled'?responses[0].value:null;
  const registered=responses[1].status==='fulfilled'?responses[1].value:null;
  const economic=responses[2].status==='fulfilled'?responses[2].value:null;
  const shipping=responses[3].status==='fulfilled'?responses[3].value:null;
+ const portTraffic=responses[4].status==='fulfilled'?responses[4].value:null;
  if(!source&&!registered&&!economic){body.textContent='Official-source import has not run yet. Scanner and news data remain independent.';return}
  const names={norges_bank:'Norges Bank',ecb:'European Central Bank',eurostat:'Eurostat',world_bank:'World Bank',finanstilsynet:'Finanstilsynet shorts',gleif:'GLEIF LEI',brreg:'Brønnøysundregistrene',openfigi:'OpenFIGI',entsoe:'ENTSO-E Transparency'};
  const safeStatus=s=>String(s||'not_checked').replace(/_/g,' ');
@@ -126,6 +127,13 @@ async function loadOfficialSourceHealth(){
     detail:(shipping.series||[]).length+' weekly index series (2017=100); NOT voyage-rate prices',
     url:item.sourceUrl,last:item.lastSuccessAt,
     license:'USDA AMS attributed aggregate indices; underlying source limitations apply'});
+ }
+ if(portTraffic?.source){
+  const item=portTraffic.source;
+  sourceRows.push({name:'World Bank annual container-port throughput',status:item.status,
+    detail:(portTraffic.series||[]).length+' annual country / world TEU series; NOT freight prices',
+    url:item.sourceUrl,last:item.lastSuccessAt,
+    license:'CC BY 4.0 — World Bank WDI / UNCTAD; source attribution required'});
  }
  const statusHtml=sourceRows.map(x=>{
   const u=validLink(x.url);
