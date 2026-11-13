@@ -95,6 +95,82 @@ async function renderWorldBankPortTraffic(){
  select.addEventListener('change',draw);draw();
 }
 
+
+async function renderUNCTADConnectivity(){
+ const host=$('v4app');if(!host)return;
+ const panel=document.createElement('section');panel.className='sw-panel';panel.id='unctadConnectivity';
+ panel.innerHTML='<div class="sw-panel-hd"><div><h2>UNCTAD liner shipping connectivity</h2><small>Monthly container-network index · Q1 2023 average = 100 · NOT freight prices</small></div></div><div class="sw-panel-pad"><div class="sw-note" id="unctadContent">Checking UNCTAD data…</div></div>';
+ const anchor=$('routeCompare');if(anchor)anchor.parentNode.insertBefore(panel,anchor);else host.appendChild(panel);
+ const target=$('unctadContent');
+ let data;try{data=await get('data/shipping-connectivity.json')}catch{target.textContent='Official monthly connectivity import has not published data yet.';return}
+ const series=(data.series||[]).filter(x=>x&&x.isActualRate===false&&x.frequency==='monthly'&&x.unit==='index, Q1 2023 average = 100'&&Array.isArray(x.history)&&x.history.length);
+ if(!series.length){target.textContent='No verified UNCTAD monthly connectivity observations yet. Data Health shows source status.';return}
+ target.innerHTML='<p class="sw-meta">This UNCTAD index measures integration into liner container shipping networks. It does not measure freight rates, cargo throughput or port congestion. '+(data.source?.status==='ok'?'Source refresh succeeded.':'Displaying preserved dated observations; last refresh failed.')+'</p>'
+ +'<div class="sw-grid4">'+series.slice(0,4).map(x=>stat(E(x.country),N(x.value,2),'LSCI · '+E(x.period||''))).join('')+'</div>'
+ +'<div class="sw-controls"><label for="unctadCountry">Economy</label><select id="unctadCountry">'+series.map((x,i)=>'<option value="'+i+'">'+E(x.country)+'</option>').join('')+'</select></div><div id="unctadChart"></div>'
+ +'<p class="sw-meta">Source: <a href="https://unctadstat.unctad.org/datacentre/dataviewer/US.LSCI_M" target="_blank" rel="noopener noreferrer">United Nations Trade and Development Data Hub (UNCTADstat)</a>. CC BY 3.0 IGO, attribution required. Original index values; dates shown are the months of observations.</p>';
+ const select=$('unctadCountry'),chartNode=$('unctadChart');
+ const draw=()=>{const x=series[Number(select.value)||0];if(!x)return;
+  const bars=x.history.filter(p=>p&&/^20\d\d-(0[1-9]|1[0-2])-01$/.test(p.date)&&Number.isFinite(Number(p.value))&&p.value>0).map(p=>({date:p.date,value:p.value}));
+  chartNode.innerHTML=lineGraph(bars,{label:x.country+' · UNCTAD monthly liner connectivity index',empty:'At least two dated UNCTAD observations required.'});
+ };
+ select.addEventListener('change',draw);draw();
+}
+function renderVoyageEstimator(){
+ const host=$('v4app');if(!host)return;
+ const usdRoutes=state.routes.filter(r=>r.category==='Dry bulk'&&r.unit==='USD/tonne');
+ const panel=document.createElement('section');panel.className='sw-panel';panel.id='voyageEstimator';
+ const fields=[
+  ['distance','Loaded voyage distance (nautical miles)',11000,1,100000],
+  ['ballast','Repositioning distance (nautical miles)',0,0,100000],
+  ['speed','Average underway speed (knots)',12,1,30],
+  ['burn','Fuel consumed underway (tonnes/day)',48,0,300],
+  ['portDays','Port/idle time (days)',5,0,120],
+  ['portBurn','Fuel consumed in port (tonnes/day)',5,0,100],
+  ['fuel','Marine fuel price (USD/tonne)',600,0,10000],
+  ['cargo','Loaded cargo (metric tonnes)',160000,1,500000],
+  ['hire','Time charter / vessel cost (USD/day)',22000,0,300000],
+  ['portFees','Port and canal costs (USD total)',100000,0,10000000],
+  ['other','Other voyage costs (USD total)',0,0,10000000],
+  ['contingency','Contingency (%)',10,0,100]
+ ];
+ panel.innerHTML='<div class="sw-panel-hd"><div><h2>Voyage cost scenario calculator</h2><small>Stockwatch independent model — hypothetical inputs, never a Baltic or Braemar quote</small></div></div>'
+ +'<div class="sw-panel-pad"><p class="sw-meta">Explore a vessel voyage budget. All default values are hypothetical illustrations, not measured prices, physical route distances, or provider assessments. For any route, enter its actual distance and your own cost assumptions.</p>'
+ +'<form id="voyageForm"><div class="sw-controls"><label for="voyageRoute">Scenario label</label><select id="voyageRoute">'+usdRoutes.map(r=>'<option value="'+E(r.code)+'">'+E(r.code+' · '+r.name)+'</option>').join('')+'</select></div>'
+ +'<div class="sw-grid4">'+fields.map(([id,label,value,min,max])=>'<label class="sw-meta" style="display:grid;gap:6px">'+E(label)+'<input id="voyage_'+id+'" type="number" min="'+min+'" max="'+max+'" step="any" value="'+value+'" required style="width:100%;background:var(--surface,#121e30);border:1px solid var(--border,#34445c);border-radius:8px;padding:10px;color:var(--text,#fff)"></label>').join('')+'</div>'
+ +'<button class="sw-row-action" type="submit" style="margin:15px 0">Calculate scenario</button></form><div id="voyageResult" role="status" aria-live="polite"></div>'
+ +'<p class="sw-meta">Model: sea days = (loaded distance + repositioning distance) / speed / 24; fuel cost = (sea days × underway consumption + port days × port consumption) × fuel price; vessel cost = (sea + port days) × daily hire. Total adds port, other and contingency costs. It excludes financing, commissions, demurrage, weather routing and cargo loss. Results are not tradable freight quotes.</p></div>';
+ const anchor=$('routeCompare');if(anchor)anchor.parentNode.insertBefore(panel,anchor);else host.appendChild(panel);
+ const form=$('voyageForm'),result=$('voyageResult');
+ function calculate(){
+  let vars={};for(const [id,,defaultValue,min,max] of fields){const n=Number($('voyage_'+id).value);if(!Number.isFinite(n)||n<min||n>max){result.textContent='Enter valid finite values within the displayed field limits.';return}vars[id]=n}
+  const seaDays=(vars.distance+vars.ballast)/vars.speed/24;
+  const fuelTonnes=seaDays*vars.burn+vars.portDays*vars.portBurn;
+  const fuelUSD=fuelTonnes*vars.fuel;
+  const hireUSD=(seaDays+vars.portDays)*vars.hire;
+  const subtotal=fuelUSD+hireUSD+vars.portFees+vars.other;
+  const total=subtotal*(1+vars.contingency/100);
+  const perTonne=total/vars.cargo;
+  const money=x=>x.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
+  result.innerHTML='<div class="sw-grid4">'+
+   stat('Modeled total cost',money(total),'USD · scenario estimate')+
+   stat('Modeled cost per tonne',money(perTonne),'USD/tonne · NOT Baltic assessment')+
+   stat('Estimated sea days',N(seaDays,2),'At user-entered speed')+
+   stat('Estimated fuel cost',money(fuelUSD),N(fuelTonnes,2)+' tonnes of fuel')+
+   '</div><p class="sw-meta">Cost breakdown: vessel '+money(hireUSD)+'; fuel '+money(fuelUSD)+'; port/canal '+money(vars.portFees)+'; other '+money(vars.other)+'; contingency '+money(total-subtotal)+'. Route selection is a label only; the calculator does not infer distances or market rates.</p>';
+ }
+ form.addEventListener('submit',e=>{e.preventDefault();calculate()});
+ calculate();
+}
+function renderPortWatchPermission(){
+ const host=$('v4app');if(!host)return;
+ const panel=document.createElement('section');panel.className='sw-panel';panel.id='portWatchPermission';
+ panel.innerHTML='<div class="sw-panel-hd"><div><h2>IMF PortWatch vessel activity</h2><small>Official port-call and chokepoint-transit signals · commercial reuse permission required</small></div></div>'
+ +'<div class="sw-panel-pad"><p class="sw-meta">PortWatch provides publicly accessible maritime activity estimates, but its commercial redistribution and systematic-download permissions are not established for Stockwatch. No automated IMF feed is downloaded or displayed here until written permission is obtained. This is distinct from UNCTAD connectivity and Baltic freight assessments.</p>'
+ +'<p><a class="sw-textlink" href="https://portwatch.imf.org/" target="_blank" rel="noopener noreferrer">View IMF PortWatch source ↗</a> · <a class="sw-textlink" href="https://www.imf.org/en/About/copyright-and-terms" target="_blank" rel="noopener noreferrer">IMF data usage terms ↗</a></p></div>';
+ const anchor=$('routeCompare');if(anchor)anchor.parentNode.insertBefore(panel,anchor);else host.appendChild(panel);
+}
+
 function switchEstimate(p, direction, holding, feePct, slippagePct, flatFee){
  const from=direction==='A-to-B'?Number(p.aPrice):Number(p.bPrice);
  const to=direction==='A-to-B'?Number(p.bPrice):Number(p.aPrice);
@@ -184,6 +260,6 @@ async function renderOpenMacro(){
  select.addEventListener('change',paint);paint();
 }
 function nav(){let theme;try{theme=localStorage.getItem('stockwatch-theme')}catch{}theme=theme==='light'?'light':'dark';document.body.dataset.theme=theme;$('swTheme').textContent=theme==='light'?'☀':'☾';$('swTheme').onclick=()=>{let now=document.body.dataset.theme==='light'?'dark':'light';document.body.dataset.theme=now;$('swTheme').textContent=now==='light'?'☀':'☾';try{localStorage.setItem('stockwatch-theme',now)}catch{}};$('swSearchForm').addEventListener('submit',e=>{e.preventDefault();let q=$('swGlobalSearch').value.trim();location.href='stocks.html'+(q?'?q='+encodeURIComponent(q):'')});document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();$('swGlobalSearch').focus()}})}
-async function init(){nav();const files=[['signals','data/signals.json'],['context','data/context.json'],['watchlist','watchlist.json'],['routes','data/freight-routes.json'],['archive','data/news-latest.json'],['health','data/source-health.json'],['fundamentals','data/fundamentals.json'],['observations','data/spread-observations.json']];const data=await Promise.all(files.map(async([k,p])=>{try{return [k,await get(p)]}catch{return [k,null]}}));const o=Object.fromEntries(data);state.signals=o.signals;state.context=o.context;state.watchlist=o.watchlist?.tickers||[];state.routes=o.routes?.routes||[];state.archive=o.archive;state.health=o.health;state.fundamentals=o.fundamentals?.companies||{};state.observations=o.observations;const label=$('swRefreshLabel');if(state.signals?.generated)label.textContent='Updated '+timeAge(state.signals.generated);else label.textContent='Data unavailable';if(state.signals?.generated)$('swSourceStatus').textContent='Last scan '+fmtDate(state.signals.generated);tape();if(['news','calendar','compare','health'].includes(page))return;if(!state.watchlist.length||!state.signals){$('v4app').innerHTML='<div class="sw-note sw-notice">The scanner dataset is unavailable. The interface does not invent market data.</div>';return}if(page==='index')overview();else if(page==='stocks')stocks();else if(page==='spreads')await spreads();else if(page==='shipping'){shipping();await renderUSDAOceanIndices();await renderWorldBankPortTraffic();}else if(page==='commodities'){commodities();await renderOpenMacro();}else if(page==='shorts')shorts()}
+async function init(){nav();const files=[['signals','data/signals.json'],['context','data/context.json'],['watchlist','watchlist.json'],['routes','data/freight-routes.json'],['archive','data/news-latest.json'],['health','data/source-health.json'],['fundamentals','data/fundamentals.json'],['observations','data/spread-observations.json']];const data=await Promise.all(files.map(async([k,p])=>{try{return [k,await get(p)]}catch{return [k,null]}}));const o=Object.fromEntries(data);state.signals=o.signals;state.context=o.context;state.watchlist=o.watchlist?.tickers||[];state.routes=o.routes?.routes||[];state.archive=o.archive;state.health=o.health;state.fundamentals=o.fundamentals?.companies||{};state.observations=o.observations;const label=$('swRefreshLabel');if(state.signals?.generated)label.textContent='Updated '+timeAge(state.signals.generated);else label.textContent='Data unavailable';if(state.signals?.generated)$('swSourceStatus').textContent='Last scan '+fmtDate(state.signals.generated);tape();if(['news','calendar','compare','health'].includes(page))return;if(!state.watchlist.length||!state.signals){$('v4app').innerHTML='<div class="sw-note sw-notice">The scanner dataset is unavailable. The interface does not invent market data.</div>';return}if(page==='index')overview();else if(page==='stocks')stocks();else if(page==='spreads')await spreads();else if(page==='shipping'){shipping();await renderUSDAOceanIndices();await renderWorldBankPortTraffic();await renderUNCTADConnectivity();renderVoyageEstimator();renderPortWatchPermission();}else if(page==='commodities'){commodities();await renderOpenMacro();}else if(page==='shorts')shorts()}
 init().catch(e=>{if($('v4app'))$('v4app').innerHTML=`<div class="sw-note sw-notice">Could not render this page: ${E(e.message)}</div>`;console.error(e)});
 })();
