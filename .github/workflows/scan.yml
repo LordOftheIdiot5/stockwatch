@@ -42,7 +42,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py'
 
       - name: Test Cloudflare D1 Worker API
-        run: node --test tests/test_worker.mjs
+        run: node --test tests/test_worker.mjs tests/test_final_js.mjs
 
       - name: Scan
         id: scan

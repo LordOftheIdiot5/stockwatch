@@ -1,0 +1,12 @@
+{
+  "version": "2026-11-13",
+  "purpose": "Documented research sources, licensing and integration status; no implied redistribution rights",
+  "sources": [
+    {"name":"Finanstilsynet short selling register","category":"Short positions","url":"https://ssr.finanstilsynet.no/","status":"Existing scanner connector","publicationPolicy":"Public disclosure register; obey terms and report thresholds"},
+    {"name":"Norges Bank open data","category":"FX and rates","url":"https://www.norges-bank.no/en/topics/Statistics/open-data/","status":"Candidate for future licensed integration","publicationPolicy":"Open data API; attribution and series definitions required"},
+    {"name":"Sveriges Riksbank API","category":"FX and monetary policy","url":"https://www.riksbank.se/en-gb/statistics/interest-rates-and-exchange-rates/retrieving-interest-rates-and-exchange-rates-via-api/faq--the-api-for-interest-rates-and-exchange-rates/","status":"Verified open commercial-use candidate; not yet ingested","publicationPolicy":"Official FAQ permits commercial reuse; source attribution applies to unprocessed series"},
+    {"name":"Euronext company notices","category":"Issuer identifiers and disclosures","url":"https://live.euronext.com/","status":"Official cross-check source","publicationPolicy":"Issuer facts and notices, not a blanket live-feed or redistribution licence"},
+    {"name":"Baltic Exchange","category":"Shipping benchmarks","url":"https://www.balticexchange.com/en/data-services/Methodology/market-data.html","status":"Route definitions only; live benchmark prices blocked pending commercial licence","publicationPolicy":"Subscription and redistribution licence required"},
+    {"name":"EODData","category":"Equity history and fundamentals","url":"https://www.eoddata.com/products/DataFeed.aspx","status":"Private connectivity test only; not a public stock price feed","publicationPolicy":"Personal plans do not permit commercial public display; commercial agreement required"}
+  ]
+}

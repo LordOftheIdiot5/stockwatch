@@ -1,0 +1,44 @@
+name: Final research release checks
+
+on:
+  pull_request:
+    paths:
+      - 'v4.js'
+      - 'v4.css'
+      - 'research.js'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'watchlist.json'
+      - 'data/source-registry.json'
+      - '.github/workflows/final-release-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Full scanner and research unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Worker API and A/B finance tests
+        run: node --test tests/test_worker.mjs tests/test_final_js.mjs
+      - name: Frontend syntax
+        run: |
+          node --check v4.js
+          node --check research.js
+      - name: Watchlist identity migration guard
+        run: |
+          python - <<'PY'
+          import json
+          w=json.load(open('watchlist.json'))['tickers']
+          names=[x['ticker'] for x in w]
+          assert len(w)==138 and len(set(names))==len(names)
+          assert 'ALPER.PA' in names and 'PERR.PA' not in names
+          print('Verified 138 unique companies and ALPER.PA migration')
+          PY

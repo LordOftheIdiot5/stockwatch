@@ -76,7 +76,7 @@ OVERRIDES = {
     "arctic fish": "AFISH.OL",
     "nordic halibut": "NOHAL.OL",
     "andfjord salmon": "ANDF.OL",
-    "gerard perrier industrie": "PERR.PA",
+    "gerard perrier industrie": "ALPER.PA",
     "ellos": "ELLOS.ST",
     "pelican aqua": "PLCAN.OL",
     "ice fish farm": "IFISH.OL",
