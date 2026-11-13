@@ -95,3 +95,29 @@ gh workflow run scan.yml --repo LordOftheIdiot5/stockwatch --ref main
 The repair script generates a new 256-bit token, writes it only to short-lived temporary files, and passes it to both CLIs over raw standard input. No secret is printed, stored in Git, or published by the browser. Remove obsolete temporary files if the process is interrupted. The workflow now emits a warning if upload fails without blocking scanner data commits.
 
 The Data health page independently checks the live D1 article count. An empty database is not equivalent to a healthy ingest pipeline; watch for a count greater than zero after the scan.
+
+
+## Verify GitHub → Cloudflare authentication before rerunning the market scan
+
+A successful market scan can still carry a D1 warning when the upload is marked optional.
+The scan of 2026-11-13 00:51 UTC saved 147 news articles in the Git-backed
+monthly archive but received **HTTP 403** from the D1 Worker.
+
+Use the latest version of `deploy/repair-archive-secret.ps1`. It now writes
+`STOCKWATCH_ARCHIVE_TOKEN` and `STOCKWATCH_ARCHIVE_URL` via a BOM-free
+`gh secret set --env-file` file, rotates the matching Cloudflare secret,
+and sends an authenticated empty-batch probe without storing any records.
+
+```powershell
+git switch main
+git pull --ff-only origin main
+.\deploy\repair-archive-secret.ps1 -ArchiveUrl "https://stockwatch-research-api.gauchovidar.workers.dev/api/news/ingest"
+gh workflow run archive-d1-check.yml --repo LordOftheIdiot5/stockwatch --ref main
+gh run list --repo LordOftheIdiot5/stockwatch --workflow archive-d1-check.yml --limit 1
+```
+
+Only after the authentication check succeeds should you dispatch a new
+`scan.yml` run. The authentication smoke test uploads `{"items":[]}`
+and never prints the secret. A 403 means the stored GitHub secret does not
+match the Worker secret or an upstream rule is denying the request;
+inspect the safe error category in the smoke-test log.
