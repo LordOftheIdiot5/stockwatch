@@ -49,6 +49,20 @@ jobs:
       - name: Validate official no-key API requests on development branch
         if: github.ref == 'refs/heads/feature/stockwatch-open-official-data-20261113'
         run: python scripts/open_data.py --mode daily
+      - name: Verify live World Bank TEU import (feature branch only)
+        if: github.ref == 'refs/heads/feature/stockwatch-worldbank-port-traffic-20261113'
+        run: |
+          python scripts/shipping_ports.py
+          python - <<'PY'
+          import json
+          p=json.load(open('data/shipping-ports.json',encoding='utf-8'))
+          s=p['source']
+          assert s['status']=='ok', f"World Bank import failed: {s}"
+          assert len(p['series']) >= 5
+          assert all(x['isActualRate'] is False and x['unit']=='TEU'
+                     for x in p['series'])
+          print('World Bank live TEU series:',len(p['series']))
+          PY
       - name: Fetch official no-key and registered-source data
         if: github.ref == 'refs/heads/main'
         env:
