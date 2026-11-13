@@ -186,8 +186,8 @@ def fx_ecb():
     url = ("https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A"
            "?format=csvdata&lastNObservations=90")
     points = parse_csv_series(get_bytes(url))
-    return obs("ecb", "fx:USD/EUR", "USD/EUR reference rate",
-               "EU", "EUR per USD", points, url, "business_day")
+    return obs("ecb", "fx:EUR/USD", "EUR/USD reference rate",
+               "EU", "USD per EUR", points, url, "business_day")
 
 def world_bank():
     result = []
