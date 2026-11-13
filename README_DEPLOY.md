@@ -52,3 +52,28 @@ node --check research.js
 ```
 
 Before merging V4, run a real scanner scan, verify that all tracked companies appear even with missing quotes, check issuer matching and official source attribution, and confirm that `stocks.nordl.dev` is serving the deployed multi-page release. Do not describe D1 or licensed chart backfills as complete before their real external health/data checks pass.
+
+## EODData personal-use evaluation (NOT a public feed)
+
+EODData's visible consumer plans are **personal-use only**. An API key, including one on a free account, does not grant public chart/quote redistribution. Do not commit a key, store it in client HTML or `v4.js`, or publish provider quotes to GitHub Pages/D1. A screenshot that exposes an API key should trigger regeneration/rotation in the EODData account.
+
+There is an intentionally **offline-by-default**, single-request connectivity probe (`scripts/eoddata_private_probe.py`) using the provider's documented `GET /Exchange/List?apiKey=…`. It reads `EODDATA_API_KEY` from the local environment, displays only a sanitized connectivity result, and never stores or republishes data. It is **not** referenced by scanner workflows, the Worker, or public JavaScript. Example for Windows PowerShell (type secret only when prompted; process environment is cleared immediately afterward):
+
+```powershell
+$secret = Read-Host 'EODData API key (private local connectivity test)' -AsSecureString
+$pointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secret)
+try {
+  $env:EODDATA_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($pointer)
+  python scripts/eoddata_private_probe.py --list-exchanges
+} finally {
+  [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($pointer)
+  Remove-Item Env:EODDATA_API_KEY -ErrorAction SilentlyContinue
+  $secret.Dispose()
+}
+```
+
+Before any commercial import, obtain a written license detailing website/public display rights, specific exchanges and data fields, historical retention, derived A/B ratios, and whether end users may export or download data. Validate symbol and exchange mappings and corporate-action adjustments. Then the existing `scripts/import_licensed_history.py` can import authorized daily prices with explicit source and rights manifests; **do not set `redistributionPermitted: true` on a personal/free plan.**
+
+## A/B analytics and visuals
+
+The A/B page renders a sourced one-year **statistical reference band** from the existing scanner's mean/standard deviation and the current A/B ratio. It is explicitly labeled **NOT a historical price chart**. When licensed same-day price bars for both share classes are present, a separate historical ratio chart supports 1M/3M/1Y/all controls. No synthetic historical chart or guessed sample points are generated.
