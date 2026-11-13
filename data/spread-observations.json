@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T14:06:15+00:00",
+  "generated": "2026-11-13T14:24:44+00:00",
   "method": "Dated snapshots of Stockwatch calculated A/B ratios; NOT reconstructed historical share prices.",
   "frequency": "one UTC observation per day",
   "source": "Stockwatch scanner context",
@@ -8,19 +8,19 @@
     "KINV-A.ST/KINV-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 1.0797
+        "value": 1.0791
       }
     ],
     "WWI.OL/WWIB.OL": [
       {
         "date": "2026-11-13",
-        "value": 1.0403
+        "value": 1.0392
       }
     ],
     "MAERSK-A.CO/MAERSK-B.CO": [
       {
         "date": "2026-11-13",
-        "value": 0.9809
+        "value": 0.9823
       }
     ],
     "ODF.OL/ODFB.OL": [
@@ -32,31 +32,31 @@
     "ATCO-A.ST/ATCO-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 1.1474
+        "value": 1.1473
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 0.987
+        "value": 0.9861
       }
     ],
     "ERIC-A.ST/ERIC-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 1.015
+        "value": 1.0159
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 0.9988
+        "value": 0.9982
       }
     ],
     "INVE-A.ST/INVE-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 0.98
+        "value": 0.9799
       }
     ],
     "SKF-A.ST/SKF-B.ST": [
@@ -68,13 +68,13 @@
     "SCA-A.ST/SCA-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 0.9959
+        "value": 0.9988
       }
     ],
     "VOLV-A.ST/VOLV-B.ST": [
       {
         "date": "2026-11-13",
-        "value": 1.0031
+        "value": 1.0015
       }
     ]
   }
