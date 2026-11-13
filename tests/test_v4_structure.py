@@ -23,6 +23,16 @@ class V4Structure(unittest.TestCase):
   self.assertIn('archiveNews().slice(0,100)',js)
   self.assertIn('class="news-day"',js)
   self.assertIn("fetchJson('data/news-latest.json')",js)
+ def test_open_shipping_activity_separate_from_licensed_rates(self):
+  js=(ROOT/'v4.js').read_text(encoding='utf-8')
+  health=(ROOT/'research.js').read_text(encoding='utf-8')
+  self.assertIn('renderWorldBankPortTraffic()',js)
+  self.assertIn("get('data/shipping-ports.json')",js)
+  self.assertIn("x.unit==='TEU'",js)
+  self.assertIn('not freight prices',js)
+  self.assertIn("fetchJson('data/shipping-ports.json')",health)
+  self.assertIn('NOT freight prices',health)
+
  def test_db_schema_has_source_traceability(self):
   con=sqlite3.connect(':memory:')
   con.executescript((ROOT/'database/0001_core.sql').read_text())
