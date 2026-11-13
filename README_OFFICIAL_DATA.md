@@ -6,7 +6,7 @@ These integrations are additive and do **not** replace the 138-company market sc
 
 Run `python scripts/open_data.py --mode daily` to collect official, dated, attributed observations from Norges Bank (USD/NOK and EUR/NOK), the ECB (EUR/USD), World Bank WDI (GDP growth and exports/GDP), Eurostat (HICP annual rates), and the public Finanstilsynet short-register API.
 
-Every Monday the scheduled workflow also queries GLEIF and Brønnøysundregistrene for up to 12 names each per run. **Name-only results are candidates**, never silently promoted to verified issuer identities. We store no private personal records.
+Every Monday and Friday the scheduled workflow also queries GLEIF and Brønnøysundregistrene for up to 12 names each per run. **Name-only results are candidates**, never silently promoted to verified issuer identities. We store no private personal records.
 
 Output: `data/open-data.json`. Each item has the original source, observation date, import date, unit, frequency, and reuse caveat. Failed providers are reported independently; previous successful values are preserved but **not presented as fresh**.
 
