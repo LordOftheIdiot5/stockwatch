@@ -86,7 +86,7 @@ def parse_figi(payload,jobs):
     return candidates,ambiguous
 
 def openfigi(directory,key):
-    jobs=figi_jobs(directory)
+    jobs=figi_jobs(directory,limit=500)
     if not jobs:
         return {"count":0,"ambiguous":0,"candidates":[]}
     # Compatible with free authenticated (100 jobs/request) and unauthenticated (10).
