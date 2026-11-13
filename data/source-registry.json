@@ -92,6 +92,20 @@
       "url": "https://transparency.entsoe.eu/",
       "status": "Private no-price-publishing connectivity probe implemented; awaiting REST token",
       "publicationPolicy": "Individual datasets and primary-owner rights must be verified; raw prices not published."
+    },
+    {
+      "name": "USDA Agricultural Marketing Service grain transport cost indicators",
+      "category": "Shipping indicators",
+      "url": "https://agtransport.usda.gov/Transportation-Costs/Grain-Transportation-Cost-Indicators/8uye-ieij",
+      "status": "USDA weekly ocean grain transport cost indices importer; 2017=100, not USD/tonne voyage quotes",
+      "publicationPolicy": "USDA AMS aggregated non-confidential and non-copyrighted dataset with source attribution; individual underlying raw freight rate feeds not republished"
+    },
+    {
+      "name": "USDA third-party bulk grain voyage quote chart",
+      "category": "Shipping quotes",
+      "url": "https://agtransport.usda.gov/Bulk/Bulk-Grain-Ocean-Freight-Rates/ehic-wtxb",
+      "status": "Link-only reference; direct quoted prices not ingested",
+      "publicationPolicy": "Chart attributes O'Neil Commodity Consulting; confirm separate redistribution rights before publishing raw rate data"
     }
   ]
 }
