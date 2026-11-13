@@ -13,6 +13,9 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+from news_quality import annotate, summary
+from build_spread_observations import build as update_spread_observations
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
 RETENTION_DAYS = 180
@@ -166,9 +169,10 @@ def build(root=ROOT, now=None):
     context=json.loads((folder/'context.json').read_text(encoding='utf-8')) if (folder/'context.json').exists() else {}
     old_path=folder/'news-archive.json'
     prev=json.loads(old_path.read_text(encoding='utf-8')).get('items',[]) if old_path.exists() else []
-    news=merge_news(prev,collect_news(snapshot),now)
+    news=annotate(merge_news(prev,collect_news(snapshot),now))
+    quality=summary(news)
     archive=dict(generated=iso(now),items=news,retentionDays=RETENTION_DAYS)
-    latest=dict(generated=iso(now),items=news[:100],totalStored=len(news),limit=100)
+    latest=dict(generated=iso(now),items=news[:100],totalStored=len(news),limit=100,quality=quality)
     (folder/'news-latest.json').write_text(json.dumps(latest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     events=extract_events(news,now)
     # Allow curated, source-linked entries; never overwrite or fabricate them.
@@ -183,6 +187,37 @@ def build(root=ROOT, now=None):
     transport_path=folder/'request-health.json'
     transport=json.loads(transport_path.read_text(encoding='utf-8')) if transport_path.exists() else None
     health=build_health(snapshot,watchlist,context,now,transport)
+    health['newsQuality']=quality
+    # Static, inspectable source catalog. Unknown market licences remain pending.
+    routes_path=folder/'freight-routes.json'
+    routes=json.loads(routes_path.read_text(encoding='utf-8')).get('routes',[]) if routes_path.exists() else []
+    valid_rates=[]
+    for route in routes:
+        p=folder/'freight-history'/(route['code']+'.json')
+        if p.exists():
+            try:
+                h=json.loads(p.read_text(encoding='utf-8'))
+                if h.get('redistributionPermitted') is True and h.get('licenseReference') and h.get('unit')==route['unit'] and h.get('code')==route['code']:
+                    valid_rates.append(route['code'])
+            except (ValueError,OSError): pass
+    health['freightRoutes']={'cataloged':len(routes),'licensedHistories':len(valid_rates),'availableCodes':valid_rates}
+    health['abRatios']={'tracked':len(context.get('shareClasses') or []),'licensedPairs':0,'snapshotPairs':0}
+    snapshots=update_spread_observations(root,now)
+    health['abRatios']['snapshotPairs']=len(snapshots.get('pairs',{}))
+    issuer_index={'generated':iso(now),'identityLevel':'Watchlist issuer names and listing symbols, not full legal entity verification',
+                  'entities':[dict(name=w.get('name'),ticker=w.get('ticker'),sector=w.get('sector'),exchange=w.get('exchange'),
+                                   isin='FR0000061459' if w.get('ticker')=='ALPER.PA' else None,
+                                   evidence='https://live.euronext.com/fr/product/equities/FR0000061459-XPAR' if w.get('ticker')=='ALPER.PA' else None)
+                              for w in watchlist.get('tickers',[])]}
+    (folder/'issuer-identities.json').write_text(json.dumps(issuer_index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (folder/'news-quality.json').write_text(json.dumps(dict(generated=iso(now),**quality),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (folder/'dataset-catalog.json').write_text(json.dumps(dict(generated=iso(now),datasets=[
+      {'name':'European issuer directory','path':'data/issuer-identities.json','records':len(issuer_index['entities']),'license':'Original watchlist identities; underlying exchange identifiers subject to source terms'},
+      {'name':'Latest company news','path':'data/news-latest.json','records':len(latest['items']),'license':'Metadata and outbound source links, not reproduced articles'},
+      {'name':'Historical article index','path':'data/news-store/index.json','records':len(news),'license':'Git-backed source-linked metadata; inspect original publisher terms'},
+      {'name':'A/B indicator observations','path':'data/spread-observations.json','records':sum(len(v) for v in snapshots.get('pairs',{}).values()),'license':'Derived research indicators; no raw historical OHLCV'},
+      {'name':'Freight route definitions','path':'data/freight-routes.json','records':len(routes),'license':'Route metadata only; Baltic benchmark quotes require a redistribution license'},
+      {'name':'Source quality','path':'data/source-health.json','records':len(watchlist.get('tickers',[])),'license':'Original scanner telemetry'}]),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     for file,payload in [('news-archive.json',archive),('events.json',dict(generated=iso(now),items=events)),('source-health.json',health)]:
         (folder/file).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Archive: {len(news)} stories | Calendar: {len(events)} sourced events | Health: {health["priced"]}/{health["tracked"]} prices')

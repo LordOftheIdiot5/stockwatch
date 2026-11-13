@@ -97,7 +97,7 @@
       "name": "Avarda",
       "sector": "Banks & insurance",
       "exchange": "Stockholm",
-      "annualVolPct": 35.0,
+      "annualVolPct": 35,
       "medianVolume": 45544
     },
     {
@@ -222,7 +222,7 @@
     },
     {
       "ticker": "4DS.DE",
-      "name": "Daldrup & S\u00f6hne",
+      "name": "Daldrup & Söhne",
       "sector": "Grid & energy",
       "exchange": "XETRA",
       "annualVolPct": 63.4,
@@ -238,13 +238,16 @@
       "medianVolume": 96517
     },
     {
-      "ticker": "PERR.PA",
+      "ticker": "ALPER.PA",
       "name": "Gerard Perrier Industrie",
       "sector": "Grid & energy",
       "exchange": "Paris",
       "annualVolPct": 15.2,
       "medianVolume": 506,
-      "thin": true
+      "thin": true,
+      "isin": "FR0000061459",
+      "priorTicker": "PERR.PA",
+      "identityEvidence": "https://live.euronext.com/fr/product/equities/FR0000061459-XPAR"
     },
     {
       "ticker": "NKT.CO",
@@ -307,7 +310,7 @@
       "name": "Scatec",
       "sector": "Grid & energy",
       "exchange": "Oslo",
-      "annualVolPct": 33.0,
+      "annualVolPct": 33,
       "medianVolume": 313845
     },
     {
@@ -337,10 +340,10 @@
     },
     {
       "ticker": "ORSTED.CO",
-      "name": "\u00d8rsted",
+      "name": "Ørsted",
       "sector": "Grid & energy",
       "exchange": "Copenhagen",
-      "annualVolPct": 31.0,
+      "annualVolPct": 31,
       "medianVolume": 1190532
     },
     {
@@ -405,7 +408,7 @@
       "name": "Saab",
       "sector": "Industry & defence",
       "exchange": "Stockholm",
-      "annualVolPct": 42.0,
+      "annualVolPct": 42,
       "medianVolume": 1555031
     },
     {
@@ -413,7 +416,7 @@
       "name": "Siemens",
       "sector": "Industry & defence",
       "exchange": "XETRA",
-      "annualVolPct": 35.0,
+      "annualVolPct": 35,
       "medianVolume": 1054690
     },
     {
@@ -478,7 +481,7 @@
       "name": "Porsche",
       "sector": "Luxury",
       "exchange": "XETRA",
-      "annualVolPct": 30.0,
+      "annualVolPct": 30,
       "medianVolume": 503529
     },
     {
@@ -541,7 +544,7 @@
       "ticker": "IFX.DE",
       "name": "Infineon",
       "exchange": "XETRA",
-      "annualVolPct": 64.0,
+      "annualVolPct": 64,
       "medianVolume": 4930118,
       "sector": "Original ten"
     },
@@ -744,7 +747,7 @@
       "name": "Logistea",
       "sector": "Property",
       "exchange": "Stockholm",
-      "annualVolPct": 25.0,
+      "annualVolPct": 25,
       "medianVolume": 556667
     },
     {
@@ -776,7 +779,7 @@
       "name": "Cheffelo",
       "sector": "Retail",
       "exchange": "Stockholm",
-      "annualVolPct": 46.0,
+      "annualVolPct": 46,
       "medianVolume": 35660
     },
     {
@@ -824,7 +827,7 @@
       "name": "DOF Group",
       "sector": "Shipping & offshore",
       "exchange": "Oslo",
-      "annualVolPct": 27.0,
+      "annualVolPct": 27,
       "medianVolume": 295853
     },
     {
@@ -840,12 +843,12 @@
       "name": "Frontline",
       "sector": "Shipping & offshore",
       "exchange": "Oslo",
-      "annualVolPct": 45.0,
+      "annualVolPct": 45,
       "medianVolume": 868434
     },
     {
       "ticker": "HAUTO.OL",
-      "name": "H\u00f6egh Autoliners",
+      "name": "Höegh Autoliners",
       "sector": "Shipping & offshore",
       "exchange": "Oslo",
       "annualVolPct": 41.3,
@@ -971,7 +974,7 @@
       "name": "PVA Tepla",
       "sector": "Tech & space",
       "exchange": "XETRA",
-      "annualVolPct": 64.0,
+      "annualVolPct": 64,
       "medianVolume": 73329
     },
     {
@@ -1092,7 +1095,7 @@
       "name": "Qben Infra",
       "sector": "Construction",
       "exchange": "Stockholm",
-      "annualVolPct": 45.0,
+      "annualVolPct": 45,
       "medianVolume": 23576
     },
     {
