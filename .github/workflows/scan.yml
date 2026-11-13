@@ -62,8 +62,11 @@ jobs:
         run: python scripts/build_monthly_archive.py
 
       - name: Optional database archive ingestion
+        # Never block scanner commits / site freshness when the external D1 API is down.
+        continue-on-error: true
         env:
-          STOCKWATCH_ARCHIVE_URL: ${{ secrets.STOCKWATCH_ARCHIVE_URL }}
+          # The Worker endpoint is public; only the token is secret.
+          STOCKWATCH_ARCHIVE_URL: https://stockwatch-research-api.gauchovidar.workers.dev/api/news/ingest
           STOCKWATCH_ARCHIVE_TOKEN: ${{ secrets.STOCKWATCH_ARCHIVE_TOKEN }}
         run: python scripts/push_archive.py
 
