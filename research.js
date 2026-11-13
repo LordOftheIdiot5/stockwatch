@@ -109,7 +109,7 @@ async function loadOfficialSourceHealth(){
  for(const [id,v] of Object.entries(registered?.sources||{})){
   sourceRows.push({name:names[id]||id,status:v.status,
     detail:id==='openfigi'?(v.candidateCount||0)+' possible FIGI matches (not issuer-verified)':
-      id==='entsoe'?(v.pointsChecked||0)+' points checked privately (no rates published)':'',
+      id==='entsoe'?(v.status==='error'?('HTTP '+(v.httpStatus||'—')+' · '+(v.diagnostic||v.errorType||'upstream error')):((v.pointsChecked||0)+' points checked privately (no rates published)')):'',
     url:v.sourceUrl,last:registered?.generated,license:id==='entsoe'?'Raw observations withheld pending item-specific permission':'OpenFIGI reference identifiers'});
  }
  const statusHtml=sourceRows.map(x=>{

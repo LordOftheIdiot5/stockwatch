@@ -188,6 +188,18 @@ def build(root=ROOT):
         try:
             value=entsoe_probe(entsoe_token)
             entries["entsoe"]={"status":"probe_ok",**value}
+        except urllib.error.HTTPError as exc:
+            # Never store exception text or request URL: the latter contains
+            # the securityToken. The HTTP status is sufficient for triage.
+            status = int(exc.code)
+            reason = ("token_not_authorized" if status in (401, 403)
+                      else "invalid_request_or_data_unavailable" if status in (400, 422)
+                      else "provider_rate_limited" if status == 429
+                      else "upstream_unavailable" if status in (500, 502, 503, 504)
+                      else "other_http_error")
+            entries["entsoe"]={"status":"error","errorType":"HTTPError",
+                "httpStatus":status,"diagnostic":reason,
+                "sourceUrl":"https://transparency.entsoe.eu/"}
         except Exception as exc:
             entries["entsoe"]={"status":"error","errorType":type(exc).__name__,
                 "sourceUrl":"https://transparency.entsoe.eu/"}
