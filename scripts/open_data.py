@@ -40,11 +40,20 @@ def utcnow():
 def get_bytes(url, max_bytes=4000000, timeout=20):
     request = urllib.request.Request(url, headers={
         "User-Agent": UA, "Accept": "application/json, text/csv, */*"})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        data = response.read(max_bytes + 1)
-        if len(data) > max_bytes:
-            raise ValueError("response_exceeds_size_cap")
-        return data
+    # Public statistical APIs may intermittently return 429/502/503/504.
+    # Retry only temporary HTTP failures, never persistent 4xx/format errors.
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                data = response.read(max_bytes + 1)
+                if len(data) > max_bytes:
+                    raise ValueError("response_exceeds_size_cap")
+                return data
+        except urllib.error.HTTPError as error:
+            if error.code not in (429, 502, 503, 504) or attempt == 2:
+                raise
+            time.sleep((attempt + 1) * 1.5)
+
 
 def fetch_json(url, max_bytes=4000000):
     return json.loads(get_bytes(url, max_bytes=max_bytes).decode("utf-8-sig"))
