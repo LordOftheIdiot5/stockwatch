@@ -41,6 +41,8 @@ jobs:
         run: node --test tests/test_voyage_math.mjs
       - name: V21 workspace behavior tests
         run: node --test tests/test_workspace_v21.mjs
+      - name: V25 chart math and validation
+        run: node --test tests/test_chart_v25.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
@@ -58,7 +60,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -131,3 +133,14 @@ jobs:
       - name: V24 public research browser checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v24-')
         run: python tests/browser_check_v24.py
+
+      - name: V25 interactive research chart browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v25-')
+        run: python tests/browser_check_v25.py
+      - name: Upload V25 production-state previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v25-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v25-previews
+          path: workspace-previews/
+          if-no-files-found: ignore
