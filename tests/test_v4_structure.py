@@ -9,7 +9,7 @@ class V4Structure(unittest.TestCase):
    html=(ROOT/(name+'.html')).read_text(encoding='utf-8')
    self.assertIn('class="sw-layout"',html,name)
    for target in PAGES:self.assertIn('href="'+target+'.html"',html,name)
-   self.assertIn('src="v4.js"',html,name)
+   self.assertRegex(html,r'src="v4\.js(?:\?[^"]*)?"',name)
  def test_all_routes_have_provenance_and_no_invented_price(self):
   d=json.loads((ROOT/'data/freight-routes.json').read_text())
   self.assertGreaterEqual(len(d['routes']),25)

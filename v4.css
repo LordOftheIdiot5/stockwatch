@@ -143,3 +143,6 @@ body[data-page="index"].sw-workspace-ready .sw-page-head{display:none}
 @media(max-width:740px){.sw-ws-hero{grid-template-columns:1fr;gap:20px;padding:22px}.sw-ws-metrics{grid-template-columns:1fr 1fr}.sw-ws-breadth{grid-column:1/-1}.sw-heatmap-grid,.sw-ws-modules,.sw-identity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sw-ws-legend{margin-left:0}.sw-ws-trust .sw-panel-pad{grid-template-columns:1fr}.sw-ws-module-art{height:84px}}
 @media(max-width:470px){.sw-heatmap-grid,.sw-ws-modules{grid-template-columns:1fr}.sw-ws-pulse{padding:11px}.sw-ws-pulse strong{font-size:17px}.sw-heat-cells{grid-template-columns:repeat(auto-fill,minmax(68px,1fr))}.sw-identity-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.sw-ws-module{transition:none}.sw-ws-module:hover{transform:none}html{scroll-behavior:auto}}
+
+/* V22 shared original brand mark */
+.sw-logo-mark img{display:block;width:100%;height:100%;object-fit:contain;border-radius:9px}.sw-logo-mark:has(img){background:transparent}
