@@ -20,3 +20,7 @@ This integrated branch delivers the first research-lab implementation, not produ
 | V45 | Integrated preview in terminal | Release validation and production acceptance; unresolved pieces above |
 
 No retention approval changed, no private R2 archive exposed, no new paid subscription, no new market-price coverage claimed. Issuer financial metrics are manually checked against public investor announcements and not licensed for bulk resale by implication. Catalog access is metadata-only, not a commercial feed. Current scanner data rights remain an independent review item.
+
+## Release hardening follow-up
+
+Relevant pull requests and manual runs must execute the V30b chart integration, V31 terminal and research lab browser suites regardless of version branch name. Earlier milestone-specific tests with frozen data counts and live credentials remain separately gated. Analytics reject malformed observations, invalid alert directions and non-finite derived DCF values. These safeguards are release candidates pending CI; this does not grant new data rights or establish production deployment.
