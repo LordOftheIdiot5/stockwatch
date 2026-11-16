@@ -71,11 +71,11 @@ body[data-theme="light"]{--sw-heat-pos:#c5eddb;--sw-heat-neg:#f7d2d9;--sw-heat-i
 .sw-card,.sw-panel{border-radius:var(--sw-radius)}
 .sw-top{position:sticky;top:0;z-index:10;background:var(--sw-bg);border-bottom:1px solid var(--sw-edge)}
 body[data-page="index"] .sw-content{max-width:1720px;margin:0 auto}
-body[data-page="index"] .sw-page-head{display:none}
+body[data-page="index"].sw-workspace-ready .sw-page-head{display:none}
 .sw-ws-hero{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:32px;padding:clamp(24px,3vw,48px);border:1px solid var(--sw-edge);border-radius:20px;background:radial-gradient(ellipse at 95% 0%,rgba(22,160,140,.13),transparent 60%),var(--sw-surface);margin-bottom:24px;overflow:hidden}
 .sw-ws-eyebrow{font-size:10px;letter-spacing:.15em;font-weight:800;color:var(--sw-mint)}
-.sw-ws-intro h2{font:800 clamp(30px,4vw,57px)/1.1 Manrope,system-ui,sans-serif;letter-spacing:-.055em;margin:14px 0}
-.sw-ws-intro h2 em{font-style:normal;color:var(--sw-mint)}
+.sw-ws-intro h1{font:800 clamp(30px,4vw,57px)/1.1 Manrope,system-ui,sans-serif;letter-spacing:-.055em;margin:14px 0}
+.sw-ws-intro h1 em{font-style:normal;color:var(--sw-mint)}
 .sw-ws-intro p{color:var(--sw-muted);max-width:480px;font-size:14px;line-height:1.7}
 .sw-ws-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px}
 .sw-ws-hero-visual{padding:clamp(18px,2.4vw,30px);background:var(--sw-card);border:1px solid var(--sw-edge);border-radius:16px;box-shadow:var(--sw-shadow);min-width:0}
