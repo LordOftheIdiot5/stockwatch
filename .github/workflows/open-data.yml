@@ -14,6 +14,9 @@ on:
       - scripts/open_data.py
       - scripts/registered_sources.py
       - scripts/instrument_directory.py
+      - scripts/research_coverage.py
+      - scripts/history_coverage.py
+      - data/research-targets.json
       - tests/test_instrument_directory.py
       - scripts/entsoe_open.py
       - tests/test_entsoe_open.py
@@ -96,11 +99,13 @@ jobs:
           python scripts/open_data.py --mode auto
           python scripts/registered_sources.py
           python scripts/instrument_directory.py
+          python scripts/research_coverage.py
           python scripts/entsoe_open.py
           python scripts/economic_feeds.py
           python scripts/shipping_open.py
           python scripts/shipping_ports.py
           python scripts/shipping_unctad.py
+          python scripts/history_coverage.py
       - name: Commit official-source datasets without racing the market scanner
         if: github.ref == 'refs/heads/main'
         run: python scripts/publish_data.py --mode official
