@@ -24,6 +24,18 @@ class MarketHistoryTests(unittest.TestCase):
  def test_import_equity_history_with_license(self):
   self.write_rows(['date','close','volume'],[{'date':'2026-11-03','close':'11','volume':'100'},{'date':'2026-11-01','close':'10','volume':'100'},{'date':'2026-11-02','close':'12','volume':'100'}]);self.manifest_data('equity',ticker='TEST.OL',currency='NOK',adjusted=False)
   out=import_csv(self.root,self.rows,self.manifest);data=json.loads(out.read_text());self.assertEqual(len(data['bars']),3);self.assertTrue(data['redistributionPermitted']);self.assertEqual(data['bars'][0]['date'],'2026-11-01')
+ def test_history_refresh_keeps_prior_dates_and_rejects_conflicts(self):
+  def dates(start,vals):return [{'date':f'2026-11-{start+i:02d}','close':str(v),'volume':'100'} for i,v in enumerate(vals)]
+  self.manifest_data('equity',ticker='TEST.OL',currency='NOK',adjusted=False)
+  self.write_rows(['date','close','volume'],dates(1,[10,11,12]))
+  out=import_csv(self.root,self.rows,self.manifest)
+  self.write_rows(['date','close','volume'],dates(3,[12,13,14]))
+  import_csv(self.root,self.rows,self.manifest)
+  self.assertEqual(len(json.loads(out.read_text())['bars']),5)
+  before=out.read_text()
+  self.write_rows(['date','close','volume'],dates(3,[99,13,14]))
+  with self.assertRaisesRegex(ValueError,'Conflicting historical observation'):import_csv(self.root,self.rows,self.manifest)
+  self.assertEqual(out.read_text(),before)
  def test_reject_wrong_freight_unit(self):
   self.write_rows(['date','value'],[{'date':'2026-11-01','value':'100'},{'date':'2026-11-02','value':'110'},{'date':'2026-11-03','value':'105'}]);self.manifest_data('freight',routeCode='C3',unit='USD/day')
   with self.assertRaisesRegex(ValueError,'unit'):import_csv(self.root,self.rows,self.manifest)

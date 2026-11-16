@@ -11,6 +11,8 @@ on:
       - 'brand/**'
       - 'stocks.html'
       - 'company.html'
+      - 'research.html'
+      - 'data/research-targets.json'
       - 'data/research-onboarding.json'
       - 'research.js'
       - 'scripts/**'
@@ -44,6 +46,7 @@ jobs:
           node --check v4.js
           node --check research.js
           node --check brand/brand.js
+          node --check brand/research-coverage.js
       - name: Watchlist identity migration guard
         run: |
           python - <<'PY'
@@ -55,7 +58,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -110,3 +113,21 @@ jobs:
           name: stockwatch-v23-previews
           path: workspace-previews/
           if-no-files-found: ignore
+
+      - name: V24 live mapping and history audit
+        if: startsWith(github.head_ref, 'feature/stockwatch-v24-') && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: |
+          python scripts/research_coverage.py
+          python scripts/history_coverage.py
+          python - <<'PY'
+          import json
+          d=json.load(open('data/research-coverage.json'))
+          assert len(d['records'])==75
+          assert sum(r['mappingStatus']=='candidate' for r in d['records'])>=30
+          assert all(r['quoteStatus']=='not_connected' for r in d['records'])
+          PY
+      - name: V24 public research browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v24-')
+        run: python tests/browser_check_v24.py
