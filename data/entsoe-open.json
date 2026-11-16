@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-16T14:28:30.879432Z",
+  "generated": "2026-11-16T19:58:38.947912Z",
   "source": "ENTSO-E Transparency Platform",
   "sourceUrl": "https://transparency.entsoe.eu/",
   "license": "CC BY 4.0",
@@ -17,7 +17,585 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4086.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4066.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4053.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3990.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3972.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4008.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4004.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3934.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3911.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3903.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3914.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3862.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3874.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3841.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3851.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3835.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3847.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3821.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3830.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3837.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3893.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3917.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3945.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3942.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4010.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4039.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4083.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4159.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4176.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4140.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4222.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4271.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4282.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4290.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4334.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4360.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4358.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4323.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4383.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4412.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4413.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4399.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4395.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4418.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4405.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4407.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4402.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4450.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4410.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4421.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4437.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4460.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4392.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4509.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4468.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4497.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4575.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4573.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4544.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4633.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4650.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4730.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4720.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4721.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4779.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4771.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4806.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4743.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4773.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4764.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4780.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4796.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4780.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4718.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4709.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4674.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4646.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4652.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4617.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4554.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4589.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4554.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4529.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4434.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4429.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4387.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4344.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4323.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4258.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4188.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4133.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4055.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4160.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4062.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4063.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 4032.0,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "load-forecast:NO2",
@@ -609,7 +1187,573 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3264.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3232.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3216.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3207.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3166.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3185.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3175.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3189.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3188.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3191.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3215.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3177.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3173.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3198.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3154.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3204.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3162.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3141.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3137.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3212.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3180.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3187.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3207.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3217.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3237.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3225.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3288.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3291.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3302.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3304.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3344.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3331.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3341.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3345.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3354.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3343.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3364.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3427.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3381.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3410.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3406.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3438.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3416.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3407.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3408.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3389.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3444.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3393.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3439.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3454.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3432.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3462.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3475.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3460.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3483.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3487.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3500.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3538.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3526.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3505.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3526.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3563.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3550.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3551.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3578.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3568.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3530.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3584.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3578.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3517.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3546.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3554.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3522.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3512.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3513.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3525.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3544.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3541.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3510.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3517.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3506.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3512.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3452.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3471.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3467.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3430.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3397.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3404.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3366.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3378.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3286.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3298.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3278.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3291.0,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "load-forecast:NO4",
@@ -2845,7 +3989,585 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8976.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8939.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8908.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8880.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8853.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8830.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8806.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8781.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8756.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8728.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8698.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8666.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8633.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8611.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8600.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8603.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8618.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8642.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8677.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8722.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8778.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8836.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8896.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 8959.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9028.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9102.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9184.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9273.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9372.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9469.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9566.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9664.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9762.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9849.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9923.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9986.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10041.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10085.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10122.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10151.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10178.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10197.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10212.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10224.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10237.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10254.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10278.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10311.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10349.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10380.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10399.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10408.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10411.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10430.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10470.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10531.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10611.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10695.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10781.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10870.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10963.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11051.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11136.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11219.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11303.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11359.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11392.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11401.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11389.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11364.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11327.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11279.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11221.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11158.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11091.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11019.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10941.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10851.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10746.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10627.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10495.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10371.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10257.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10152.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10052.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9953.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9852.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9747.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9639.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9553.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9488.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9446.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9441.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9425.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9394.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 9347.0,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "load-forecast:SE4",
@@ -3743,7 +5465,525 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11065.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10982.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10899.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10817.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10722.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10659.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10597.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10534.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10486.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10454.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10423.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10391.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10389.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10364.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10389.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10442.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10477.2,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10511.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10545.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10593.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10632.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10671.2,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10710.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10789.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10800.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10808.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10820.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10834.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10849.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10863.2,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10892.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10909.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10927.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10944.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10975.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10981.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10975.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10972.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10965.7,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10959.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10952.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10926.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10923.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10926.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10931.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10934.7,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10939.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10961.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10997.7,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11034.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11070.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11149.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11199.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11249.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11299.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11405.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11426.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11405.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11364.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11360.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11364.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11370.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11374.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11370.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11255.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11204.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11153.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11103.2,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10976.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10958.3,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10976.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11002.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11020.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11002.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10845.4,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10787.1,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10728.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10670.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10621.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10570.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10519.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10468.5,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10604.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10558.8,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10512.9,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10466.9,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "load-forecast:DE-LU",
@@ -3753,7 +5993,585 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 44455.408091,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 44138.26855,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43843.877194,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43489.18268,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43368.265301,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43193.83924,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43100.132881,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42976.848083,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42909.232259,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42880.673432,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42767.733528,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42753.620895,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42906.370382,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 42990.325323,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43041.051333,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43140.617043,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43332.775739,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43511.481358,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 43956.946556,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 44271.18995,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 44791.514879,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 45385.453552,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 45971.792603,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 46332.262936,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 46762.344557,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 47300.126776,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 48098.317563,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 48880.501656,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 49461.489655,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 50159.353292,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 50710.439527,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 51305.147694,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 52006.855783,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 52479.275603,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53036.686861,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53693.021467,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54003.606597,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54412.559962,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54780.887987,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55230.44042,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55755.505837,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55905.597226,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56329.203071,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56174.288687,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56447.331379,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56223.582023,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55896.194129,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55565.457301,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55214.433612,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54993.303306,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54728.138864,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54236.015645,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54135.694214,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53776.064466,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53571.048007,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53520.389365,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53638.296304,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53484.122349,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53497.575924,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53774.55095,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54306.967242,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54535.509091,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54986.246054,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55779.930469,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56520.566995,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57101.796203,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57535.998751,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57476.484877,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57936.268356,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57905.620803,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 58087.687343,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 58071.728653,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57828.941808,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57583.789755,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 57227.969699,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56787.779104,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 56150.727056,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55665.766618,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 55195.506761,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54691.15781,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 54172.578014,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53858.97011,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 53327.312032,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 52968.757552,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 52640.872408,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 52286.961347,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 51522.755584,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 50912.872896,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 50057.848973,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 49503.545117,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 49025.163139,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 48522.208695,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 46785.73754,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 46306.566536,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 46041.454568,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 45579.802923,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "load-forecast:FR",
@@ -4351,7 +7169,585 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11889.971,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11744.227,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11674.716,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11762.829,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11759.965,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11682.481,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11637.024,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11643.29,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11596.357,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11598.355,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11642.37,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11625.016,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11641.974,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11708.938,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11707.513,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11674.944,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11666.98,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11624.66,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11604.634,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11652.732,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11785.344,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11776.99,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11795.18,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11836.822,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12005.27,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12060.675,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12179.498,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12308.333,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12481.838,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12588.867,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12594.091,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12707.607,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12829.549,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12882.389,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13011.6,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13044.535,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13162.049,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13208.496,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13255.935,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13300.734,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13306.236,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13294.846,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13329.557,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13428.415,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13473.664,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13507.052,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13446.762,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13526.165,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13571.596,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13638.818,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13648.933,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13611.982,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13617.55,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13637.126,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13541.655,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13537.991,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13490.705,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13600.294,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13572.982,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13625.572,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13591.009,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13501.992,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13637.802,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13859.793,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14073.376,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14341.178,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14732.792,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 15015.599,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 15145.399,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 15101.365,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14973.447,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14945.264,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14655.583,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14488.412,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14429.163,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14314.641,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14206.702,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 14083.002,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13968.592,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13851.026,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13849.383,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13763.761,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13637.804,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13646.955,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13583.233,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13453.658,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13377.084,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 13314.562,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12919.763,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12801.725,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12758.701,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12698.574,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12115.064,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12020.154,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 12024.887,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 11938.863,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "flow:NO1:SE3",
@@ -4362,7 +7758,15 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 0.0,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "flow:SE3:NO1",
@@ -4373,7 +7777,585 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2102.314216,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2049.334342,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2068.454956,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2224.01253,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2048.241838,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2005.660305,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2090.381943,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2232.645701,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2168.533621,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2144.222511,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2196.027164,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2100.464586,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2148.405996,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2201.437498,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2133.893331,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2164.387094,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2213.393011,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2200.550674,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2194.197808,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2168.610431,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2174.450835,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2224.735018,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2169.878987,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2107.658548,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2135.274074,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2108.296306,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2029.586227,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1999.670506,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1892.843393,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1674.81841,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1604.816872,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1700.337599,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1874.029679,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1810.332365,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1760.237124,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1836.556307,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1979.981182,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1838.572622,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1870.177339,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1951.685773,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2009.281656,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2022.643301,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1927.369281,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1847.193108,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1795.052536,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1804.000641,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1735.397768,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1720.369291,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1666.175075,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1615.185852,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1674.975329,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1964.535243,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2195.481853,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2049.017449,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1991.61306,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2025.989094,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2191.376574,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2218.667522,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2075.864137,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2059.20412,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2129.179121,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2284.242227,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2311.544801,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2103.18367,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2145.952714,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2076.763361,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2155.507919,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2274.736822,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2304.488415,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2290.482323,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2129.474531,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2119.282673,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2031.667086,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1975.978302,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2031.438935,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2042.089997,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2014.589798,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2068.778816,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2002.239078,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2011.308601,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2046.560788,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1968.70957,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1930.82829,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2178.237228,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2342.572286,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2052.286748,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2049.82819,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1919.790074,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1900.237386,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1920.486218,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1880.691524,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1673.869934,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2065.318364,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2254.53629,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1992.670394,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1819.564866,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "flow:NO4:SE1",
@@ -4384,7 +8366,15 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 0.0,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "flow:SE1:NO4",
@@ -4395,7 +8385,585 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 135.267945,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 119.543986,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 106.585086,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T00:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 149.522362,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 158.075902,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 191.865457,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 142.234821,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 104.993351,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 89.764034,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 169.242216,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 210.054762,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T02:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 170.780735,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 173.613155,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 170.741797,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 172.937944,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T03:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 201.419611,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 177.247937,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 153.571815,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 164.124213,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T04:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 187.319675,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 269.147468,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 309.835879,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 325.703264,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T05:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 313.555885,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 337.88029,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 366.35484,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 329.41109,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T06:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 343.344428,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 410.38306,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 387.546083,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 390.972896,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T07:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 413.966111,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 428.870576,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 452.942509,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 434.691859,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T08:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 471.062159,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 407.791027,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 399.406091,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 491.30328,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T09:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 467.726718,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 373.677639,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 388.932575,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 400.850728,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T10:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 391.892642,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 344.124968,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 356.914585,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 311.076248,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T11:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 337.963603,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 305.81134,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 279.201759,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 295.137214,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T12:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 383.968562,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 328.123318,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 311.776883,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 261.109942,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 254.701305,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 236.329,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 229.105379,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 210.45938,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 219.947914,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 230.485225,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 273.853521,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 274.370717,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 217.192576,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 209.962082,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 169.084377,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 189.486027,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 180.045112,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 240.591743,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 244.429641,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 236.739388,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 274.82103,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 221.535183,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 225.06655,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 244.075944,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 283.022366,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 300.410614,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 233.133153,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 274.462617,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T19:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 269.367277,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 230.548702,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 207.292913,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 292.07426,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T20:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 322.000954,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 319.584133,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 317.833908,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 286.734914,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T21:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 258.635588,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 274.729523,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 283.941221,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 290.012176,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T22:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 314.249367,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 485.8423,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 523.112969,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 465.975138,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T23:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 449.990381,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "flow:NO2:DK1",
@@ -4406,7 +8974,141 @@
       "startUtc": "2026-11-15T00:00:00Z",
       "endUtc": "2026-11-16T00:00:00Z",
       "unit": "MW",
-      "status": "unavailable"
+      "points": [
+        {
+          "startUtc": "2026-11-15T00:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 0.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 0.19,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T01:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 0.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1.38,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T13:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2.19,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 3.32,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 153.86,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 321.26,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T14:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 502.42,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 559.76,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 495.55,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 405.99,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T15:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 369.61,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 446.14,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 325.17,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 306.65,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T16:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 148.11,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:00:00Z",
+          "resolutionMinutes": 15,
+          "mw": 10.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:15:00Z",
+          "resolutionMinutes": 15,
+          "mw": 46.66,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T17:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 2.0,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:30:00Z",
+          "resolutionMinutes": 15,
+          "mw": 1.75,
+          "curveType": "A03"
+        },
+        {
+          "startUtc": "2026-11-15T18:45:00Z",
+          "resolutionMinutes": 15,
+          "mw": 0.0,
+          "curveType": "A03"
+        }
+      ],
+      "status": "ok"
     },
     {
       "id": "flow:DK1:NO2",
