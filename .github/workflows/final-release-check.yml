@@ -71,6 +71,8 @@ jobs:
         run: node --test tests/test_research_lab.mjs
       - name: Attention signal evidence and recency tests
         run: node --test tests/test_stock_attention.mjs
+      - name: Price observation freshness tests
+        run: node --test tests/test_price_freshness.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
