@@ -175,3 +175,17 @@ body[data-page="index"].sw-workspace-ready .sw-page-head{display:none}
 .sw-history-source strong{color:var(--sw-text)}
 .sw-undated-spark{width:100%;max-width:670px;margin:15px auto 0}.sw-undated-spark svg{height:110px;width:100%}
 @media(max-width:550px){.sw-chart-pro{padding:10px}.sw-chart-pro .sw-chart-plot{height:210px}.sw-chart-pro .sw-axis{font-size:15px}.sw-chart-readout{font-size:11px}.sw-chart-inspect label{flex-direction:column;align-items:stretch;gap:6px}.sw-chart-inspect input[type=range]{flex:auto;width:100%}}
+
+/* V26 — readable, responsive typed relationship explorer */
+.sw-intel-panel{margin-top:20px}.sw-intel-map{padding:24px 16px;border:1px solid var(--sw-edge);border-radius:14px;background:radial-gradient(ellipse at 50% 0%,rgba(40,190,162,.12),transparent 65%),var(--sw-bg);margin:18px 0}
+.sw-intel-center,.sw-intel-node{display:grid;gap:7px;border:1px solid var(--sw-edge);background:var(--sw-card);padding:15px;border-radius:12px;overflow-wrap:anywhere;min-width:0}
+.sw-intel-center{max-width:350px;margin:auto;text-align:center;border-color:var(--sw-mint)}
+.sw-intel-center strong{font-size:22px;letter-spacing:-.025em}.sw-intel-center small,.sw-intel-node small{font-size:10px;color:var(--sw-mint);font-weight:800;letter-spacing:.07em}
+.sw-intel-center span,.sw-intel-node span,.sw-intel-mini .sw-peer span{font-size:12px;color:var(--sw-muted);line-height:1.5}
+.sw-intel-connector{height:27px;width:1px;background:var(--sw-mint);margin:auto;opacity:.6}
+.sw-intel-branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:12px;position:relative}
+.sw-intel-branches:before{content:"";position:absolute;top:-1px;left:12%;right:12%;height:1px;background:var(--sw-mint);opacity:.3}
+.sw-intel-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:10px;margin:12px 0 24px}
+.sw-intel-mini .sw-peer{gap:7px;line-height:1.5}.sw-intel-peer{text-align:left;font:inherit;color:var(--sw-text);cursor:pointer}.sw-intel-peer:focus-visible{outline:2px solid var(--sw-mint);outline-offset:2px}
+.sw-intel-summary{margin-top:24px}.sw-intel-panel #intelListing{min-width:0;max-width:100%;flex:1}
+@media(max-width:600px){.sw-intel-map{padding:14px 10px}.sw-intel-branches{grid-template-columns:1fr}.sw-intel-branches:before{display:none}.sw-intel-mini{grid-template-columns:1fr}.sw-intel-center strong{font-size:19px}}
