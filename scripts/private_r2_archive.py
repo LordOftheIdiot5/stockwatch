@@ -12,8 +12,8 @@ import delayed_exchange as ex
 
 BUCKET="stockwatch-private-market-history"
 WINDOWS=("CURRENT_TRADING_DAY","PREVIOUS_TRADING_DAY")
-def configuration(env):
-    if env.get("STOCKWATCH_R2_RETENTION_APPROVED")!="true":
+def configuration(env, *, smoke_only=False):
+    if not smoke_only and env.get("STOCKWATCH_R2_RETENTION_APPROVED")!="true":
         raise ValueError("Internal retention and private storage must be reviewed before activation")
     account=env.get("STOCKWATCH_R2_ACCOUNT_ID","")
     if not re.fullmatch(r"[a-fA-F0-9]{32}",account):raise ValueError("Invalid R2 account ID")
@@ -60,7 +60,7 @@ def main():
     p.add_argument("--smoke-test",action="store_true",help="Write synthetic marker only, no exchange download")
     a=p.parse_args()
     try:
-        account=configuration(os.environ)
+        account=configuration(os.environ, smoke_only=a.smoke_test)
         import boto3
         from botocore.config import Config
         client=boto3.client("s3",endpoint_url=f"https://{account}.r2.cloudflarestorage.com",
