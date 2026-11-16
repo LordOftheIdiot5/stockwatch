@@ -25,3 +25,18 @@ collection job. No quote price, trade row, or raw archive enters GitHub Pages,
 CI artifacts or Leivro exports. Persistent private storage and trade
 normalization (including corrections, cancellations, market sessions, exact
 ISIN/MIC mappings and currency) are separate implementation steps.
+
+## Identity reconciliation (V29e)
+
+Use `python scripts/exchange_identity.py --market OSL` with the existing
+STOCKWATCH_OPENFIGI_KEY environment variable. For authorized persistent internal
+research, pass `--archive /private/exchange-data/euronext/archive.zip` and
+`--private-output /private/exchange-data/identity-audit.json`. No data is written
+to the repository. Only the exact MIC and checksum-valid ISIN are submitted to
+OpenFIGI; no prices, quantities or trade timestamps are submitted. A unique
+instrument FIGI must match a unique existing listing at that MIC. Duplicate
+FIGIs, multiple observed ISINs for one record and conflicting known ISINs are
+rejected. A successful join remains a candidate for human review, not verified
+active-listing status or permission to publish. Segment MICs are not silently
+mapped to operating MICs. CI reports a whole-universe count and validation
+status, not the exchange-derived records. Do not publish the private output.
