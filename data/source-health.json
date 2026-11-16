@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-16T08:07:01Z",
-  "latestScan": "2026-11-16T08:05:48+00:00",
-  "scanAgeHours": 0.02,
-  "contextAgeHours": 0.02,
+  "generated": "2026-11-16T09:07:18Z",
+  "latestScan": "2026-11-16T09:05:48+00:00",
+  "scanAgeHours": 0.03,
+  "contextAgeHours": 0.03,
   "tracked": 138,
   "priced": 138,
   "missing": [],
@@ -86,7 +86,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 64,
+  "storedStories": 58,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -100,53 +100,53 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 65.5,
+      "avgLatencyMs": 165.9,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 531.3,
+      "avgLatencyMs": 572.0,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1810.2,
+      "avgLatencyMs": 1377.6,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
       "succeeded": 594,
       "failed": 0,
-      "avgLatencyMs": 267.4,
+      "avgLatencyMs": 367.1,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3381.1,
+      "avgLatencyMs": 2567.9,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 416,
-    "relevant": 311,
-    "review": 96,
+    "total": 424,
+    "relevant": 317,
+    "review": 98,
     "duplicates": 12,
     "issuerLinked": 0,
     "categories": {
       "Earnings / results": 73,
-      "Dividends": 5,
+      "Dividends": 6,
       "M&A": 10,
       "Guidance": 18,
-      "Contracts": 21,
+      "Contracts": 23,
       "Capital & ownership": 0,
-      "Management": 15,
-      "General": 274
+      "Management": 16,
+      "General": 278
     }
   },
   "freightRoutes": {
