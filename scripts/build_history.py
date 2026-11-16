@@ -1,4 +1,4 @@
-"""Build source-backed historical OHLCV caches for Stockwatch company charts.
+"""Optional local-only historical cache; not a public history publishing pipeline.
 
 Run from the repository root:
   python scripts/build_history.py --limit 20
@@ -7,7 +7,9 @@ Run from the repository root:
 This is an OPTIONAL enrichment job, separate from the time-sensitive scanner.
 It uses the repo's existing scripts/sources.py Yahoo chart client, with a
 conservative delay. Yahoo is an unofficial endpoint; check usage/redistribution
-rights before commercializing, and use a licensed provider if necessary.
+rights before obtaining or using this data, and use a licensed provider if necessary.
+The local cache is intentionally outside the deployed repository and must not
+be copied to public data/history. Use import_licensed_history.py for licensed series.
 """
 from __future__ import annotations
 
@@ -22,7 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-OUT = ROOT / "data" / "history"
+OUT = Path.home() / ".cache" / "stockwatch" / "private-history"
 
 
 def validate_bars(bars: list[dict]) -> list[dict]:
