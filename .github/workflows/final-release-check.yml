@@ -45,6 +45,8 @@ jobs:
         run: node --test tests/test_chart_v25.mjs
       - name: V25b research universe tests
         run: node --test tests/test_universe_v25b.mjs
+      - name: V26 intelligence graph tests
+        run: node --test tests/test_intelligence_v26.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
@@ -62,7 +64,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -150,3 +152,14 @@ jobs:
       - name: V25b expanded equity directory browser check
         if: startsWith(github.head_ref, 'feature/stockwatch-v25b-')
         run: python tests/browser_check_v25b.py
+
+      - name: V26 graph browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v26-')
+        run: python tests/browser_check_v26.py
+      - name: Upload V26 graph previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v26-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v26-previews
+          path: workspace-previews/
+          if-no-files-found: ignore
