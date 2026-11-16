@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T13:08:52Z",
+  "generated": "2026-11-16T14:17:26Z",
   "mode": "weekly",
   "notice": "Official statistical series, not tradable live security prices or freight quotations.",
   "series": [
@@ -1125,7 +1125,7 @@
         }
       ],
       "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.EUR.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-19",
-      "observedAt": "2026-11-16T13:08:32Z",
+      "observedAt": "2026-11-16T14:16:52Z",
       "license": "NLOD 2.0"
     },
     {
@@ -1500,7 +1500,7 @@
         }
       ],
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata&lastNObservations=90",
-      "observedAt": "2026-11-16T13:08:37Z",
+      "observedAt": "2026-11-16T14:16:57Z",
       "license": "ECB statistics free reuse, attribution; third-party exceptions"
     },
     {
@@ -1855,7 +1855,7 @@
         }
       ],
       "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-19",
-      "observedAt": "2026-11-16T13:08:32Z",
+      "observedAt": "2026-11-16T14:16:52Z",
       "license": "NLOD 2.0"
     },
     {
@@ -1958,7 +1958,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-16T13:08:40Z",
+      "observedAt": "2026-11-16T14:17:18Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2057,7 +2057,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DK&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-16T13:08:39Z",
+      "observedAt": "2026-11-16T14:17:18Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2160,7 +2160,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=FR&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-16T13:08:40Z",
+      "observedAt": "2026-11-16T14:17:19Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2259,7 +2259,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=NO&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-16T13:08:38Z",
+      "observedAt": "2026-11-16T14:17:17Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2358,7 +2358,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=SE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-16T13:08:39Z",
+      "observedAt": "2026-11-16T14:17:18Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     }
   ],
@@ -2369,8 +2369,8 @@
       "license": "NLOD 2.0; no personal/role data collected",
       "documentation": "https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T13:08:52Z",
-      "lastAttemptAt": "2026-11-16T13:08:52Z",
+      "lastSuccessAt": "2026-11-16T14:17:26Z",
+      "lastAttemptAt": "2026-11-16T14:17:26Z",
       "error": null,
       "attempted": 0,
       "candidates": 28
@@ -2381,8 +2381,8 @@
       "license": "ECB statistics free reuse, attribution; third-party exceptions",
       "documentation": "https://data.ecb.europa.eu/help/api/data-examples",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T13:08:37Z",
-      "lastAttemptAt": "2026-11-16T13:08:32Z",
+      "lastSuccessAt": "2026-11-16T14:16:57Z",
+      "lastAttemptAt": "2026-11-16T14:16:52Z",
       "records": 1,
       "error": null
     },
@@ -2392,8 +2392,8 @@
       "license": "Eurostat reuse policy; dataset exceptions apply",
       "documentation": "https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-introduction",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T13:08:40Z",
-      "lastAttemptAt": "2026-11-16T13:08:38Z",
+      "lastSuccessAt": "2026-11-16T14:17:19Z",
+      "lastAttemptAt": "2026-11-16T14:17:17Z",
       "records": 5,
       "error": null
     },
@@ -2403,8 +2403,8 @@
       "license": "NLOD 2.0; only publicly disclosed positions",
       "documentation": "https://ssr.finanstilsynet.no/api/v2/",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T13:08:43Z",
-      "lastAttemptAt": "2026-11-16T13:08:40Z",
+      "lastSuccessAt": "2026-11-16T14:17:21Z",
+      "lastAttemptAt": "2026-11-16T14:17:19Z",
       "records": 103,
       "error": null
     },
@@ -2414,11 +2414,11 @@
       "license": "CC0 public reference data",
       "documentation": "https://www.gleif.org/en/lei-data/gleif-api",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T13:08:52Z",
-      "lastAttemptAt": "2026-11-16T13:08:52Z",
+      "lastSuccessAt": "2026-11-16T14:17:26Z",
+      "lastAttemptAt": "2026-11-16T14:17:26Z",
       "error": null,
-      "attempted": 12,
-      "candidates": 69
+      "attempted": 6,
+      "candidates": 72
     },
     {
       "id": "norges_bank",
@@ -2426,8 +2426,8 @@
       "license": "NLOD 2.0",
       "documentation": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T13:08:32Z",
-      "lastAttemptAt": "2026-11-16T13:08:31Z",
+      "lastSuccessAt": "2026-11-16T14:16:52Z",
+      "lastAttemptAt": "2026-11-16T14:16:52Z",
       "records": 2,
       "error": null
     },
@@ -2436,10 +2436,10 @@
       "name": "World Bank WDI",
       "license": "CC BY 4.0, subject to indicator-level third-party exceptions",
       "documentation": "https://data.worldbank.org/summary-terms-of-use",
-      "status": "ok",
+      "status": "error",
       "lastSuccessAt": "2026-11-16T13:08:38Z",
-      "lastAttemptAt": "2026-11-16T13:08:37Z",
-      "error": null,
+      "lastAttemptAt": "2026-11-16T14:16:57Z",
+      "error": "TimeoutError",
       "records": 18
     }
   ],
@@ -3607,6 +3607,42 @@
       "ticker": "AFG.OL",
       "searchedName": "AF Gruppen",
       "checkedAt": "2026-11-16T13:08:51Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5967007LIEEXZXI5D463",
+      "legalName": "NRC GROUP ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXI5D463",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "NRC.OL",
+      "searchedName": "NRC Group",
+      "checkedAt": "2026-11-16T14:17:22Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5967007LIEEXZXIHPK59",
+      "legalName": "SELVAAG BOLIG ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXIHPK59",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "SBO.OL",
+      "searchedName": "Selvaag Bolig",
+      "checkedAt": "2026-11-16T14:17:24Z"
+    },
+    {
+      "provider": "gleif",
+      "lei": "5967007LIEEXZXHF4O96",
+      "legalName": "Veidekke ASA",
+      "registrationStatus": "ISSUED",
+      "sourceUrl": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXHF4O96",
+      "verified": false,
+      "match": "unique_normalized_exact_name_candidate",
+      "ticker": "VEI.OL",
+      "searchedName": "Veidekke",
+      "checkedAt": "2026-11-16T14:17:26Z"
     }
   ],
   "identityLookups": [
@@ -4659,6 +4695,42 @@
       "provider": "gleif",
       "checkedAt": "2026-11-16T13:08:52Z",
       "result": "no_unique_match"
+    },
+    {
+      "ticker": "NRC.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-16T14:17:22Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "QBEN.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-16T14:17:22Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "RAIL.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-16T14:17:23Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "SBO.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-16T14:17:24Z",
+      "result": "candidate"
+    },
+    {
+      "ticker": "SKA-B.ST",
+      "provider": "gleif",
+      "checkedAt": "2026-11-16T14:17:25Z",
+      "result": "no_unique_match"
+    },
+    {
+      "ticker": "VEI.OL",
+      "provider": "gleif",
+      "checkedAt": "2026-11-16T14:17:26Z",
+      "result": "candidate"
     }
   ],
   "identityNote": "Unverified name-search suggestions, never automatically linked to issuers.",
