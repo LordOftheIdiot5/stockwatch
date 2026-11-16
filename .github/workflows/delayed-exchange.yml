@@ -6,6 +6,8 @@ on:
   pull_request:
     paths:
       - 'scripts/delayed_exchange.py'
+      - 'scripts/exchange_capacity.py'
+      - 'tests/test_exchange_capacity.py'
       - 'tests/test_delayed_exchange.py'
       - 'scripts/exchange_identity.py'
       - 'tests/test_exchange_identity.py'
@@ -36,3 +38,17 @@ jobs:
         env:
           STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
         run: python scripts/exchange_identity.py --market OSL
+
+  capacity:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Offline report capacity tests
+        run: python -m unittest discover -s tests -p test_exchange_capacity.py -v
+      - name: Measure seven previous-day equity reports
+        run: python scripts/exchange_capacity.py
