@@ -71,7 +71,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-') || startsWith(github.head_ref, 'feature/stockwatch-v29-') || startsWith(github.head_ref, 'feature/stockwatch-v29b-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-') || startsWith(github.head_ref, 'feature/stockwatch-v29-') || startsWith(github.head_ref, 'feature/stockwatch-v29b-') || startsWith(github.head_ref, 'feature/stockwatch-v29f-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -182,3 +182,7 @@ jobs:
       - name: V29b licensed reference price browser checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v29b-')
         run: python tests/browser_check_v29b.py
+
+      - name: V29f A/B discovery and price priority browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v29f-')
+        run: python tests/browser_check_v29f.py

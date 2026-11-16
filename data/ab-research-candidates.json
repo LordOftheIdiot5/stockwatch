@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "https://www.openfigi.com/api/documentation",
+  "sourceGenerated": "2026-11-16T20:17:50Z",
+  "notice": "Exact directory name and class suffix candidates, not verified active listings, issuer identity or equivalent economic rights. No new prices, stationarity or trading signals.",
+  "records": [
+    {
+      "id": "XHEL:ALANDSBANKEN",
+      "name": "ALANDSBANKEN",
+      "mic": "XHEL",
+      "venue": "Helsinki",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "ALBAV",
+        "figi": "BBG000BR6NM6",
+        "shareClassFIGI": "BBG001SBV2R4",
+        "name": "ALANDSBANKEN-A"
+      },
+      "b": {
+        "ticker": "ALBBV",
+        "figi": "BBG000BR6Q58",
+        "shareClassFIGI": "BBG001SBV2S3",
+        "name": "ALANDSBANKEN-B"
+      }
+    },
+    {
+      "id": "XHEL:METSA BOARD OYJ",
+      "name": "METSA BOARD OYJ",
+      "mic": "XHEL",
+      "venue": "Helsinki",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "METSA",
+        "figi": "BBG000BVTW60",
+        "shareClassFIGI": "BBG001SHZPD1",
+        "name": "METSA BOARD OYJ-A"
+      },
+      "b": {
+        "ticker": "METSB",
+        "figi": "BBG000BVTV99",
+        "shareClassFIGI": "BBG001S9MZJ5",
+        "name": "METSA BOARD OYJ-B"
+      }
+    },
+    {
+      "id": "XHEL:ORION OYJ-CLASS",
+      "name": "ORION OYJ-CLASS",
+      "mic": "XHEL",
+      "venue": "Helsinki",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "ORNAV",
+        "figi": "BBG000PPF018",
+        "shareClassFIGI": "BBG001SR7KZ7",
+        "name": "ORION OYJ-CLASS A"
+      },
+      "b": {
+        "ticker": "ORNBV",
+        "figi": "BBG000PPDYY0",
+        "shareClassFIGI": "BBG001SK5KV8",
+        "name": "ORION OYJ-CLASS B"
+      }
+    },
+    {
+      "id": "XSTO:ACRINOVA AB",
+      "name": "ACRINOVA AB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "ACRIA",
+        "figi": "BBG00864N5X4",
+        "shareClassFIGI": "BBG007R5S2F2",
+        "name": "ACRINOVA AB-A"
+      },
+      "b": {
+        "ticker": "ACRIB",
+        "figi": "BBG00Z192KC1",
+        "shareClassFIGI": "BBG00Z1914N6",
+        "name": "ACRINOVA AB-B"
+      }
+    },
+    {
+      "id": "XSTO:ELECTROLUX AB",
+      "name": "ELECTROLUX AB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "ELUXA",
+        "figi": "BBG000BC0YZ7",
+        "shareClassFIGI": "BBG001S687P2",
+        "name": "ELECTROLUX AB-A"
+      },
+      "b": {
+        "ticker": "ELUXB",
+        "figi": "BBG000BC1188",
+        "shareClassFIGI": "BBG001S687Q1",
+        "name": "ELECTROLUX AB-B"
+      }
+    },
+    {
+      "id": "XSTO:EPIROC AB",
+      "name": "EPIROC AB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "EPIA",
+        "figi": "BBG00JWT5W30",
+        "shareClassFIGI": "BBG00JWT5W76",
+        "name": "EPIROC AB-A"
+      },
+      "b": {
+        "ticker": "EPIB",
+        "figi": "BBG00KRMTQR9",
+        "shareClassFIGI": "BBG00KRMTPX4",
+        "name": "EPIROC AB-B"
+      }
+    },
+    {
+      "id": "XSTO:ESSITY AKTIEBOLAG",
+      "name": "ESSITY AKTIEBOLAG",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "ESSITYA",
+        "figi": "BBG00GV10D71",
+        "shareClassFIGI": "BBG00DQD7CW5",
+        "name": "ESSITY AKTIEBOLAG-A"
+      },
+      "b": {
+        "ticker": "ESSITYB",
+        "figi": "BBG00GV10DH0",
+        "shareClassFIGI": "BBG00GV10DM4",
+        "name": "ESSITY AKTIEBOLAG-B"
+      }
+    },
+    {
+      "id": "XSTO:SAGAX AB",
+      "name": "SAGAX AB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "SAGAA",
+        "figi": "BBG000BSSBR1",
+        "shareClassFIGI": "BBG001SCKS42",
+        "name": "SAGAX AB-A"
+      },
+      "b": {
+        "ticker": "SAGAB",
+        "figi": "BBG004CZFY18",
+        "shareClassFIGI": "BBG004CZFY72",
+        "name": "SAGAX AB-B"
+      }
+    },
+    {
+      "id": "XSTO:SVOLDER AB",
+      "name": "SVOLDER AB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "status": "reference_candidate",
+      "priceStatus": "not_connected",
+      "a": {
+        "ticker": "SVOLA",
+        "figi": "BBG000BXZYF5",
+        "shareClassFIGI": "BBG001S7DFZ5",
+        "name": "SVOLDER AB-A"
+      },
+      "b": {
+        "ticker": "SVOLB",
+        "figi": "BBG000BXZZF2",
+        "shareClassFIGI": "BBG001S7DG01",
+        "name": "SVOLDER AB-B"
+      }
+    }
+  ]
+}
