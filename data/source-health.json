@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-16T21:18:17Z",
-  "latestScan": "2026-11-16T21:17:34+00:00",
+  "generated": "2026-11-16T21:21:35Z",
+  "latestScan": "2026-11-16T21:21:00+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "tracked": 138,
@@ -86,7 +86,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 67,
+  "storedStories": 71,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -100,28 +100,28 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 69.7,
+      "avgLatencyMs": 66.4,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 666.3,
+      "avgLatencyMs": 634.0,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1975.7,
+      "avgLatencyMs": 1606.3,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
       "succeeded": 386,
       "failed": 208,
-      "avgLatencyMs": 327.0,
+      "avgLatencyMs": 307.4,
       "errorTypes": {
         "HTTPError": 208
       }
@@ -130,7 +130,7 @@
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 4481.4,
+      "avgLatencyMs": 2450.4,
       "errorTypes": {}
     }
   },
