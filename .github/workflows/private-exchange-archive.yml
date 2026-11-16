@@ -1,0 +1,55 @@
+name: Private exchange archive
+on:
+  schedule:
+    - cron: '30 20 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      smoke_only:
+        description: 'Write synthetic storage marker only'
+        type: boolean
+        default: true
+  pull_request:
+    paths:
+      - 'scripts/private_r2_archive.py'
+      - 'tests/test_private_r2_archive.py'
+      - '.github/workflows/private-exchange-archive.yml'
+permissions:
+  contents: read
+concurrency:
+  group: private-exchange-archive-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p test_private_r2_archive.py
+  archive:
+    needs: offline
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && ((github.event_name == 'workflow_dispatch' && inputs.smoke_only == true) || vars.STOCKWATCH_R2_RETENTION_APPROVED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install 'boto3>=1.40,<2'
+      - name: Private Oslo archive or synthetic smoke test
+        env:
+          STOCKWATCH_R2_RETENTION_APPROVED: ${{ vars.STOCKWATCH_R2_RETENTION_APPROVED }}
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+          SMOKE_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.smoke_only }}
+        run: |
+          if [ "$SMOKE_ONLY" = "true" ]; then
+            python scripts/private_r2_archive.py --smoke-test
+          else
+            python scripts/private_r2_archive.py --market OSL
+          fi
