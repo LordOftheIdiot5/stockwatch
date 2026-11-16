@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const src=fs.readFileSync(new URL('../v4.js',import.meta.url),'utf8');
-const a=src.indexOf('function marketHeatData('),b=src.indexOf('function overview()',a);
+const a=src.indexOf('function comparisonDate('),b=src.indexOf('function overview()',a);
 const E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const P=x=>x+'%';
 const {coverageHeatRows,coverageHeatmap,referenceCatalogRows,screenFinancialRows}=Function('E','P',src.slice(a,b)+'\nreturn {coverageHeatRows,coverageHeatmap,referenceCatalogRows,screenFinancialRows}')(E,P);
