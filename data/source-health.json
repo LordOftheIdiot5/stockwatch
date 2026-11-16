@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-16T23:01:10Z",
-  "latestScan": "2026-11-16T23:00:22+00:00",
-  "scanAgeHours": 0.01,
-  "contextAgeHours": 0.01,
+  "generated": "2026-11-16T23:17:36Z",
+  "latestScan": "2026-11-16T23:16:39+00:00",
+  "scanAgeHours": 0.02,
+  "contextAgeHours": 0.02,
   "tracked": 138,
   "priced": 138,
   "missing": [],
@@ -86,7 +86,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 78,
+  "storedStories": 71,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -100,44 +100,44 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 87.1,
+      "avgLatencyMs": 131.8,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 491.0,
+      "avgLatencyMs": 691.0,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1169.8,
+      "avgLatencyMs": 1585.9,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 426,
-      "failed": 168,
-      "avgLatencyMs": 367.9,
+      "succeeded": 370,
+      "failed": 224,
+      "avgLatencyMs": 451.7,
       "errorTypes": {
-        "HTTPError": 168
+        "HTTPError": 224
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1596.0,
+      "avgLatencyMs": 1756.1,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 549,
+    "total": 550,
     "relevant": 395,
-    "review": 139,
+    "review": 140,
     "duplicates": 20,
     "issuerLinked": 0,
     "categories": {
@@ -148,7 +148,7 @@
       "Contracts": 33,
       "Capital & ownership": 0,
       "Management": 22,
-      "General": 366
+      "General": 367
     }
   },
   "freightRoutes": {
