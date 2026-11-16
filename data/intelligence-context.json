@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "notice": "Editorial research-context links only. Not measured company exposures, predictions, ownership, supply-chain or causal relationships.",
+  "rules": [
+    {
+      "sectors": [
+        "Shipping & offshore"
+      ],
+      "label": "Maritime markets",
+      "href": "shipping.html",
+      "datasets": [
+        "usda",
+        "ports",
+        "connectivity",
+        "brent"
+      ],
+      "reason": "Maritime indicators and fuel markets provide broad sector context; no vessel, cargo or route exposure is inferred."
+    },
+    {
+      "sectors": [
+        "Energy producers"
+      ],
+      "label": "Oil and energy markets",
+      "href": "commodities.html",
+      "datasets": [
+        "brent",
+        "wti"
+      ],
+      "reason": "Commodity-market context; production mix, hedges and exposure are not established."
+    },
+    {
+      "sectors": [
+        "Grid & energy"
+      ],
+      "label": "Power system context",
+      "href": "commodities.html",
+      "datasets": [
+        "power",
+        "brent"
+      ],
+      "reason": "Grid and energy indicators are contextual only; no company electricity-price sensitivity is estimated."
+    },
+    {
+      "sectors": [
+        "Banks & insurance",
+        "Property",
+        "Industrial investments"
+      ],
+      "label": "Interest-rate context",
+      "href": "commodities.html",
+      "datasets": [
+        "rates",
+        "fx"
+      ],
+      "reason": "Macroeconomic context, not domestic borrowing rates, balance-sheet exposures or measured sensitivities."
+    },
+    {
+      "sectors": [
+        "Aquaculture",
+        "Consumer staples",
+        "Retail",
+        "Luxury",
+        "Automotive",
+        "Industry & defence",
+        "Tech & space",
+        "Materials",
+        "Mining & minerals",
+        "Construction",
+        "Aviation",
+        "Telecommunications",
+        "Pharma & medtech"
+      ],
+      "label": "Trade and macro context",
+      "href": "commodities.html",
+      "datasets": [
+        "trade",
+        "fx"
+      ],
+      "reason": "General trade and currency research context; no company geographic revenue or input-cost exposure is established."
+    }
+  ],
+  "datasets": [
+    {
+      "id": "brent",
+      "label": "Brent crude spot observations",
+      "file": "data/economic-feeds.json",
+      "key": "eia:RBRTE",
+      "href": "commodities.html",
+      "source": "EIA"
+    },
+    {
+      "id": "wti",
+      "label": "WTI crude spot observations",
+      "file": "data/economic-feeds.json",
+      "key": "eia:RWTC",
+      "href": "commodities.html",
+      "source": "EIA"
+    },
+    {
+      "id": "rates",
+      "label": "US Treasury 10-year yield",
+      "file": "data/economic-feeds.json",
+      "key": "fred:DGS10",
+      "href": "commodities.html",
+      "source": "FRED / US Treasury"
+    },
+    {
+      "id": "fx",
+      "label": "EUR/USD reference rate",
+      "file": "data/open-data.json",
+      "key": "fx:EUR/USD",
+      "href": "commodities.html",
+      "source": "ECB"
+    },
+    {
+      "id": "trade",
+      "label": "Germany exports / GDP",
+      "file": "data/open-data.json",
+      "key": "NE.EXP.GNFS.ZS:DE",
+      "href": "commodities.html",
+      "source": "World Bank"
+    },
+    {
+      "id": "usda",
+      "label": "US Gulf–Japan grain freight cost index",
+      "file": "data/shipping-open.json",
+      "key": "usda:gulf-japan-index",
+      "href": "shipping.html",
+      "source": "USDA"
+    },
+    {
+      "id": "ports",
+      "label": "World container port throughput",
+      "file": "data/shipping-ports.json",
+      "key": "worldbank:container-port-teu:WLD",
+      "href": "shipping.html",
+      "source": "World Bank / UNCTAD"
+    },
+    {
+      "id": "connectivity",
+      "label": "China liner shipping connectivity",
+      "file": "data/shipping-connectivity.json",
+      "key": "unctad:lsci-monthly:china",
+      "href": "shipping.html",
+      "source": "UNCTAD"
+    },
+    {
+      "id": "power",
+      "label": "European power system observations",
+      "file": "data/entsoe-open.json",
+      "key": null,
+      "href": "health.html",
+      "source": "ENTSO-E"
+    }
+  ]
+}
