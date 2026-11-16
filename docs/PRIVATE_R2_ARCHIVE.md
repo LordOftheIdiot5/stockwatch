@@ -18,10 +18,12 @@ normalizer and reviewed price display rights are still required.
 4. In Stockwatch GitHub Settings > Secrets and variables > Actions, add
    repository secrets STOCKWATCH_R2_ACCOUNT_ID, STOCKWATCH_R2_ACCESS_KEY_ID,
    STOCKWATCH_R2_SECRET_ACCESS_KEY. Add repository variable
-   STOCKWATCH_R2_BUCKET with the bucket name above. Only after the complete
-   review set STOCKWATCH_R2_RETENTION_APPROVED to true.
+   STOCKWATCH_R2_BUCKET with the bucket name above. Keep
+   STOCKWATCH_R2_RETENTION_APPROVED=false for the synthetic smoke test.
 5. Run the Private exchange archive workflow manually with smoke_only=true
-   to test a synthetic marker. Verify the bucket remains private.
+   to test a synthetic marker even when retention approval is false. Verify
+   the bucket remains private. Only after the actual retention and cost review
+   set STOCKWATCH_R2_RETENTION_APPROVED to true.
 6. Run manually with smoke_only=false to collect current and previous Oslo
    trading-day archives. Check successful storage status and R2 privately.
    The weekday schedule runs at 20:30 UTC when the approval variable is true.
