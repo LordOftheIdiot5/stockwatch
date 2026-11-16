@@ -9,9 +9,12 @@ on:
       - feature/stockwatch-open-official-data-20261113
       - feature/stockwatch-worldbank-port-traffic-20261113
       - feature/stockwatch-maritime-intelligence-v5-20261113
+      - feature/entsoe-open-energy-20261116
     paths:
       - scripts/open_data.py
       - scripts/registered_sources.py
+      - scripts/entsoe_open.py
+      - tests/test_entsoe_open.py
       - scripts/economic_feeds.py
       - scripts/shipping_open.py
       - scripts/shipping_ports.py
@@ -90,6 +93,7 @@ jobs:
         run: |
           python scripts/open_data.py --mode auto
           python scripts/registered_sources.py
+          python scripts/entsoe_open.py
           python scripts/economic_feeds.py
           python scripts/shipping_open.py
           python scripts/shipping_ports.py
