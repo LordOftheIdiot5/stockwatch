@@ -30,7 +30,7 @@ jobs:
       - run: python -m unittest discover -s tests -p test_private_r2_archive.py
   archive:
     needs: offline
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.STOCKWATCH_R2_RETENTION_APPROVED == 'true'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && ((github.event_name == 'workflow_dispatch' && inputs.smoke_only == true) || vars.STOCKWATCH_R2_RETENTION_APPROVED == 'true')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
