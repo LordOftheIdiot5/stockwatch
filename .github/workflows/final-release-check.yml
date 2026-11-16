@@ -47,6 +47,8 @@ jobs:
         run: node --test tests/test_universe_v25b.mjs
       - name: V26 intelligence graph tests
         run: node --test tests/test_intelligence_v26.mjs
+      - name: V28 coverage and screener tests
+        run: node --test tests/test_coverage_v28.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
@@ -64,7 +66,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -163,3 +165,7 @@ jobs:
           name: stockwatch-v26-previews
           path: workspace-previews/
           if-no-files-found: ignore
+
+      - name: V28 homepage and screener browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v28-')
+        run: python tests/browser_check_v28.py
