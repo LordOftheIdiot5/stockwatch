@@ -17,7 +17,7 @@ def main():
             page.get_by_text("No licensed reference price series have been imported.",exact=False).wait_for()
             id="ref:XOSL:EQNR"
             r={"listingId":id,"mic":"XOSL","priceType":"end_of_day","redistributionPermitted":True,"close":102,"changePct":2,"lastDate":"2025-01-03","previousDate":"2025-01-02","currency":"NOK","source":"Fixture only","sourceUrl":"https://example.invalid/source","licenseReference":"https://example.invalid/license","historyPath":"data/licensed-reference-history/"+"a"*32+".json","adjusted":False}
-            page.route("**/data/licensed-price-coverage.json",lambda route:route.fulfill(json={"records":[r]}))
+            page.route(lambda url: url.split("?")[0].endswith("/data/licensed-price-coverage.json"),lambda route:route.fulfill(json={"records":[r]}))
             page.route("**/data/licensed-reference-history/**",lambda route:route.fulfill(json={**r,"bars":[{"date":"2025-01-02","close":100},{"date":"2025-01-03","close":102}]}))
             page.goto(base+"/stocks.html?q=Equinor")
             page.get_by_text("Licensed EOD · 2025-01-03",exact=True).wait_for()
