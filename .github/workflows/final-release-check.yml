@@ -13,6 +13,7 @@ on:
       - 'company.html'
       - 'research.html'
       - 'data/research-targets.json'
+      - 'data/research-expansion.json'
       - 'data/research-onboarding.json'
       - 'research.js'
       - 'scripts/**'
@@ -49,6 +50,8 @@ jobs:
         run: node --test tests/test_intelligence_v26.mjs
       - name: V28 coverage and screener tests
         run: node --test tests/test_coverage_v28.mjs
+      - name: V29 coverage and quick search tests
+        run: node --test tests/test_expansion_v29.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
@@ -66,7 +69,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-') || startsWith(github.head_ref, 'feature/stockwatch-v29-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -169,3 +172,7 @@ jobs:
       - name: V28 homepage and screener browser checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v28-')
         run: python tests/browser_check_v28.py
+
+      - name: V29 expanded research browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v29-')
+        run: python tests/browser_check_v29.py
