@@ -28,6 +28,11 @@ class ArchiveTests(unittest.TestCase):
              "STOCKWATCH_R2_BUCKET":m.BUCKET,"STOCKWATCH_R2_ACCESS_KEY_ID":"fixture",
              "STOCKWATCH_R2_SECRET_ACCESS_KEY":"fixture"}
         self.assertEqual(m.configuration(env),"a"*32)
+        pending={**env,"STOCKWATCH_R2_RETENTION_APPROVED":"false"}
+        with self.assertRaises(ValueError):m.configuration(pending)
+        self.assertEqual(m.configuration(pending,smoke_only=True),"a"*32)
+        with self.assertRaises(ValueError):m.configuration({},smoke_only=True)
+        with self.assertRaises(ValueError):m.configuration({**pending,"STOCKWATCH_R2_BUCKET":"public"},smoke_only=True)
         with self.assertRaises(ValueError):m.configuration({**env,"STOCKWATCH_R2_BUCKET":"public"})
     def test_dedup_and_revision_preservation(self):
         s=FakeR2();raw=fixture()
