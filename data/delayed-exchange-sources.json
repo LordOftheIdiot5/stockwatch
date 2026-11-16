@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "notice": "Exchange-delayed sources are not activated for public quotes. No historical price coverage is claimed.",
+  "sources": [
+    {
+      "name": "Euronext",
+      "url": "https://marketdata.euronext.com/data-reporting-service/trades-file",
+      "markets": [
+        "Oslo",
+        "Paris",
+        "Amsterdam",
+        "Brussels",
+        "Dublin",
+        "Lisbon",
+        "Milan"
+      ],
+      "delayMinutes": 15,
+      "collection": "Internal collection adapter; live file validation pending",
+      "publicDisplay": "Commercial-benefit distribution requires agreement",
+      "contact": "databyeuronext@euronext.com"
+    },
+    {
+      "name": "Nasdaq Nordic",
+      "url": "https://tradereports.nasdaq.com/shares/trade-reports/post-trade",
+      "markets": [
+        "Stockholm",
+        "Copenhagen",
+        "Helsinki",
+        "Iceland"
+      ],
+      "delayMinutes": 15,
+      "collection": "Official report discovery only; commercial trade collection pending permission",
+      "publicDisplay": "Commercial usage terms to confirm",
+      "contact": "dataeurope@nasdaq.com"
+    }
+  ]
+}
