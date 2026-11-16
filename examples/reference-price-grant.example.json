@@ -1,0 +1,19 @@
+{
+  "provider": "REPLACE_WITH_CONTRACTED_PROVIDER",
+  "sourceUrl": "https://example.invalid/source",
+  "licenseReference": "https://example.invalid/public-license-reference",
+  "publicRawRedistribution": false,
+  "publicDisplay": false,
+  "historicalStorage": false,
+  "derivedAnalytics": false,
+  "identityReviewed": false,
+  "priceType": "end_of_day",
+  "listings": {
+    "ref:XOSL:EQNR": {
+      "mic": "XOSL",
+      "providerSymbol": "REPLACE_WITH_VERIFIED_SYMBOL",
+      "currency": "NOK",
+      "adjusted": false
+    }
+  }
+}
