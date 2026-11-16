@@ -6,6 +6,9 @@ on:
       - 'v4.js'
       - 'v4.css'
       - 'index.html'
+      - 'welcome.html'
+      - 'directory.html'
+      - 'brand/**'
       - 'stocks.html'
       - 'research.js'
       - 'scripts/**'
@@ -38,6 +41,7 @@ jobs:
         run: |
           node --check v4.js
           node --check research.js
+          node --check brand/brand.js
       - name: Watchlist identity migration guard
         run: |
           python - <<'PY'
@@ -63,3 +67,24 @@ jobs:
           name: stockwatch-v21-previews
           path: workspace-previews/
           if-no-files-found: ignore
+
+      - name: V22 live OpenFIGI directory validation
+        if: startsWith(github.head_ref, 'feature/stockwatch-v22-') && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: |
+          python scripts/instrument_directory.py
+          python - <<'PY'
+          import json
+          d=json.load(open('data/instrument-directory.json'))
+          assert len(d['records']) >= 100, d['venues']
+          assert sum(v['status'] in ('ok','partial') for v in d['venues'].values()) >= 3, d['venues']
+          assert all(r['quoteStatus']=='not_connected' for r in d['records'])
+          print('Nordic reference records:',len(d['records']))
+          PY
+      - name: Upload V22 validated reference directory
+        if: startsWith(github.head_ref, 'feature/stockwatch-v22-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: v22-instrument-directory
+          path: data/instrument-directory.json
