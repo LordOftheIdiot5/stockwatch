@@ -43,12 +43,12 @@ async function mount({root,companies,universe,signals,context,licensedPrices,fun
  const $=id=>host.querySelector('#'+id),layout=root.querySelector('.sw-terminal-layout');
  let layoutMode=['balanced','chart','equity'].includes(saved.layout)?saved.layout:'balanced';
  $('labLayout').value=layoutMode;layout.dataset.labLayout=layoutMode;
- function persist(){save('stockwatch-lab-v45',{view,layout:layoutMode,alerts})}
+ function persist(){save('stockwatch-lab-v45',{view,layout:layoutMode,width:Number(range.value),alerts})}
  $('labLayout').onchange=e=>{layoutMode=e.target.value;layout.dataset.labLayout=layoutMode;persist()};
  // Keyboard-operable resizing controls, no horizontal overflow on mobile.
  const resize=document.createElement('label');resize.className='sw-lab-size';resize.innerHTML='Center panel width <input type="range" min="13" max="25" value="'+(num(saved.width)?Math.min(25,Math.max(13,saved.width)):17)+'" aria-label="Center panel width">';
  host.querySelector('.sw-lab-head').append(resize);const range=resize.querySelector('input');
- const width=()=>{layout.style.setProperty('--lab-center',range.value/10+'fr')};width();range.oninput=width;
+ const width=()=>{layout.style.setProperty('--lab-center',range.value/10+'fr')};width();range.oninput=()=>{width();persist()};
  function draw(){
   host.querySelectorAll('[data-lab-tab]').forEach(b=>{const active=+b.dataset.labTab===view;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active))});
   if(view===0)heat();if(view===1)charts();if(view===2)valuation();if(view===3)pairs();if(view===4)news();if(view===5)tools();

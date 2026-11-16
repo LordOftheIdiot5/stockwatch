@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "version": "45-preview",
+  "notice": "Public descriptive metadata only. No licence to redistribute underlying records is granted. Product availability and rights require separate agreements.",
+  "datasets": [
+    {
+      "id": "instrument-reference",
+      "title": "European listing and FIGI discovery",
+      "category": "Equity identity",
+      "status": "reference metadata",
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "accessPolicy": "Metadata discovery; review source rights before resale",
+      "description": "Venue-level instrument identification and research candidates, not verified active listings or quotes."
+    },
+    {
+      "id": "energy-spot",
+      "title": "Brent and WTI daily spot observations",
+      "category": "Energy oil",
+      "status": "connected official observations",
+      "sourceUrl": "https://www.eia.gov/opendata/",
+      "accessPolicy": "Source attribution and applicable series rights",
+      "description": "Dated EIA energy market observations, not executable securities."
+    },
+    {
+      "id": "fx",
+      "title": "ECB reference FX rates",
+      "category": "Currency FX",
+      "status": "connected reference observations",
+      "sourceUrl": "https://data.ecb.europa.eu/",
+      "accessPolicy": "Review ECB reuse terms; reference rates only",
+      "description": "Reference exchange-rate observations, no trade execution or guaranteed conversion rates."
+    },
+    {
+      "id": "rates",
+      "title": "US government yield and policy rates",
+      "category": "Macroeconomics",
+      "status": "connected official series",
+      "sourceUrl": "https://fred.stlouisfed.org/",
+      "accessPolicy": "Per-series source and reuse rights apply",
+      "description": "Treasury yield and monetary context from official statistical series."
+    },
+    {
+      "id": "trade",
+      "title": "GDP and trade statistics",
+      "category": "Macroeconomics trade",
+      "status": "connected official series",
+      "sourceUrl": "https://data.worldbank.org/",
+      "accessPolicy": "Indicator-level third-party exceptions apply",
+      "description": "Country-level economic statistics from the World Bank."
+    },
+    {
+      "id": "shipping",
+      "title": "Shipping and freight indicators",
+      "category": "Maritime shipping",
+      "status": "selected series connected; broader rights pending",
+      "sourceUrl": "https://www.ams.usda.gov/services/transportation-analysis",
+      "accessPolicy": "Source-specific terms; Baltic indices not included",
+      "description": "Selected transportation and port context; no claim of comprehensive spot-rate coverage."
+    },
+    {
+      "id": "euronext-history",
+      "title": "Private Euronext archive infrastructure",
+      "category": "Equity price history",
+      "status": "storage connection verified; collection disabled",
+      "sourceUrl": "https://marketdata.euronext.com/data-reporting-service/trades-file",
+      "accessPolicy": "No archive access or public redistribution; retention review pending",
+      "description": "Private exchange report archive infrastructure, not a historical market data product."
+    },
+    {
+      "id": "company-financials",
+      "title": "Source-reviewed company financial statements",
+      "category": "Fundamentals",
+      "status": "import pipeline ready; no verified records yet",
+      "sourceUrl": "https://www.esma.europa.eu/issuer-disclosure/electronic-reporting",
+      "accessPolicy": "Source-specific filing review before publication or resale",
+      "description": "Reported figures with source evidence, time period and currency; no fabricated values."
+    }
+  ]
+}
