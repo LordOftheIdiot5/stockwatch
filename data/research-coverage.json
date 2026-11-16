@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T20:10:27Z",
+  "generated": "2026-11-16T20:17:50Z",
   "sourceUrl": "https://www.openfigi.com/api/documentation",
   "notice": "Mapping history records changes observed by Stockwatch, not historical FIGI assignments before collection began. Current and prior candidates are unverified; no price feed or corporate relationship is implied.",
   "records": [
@@ -11,6 +11,7 @@
       "market": "Norway",
       "isin": "NO0010096985",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -35,7 +36,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -62,6 +63,7 @@
       "market": "Norway",
       "isin": "NO0010161896",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -86,7 +88,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -113,6 +115,7 @@
       "market": "Norway",
       "isin": "NO0013536151",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -137,7 +140,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -164,6 +167,7 @@
       "market": "Norway",
       "isin": "NO0013697029",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -188,7 +192,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -215,6 +219,7 @@
       "market": "Norway",
       "isin": "NO0005052605",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Mining & minerals",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -239,7 +244,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -266,6 +271,7 @@
       "market": "Norway",
       "isin": "NO0003054108",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Aquaculture",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -290,7 +296,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -317,6 +323,7 @@
       "market": "Norway",
       "isin": "NO0010063308",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Telecommunications",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -341,7 +348,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -368,6 +375,7 @@
       "market": "Norway",
       "isin": "NO0003733800",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Consumer staples",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -392,7 +400,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -419,6 +427,7 @@
       "market": "Norway",
       "isin": "NO0011202772",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -443,7 +452,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -470,11 +479,12 @@
       "market": "Norway",
       "isin": "NO0003055501",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "ambiguous",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -491,6 +501,7 @@
       "market": "Norway",
       "isin": "NO0010234552",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Industrial investments",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -515,7 +526,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -542,6 +553,7 @@
       "market": "Norway",
       "isin": "NO0003078800",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Shipping & offshore",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -566,7 +578,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -593,6 +605,7 @@
       "market": "Norway",
       "isin": "NO0012470089",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -617,7 +630,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -644,6 +657,7 @@
       "market": "Norway",
       "isin": "NO0010196140",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Aviation",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -668,7 +682,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -695,6 +709,7 @@
       "market": "Norway",
       "isin": "NO0010379266",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -719,7 +734,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -746,6 +761,7 @@
       "market": "Norway",
       "isin": "SGXZ69436764",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Shipping & offshore",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -770,7 +786,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -797,6 +813,7 @@
       "market": "Norway",
       "isin": "NO0010736879",
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -821,7 +838,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -848,6 +865,7 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -872,7 +890,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -899,11 +917,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -920,11 +939,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -941,11 +961,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -962,11 +983,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -983,6 +1005,7 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1007,7 +1030,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1034,11 +1057,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1055,11 +1079,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1076,11 +1101,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1097,11 +1123,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Retail",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1118,11 +1145,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1139,11 +1167,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1160,11 +1189,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1181,11 +1211,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1202,11 +1233,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1223,11 +1255,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1244,11 +1277,12 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1265,6 +1299,7 @@
       "market": "Sweden",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industrial investments",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1289,7 +1324,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1316,11 +1351,12 @@
       "market": "Denmark",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Shipping & offshore",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1337,11 +1373,12 @@
       "market": "Denmark",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Shipping & offshore",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1358,6 +1395,7 @@
       "market": "Denmark",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1382,7 +1420,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1409,11 +1447,12 @@
       "market": "Denmark",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Consumer staples",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1430,11 +1469,12 @@
       "market": "Denmark",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Pharma & medtech",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1451,11 +1491,12 @@
       "market": "Denmark",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Consumer staples",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1472,6 +1513,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1496,7 +1538,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1523,6 +1565,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1547,7 +1590,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1574,6 +1617,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Grid & energy",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1598,7 +1642,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1625,6 +1669,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1649,7 +1694,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1676,6 +1721,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Materials",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1700,7 +1746,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1727,11 +1773,12 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Materials",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1748,6 +1795,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Materials",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1772,7 +1820,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1799,6 +1847,7 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1823,7 +1872,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1850,11 +1899,12 @@
       "market": "Finland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1871,6 +1921,7 @@
       "market": "Germany",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1895,7 +1946,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1922,6 +1973,7 @@
       "market": "Germany",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1946,7 +1998,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -1973,6 +2025,7 @@
       "market": "Germany",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -1997,7 +2050,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2024,6 +2077,7 @@
       "market": "Germany",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Automotive",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2048,7 +2102,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2075,6 +2129,7 @@
       "market": "Germany",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Automotive",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2099,7 +2154,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2126,6 +2181,7 @@
       "market": "Germany",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Grid & energy",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2150,7 +2206,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2177,6 +2233,7 @@
       "market": "France",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Luxury",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2201,7 +2258,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2228,6 +2285,7 @@
       "market": "France",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2252,7 +2310,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2279,6 +2337,7 @@
       "market": "France",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Grid & energy",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2303,7 +2362,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2330,6 +2389,7 @@
       "market": "France",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Pharma & medtech",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2354,7 +2414,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2381,6 +2441,7 @@
       "market": "France",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2405,7 +2466,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2432,6 +2493,7 @@
       "market": "United Kingdom",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2456,7 +2518,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2483,11 +2545,12 @@
       "market": "United Kingdom",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Energy producers",
       "quoteStatus": "not_connected",
       "mappingStatus": "ambiguous",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2504,11 +2567,12 @@
       "market": "United Kingdom",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Pharma & medtech",
       "quoteStatus": "not_connected",
       "mappingStatus": "ambiguous",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2525,11 +2589,12 @@
       "market": "United Kingdom",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "ambiguous",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2546,11 +2611,12 @@
       "market": "United Kingdom",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Industry & defence",
       "quoteStatus": "not_connected",
       "mappingStatus": "ambiguous",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2567,11 +2633,12 @@
       "market": "United Kingdom",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Mining & minerals",
       "quoteStatus": "not_connected",
       "mappingStatus": "ambiguous",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2588,6 +2655,7 @@
       "market": "Switzerland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Consumer staples",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2612,7 +2680,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2639,11 +2707,12 @@
       "market": "Switzerland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Pharma & medtech",
       "quoteStatus": "not_connected",
       "mappingStatus": "unresolved",
       "currentCandidate": null,
       "lastCandidate": null,
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2660,6 +2729,7 @@
       "market": "Switzerland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Pharma & medtech",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2684,7 +2754,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2711,6 +2781,7 @@
       "market": "Switzerland",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2735,7 +2806,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2762,6 +2833,7 @@
       "market": "Netherlands",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2786,7 +2858,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2813,6 +2885,7 @@
       "market": "Netherlands",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2837,7 +2910,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2864,6 +2937,7 @@
       "market": "Netherlands",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Banks & insurance",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2888,7 +2962,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
@@ -2915,6 +2989,7 @@
       "market": "Netherlands",
       "isin": null,
       "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "sector": "Tech & space",
       "quoteStatus": "not_connected",
       "mappingStatus": "candidate",
       "currentCandidate": {
@@ -2939,7 +3014,7 @@
         "sourceUrl": "https://www.openfigi.com/api/documentation",
         "verified": false
       },
-      "lastChecked": "2026-11-16T20:10:27Z",
+      "lastChecked": "2026-11-16T20:17:50Z",
       "mappingHistory": [
         {
           "observedAt": "2026-11-16T20:10:27Z",
