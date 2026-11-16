@@ -1,4 +1,5 @@
 import io,json,tempfile,unittest,zipfile,sys
+from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import delayed_exchange as d
@@ -21,6 +22,9 @@ class DelayedExchangeTests(unittest.TestCase):
         self.assertEqual(r["euronext"]["status"],"schema_validated")
         self.assertFalse(r["publicPublication"])
         self.assertFalse(r["nasdaq"]["tradeDownloadEnabled"])
+    def test_persistent_probe_requires_approval(self):
+        with patch.dict(d.os.environ,{"STOCKWATCH_R2_RETENTION_APPROVED":"false"}):
+            with self.assertRaises(ValueError):d.probe(archive="/tmp/private-fixture",fetch=lambda *_:fixture())
     def test_private_archive(self):
         with tempfile.TemporaryDirectory() as root:
             name=d.private_save(fixture(),root,"euronext")

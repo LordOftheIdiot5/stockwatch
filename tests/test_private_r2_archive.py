@@ -48,6 +48,26 @@ class ArchiveTests(unittest.TestCase):
         with self.assertRaises(zipfile.BadZipFile):
             m.archive(s,"OSL","CURRENT_TRADING_DAY",lambda _:b"<html>")
         self.assertEqual(s.objects,{})
+    def test_market_selection_and_recovery(self):
+        self.assertEqual(m.selected_markets("OSL,par,OSL"),("OSL","PAR"))
+        for value in ("","OSL,unknown","../OSL"):
+            with self.assertRaises(ValueError):m.selected_markets(value)
+        s=FakeR2()
+        results=m.collect_daily(s,("OSL","PAR"),("PREVIOUS_TRADING_DAY",),lambda _:fixture())
+        self.assertEqual([x["market"] for x in results],["OSL","PAR"])
+        self.assertTrue(all(x["storageStatus"]=="created" for x in results))
+    def test_one_failed_download_does_not_block_other_market(self):
+        s=FakeR2()
+        def fetch(url):
+            if url.endswith("/OSL"):return b"<html>"
+            return fixture()
+        results=m.collect_daily(s,("OSL","PAR"),("PREVIOUS_TRADING_DAY",),fetch)
+        self.assertEqual([x["storageStatus"] for x in results],["failed","created"])
+    def test_rate_limit_stops_collection(self):
+        def fetch(url):raise ex.HTTPError(url,429,"limit",{},None)
+        results=m.collect_daily(FakeR2(),("OSL","PAR"),fetch=fetch)
+        self.assertEqual(len(results),1)
+        self.assertEqual(results[0]["httpStatus"],429)
     def test_integrity_conflict(self):
         s=FakeR2()
         m.immutable_put(s,b"old","key",{},"text/plain")

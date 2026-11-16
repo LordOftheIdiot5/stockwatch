@@ -54,9 +54,31 @@ def archive(client,market,window,fetch=ex.downloaded,now=None):
     receipt_key=f"euronext/{market}/receipts/{stamp[:10]}/{hashlib.sha256(payload).hexdigest()}.json"
     immutable_put(client,payload,receipt_key,{"provider":"euronext","market":market},"application/json")
     return action
+def selected_markets(value):
+    markets=tuple(dict.fromkeys(x.strip().upper() for x in value.split(",") if x.strip()))
+    if not markets or any(x not in ex.MARKETS for x in markets):
+        raise ValueError("Unsupported exchange market selection")
+    return markets
+
+def collect_daily(client,markets,windows=WINDOWS,fetch=ex.downloaded,now=None):
+    results=[]
+    for market in markets:
+        for window in windows:
+            try:
+                action=archive(client,market,window,fetch,now)
+                results.append({"market":market,"window":window,"storageStatus":action,"publicPublication":False})
+            except Exception as exc:
+                row={"market":market,"window":window,"storageStatus":"failed","errorType":type(exc).__name__,"publicPublication":False}
+                if isinstance(exc,ex.HTTPError):row["httpStatus"]=exc.code
+                results.append(row)
+                if isinstance(exc,ex.HTTPError) and exc.code in (401,403,429):
+                    return results
+    return results
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--market",choices=ex.MARKETS,default="OSL")
+    p.add_argument("--market",choices=ex.MARKETS,help="Explicit single-market override")
+    p.add_argument("--markets",default=None,help="Comma-separated approved Euronext markets; default OSL")
+    p.add_argument("--previous-only",action="store_true",help="Retry previous trading day only")
     p.add_argument("--smoke-test",action="store_true",help="Write synthetic marker only, no exchange download")
     a=p.parse_args()
     try:
@@ -73,10 +95,12 @@ def main():
             immutable_put(client,marker,"system/smoke-v1.txt",{"type":"synthetic"},"text/plain")
             print("Private R2 smoke test passed; no market data retrieved.")
             return 0
-        for window in WINDOWS:
-            result=archive(client,a.market,window)
-            print(json.dumps({"market":a.market,"window":window,"storageStatus":result,"publicPublication":False}))
-        return 0
+        if a.market and a.markets:raise ValueError("Choose one market option")
+        markets=selected_markets(a.market or a.markets or os.environ.get("STOCKWATCH_R2_EURONEXT_MARKETS","") or "OSL")
+        windows=("PREVIOUS_TRADING_DAY",) if a.previous_only else WINDOWS
+        results=collect_daily(client,markets,windows)
+        for row in results:print(json.dumps(row))
+        return 0 if len(results)==len(markets)*len(windows) and all(x["storageStatus"]!="failed" for x in results) else 1
     except Exception as exc:
         # Do not log credentials, presigned URLs, archive payloads or vendor responses.
         print(json.dumps({"status":"failed","errorType":type(exc).__name__,"publicPublication":False}))

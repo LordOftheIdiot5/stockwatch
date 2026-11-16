@@ -1,5 +1,5 @@
 """Official delayed exchange data: private research only, never publish trade rows."""
-import argparse,csv,hashlib,io,json,re,sys,zipfile
+import argparse,csv,hashlib,io,json,os,re,sys,zipfile
 from datetime import datetime,timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -59,6 +59,8 @@ def private_save(raw,dest,provider):
         tmp=target.with_suffix(".tmp");tmp.write_bytes(raw);tmp.replace(target)
     return name
 def probe(market="OSL",window="PREVIOUS_TRADING_DAY",archive=None,fetch=downloaded):
+    if archive and os.environ.get("STOCKWATCH_R2_RETENTION_APPROVED")!="true":
+        raise ValueError("Persistent local archive requires reviewed retention approval")
     result={"checkedAt":datetime.now(timezone.utc).isoformat(),"euronext":{"status":"not_checked"},"nasdaq":{"status":"not_checked"},"publicPublication":False}
     try:
         raw=fetch(eur_url(market,window))
@@ -70,7 +72,7 @@ def probe(market="OSL",window="PREVIOUS_TRADING_DAY",archive=None,fetch=download
     try:
         raw=fetch(NAS,8*1024*1024)
         links=nasdaq_links(raw)
-        result["nasdaq"]={"status":"discovery_only","downloadLinksFound":bool(links),"tradeDownloadEnabled":False}
+        result["nasdaq"]={"status":"discovery_only","downloadLinksFound":bool(links),"discoveredLinkCount":len(links),"tradeDownloadEnabled":False}
     except Exception as e:result["nasdaq"]={"status":"not_validated","errorType":type(e).__name__}
     return result
 def main():
