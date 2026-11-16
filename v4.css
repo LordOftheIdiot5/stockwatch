@@ -206,3 +206,14 @@ body[data-page="index"].sw-workspace-ready .sw-page-head{display:none}
 .sw-advanced-filters input[type=checkbox]{width:auto;min-width:0;accent-color:var(--sw-mint)}
 .sw-ws-heat-toolbar select option,.sw-controls select option{background:var(--sw-card);color:var(--sw-text)}
 @media(min-width:1000px){.sw-ws-hero{padding:20px 28px}.sw-ws-hero-visual{padding:16px 20px}.sw-ws-coverage{gap:7px}.sw-ws-coverage div{padding-top:7px}.sw-ws-cover-number{margin:8px 0 12px}.sw-ws-caption{margin-top:12px}}
+
+/* V29 — faster research navigation and compact discovery */
+#swSearchForm{position:relative;min-width:0}
+.sw-quick-results{position:absolute;z-index:80;top:calc(100% + 8px);right:0;width:min(420px,85vw);max-height:65vh;overflow:auto;background:var(--sw-surface);border:1px solid var(--sw-edge);border-radius:12px;box-shadow:0 12px 40px #0004}
+.sw-quick-results[hidden]{display:none}
+.sw-quick-results a{display:grid;gap:4px;padding:12px 15px;border-bottom:1px solid var(--sw-edge);color:var(--sw-text);text-decoration:none;white-space:normal;overflow-wrap:anywhere}
+.sw-quick-results a:hover,.sw-quick-results a:focus-visible{background:var(--sw-card-hi);outline:1px solid var(--sw-mint);outline-offset:-1px}
+.sw-quick-results a strong{font-size:13px}.sw-quick-results a small{font-size:11px;color:var(--sw-muted)}.sw-quick-results a.sw-quick-all{font-size:12px;color:var(--sw-mint)}
+.sw-screen-presets{gap:8px;margin:10px 0}.sw-screen-presets[hidden],.sw-advanced-filters[hidden]{display:none}
+.sw-screen-presets .sw-soft-btn{white-space:normal}
+@media(max-width:600px){.sw-quick-results{width:min(340px,85vw);right:0}}
