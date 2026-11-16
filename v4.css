@@ -189,3 +189,20 @@ body[data-page="index"].sw-workspace-ready .sw-page-head{display:none}
 .sw-intel-mini .sw-peer{gap:7px;line-height:1.5}.sw-intel-peer{text-align:left;font:inherit;color:var(--sw-text);cursor:pointer}.sw-intel-peer:focus-visible{outline:2px solid var(--sw-mint);outline-offset:2px}
 .sw-intel-summary{margin-top:24px}.sw-intel-panel #intelListing{min-width:0;max-width:100%;flex:1}
 @media(max-width:600px){.sw-intel-map{padding:14px 10px}.sw-intel-branches{grid-template-columns:1fr}.sw-intel-branches:before{display:none}.sw-intel-mini{grid-template-columns:1fr}.sw-intel-center strong{font-size:19px}}
+
+/* V28 coverage and screening */
+.sw-registry-note{display:block;color:var(--sw-muted);font-size:11px;margin-top:5px}
+.sw-heat-cell.no-data{border:1px dashed var(--sw-edge);background:var(--sw-bg);color:var(--sw-muted)}
+.sw-heat-cell.no-data:hover,.sw-heat-cell.no-data:focus-visible{border-color:var(--sw-mint);color:var(--sw-text)}
+.sw-heat-missing{border-style:dashed}
+.sw-ws-legend{flex-wrap:wrap}
+.sw-universe-switch{margin-top:18px}
+.sw-advanced-filters{padding:15px;margin:12px 0}
+.sw-advanced-filters summary{cursor:pointer;font-weight:700;color:var(--sw-text)}
+.sw-advanced-filters .sw-controls{margin:12px 0;align-items:end}
+.sw-advanced-filters label{display:grid;gap:6px;color:var(--sw-muted);font-size:12px;min-width:0;flex:1 1 160px}
+.sw-advanced-filters input[type=number]{width:100%;min-width:0;background:var(--sw-card);color:var(--sw-text);border:1px solid var(--sw-edge);border-radius:8px;padding:9px}
+.sw-advanced-filters label.sw-check-filter{display:flex;align-items:center;gap:8px;padding:9px 0}
+.sw-advanced-filters input[type=checkbox]{width:auto;min-width:0;accent-color:var(--sw-mint)}
+.sw-ws-heat-toolbar select option,.sw-controls select option{background:var(--sw-card);color:var(--sw-text)}
+@media(min-width:1000px){.sw-ws-hero{padding:20px 28px}.sw-ws-hero-visual{padding:16px 20px}.sw-ws-coverage{gap:7px}.sw-ws-coverage div{padding-top:7px}.sw-ws-cover-number{margin:8px 0 12px}.sw-ws-caption{margin-top:12px}}
