@@ -1,6 +1,44 @@
 {
-  "generated": "2026-11-16T21:49:36Z",
+  "generated": "2026-11-16T23:01:10Z",
   "items": [
+    {
+      "id": "UCG.MI:1419cba8dd6a45f61a87e11b35eff903fffe1b698270562875a3ad643a43a081",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "3 Eurozone Bank Stocks Worth Watching After UniCredit Commerzbank Approval",
+      "english": null,
+      "publisher": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPS1BUZW1wX0VKQW9aYTlvdEJqRENYMF9VT0VBczJGTFJlSEstX2I2OGlNV09sb2hZaXlOaE9GLXlFTmc1ZGZKX0dmUXNfUEdxUkZvclpmV0ZKTTlZY3lDclZrbHo0Uk5BcjJDWlJoTlNpU2VCdlVvbmt2Sm95MGNXWlNBYmRtT1FLWnhqNG9Sa3daM0puNldweA?oc=5",
+      "published": "2026-11-16T22:10:49Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "SKA-B.ST:caacc41e2ed626b1eee815a8eb8e6964c5c7b8af43cc2705d0a7f916dacfd3ea",
+      "ticker": "SKA-B.ST",
+      "name": "Skanska",
+      "sector": "Construction",
+      "type": "news",
+      "headline": "Fastpartner acquires three fully leased properties in Norrköping from Skanska",
+      "english": null,
+      "publisher": "Prop News Time",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTFNpcEF1bENOUnZtRlRtZkJRYzB0S1VpTzlVTm1wVXF2NnZGNDJob0I3OGxrc0diOHUwOU0weUVuTzdoc3RFQ1NBMWtpV3FBdmJkOC0xZGItemsyNHVha1lZTDlhR3FPSW9RUkJtVC1QSTdGaGtUVVk5a2pXcU5laHAwTjFsaVN6S2pESW42ZzZ1X2JZU2lBYzZ1ZllwT3B2RjFhUmNESjE3cjlnck5kMFlERTJfcVBZdzJlZEN0cFdJcVB1LU90VQ?oc=5",
+      "published": "2026-11-16T21:00:32Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "RACE.MI:7fdd68966b8c98d9b7897aa6ec47e9746507c05d2f4a1bea24f2277dc626540e",
       "ticker": "RACE.MI",
@@ -231,6 +269,25 @@
       "priority": "high"
     },
     {
+      "id": "PRY.MI:575f79308fc884680f5d5b934734d9f853f36939c7792fe0ece1a3d95154c363",
+      "ticker": "PRY.MI",
+      "name": "Prysmian",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Italy’s Prysmian to revisit US dual listing plans, CEO says",
+      "english": null,
+      "publisher": "WKZO",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbGFiUWYxdlRsMTA3STNncGVmeDc1WWhGMjJCSnBORGlhMWF4RTF1VEZvdFlkNFNTRUx1RWhkSXl3RUVUWU81MVhNc0Z6aTdsYjI5TkFBR1U3ZWdmaWJyZTFBU3g4WGNULXNDbldDNl9SWmxPSko1OGZZMFNhbmZYb081V2JDMU5QQWpmWnZGSQ?oc=5",
+      "published": "2026-11-16T17:41:56Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Management",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "TISG.MI:dc04782d09dfbfb5c4cfbaca407dfb2f3f7f9d54ab9e50cecb28813aa6c640f8",
       "ticker": "TISG.MI",
       "name": "The Italian Sea Group",
@@ -456,7 +513,8 @@
       "relevance": "mentioned",
       "category": "Management",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "duplicateOf": "PRY.MI:575f79308fc884680f5d5b934734d9f853f36939c7792fe0ece1a3d95154c363"
     },
     {
       "id": "NOVO-B.CO:c80cde7b18bd68c9790d8df8a3e5b2b06b8144a5d3329080cde34d35b58cdfe2",
@@ -571,7 +629,7 @@
       "category": "Management",
       "sourceDomain": "news.google.com",
       "priority": "high",
-      "duplicateOf": "PRY.MI:6e0d1362a35e8f80d62b4465d449a7089d89f794676dfb00b162ea1c0a35d87b"
+      "duplicateOf": "PRY.MI:575f79308fc884680f5d5b934734d9f853f36939c7792fe0ece1a3d95154c363"
     },
     {
       "id": "NOVO-B.CO:01ce507c4cd3b40854322c538e3ab9cb316488cfef88c921da328ce40fd389db",
@@ -1119,6 +1177,25 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY1p1UjAyT3c5Uy1jT2VmWTc4aDNlZ0ZBOUxnMHF3UWtObVctZTFpY2lwWVhRc19oSzZMdTU4OG1HMl9uZ2NoaTRmaDctM0NFWkxMcjVUQU05TE1fT3lGYU9COHYyY0xkdXVsYVRNaU1yR0h0b0pVcWx6QVZIMHRqRS1uU3FIYkk5TGdfNWxRbU5kYUtoX2NHREpoaWVrWWJnVG1pQlM5V1VHWDA2?oc=5",
       "published": "2026-11-16T13:27:00Z",
       "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "UCG.MI:c97dc31a9f574647b3d1a43a509418627e2b1b49520002fd5eaec8b6729d1a40",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "L’Ue benedice l’operazione UniCredit-Commerz e avverte Berlino: “No a intromissioni”",
+      "english": "The EU gives its blessing to the UniCredit-Commerzbank deal and warns Berlin: “No interference”",
+      "publisher": "Financialounge.com",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPREZMSW1ydDJ0bFNJNU1FRG9wQVlUcXkyRGI3Zmc1NW9xR0tueG5lNWsxUVV6UHNINWNJc2RQMmRaNVc2M2pIRzhYU1hRT1BOdnB3RDRJTnc3YU8wT0o4WnJ5MFhCclFIMkozSGhnakM0WGZuejMwSXdkNzNtbTRzWDZDaF9nYktCQzhEQmVxZ25lUWN1dW52NFlVbXpadFQ4WjBlUVJlZ0JJN3lUalZmVURmQi1ldlNGVENJb001bXF1T2RLckE?oc=5",
+      "published": "2026-11-16T13:26:00Z",
+      "lang": "it",
       "regulatory": false,
       "match": "name_mentioned",
       "relevance": "mentioned",
