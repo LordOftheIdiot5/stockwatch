@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const s=fs.readFileSync(new URL('../v4.js',import.meta.url),'utf8');const review=Function(s.slice(s.indexOf('function switchEstimate('),s.indexOf('function spreadCurrency('))+'\nreturn pairReview')();
+const day='2026-11-16',p={aPrice:130,bPrice:100,ratio:1.3,meanRatio:1.1,z:3,sd:.05,days:200,stationary:true,tradableRange:true,priceDate:day,aLatestDate:day,bLatestDate:day,latestPairEligible:true,currency:'SEK'};
+test('both directions and relative convergence scenario',()=>{let x=review(p,2,day);assert.equal(x.direction,'A-to-B');assert.ok(x.trigger&&x.net>0);x=review({...p,aPrice:90,ratio:.9,z:-3},2,day);assert.equal(x.direction,'B-to-A');assert.ok(x.trigger&&x.net>0)});
+test('stale, unknown, unaligned, narrow or costly cannot trigger',()=>{for(const q of [{...p,priceDate:null},{...p,aLatestDate:'2026-11-13'},{...p,latestPairEligible:false},{...p,stationary:false},{...p,tradableRange:false},{...p,z:1}])assert.equal(review(q,2,day).trigger,false);assert.equal(review(p,2,day,{holding:100,fee:10,slippage:10,flat:0}).trigger,false)});

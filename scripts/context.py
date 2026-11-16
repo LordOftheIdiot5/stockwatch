@@ -31,6 +31,8 @@ from __future__ import annotations
 
 import json
 import statistics
+import math
+from datetime import datetime, timezone
 import urllib.parse
 import urllib.request
 
@@ -172,6 +174,20 @@ def freight() -> list[dict]:
     return out
 
 
+def utc_day(stamp):
+    return datetime.fromtimestamp(stamp, timezone.utc).date().isoformat() if stamp is not None else None
+
+def valid_pair_closes(data):
+    stamps = data.get("timestamp") or []
+    quote = data["indicators"]["quote"][0]
+    closes = quote.get("close") or []
+    volumes = quote.get("volume") or []
+    latest = max(stamps, default=None)
+    valid = {s: c for s, c, v in zip(stamps, closes, volumes)
+             if type(c) in (int,float) and math.isfinite(c) and c > 0
+             and type(v) in (int,float) and math.isfinite(v) and v > 0}
+    return valid, latest
+
 def share_classes() -> list[dict]:
     """A/B spreads and where each sits against its own year.
 
@@ -187,12 +203,11 @@ def share_classes() -> list[dict]:
         if not a_data or not b_data:
             continue
 
-        def closes(data):
-            stamps = data.get("timestamp") or []
-            values = data["indicators"]["quote"][0].get("close") or []
-            return {s: v for s, v in zip(stamps, values) if v}
-
-        a_closes, b_closes = closes(a_data), closes(b_data)
+        currency = a_data.get("meta", {}).get("currency")
+        if not currency or currency != b_data.get("meta", {}).get("currency"):
+            continue
+        a_closes, a_last = valid_pair_closes(a_data)
+        b_closes, b_last = valid_pair_closes(b_data)
         shared = sorted(set(a_closes) & set(b_closes))
         if len(shared) < 60:
             continue
@@ -228,6 +243,12 @@ def share_classes() -> list[dict]:
 
         out.append({
             "stationary": stationary,
+            "stabilityMethod": "split_half_drift_heuristic",
+            "priceDate": utc_day(shared[-1]),
+            "aLatestDate": utc_day(a_last),
+            "bLatestDate": utc_day(b_last),
+            "latestPairEligible": shared[-1] == a_last == b_last,
+            "currency": currency,
             "driftPct": round((second_half / first_half - 1) * 100, 2),
             "name": name,
             "a": a_ticker,

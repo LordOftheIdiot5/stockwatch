@@ -73,6 +73,8 @@ jobs:
         run: node --test tests/test_stock_attention.mjs
       - name: Price observation freshness tests
         run: node --test tests/test_price_freshness.mjs
+      - name: A/B directional scenario tests
+        run: node --test tests/test_ab_review.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
