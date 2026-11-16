@@ -54,6 +54,8 @@ jobs:
         run: node --test tests/test_coverage_v28.mjs
       - name: V29 coverage and quick search tests
         run: node --test tests/test_expansion_v29.mjs
+      - name: V30 aligned pair statistics
+        run: node --test tests/test_pair_stats_v30.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
