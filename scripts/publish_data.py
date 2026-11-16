@@ -23,6 +23,7 @@ OFFICIAL = frozenset({
     "data/shipping-open.json",
     "data/shipping-ports.json",
     "data/shipping-connectivity.json",
+    "data/instrument-directory.json",
 })
 CATALOG = "data/dataset-catalog.json"
 
