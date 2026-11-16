@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OFFICIAL = frozenset({
     "data/open-data.json",
     "data/registered-source-status.json",
+    "data/entsoe-open.json",
     "data/economic-feeds.json",
     "data/shipping-open.json",
     "data/shipping-ports.json",
