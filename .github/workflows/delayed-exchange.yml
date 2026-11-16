@@ -7,6 +7,8 @@ on:
     paths:
       - 'scripts/delayed_exchange.py'
       - 'tests/test_delayed_exchange.py'
+      - 'scripts/exchange_identity.py'
+      - 'tests/test_exchange_identity.py'
       - '.github/workflows/delayed-exchange.yml'
 permissions:
   contents: read
@@ -16,7 +18,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -26,3 +28,11 @@ jobs:
         run: python -m unittest discover -s tests -p test_delayed_exchange.py
       - name: Check Oslo equity archive and Nasdaq discovery
         run: python scripts/delayed_exchange.py --market OSL --window PREVIOUS_TRADING_DAY
+
+      - name: Exchange identity regression tests
+        run: python -m unittest discover -s tests -p test_exchange_identity.py
+      - name: Private Oslo ISIN and FIGI reconciliation
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: python scripts/exchange_identity.py --market OSL
