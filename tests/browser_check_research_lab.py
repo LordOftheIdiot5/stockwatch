@@ -17,6 +17,16 @@ def main():
     page.locator("[data-lab-tab='1']").click()
     page.locator("#labGraphA svg").wait_for()
     page.locator("#labGraphB svg").wait_for()
+    chart=page.locator("#labGraphA")
+    full=chart.locator("[data-chart-window]").inner_text()
+    other=page.locator("#labGraphB [data-chart-window]").inner_text()
+    chart.get_by_role("button",name="Zoom in").click()
+    assert chart.locator("[data-chart-window]").inner_text()!=full
+    assert page.locator("#labGraphB [data-chart-window]").inner_text()==other
+    chart.get_by_role("button",name="Pan earlier").click()
+    chart.get_by_role("slider",name="Inspect observation").fill("0")
+    chart.get_by_role("button",name="Reset").click()
+    assert chart.locator("[data-chart-window]").inner_text()==full
     page.locator("#labIndicator").select_option("rsi")
     page.locator("#labIndicatorGraph svg").wait_for()
     page.locator("[data-lab-tab='2']").click()
