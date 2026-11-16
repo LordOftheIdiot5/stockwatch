@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T20:00:00Z",
+  "generated": "2026-11-16T20:13:16Z",
   "notice": "Official dated observations, not tradable quotes; per-series reuse rights apply.",
   "series": [
     {
@@ -1495,7 +1495,7 @@
       ],
       "sourceUrl": "https://www.eia.gov/opendata/",
       "license": "Source: U.S. Energy Information Administration (EIA); attribution required",
-      "observedAt": "2026-11-16T19:59:59Z"
+      "observedAt": "2026-11-16T20:13:16Z"
     },
     {
       "key": "eia:RWTC",
@@ -2990,7 +2990,7 @@
       ],
       "sourceUrl": "https://www.eia.gov/opendata/",
       "license": "Source: U.S. Energy Information Administration (EIA); attribution required",
-      "observedAt": "2026-11-16T20:00:00Z"
+      "observedAt": "2026-11-16T20:13:16Z"
     },
     {
       "key": "fred:DFF",
@@ -4485,7 +4485,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DFF",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T19:59:59Z"
+      "observedAt": "2026-11-16T20:13:15Z"
     },
     {
       "key": "fred:DGS10",
@@ -5916,7 +5916,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS10",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T19:59:59Z"
+      "observedAt": "2026-11-16T20:13:15Z"
     },
     {
       "key": "fred:DGS2",
@@ -7347,7 +7347,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS2",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T19:59:58Z"
+      "observedAt": "2026-11-16T20:13:15Z"
     },
     {
       "key": "fred:UNRATE",
@@ -8646,7 +8646,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/UNRATE",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T19:59:59Z"
+      "observedAt": "2026-11-16T20:13:16Z"
     }
   ],
   "sources": {
@@ -8656,7 +8656,7 @@
       "expected": 4,
       "errors": [],
       "sourceUrl": "https://fred.stlouisfed.org/",
-      "lastSuccessAt": "2026-11-16T19:59:59Z"
+      "lastSuccessAt": "2026-11-16T20:13:16Z"
     },
     "eia": {
       "status": "ok",
@@ -8664,7 +8664,7 @@
       "expected": 2,
       "errors": [],
       "sourceUrl": "https://www.eia.gov/opendata/",
-      "lastSuccessAt": "2026-11-16T20:00:00Z"
+      "lastSuccessAt": "2026-11-16T20:13:16Z"
     }
   }
 }

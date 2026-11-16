@@ -1,0 +1,2962 @@
+{
+  "generated": "2026-11-16T20:10:27Z",
+  "sourceUrl": "https://www.openfigi.com/api/documentation",
+  "notice": "Mapping history records changes observed by Stockwatch, not historical FIGI assignments before collection began. Current and prior candidates are unverified; no price feed or corporate relationship is implied.",
+  "records": [
+    {
+      "id": "XOSL:EQNR",
+      "name": "Equinor",
+      "symbol": "EQNR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010096985",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000NSV6T3",
+        "shareClassFIGI": "BBG001SDM4Q7",
+        "compositeFIGI": "BBG000NSV604",
+        "providerName": "EQUINOR ASA",
+        "providerTicker": "EQNR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000NSV6T3",
+        "shareClassFIGI": "BBG001SDM4Q7",
+        "compositeFIGI": "BBG000NSV604",
+        "providerName": "EQUINOR ASA",
+        "providerTicker": "EQNR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000NSV6T3",
+            "shareClassFIGI": "BBG001SDM4Q7",
+            "compositeFIGI": "BBG000NSV604",
+            "providerName": "EQUINOR ASA",
+            "providerTicker": "EQNR",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:DNB",
+      "name": "DNB Bank",
+      "symbol": "DNB",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010161896",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG011M0SYC3",
+        "shareClassFIGI": "BBG011M0SYF0",
+        "compositeFIGI": "BBG011M0SYB4",
+        "providerName": "DNB BANK ASA",
+        "providerTicker": "DNB",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG011M0SYC3",
+        "shareClassFIGI": "BBG011M0SYF0",
+        "compositeFIGI": "BBG011M0SYB4",
+        "providerName": "DNB BANK ASA",
+        "providerTicker": "DNB",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG011M0SYC3",
+            "shareClassFIGI": "BBG011M0SYF0",
+            "compositeFIGI": "BBG011M0SYB4",
+            "providerName": "DNB BANK ASA",
+            "providerTicker": "DNB",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:KOG",
+      "name": "Kongsberg Gruppen",
+      "symbol": "KOG",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0013536151",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BL6JL9",
+        "shareClassFIGI": "BBG001S8FT90",
+        "compositeFIGI": "BBG000BL6J84",
+        "providerName": "KONGSBERG GRUPPEN ASA",
+        "providerTicker": "KOG",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BL6JL9",
+        "shareClassFIGI": "BBG001S8FT90",
+        "compositeFIGI": "BBG000BL6J84",
+        "providerName": "KONGSBERG GRUPPEN ASA",
+        "providerTicker": "KOG",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BL6JL9",
+            "shareClassFIGI": "BBG001S8FT90",
+            "compositeFIGI": "BBG000BL6J84",
+            "providerName": "KONGSBERG GRUPPEN ASA",
+            "providerTicker": "KOG",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:KMAR",
+      "name": "Kongsberg Maritime",
+      "symbol": "KMAR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0013697029",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG021MWXYK7",
+        "shareClassFIGI": "BBG001SLSLC0",
+        "compositeFIGI": "BBG000PTTLP3",
+        "providerName": "KONGSBERG MARITIME ASA",
+        "providerTicker": "KMAR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG021MWXYK7",
+        "shareClassFIGI": "BBG001SLSLC0",
+        "compositeFIGI": "BBG000PTTLP3",
+        "providerName": "KONGSBERG MARITIME ASA",
+        "providerTicker": "KMAR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG021MWXYK7",
+            "shareClassFIGI": "BBG001SLSLC0",
+            "compositeFIGI": "BBG000PTTLP3",
+            "providerName": "KONGSBERG MARITIME ASA",
+            "providerTicker": "KMAR",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:NHY",
+      "name": "Norsk Hydro",
+      "symbol": "NHY",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0005052605",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000C34KL7",
+        "shareClassFIGI": "BBG001S6FHB7",
+        "compositeFIGI": "BBG000C34K73",
+        "providerName": "NORSK HYDRO ASA",
+        "providerTicker": "NHY",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000C34KL7",
+        "shareClassFIGI": "BBG001S6FHB7",
+        "compositeFIGI": "BBG000C34K73",
+        "providerName": "NORSK HYDRO ASA",
+        "providerTicker": "NHY",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000C34KL7",
+            "shareClassFIGI": "BBG001S6FHB7",
+            "compositeFIGI": "BBG000C34K73",
+            "providerName": "NORSK HYDRO ASA",
+            "providerTicker": "NHY",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:MOWI",
+      "name": "Mowi",
+      "symbol": "MOWI",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003054108",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000JDLY02",
+        "shareClassFIGI": "BBG001SB2PP7",
+        "compositeFIGI": "BBG000JDLX22",
+        "providerName": "MOWI ASA",
+        "providerTicker": "MOWI",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000JDLY02",
+        "shareClassFIGI": "BBG001SB2PP7",
+        "compositeFIGI": "BBG000JDLX22",
+        "providerName": "MOWI ASA",
+        "providerTicker": "MOWI",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000JDLY02",
+            "shareClassFIGI": "BBG001SB2PP7",
+            "compositeFIGI": "BBG000JDLX22",
+            "providerName": "MOWI ASA",
+            "providerTicker": "MOWI",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:TEL",
+      "name": "Telenor",
+      "symbol": "TEL",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010063308",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBPV51",
+        "shareClassFIGI": "BBG001S60MV0",
+        "compositeFIGI": "BBG000BBPTP4",
+        "providerName": "TELENOR ASA",
+        "providerTicker": "TEL",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBPV51",
+        "shareClassFIGI": "BBG001S60MV0",
+        "compositeFIGI": "BBG000BBPTP4",
+        "providerName": "TELENOR ASA",
+        "providerTicker": "TEL",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBPV51",
+            "shareClassFIGI": "BBG001S60MV0",
+            "compositeFIGI": "BBG000BBPTP4",
+            "providerName": "TELENOR ASA",
+            "providerTicker": "TEL",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:ORK",
+      "name": "Orkla",
+      "symbol": "ORK",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003733800",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BDCCC5",
+        "shareClassFIGI": "BBG001S6MCX6",
+        "compositeFIGI": "BBG000BDCBX4",
+        "providerName": "ORKLA ASA",
+        "providerTicker": "ORK",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BDCCC5",
+        "shareClassFIGI": "BBG001S6MCX6",
+        "compositeFIGI": "BBG000BDCBX4",
+        "providerName": "ORKLA ASA",
+        "providerTicker": "ORK",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BDCCC5",
+            "shareClassFIGI": "BBG001S6MCX6",
+            "compositeFIGI": "BBG000BDCBX4",
+            "providerName": "ORKLA ASA",
+            "providerTicker": "ORK",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:VAR",
+      "name": "Vår Energi",
+      "symbol": "VAR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0011202772",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG014SVXK46",
+        "shareClassFIGI": "BBG00MS8XY66",
+        "compositeFIGI": "BBG00MS8XY57",
+        "providerName": "VAR ENERGI ASA",
+        "providerTicker": "VAR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG014SVXK46",
+        "shareClassFIGI": "BBG00MS8XY66",
+        "compositeFIGI": "BBG00MS8XY57",
+        "providerName": "VAR ENERGI ASA",
+        "providerTicker": "VAR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG014SVXK46",
+            "shareClassFIGI": "BBG00MS8XY66",
+            "compositeFIGI": "BBG00MS8XY57",
+            "providerName": "VAR ENERGI ASA",
+            "providerTicker": "VAR",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:NOD",
+      "name": "Nordic Semiconductor",
+      "symbol": "NOD",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003055501",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "ambiguous",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "ambiguous",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XOSL:AKER",
+      "name": "Aker",
+      "symbol": "AKER",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010234552",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000C2P156",
+        "shareClassFIGI": "BBG001SDP7H7",
+        "compositeFIGI": "BBG000C2P0S3",
+        "providerName": "AKER ASA-A SHARES",
+        "providerTicker": "AKER",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000C2P156",
+        "shareClassFIGI": "BBG001SDP7H7",
+        "compositeFIGI": "BBG000C2P0S3",
+        "providerName": "AKER ASA-A SHARES",
+        "providerTicker": "AKER",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000C2P156",
+            "shareClassFIGI": "BBG001SDP7H7",
+            "compositeFIGI": "BBG000C2P0S3",
+            "providerName": "AKER ASA-A SHARES",
+            "providerTicker": "AKER",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:TGS",
+      "name": "TGS",
+      "symbol": "TGS",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003078800",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BZWMK3",
+        "shareClassFIGI": "BBG001SBMT04",
+        "compositeFIGI": "BBG000BZWM96",
+        "providerName": "TGS ASA",
+        "providerTicker": "TGS",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BZWMK3",
+        "shareClassFIGI": "BBG001SBMT04",
+        "compositeFIGI": "BBG000BZWM96",
+        "providerName": "TGS ASA",
+        "providerTicker": "TGS",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BZWMK3",
+            "shareClassFIGI": "BBG001SBMT04",
+            "compositeFIGI": "BBG000BZWM96",
+            "providerName": "TGS ASA",
+            "providerTicker": "TGS",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:TOM",
+      "name": "Tomra Systems",
+      "symbol": "TOM",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0012470089",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BCQZM0",
+        "shareClassFIGI": "BBG001S6H9Q7",
+        "compositeFIGI": "BBG000BCQZ31",
+        "providerName": "TOMRA SYSTEMS ASA",
+        "providerTicker": "TOM",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BCQZM0",
+        "shareClassFIGI": "BBG001S6H9Q7",
+        "compositeFIGI": "BBG000BCQZ31",
+        "providerName": "TOMRA SYSTEMS ASA",
+        "providerTicker": "TOM",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BCQZM0",
+            "shareClassFIGI": "BBG001S6H9Q7",
+            "compositeFIGI": "BBG000BCQZ31",
+            "providerName": "TOMRA SYSTEMS ASA",
+            "providerTicker": "TOM",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:NAS",
+      "name": "Norwegian Air Shuttle",
+      "symbol": "NAS",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010196140",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BWKSY5",
+        "shareClassFIGI": "BBG001SFCVW6",
+        "compositeFIGI": "BBG000BWKSN7",
+        "providerName": "NORWEGIAN AIR SHUTTLE AS",
+        "providerTicker": "NAS",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BWKSY5",
+        "shareClassFIGI": "BBG001SFCVW6",
+        "compositeFIGI": "BBG000BWKSN7",
+        "providerName": "NORWEGIAN AIR SHUTTLE AS",
+        "providerTicker": "NAS",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BWKSY5",
+            "shareClassFIGI": "BBG001SFCVW6",
+            "compositeFIGI": "BBG000BWKSN7",
+            "providerName": "NORWEGIAN AIR SHUTTLE AS",
+            "providerTicker": "NAS",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:BNOR",
+      "name": "BlueNord",
+      "symbol": "BNOR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010379266",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000P8SVJ5",
+        "shareClassFIGI": "BBG001SLD9B4",
+        "compositeFIGI": "BBG000P8STV6",
+        "providerName": "BLUENORD ASA",
+        "providerTicker": "BNOR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000P8SVJ5",
+        "shareClassFIGI": "BBG001SLD9B4",
+        "compositeFIGI": "BBG000P8STV6",
+        "providerName": "BLUENORD ASA",
+        "providerTicker": "BNOR",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000P8SVJ5",
+            "shareClassFIGI": "BBG001SLD9B4",
+            "compositeFIGI": "BBG000P8STV6",
+            "providerName": "BLUENORD ASA",
+            "providerTicker": "BNOR",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:BWLPG",
+      "name": "BW LPG",
+      "symbol": "BWLPG",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "SGXZ69436764",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG005KMVVV0",
+        "shareClassFIGI": "BBG005KMVVT3",
+        "compositeFIGI": "BBG005KMVVS4",
+        "providerName": "BW LPG LTD",
+        "providerTicker": "BWLPG",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG005KMVVV0",
+        "shareClassFIGI": "BBG005KMVVT3",
+        "compositeFIGI": "BBG005KMVVS4",
+        "providerName": "BW LPG LTD",
+        "providerTicker": "BWLPG",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG005KMVVV0",
+            "shareClassFIGI": "BBG005KMVVT3",
+            "compositeFIGI": "BBG005KMVVS4",
+            "providerName": "BW LPG LTD",
+            "providerTicker": "BWLPG",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XOSL:VEND",
+      "name": "Vend Marketplaces",
+      "symbol": "VEND",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010736879",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG008HL9800",
+        "shareClassFIGI": "BBG008HL9828",
+        "compositeFIGI": "BBG008HL97Z4",
+        "providerName": "VEND MARKETPLACES ASA CL",
+        "providerTicker": "VEND",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG008HL9800",
+        "shareClassFIGI": "BBG008HL9828",
+        "compositeFIGI": "BBG008HL97Z4",
+        "providerName": "VEND MARKETPLACES ASA CL",
+        "providerTicker": "VEND",
+        "securityType": "Common Stock",
+        "method": "ISIN + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG008HL9800",
+            "shareClassFIGI": "BBG008HL9828",
+            "compositeFIGI": "BBG008HL97Z4",
+            "providerName": "VEND MARKETPLACES ASA CL",
+            "providerTicker": "VEND",
+            "securityType": "Common Stock",
+            "method": "ISIN + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XSTO:ABB",
+      "name": "ABB",
+      "symbol": "ABB",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BXRMY9",
+        "shareClassFIGI": "BBG001SCX147",
+        "compositeFIGI": "BBG000BXRMP9",
+        "providerName": "ABB LTD-REG",
+        "providerTicker": "ABB",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BXRMY9",
+        "shareClassFIGI": "BBG001SCX147",
+        "compositeFIGI": "BBG000BXRMP9",
+        "providerName": "ABB LTD-REG",
+        "providerTicker": "ABB",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BXRMY9",
+            "shareClassFIGI": "BBG001SCX147",
+            "compositeFIGI": "BBG000BXRMP9",
+            "providerName": "ABB LTD-REG",
+            "providerTicker": "ABB",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XSTO:ATCO A",
+      "name": "Atlas Copco A",
+      "symbol": "ATCO A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:ATCO B",
+      "name": "Atlas Copco B",
+      "symbol": "ATCO B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:ERIC A",
+      "name": "Ericsson A",
+      "symbol": "ERIC A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:ERIC B",
+      "name": "Ericsson B",
+      "symbol": "ERIC B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:ALFA",
+      "name": "Alfa Laval",
+      "symbol": "ALFA",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BGXV15",
+        "shareClassFIGI": "BBG001S7Q7X1",
+        "compositeFIGI": "BBG000BGXTP4",
+        "providerName": "ALFA LAVAL AB",
+        "providerTicker": "ALFA",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BGXV15",
+        "shareClassFIGI": "BBG001S7Q7X1",
+        "compositeFIGI": "BBG000BGXTP4",
+        "providerName": "ALFA LAVAL AB",
+        "providerTicker": "ALFA",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BGXV15",
+            "shareClassFIGI": "BBG001S7Q7X1",
+            "compositeFIGI": "BBG000BGXTP4",
+            "providerName": "ALFA LAVAL AB",
+            "providerTicker": "ALFA",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XSTO:EPI A",
+      "name": "Epiroc A",
+      "symbol": "EPI A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:EPI B",
+      "name": "Epiroc B",
+      "symbol": "EPI B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:HEXA B",
+      "name": "Hexagon",
+      "symbol": "HEXA B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:HM B",
+      "name": "H&M",
+      "symbol": "HM B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SWED A",
+      "name": "Swedbank",
+      "symbol": "SWED A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SEB A",
+      "name": "SEB A",
+      "symbol": "SEB A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SEB C",
+      "name": "SEB C",
+      "symbol": "SEB C",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SHB A",
+      "name": "Handelsbanken A",
+      "symbol": "SHB A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SHB B",
+      "name": "Handelsbanken B",
+      "symbol": "SHB B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SKF A",
+      "name": "SKF A",
+      "symbol": "SKF A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:SKF B",
+      "name": "SKF B",
+      "symbol": "SKF B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSTO:EQT",
+      "name": "EQT",
+      "symbol": "EQT",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG00Q57JLK2",
+        "shareClassFIGI": "BBG006WY0T93",
+        "compositeFIGI": "BBG006WY0T84",
+        "providerName": "EQT AB",
+        "providerTicker": "EQT",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG00Q57JLK2",
+        "shareClassFIGI": "BBG006WY0T93",
+        "compositeFIGI": "BBG006WY0T84",
+        "providerName": "EQT AB",
+        "providerTicker": "EQT",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG00Q57JLK2",
+            "shareClassFIGI": "BBG006WY0T93",
+            "compositeFIGI": "BBG006WY0T84",
+            "providerName": "EQT AB",
+            "providerTicker": "EQT",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XCSE:MAERSK A",
+      "name": "A.P. Moller-Maersk A",
+      "symbol": "MAERSK A",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XCSE:MAERSK B",
+      "name": "A.P. Moller-Maersk B",
+      "symbol": "MAERSK B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XCSE:DANSKE",
+      "name": "Danske Bank",
+      "symbol": "DANSKE",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BR5TK6",
+        "shareClassFIGI": "BBG001S9JRX1",
+        "compositeFIGI": "BBG000BR5SD6",
+        "providerName": "DANSKE BANK A/S",
+        "providerTicker": "DANSKE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BR5TK6",
+        "shareClassFIGI": "BBG001S9JRX1",
+        "compositeFIGI": "BBG000BR5SD6",
+        "providerName": "DANSKE BANK A/S",
+        "providerTicker": "DANSKE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BR5TK6",
+            "shareClassFIGI": "BBG001S9JRX1",
+            "compositeFIGI": "BBG000BR5SD6",
+            "providerName": "DANSKE BANK A/S",
+            "providerTicker": "DANSKE",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XCSE:CARL B",
+      "name": "Carlsberg",
+      "symbol": "CARL B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XCSE:COLO B",
+      "name": "Coloplast",
+      "symbol": "COLO B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XCSE:NSIS B",
+      "name": "Novonesis",
+      "symbol": "NSIS B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XHEL:NOKIA",
+      "name": "Nokia",
+      "symbol": "NOKIA",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBWZ54",
+        "shareClassFIGI": "BBG001S67PX4",
+        "compositeFIGI": "BBG000BBWYN7",
+        "providerName": "NOKIA OYJ",
+        "providerTicker": "NOKIA",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBWZ54",
+        "shareClassFIGI": "BBG001S67PX4",
+        "compositeFIGI": "BBG000BBWYN7",
+        "providerName": "NOKIA OYJ",
+        "providerTicker": "NOKIA",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBWZ54",
+            "shareClassFIGI": "BBG001S67PX4",
+            "compositeFIGI": "BBG000BBWYN7",
+            "providerName": "NOKIA OYJ",
+            "providerTicker": "NOKIA",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:NESTE",
+      "name": "Neste",
+      "symbol": "NESTE",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000C4DP34",
+        "shareClassFIGI": "BBG001SLD3K7",
+        "compositeFIGI": "BBG000C4DNY5",
+        "providerName": "NESTE OYJ",
+        "providerTicker": "NESTE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000C4DP34",
+        "shareClassFIGI": "BBG001SLD3K7",
+        "compositeFIGI": "BBG000C4DNY5",
+        "providerName": "NESTE OYJ",
+        "providerTicker": "NESTE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000C4DP34",
+            "shareClassFIGI": "BBG001SLD3K7",
+            "compositeFIGI": "BBG000C4DNY5",
+            "providerName": "NESTE OYJ",
+            "providerTicker": "NESTE",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:FORTUM",
+      "name": "Fortum",
+      "symbol": "FORTUM",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000CKYDQ7",
+        "shareClassFIGI": "BBG001S66NL3",
+        "compositeFIGI": "BBG000CKYDB3",
+        "providerName": "FORTUM OYJ",
+        "providerTicker": "FORTUM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000CKYDQ7",
+        "shareClassFIGI": "BBG001S66NL3",
+        "compositeFIGI": "BBG000CKYDB3",
+        "providerName": "FORTUM OYJ",
+        "providerTicker": "FORTUM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000CKYDQ7",
+            "shareClassFIGI": "BBG001S66NL3",
+            "compositeFIGI": "BBG000CKYDB3",
+            "providerName": "FORTUM OYJ",
+            "providerTicker": "FORTUM",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:WRT1V",
+      "name": "Wärtsilä",
+      "symbol": "WRT1V",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BS65Q9",
+        "shareClassFIGI": "BBG001S77XL8",
+        "compositeFIGI": "BBG000BS64Z2",
+        "providerName": "WARTSILA OYJ ABP",
+        "providerTicker": "WRT1V",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BS65Q9",
+        "shareClassFIGI": "BBG001S77XL8",
+        "compositeFIGI": "BBG000BS64Z2",
+        "providerName": "WARTSILA OYJ ABP",
+        "providerTicker": "WRT1V",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BS65Q9",
+            "shareClassFIGI": "BBG001S77XL8",
+            "compositeFIGI": "BBG000BS64Z2",
+            "providerName": "WARTSILA OYJ ABP",
+            "providerTicker": "WRT1V",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:UPM",
+      "name": "UPM-Kymmene",
+      "symbol": "UPM",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000GM9CH9",
+        "shareClassFIGI": "BBG001S8X654",
+        "compositeFIGI": "BBG000GM9C07",
+        "providerName": "UPM-KYMMENE OYJ",
+        "providerTicker": "UPM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000GM9CH9",
+        "shareClassFIGI": "BBG001S8X654",
+        "compositeFIGI": "BBG000GM9C07",
+        "providerName": "UPM-KYMMENE OYJ",
+        "providerTicker": "UPM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000GM9CH9",
+            "shareClassFIGI": "BBG001S8X654",
+            "compositeFIGI": "BBG000GM9C07",
+            "providerName": "UPM-KYMMENE OYJ",
+            "providerTicker": "UPM",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:STE A",
+      "name": "Stora Enso A",
+      "symbol": "STE A",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XHEL:STERV",
+      "name": "Stora Enso R",
+      "symbol": "STERV",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000G1VR87",
+        "shareClassFIGI": "BBG001S5NWH1",
+        "compositeFIGI": "BBG000G1VQF1",
+        "providerName": "STORA ENSO OYJ-R SHS",
+        "providerTicker": "STERV",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000G1VR87",
+        "shareClassFIGI": "BBG001S5NWH1",
+        "compositeFIGI": "BBG000G1VQF1",
+        "providerName": "STORA ENSO OYJ-R SHS",
+        "providerTicker": "STERV",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000G1VR87",
+            "shareClassFIGI": "BBG001S5NWH1",
+            "compositeFIGI": "BBG000G1VQF1",
+            "providerName": "STORA ENSO OYJ-R SHS",
+            "providerTicker": "STERV",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:SAMPO",
+      "name": "Sampo",
+      "symbol": "SAMPO",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BRP3P6",
+        "shareClassFIGI": "BBG001S7XYB8",
+        "compositeFIGI": "BBG000BRP3G6",
+        "providerName": "SAMPO OYJ-A SHS",
+        "providerTicker": "SAMPO",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BRP3P6",
+        "shareClassFIGI": "BBG001S7XYB8",
+        "compositeFIGI": "BBG000BRP3G6",
+        "providerName": "SAMPO OYJ-A SHS",
+        "providerTicker": "SAMPO",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BRP3P6",
+            "shareClassFIGI": "BBG001S7XYB8",
+            "compositeFIGI": "BBG000BRP3G6",
+            "providerName": "SAMPO OYJ-A SHS",
+            "providerTicker": "SAMPO",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XHEL:NDA FI",
+      "name": "Nordea",
+      "symbol": "NDA FI",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XETR:ALV",
+      "name": "Allianz",
+      "symbol": "ALV",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBFBD7",
+        "shareClassFIGI": "BBG001S5XGR4",
+        "compositeFIGI": "BBG000BBF8T7",
+        "providerName": "ALLIANZ SE-REG",
+        "providerTicker": "ALV",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBFBD7",
+        "shareClassFIGI": "BBG001S5XGR4",
+        "compositeFIGI": "BBG000BBF8T7",
+        "providerName": "ALLIANZ SE-REG",
+        "providerTicker": "ALV",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBFBD7",
+            "shareClassFIGI": "BBG001S5XGR4",
+            "compositeFIGI": "BBG000BBF8T7",
+            "providerName": "ALLIANZ SE-REG",
+            "providerTicker": "ALV",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XETR:RHM",
+      "name": "Rheinmetall",
+      "symbol": "RHM",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BC7S29",
+        "shareClassFIGI": "BBG001S699S4",
+        "compositeFIGI": "BBG000BC7QR6",
+        "providerName": "RHEINMETALL AG",
+        "providerTicker": "RHM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BC7S29",
+        "shareClassFIGI": "BBG001S699S4",
+        "compositeFIGI": "BBG000BC7QR6",
+        "providerName": "RHEINMETALL AG",
+        "providerTicker": "RHM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BC7S29",
+            "shareClassFIGI": "BBG001S699S4",
+            "compositeFIGI": "BBG000BC7QR6",
+            "providerName": "RHEINMETALL AG",
+            "providerTicker": "RHM",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XETR:DBK",
+      "name": "Deutsche Bank",
+      "symbol": "DBK",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBZW12",
+        "shareClassFIGI": "BBG001S683N3",
+        "compositeFIGI": "BBG000BBZTH2",
+        "providerName": "DEUTSCHE BANK AG-REGISTERED",
+        "providerTicker": "DBK",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBZW12",
+        "shareClassFIGI": "BBG001S683N3",
+        "compositeFIGI": "BBG000BBZTH2",
+        "providerName": "DEUTSCHE BANK AG-REGISTERED",
+        "providerTicker": "DBK",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBZW12",
+            "shareClassFIGI": "BBG001S683N3",
+            "compositeFIGI": "BBG000BBZTH2",
+            "providerName": "DEUTSCHE BANK AG-REGISTERED",
+            "providerTicker": "DBK",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XETR:BMW",
+      "name": "BMW",
+      "symbol": "BMW",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBXB74",
+        "shareClassFIGI": "BBG001S676R3",
+        "compositeFIGI": "BBG000BBX8Q0",
+        "providerName": "BAYERISCHE MOTOREN WERKE AG",
+        "providerTicker": "BMW",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBXB74",
+        "shareClassFIGI": "BBG001S676R3",
+        "compositeFIGI": "BBG000BBX8Q0",
+        "providerName": "BAYERISCHE MOTOREN WERKE AG",
+        "providerTicker": "BMW",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBXB74",
+            "shareClassFIGI": "BBG001S676R3",
+            "compositeFIGI": "BBG000BBX8Q0",
+            "providerName": "BAYERISCHE MOTOREN WERKE AG",
+            "providerTicker": "BMW",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XETR:MBG",
+      "name": "Mercedes-Benz",
+      "symbol": "MBG",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000CCW1K9",
+        "shareClassFIGI": "BBG001S69JW7",
+        "compositeFIGI": "BBG000CCVZZ9",
+        "providerName": "MERCEDES-BENZ GROUP AG",
+        "providerTicker": "MBG",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000CCW1K9",
+        "shareClassFIGI": "BBG001S69JW7",
+        "compositeFIGI": "BBG000CCVZZ9",
+        "providerName": "MERCEDES-BENZ GROUP AG",
+        "providerTicker": "MBG",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000CCW1K9",
+            "shareClassFIGI": "BBG001S69JW7",
+            "compositeFIGI": "BBG000CCVZZ9",
+            "providerName": "MERCEDES-BENZ GROUP AG",
+            "providerTicker": "MBG",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XETR:RWE",
+      "name": "RWE",
+      "symbol": "RWE",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBQ209",
+        "shareClassFIGI": "BBG001S64570",
+        "compositeFIGI": "BBG000BBQ012",
+        "providerName": "RWE AG",
+        "providerTicker": "RWE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBQ209",
+        "shareClassFIGI": "BBG001S64570",
+        "compositeFIGI": "BBG000BBQ012",
+        "providerName": "RWE AG",
+        "providerTicker": "RWE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBQ209",
+            "shareClassFIGI": "BBG001S64570",
+            "compositeFIGI": "BBG000BBQ012",
+            "providerName": "RWE AG",
+            "providerTicker": "RWE",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XPAR:MC",
+      "name": "LVMH",
+      "symbol": "MC",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BC7Q05",
+        "shareClassFIGI": "BBG001S641T5",
+        "compositeFIGI": "BBG000BC7PK5",
+        "providerName": "LVMH MOET HENNESSY LOUIS VUI",
+        "providerTicker": "MC",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BC7Q05",
+        "shareClassFIGI": "BBG001S641T5",
+        "compositeFIGI": "BBG000BC7PK5",
+        "providerName": "LVMH MOET HENNESSY LOUIS VUI",
+        "providerTicker": "MC",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BC7Q05",
+            "shareClassFIGI": "BBG001S641T5",
+            "compositeFIGI": "BBG000BC7PK5",
+            "providerName": "LVMH MOET HENNESSY LOUIS VUI",
+            "providerTicker": "MC",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XPAR:TTE",
+      "name": "TotalEnergies",
+      "symbol": "TTE",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000C1M4K8",
+        "shareClassFIGI": "BBG001S67Y74",
+        "compositeFIGI": "BBG000C1M473",
+        "providerName": "TOTALENERGIES SE",
+        "providerTicker": "TTE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000C1M4K8",
+        "shareClassFIGI": "BBG001S67Y74",
+        "compositeFIGI": "BBG000C1M473",
+        "providerName": "TOTALENERGIES SE",
+        "providerTicker": "TTE",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000C1M4K8",
+            "shareClassFIGI": "BBG001S67Y74",
+            "compositeFIGI": "BBG000C1M473",
+            "providerName": "TOTALENERGIES SE",
+            "providerTicker": "TTE",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XPAR:SU",
+      "name": "Schneider Electric",
+      "symbol": "SU",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBWCH2",
+        "shareClassFIGI": "BBG001S67MN2",
+        "compositeFIGI": "BBG000BBWBV8",
+        "providerName": "SCHNEIDER ELECTRIC SE",
+        "providerTicker": "SU",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBWCH2",
+        "shareClassFIGI": "BBG001S67MN2",
+        "compositeFIGI": "BBG000BBWBV8",
+        "providerName": "SCHNEIDER ELECTRIC SE",
+        "providerTicker": "SU",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBWCH2",
+            "shareClassFIGI": "BBG001S67MN2",
+            "compositeFIGI": "BBG000BBWBV8",
+            "providerName": "SCHNEIDER ELECTRIC SE",
+            "providerTicker": "SU",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XPAR:SAN",
+      "name": "Sanofi",
+      "symbol": "SAN",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BWBBP2",
+        "shareClassFIGI": "BBG001SCSQN7",
+        "compositeFIGI": "BBG000BWBBF3",
+        "providerName": "SANOFI",
+        "providerTicker": "SAN",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BWBBP2",
+        "shareClassFIGI": "BBG001SCSQN7",
+        "compositeFIGI": "BBG000BWBBF3",
+        "providerName": "SANOFI",
+        "providerTicker": "SAN",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BWBBP2",
+            "shareClassFIGI": "BBG001SCSQN7",
+            "compositeFIGI": "BBG000BWBBF3",
+            "providerName": "SANOFI",
+            "providerTicker": "SAN",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XPAR:BNP",
+      "name": "BNP Paribas",
+      "symbol": "BNP",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BBXJ95",
+        "shareClassFIGI": "BBG001S67SB2",
+        "compositeFIGI": "BBG000BBXJ04",
+        "providerName": "BNP PARIBAS",
+        "providerTicker": "BNP",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BBXJ95",
+        "shareClassFIGI": "BBG001S67SB2",
+        "compositeFIGI": "BBG000BBXJ04",
+        "providerName": "BNP PARIBAS",
+        "providerTicker": "BNP",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BBXJ95",
+            "shareClassFIGI": "BBG001S67SB2",
+            "compositeFIGI": "BBG000BBXJ04",
+            "providerName": "BNP PARIBAS",
+            "providerTicker": "BNP",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XLON:SHEL",
+      "name": "Shell",
+      "symbol": "SHEL",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG0149N4YC8",
+        "shareClassFIGI": "BBG0149N4YG4",
+        "compositeFIGI": "BBG0149N4YB9",
+        "providerName": "SHELL PLC",
+        "providerTicker": "SHEL",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG0149N4YC8",
+        "shareClassFIGI": "BBG0149N4YG4",
+        "compositeFIGI": "BBG0149N4YB9",
+        "providerName": "SHELL PLC",
+        "providerTicker": "SHEL",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG0149N4YC8",
+            "shareClassFIGI": "BBG0149N4YG4",
+            "compositeFIGI": "BBG0149N4YB9",
+            "providerName": "SHELL PLC",
+            "providerTicker": "SHEL",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XLON:BP/",
+      "name": "BP",
+      "symbol": "BP/",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "ambiguous",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "ambiguous",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XLON:AZN",
+      "name": "AstraZeneca",
+      "symbol": "AZN",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "ambiguous",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "ambiguous",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XLON:HSBA",
+      "name": "HSBC",
+      "symbol": "HSBA",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "ambiguous",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "ambiguous",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XLON:RR/",
+      "name": "Rolls-Royce",
+      "symbol": "RR/",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "ambiguous",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "ambiguous",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XLON:RIO",
+      "name": "Rio Tinto",
+      "symbol": "RIO",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "ambiguous",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "ambiguous",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSWX:NESN",
+      "name": "Nestlé",
+      "symbol": "NESN",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG00HCYRYM6",
+        "shareClassFIGI": "BBG001S6BX08",
+        "compositeFIGI": "BBG000CPBD63",
+        "providerName": "NESTLE SA-REG",
+        "providerTicker": "NESN",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG00HCYRYM6",
+        "shareClassFIGI": "BBG001S6BX08",
+        "compositeFIGI": "BBG000CPBD63",
+        "providerName": "NESTLE SA-REG",
+        "providerTicker": "NESN",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG00HCYRYM6",
+            "shareClassFIGI": "BBG001S6BX08",
+            "compositeFIGI": "BBG000CPBD63",
+            "providerName": "NESTLE SA-REG",
+            "providerTicker": "NESN",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XSWX:ROG",
+      "name": "Roche participation certificate",
+      "symbol": "ROG",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "unresolved",
+      "currentCandidate": null,
+      "lastCandidate": null,
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "unresolved",
+          "mapping": null
+        }
+      ]
+    },
+    {
+      "id": "XSWX:NOVN",
+      "name": "Novartis",
+      "symbol": "NOVN",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG00HCYS021",
+        "shareClassFIGI": "BBG001SD31N7",
+        "compositeFIGI": "BBG000NQV2C4",
+        "providerName": "NOVARTIS AG-REG",
+        "providerTicker": "NOVN",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG00HCYS021",
+        "shareClassFIGI": "BBG001SD31N7",
+        "compositeFIGI": "BBG000NQV2C4",
+        "providerName": "NOVARTIS AG-REG",
+        "providerTicker": "NOVN",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG00HCYS021",
+            "shareClassFIGI": "BBG001SD31N7",
+            "compositeFIGI": "BBG000NQV2C4",
+            "providerName": "NOVARTIS AG-REG",
+            "providerTicker": "NOVN",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XSWX:UBSG",
+      "name": "UBS",
+      "symbol": "UBSG",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG00HCYVBT4",
+        "shareClassFIGI": "BBG007936GX0",
+        "compositeFIGI": "BBG007936GV2",
+        "providerName": "UBS GROUP AG-REG",
+        "providerTicker": "UBSG",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG00HCYVBT4",
+        "shareClassFIGI": "BBG007936GX0",
+        "compositeFIGI": "BBG007936GV2",
+        "providerName": "UBS GROUP AG-REG",
+        "providerTicker": "UBSG",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG00HCYVBT4",
+            "shareClassFIGI": "BBG007936GX0",
+            "compositeFIGI": "BBG007936GV2",
+            "providerName": "UBS GROUP AG-REG",
+            "providerTicker": "UBSG",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XAMS:ASM",
+      "name": "ASM International",
+      "symbol": "ASM",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000F5L454",
+        "shareClassFIGI": "BBG001S9HL57",
+        "compositeFIGI": "BBG000F5L3Q3",
+        "providerName": "ASM INTERNATIONAL NV",
+        "providerTicker": "ASM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000F5L454",
+        "shareClassFIGI": "BBG001S9HL57",
+        "compositeFIGI": "BBG000F5L3Q3",
+        "providerName": "ASM INTERNATIONAL NV",
+        "providerTicker": "ASM",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000F5L454",
+            "shareClassFIGI": "BBG001S9HL57",
+            "compositeFIGI": "BBG000F5L3Q3",
+            "providerName": "ASM INTERNATIONAL NV",
+            "providerTicker": "ASM",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XAMS:BESI",
+      "name": "BE Semiconductor Industries",
+      "symbol": "BESI",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000FT9SV4",
+        "shareClassFIGI": "BBG001S87KN2",
+        "compositeFIGI": "BBG000FT9S80",
+        "providerName": "BE SEMICONDUCTOR INDUSTRIES",
+        "providerTicker": "BESI",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000FT9SV4",
+        "shareClassFIGI": "BBG001S87KN2",
+        "compositeFIGI": "BBG000FT9S80",
+        "providerName": "BE SEMICONDUCTOR INDUSTRIES",
+        "providerTicker": "BESI",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000FT9SV4",
+            "shareClassFIGI": "BBG001S87KN2",
+            "compositeFIGI": "BBG000FT9S80",
+            "providerName": "BE SEMICONDUCTOR INDUSTRIES",
+            "providerTicker": "BESI",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XAMS:INGA",
+      "name": "ING Groep",
+      "symbol": "INGA",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG000BW4SZ2",
+        "shareClassFIGI": "BBG001S6RKC6",
+        "compositeFIGI": "BBG000BW4SH2",
+        "providerName": "ING GROEP NV",
+        "providerTicker": "INGA",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG000BW4SZ2",
+        "shareClassFIGI": "BBG001S6RKC6",
+        "compositeFIGI": "BBG000BW4SH2",
+        "providerName": "ING GROEP NV",
+        "providerTicker": "INGA",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG000BW4SZ2",
+            "shareClassFIGI": "BBG001S6RKC6",
+            "compositeFIGI": "BBG000BW4SH2",
+            "providerName": "ING GROEP NV",
+            "providerTicker": "INGA",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "XAMS:PRX",
+      "name": "Prosus",
+      "symbol": "PRX",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation",
+      "quoteStatus": "not_connected",
+      "mappingStatus": "candidate",
+      "currentCandidate": {
+        "figi": "BBG00NQKSQ99",
+        "shareClassFIGI": "BBG00NQKSQ35",
+        "compositeFIGI": "BBG00NQKSQ26",
+        "providerName": "PROSUS NV",
+        "providerTicker": "PRX",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastCandidate": {
+        "figi": "BBG00NQKSQ99",
+        "shareClassFIGI": "BBG00NQKSQ35",
+        "compositeFIGI": "BBG00NQKSQ26",
+        "providerName": "PROSUS NV",
+        "providerTicker": "PRX",
+        "securityType": "Common Stock",
+        "method": "Ticker + MIC",
+        "sourceUrl": "https://www.openfigi.com/api/documentation",
+        "verified": false
+      },
+      "lastChecked": "2026-11-16T20:10:27Z",
+      "mappingHistory": [
+        {
+          "observedAt": "2026-11-16T20:10:27Z",
+          "status": "candidate",
+          "mapping": {
+            "figi": "BBG00NQKSQ99",
+            "shareClassFIGI": "BBG00NQKSQ35",
+            "compositeFIGI": "BBG00NQKSQ26",
+            "providerName": "PROSUS NV",
+            "providerTicker": "PRX",
+            "securityType": "Common Stock",
+            "method": "Ticker + MIC",
+            "sourceUrl": "https://www.openfigi.com/api/documentation",
+            "verified": false
+          }
+        }
+      ]
+    }
+  ]
+}
