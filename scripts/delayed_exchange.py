@@ -1,0 +1,85 @@
+"""Official delayed exchange data: private research only, never publish trade rows."""
+import argparse,csv,hashlib,io,json,re,sys,zipfile
+from datetime import datetime,timezone
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import urljoin,urlparse
+from urllib.request import Request,urlopen
+from urllib.error import HTTPError
+ROOT=Path(__file__).resolve().parents[1]
+EUR="https://marketdata.euronext.com/data-reporting-service/trades-file"
+NAS="https://tradereports.nasdaq.com/shares/trade-reports/post-trade"
+MAX_DOWNLOAD=64*1024*1024
+MAX_EXPANDED=512*1024*1024
+MARKETS=("OSL","PAR","AMS","BRU","DUB","LIS","MIL")
+REQUIRED={"TradingDateTime","PublicationDateTime","MifidInstrumentID","MifidPrice","MifidQuantity","MifidCurrency","Venue","TradeUniqueIdentifier"}
+def downloaded(url,limit=MAX_DOWNLOAD):
+    req=Request(url,headers={"User-Agent":"StockwatchResearch/1.0 (+https://stocks.nordl.dev)","Accept":"*/*"})
+    with urlopen(req,timeout=120) as r:
+        if urlparse(r.geturl()).scheme!="https" or urlparse(r.geturl()).hostname!=urlparse(url).hostname:
+            raise ValueError("Unexpected source redirect")
+        data=r.read(limit+1)
+    if len(data)>limit:raise ValueError("Download exceeds configured bound")
+    return data
+def eur_url(market,window):
+    if market not in MARKETS or window not in ("PREVIOUS_TRADING_DAY","CURRENT_TRADING_DAY","LAST_HOUR","LAST_15_MINUTES"):
+        raise ValueError("Unsupported market/window")
+    return EUR+"/download/EQUITIES/"+window+"/"+market
+def csv_schema(raw):
+    with zipfile.ZipFile(io.BytesIO(raw)) as z:
+        files=[x for x in z.infolist() if not x.is_dir() and x.filename.lower().endswith(".csv")]
+        if len(files)!=1 or files[0].file_size>MAX_EXPANDED:raise ValueError("Unexpected trade archive")
+        with z.open(files[0]) as b,io.TextIOWrapper(b,encoding="utf-8-sig",newline="") as f:
+            for _ in range(4):
+                line=f.readline()
+                if not line:break
+                for sep in (",",";","\t"):
+                    fields=next(csv.reader([line],delimiter=sep))
+                    if REQUIRED.issubset(set(fields)):
+                        return {"format":"zip/csv","schemaValidated":True}
+        raise ValueError("Unrecognized Euronext trade schema")
+class Links(HTMLParser):
+    def __init__(self):super().__init__();self.links=[]
+    def handle_starttag(self,tag,attrs):
+        if tag=="a":
+            href=dict(attrs).get("href","")
+            u=urljoin(NAS,href);p=urlparse(u)
+            if p.scheme=="https" and p.hostname=="tradereports.nasdaq.com" and "nordicequity-posttrade" in u.lower():
+                self.links.append(u)
+def nasdaq_links(raw):
+    p=Links();p.feed(raw.decode("utf-8",errors="replace"))
+    return sorted(set(p.links))
+def private_save(raw,dest,provider):
+    dest=Path(dest).expanduser().resolve()
+    if dest==ROOT or ROOT in dest.parents:raise ValueError("Private archive must be outside repository")
+    dest=dest/provider;dest.mkdir(parents=True,exist_ok=True)
+    name=hashlib.sha256(raw).hexdigest()+".zip"
+    target=dest/name
+    if not target.exists():
+        tmp=target.with_suffix(".tmp");tmp.write_bytes(raw);tmp.replace(target)
+    return name
+def probe(market="OSL",window="PREVIOUS_TRADING_DAY",archive=None,fetch=downloaded):
+    result={"checkedAt":datetime.now(timezone.utc).isoformat(),"euronext":{"status":"not_checked"},"nasdaq":{"status":"not_checked"},"publicPublication":False}
+    try:
+        raw=fetch(eur_url(market,window))
+        info=csv_schema(raw)
+        if archive:private_save(raw,archive,"euronext")
+        result["euronext"]={"status":"schema_validated","market":market,**info,"privateArchive":bool(archive)}
+    except HTTPError as e:result["euronext"]={"status":"http_error","httpStatus":e.code}
+    except Exception as e:result["euronext"]={"status":"not_validated","errorType":type(e).__name__}
+    try:
+        raw=fetch(NAS,8*1024*1024)
+        links=nasdaq_links(raw)
+        result["nasdaq"]={"status":"discovery_only","downloadLinksFound":bool(links),"tradeDownloadEnabled":False}
+    except Exception as e:result["nasdaq"]={"status":"not_validated","errorType":type(e).__name__}
+    return result
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--market",choices=MARKETS,default="OSL")
+    p.add_argument("--window",default="PREVIOUS_TRADING_DAY")
+    p.add_argument("--private-archive",type=Path,help="Optional persistent directory outside repository; Euronext only")
+    a=p.parse_args()
+    status=probe(a.market,a.window,a.private_archive)
+    print(json.dumps(status))
+    return 0 if status["euronext"]["status"]=="schema_validated" else 1
+if __name__=="__main__":sys.exit(main())

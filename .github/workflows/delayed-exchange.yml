@@ -1,0 +1,28 @@
+name: Official delayed exchange availability
+on:
+  schedule:
+    - cron: '20 18 * * 1-5'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/delayed_exchange.py'
+      - 'tests/test_delayed_exchange.py'
+      - '.github/workflows/delayed-exchange.yml'
+permissions:
+  contents: read
+concurrency:
+  group: exchange-probe-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Offline collector tests
+        run: python -m unittest discover -s tests -p test_delayed_exchange.py
+      - name: Check Oslo equity archive and Nasdaq discovery
+        run: python scripts/delayed_exchange.py --market OSL --window PREVIOUS_TRADING_DAY

@@ -14,6 +14,8 @@ on:
       - 'research.html'
       - 'data/research-targets.json'
       - 'data/research-expansion.json'
+      - 'data/licensed-price-coverage.json'
+      - 'price-history.html'
       - 'data/research-onboarding.json'
       - 'research.js'
       - 'scripts/**'
@@ -69,7 +71,7 @@ jobs:
           print('Verified 138 unique companies and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
-        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-') || startsWith(github.head_ref, 'feature/stockwatch-v29-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v21-') || startsWith(github.head_ref, 'feature/stockwatch-v22-') || startsWith(github.head_ref, 'feature/stockwatch-v23-') || startsWith(github.head_ref, 'feature/stockwatch-v24-') || startsWith(github.head_ref, 'feature/stockwatch-v25-') || startsWith(github.head_ref, 'feature/stockwatch-v25b-') || startsWith(github.head_ref, 'feature/stockwatch-v26-') || startsWith(github.head_ref, 'feature/stockwatch-v28-') || startsWith(github.head_ref, 'feature/stockwatch-v29-') || startsWith(github.head_ref, 'feature/stockwatch-v29b-')
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
@@ -176,3 +178,7 @@ jobs:
       - name: V29 expanded research browser checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v29-')
         run: python tests/browser_check_v29.py
+
+      - name: V29b licensed reference price browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v29b-')
+        run: python tests/browser_check_v29b.py
