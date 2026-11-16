@@ -1,0 +1,680 @@
+{
+  "notice": "Editorial onboarding targets; mapping candidates must be confirmed before vendor quote subscription. Share classes are separate securities. Source URL for Norwegian ISINs is the Euronext composition; other symbols are proposed lookup inputs, not independently verified identities.",
+  "targets": [
+    {
+      "id": "XOSL:EQNR",
+      "name": "Equinor",
+      "symbol": "EQNR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010096985",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:DNB",
+      "name": "DNB Bank",
+      "symbol": "DNB",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010161896",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:KOG",
+      "name": "Kongsberg Gruppen",
+      "symbol": "KOG",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0013536151",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:KMAR",
+      "name": "Kongsberg Maritime",
+      "symbol": "KMAR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0013697029",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:NHY",
+      "name": "Norsk Hydro",
+      "symbol": "NHY",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0005052605",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:MOWI",
+      "name": "Mowi",
+      "symbol": "MOWI",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003054108",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:TEL",
+      "name": "Telenor",
+      "symbol": "TEL",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010063308",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:ORK",
+      "name": "Orkla",
+      "symbol": "ORK",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003733800",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:VAR",
+      "name": "Vår Energi",
+      "symbol": "VAR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0011202772",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:NOD",
+      "name": "Nordic Semiconductor",
+      "symbol": "NOD",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003055501",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:AKER",
+      "name": "Aker",
+      "symbol": "AKER",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010234552",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:TGS",
+      "name": "TGS",
+      "symbol": "TGS",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0003078800",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:TOM",
+      "name": "Tomra Systems",
+      "symbol": "TOM",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0012470089",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:NAS",
+      "name": "Norwegian Air Shuttle",
+      "symbol": "NAS",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010196140",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:BNOR",
+      "name": "BlueNord",
+      "symbol": "BNOR",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010379266",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:BWLPG",
+      "name": "BW LPG",
+      "symbol": "BWLPG",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "SGXZ69436764",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XOSL:VEND",
+      "name": "Vend Marketplaces",
+      "symbol": "VEND",
+      "mic": "XOSL",
+      "market": "Norway",
+      "isin": "NO0010736879",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL"
+    },
+    {
+      "id": "XSTO:ABB",
+      "name": "ABB",
+      "symbol": "ABB",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:ATCO A",
+      "name": "Atlas Copco A",
+      "symbol": "ATCO A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:ATCO B",
+      "name": "Atlas Copco B",
+      "symbol": "ATCO B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:ERIC A",
+      "name": "Ericsson A",
+      "symbol": "ERIC A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:ERIC B",
+      "name": "Ericsson B",
+      "symbol": "ERIC B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:ALFA",
+      "name": "Alfa Laval",
+      "symbol": "ALFA",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:EPI A",
+      "name": "Epiroc A",
+      "symbol": "EPI A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:EPI B",
+      "name": "Epiroc B",
+      "symbol": "EPI B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:HEXA B",
+      "name": "Hexagon",
+      "symbol": "HEXA B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:HM B",
+      "name": "H&M",
+      "symbol": "HM B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SWED A",
+      "name": "Swedbank",
+      "symbol": "SWED A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SEB A",
+      "name": "SEB A",
+      "symbol": "SEB A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SEB C",
+      "name": "SEB C",
+      "symbol": "SEB C",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SHB A",
+      "name": "Handelsbanken A",
+      "symbol": "SHB A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SHB B",
+      "name": "Handelsbanken B",
+      "symbol": "SHB B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SKF A",
+      "name": "SKF A",
+      "symbol": "SKF A",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:SKF B",
+      "name": "SKF B",
+      "symbol": "SKF B",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSTO:EQT",
+      "name": "EQT",
+      "symbol": "EQT",
+      "mic": "XSTO",
+      "market": "Sweden",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XCSE:MAERSK A",
+      "name": "A.P. Moller-Maersk A",
+      "symbol": "MAERSK A",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XCSE:MAERSK B",
+      "name": "A.P. Moller-Maersk B",
+      "symbol": "MAERSK B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XCSE:DANSKE",
+      "name": "Danske Bank",
+      "symbol": "DANSKE",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XCSE:CARL B",
+      "name": "Carlsberg",
+      "symbol": "CARL B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XCSE:COLO B",
+      "name": "Coloplast",
+      "symbol": "COLO B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XCSE:NSIS B",
+      "name": "Novonesis",
+      "symbol": "NSIS B",
+      "mic": "XCSE",
+      "market": "Denmark",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:NOKIA",
+      "name": "Nokia",
+      "symbol": "NOKIA",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:NESTE",
+      "name": "Neste",
+      "symbol": "NESTE",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:FORTUM",
+      "name": "Fortum",
+      "symbol": "FORTUM",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:WRT1V",
+      "name": "Wärtsilä",
+      "symbol": "WRT1V",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:UPM",
+      "name": "UPM-Kymmene",
+      "symbol": "UPM",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:STE A",
+      "name": "Stora Enso A",
+      "symbol": "STE A",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:STERV",
+      "name": "Stora Enso R",
+      "symbol": "STERV",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:SAMPO",
+      "name": "Sampo",
+      "symbol": "SAMPO",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XHEL:NDA FI",
+      "name": "Nordea",
+      "symbol": "NDA FI",
+      "mic": "XHEL",
+      "market": "Finland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XETR:ALV",
+      "name": "Allianz",
+      "symbol": "ALV",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XETR:RHM",
+      "name": "Rheinmetall",
+      "symbol": "RHM",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XETR:DBK",
+      "name": "Deutsche Bank",
+      "symbol": "DBK",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XETR:BMW",
+      "name": "BMW",
+      "symbol": "BMW",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XETR:MBG",
+      "name": "Mercedes-Benz",
+      "symbol": "MBG",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XETR:RWE",
+      "name": "RWE",
+      "symbol": "RWE",
+      "mic": "XETR",
+      "market": "Germany",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XPAR:MC",
+      "name": "LVMH",
+      "symbol": "MC",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XPAR:TTE",
+      "name": "TotalEnergies",
+      "symbol": "TTE",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XPAR:SU",
+      "name": "Schneider Electric",
+      "symbol": "SU",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XPAR:SAN",
+      "name": "Sanofi",
+      "symbol": "SAN",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XPAR:BNP",
+      "name": "BNP Paribas",
+      "symbol": "BNP",
+      "mic": "XPAR",
+      "market": "France",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XLON:SHEL",
+      "name": "Shell",
+      "symbol": "SHEL",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XLON:BP/",
+      "name": "BP",
+      "symbol": "BP/",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XLON:AZN",
+      "name": "AstraZeneca",
+      "symbol": "AZN",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XLON:HSBA",
+      "name": "HSBC",
+      "symbol": "HSBA",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XLON:RR/",
+      "name": "Rolls-Royce",
+      "symbol": "RR/",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XLON:RIO",
+      "name": "Rio Tinto",
+      "symbol": "RIO",
+      "mic": "XLON",
+      "market": "United Kingdom",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSWX:NESN",
+      "name": "Nestlé",
+      "symbol": "NESN",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSWX:ROG",
+      "name": "Roche participation certificate",
+      "symbol": "ROG",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSWX:NOVN",
+      "name": "Novartis",
+      "symbol": "NOVN",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XSWX:UBSG",
+      "name": "UBS",
+      "symbol": "UBSG",
+      "mic": "XSWX",
+      "market": "Switzerland",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XAMS:ASM",
+      "name": "ASM International",
+      "symbol": "ASM",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XAMS:BESI",
+      "name": "BE Semiconductor Industries",
+      "symbol": "BESI",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XAMS:INGA",
+      "name": "ING Groep",
+      "symbol": "INGA",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    },
+    {
+      "id": "XAMS:PRX",
+      "name": "Prosus",
+      "symbol": "PRX",
+      "mic": "XAMS",
+      "market": "Netherlands",
+      "isin": null,
+      "sourceUrl": "https://www.openfigi.com/api/documentation"
+    }
+  ]
+}
