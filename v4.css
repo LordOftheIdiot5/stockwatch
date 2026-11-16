@@ -217,3 +217,20 @@ body[data-page="index"].sw-workspace-ready .sw-page-head{display:none}
 .sw-screen-presets{gap:8px;margin:10px 0}.sw-screen-presets[hidden],.sw-advanced-filters[hidden]{display:none}
 .sw-screen-presets .sw-soft-btn{white-space:normal}
 @media(max-width:600px){.sw-quick-results{width:min(340px,85vw);right:0}}
+
+/* V30b — Stockwatch-owned shell; preserve provider attribution. */
+.sw-tv-card{margin:16px 0 22px;padding:18px;border:1px solid var(--sw-edge);border-radius:15px;background:var(--sw-surface);min-width:0;overflow:hidden}
+.sw-tv-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.sw-tv-heading>div{min-width:0}.sw-tv-heading h2{margin:5px 0;font-size:20px;letter-spacing:-.025em;color:var(--sw-text)}
+.sw-tv-heading p{margin:0}.sw-tv-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0 14px}
+.sw-tv-controls label{display:flex;align-items:center;gap:9px;color:var(--sw-muted);font-size:12px}
+.sw-tv-controls select{padding:8px;border:1px solid var(--sw-edge);border-radius:8px;background:var(--sw-card);color:var(--sw-text);max-width:100%}
+.sw-tv-controls select option{background:var(--sw-card);color:var(--sw-text)}
+.sw-tv-frame{height:clamp(405px,42vw,620px);width:100%;min-width:0;background:var(--sw-card);border:1px solid var(--sw-edge);border-radius:10px;overflow:hidden}
+.sw-tv-frame[hidden]{display:none}
+.sw-tv-frame .tradingview-widget-container{height:100%;width:100%}
+.sw-tv-frame .tradingview-widget-container__widget{height:calc(100% - 32px);width:100%}
+.sw-tv-frame .tradingview-widget-copyright{display:flex;justify-content:center;align-items:center;gap:4px;min-height:32px;font-size:12px;color:var(--sw-muted);padding:4px;flex-wrap:wrap}
+.sw-tv-frame .tradingview-widget-copyright a{color:var(--sw-blue);text-decoration:underline}
+.sw-tv-link{display:inline-block;margin:4px 0 0 5px}
+@media(max-width:600px){.sw-tv-card{padding:11px}.sw-tv-heading h2{font-size:17px}.sw-tv-heading{gap:10px}.sw-tv-frame{height:420px}.sw-tv-controls{align-items:stretch}.sw-tv-controls label{flex-wrap:wrap}}
