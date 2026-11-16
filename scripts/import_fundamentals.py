@@ -22,7 +22,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'data' / 'fundamentals.json'
 REQUIRED = ('ticker', 'asOf', 'period', 'currency', 'sourceUrl', 'sourceName')
-METRICS = ('revenue', 'netIncome', 'marketCap', 'pe', 'pb', 'eps', 'dividendPerShare', 'dividendYield')
+METRICS = ('revenue', 'netIncome', 'operatingIncome', 'adjustedOperatingIncome', 'marketCap', 'pe', 'pb', 'eps', 'dividendPerShare', 'dividendYield')
 
 
 def parse_row(row: dict, known: set[str]) -> tuple[str, dict]:
@@ -59,6 +59,7 @@ def main() -> int:
     a.add_argument('csv_file',type=Path)
     args=a.parse_args()
     known={e['ticker'] for e in json.loads((ROOT/'watchlist.json').read_text(encoding='utf-8'))['tickers']}
+    known.update('ref:'+r['id'] for r in json.loads((ROOT/'data'/'research-targets.json').read_text(encoding='utf-8'))['targets'])
     current={'companies':{}}
     if OUT.exists():current=json.loads(OUT.read_text(encoding='utf-8'))
     updated=dict(current.get('companies') or {})

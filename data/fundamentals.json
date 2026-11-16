@@ -1,1 +1,45 @@
-{"schemaVersion": 1, "companies": {}}
+{
+  "schemaVersion": 1,
+  "companies": {
+    "NOVO-B.CO": {
+      "asOf": "2026-09-30",
+      "published": "2026-11-04",
+      "period": "Q3 2026 (three months)",
+      "currency": "DKK",
+      "sourceUrl": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=919765",
+      "sourceName": "Novo Nordisk company announcement 65/2026",
+      "metrics": {
+        "revenue": 79195000000,
+        "operatingIncome": 23011000000,
+        "adjustedOperatingIncome": 31720000000
+      }
+    },
+    "VOLV-B.ST": {
+      "asOf": "2026-09-30",
+      "published": "2026-10-23",
+      "period": "Q3 2026 (three months)",
+      "currency": "SEK",
+      "sourceUrl": "https://www.volvogroup.com/en/news-and-media/news/2026/oct/volvo-group--the-third-quarter-2026.html",
+      "sourceName": "AB Volvo regulated Q3 announcement",
+      "metrics": {
+        "revenue": 119500000000,
+        "operatingIncome": 14354000000,
+        "adjustedOperatingIncome": 14693000000,
+        "eps": 5.29
+      }
+    },
+    "ref:XOSL:EQNR": {
+      "asOf": "2026-09-30",
+      "period": "Q3 2026 (three months)",
+      "currency": "USD",
+      "sourceUrl": "https://www.equinor.com/news/equinor-third-quarter-2026-results",
+      "sourceName": "Equinor Q3 results release",
+      "metrics": {
+        "netIncome": 2540000000,
+        "operatingIncome": 11950000000,
+        "adjustedOperatingIncome": 12350000000,
+        "dividendPerShare": 0.39
+      }
+    }
+  }
+}

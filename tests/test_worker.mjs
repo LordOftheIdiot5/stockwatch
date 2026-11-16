@@ -42,3 +42,5 @@ test('ingestion compares normalized BOM-prefixed secret without accepting wrong 
   const bad=await worker.fetch(req('/api/news/ingest',{method:'POST',headers:{authorization:'Bearer wrong'},body:JSON.stringify(data)}),{DB:db,NEWS_INGEST_TOKEN:'\ufeffsecret\n'});
   assert.equal(bad.status,403);
 });
+
+test('public catalog matches metadata file without D1 or restricted payloads',async()=>{const r=await worker.fetch(req('/api/catalog'),{});assert.equal(r.status,200);const data=await r.json();assert.deepEqual(data,JSON.parse(readFileSync(new URL('../data/research-product-catalog.json',import.meta.url),'utf8')));assert.ok(data.datasets.every(x=>x.sourceUrl&&x.accessPolicy));assert.equal((await worker.fetch(req('/api/catalog',{method:'POST'}),{})).status,503)});
