@@ -1,6 +1,25 @@
 {
-  "generated": "2026-11-16T20:54:51Z",
+  "generated": "2026-11-16T20:56:13Z",
   "items": [
+    {
+      "id": "UCG.MI:88965f3c9cb8f722a1fa3150832e2b9439d21146f782864b0431e74247b33431",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "CPI | EU Clears UniCredit’s Commerzbank Acquisition Without Conditions",
+      "english": null,
+      "publisher": "PYMNTS.com",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVkNzaFZYLTc5RXNlSFNPNjllQzlfNGlNQ196T0JKdlVfa0NOMHhuZW9DZUlNd1dTOENZdHFMRGhOQ0s4LUdyYnd0YlRfQ3hVVW44R2E3U1pFRWVNQXI3NDZZTWRaaDJmMTM1MUZNSXYyb05sYzBySnVzWmR3ZE1UVnpQck0zY0VkallONlYyeG1kOTZRVkdqdzZvbWszUQ?oc=5",
+      "published": "2026-11-16T20:45:43Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "TISG.MI:c22c34a70270aa5107329a244470439c8b9227693865f42a251424cd63c5dc99",
       "ticker": "TISG.MI",
@@ -135,6 +154,25 @@
       "priority": "normal"
     },
     {
+      "id": "RMS.PA:684adce1f937192a77b8d293ff6a4d67f647a10438e0b6c14421c849e870accd",
+      "ticker": "RMS.PA",
+      "name": "Hermes",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Turkish Engineer Who Cracked Wall Street's Algorithm Launches Hermes AI Analyzer",
+      "english": null,
+      "publisher": "WBOC TV",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNU09JNVdXY1NldlprRXNFWTExS1JFcEQ4OERvUWF1el9fNS1JX2tDaExmMEM3bS1zV0FURnhBRlVIN3VBUXZvQlBRY0VIblRjOGVzdEpmWVliVmFJQVF4VWxaNW5MTlhiaEZiZXZjanAzMXpyeC1BXzJKeTVERUtFaG4xQzc1Sk4zVGx0U1dBMlVkdmU0QzBPdHBFNy1aNXVfWGd4c243NVA0VDRBQ3Y5ZEl1ZGg2c05sX1NhcnI1elgwRGc4d0hqSkNneUtGdVVRQWktNmtnVV91eGtSNk9PWE9NekRGMmJsc1hZWVBoMmlidDRHb3ZEdTFJaDFZbVRhZTZQOFhCSkZPQ29xSHc?oc=5",
+      "published": "2026-11-16T18:01:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "RMS.PA:8a258bef100644ccc8ceda84df5f6c3a79a2447d22148d8106126003592aa9b9",
       "ticker": "RMS.PA",
       "name": "Hermes",
@@ -151,7 +189,8 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "duplicateOf": "RMS.PA:684adce1f937192a77b8d293ff6a4d67f647a10438e0b6c14421c849e870accd"
     },
     {
       "id": "AIR.PA:8d6b84c7728cc783968525b33d072fb7c735b4a3c4595012589fe7f077a9db08",
@@ -495,6 +534,26 @@
       "sourceDomain": "news.google.com",
       "priority": "high",
       "duplicateOf": "PRY.MI:6e0d1362a35e8f80d62b4465d449a7089d89f794676dfb00b162ea1c0a35d87b"
+    },
+    {
+      "id": "NOVO-B.CO:01ce507c4cd3b40854322c538e3ab9cb316488cfef88c921da328ce40fd389db",
+      "ticker": "NOVO-B.CO",
+      "name": "Novo Nordisk",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Ny studie: Positiva resultat mot barnfetma",
+      "english": null,
+      "publisher": "Svenska Dagbladet",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQkZzbEpONVBBaGJGWmsyNnNmRnp0RW1pZkhzRzc1RGkyb3JLSm8za25tS21HVlJaZTREenc5VEhVSjc5MFNrcHRnc1UzUkR5VUpXUXlzY2xUcFd1eElIeGFqVjI2U1lPaHVucE1BRVdKNEZMenR4aXd2bzR4YnRlUGFxbjJadXZqNHRWcA?oc=5",
+      "published": "2026-11-16T15:35:29Z",
+      "lang": "sv",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "NOVO-B.CO:c80cde7b18bd68c9790d8df8a3e5b2b06b8144a5d3329080cde34d35b58cdfe2"
     },
     {
       "id": "SAP.DE:30cfc372cc25a8c69fac4f3a81ed69a13fcdc990353ab92233fc34414ef134cc",
