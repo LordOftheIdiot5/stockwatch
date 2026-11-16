@@ -62,8 +62,23 @@ def import_csv(root, csv_path, manifest_path):
             'redistributionPermitted':True,'updated':datetime.now(timezone.utc).isoformat(timespec='seconds')}
     payload=({**common,'ticker':key,'currency':m['currency'],'adjusted':m['adjusted'],'bars':list(series.values())} if asset=='equity'
              else {**common,'code':key,'unit':m['unit'],'observations':list(series.values())})
-    payload['bars' if asset=='equity' else 'observations'].sort(key=lambda x:x['date'])
+    # Append compatible observations without silently discarding earlier dates.
+    field='bars' if asset=='equity' else 'observations'
     dest=data/(key+'.json')
+    if dest.exists():
+        previous=json.loads(dest.read_text(encoding='utf8'))
+        immutable=['source','sourceUrl','licenseReference','redistributionPermitted']
+        immutable+=['ticker','currency','adjusted'] if asset=='equity' else ['code','unit']
+        if any(previous.get(k)!=payload.get(k) for k in immutable):
+            raise ValueError('Existing history has different identity, source, adjustment or licence; separate review required')
+        combined={x['date']:x for x in previous[field]}
+        for observation in payload[field]:
+            old=combined.get(observation['date'])
+            if old is not None and old!=observation:
+                raise ValueError('Conflicting historical observation; review correction before importing: '+observation['date'])
+            combined[observation['date']]=observation
+        payload[field]=list(combined.values())
+    payload[field].sort(key=lambda x:x['date'])
     temp=dest.with_suffix('.tmp');temp.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf8');temp.replace(dest)
     return dest
 
