@@ -63,6 +63,42 @@ function screenFinancialRows(rows,filters){
   return true;
  });
 }
+/* Attention signals are evidence-linked review prompts, not investment advice. */
+function stockAttention(rows,stories,now=Date.now()){
+ const result=[],seen=new Set(),byTicker=new Map();
+ for(const s of stories||[]){
+  if(!s||s.duplicateOf||!['strong','mentioned'].includes(s.relevance))continue;
+  const stamp=Date.parse(s.published),age=now-stamp;
+  if(!Number.isFinite(stamp)||age<0||age>72*3600000)continue;
+  let url;try{url=new URL(s.url);if(url.protocol!=='https:')continue}catch{continue}
+  const h=String(s.english||s.headline||'').toLowerCase();
+  let category=null;
+  if(/\b(profit warning|cuts? (?:annual |full.year )?guidance|withdraws? guidance|insolvency|bankruptcy|resultatvarsel)\b/.test(h))category='Financial risk review';
+  else if(/\b(ceo|cfo|chief executive|chief financial officer|konsernsjef|finansdirektør|vd)\b/.test(h)&&/\b(resigns?|resignation|steps? down|depart(?:ure|s)|dismiss(?:ed|al)|appoint(?:s|ed|ment)?|replacement|retires?|fratrer|avgår|slutter|utnevner)\b/.test(h))category='Leadership change review';
+  else if(/\b(recall|production halt|plant closure|regulatory investigation|export ban)\b/.test(h))category='Operational risk review';
+  else if(/\b(awarded|wins contract|order intake|raises? guidance|acquisition|merger)\b/.test(h))category='Material event review';
+  if(!category)continue;
+  const key=String(s.ticker)+'|'+url.href;if(seen.has(key))continue;seen.add(key);
+  const official=s.relevance==='strong'&&s.type==='disclosure'&&s.match==='issuer_code';
+  const event={category,official,headline:String(s.headline||s.english||''),url:url.href,published:s.published,publisher:s.publisher||'Source'};
+  if(!byTicker.has(s.ticker))byTicker.set(s.ticker,[]);
+  byTicker.get(s.ticker).push(event);
+ }
+ for(const c of rows||[]){
+  if(!c||c.referenceOnly)continue;
+  const events=(byTicker.get(c.ticker)||[]).sort((a,b)=>Number(b.official)-Number(a.official)||Date.parse(b.published)-Date.parse(a.published));
+  const d=Date.parse(c.date),fresh=Number.isFinite(d)&&now>=d&&now-d<=4*86400000;
+  const move=!c.unavailable&&fresh&&Number.isFinite(c.close)&&Number.isFinite(c.changePct)&&(Math.abs(c.changePct)>=5||(Number.isFinite(c.excessSigma)&&Math.abs(c.excessSigma)>=2));
+  const volume=!c.unavailable&&fresh&&Number.isFinite(c.close)&&!c.thin&&Number.isFinite(c.rvol)&&c.rvol>=2.5;
+  if(!events.length&&!move&&!volume)continue;
+  result.push({ticker:c.ticker,name:c.name,events,move,volume,changePct:move?c.changePct:null,rvol:volume?c.rvol:null,priceDate:move||volume?c.date:null,rank:(events.some(e=>e.official)?100:events.length?60:0)+(move?20:0)+(volume?10:0)});
+ }
+ return result.sort((a,b)=>b.rank-a.rank||String(a.ticker).localeCompare(String(b.ticker)));
+}
+function attentionCard(x){
+ const e=x.events[0],label=e?e.category:'Unusual market activity';
+ return '<article class="sw-attention-card"><div class="sw-attention-top"><span class="sw-tag '+(e?'':'mint')+'">'+E(label)+'</span><small>'+E(e?(e.official?'Issuer-linked disclosure':'Headline association · review'):'Observed activity')+'</small></div><a class="sw-attention-name" href="company.html?ticker='+encodeURIComponent(x.ticker)+'">'+E(x.name)+' <small>'+E(x.ticker)+'</small></a>'+(e?'<a class="sw-attention-headline" href="'+E(e.url)+'" target="_blank" rel="noopener noreferrer">'+E(e.headline)+'</a><small>'+E(e.publisher)+' · '+E(fmtDate(e.published))+'</small>':'')+'<div class="sw-attention-meta">'+(x.move?'<b class="'+sign(x.changePct)+'">'+P(x.changePct)+'</b>':'')+(x.volume?'<b>'+N(x.rvol,2)+'× relative volume</b>':'')+(x.priceDate?'<small>Price observation '+E(x.priceDate)+'</small>':'')+'</div></article>';
+}
 function overview(){
  const listed=companies(),universe=directoryRows(),references=universe.filter(x=>x.referenceOnly),valid=priced(),observed=marketHeatData(valid),news=storyData();
  const up=observed.filter(c=>c.changePct>0).length,down=observed.filter(c=>c.changePct<0).length,flat=observed.length-up-down;
@@ -72,10 +108,13 @@ function overview(){
  const sectors=[...new Set(universe.map(x=>x.sector).filter(Boolean))].sort();
  const venueCount=new Set(universe.map(x=>x.exchange).filter(Boolean)).size;
  const pct=n=>observed.length?100*n/observed.length:0;
+ const attention=stockAttention(listed,news);
  const modules=[
  ['equities','Stocks & sectors','Search listings, compare signals and build a watchlist.','stocks.html','▥'],
  ['shipping','Shipping & freight','Global maritime routes and independent voyage models.','shipping.html','⚓'],
  ['energy','Commodities','Energy, metals and macro indicators.','commodities.html','◈'],
+ ['energy','Energy intelligence','Explore our connected energy research platform.','https://energy.nordl.dev/','◈'],
+ ['research','NVIDIA research pilot','Start with official filings and issuer releases; no US price feed enabled.','https://investor.nvidia.com/investor-resources/rss/default.aspx','◇'],
  ['spreads','Share-class spreads','Compare A/B premiums and relative value.','spreads.html','⇌'],
  ['events','Earnings calendar','Upcoming company events and disclosures.','calendar.html','▦'],
  ['news','News & filings','Read chronological source-linked announcements.','news.html','▤'],
@@ -85,7 +124,8 @@ function overview(){
  ];
  const pulse=(state.context?.commodities||[]).filter(x=>['Gold','Copper','Brent crude','Natural gas'].includes(x.name)).map(x=>'<a class="sw-ws-pulse" href="commodities.html"><span>'+E(x.name)+'</span><strong>'+N(x.last,3)+' <small>'+E(x.unit||'')+'</small></strong><b class="'+sign(x.changePct)+'">'+P(x.changePct)+'</b></a>').join('');
  $('v4app').innerHTML=
- '<section class="sw-ws-hero"><div class="sw-ws-intro"><span class="sw-ws-eyebrow">STOCKWATCH / MARKET WORKSPACE</span><h1>See the market.<br><em>Find the signal.</em></h1><p>European equities, filings, shipping and macro intelligence in a connected research workspace.</p><div class="sw-ws-actions"><a class="sw-primary" href="stocks.html">Explore companies ↗</a><a class="sw-soft-btn" href="news.html">Latest disclosures</a></div></div><div class="sw-ws-hero-visual"><span class="sw-ws-eyebrow">COVERAGE AT A GLANCE</span><div class="sw-ws-cover-number">'+N(universe.length,0)+' <small>research listings</small></div><div class="sw-ws-coverage"><div><span>Price-monitored listings</span><b>'+listed.length+'</b></div><div><span>Licensed EOD reference series</span><b>'+licensedReferenceCount(universe)+'</b></div><div><span>Reference listings without prices</span><b>'+(references.length-licensedReferenceCount(universe))+'</b></div><div><span>Trading venues (research universe)</span><b>'+venueCount+'</b></div><div><span>Observed prices</span><b>'+valid.length+'</b></div></div><div class="sw-ws-caption"><a class="sw-textlink" href="stocks.html?universe=registry">'+(state.referenceDirectory?N(state.referenceDirectory.records?.length||0,0)+' OpenFIGI venue reference records':'OpenFIGI reference directory')+' ↗</a><small class="sw-registry-note">Separate reference catalog; may overlap research listings.</small><a class="sw-textlink" href="price-history.html">Licensed price coverage &amp; historical series ↗</a></div><div class="sw-ws-caption">Latest scan: '+E(state.signals?.generated?fmtDate(state.signals.generated)+' · '+timeAge(state.signals.generated):'Unavailable')+'</div></div></section>'+
+ '<section class="sw-ws-hero"><div class="sw-ws-intro"><span class="sw-ws-eyebrow">STOCKWATCH / MARKET WORKSPACE</span><h1>Understand the market.<br><em>Follow the drivers.</em></h1><p>Stocks, company events and the economic forces behind them.</p><div class="sw-ws-actions"><a class="sw-primary" href="stocks.html">Explore companies ↗</a><a class="sw-soft-btn" href="news.html">Latest disclosures</a></div></div><div class="sw-ws-hero-visual"><span class="sw-ws-eyebrow">COVERAGE AT A GLANCE</span><div class="sw-ws-cover-number">'+N(universe.length,0)+' <small>research listings</small></div><div class="sw-ws-coverage"><div><span>Price-monitored listings</span><b>'+listed.length+'</b></div><div><span>Licensed EOD reference series</span><b>'+licensedReferenceCount(universe)+'</b></div><div><span>Reference listings without prices</span><b>'+(references.length-licensedReferenceCount(universe))+'</b></div><div><span>Trading venues (research universe)</span><b>'+venueCount+'</b></div><div><span>Observed prices</span><b>'+valid.length+'</b></div></div><div class="sw-ws-caption"><a class="sw-textlink" href="stocks.html?universe=registry">'+(state.referenceDirectory?N(state.referenceDirectory.records?.length||0,0)+' OpenFIGI venue reference records':'OpenFIGI reference directory')+' ↗</a><small class="sw-registry-note">Separate reference catalog; may overlap research listings.</small><a class="sw-textlink" href="price-history.html">Licensed price coverage &amp; historical series ↗</a></div><div class="sw-ws-caption">Latest scan: '+E(state.signals?.generated?fmtDate(state.signals.generated)+' · '+timeAge(state.signals.generated):'Unavailable')+'</div></div></section>'+
+ '<section class="sw-panel sw-attention-panel">'+panelHeader('Stocks needing attention','All company news','news.html','Recent event flags and unusual observed activity · not predictions')+'<div class="sw-attention-grid">'+(attention.length?attention.slice(0,6).map(attentionCard).join(''):'<p class="sw-meta">No qualifying recent observations or issuer-linked headlines.</p>')+'</div><p class="sw-meta sw-attention-note">Headline flags are review prompts, not confirmed causes or buy/sell signals. News window 72h; price observations up to four calendar days.</p></section>'+
  '<div class="sw-section-row"><h2>Market pulse</h2><small>Latest observed data · not live exchange quotes</small></div><div class="sw-ws-pulse-grid">'+(pulse||'<div class="sw-note">Market context unavailable.</div>')+'</div>'+
  '<div class="sw-ws-metrics">'+stat('Watchlist median',P(state.signals?.marketPct),'Not an exchange index',sign(state.signals?.marketPct))+stat('Relative signals',N(active,0),'Unusual price or volume activity')+'<article class="sw-card sw-stat sw-ws-breadth"><div class="sw-stat-label">Market breadth</div><div class="sw-ws-breadth-values"><strong class="sw-up">'+up+' up</strong><strong class="sw-down">'+down+' down</strong><span>'+flat+' unchanged</span></div><div class="sw-ws-breadth-bar" aria-label="'+up+' advancing, '+down+' declining, '+flat+' unchanged"><i style="width:'+pct(up)+'%;background:var(--sw-green)"></i><i style="width:'+pct(flat)+'%;background:var(--sw-dim)"></i><i style="width:'+pct(down)+'%;background:var(--sw-red)"></i></div><small>'+observed.length+' listings with observed changes</small></article></div>'+
  '<section class="sw-panel sw-ws-heatmap">'+panelHeader('Market map','Open stock screener','stocks.html','Equal-size tiles · observed 1D changes and reference coverage')+'<div class="sw-panel-pad"><div class="sw-ws-heat-toolbar"><label for="workspaceSector">Sector</label><select id="workspaceSector"><option value="all">All sectors</option>'+sectors.map(s=>'<option value="'+E(s)+'">'+E(s)+'</option>').join('')+'</select><label for="workspaceCoverage">Coverage</label><select id="workspaceCoverage"><option value="all">All research listings</option><option value="observed" selected>Observed changes only</option><option value="missing">No observed change</option></select><span id="workspaceHeatCount" aria-live="polite"></span><div class="sw-ws-legend"><span class="sw-down">− Loss</span><span>0% Flat</span><span class="sw-up">+ Gain</span><span>— No data</span></div></div><div id="workspaceHeatmap" class="sw-heatmap-grid"></div><p class="sw-meta">Tiles are equally weighted. Dashed neutral tiles lack observed price changes and are not treated as zero returns. Market breadth and sector performance use observed changes only.</p></div></section>'+
@@ -350,8 +390,10 @@ async function openStock(t){
  const archive=storyData().filter(s=>s.ticker===c.ticker);
  const updates=(archive.length?archive:(c.stories||[])).slice().sort((a,b)=>Date.parse(b.published)-Date.parse(a.published)).slice(0,8);
  const detailId=encodeURIComponent(t);
+ const attention=stockAttention([c],storyData())[0];
  container.dataset.currentTicker=t;
  container.innerHTML='<section class="sw-panel sw-company-research"><div class="sw-company-banner"><div class="sw-company-emblem" aria-hidden="true">'+E(c.name.split(/\s+/).slice(0,2).map(s=>s[0]).join('').toUpperCase().slice(0,3))+'</div><div class="sw-company-heading"><div class="sw-ws-eyebrow">'+E(c.exchange||'Trading venue unknown')+' / '+E(c.ticker)+'</div><h2>'+E(c.name)+'</h2><p>'+E(c.sector||'Unclassified')+'</p></div><div class="sw-company-last"><small>Latest observed close</small><strong>'+E(available?N(c.close,3)+' '+(c.currency||''):'Unavailable')+'</strong><b class="'+sign(c.changePct)+'">'+E(available?P(c.changePct):'—')+'</b><small>'+E(state.signals?.generated?'Scan '+fmtDate(state.signals.generated):'No scan available')+'</small></div></div>'+
+ (attention?'<div class="sw-attention-company">'+attentionCard(attention)+'</div>':'')+
  '<div class="sw-company-links"><a class="sw-soft-btn" href="stocks.html">Stocks directory</a>'+(page==='company'?'':'<a class="sw-primary" href="'+researchUrl+'">Open full research page ↗</a>')+'<a class="sw-soft-btn" href="https://finance.yahoo.com/quote/'+encodeURIComponent(c.ticker)+'" target="_blank" rel="noopener noreferrer">External price source ↗</a></div>'+
  '<div class="sw-company-tabs" aria-label="Research sections">'+[['chart','Price & activity'],['financials','Financials'],['filings','Company updates'],['peers','Peers'],['identity','Identity']].map(([id,label])=>'<button type="button" data-company-tab="'+id+'" class="sw-soft-btn">'+label+'</button>').join('')+'</div>'+
  '<div class="sw-panel-pad"><div class="sw-company-block" data-company-section="chart"><div class="sw-stat-mini"><div><small>Relative volume</small><b>'+E(c.rvol==null?'—':N(c.rvol)+'×')+'</b></div><div><small>Vs watchlist market</small><b class="'+sign(c.excessPct)+'">'+P(c.excessPct)+'</b></div><div><small>Disclosed short</small><b>'+E(c.short?.percent==null?'—':N(c.short.percent)+'%')+'</b></div></div><div class="sw-section-row"><h2>Price history</h2><small>Source coverage determines available periods</small></div>'+displayChartCard(c)+'<div class="sw-controls">'+[[30,'1 month'],[90,'3 months'],[365,'1 year'],[1825,'5 years'],[0,'All available']].map(([d,l])=>'<button type="button" class="sw-soft-btn" data-period="'+d+'">'+l+'</button>').join('')+'</div><div class="sw-history-source" id="companyHistorySource">Checking history permissions…</div><div id="individualChart">Checking for dated history…</div><p class="sw-meta">Values are daily closes unless an adjusted series is verified. No simulated history or total-return calculation.</p></div>'+

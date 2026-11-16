@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const src=fs.readFileSync(new URL('../v4.js',import.meta.url),'utf8');
+const fn=Function(src.slice(src.indexOf('function stockAttention('),src.indexOf('function attentionCard('))+'\nreturn stockAttention')();
+const now=Date.parse('2026-11-17T12:00:00Z');
+const c={ticker:'X',name:'Example',date:'2026-11-16',close:100,changePct:0};
+const s={ticker:'X',relevance:'strong',type:'disclosure',match:'issuer_code',headline:'CEO resigns',url:'https://example.org/notice',published:'2026-11-17T10:00:00Z'};
+test('leadership event is linked, not interpreted as price direction',()=>{const x=fn([c],[s],now)[0];assert.equal(x.events[0].category,'Leadership change review');assert.equal(x.events[0].official,true);assert.equal(x.changePct,null)});
+test('mentions remain review, ambiguous and duplicate stories excluded',()=>{assert.equal(fn([c],[{...s,relevance:'mentioned'}],now)[0].events[0].official,false);assert.equal(fn([c],[{...s,relevance:'review'}],now).length,0);assert.equal(fn([c],[{...s,duplicateOf:'x'}],now).length,0);assert.equal(fn([c],[{...s,headline:'CEO discusses growth'}],now).length,0)});
+test('exclude stale future unsafe stories and stale market snapshots',()=>{assert.equal(fn([c],[{...s,published:'2026-10-01'}],now).length,0);assert.equal(fn([c],[{...s,published:'2026-11-18'}],now).length,0);assert.equal(fn([c],[{...s,url:'javascript:evil'}],now).length,0);assert.equal(fn([{...c,date:'2026-10-01',changePct:10}],[],now).length,0)});
+test('volume and price move have independent evidence',()=>{assert.equal(fn([{...c,changePct:-6}],[],now)[0].changePct,-6);assert.equal(fn([{...c,rvol:3,thin:true}],[],now).length,0);assert.equal(fn([{...c,rvol:3}],[],now)[0].volume,true);assert.equal(fn([{...c,referenceOnly:true}],[s],now).length,0)});

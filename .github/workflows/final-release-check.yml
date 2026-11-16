@@ -69,6 +69,8 @@ jobs:
         run: node --test tests/test_terminal_v31.mjs
       - name: V32–45 analytics and catalog tests
         run: node --test tests/test_research_lab.mjs
+      - name: Attention signal evidence and recency tests
+        run: node --test tests/test_stock_attention.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
