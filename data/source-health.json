@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-17T20:40:48Z",
-  "latestScan": "2026-11-17T20:40:03+00:00",
+  "generated": "2026-11-17T20:46:07Z",
+  "latestScan": "2026-11-17T20:45:26+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "priceFreshness": {
@@ -107,7 +107,7 @@
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "requests_ok",
+    "Google News": "request_errors",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -115,46 +115,48 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 72.8,
+      "avgLatencyMs": 91.8,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 678.1,
+      "avgLatencyMs": 371.2,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1609.7,
+      "avgLatencyMs": 1241.1,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 594,
-      "failed": 0,
-      "avgLatencyMs": 272.9,
-      "errorTypes": {}
+      "succeeded": 591,
+      "failed": 3,
+      "avgLatencyMs": 345.0,
+      "errorTypes": {
+        "HTTPError": 3
+      }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3478.5,
+      "avgLatencyMs": 2336.6,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 780,
+    "total": 781,
     "relevant": 533,
-    "review": 217,
-    "duplicates": 37,
+    "review": 218,
+    "duplicates": 38,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 104,
+      "Earnings / results": 105,
       "Dividends": 9,
       "M&A": 39,
       "Guidance": 23,

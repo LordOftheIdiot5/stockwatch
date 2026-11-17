@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:40:48Z",
+  "generated": "2026-11-17T20:46:07Z",
   "items": [
     {
       "id": "DOFG.OL:24ad891d8351cbcfb154a9fc27f0fa86ec311a1281bca0dc8e4a061d2a95c072",
@@ -934,6 +934,25 @@
       "priority": "normal"
     },
     {
+      "id": "1AST.DE:b59177e85c5f36083282aec52d0f1a40b9f74428f051580ed4793d96ff54955a",
+      "ticker": "1AST.DE",
+      "name": "ASTA Energy Solutions",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Earnings call transcript: ASTA Energy posts strong Q3 2026 growth, shares rise",
+      "english": null,
+      "publisher": "Investing.com Canada",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWXJ1RHU2R3NEREVPeDZZTEJlOFRiUmVZclF6b25jeHV2b3I2OWlnb1ZqSGw4OVVuMVJXaDRJanUwRjJXUFUwUDR5dUowWF9adjQ0VjNjOXNCNWVTV3B2YU5qRzFaVThUbGROMDZlWi16MDNmWnlHMlVPVmJxd3dqbmFOMDFzNjR3MU8zTUhITVFuN2dzam1tTUJmaEowMi14OFNZcWY5Y2ZmcEFuVlV6TGRxbUZRbHB2TE1rcDFkZU53cTJxUlhhVzgwb2RUYUVBMTdF?oc=5",
+      "published": "2026-11-17T14:42:38Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "TKMS.DE:f0149e251046f1de3c5317c6d39a82b01aa7bd1f2f686caff5cfb1613cbb5376",
       "ticker": "TKMS.DE",
       "name": "TKMS",
@@ -1007,7 +1026,8 @@
       "relevance": "review",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "duplicateOf": "1AST.DE:b59177e85c5f36083282aec52d0f1a40b9f74428f051580ed4793d96ff54955a"
     },
     {
       "id": "EL.PA:0cc665540dde7f42e9eb8b6940f7ec396ba9fc83788505d030683d23a305eae2",
@@ -1885,37 +1905,18 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SAND.ST:606e3d644e8d6d5c8cfd327a8a57d54d959f34eca8037192c8793b12a2b6ffbd",
-      "ticker": "SAND.ST",
-      "name": "Sandvik",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Sandvik launches lighter, higher-capacity Super MDX Bolt",
-      "english": null,
-      "publisher": "Global Mining Review",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcU1CcWJneEpZdVRaYXd3NVFDb1AyZHVDRlRnc2RiTU9aeldnLWRELXVzLXZoWTROcVBlbDJ0YTIwcDZ3VGVtNk1RdVZrMVhFQmh4eDl0dk5IbGNEYWFmVTVOaFVoVGFfcy1LQ3lUcG9OcXVBd2hjRkRCMUhsdDE2SDlmd0hObm5XaGlBUVB0UTYtN0syOFZwc3ZPd2ZvZnI3M04tMXJpcnlVWGM?oc=5",
-      "published": "2026-11-17T10:49:26Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 780,
+  "totalStored": 781,
   "limit": 100,
   "quality": {
-    "total": 780,
+    "total": 781,
     "relevant": 533,
-    "review": 217,
-    "duplicates": 37,
+    "review": 218,
+    "duplicates": 38,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 104,
+      "Earnings / results": 105,
       "Dividends": 9,
       "M&A": 39,
       "Guidance": 23,
