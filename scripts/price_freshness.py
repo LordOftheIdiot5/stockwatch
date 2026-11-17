@@ -44,3 +44,11 @@ def current_alerts(snapshot,now):
     comparable=sum(price_quality(x,target)=="comparable" for x in rows.values())
     return [a for a in snapshot.get("alerts",[]) if a.get("fresh") and (a.get("kind")!="price" or
         (comparable>=10 and price_quality(rows.get(a.get("ticker")),target)=="comparable" and a.get("key")==f"px:{a.get('ticker')}:{target}"))]
+
+def completed_market_baseline(rows,now,minimum=10):
+    """Only compare observations from the same completed session."""
+    target=comparison_date(now)
+    sample=[x["changePct"] for x in rows if price_quality(x,target)=="comparable"]
+    if len(sample)<minimum:return None,len(sample)
+    from statistics import median
+    return median(sample),len(sample)

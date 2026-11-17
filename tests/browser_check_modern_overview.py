@@ -15,6 +15,8 @@ def main():
      page.goto(f"http://127.0.0.1:{server.server_port}/index.html")
      page.locator("#overviewMacroSeries").wait_for(timeout=25000)
      assert "Market overview" in page.locator(".sw-overview-head").inner_text()
+     assert page.locator(".sw-ws-pulse-grid").bounding_box()["y"] < page.locator(".sw-overview-workbench").bounding_box()["y"]
+     assert page.locator(".sw-attention-panel").bounding_box()["y"] < page.locator(".sw-overview-workbench").bounding_box()["y"]
      assert page.locator("#overviewMacroPlot svg").count()==1
      page.locator("#overviewMacroSeries").select_option("fred:DGS10")
      page.locator("#overviewMacroRange").select_option("365")

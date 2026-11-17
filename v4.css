@@ -284,3 +284,5 @@ body[data-page=index] .sw-content{padding-top:18px}
 body[data-page=index] .sw-attention-panel{margin:12px 0}body[data-page=index] .sw-ws-heatmap #workspaceHeatmap{max-height:430px;overflow:auto;scrollbar-width:thin}
 @media(max-width:1000px){.sw-overview-workbench{grid-template-columns:minmax(0,1fr)}.sw-overview-coverage{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){body[data-page=index] .sw-content{padding-top:10px}.sw-overview-head{gap:8px}.sw-overview-coverage>div{padding:10px}.sw-overview-coverage strong{font-size:19px}.sw-overview-head .sw-ws-actions{width:100%;flex-wrap:wrap}.sw-overview-chart-controls select{font-size:12px}.sw-overview-workbench{gap:9px}.sw-overview-chart-value strong{font-size:22px}}
+
+body[data-page=index] .sw-ws-pulse-grid{margin-bottom:12px}body[data-page=index] .sw-attention-panel{margin:12px 0}body[data-page=index] .sw-overview-workbench{margin-top:12px}

@@ -224,10 +224,10 @@ jobs:
           if-no-files-found: ignore
 
       - name: Modern overview desktop and mobile checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-modern-overview-')
+        if: (startsWith(github.head_ref, 'feature/stockwatch-modern-overview-') || startsWith(github.head_ref, 'feature/stockwatch-frontpage-price-integrity-'))
         run: python tests/browser_check_modern_overview.py
       - name: Upload modern overview previews
-        if: always() && startsWith(github.head_ref, 'feature/stockwatch-modern-overview-')
+        if: always() && (startsWith(github.head_ref, 'feature/stockwatch-modern-overview-') || startsWith(github.head_ref, 'feature/stockwatch-frontpage-price-integrity-'))
         uses: actions/upload-artifact@v5
         with:
           name: modern-overview-previews

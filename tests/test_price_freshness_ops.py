@@ -2,7 +2,7 @@ import unittest,sys
 from pathlib import Path
 from datetime import datetime,timezone
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from price_freshness import comparison_date,price_quality,coverage,current_alerts
+from price_freshness import comparison_date,price_quality,coverage,current_alerts,completed_market_baseline
 class PriceFreshnessTests(unittest.TestCase):
  def test_completed_session_and_weekend(self):
   self.assertEqual(comparison_date(datetime(2026,11,16,21,tzinfo=timezone.utc)),"2026-11-13")
@@ -26,3 +26,11 @@ class PriceFreshnessTests(unittest.TestCase):
   a={**alert,"ticker":"0","key":"px:0:2026-11-16"}
   s["alerts"]=[a,news]
   self.assertEqual(current_alerts(s,now),[a,news])
+
+ def test_baseline_excludes_stale_and_zero_volume(self):
+  now=datetime(2026,11,17,1,tzinfo=timezone.utc)
+  row={"close":10,"changePct":4,"date":"2026-11-16","volume":100}
+  old={**row,"changePct":-99,"date":"2026-11-13"}
+  zero={**row,"changePct":99,"volume":0}
+  self.assertEqual(completed_market_baseline([row]*9+[old,zero],now),(None,9))
+  self.assertEqual(completed_market_baseline([row]*10+[old]*200+[zero],now),(4,10))
