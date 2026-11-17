@@ -15,6 +15,8 @@ on:
   # Oslo, Stockholm, XETRA, Paris and London in both halves of the year.
   schedule:
     - cron: "5 6-17 * * 1-5"
+    # One completed-session recovery scan, not an increased intraday polling rate.
+    - cron: "20 22 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -57,6 +59,7 @@ jobs:
         env:
           # Whichever of these exist are used, best first, and the scan works
           # with none of them set. See scripts/translate.py.
+          STOCKWATCH_ENABLE_EXACT_DAY_RECOVERY: ${{ vars.STOCKWATCH_ENABLE_EXACT_DAY_RECOVERY }}
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
           AZURE_TRANSLATOR_KEY: ${{ secrets.AZURE_TRANSLATOR_KEY }}
           AZURE_TRANSLATOR_REGION: ${{ secrets.AZURE_TRANSLATOR_REGION }}
@@ -65,6 +68,16 @@ jobs:
 
       - name: Build research archive, calendar and data health
         run: python scripts/build_research_data.py
+
+      - name: Evaluate actual observation coverage
+        run: |
+          python - <<'PY'
+          import json
+          h=json.load(open('data/source-health.json'))['priceFreshness']
+          print(json.dumps(h))
+          if h['status'] != 'coverage_ok':
+              print('::warning title=Price freshness degraded::Completed-session coverage below target or A/B observations incomplete. See data health.')
+          PY
 
       - name: Preserve news history as Git-backed monthly partitions
         run: python scripts/build_monthly_archive.py

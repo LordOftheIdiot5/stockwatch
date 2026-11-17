@@ -15,6 +15,7 @@ import json
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from daily_recovery import maybe_recover
 from datetime import datetime, timezone
 
 UA = "Mozilla/5.0 (compatible; stockwatch/1.0; +https://nordl.dev)"
@@ -43,7 +44,7 @@ def chart(ticker: str, rng: str = "3mo", interval: str = "1d") -> dict | None:
     result = (payload.get("chart") or {}).get("result")
     if not result:
         return None
-    block = result[0]
+    block = maybe_recover(result[0],ticker,_get) if interval=='1d' else result[0]
     quote = block["indicators"]["quote"][0]
 
     rows = []
@@ -74,6 +75,7 @@ def chart(ticker: str, rng: str = "3mo", interval: str = "1d") -> dict | None:
         "price": meta.get("regularMarketPrice"),
         "previousClose": meta.get("chartPreviousClose"),
         "bars": rows,
+        "recovery": block.get("_stockwatchRecovery"),
     }
 
 
