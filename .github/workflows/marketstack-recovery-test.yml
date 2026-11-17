@@ -1,7 +1,7 @@
 name: Marketstack private recovery test
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [synchronize]
   workflow_dispatch:
     inputs:
       session:
@@ -16,7 +16,7 @@ on:
       budget:
         description: Maximum symbol requests
         type: number
-        default: 20
+        default: 5
       mode:
         description: Symbols to test
         type: choice
@@ -24,9 +24,12 @@ on:
         default: sample
 permissions:
   contents: read
+concurrency:
+  group: marketstack-private-evaluation
+  cancel-in-progress: false
 jobs:
   test:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'feature/stockwatch-marketstack-recovery-20261117')
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'feature/stockwatch-marketstack-recovery-20261117' && github.event.before == '37eecf1131d7b1515ac3c63fa2cc44ac06941269' && github.run_attempt == 1)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -36,11 +39,60 @@ jobs:
           python-version: '3.12'
       - name: Verify private probe
         run: python -m unittest discover -s tests -p test_marketstack_recovery.py -v
-      - name: Run authorized live evaluation
-        if: github.event_name == 'pull_request' || inputs.run_live
+      - name: One-time 95 new listing audit
+        if: github.event_name == 'pull_request'
         env:
           STOCKWATCH_MARKETSTACK_API_KEY: ${{ secrets.STOCKWATCH_MARKETSTACK_API_KEY }}
-          SESSION: ${{ inputs.session || '2026-11-16' }}
-          BUDGET: ${{ inputs.budget || 5 }}
-          MODE: ${{ inputs.mode || 'sample' }}
+        run: |
+          python - <<'PY'
+          import sys, os, json, time
+          from collections import Counter
+          from urllib.error import HTTPError
+          sys.path.insert(0, "scripts")
+          import marketstack_recovery_probe as m
+          key=os.environ.get("STOCKWATCH_MARKETSTACK_API_KEY","").strip()
+          if not key: raise SystemExit("Missing secret")
+          watch=[r["ticker"] for r in json.load(open("watchlist.json"))["tickers"]]
+          tested={"SALM.OL","ANDF.OL","WWI.OL","INVE-B.ST"}
+          eligible=[s for s in watch if s not in tested]
+          # Missing catalogue candidates first, then remaining markets with
+          # non-Nordic listings, then Oslo and Stockholm. No duplicates or retries.
+          order=sorted(eligible,key=lambda s:(s not in m.MISSING,s.rsplit(".",1)[1] not in ("OL","ST"),watch.index(s)))
+          # Make sure every exchange is represented before filling with Nordic listings.
+          reps=[]
+          for suffix in m.MARKETS:
+              pool=[s for s in eligible if s.endswith("."+suffix) and s not in m.MISSING]
+              if pool: reps.append(pool[0])
+          order=list(dict.fromkeys([s for s in order if s in m.MISSING]+reps+[s for s in order if s.endswith((".OL",".ST"))]+order))[:95]
+          assert len(order)==95 and not tested.intersection(order)
+          results=Counter()
+          for symbol in order:
+              mic,ccy=m.MARKETS[symbol.rsplit(".",1)[1]]
+              try:
+                  data=m.fetch(symbol,mic,"2026-11-16",key)
+                  status=m.validate(data,symbol,mic,ccy,"2026-11-16")
+                  if status=="provider_error":
+                      code=data.get("error",{}).get("code")
+                      if code in ("no_results","not_found","invalid_symbol","invalid_ticker"):
+                          status="no_data"
+              except HTTPError as e:
+                  status="http_"+str(e.code)
+                  if e.code==404: status="no_data"
+              except Exception:
+                  status="transport_or_parse_error"
+              results[status]+=1
+              print("MARKETSTACK_COVERAGE "+json.dumps({"ticker":symbol,"mic":mic,"status":status,"catalogueMatch":symbol not in m.MISSING,"session":"2026-11-16","pricePublicationAllowed":False}),flush=True)
+              if status in ("http_401","http_403","http_429","provider_error","transport_or_parse_error","unknown_schema"):
+                  break
+              time.sleep(0.3)
+          print("MARKETSTACK_SUMMARY "+json.dumps({"planned":len(order),"attempted":sum(results.values()),"counts":dict(results),"pricesStored":False,"publicationEnabled":False}),flush=True)
+          if sum(results.values())!=len(order): raise SystemExit(1)
+          PY
+      - name: Run authorized manual evaluation
+        if: github.event_name == 'workflow_dispatch' && inputs.run_live
+        env:
+          STOCKWATCH_MARKETSTACK_API_KEY: ${{ secrets.STOCKWATCH_MARKETSTACK_API_KEY }}
+          SESSION: ${{ inputs.session }}
+          BUDGET: ${{ inputs.budget }}
+          MODE: ${{ inputs.mode }}
         run: python scripts/marketstack_recovery_probe.py --date "$SESSION" --budget "$BUDGET" --mode "$MODE" --authorized-test
