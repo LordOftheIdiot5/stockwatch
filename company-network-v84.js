@@ -58,6 +58,6 @@ function mount(root,data,{selected=null,review=null,photos=null}={}){
  }
  select.addEventListener('change',()=>{id=select.value;render()});filter.addEventListener('change',()=>{kind=filter.value;render()});depth.addEventListener('change',()=>{hops=Number(depth.value);render()});root.addEventListener('click',e=>{const b=e.target.closest('[data-network-entity]');if(b&&g.nodes.has(b.dataset.networkEntity)){id=b.dataset.networkEntity;render()}});render();
 }
-function entityForListing(data,listing){return (data?.entities||[]).find(n=>n.listingId===listing||'ref:'+n.listingId===listing)?.id||null}
+function entityForListing(data,listing){return typeof listing==='string'&&listing?(data?.entities||[]).find(n=>typeof n.listingId==='string'&&(n.listingId===listing||'ref:'+n.listingId===listing))?.id||null:null}
 const api={graph,neighborhood,amountLabel,photo,mount,entityForListing};if(typeof module==='object'&&module.exports)module.exports=api;else global.StockwatchRelationships=api;
 })(typeof window!=='undefined'?window:{});
