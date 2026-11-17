@@ -24,6 +24,12 @@ def check_interactions(browser):
             assert not errors,errors
             interaction.append({"name":name,"passed":True})
         except Exception as e:interaction.append({"name":name,"passed":False,"error":traceback.format_exc()[-2000:]})
+    def overview_prices():
+        page.goto(base+"index.html")
+        page.locator("#workspaceHeatmap .sw-heat-cell").first.wait_for()
+        assert page.locator("#workspaceCoverage").input_value()=="priced"
+        assert page.locator("#workspaceHeatmap .sw-heat-cell").count()>=100
+        assert page.locator("#workspaceHeatmap .sw-heat-cell").get_by_text("No data",exact=True).count()==0
     def search():
         page.goto(base+"search.html?q=SALM.OL&kind=Company")
         page.locator('.gs-result').first.wait_for()
@@ -73,7 +79,7 @@ def check_interactions(browser):
         page.locator('#companyDrivers details').first.get_by_text('No connected source for this research question.').wait_for()
         page.locator('#companyDrivers summary').nth(2).click()
         page.locator('#companyDrivers details').nth(2).locator('.sw55-source').first.wait_for()
-    for name,fn in [('global-search',search),('metadata-export',portal),('saved-workspaces',workspaces),('voyage-scenario',voyage),('industry-gaps',industry)]:run(name,fn)
+    for name,fn in [('overview-prices',overview_prices),('global-search',search),('metadata-export',portal),('saved-workspaces',workspaces),('voyage-scenario',voyage),('industry-gaps',industry)]:run(name,fn)
     page.close()
 try:
     with sync_playwright() as p:
@@ -117,4 +123,4 @@ finally:
     (out/"v60-audit.json").write_text(json.dumps({"cases":report,"interactions":interaction},indent=2))
 bad=[r for r in report if not r["passed"]]+[r for r in interaction if not r["passed"]]
 print(f"V60: {len(report)} page/theme/viewport cases; {len(interaction)} interactions; {len(bad)} failed",flush=True)
-assert len(report)==len(PAGES)*len(VIEWPORTS)*2 and len(interaction)==5 and not bad,bad[:10]
+assert len(report)==len(PAGES)*len(VIEWPORTS)*2 and len(interaction)==6 and not bad,bad[:10]
