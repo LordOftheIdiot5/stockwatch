@@ -1,0 +1,2 @@
+# V51 — session-safe screening
+Adds common-date ranking, neutral missing observations, currency and coverage filters, sector heatmap/table switch and locally retained column selections. Does not turn reference listings or stale values into current returns. Existing source rights and scanner coverage are unchanged. Terminal heatmap uses one dated observation session; coverage may be sparse. Further polish and live acceptance remain.

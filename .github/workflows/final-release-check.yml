@@ -75,6 +75,10 @@ jobs:
         run: node --test tests/test_price_freshness.mjs tests/test_historical_session.mjs
       - name: A/B directional scenario tests
         run: node --test tests/test_ab_review.mjs
+      - name: V51 session-safe screening tests
+        run: |
+          node --check screener-v51.js
+          node --test tests/test_screener_v51.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
@@ -127,6 +131,16 @@ jobs:
         with:
           name: stockwatch-v50-company
           path: workspace-previews/v50-*.png
+          if-no-files-found: ignore
+      - name: V51 screener browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v51-') || startsWith(github.head_ref, 'feature/stockwatch-v52-')
+        run: python tests/browser_check_screener_v51.py
+      - name: Upload V51 screener previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v51-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v51-screener
+          path: workspace-previews/v51-*.png
           if-no-files-found: ignore
       - name: V47 shared navigation rendered checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v47-')
