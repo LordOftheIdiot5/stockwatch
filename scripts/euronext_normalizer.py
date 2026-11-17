@@ -41,6 +41,16 @@ def normalize(raw,policy,approved):
     if not allowed or allowed&excluded or any(len(x)!=len(flags) for x in allowed|excluded):raise ValueError("Invalid flag policy")
     it=iter(rows(raw));head=next(it)
     if set(head)!=set(policy.get("expectedColumns",[])) or not set(flags).issubset(head):raise ValueError("Reviewed schema mismatch")
+    # Observed 20-column delayed reporting schema requires explicit review of
+    # price notation, missing-price codes and every observed MMT dimension.
+    real_fields={"MifidPriceNotation","MissingPrice","MmtModificationIndicator","MmtContributionToPrice"}
+    real=bool(real_fields & set(head))
+    if real:
+        if not real_fields.issubset(head) or not {c for c in head if c.startswith("Mmt")}.issubset(flags):
+            raise ValueError("Incomplete delayed-report flag review")
+        missing_codes=policy.get("reviewedNoMissingPriceCodes")
+        if not isinstance(missing_codes,list) or not missing_codes or not all(isinstance(x,str) for x in missing_codes):
+            raise ValueError("Reviewed missing-price encoding required")
     groups=defaultdict(dict);blocked=set()
     for r in it:
         mic=r["Venue"].strip();isin=r["MifidInstrumentID"].strip()
@@ -50,6 +60,15 @@ def normalize(raw,policy,approved):
         day=t.astimezone(ZoneInfo(ledger.ZONES[mic])).date().isoformat()
         group=(mic,isin,day)
         f=tuple(r[k].strip() for k in flags)
+        if real:
+            # This single-report normalizer has no proven cancellation/amendment
+            # replay semantics. Even an erroneously allowed tuple cannot bypass.
+            if r["MmtModificationIndicator"].strip() in ("CANC","AMND"):
+                blocked.add(group);continue
+            if r["MifidPriceNotation"].strip()!="MONE" or r["MissingPrice"].strip() not in missing_codes:
+                blocked.add(group);continue
+            if f in allowed and r["MmtContributionToPrice"].strip() in ("NPFT","TNCP"):
+                blocked.add(group);continue
         # Only explicitly reviewed eligible/excluded ordinary trades can pass.
         # Unknown/correction flags quarantine the entire session; no guessing.
         if f not in allowed and f not in excluded:
