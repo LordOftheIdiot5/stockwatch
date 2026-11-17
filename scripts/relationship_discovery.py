@@ -68,9 +68,14 @@ def discover(graph,items):
         h=textnorm(s.get("english") or s.get("headline"))
         if not EVENT_WORDS.search(h):continue
         matched=sorted({eid for p,eid in patterns if p.search(h)})
-        if len(matched)<2:continue
-        key=hashlib.sha256((s["url"]+"|"+"|".join(matched)).encode()).hexdigest()
-        row={"id":key,"newsId":s["id"],"entityIds":matched,"published":s["published"],"sourceUrl":s["url"],"status":"review_required","relationshipVerified":False,"amount":None}
+        # Also queue issuer-linked event disclosures for counterparty discovery.
+        # An unknown counterparty is not silently added to the graph.
+        official=s.get("type")=="disclosure" and s.get("match")=="issuer_code" and s.get("relevance")=="strong" and isinstance(s.get("ticker"),str) and bool(s["ticker"])
+        if len(matched)<2 and not official:continue
+        mode="co_mention" if len(matched)>=2 else "issuer_event"
+        ticker=s["ticker"] if official else None
+        key=hashlib.sha256((s["url"]+"|"+mode+"|"+"|".join(matched)+"|"+str(ticker)).encode()).hexdigest()
+        row={"id":key,"newsId":s["id"],"entityIds":matched,"issuerTicker":ticker,"candidateType":mode,"published":s["published"],"sourceUrl":s["url"],"status":"review_required","relationshipVerified":False,"amount":None}
         if key not in candidates or row["newsId"]<candidates[key]["newsId"]:candidates[key]=row
     return sorted(candidates.values(),key=lambda x:(x["published"],x["id"]))
 
