@@ -297,3 +297,14 @@ body[data-page=index] .sw-ws-pulse-grid{margin-bottom:12px}body[data-page=index]
 .sw-side .sw-logo{display:flex;position:relative;min-height:72px;max-width:205px;margin:17px 14px 20px;padding:7px;border:1px solid var(--sw-edge);border-radius:9px;background:#fff url("brand/nordl-stockwatch.svg") center / calc(100% - 14px) auto no-repeat;flex-shrink:0}
 .sw-side .sw-logo>span{opacity:0;pointer-events:none}
 @media(max-width:1050px){body.sw-shell-v47 .sw-side .sw-logo{width:185px;min-height:62px;margin:8px 16px}}
+
+/* V62: compact, responsive equal-size sector map, expandable without hiding navigation */
+#workspaceHeatmap.sw-heat-expanded{max-height:none;overflow:visible}
+.sw-ws-heat-toolbar{flex-wrap:wrap;align-items:center}
+.sw-heat-sector{padding:10px;min-width:0}
+.sw-heat-sector .sw-heat-cells{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:4px}
+.sw-heat-cell{min-height:56px;transition:border-color .12s ease}
+.sw-heat-cell strong{font-size:11px}
+.sw-heat-cell span{font-size:11px}
+@media(max-width:470px){.sw-heat-sector .sw-heat-cells{grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}.sw-heat-cell{min-height:48px}}
+@media(prefers-reduced-motion:reduce){.sw-heat-cell{transition:none}}
