@@ -26,3 +26,6 @@ V60 includes the approved Nordl artwork files from production commit ee2ffa42db0
 
 ## First audit and corrective increment
 Run 44153845989: 152/152 page cases and 3/5 interaction cases passed. Search assertion used SalMar while actual record says Salmar; industry assertion did not await detail content. Correct assertions without dropping behavioral checks. Contain mobile heatmap/screener and attention list height, remove duplicate news, compact module artwork, refresh principal entry point assets. Retest and visual acceptance pending. No new functionality.
+
+## Price-first presentation and shipping coverage
+Default stock screener is monitored listings; searches and explicit universe controls preserve access to discovery records. Keep dated latest reported values visible without treating a mixed session as comparable. Terminal excludes bare reference records by default unless searched or pinned; show dates. Heatmap remains neutral outside eligible session; reference records remain explorable. Shipping prioritizes existing official dated series over unpriced Baltic route definitions; adds official monthly BLS deep-sea freight PPI via existing FRED collector (first successful refresh pending), https://fred.stlouisfed.org/series/PCU483111483111. No new entitlement or subscription; public price-feed rights still require resolution. Candidate checks pending.
