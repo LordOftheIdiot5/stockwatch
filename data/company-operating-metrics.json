@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "compiledOn": "2026-11-17",
+  "notice": "Manually checked factual operating observations from public issuer reports. Not daily spot shipping prices, route assessments, predictions or investment recommendations. Reporting scope and timing differ by issuer; do not treat the rates as equivalent benchmarks. Source-linked factual data only; bulk commercial redistribution rights require review. No automatic collection enabled.",
+  "companies": [
+    {
+      "ticker": "WAWI.OL",
+      "issuer": "Wallenius Wilhelmsen ASA",
+      "scope": "Shipping Services, quarterly; fleet excludes vessels owned by ARC",
+      "series": [
+        {
+          "key": "net_freight",
+          "label": "Realized net freight",
+          "unit": "USD/m³",
+          "frequency": "quarterly",
+          "observations": [
+            {
+              "periodEnd": "2025-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 65.4,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-11-04",
+              "value": 61.4,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 64.4,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            }
+          ]
+        },
+        {
+          "key": "transport_volume",
+          "label": "Transported volume",
+          "unit": "million m³",
+          "frequency": "quarterly",
+          "observations": [
+            {
+              "periodEnd": "2025-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 13.6,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-11-04",
+              "value": 13.6,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 13.2,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            }
+          ]
+        },
+        {
+          "key": "net_tc_result",
+          "label": "Net time-charter result",
+          "unit": "USD/day",
+          "frequency": "quarterly",
+          "observations": [
+            {
+              "periodEnd": "2025-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 56000,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-11-04",
+              "value": 51000,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 51000,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            }
+          ]
+        },
+        {
+          "key": "vessel_cost",
+          "label": "Vessel operating cost",
+          "unit": "USD/day",
+          "frequency": "quarterly",
+          "observations": [
+            {
+              "periodEnd": "2025-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 8140,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-11-04",
+              "value": 8142,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 7871,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            }
+          ]
+        },
+        {
+          "key": "backlog",
+          "label": "Contract backlog",
+          "unit": "USD billion",
+          "frequency": "quarterly",
+          "observations": [
+            {
+              "periodEnd": "2025-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 7.8,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-11-04",
+              "value": 6.5,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 5.8,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            }
+          ]
+        },
+        {
+          "key": "vessels",
+          "label": "Fleet vessels",
+          "unit": "vessels",
+          "frequency": "quarterly",
+          "observations": [
+            {
+              "periodEnd": "2025-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 117,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-11-04",
+              "value": 119,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-11-04",
+              "value": 118,
+              "sourceUrl": "https://www.walleniuswilhelmsen.com/storage/downloads/Wallenius-Wilhelmsen-Quarterly-report-Q3-2026.pdf",
+              "sourceLocator": "Q3 2026 report, p. 8; comparative figures as published in this report"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "issuer": "Höegh Autoliners ASA",
+      "scope": "Monthly prorated operating results",
+      "series": [
+        {
+          "key": "net_freight",
+          "label": "Prorated net freight",
+          "unit": "USD/m³",
+          "frequency": "monthly",
+          "observations": [
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-07-10",
+              "value": 80.7,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-june-2026-trading-update-677955",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-07-31",
+              "publishedOn": "2026-08-11",
+              "value": 80.6,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-july-2026-trading-update-679373",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-08-31",
+              "publishedOn": "2026-09-10",
+              "value": 80.7,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-august-2026-trading-update-681931",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-10-09",
+              "value": 82,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-september-2026-trading-update-683843",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-10-31",
+              "publishedOn": "2026-11-11",
+              "value": 81.8,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-october-2026-trading-update-686156",
+              "sourceLocator": "Monthly trading update"
+            }
+          ]
+        },
+        {
+          "key": "gross_freight",
+          "label": "Prorated gross freight",
+          "unit": "USD/m³",
+          "frequency": "monthly",
+          "observations": [
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-07-10",
+              "value": 93.1,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-june-2026-trading-update-677955",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-07-31",
+              "publishedOn": "2026-08-11",
+              "value": 99.3,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-july-2026-trading-update-679373",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-08-31",
+              "publishedOn": "2026-09-10",
+              "value": 97.8,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-august-2026-trading-update-681931",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-10-09",
+              "value": 99,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-september-2026-trading-update-683843",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-10-31",
+              "publishedOn": "2026-11-11",
+              "value": 100.1,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-october-2026-trading-update-686156",
+              "sourceLocator": "Monthly trading update"
+            }
+          ]
+        },
+        {
+          "key": "transport_volume",
+          "label": "Prorated cargo volume",
+          "unit": "million m³",
+          "frequency": "monthly",
+          "observations": [
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-07-10",
+              "value": 1.5,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-june-2026-trading-update-677955",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-07-31",
+              "publishedOn": "2026-08-11",
+              "value": 1.4,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-july-2026-trading-update-679373",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-08-31",
+              "publishedOn": "2026-09-10",
+              "value": 1.2,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-august-2026-trading-update-681931",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-10-09",
+              "value": 1.4,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-september-2026-trading-update-683843",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-10-31",
+              "publishedOn": "2026-11-11",
+              "value": 1.4,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-october-2026-trading-update-686156",
+              "sourceLocator": "Monthly trading update"
+            }
+          ]
+        },
+        {
+          "key": "heavy_breakbulk_share",
+          "label": "High & heavy / breakbulk share",
+          "unit": "%",
+          "frequency": "monthly",
+          "observations": [
+            {
+              "periodEnd": "2026-06-30",
+              "publishedOn": "2026-07-10",
+              "value": 24,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-june-2026-trading-update-677955",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-07-31",
+              "publishedOn": "2026-08-11",
+              "value": 24,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-july-2026-trading-update-679373",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-08-31",
+              "publishedOn": "2026-09-10",
+              "value": 24,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-august-2026-trading-update-681931",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "publishedOn": "2026-10-09",
+              "value": 21,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-september-2026-trading-update-683843",
+              "sourceLocator": "Monthly trading update"
+            },
+            {
+              "periodEnd": "2026-10-31",
+              "publishedOn": "2026-11-11",
+              "value": 21,
+              "sourceUrl": "https://www.hoeghautoliners.com/investors/ir-news/h-egh-autoliners-asa-hauto-october-2026-trading-update-686156",
+              "sourceLocator": "Monthly trading update"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

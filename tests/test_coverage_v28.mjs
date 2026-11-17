@@ -53,3 +53,19 @@ test('V61 inventory command returns balanced coverage counts without mutating in
  assert.equal(Object.values(out.byVenue).reduce((a,b)=>a+b.total,0),out.total);
  assert.ok(out.counts.scanner>0);assert.ok(out.records.every(r=>r.id&&r.status));
 });
+
+test('V63: issuer operating data keeps dated source, units and reporting scopes separate',()=>{
+ const start=src.indexOf('function companyOperatingRows('),end=src.indexOf('function companyOperatingHTML(',start);
+ const operating=Function(src.slice(start,end)+'\nreturn companyOperatingRows')();
+ const d=JSON.parse(fs.readFileSync(new URL('../data/company-operating-metrics.json',import.meta.url),'utf8'));
+ const all=operating(d);
+ assert.equal(all.length,2);
+ assert.equal(all.reduce((n,c)=>n+c.series.reduce((m,v)=>m+v.observations.length,0),0),38);
+ const w=operating(d,'WAWI.OL')[0].series.find(v=>v.key==='net_freight');
+ const h=operating(d,'HAUTO.OL')[0].series.find(v=>v.key==='net_freight');
+ assert.deepEqual([w.frequency,w.observations.at(-1).value,h.frequency,h.observations.at(-1).value],['quarterly',64.4,'monthly',81.8]);
+ assert.deepEqual(operating(d,'WWI.OL'),[]); // related issuer, not the same security.
+ const bad=structuredClone(d);bad.companies[0].series[0].observations.at(-1).sourceUrl='https://example.com/';
+ assert.equal(operating(bad,'WAWI.OL')[0].series[0].observations.length,2);
+ assert.deepEqual(operating({...d,compiledOn:'invalid'}),[]);
+});
