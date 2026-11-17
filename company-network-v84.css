@@ -1,0 +1,17 @@
+
+.sw-company-photo{margin:12px 0 18px;max-width:100%;min-width:0}
+.sw-company-photo img{display:block;width:100%;height:auto;max-height:235px;object-fit:contain;object-position:center;background:var(--sw-panel,#172337);border-radius:10px}
+.sw-company-photo figcaption{font-size:.72rem;line-height:1.5;color:var(--sw-muted,#8798ac);overflow-wrap:anywhere;padding:6px 0}
+.sw-network-panel{margin:16px 0;min-width:0}
+.sw-network-map{display:grid;grid-template-columns:minmax(0,1fr) minmax(115px,.65fr) minmax(0,1fr);gap:12px;align-items:center;margin:16px 0}
+.sw-network-side{display:grid;gap:8px;min-width:0}
+.sw-network-side h3{font-size:.82rem;margin:0;text-align:center}
+.sw-network-center{border:1px solid #7287a5;border-radius:12px;padding:15px 10px;display:grid;gap:5px;min-width:0;text-align:center;overflow-wrap:anywhere}
+.sw-network-center small,.sw-network-node small,.sw-network-node span{font-size:.75rem;line-height:1.4}
+.sw-network-node{background:transparent;color:inherit;border:1px solid var(--edge-color);border-left:4px solid var(--edge-color);border-radius:8px;padding:10px;text-align:left;display:grid;gap:4px;min-width:0;width:100%;cursor:pointer;overflow-wrap:anywhere}
+.sw-network-node:hover,.sw-network-node:focus-visible{outline:2px solid var(--edge-color);outline-offset:2px}
+.sw-network-evidence{overflow-wrap:anywhere;min-width:0}
+.sw-network-panel .sw-controls{flex-wrap:wrap}
+.sw-network-panel .sw-controls label{display:grid;gap:4px;min-width:0;max-width:100%}
+.sw-network-panel select{max-width:100%}
+@media(max-width:650px){.sw-network-map{grid-template-columns:minmax(0,1fr);gap:10px}.sw-network-center{grid-row:1}.sw-network-side h3{text-align:left}.sw-company-photo img{max-height:180px}}
