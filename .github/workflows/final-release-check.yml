@@ -142,6 +142,16 @@ jobs:
           name: stockwatch-v51-screener
           path: workspace-previews/v51-*.png
           if-no-files-found: ignore
+      - name: V52 synchronized terminal browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v52-')
+        run: python tests/browser_check_terminal_v52.py
+      - name: Upload V52 terminal previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v52-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v52-terminal
+          path: workspace-previews/v52-*.png
+          if-no-files-found: ignore
       - name: V47 shared navigation rendered checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v47-')
         run: python tests/browser_check_shell_v47.py
