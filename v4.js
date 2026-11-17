@@ -605,7 +605,7 @@ function companyOperatingRows(data,ticker){
    const observations=v.observations.filter(p=>{
     if(!p||duplicates.get(p.periodEnd)!==1||!date(p.periodEnd)||!date(p.publishedOn)||p.periodEnd>p.publishedOn||p.publishedOn>data.compiledOn||!Number.isFinite(p.value)||p.value<0)return false;
     if(v.unit==='%'&&p.value>100)return false;
-    try{const u=new URL(p.sourceUrl);return u.protocol==='https:'&&u.hostname===hosts[c.ticker]&&!u.username&&!u.password&&typeof p.sourceLocator==='string'}catch{return false}
+    try{const u=new URL(p.sourceUrl);return u.protocol==='https:'&&!u.username&&!u.password&&typeof p.sourceLocator==='string'&&(u.hostname===hosts[c.ticker]||(c.ticker==='HAUTO.OL'&&u.hostname==='live.euronext.com'&&/^\/en\/products\/equities\/company-news\/\d{4}-\d{2}-\d{2}-hoegh-autoliners-asa-hauto-[a-z]+-\d{4}-trading-update$/.test(u.pathname)))}catch{return false}
    }).sort((a,b)=>a.periodEnd.localeCompare(b.periodEnd));
    if(observations.length)series.push({...v,observations});
   }

@@ -60,7 +60,7 @@ test('V63: issuer operating data keeps dated source, units and reporting scopes 
  const d=JSON.parse(fs.readFileSync(new URL('../data/company-operating-metrics.json',import.meta.url),'utf8'));
  const all=operating(d);
  assert.equal(all.length,2);
- assert.equal(all.reduce((n,c)=>n+c.series.reduce((m,v)=>m+v.observations.length,0),0),38);
+ assert.ok(all.reduce((n,c)=>n+c.series.reduce((m,v)=>m+v.observations.length,0),0)>=82);
  const w=operating(d,'WAWI.OL')[0].series.find(v=>v.key==='net_freight');
  const h=operating(d,'HAUTO.OL')[0].series.find(v=>v.key==='net_freight');
  assert.deepEqual([w.frequency,w.observations.at(-1).value,h.frequency,h.observations.at(-1).value],['quarterly',64.4,'monthly',81.8]);
@@ -150,4 +150,24 @@ test('V68: reported-map date is separate from strict filters; retained and pair 
  const html=compactScreenerHeatmap(result);assert.match(html,/sw-compact-heatgrid/);assert.equal((html.match(/sw-compact-heatsector /g)||[]).length,1);assert.equal((html.match(/class="sw-heat-cell positive"/g)||[]).length,1);
  assert.ok(screenerHeatRows(data,'2026-11-17','2026-11-16','missing').every(x=>x.marketQuality==='unavailable'));
  assert.equal(screenerHeatRows([row],'2026-11-17','2026-11-16','comparable')[0].marketQuality,'unconfirmed');
+});
+
+test('V73: complete 16-month HAUTO operating history and narrowly scoped exchange notice sources',()=>{
+ const start=src.indexOf('function companyOperatingRows('),end=src.indexOf('function freightPeriodAnalysis(',start);
+ const operating=Function(src.slice(start,end)+'\nreturn companyOperatingRows')();
+ const data=JSON.parse(fs.readFileSync(new URL('../data/company-operating-metrics.json',import.meta.url),'utf8'));
+ const ha=operating(data,'HAUTO.OL')[0];
+ for(const series of ha.series){
+  const dates=series.observations.map(p=>p.periodEnd);
+  for(let i=0;i<16;i++){
+   const date=new Date(Date.UTC(2025,7+i,0)).toISOString().slice(0,10);
+   assert.ok(dates.includes(date),series.key+' missing '+date);
+  }
+ }
+ const h=ha.series.find(v=>v.key==='net_freight');
+ assert.equal(h.observations.find(p=>p.periodEnd==='2026-01-31').value,77.7);
+ assert.equal(h.observations.find(p=>p.periodEnd==='2026-02-28').value,80.7);
+ const bad=structuredClone(data),series=bad.companies.find(c=>c.ticker==='HAUTO.OL').series[0];
+ series.observations.find(p=>p.periodEnd==='2026-01-31').sourceUrl='https://live.euronext.com/en/products/equities/company-news/2026-02-06-unrelated-issuer';
+ assert.equal(operating(bad,'HAUTO.OL')[0].series[0].observations.some(p=>p.periodEnd==='2026-01-31'),false);
 });
