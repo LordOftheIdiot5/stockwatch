@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-17T16:06:27+00:00",
+ "generated": "2026-11-17T17:06:30+00:00",
  "commodities": [
   {
    "ticker": "GC=F",
    "name": "Gold",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 3880.7,
-   "changePct": 0.72,
-   "monthPct": -6.72,
-   "yearPosition": 2,
+   "last": 3865.5,
+   "changePct": 0.32,
+   "monthPct": -7.08,
+   "yearPosition": 1,
    "yearLow": 3853.0,
    "yearHigh": 5318.3999
   },
@@ -18,9 +18,9 @@
    "name": "Silver",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 47.585,
-   "changePct": 1.71,
-   "monthPct": -16.48,
+   "last": 47.41,
+   "changePct": 1.34,
+   "monthPct": -16.79,
    "yearPosition": 1,
    "yearLow": 46.785,
    "yearHigh": 115.08
@@ -30,9 +30,9 @@
    "name": "Copper",
    "group": "metals",
    "unit": "USD/lb",
-   "last": 5.981,
-   "changePct": -0.28,
-   "monthPct": -8.52,
+   "last": 5.9765,
+   "changePct": -0.35,
+   "monthPct": -8.59,
    "yearPosition": 55,
    "yearLow": 4.9595,
    "yearHigh": 6.8035
@@ -54,10 +54,10 @@
    "name": "Aluminium",
    "group": "metals",
    "unit": "USD/t",
-   "last": 2990.0,
-   "changePct": -4.3,
-   "monthPct": -5.03,
-   "yearPosition": 20,
+   "last": 3003.75,
+   "changePct": -3.86,
+   "monthPct": -4.6,
+   "yearPosition": 21,
    "yearLow": 2684.0,
    "yearHigh": 4195.0
   },
@@ -66,11 +66,11 @@
    "name": "Platinum",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 1425.2,
-   "changePct": -1.57,
-   "monthPct": -13.03,
+   "last": 1422.9,
+   "changePct": -1.73,
+   "monthPct": -13.17,
    "yearPosition": 0,
-   "yearLow": 1425.2,
+   "yearLow": 1422.9,
    "yearHigh": 2852.3999
   },
   {
@@ -78,9 +78,9 @@
    "name": "Palladium",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 972.5,
-   "changePct": 0.07,
-   "monthPct": -12.87,
+   "last": 969.0,
+   "changePct": -0.29,
+   "monthPct": -13.18,
    "yearPosition": 3,
    "yearLow": 930.0,
    "yearHigh": 2169.8999
@@ -90,11 +90,11 @@
    "name": "Nickel miners",
    "group": "metals",
    "unit": "USD",
-   "last": 10.055,
-   "changePct": -0.69,
-   "monthPct": -9.82,
+   "last": 10.07,
+   "changePct": -0.54,
+   "monthPct": -9.69,
    "yearPosition": 0,
-   "yearLow": 10.055,
+   "yearLow": 10.07,
    "yearHigh": 20.59,
    "proxy": true
   },
@@ -115,9 +115,9 @@
    "name": "Brent crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 93.28,
-   "changePct": 0.91,
-   "monthPct": -14.85,
+   "last": 93.27,
+   "changePct": 0.9,
+   "monthPct": -14.86,
    "yearPosition": 58,
    "yearLow": 58.92,
    "yearHigh": 118.35
@@ -127,9 +127,9 @@
    "name": "WTI crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 86.58,
-   "changePct": 1.0,
-   "monthPct": -16.48,
+   "last": 86.53,
+   "changePct": 0.94,
+   "monthPct": -16.53,
    "yearPosition": 54,
    "yearLow": 55.27,
    "yearHigh": 112.95
@@ -139,9 +139,9 @@
    "name": "Natural gas",
    "group": "energy",
    "unit": "USD/MMBtu",
-   "last": 3.142,
-   "changePct": 0.64,
-   "monthPct": 2.75,
+   "last": 3.151,
+   "changePct": 0.93,
+   "monthPct": 3.04,
    "yearPosition": 13,
    "yearLow": 2.523,
    "yearHigh": 7.46
@@ -151,11 +151,11 @@
    "name": "Uranium (ETF)",
    "group": "energy",
    "unit": "USD",
-   "last": 30.08,
-   "changePct": -1.18,
-   "monthPct": -14.72,
+   "last": 30.31,
+   "changePct": -0.43,
+   "monthPct": -14.06,
    "yearPosition": 0,
-   "yearLow": 30.08,
+   "yearLow": 30.31,
    "yearHigh": 61.81
   }
  ],
@@ -165,10 +165,10 @@
    "name": "Dry bulk freight",
    "note": "tracks dry bulk futures",
    "proxy": true,
-   "last": 13.0,
-   "changePct": 3.17,
-   "monthPct": 0.39,
-   "yearPosition": 56,
+   "last": 12.9401,
+   "changePct": 2.7,
+   "monthPct": -0.08,
+   "yearPosition": 55,
    "yearLow": 8.42,
    "yearHigh": 16.58
   },
@@ -177,9 +177,9 @@
    "name": "Tanker freight",
    "note": "tracks tanker futures",
    "proxy": true,
-   "last": 643.1022,
-   "changePct": 0.73,
-   "monthPct": -26.19,
+   "last": 641.89,
+   "changePct": 0.55,
+   "monthPct": -26.33,
    "yearPosition": 63,
    "yearLow": 18.73,
    "yearHigh": 1012.75
@@ -189,9 +189,9 @@
    "name": "Shipping equities",
    "note": "global shipping companies",
    "proxy": true,
-   "last": 47.37,
-   "changePct": -0.04,
-   "monthPct": -8.5,
+   "last": 47.42,
+   "changePct": 0.06,
+   "monthPct": -8.4,
    "yearPosition": 67,
    "yearLow": 31.416,
    "yearHigh": 55.2
@@ -202,18 +202,18 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.088725,
-     "z": -0.809
+     "mean": 1.089455,
+     "z": 0.339
     },
     "90": {
      "observations": 90,
-     "mean": 1.130999,
-     "z": -1.101
+     "mean": 1.131242,
+     "z": -0.687
     },
     "240": {
      "observations": 240,
-     "mean": 1.135843,
-     "z": -0.843
+     "mean": 1.135934,
+     "z": -0.548
     }
    },
    "aMedianVolume": 6231,
@@ -225,19 +225,19 @@
    "bLatestDate": "2026-11-17",
    "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 5.0,
+   "driftPct": 5.02,
    "name": "Kinnevik",
    "a": "KINV-A.ST",
    "b": "KINV-B.ST",
-   "aPrice": 71.9,
-   "bPrice": 66.96,
-   "ratio": 1.0738,
-   "meanRatio": 1.1309,
-   "sd": 0.0756,
-   "z": -0.76,
+   "aPrice": 73.3,
+   "bPrice": 66.9,
+   "ratio": 1.0957,
+   "meanRatio": 1.131,
+   "sd": 0.0755,
+   "z": -0.47,
    "days": 251,
    "tradableRange": true,
-   "rangePct": 13.37
+   "rangePct": 13.36
   },
   {
    "rolling": {
@@ -366,22 +366,22 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.145259,
-     "z": 0.092
+     "mean": 1.145252,
+     "z": 0.059
     },
     "90": {
      "observations": 90,
-     "mean": 1.146487,
-     "z": -0.08
+     "mean": 1.146485,
+     "z": -0.106
     },
     "240": {
      "observations": 240,
      "mean": 1.138646,
-     "z": 0.577
+     "z": 0.56
     }
    },
-   "aMedianVolume": 4238950,
-   "bMedianVolume": 1428043,
+   "aMedianVolume": 4242038,
+   "bMedianVolume": 1429594,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-17",
@@ -393,12 +393,12 @@
    "name": "Atlas Copco",
    "a": "ATCO-A.ST",
    "b": "ATCO-B.ST",
-   "aPrice": 189.35,
-   "bPrice": 165.25,
-   "ratio": 1.1458,
+   "aPrice": 189.2,
+   "bPrice": 165.15,
+   "ratio": 1.1456,
    "meanRatio": 1.1374,
    "sd": 0.0136,
-   "z": 0.62,
+   "z": 0.61,
    "days": 251,
    "tradableRange": true,
    "rangePct": 2.38
@@ -407,18 +407,18 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.990457,
-     "z": -1.399
+     "mean": 0.990464,
+     "z": -1.346
     },
     "90": {
      "observations": 90,
-     "mean": 0.99504,
-     "z": -1.838
+     "mean": 0.995042,
+     "z": -1.801
     },
     "240": {
      "observations": 240,
-     "mean": 1.002619,
-     "z": -2.188
+     "mean": 1.00262,
+     "z": -2.163
     }
    },
    "aMedianVolume": 737728,
@@ -434,12 +434,12 @@
    "name": "SSAB",
    "a": "SSAB-A.ST",
    "b": "SSAB-B.ST",
-   "aPrice": 91.4,
-   "bPrice": 92.72,
-   "ratio": 0.9858,
+   "aPrice": 91.3,
+   "bPrice": 92.6,
+   "ratio": 0.986,
    "meanRatio": 1.0035,
    "sd": 0.0086,
-   "z": -2.06,
+   "z": -2.03,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.72
@@ -448,21 +448,21 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.014472,
-     "z": -0.515
+     "mean": 1.014391,
+     "z": -0.82
     },
     "90": {
      "observations": 90,
-     "mean": 1.009453,
-     "z": 0.157
+     "mean": 1.009426,
+     "z": -0.175
     },
     "240": {
      "observations": 240,
-     "mean": 1.004797,
-     "z": 0.821
+     "mean": 1.004787,
+     "z": 0.479
     }
    },
-   "aMedianVolume": 22872,
+   "aMedianVolume": 22948,
    "bMedianVolume": 7554552,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
@@ -476,11 +476,11 @@
    "a": "ERIC-A.ST",
    "b": "ERIC-B.ST",
    "aPrice": 105.0,
-   "bPrice": 103.9,
-   "ratio": 1.0106,
-   "meanRatio": 1.0048,
+   "bPrice": 104.15,
+   "ratio": 1.0082,
+   "meanRatio": 1.0047,
    "sd": 0.0069,
-   "z": 0.84,
+   "z": 0.49,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.38
@@ -530,18 +530,18 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.981405,
-     "z": -0.659
+     "mean": 0.981407,
+     "z": -0.619
     },
     "90": {
      "observations": 90,
-     "mean": 0.983844,
-     "z": -0.921
+     "mean": 0.983845,
+     "z": -0.902
     },
     "240": {
      "observations": 240,
-     "mean": 0.987864,
-     "z": -1.531
+     "mean": 0.987865,
+     "z": -1.515
     }
    },
    "aMedianVolume": 335749,
@@ -557,12 +557,12 @@
    "name": "Investor",
    "a": "INVE-A.ST",
    "b": "INVE-B.ST",
-   "aPrice": 417.9,
-   "bPrice": 426.35,
-   "ratio": 0.9802,
+   "aPrice": 417.1,
+   "bPrice": 425.5,
+   "ratio": 0.9803,
    "meanRatio": 0.9882,
    "sd": 0.0052,
-   "z": -1.56,
+   "z": -1.54,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.04
@@ -571,22 +571,22 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.001686,
-     "z": 1.426
+     "mean": 1.001773,
+     "z": 1.821
     },
     "90": {
      "observations": 90,
-     "mean": 1.002237,
-     "z": 1.585
+     "mean": 1.002266,
+     "z": 2.098
     },
     "240": {
      "observations": 240,
-     "mean": 1.001113,
-     "z": 1.946
+     "mean": 1.001123,
+     "z": 2.51
     }
    },
    "aMedianVolume": 5386,
-   "bMedianVolume": 1080294,
+   "bMedianVolume": 1091814,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-17",
@@ -594,16 +594,16 @@
    "bLatestDate": "2026-11-17",
    "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 0.04,
+   "driftPct": 0.05,
    "name": "SKF",
    "a": "SKF-A.ST",
    "b": "SKF-B.ST",
-   "aPrice": 275.5,
-   "bPrice": 272.8,
-   "ratio": 1.0099,
+   "aPrice": 275.0,
+   "bPrice": 271.6,
+   "ratio": 1.0125,
    "meanRatio": 1.0014,
    "sd": 0.0049,
-   "z": 1.76,
+   "z": 2.28,
    "days": 251,
    "tradableRange": true,
    "rangePct": 0.97
@@ -612,22 +612,22 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.998179,
-     "z": -0.415
+     "mean": 0.998296,
+     "z": 0.713
     },
     "90": {
      "observations": 90,
-     "mean": 0.999365,
-     "z": -0.636
+     "mean": 0.999403,
+     "z": 0.271
     },
     "240": {
      "observations": 240,
-     "mean": 0.999429,
-     "z": -0.708
+     "mean": 0.999444,
+     "z": 0.283
     }
    },
    "aMedianVolume": 13657,
-   "bMedianVolume": 1623248,
+   "bMedianVolume": 1627907,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-17",
@@ -639,12 +639,12 @@
    "name": "SCA",
    "a": "SCA-A.ST",
    "b": "SCA-B.ST",
-   "aPrice": 114.0,
-   "bPrice": 114.35,
-   "ratio": 0.9969,
+   "aPrice": 114.5,
+   "bPrice": 114.45,
+   "ratio": 1.0004,
    "meanRatio": 0.9995,
    "sd": 0.0035,
-   "z": -0.74,
+   "z": 0.26,
    "days": 251,
    "tradableRange": true,
    "rangePct": 0.7
@@ -653,22 +653,22 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.002501,
-     "z": 0.001
+     "mean": 1.002428,
+     "z": -1.087
     },
     "90": {
      "observations": 90,
-     "mean": 1.001275,
-     "z": 0.692
+     "mean": 1.001251,
+     "z": -0.53
     },
     "240": {
      "observations": 240,
-     "mean": 1.000541,
-     "z": 1.13
+     "mean": 1.000532,
+     "z": -0.127
     }
    },
    "aMedianVolume": 88566,
-   "bMedianVolume": 2938621,
+   "bMedianVolume": 2945660,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-17",
@@ -680,12 +680,12 @@
    "name": "Volvo",
    "a": "VOLV-A.ST",
    "b": "VOLV-B.ST",
-   "aPrice": 320.4,
-   "bPrice": 319.6,
-   "ratio": 1.0025,
+   "aPrice": 319.8,
+   "bPrice": 319.7,
+   "ratio": 1.0003,
    "meanRatio": 1.0005,
    "sd": 0.0017,
-   "z": 1.14,
+   "z": -0.13,
    "days": 251,
    "tradableRange": false,
    "rangePct": 0.34
