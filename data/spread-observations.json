@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T09:07:23+00:00",
+  "generated": "2026-11-17T10:06:27+00:00",
   "method": "Dated snapshots of Stockwatch calculated A/B ratios; NOT reconstructed historical share prices.",
   "frequency": "one UTC observation per day",
   "source": "Stockwatch scanner context",
@@ -16,7 +16,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0782
+        "value": 1.0806
       }
     ],
     "WWI.OL/WWIB.OL": [
@@ -30,7 +30,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0489
+        "value": 1.0557
       }
     ],
     "MAERSK-A.CO/MAERSK-B.CO": [
@@ -44,7 +44,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9818
+        "value": 0.9807
       }
     ],
     "ODF.OL/ODFB.OL": [
@@ -58,7 +58,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0067
+        "value": 1.0102
       }
     ],
     "ATCO-A.ST/ATCO-B.ST": [
@@ -72,7 +72,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.1457
+        "value": 1.1448
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
@@ -86,7 +86,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9873
+        "value": 0.9872
       }
     ],
     "ERIC-A.ST/ERIC-B.ST": [
@@ -100,7 +100,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0142
+        "value": 1.0128
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
@@ -114,7 +114,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9997
+        "value": 1.0012
       }
     ],
     "INVE-A.ST/INVE-B.ST": [
@@ -142,7 +142,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0066
+        "value": 1.011
       }
     ],
     "SCA-A.ST/SCA-B.ST": [
@@ -156,7 +156,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0
+        "value": 0.9987
       }
     ],
     "VOLV-A.ST/VOLV-B.ST": [
@@ -170,7 +170,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0016
+        "value": 1.0
       }
     ]
   },
@@ -178,42 +178,42 @@
     "KINV-A.ST/KINV-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 1.0782,
+        "value": 1.0806,
         "scanDate": "2026-11-17"
       }
     ],
     "MAERSK-A.CO/MAERSK-B.CO": [
       {
         "date": "2026-11-17",
-        "value": 0.9818,
+        "value": 0.9807,
         "scanDate": "2026-11-17"
       }
     ],
     "ATCO-A.ST/ATCO-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 1.1457,
+        "value": 1.1448,
         "scanDate": "2026-11-17"
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 0.9873,
+        "value": 0.9872,
         "scanDate": "2026-11-17"
       }
     ],
     "ERIC-A.ST/ERIC-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 1.0142,
+        "value": 1.0128,
         "scanDate": "2026-11-17"
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 0.9997,
+        "value": 1.0012,
         "scanDate": "2026-11-17"
       }
     ],
@@ -227,35 +227,35 @@
     "SKF-A.ST/SKF-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 1.0066,
+        "value": 1.011,
         "scanDate": "2026-11-17"
       }
     ],
     "SCA-A.ST/SCA-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 1.0,
+        "value": 0.9987,
         "scanDate": "2026-11-17"
       }
     ],
     "VOLV-A.ST/VOLV-B.ST": [
       {
         "date": "2026-11-17",
-        "value": 1.0016,
+        "value": 1.0,
         "scanDate": "2026-11-17"
       }
     ],
     "WWI.OL/WWIB.OL": [
       {
         "date": "2026-11-17",
-        "value": 1.0489,
+        "value": 1.0557,
         "scanDate": "2026-11-17"
       }
     ],
     "ODF.OL/ODFB.OL": [
       {
         "date": "2026-11-17",
-        "value": 1.0067,
+        "value": 1.0102,
         "scanDate": "2026-11-17"
       }
     ]
