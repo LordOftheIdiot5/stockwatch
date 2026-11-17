@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-17T23:17:48.204277+00:00",
+  "generated": "2026-11-17T23:26:51.301867+00:00",
   "newsRecordsScanned": 790,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
@@ -129,9 +129,11 @@
       "amount": null
     },
     {
-      "id": "1bd13e7d62944e3715be04c3f2533cb33de8548eb0032e8bd19b7bd914dd013b",
+      "id": "e21c1638c6136184bfd9a5fcfcf31ad1a277813796e2a812f7acd97c5372b380",
       "newsId": "NDX1.DE:a3e93509e1c8f57b219dc7305b093a7ab0ae919779a1c6b13e3d8c8dfdf005f3",
-      "entityIds": [],
+      "entityIds": [
+        "nordex"
+      ],
       "issuerTicker": "NDX1.DE",
       "candidateType": "headline_event",
       "published": "2026-11-13T11:20:22Z",
@@ -219,11 +221,14 @@
       "amount": null
     },
     {
-      "id": "25102abe1224594a724ff778c1617e6f01434b6943593e8e1bf3995d95b3ffb8",
+      "id": "2f924d84cd9b8a0c1663d6fba8eaf7ec92f75af09867a506360cfd8397b26909",
       "newsId": "NDX1.DE:dbe4a7d7f47b2c504d7844ea599ff79a5046a4c7df53060f78faeadcf73084f5",
-      "entityIds": [],
+      "entityIds": [
+        "nordex",
+        "verbund"
+      ],
       "issuerTicker": "NDX1.DE",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-13T14:49:34Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdTVmc1lQYXJhQ18tOWttc2R6MjdtYWg1emxZcUVBdzYzM1Ayb3lUVllGS0VMNUlZTldTLS1weWFEYkNodkhRTXlyM1IxMkhxUWRwbFhXSUdzcV9Za2tBRHM4Smd2cklVVE1pN0oxc3B3andScVJfZklXRDZtNkJoNUxpNzZreUhqZ2RWWUZfRkZERUhWTjY0eTdhQlNOdw?oc=5",
       "status": "review_required",
@@ -273,9 +278,11 @@
       "amount": null
     },
     {
-      "id": "8923dc93ef974f38f634b6264033fe0c38fa4fd53284e4f3984dbee2245d0059",
+      "id": "3835df119fb7690f8a4e06daf13236e11e2bc703de25fdd1798b79fa2b5a83a8",
       "newsId": "SIE.DE:6261bb47f1dcf47aecf9e2c9ef14b4c5287871bc85cdb32752ce72ae95c43265",
-      "entityIds": [],
+      "entityIds": [
+        "siemens"
+      ],
       "issuerTicker": "SIE.DE",
       "candidateType": "headline_event",
       "published": "2026-11-13T17:01:14Z",
@@ -299,9 +306,11 @@
       "amount": null
     },
     {
-      "id": "8745adbd2215e72a74d33563393e6529d96e70361574c21277b5d61d3fda780f",
+      "id": "3a7aa7da2c51181383e3a9541801b1dbf150d7b129f51af563cdbf7a1e8b5a5b",
       "newsId": "SUBC.OL:30a8546365e66167d5861f82ee8da624e6522603bf5d98e800532669b40d6da3",
-      "entityIds": [],
+      "entityIds": [
+        "subsea7"
+      ],
       "issuerTicker": "SUBC.OL",
       "candidateType": "headline_event",
       "published": "2026-11-13T18:35:52Z",
@@ -311,9 +320,11 @@
       "amount": null
     },
     {
-      "id": "6389a1734700644b44a4831b534445b18223c5c11eec92b5106307927ae5cd4c",
+      "id": "9408b38c65e4e4a186245484c35e21a1e80d590e89b71f17733766b2c5268f32",
       "newsId": "SUBC.OL:f8ae3ebf9a52d24e741e037d8f4690aebe8f2b0be60a199c308fdbfcb357346b",
-      "entityIds": [],
+      "entityIds": [
+        "subsea7"
+      ],
       "issuerTicker": "SUBC.OL",
       "candidateType": "headline_event",
       "published": "2026-11-13T19:14:10Z",
@@ -411,16 +422,27 @@
       "amount": null
     },
     {
-      "id": "4d45badbb19049a913c5516b7c480883f21d45fa04a468f37792dbfe1874846b",
+      "id": "5a6dc581117db2dced81db7e0995691b3c32f0c3fd77aae4c1f31a35165ee51d",
       "newsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb",
-      "entityIds": [],
+      "entityIds": [
+        "byd-storage",
+        "hoegh"
+      ],
       "issuerTicker": "HAUTO.OL",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-16T01:19:29Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aN3VHYm5Wc25JX3c2U3F2WDZmR09fazZONk15S0t4ZW52ZEpYdXhjRF9TOE4wQmF4QVpiUU91dVBBUWo5OHdfc20tekg5LTQ?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "byd-hoegh-aurora-battery",
+        "cmhi-hoegh-construction",
+        "deltamarin-hoegh-design",
+        "dnv-hoegh-class",
+        "everllence-hoegh-engine",
+        "kongsberg-hoegh-bridge"
+      ]
     },
     {
       "id": "34264e27b71b3a68e47178b82921face273d70b6f0b7979b761415ed0242672d",
@@ -449,21 +471,29 @@
       "amount": null
     },
     {
-      "id": "0ee3cd2771534f5b09dbcd97c6c576bda2ae9f3e71f2d24061f5910591c5728b",
+      "id": "ece4b615ce74bf6ebd79df956460d4e188b0a4f576a8b841bb9b4acf8222a500",
       "newsId": "NDX1.DE:54104496efdd92a764d7f709e14b5a2a7f4fe36c0e08d3600933a8e6d00ed3ff",
-      "entityIds": [],
+      "entityIds": [
+        "nordex",
+        "verbund"
+      ],
       "issuerTicker": "NDX1.DE",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-16T04:22:25Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ydWtTS1JYNkp3N2JnWTN4eHc4XzFYdlg3NDNmWnkwdkN5cHhaUDdCSXNrT294eG8teWMzeFRydG0zWm9oNl91a1FLS2o5cUVWQTBNS3F2UUxFR0g3ZGM2Y082X0VwR0JSS01v?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "nordex-verbund-spille"
+      ]
     },
     {
-      "id": "a1a541d03f9a70d391d30a6c4db83823396f66a1ddc412c3d7231ea8918d5e44",
+      "id": "313b2ac70e4ae3f57da3bd8e94f4d15bf669b2eed2faa16ab7eeb43fb951add4",
       "newsId": "SUBC.OL:25877947b4672b4e96cb5521cc17f81710a4398122e79790b23bf597e57ed5c6",
-      "entityIds": [],
+      "entityIds": [
+        "subsea7"
+      ],
       "issuerTicker": "SUBC.OL",
       "candidateType": "headline_event",
       "published": "2026-11-16T06:52:37Z",
@@ -487,28 +517,39 @@
       "amount": null
     },
     {
-      "id": "71615926086d744d947b77fcb73d11b396767ce368c605fb8de3ac7e53d9b5af",
+      "id": "844771b2532de46ccdd047f0a97c1614540e6f0de0604c58fbe989ac0055497b",
       "newsId": "DOFG.OL:6fd661ab3b7d95adc3cc68fc3476b2b96592b9aa8f76d01d3fac68705ed218c3",
-      "entityIds": [],
+      "entityIds": [
+        "amplitude-energy",
+        "dof"
+      ],
       "issuerTicker": "DOFG.OL",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-16T08:39:49Z",
       "sourceUrl": "https://newsweb.oslobors.no/message/686559",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "dof-amplitude-surf"
+      ]
     },
     {
-      "id": "539a025aaca20e8251c137d5adb6d5d2091596ae8064106867d3c3199ac8b1fc",
+      "id": "9d598a0da5ea1a4bde750739434bb298faf7ad5ab3c8406cfa19226dd4f51e54",
       "newsId": "SUBC.OL:08a0576b1b7ea3e1f5bf59f3618195b3ade0e755591d61dd553f58cd0eae8cb4",
-      "entityIds": [],
+      "entityIds": [
+        "subsea7"
+      ],
       "issuerTicker": "SUBC.OL",
       "candidateType": "headline_event",
       "published": "2026-11-16T10:41:26Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTnVnNnJScG1kb0toN0dmdGdjZllzbFhpbUZVOTBWblg0cHBERG9BeWZRc0FZZ2EwWmM2UXJGcFNsRlZ6LUFVVDhmMGVseEl3QXplMmtrUDJhVHpOS015SGlndTFVaWlkNmp2LUdRR1BHbnd3bkJmdWtSczR5WEd6VlZiS1VzakVDQ3hJb1lhVG11M2ZPZmVzbS11Tkp0NzVLTC11dVQ2NGRpeDVRbmdWTkdn?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "subsea7-kosmos-tiberius"
+      ]
     },
     {
       "id": "764384f567d9f145f51cb2bfed802866d06c6ee717d5936be168e033ba442a88",
@@ -551,16 +592,22 @@
       "amount": null
     },
     {
-      "id": "f6d210f7c3d00cdf6c1f7bb09a81928659339e5b5df0747b6ff301f2643cc4a9",
+      "id": "a1ee30469fba67ece9df2142f9f00edfc10f2e1cc90669763da851cbce874218",
       "newsId": "IFX.DE:d240e0b8588683c20c817e84ccc5f7a08cec360341aa177c214c90ce79b0736a",
-      "entityIds": [],
+      "entityIds": [
+        "infineon",
+        "vertiv"
+      ],
       "issuerTicker": "IFX.DE",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-16T11:33:48Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORVUyazFTTDhOSWp1dzJ5UFRjWjRHRnd2VnpaRk1zWm9Ta2xRNGltRkVleDA0OFJOSG9sZGVMNmI5Qm5jNWdrSV9EU3UwU2JRa0hGYzFhNXJtUUdrbGNWd1A0eW5BYm00Z3d6UEFmWWIwNGpXY0I4TXlDMVc4bWh2eTRvbEJpWXF6NlE2ZjJtQ2tUVVZKTkNXWGhnRHkyNmRJVTJPQVlVTVJ3NTV2cWJUSU4wWlgxY0hnU3o3anN5UQ?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "infineon-vertiv-power"
+      ]
     },
     {
       "id": "13f8e6427723583cf1322c6878654c58080572fcf913ce47fff13b1515cfce9f",
@@ -605,9 +652,11 @@
       "amount": null
     },
     {
-      "id": "81133eed3ddc65b6468b22d884161b57b0f27e47413bcb8662b8aafdc7ae5e7d",
+      "id": "ba6970461303c9507b23ad8c3edd2229a723a52e42c3d7ac19d7bf06758afb47",
       "newsId": "DOFG.OL:640a8d435a9bfd35492c9dd63e05a74ee4a6a364ab7c8c3e8d82bce15a05f81f",
-      "entityIds": [],
+      "entityIds": [
+        "dof"
+      ],
       "issuerTicker": "DOFG.OL",
       "candidateType": "headline_event",
       "published": "2026-11-16T13:21:32Z",
@@ -659,9 +708,11 @@
       "amount": null
     },
     {
-      "id": "20bfbdac02e07c5b250d8d7596aca920bd913dfa29e9d380f98423636bf5d3fc",
+      "id": "9313dec0b1eb2e347cdb16a35cfa0dd0d2bb262eb97c3b48e276f4ab1fd71b7c",
       "newsId": "DOFG.OL:78213fe26512e2cb03fc08c93623516b0bc38a883e32bf9bfcc7618897e12ea1",
-      "entityIds": [],
+      "entityIds": [
+        "dof"
+      ],
       "issuerTicker": "DOFG.OL",
       "candidateType": "headline_event",
       "published": "2026-11-16T16:06:45Z",
@@ -685,18 +736,22 @@
       "amount": null
     },
     {
-      "id": "b209409301aeb9f99c8fe4e389fff2f36b61af6760bd101db79c1393d30db660",
+      "id": "88bf56d97c8a6cc5b0d7a526b57fb0194241409b0248d3ce29239e860f979109",
       "newsId": "AIR.PA:8d6b84c7728cc783968525b33d072fb7c735b4a3c4595012589fe7f077a9db08",
       "entityIds": [
-        "airbus"
+        "airbus",
+        "life-flight"
       ],
       "issuerTicker": "AIR.PA",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-16T17:50:26Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWWJUUTIteXpfbEhTbDdjOEdCWk1YVFBiVXo3WDgyYXZncjRmc2x3OTNnV1I5UEhKaDl3d2tsNlZncnBib1piRUtNc2xfbnJnR00wWkdvRktKeFdaUVFmd2h1Ni1aNVUxM3REcXpkRmdiWkpBb3FMTVkyVVR3RXRORF9TYW9rVy0yOTNUZUNibjIwZUJkbS1ObG14WEFEWFhYQzB0QVJRVjhBNl8yWFZkVnN3TQ?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "airbus-life-flight-h135"
+      ]
     },
     {
       "id": "b15f4b6fff20761f6fc44a37a020eff9b65be63abb10202d9dc55bcf00bc5cb0",
@@ -779,16 +834,21 @@
       "amount": null
     },
     {
-      "id": "772208b3961f52dcdf957523263a929af0b75bd4a108d033013725263b834e94",
+      "id": "fc8633302f1fb488df4eaec85a0722b24875b4b3097eeff92361b2b2bf54acd1",
       "newsId": "SKA-B.ST:caacc41e2ed626b1eee815a8eb8e6964c5c7b8af43cc2705d0a7f916dacfd3ea",
-      "entityIds": [],
+      "entityIds": [
+        "fastpartner"
+      ],
       "issuerTicker": "SKA-B.ST",
       "candidateType": "headline_event",
       "published": "2026-11-16T21:00:32Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTFNpcEF1bENOUnZtRlRtZkJRYzB0S1VpTzlVTm1wVXF2NnZGNDJob0I3OGxrc0diOHUwOU0weUVuTzdoc3RFQ1NBMWtpV3FBdmJkOC0xZGItemsyNHVha1lZTDlhR3FPSW9RUkJtVC1QSTdGaGtUVVk5a2pXcU5laHAwTjFsaVN6S2pESW42ZzZ1X2JZU2lBYzZ1ZllwT3B2RjFhUmNESjE3cjlnck5kMFlERTJfcVBZdzJlZEN0cFdJcVB1LU90VQ?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "skanska-land-fastpartner-properties"
+      ]
     },
     {
       "id": "70789392eb6455ca53524a4cba67efd38082f797f3d3f802e316e602a669411c",
@@ -853,9 +913,11 @@
       "amount": null
     },
     {
-      "id": "63e44b3528639f8159501427e278f2239b2b05ae6651c8a003e1dbb29cb5c85b",
+      "id": "8a098fb87fadf50beae7129068cb4553fb7759d512f607919afdf79149f9ffbf",
       "newsId": "DOFG.OL:b180a38fb79e358aae71709e049b648de98cf805ed90e60127b7fbdb4da66fb1",
-      "entityIds": [],
+      "entityIds": [
+        "dof"
+      ],
       "issuerTicker": "DOFG.OL",
       "candidateType": "headline_event",
       "published": "2026-11-17T06:13:05Z",
@@ -903,11 +965,14 @@
       "amount": null
     },
     {
-      "id": "a9d0f53aa91809e25f85e13774c825825c26d2a4630334eec88444a8510ef302",
+      "id": "296f6b12ae0c7a734208027cea3ef62079250ff43d5158a72b37d0bc61956a27",
       "newsId": "IFX.DE:4addfe93363175da0ca677a61249f748ccad5b6d5298eb4d2212c9928b1504cb",
-      "entityIds": [],
+      "entityIds": [
+        "infineon",
+        "vertiv"
+      ],
       "issuerTicker": "IFX.DE",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-17T08:35:00Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZUU3bjcya19XSllYQUl1emkzTDhlMThiM3ZhbzFwQTNwb1MtVHFIZVVoSE81QUxNZERrZ0hoeWhSOFVuNXRIWGNZamZDN0IxOFpwdXU1Z3REcE51VW8wT2wxbHdjMmVDX0FWLUxqTE9OQUhYVW5kTG5XdHJkSXBkNzlHcHA1OTFkM2NuVGxtWWdqaGFVM0VuNE81Snc3SG9qVkNZaDlsWHdIRDVzbDJWbGxhUkRFWGNtSVZMT1M1QkF1S0I0MUtvdEppWnV5eXJxNUhwNXpUVV9uSTIz?oc=5",
       "status": "review_required",
@@ -991,16 +1056,22 @@
       "amount": null
     },
     {
-      "id": "9d0c1e673c293a2829874e5fb659ff011e3191daae1be3a2e7e190a87181363d",
+      "id": "ab29e281e05c716bbc5c1e00505e96606a63408daaa9e637542c8e4d577fc092",
       "newsId": "SIE.DE:cd65f651f56d70526313509700c4721f8106695263eb0d30c6c5e8ed1e3bc455",
-      "entityIds": [],
+      "entityIds": [
+        "breker",
+        "siemens"
+      ],
       "issuerTicker": "SIE.DE",
-      "candidateType": "headline_event",
+      "candidateType": "co_mention",
       "published": "2026-11-17T14:07:50Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9XZVlHVkZqVmY0MnFQbWdlNkZCMC1RdGgxX1lMYlY5UjZ1VEJzR1pxOFlGaEdmc2JzV0d1bVoxZEJHNVM2N2RQVzBTZ01kNDEybm82MGh6RDF2LVpUVlBwNFlwVThSNGJYN1FDZHBUTjlFb0djbmpV?oc=5",
-      "status": "review_required",
+      "status": "related_evidence_recorded",
       "relationshipVerified": false,
-      "amount": null
+      "amount": null,
+      "relatedRelationshipIds": [
+        "siemens-breker-acquisition"
+      ]
     },
     {
       "id": "c692310ac234616ca0194338b0d533449ba9edaaf84c99a3d249f5d06b2106ab",
@@ -1027,9 +1098,11 @@
       "amount": null
     },
     {
-      "id": "b70a5edfb2b60233a9c22a478214cdfc9564c8d4cc6e104fe359a4cd69ef4716",
+      "id": "4a3ebae06c41444d1d26bab8e5a7595f11ad86d97172f6beb9ca5a1d69f48a35",
       "newsId": "SIE.DE:d7ff20a30d0b4405e72517f9a5c65b9a5fe6bb3fb87eb145f26e8b589f6fc3ff",
-      "entityIds": [],
+      "entityIds": [
+        "siemens"
+      ],
       "issuerTicker": "SIE.DE",
       "candidateType": "headline_event",
       "published": "2026-11-17T15:45:00Z",
@@ -1101,5 +1174,5 @@
       "amount": null
     }
   ],
-  "relatedEvidenceLeadCount": 2
+  "relatedEvidenceLeadCount": 10
 }
