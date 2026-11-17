@@ -27,6 +27,9 @@ async function mount({root,companies,universe,signals,context,licensedPrices,fun
  root.append(host);
  const symbolRows=new Map(universe.map(r=>[r.ticker,r]));
  const data=await Promise.allSettled([get('data/open-data.json'),get('data/economic-feeds.json'),get('data/research-product-catalog.json')]);
+ const officialPromise=()=>get('data/free-research.json');
+ let officialData=null,officialLoad=null;
+ function loadOfficial(){if(!officialLoad)officialLoad=officialPromise().then(d=>{officialData=d;return d}).catch(()=>{officialLoad=null;return null});return officialLoad}
  const macro=data.slice(0,2).flatMap(x=>x.status==='fulfilled'?x.value.series||[]:[]).filter(x=>x.key&&safe(x.sourceUrl)&&A.clean(x.history).length>=2);
  const catalog=data[2].status==='fulfilled'?data[2].value:null;
  const series=new Map(macro.map(x=>[x.key,{label:x.label+' · '+(x.country||''),unit:x.unit,source:x.sourceUrl,license:x.license,points:A.clean(x.history),type:'macro',frequency:x.frequency}]));
@@ -37,8 +40,8 @@ async function mount({root,companies,universe,signals,context,licensedPrices,fun
  const refs=universe.map(r=>'<option value="'+E(r.ticker)+'">'+E(r.name+' · '+(r.symbol||r.ticker))+'</option>').join('');
  const selected=()=>root.querySelector('#terminalEquities tr.selected [data-terminal-ticker]')?.dataset.terminalTicker||'';
  const saved=store('stockwatch-lab-v45',{});let alerts=Array.isArray(saved.alerts)?saved.alerts.filter(a=>symbolRows.has(a.ticker)&&num(a.threshold)&&['close','change'].includes(a.metric)&&['above','below'].includes(a.direction)).slice(0,100):[];
- const views=['Heatmap & screener','Chart lab','Financials & valuation','A/B & correlations','News & intelligence','Alerts & data'];
- let view=Number.isInteger(saved.view)&&saved.view>=0&&saved.view<views.length?saved.view:0;
+ const views=['Heatmap & screener','Chart lab','Financials & valuation','A/B & correlations','News & intelligence','Alerts & data','Official datasets'];
+ let view=new URLSearchParams(location.search).get('research')==='official'?6:Number.isInteger(saved.view)&&saved.view>=0&&saved.view<views.length?saved.view:0;
  host.innerHTML='<div class="sw-lab-head"><div><span class="sw-ws-eyebrow">ADVANCED RESEARCH</span><h2>Research lab</h2></div><label>Workspace layout <select id="labLayout"><option value="balanced">Balanced</option><option value="chart">Chart focus</option><option value="equity">Equity focus</option></select></label></div><div role="tablist" aria-label="Research tools" class="sw-lab-tabs">'+views.map((v,i)=>'<button role="tab" class="sw-soft-btn" data-lab-tab="'+i+'" aria-controls="labView">'+E(v)+'</button>').join('')+'</div><div id="labView" role="tabpanel" class="sw-lab-content"></div>';
  const $=id=>host.querySelector('#'+id),layout=root.querySelector('.sw-terminal-layout');
  let layoutMode=['balanced','chart','equity'].includes(saved.layout)?saved.layout:'balanced';
@@ -51,7 +54,7 @@ async function mount({root,companies,universe,signals,context,licensedPrices,fun
  const width=()=>{layout.style.setProperty('--lab-center',range.value/10+'fr')};width();range.oninput=()=>{width();persist()};
  function draw(){
   host.querySelectorAll('[data-lab-tab]').forEach(b=>{const active=+b.dataset.labTab===view;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active))});
-  if(view===0)heat();if(view===1)charts();if(view===2)valuation();if(view===3)pairs();if(view===4)news();if(view===5)tools();
+  if(view===0)heat();if(view===1)charts();if(view===2)valuation();if(view===3)pairs();if(view===4)news();if(view===5)tools();if(view===6)official();
  }
  host.querySelectorAll('[data-lab-tab]').forEach(b=>b.onclick=()=>{view=+b.dataset.labTab;persist();draw()});
  function heat(){
@@ -83,11 +86,54 @@ async function mount({root,companies,universe,signals,context,licensedPrices,fun
   $('labPairA').onchange=()=>{ $('labBackGraph').replaceChildren();$('labBackResult').textContent='';paint()};$('labPairB').onchange=paint;paint();
   $('labBacktest').onclick=async()=>{const key=$('labPairA').value,s=await obtain(key);if(!$('labBackResult')||$('labPairA').value!==key)return;if(!s||s.type!=='equity'){$('labBackGraph').replaceChildren();$('labBackResult').textContent='Authorized equity history required; macro data is not an executable equity price.';return}const cost=$('labCost').value.trim()===''?.1:Number($('labCost').value);const r=A.backtest(s.points,20,cost);$('labBackResult').textContent=r?'Strategy '+P(r.strategy*100)+' · benchmark '+P(r.benchmark*100)+' · '+r.trades+' position changes. '+r.notice:'Insufficient or invalid history / cost.';if(r)graph($('labBackGraph'),['strategy','benchmark'].map(k=>({label:k,points:r.curve.map(p=>({date:p.date,value:p[k]}))})),'Illustrative backtest')}
  }
+ function driverPanel(r){const model=A.economicDrivers(r,intelligence);if(!model)return '<h3>Economic drivers</h3><p class="sw-meta">No reviewed sector research profile yet.</p>';return '<h3>Economic drivers</h3><p class="sw-meta">Editorial research hypotheses · not measured company exposure or a price forecast.</p>'+ (model.note?'<p>'+E(model.note)+'</p>':'')+model.drivers.map(d=>'<div class="sw-lab-evidence"><small>'+E(d.category)+'</small><b>'+E(d.label)+'</b><p>'+E(d.question)+'</p>'+d.contextDatasets.map(x=>'<p>Context only: '+E(x.label)+' · '+E(x.source)+'</p>').join('')+'<small>Evidence needed: '+E(d.missing)+'</small></div>').join('')}
  function news(){
   $('labView').innerHTML='<div class="sw-lab-controls"><label>Headline category<select id="labNewsClass"><option value="all">Relevant / review</option><option>filing</option><option>financial results</option><option>capital &amp; transactions</option><option>operations</option><option>review</option></select></label><label>Company context<select id="labContext">'+refs+'</select></label></div><div class="sw-lab-chartgrid"><div id="labNewsList"></div><div id="labContextBox"></div></div><p class="sw-meta">Rule-based headline classifier, not verified event attribution or investment analysis. Editorial sector links do not establish measured company exposure.</p>';
-  if(selected())$('labContext').value=selected();function paint(){const id=$('labContext').value,r=symbolRows.get(id),cat=$('labNewsClass').value,seen=new Set(),all=[...(signals?.alerts||[]).filter(s=>s.ticker===id),...(r?.stories||[])];$('labNewsList').innerHTML=all.filter(s=>safe(s.url)&&A.classify(s)!=='irrelevant'&&(cat==='all'||cat===A.classify(s))&&!seen.has(s.url)&&seen.add(s.url)).slice(0,30).map(s=>'<a class="sw-terminal-news" href="'+E(safe(s.url))+'" target="_blank" rel="noopener noreferrer"><small>'+E(A.classify(s))+' · '+E(s.publisher||'')+'</small><b>'+E(s.english||s.headline)+'</b><small>'+E(s.published||'')+'</small></a>').join('')||'No matching headlines.';const rules=(intelligence?.rules||[]).filter(x=>x.sectors.includes(r?.sector)),ds=new Map((intelligence?.datasets||[]).map(x=>[x.id,x]));$('labContextBox').innerHTML='<h3>Connected research context</h3>'+rules.map(x=>'<h4>'+E(x.label)+'</h4><p>'+E(x.reason)+'</p>'+x.datasets.map(k=>ds.get(k)).filter(Boolean).map(d=>'<p>'+E(d.label)+' · '+E(d.source)+'</p>').join('')).join('')+'<a class="sw-textlink" href="intelligence.html?ticker='+encodeURIComponent(id)+'">Full intelligence graph ↗</a>'}
+  if(selected())$('labContext').value=selected();function paint(){const id=$('labContext').value,r=symbolRows.get(id),cat=$('labNewsClass').value,seen=new Set(),all=[...(signals?.alerts||[]).filter(s=>s.ticker===id),...(r?.stories||[])];$('labNewsList').innerHTML=all.filter(s=>safe(s.url)&&A.classify(s)!=='irrelevant'&&(cat==='all'||cat===A.classify(s))&&!seen.has(s.url)&&seen.add(s.url)).slice(0,30).map(s=>'<a class="sw-terminal-news" href="'+E(safe(s.url))+'" target="_blank" rel="noopener noreferrer"><small>'+E(A.classify(s))+' · '+E(s.publisher||'')+'</small><b>'+E(s.english||s.headline)+'</b><small>'+E(s.published||'')+'</small></a>').join('')||'No matching headlines.';const rules=(intelligence?.rules||[]).filter(x=>x.sectors.includes(r?.sector)),ds=new Map((intelligence?.datasets||[]).map(x=>[x.id,x]));$('labContextBox').innerHTML='<h3>Connected research context</h3>'+rules.map(x=>'<h4>'+E(x.label)+'</h4><p>'+E(x.reason)+'</p>'+x.datasets.map(k=>ds.get(k)).filter(Boolean).map(d=>'<p>'+E(d.label)+' · '+E(d.source)+'</p>').join('')).join('') +driverPanel(r)+'<a class="sw-textlink" href="intelligence.html?ticker='+encodeURIComponent(id)+'">Full intelligence graph ↗</a>'}
   $('labContext').onchange=paint;$('labNewsClass').onchange=paint;paint();
  }
+
+ async function official(){
+  const panel=$('labView');
+  panel.innerHTML='<h3>Official data explorer</h3><p class="sw-meta">Published observations, filing facts and physical assets. Collection time is not the observation date; original units and statistical dimensions are preserved.</p><div id="labOfficialStatus" role="status">Loading official datasets…</div>';
+  const data=await loadOfficial();
+  if(view!==6||!$('labOfficialStatus'))return;
+  const datasets=(Array.isArray(data?.datasets)?data.datasets:[]).filter(x=>A.officialDatasetSummary(x));
+  if(!datasets.length){$('labOfficialStatus').textContent='No official dataset snapshot available. Check the source refresh.';return}
+  panel.innerHTML='<h3>Official data explorer</h3><p class="sw-meta">Published observations, as-filed facts and physical assets. No inferred trading prices. Missing or stale datasets remain labelled.</p><div class="sw-lab-controls"><label>Dataset <select id="labOfficialSelect">'+datasets.map(d=>'<option value="'+E(d.id)+'">'+E(d.title||d.id)+' · '+E(d.status)+' ('+F(d.records.length,0)+')</option>').join('')+'</select></label><label>Filter rows <input id="labOfficialSearch" type="search" placeholder="Country, period, field or measure"></label></div><div id="labOfficialMeta"></div><div id="labOfficialFilters"></div><div id="labOfficialRows"></div><div class="sw-lab-controls"><button type="button" class="sw-soft-btn" id="labOfficialPrev">Previous</button><span id="labOfficialPage" role="status"></span><button type="button" class="sw-soft-btn" id="labOfficialNext">Next</button></div>';
+  let page=0;
+  const current=()=>datasets.find(d=>d.id===$('labOfficialSelect').value);
+  function select(){
+   page=0;$('labOfficialSearch').value='';
+   const d=current(),m=A.officialDatasetSummary(d),src=safe(d.sourceUrl),terms=safe(d.termsUrl);
+   $('labOfficialMeta').innerHTML='<p><b>'+E(d.provider)+' · '+E(m.state)+'</b> · '+F(m.count,0)+' records</p><p class="sw-meta">Retrieved: '+E(m.retrievedAt||'Not available')+' · '+E(d.license||'Rights not documented')+'</p><p>'+E(d.notice||'')+'</p>'+(src?'<a href="'+E(src)+'" target="_blank" rel="noopener noreferrer">Source ↗</a> ':'')+(terms?'<a href="'+E(terms)+'" target="_blank" rel="noopener noreferrer">Terms ↗</a>':'');
+   const filters=$('labOfficialFilters');filters.replaceChildren();
+   if(d.id==='sec-nvda'&&m.available){
+    const tags=[...new Set(d.records.map(x=>x.tag).filter(x=>typeof x==='string'))].sort();
+    filters.innerHTML='<h4>NVIDIA · SEC filing history</h4><p class="sw-meta">As-filed facts including restatements; annual, quarterly and year-to-date periods remain distinct. No automatic TTM or valuation inputs.</p><div class="sw-lab-controls"><label>Reported metric <select id="labOfficialTag">'+tags.map(x=>'<option>'+E(x)+'</option>').join('')+'</select></label><label>Unit <select id="labOfficialUnit"></select></label></div>';
+    function units(){const tag=$('labOfficialTag').value;$('labOfficialUnit').innerHTML=[...new Set(d.records.filter(x=>x.tag===tag).map(x=>x.unit))].map(x=>'<option>'+E(x)+'</option>').join('');page=0;paint()}
+    if(tags.includes('RevenueFromContractWithCustomerExcludingAssessedTax'))$('labOfficialTag').value='RevenueFromContractWithCustomerExcludingAssessedTax';
+    $('labOfficialTag').onchange=units;$('labOfficialUnit').onchange=()=>{page=0;paint()};units();
+   }else paint();
+  }
+  function paint(){
+   const d=current(),m=A.officialDatasetSummary(d);
+   const q=$('labOfficialSearch').value.trim().toLowerCase();
+   let rows=m.available?d.records:[];
+   const filing=$('labOfficialTag');
+   if(filing)rows=A.filingRows(d,filing.value,$('labOfficialUnit').value);
+   if(q)rows=rows.filter(x=>JSON.stringify(x).toLowerCase().includes(q));
+   const count=rows.length,limit=25;page=Math.max(0,Math.min(page,Math.max(0,Math.ceil(count/limit)-1)));
+   const subset=rows.slice(page*limit,(page+1)*limit);
+   const cell=v=>v===null||v===undefined?'—':typeof v==='number'?F(v,6):typeof v==='object'?JSON.stringify(v):String(v);
+   if(filing){$('labOfficialRows').innerHTML=tbl(['Period start','Period end','Filed','Form','Reported value','Accession'],subset.map(x=>'<tr>'+[x.periodStart,x.periodEnd,x.filed,x.form,x.value].map(v=>'<td>'+E(cell(v))+'</td>').join('')+'<td>'+(safe(x.sourceUrl)?'<a href="'+E(safe(x.sourceUrl))+'" target="_blank" rel="noopener noreferrer">'+E(x.accession)+'</a>':E(x.accession))+'</td></tr>'))}
+   else{const flatten=x=>x.coordinates?{...x.coordinates,value:x.value,status:x.status}:x.fields?{table:x.table,...x.fields}:x;const flat=subset.map(flatten),keys=[...new Set(flat.flatMap(x=>Object.keys(x)))].slice(0,32);$('labOfficialRows').innerHTML=flat.length?tbl(keys,flat.map(x=>'<tr>'+keys.map(k=>'<td>'+E(cell(x[k]))+'</td>').join('')+'</tr>')):'<p class="sw-note">No matching observations available.</p>'}
+   $('labOfficialPage').textContent=count?((page*limit+1)+'–'+Math.min(count,(page+1)*limit)+' of '+count):'0 records';
+   $('labOfficialPrev').disabled=page===0;$('labOfficialNext').disabled=(page+1)*limit>=count;
+  }
+  $('labOfficialSelect').onchange=select;$('labOfficialSearch').oninput=()=>{page=0;paint()};$('labOfficialPrev').onclick=()=>{page--;paint()};$('labOfficialNext').onclick=()=>{page++;paint()};select();
+ }
+
  function tools(){
   $('labView').innerHTML='<h3>Local snapshot alerts</h3><div class="sw-lab-controls"><label>Instrument<select id="labAlertTicker">'+refs+'</select></label><label>Metric<select id="labAlertMetric"><option value="close">Observed close</option><option value="change">Daily change %</option></select></label><label>Condition<select id="labAlertDirection"><option value="above">At or above</option><option value="below">At or below</option></select></label>'+input('labAlertValue','Threshold')+'<button type="button" class="sw-primary" id="labAddAlert">Save alert</button></div><div id="labAlerts"></div><p class="sw-meta">Evaluated against the snapshot on this page only. No background notifications or real-time promise.</p><h3>Dataset discovery</h3><div class="sw-lab-controls"><input type="search" id="labAsk" placeholder="Search datasets e.g. oil, FX, shipping" aria-label="Search research datasets"><button class="sw-soft-btn" id="labFind">Find evidence</button><button class="sw-soft-btn" id="labExport">Export catalog metadata CSV</button><a class="sw-soft-btn" href="data/research-product-catalog.json">JSON catalog ↗</a></div><div id="labEvidence"></div><p class="sw-meta">Local keyword search, not a generative AI assistant. Catalog metadata only; no raw private or restricted price export.</p>';
   if(selected())$('labAlertTicker').value=selected();

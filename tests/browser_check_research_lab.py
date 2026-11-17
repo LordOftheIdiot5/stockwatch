@@ -10,6 +10,8 @@ def main():
    for w in (1600,390):
     page=browser.new_page(viewport={"width":w,"height":940})
     errors=[];page.on("pageerror",lambda e:errors.append(str(e)))
+    # Deterministic mocked official dataset: no dependency on a live refresh.
+    page.route("**/data/free-research.json",lambda route:route.fulfill(json={"datasets":[{"id":"sec-nvda","cik":"0001045810","status":"ok","provider":"sec","license":"Test fixture","records":[{"tag":"Revenues","unit":"USD","value":10,"periodStart":"2025-01-01","periodEnd":"2025-03-31","filed":"2025-05-01","accession":"0001045810-25-000001","form":"10-Q"}]}]}))
     page.goto(f"http://127.0.0.1:{server.server_port}/terminal.html")
     page.locator("#labHeat .sw-lab-tiles a").first.wait_for()
     page.locator("#labMinMove").fill("2")
@@ -32,6 +34,14 @@ def main():
     page.locator("[data-lab-tab='4']").click()
     page.locator("#labContext").select_option("NOVO-B.CO")
     assert "Connected research context" in page.locator("#labContextBox").inner_text()
+    assert "Evidence needed" in page.locator("#labContextBox").inner_text()
+    page.locator("#labContext").select_option("VOLV-B.ST")
+    assert "truck registrations" in page.locator("#labContextBox").inner_text()
+    assert "not car freight rates" in page.locator("#labContextBox").inner_text()
+    page.locator("[data-lab-tab='6']").click()
+    page.locator("#labOfficialSelect").wait_for()
+    assert "NVIDIA" in page.locator("#labOfficialFilters").inner_text()
+    assert "2025-03-31" in page.locator("#labOfficialRows").inner_text()
     page.locator("[data-lab-tab='5']").click()
     page.locator("#labAlertTicker").select_option("NOVO-B.CO")
     page.locator("#labAlertValue").fill("1")

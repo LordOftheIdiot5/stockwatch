@@ -25,7 +25,12 @@ test('multiple or stale candidates not promoted to identity edges',()=>{
 test('configured datasets point to real repository series',()=>{
  for(const d of rules.datasets){
   const data=JSON.parse(fs.readFileSync(new URL('../'+d.file,import.meta.url),'utf8'));
-  assert.ok(Array.isArray(data.series),d.id);
-  if(d.key)assert.ok(data.series.some(s=>s.key===d.key),d.id);
+  if(d.file==='data/free-research.json'){
+   assert.ok(Array.isArray(data.datasets),d.id);
+   assert.ok(data.datasets.some(s=>s.id===d.key&&Array.isArray(s.records)),d.id);
+  }else{
+   assert.ok(Array.isArray(data.series),d.id);
+   if(d.key)assert.ok(data.series.some(s=>s.key===d.key),d.id);
+  }
  }
 });

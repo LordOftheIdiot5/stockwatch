@@ -18,6 +18,20 @@ function classify(s){const h=(s.english||s.headline||'').toLowerCase();if(s.regu
 function alertMatches(r,a){if(!r||!a||r.referenceOnly||r.unavailable||!finite(a.threshold)||!['above','below'].includes(a.direction))return false;if(a.metric==='close')return finite(r.close)&&(a.direction==='above'?r.close>=a.threshold:r.close<=a.threshold);if(a.metric==='change')return finite(r.changePct)&&(a.direction==='above'?r.changePct>=a.threshold:r.changePct<=a.threshold);return false}
 function csv(rows,fields){const cell=v=>{let s=String(v??'');if(/^[\s\u0000-\u001f]*[=+\-@]/.test(s)&&typeof v!=='number')s="'"+s;return '"'+s.replace(/"/g,'""')+'"'};return [fields.map(cell).join(','),...rows.map(r=>fields.map(k=>cell(r[k])).join(','))].join('\r\n')+'\r\n'}
 function backtest(a,n=20,costPct=.1){const p=clean(a);if(p.some(x=>x.value<=0)||!Number.isInteger(n)||n<2||!finite(costPct)||costPct<0||costPct>5||p.length<n+2)return null;const avg=new Map(sma(p,n).map(x=>[x.date,x.value]));let nav=1,benchmark=1,hold=false,trades=0,curve=[];for(let i=n;i<p.length;i++){const prev=p[i-1],cur=p[i],next=prev.value>avg.get(prev.date);if(next!==hold){nav*=1-costPct/100;hold=next;trades++}const r=cur.value/prev.value;if(hold)nav*=r;benchmark*=r;curve.push({date:cur.date,strategy:nav*100,benchmark:benchmark*100})}return {curve,trades,strategy:nav-1,benchmark:benchmark-1,notice:'Illustrative close-to-close signal from previous observation; no intraday fills, taxes, dividends or execution guarantee.'}}
-const api={clean,sma,ema,rsi,macd,bollinger,alignedReturns,correlation,valuation,pairStats,screen,classify,alertMatches,csv,backtest};
+function economicDrivers(row,context){const profiles=context?.driverProfiles||[],override=(context?.driverIssuerOverrides||[]).find(x=>x.ticker===row?.ticker),profile=override?profiles.find(x=>x.id===override.profileId):profiles.find(x=>x.sectors.includes(row?.sector));if(!profile)return null;const ds=new Map((context?.datasets||[]).map(x=>[x.id,x]));return {profileId:profile.id,scope:'editorial research hypothesis',note:override?.note||'',drivers:profile.drivers.map(d=>({...d,contextDatasets:d.datasetIds.map(k=>ds.get(k)).filter(Boolean)}))}}
+
+function officialDatasetSummary(dataset){
+ if(!dataset||typeof dataset.id!=='string'||!Array.isArray(dataset.records))return null;
+ const state=['ok','stale','unavailable'].includes(dataset.status)?dataset.status:'unknown';
+ const n=dataset.records.length;
+ return {id:dataset.id,state,count:n,available:n>0&&['ok','stale'].includes(state),retrievedAt:typeof dataset.retrievedAt==='string'?dataset.retrievedAt:null,checkedAt:dataset.checkedAt||null};
+}
+// Keep accession, unit and start/end period; never collapse annual, YTD and quarterly facts.
+function filingRows(dataset,tag,unit){
+ if(dataset?.id!=='sec-nvda'||dataset.cik!=='0001045810'||!officialDatasetSummary(dataset)?.available)return [];
+ return dataset.records.filter(x=>x&&x.tag===tag&&x.unit===unit&&finite(x.value)&&dateOK(x.periodEnd)&&dateOK(x.filed)&&x.periodEnd<=x.filed&&(!x.periodStart||(dateOK(x.periodStart)&&x.periodStart<=x.periodEnd))&&/^\d{10}-\d{2}-\d{6}$/.test(x.accession||'')).slice().sort((a,b)=>b.periodEnd.localeCompare(a.periodEnd)||b.filed.localeCompare(a.filed)||a.accession.localeCompare(b.accession));
+}
+
+const api={officialDatasetSummary,filingRows,economicDrivers,clean,sma,ema,rsi,macd,bollinger,alignedReturns,correlation,valuation,pairStats,screen,classify,alertMatches,csv,backtest};
 if(typeof module==='object'&&module.exports)module.exports=api;else global.StockwatchAnalytics=api;
 })(typeof window!=='undefined'?window:{});
