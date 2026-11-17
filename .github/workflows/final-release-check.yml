@@ -104,6 +104,10 @@ jobs:
         run: |
           node --check brand/data-portal.js
           node --test tests/test_data_portal_v58.mjs
+      - name: V59 saved workspace settings tests
+        run: |
+          node --check workspaces-v59.js
+          node --test tests/test_workspaces_v59.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js

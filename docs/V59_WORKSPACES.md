@@ -1,0 +1,2 @@
+# V59 — named browser workspaces
+Save up to 30 named combinations of watchlist, selected listing, sector, series, date range, layout, focus mode and width. Load and delete with explicit confirmation for replacement/deletion, export/import settings-only JSON, validate and clamp inputs, no credentials or prices. Only names not already present are imported. Not cloud accounts/synchronization. Chart drawings and zoom window are not persisted by this increment.
