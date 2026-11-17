@@ -162,14 +162,16 @@ jobs:
           path: workspace-previews/v50-*.png
           if-no-files-found: ignore
       - name: V51 screener browser checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-v51-') || startsWith(github.head_ref, 'feature/stockwatch-v60-') || startsWith(github.head_ref, 'feature/stockwatch-v52-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v51-') || startsWith(github.head_ref, 'feature/stockwatch-v60-') || startsWith(github.head_ref, 'feature/stockwatch-v52-') || startsWith(github.head_ref, 'feature/stockwatch-v68-')
         run: python tests/browser_check_screener_v51.py
       - name: Upload V51 screener previews
-        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v51-')
+        if: always() && (startsWith(github.head_ref, 'feature/stockwatch-v51-') || startsWith(github.head_ref, 'feature/stockwatch-v68-'))
         uses: actions/upload-artifact@v5
         with:
           name: stockwatch-v51-screener
-          path: workspace-previews/v51-*.png
+          path: |
+            workspace-previews/v51-*.png
+            workspace-previews/v68-*.png
           if-no-files-found: ignore
       - name: V52 synchronized terminal browser checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v52-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
