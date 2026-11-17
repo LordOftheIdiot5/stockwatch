@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:43:31Z",
+  "generated": "2026-11-17T19:54:54Z",
   "items": [
     {
       "id": "DOFG.OL:24ad891d8351cbcfb154a9fc27f0fa86ec311a1281bca0dc8e4a061d2a95c072",
@@ -1867,6 +1867,25 @@
       "priority": "normal"
     },
     {
+      "id": "TKMS.DE:6da8d3aa40cb234f1cc37bf8239cf48299a252c727b0ff65806af820c41f87a6",
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "TKMS får tysk tilläggsorder på fyra fregatter",
+      "english": null,
+      "publisher": "Börsvärlden",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOUVPUm8wREJubWwyYk1RU09qSlYyYXE4YnhGRE5SdjFvNUZMYjJpMk1uTEFJS2xaS3A3U0pGbG9uZDQwR09QVkJSZTJURExOU2JGZGk2QTdoenFSVDVBSWs0QmVIZVdfTkFmZEFWVVNFZWR3dVY0ZF9SMDF2Ym1mUTdncmY?oc=5",
+      "published": "2026-11-17T10:49:00Z",
+      "lang": "sv",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "SAP.DE:0799efdddb9b1b1e58ae63167016fafddb7aadfd7aa1c19dad3fa27e7fc4b08a",
       "ticker": "SAP.DE",
       "name": "SAP",
@@ -1884,32 +1903,13 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SIE.DE:2dca64c17fb048fb5d5183262e9515fd8e8f15f06356c7063a9d84726c72f6fc",
-      "ticker": "SIE.DE",
-      "name": "Siemens",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Berenberg Tweaks Siemens Healthineers Forecasts Ahead Of Big Reshuffle",
-      "english": null,
-      "publisher": "Finimize",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSjZ4YTlFMjZEc3pPVFQwdGlNZk5UWGk5b1ZfLWtsOThyUHpKSno2ZmpQVUhXMUdnZ1JMdThQYXNZc2lkdEV1YlY1eUx0R1YzOTBiVjVWRXV3TFdUdDRTX21TdnJWSl9lczlYeEFYQzFxMDYtZGFhQko5RVlZb19IQURlSDkwRzc2SGxyQ3o1TDFGWVBWZFd0V3NKYU5tV0k3?oc=5",
-      "published": "2026-11-17T10:46:25Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "review",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 777,
+  "totalStored": 778,
   "limit": 100,
   "quality": {
-    "total": 777,
-    "relevant": 531,
+    "total": 778,
+    "relevant": 532,
     "review": 217,
     "duplicates": 36,
     "issuerLinked": 0,
@@ -1921,7 +1921,7 @@
       "Contracts": 44,
       "Capital & ownership": 0,
       "Management": 35,
-      "General": 523
+      "General": 524
     }
   }
 }
