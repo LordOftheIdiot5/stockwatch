@@ -7,6 +7,8 @@ on:
     paths:
       - 'scripts/delayed_exchange.py'
       - 'scripts/exchange_capacity.py'
+      - 'scripts/exchange_profile_audit.py'
+      - 'tests/test_exchange_profile_audit.py'
       - 'tests/test_exchange_capacity.py'
       - 'tests/test_delayed_exchange.py'
       - 'scripts/exchange_identity.py'
@@ -38,6 +40,20 @@ jobs:
         env:
           STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
         run: python scripts/exchange_identity.py --market OSL
+
+  profile:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Report profile audit tests
+        run: python -m unittest discover -s tests -p test_exchange_profile_audit.py -v
+      - name: Inspect Oslo exchange report schema (no quotes)
+        run: python scripts/exchange_profile_audit.py --market OSL
 
   capacity:
     if: github.event_name != 'schedule'
