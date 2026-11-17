@@ -1,6 +1,6 @@
 {
   "generated": "2026-11-17T02:07:22Z",
-  "identityLevel": "Watchlist issuer names and listing symbols, not full legal entity verification",
+  "identityLevel": "Watchlist listing identities; source-linked identifiers where available; predecessor securities remain separate.",
   "entities": [
     {
       "name": "Andfjord Salmon",
@@ -27,12 +27,16 @@
       "evidence": null
     },
     {
-      "name": "Kaldvik",
+      "name": "Kaldvik AS",
       "ticker": "KLDVK.OL",
       "sector": "Aquaculture",
       "exchange": "Oslo",
-      "isin": null,
-      "evidence": null
+      "isin": "NO0010884794",
+      "evidence": "https://live.euronext.com/en/products/equities/company-news/2024-06-25-name-change-kaldvik-and-new-ticker-kldvk",
+      "mic": "MERK",
+      "marketSegment": "Euronext Growth Oslo",
+      "previousTicker": "IFISH.OL",
+      "historyPolicy": "review_before_linking"
     },
     {
       "name": "Nordic Halibut",
@@ -43,12 +47,14 @@
       "evidence": null
     },
     {
-      "name": "Pelican Aqua",
+      "name": "Pelican Aqua Holding",
       "ticker": "PLCAN.OL",
       "sector": "Aquaculture",
       "exchange": "Oslo",
-      "isin": null,
-      "evidence": null
+      "isin": "CY0201461213",
+      "evidence": "https://live.euronext.com/en/markets/oslo/ipos",
+      "mic": "MERK",
+      "marketSegment": "Euronext Growth Oslo"
     },
     {
       "name": "Proximar Seafood",
@@ -83,12 +89,16 @@
       "evidence": null
     },
     {
-      "name": "Avarda",
+      "name": "Avarda Bank AB",
       "ticker": "AVARDA.ST",
       "sector": "Banks & insurance",
       "exchange": "Stockholm",
-      "isin": null,
-      "evidence": null
+      "isin": "SE0025666969",
+      "evidence": "https://view.news.eu.nasdaq.com/view?id=bec5877a5fa3b40036790d1095bdc675a&lang=en&src=rss",
+      "mic": "XSTO",
+      "previousTicker": "TFBANK.ST",
+      "effectiveDate": "2026-04-10",
+      "historyPolicy": "same_isin_review_provider_history"
     },
     {
       "name": "Gjensidige",
@@ -123,12 +133,13 @@
       "evidence": null
     },
     {
-      "name": "Morrow bank",
+      "name": "Morrow Bank AB",
       "ticker": "MORROW.ST",
       "sector": "Banks & insurance",
       "exchange": "Stockholm",
-      "isin": null,
-      "evidence": null
+      "isin": "SE0026852725",
+      "evidence": "https://view.news.eu.nasdaq.com/view?id=b090d9b9fd64fa73fd54d41b5ec6282e5&lang=en&src=notices",
+      "mic": "XSTO"
     },
     {
       "name": "NOBA",
@@ -160,7 +171,10 @@
       "sector": "Banks & insurance",
       "exchange": "Oslo",
       "isin": null,
-      "evidence": null
+      "evidence": null,
+      "previousTicker": "SVEG.OL",
+      "historyPolicy": "merger_review_before_linking",
+      "corporateActionSource": "https://live.euronext.com/nb/products/equities/company-news/2025-04-23-navneendring-til-sparebanken-norge-og-ny-ticker-sbnor-0"
     },
     {
       "name": "Storebrand",
@@ -267,12 +281,15 @@
       "evidence": null
     },
     {
-      "name": "Pfisterer",
+      "name": "PFISTERER Holding SE",
       "ticker": "PFSE.DE",
       "sector": "Grid & energy",
       "exchange": "XETRA",
-      "isin": null,
-      "evidence": null
+      "isin": "DE000PFSE253",
+      "evidence": "https://www.pfisterer.com/en/shareprice",
+      "previousIsin": "DE000PFSE212",
+      "effectiveDate": "2026-10-08",
+      "historyPolicy": "share_conversion_review_before_linking"
     },
     {
       "name": "Prysmian",
@@ -407,8 +424,9 @@
       "ticker": "TKMS.DE",
       "sector": "Industry & defence",
       "exchange": "XETRA",
-      "isin": null,
-      "evidence": null
+      "isin": "DE000TKMS001",
+      "evidence": "https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Changes-in-the-composition-of-Product-Assignment-Groups-in-Deutsche-B-rse-Xetra-due-to-modification-of-share-indices-4862320",
+      "mic": "XETR"
     },
     {
       "name": "Vossloh",
@@ -627,12 +645,13 @@
       "evidence": null
     },
     {
-      "name": "Ottobock",
+      "name": "Ottobock SE & Co. KGaA",
       "ticker": "OBCK.DE",
       "sector": "Pharma & medtech",
       "exchange": "XETRA",
-      "isin": null,
-      "evidence": null
+      "isin": "DE000BCK2223",
+      "evidence": "https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Changes-in-the-composition-of-Product-Assignment-Groups-in-Deutsche-B-rse-Xetra-due-to-modification-of-share-indices-4862320",
+      "mic": "XETR"
     },
     {
       "name": "Pila Pharma",
@@ -763,12 +782,13 @@
       "evidence": null
     },
     {
-      "name": "Ellos",
+      "name": "Ellos Holding AB",
       "ticker": "ELLOS.ST",
       "sector": "Retail",
       "exchange": "Stockholm",
-      "isin": null,
-      "evidence": null
+      "isin": "SE0028799429",
+      "evidence": "https://view.news.eu.nasdaq.com/view?id=b95d7ca7e420f216ca23dbe9f5f41f2fa&lang=en&src=rss",
+      "mic": "XSTO"
     },
     {
       "name": "Nelly",
@@ -783,24 +803,32 @@
       "ticker": "BOHUS.OL",
       "sector": "Retail",
       "exchange": "Oslo",
-      "isin": null,
-      "evidence": null
+      "isin": "NO0013753343",
+      "evidence": "https://live.euronext.com/en/markets/oslo/ipos",
+      "mic": "XOSL"
     },
     {
-      "name": "CMB.TECH",
+      "name": "CMB.TECH NV",
       "ticker": "CMBTO.OL",
       "sector": "Shipping & offshore",
       "exchange": "Oslo",
-      "isin": null,
-      "evidence": null
+      "isin": "BE0003816338",
+      "evidence": "https://live.euronext.com/en/ipo-showcase/cmbtech",
+      "mic": "XOSL"
     },
     {
-      "name": "Cadeler",
-      "ticker": "CADLR.OL",
+      "name": "Cadeler plc",
+      "ticker": "CDLR.OL",
       "sector": "Shipping & offshore",
       "exchange": "Oslo",
-      "isin": null,
-      "evidence": null
+      "isin": "GB00BN49H029",
+      "evidence": "https://live.euronext.com/en/markets/oslo/ipos",
+      "mic": "XOSL",
+      "previousTicker": "CADLR.OL",
+      "previousIsin": "DK0061412772",
+      "effectiveDate": "2026-11-05",
+      "historyPolicy": "separate_predecessor_security",
+      "corporateActionSource": "https://www.euronext.com/en/about/media/euronext-press-releases/cadeler-plc-lists-euronext"
     },
     {
       "name": "DOF Group",
@@ -963,12 +991,14 @@
       "evidence": null
     },
     {
-      "name": "Smart High Tech",
+      "name": "SHT Smart High-Tech B",
       "ticker": "SHT-B.ST",
       "sector": "Tech & space",
       "exchange": "Stockholm",
-      "isin": null,
-      "evidence": null
+      "isin": "SE0016843809",
+      "evidence": "https://www.spotlightstockmarket.com/en/companies/irtrade?instrumentId=XSAT0000414F",
+      "mic": "XSAT",
+      "marketSegment": "Spotlight Stock Market"
     },
     {
       "name": "Smartoptics",
@@ -1007,8 +1037,11 @@
       "ticker": "BLUE.ST",
       "sector": "Mining & minerals",
       "exchange": "Stockholm",
-      "isin": null,
-      "evidence": null
+      "isin": "SE0015382148",
+      "evidence": "https://www.bluelakemineral.com/en/investors/stock-information/",
+      "mic": "NSME",
+      "marketSegment": "NGM Growth Market",
+      "venueEvidence": "https://www.ngm.se/en/the-exchange"
     },
     {
       "name": "BeammWave",

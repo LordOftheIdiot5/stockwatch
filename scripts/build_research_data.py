@@ -209,8 +209,9 @@ def build(root=ROOT, now=None):
     health['abRatios']['sessionPairs']=len(snapshots.get('sessionPairs',{}))
     issuer_index={'generated':iso(now),'identityLevel':'Watchlist issuer names and listing symbols, not full legal entity verification',
                   'entities':[dict(name=w.get('name'),ticker=w.get('ticker'),sector=w.get('sector'),exchange=w.get('exchange'),
-                                   isin='FR0000061459' if w.get('ticker')=='ALPER.PA' else None,
-                                   evidence='https://live.euronext.com/fr/product/equities/FR0000061459-XPAR' if w.get('ticker')=='ALPER.PA' else None)
+                                   isin=w.get('isin') or ('FR0000061459' if w.get('ticker')=='ALPER.PA' else None),
+                                   evidence=w.get('evidence') or ('https://live.euronext.com/fr/product/equities/FR0000061459-XPAR' if w.get('ticker')=='ALPER.PA' else None),
+                                   **{k:w[k] for k in ('mic','marketSegment','previousTicker','previousIsin','effectiveDate','historyPolicy','corporateActionSource','venueEvidence') if k in w})
                               for w in watchlist.get('tickers',[])]}
     (folder/'issuer-identities.json').write_text(json.dumps(issuer_index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     (folder/'news-quality.json').write_text(json.dumps(dict(generated=iso(now),**quality),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

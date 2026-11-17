@@ -44,8 +44,8 @@ def figi_jobs(directory, limit=100):
         if "." not in ticker:
             continue
         name,suffix=ticker.rsplit(".",1)
-        mic=MICS.get(suffix)
-        if not mic or not re.fullmatch(r"[A-Z0-9-]{1,18}",name):
+        mic=row.get("mic") or MICS.get(suffix)
+        if not mic or not re.fullmatch(r"[A-Z0-9]{4}",mic) or not re.fullmatch(r"[A-Z0-9-]{1,18}",name):
             continue
         known_isin=str(row.get("isin") or "").upper()
         if re.fullmatch(r"[A-Z]{2}[A-Z0-9]{10}",known_isin):
