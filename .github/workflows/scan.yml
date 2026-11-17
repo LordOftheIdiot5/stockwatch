@@ -82,6 +82,10 @@ jobs:
       - name: Preserve news history as Git-backed monthly partitions
         run: python scripts/build_monthly_archive.py
 
+      - name: Discover company relationship review leads from retained news
+        continue-on-error: true
+        run: python scripts/relationship_discovery.py
+
       - name: Optional database archive ingestion
         id: archive_ingest
         # Never block scanner commits / site freshness when the external D1 API is down.

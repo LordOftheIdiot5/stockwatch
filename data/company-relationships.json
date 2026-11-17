@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "compiledOn": "2026-11-17",
+  "notice": "Manually reviewed factual issuer disclosures, not current verified cash movements, exposure weights or revenue forecasts. Unmapped entities have no invented ticker. Supply arrows represent goods/services, not payment direction. Rights for commercial bulk export must be assessed separately.",
+  "entities": [
+    {
+      "id": "nvidia",
+      "name": "NVIDIA Corporation",
+      "aliases": [
+        "NVIDIA"
+      ],
+      "listingId": "XNAS:NVDA",
+      "cik": "0001045810"
+    },
+    {
+      "id": "coreweave",
+      "name": "CoreWeave, Inc.",
+      "aliases": [
+        "CoreWeave"
+      ],
+      "listingId": "XNAS:CRWV",
+      "cik": "0001769628"
+    },
+    {
+      "id": "tsmc",
+      "name": "Taiwan Semiconductor Manufacturing Company Limited",
+      "aliases": [
+        "TSMC",
+        "Taiwan Semiconductor Manufacturing Company"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "samsung-electronics",
+      "name": "Samsung Electronics Co., Ltd.",
+      "aliases": [
+        "Samsung Electronics"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "sk-hynix",
+      "name": "SK hynix Inc.",
+      "aliases": [
+        "SK hynix"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "micron",
+      "name": "Micron Technology, Inc.",
+      "aliases": [
+        "Micron Technology"
+      ],
+      "listingId": "XNAS:MU",
+      "cik": "0000723125"
+    },
+    {
+      "id": "singulus",
+      "name": "SINGULUS TECHNOLOGIES AG",
+      "aliases": [
+        "Singulus Technologies",
+        "Singulus"
+      ],
+      "listingId": null,
+      "isin": "DE000A1681X5"
+    },
+    {
+      "id": "spacex",
+      "name": "Space Exploration Technologies Corporation",
+      "aliases": [
+        "SpaceX",
+        "Space Exploration Technologies"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "triumph",
+      "name": "Triumph Science and Technology Group Co., Ltd.",
+      "aliases": [
+        "Triumph Science and Technology Group"
+      ],
+      "listingId": null
+    }
+  ],
+  "relationships": [
+    {
+      "id": "tsmc-wafers",
+      "from": "tsmc",
+      "to": "nvidia",
+      "type": "supplies",
+      "subject": "Semiconductor wafer fabrication",
+      "disclosedOn": "2026-02-25",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "sourceLocator": "FY2026 Form 10-K, Item 1, Manufacturing",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "status": "reported_supplier"
+    },
+    {
+      "id": "samsung-wafers",
+      "from": "samsung-electronics",
+      "to": "nvidia",
+      "type": "supplies",
+      "subject": "Semiconductor wafer fabrication",
+      "disclosedOn": "2026-02-25",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "sourceLocator": "FY2026 Form 10-K, Item 1, Manufacturing",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "status": "reported_supplier"
+    },
+    {
+      "id": "samsung-memory",
+      "from": "samsung-electronics",
+      "to": "nvidia",
+      "type": "supplies",
+      "subject": "Memory components",
+      "disclosedOn": "2026-02-25",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "sourceLocator": "FY2026 Form 10-K, Item 1, Manufacturing",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "status": "reported_supplier"
+    },
+    {
+      "id": "hynix-memory",
+      "from": "sk-hynix",
+      "to": "nvidia",
+      "type": "supplies",
+      "subject": "Memory components",
+      "disclosedOn": "2026-02-25",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "sourceLocator": "FY2026 Form 10-K, Item 1, Manufacturing",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "status": "reported_supplier"
+    },
+    {
+      "id": "micron-memory",
+      "from": "micron",
+      "to": "nvidia",
+      "type": "supplies",
+      "subject": "Memory components",
+      "disclosedOn": "2026-02-25",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "sourceLocator": "FY2026 Form 10-K, Item 1, Manufacturing",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "status": "reported_supplier"
+    },
+    {
+      "id": "nvidia-coreweave-gpu",
+      "from": "nvidia",
+      "to": "coreweave",
+      "type": "supplies",
+      "subject": "NVIDIA GPU supply",
+      "disclosedOn": "2025-09-15",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+      "sourceLocator": "Form 8-K, Item 1.01",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "status": "reported_supplier"
+    },
+    {
+      "id": "coreweave-nvidia-residual",
+      "from": "coreweave",
+      "to": "nvidia",
+      "type": "service_contract",
+      "subject": "Conditional purchase of residual unsold computing capacity",
+      "disclosedOn": "2025-09-15",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+      "sourceLocator": "Form 8-K, Item 1.01",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": {
+        "currency": "USD",
+        "value": 6300000000,
+        "comparison": "exact_reported",
+        "basis": "initial_order_form_value"
+      },
+      "actualCashFlow": false,
+      "eventOn": "2025-09-09",
+      "endOn": "2032-04-13",
+      "status": "conditional_commitment",
+      "conditions": "Subject to capacity availability, delivery and termination provisions; not realized revenue."
+    },
+    {
+      "id": "nvidia-coreweave-investment",
+      "from": "nvidia",
+      "to": "coreweave",
+      "type": "equity_investment",
+      "subject": "Class A common stock investment",
+      "disclosedOn": "2026-01-26",
+      "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-and-coreweave-strengthen-collaboration-to-accelerate-buildout-of-ai-factories",
+      "sourceLocator": "Company announcement, investment paragraph",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": {
+        "currency": "USD",
+        "value": 2000000000,
+        "comparison": "exact_reported",
+        "basis": "announced_equity_investment"
+      },
+      "actualCashFlow": false,
+      "status": "reported_investment"
+    },
+    {
+      "id": "singulus-spacex-line",
+      "from": "singulus",
+      "to": "spacex",
+      "type": "supply_contract",
+      "subject": "First HJT solar-cell manufacturing production line",
+      "disclosedOn": "2026-11-10",
+      "sourceUrl": "https://www.singulus.com/2026/11/10/singulus-spacex-supply-contract/",
+      "sourceLocator": "Issuer supply contract announcement",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": {
+        "currency": "EUR",
+        "value": 60000000,
+        "comparison": "greater_than",
+        "basis": "first_line_order_value"
+      },
+      "actualCashFlow": false,
+      "eventOn": "2026-11-10",
+      "deliveryWindow": "2027-H1",
+      "status": "reported_order",
+      "conditions": "Additional lines planned, not quantified as binding orders."
+    },
+    {
+      "id": "spacex-singulus-finance",
+      "from": "spacex",
+      "to": "singulus",
+      "type": "financing",
+      "subject": "Subordinated secured loan",
+      "disclosedOn": "2026-11-11",
+      "sourceUrl": "https://www.singulus.com/2026/11/11/singulus-nine-months-2026-revenue-ebit/",
+      "sourceLocator": "Refinancing section and executive-board transition paragraph",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": {
+        "currency": "EUR",
+        "value": 22750000,
+        "comparison": "approximate",
+        "basis": "reported_loan_principal"
+      },
+      "actualCashFlow": false,
+      "eventOn": "2026-10-21",
+      "status": "reported_financing",
+      "conditions": "Proceeds used to repay Triumph and affiliate liabilities."
+    },
+    {
+      "id": "singulus-triumph-liabilities",
+      "from": "singulus",
+      "to": "triumph",
+      "type": "debt_repayment",
+      "subject": "Repayment of Triumph and affiliate liabilities",
+      "disclosedOn": "2026-11-11",
+      "sourceUrl": "https://www.singulus.com/2026/11/11/singulus-nine-months-2026-revenue-ebit/",
+      "sourceLocator": "Refinancing section",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-17",
+      "amount": null,
+      "actualCashFlow": false,
+      "eventOn": "2026-10-21",
+      "status": "reported_repayment",
+      "conditions": "The financed amount is not independently established as a payment to Triumph alone."
+    }
+  ]
+}
