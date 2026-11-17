@@ -98,6 +98,11 @@ jobs:
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
+      - name: V50 company research tests
+        if: startsWith(github.head_ref, 'feature/stockwatch-v50-')
+        run: |
+          node --check company-research.js
+          node --test tests/test_company_v50.mjs
       - name: V49 native chart core unit tests
         if: startsWith(github.head_ref, 'feature/stockwatch-v49-')
         run: |
@@ -112,6 +117,16 @@ jobs:
         with:
           name: stockwatch-v49-native-chart
           path: workspace-previews/v49-*.png
+          if-no-files-found: ignore
+      - name: V50 rendered company research checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v50-')
+        run: python tests/browser_check_company_v50.py
+      - name: Upload V50 company previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v50-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v50-company
+          path: workspace-previews/v50-*.png
           if-no-files-found: ignore
       - name: V47 shared navigation rendered checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v47-')
