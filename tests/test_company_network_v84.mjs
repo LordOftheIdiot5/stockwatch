@@ -38,3 +38,16 @@ test('US cohort exposes only exact reference identifiers, no quotes',()=>{
  assert.equal(data.records.length,50);assert.equal(new Set(data.records.map(r=>r.id)).size,50);
  assert.ok(data.records.every(r=>/^\d{10}$/.test(r.cik)&&r.quoteStatus==='not_connected'&&r.currency==='USD'));
 });
+
+test('Expanded contracts preserve upper bounds and prevent syndicate double counting',()=>{
+ const data=load('company-relationships.json'),g=N.graph(data);
+ const aggregate=g.edges.find(e=>e.id==='coreweave-openai-aggregate');
+ assert.ok(N.amountLabel(aggregate.amount).startsWith('Up to USD 22.4 bn'));
+ assert.equal(aggregate.history.length,2);
+ const financing=N.neighborhood(g,'premier-energy','all',2);
+ const measured=financing.edges.filter(e=>e.amount!==null);
+ assert.equal(measured.length,1);
+ assert.equal(measured[0].amount.value,850000000);
+ assert.equal(financing.edges.filter(e=>e.type==='arrangement').length,2);
+ assert.equal(N.entityForListing(data,'AIR.PA'),'airbus');
+});
