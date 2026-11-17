@@ -14,9 +14,14 @@ def dated(d):
     except (TypeError,ValueError):return False
 def valid(r,today):
     return isinstance(r,dict) and numeric(r.get("close")) and r["close"]>0 and dated(r.get("date")) and r["date"]<=today and bool(r.get("currency"))
+def valid_move(r):
+    return numeric(r.get('changePct')) and numeric(r.get('volume')) and r['volume']>0
 def company_row(entry,fresh,old,today,stamp,prior_stamp):
     if not valid(old,today) or old.get("ticker")!=entry["ticker"] or old.get("name")!=entry.get("name",entry["ticker"]) or any(entry.get(k) and entry[k]!=old.get(k) for k in ("isin","mic","currency")):old=None
-    if not valid(fresh,today) or (old and (fresh["date"]<old["date"] or fresh["currency"]!=old["currency"])):
+    # A partial response for the same session must not erase an intact saved
+    # observation. Preserve the entire prior row, not a hybrid price/return.
+    partial_same_day=bool(old and valid(fresh,today) and fresh["date"]==old["date"] and valid_move(old) and not valid_move(fresh))
+    if not valid(fresh,today) or partial_same_day or (old and (fresh["date"]<old["date"] or fresh["currency"]!=old["currency"])):
         if old:
             fields=("date","close","currency","exchange","spark","changePct","sigma","volume","medianVolume","rvol","isin","mic")
             return {**entry,**{k:old[k] for k in fields if k in old},"stories":[],"priceStatus":"retained","priceObservedAt":old.get("priceObservedAt") or prior_stamp,"marketPct":None,"excessPct":None,"excessSigma":None}
