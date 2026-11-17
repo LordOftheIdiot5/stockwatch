@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
 const src=fs.readFileSync(new URL('../v4.js',import.meta.url),'utf8');
 const a=src.indexOf('function comparisonDate('),b=src.indexOf('function overview()',a);
 const E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const P=x=>x+'%';
-const {coverageHeatRows,coverageHeatmap,referenceCatalogRows,screenFinancialRows}=Function('E','P',src.slice(a,b)+'\nreturn {coverageHeatRows,coverageHeatmap,referenceCatalogRows,screenFinancialRows}')(E,P);
+const {coverageHeatRows,coverageHeatmap,referenceCatalogRows,screenFinancialRows,latestBroadReportedSession,marketHeatData}=Function('E','P',src.slice(a,b)+'\nreturn {coverageHeatRows,coverageHeatmap,referenceCatalogRows,screenFinancialRows,latestBroadReportedSession,marketHeatData}')(E,P);
 const rows=[{ticker:'A',name:'A',sector:'Industry',close:10,changePct:0,rvol:1,annualVolPct:20},{ticker:'B',name:'B',sector:'Industry',close:20,changePct:-4,rvol:3,annualVolPct:50,thin:true},{ticker:'ref:X:C',referenceId:'X:C',symbol:'C',name:'C',sector:'Industry',referenceOnly:true,unavailable:true},{ticker:'D',name:'D',close:2,changePct:5,rvol:4,annualVolPct:70}];
 test('coverage preserves true zero and distinguishes missing data',()=>{
  assert.equal(coverageHeatRows(rows).length,4);
@@ -34,3 +35,21 @@ test('reference records remain a separate venue+FIGI catalog',()=>{
 });
 
 test('dated last-known prices remain visible without current-session change',()=>{const old={ticker:'A',name:'A',sector:'Industry',close:12.5,currency:'NOK',date:'2026-11-13',marketQuality:'older',changePct:7};assert.equal(coverageHeatRows([old,rows[2]],'all','priced').length,1);const h=coverageHeatmap([old]);assert.match(h,/12\.5 NOK · 2026-11-13/);assert.match(h,/no-data/);assert.doesNotMatch(h,/sw-heat-cell positive/)});
+
+test('V62: latest broadly reported day is bounded by snapshot and excludes retained or zero volume rows',()=>{
+ const a={ticker:'A',date:'2026-11-17',close:12,currency:'NOK',changePct:1,volume:10};
+ const b={...a,ticker:'B'},older={...a,ticker:'C',date:'2026-11-16'};
+ const set=[a,b,older,{...a,ticker:'D',date:'2026-11-18'},{...a,ticker:'E',priceStatus:'retained'},{...a,ticker:'F',volume:0},{...a,ticker:'G',referenceOnly:true}];
+ const reported=latestBroadReportedSession(set,'2026-11-17T19:42:00Z',2);
+ assert.equal(reported.day,'2026-11-17');assert.deepEqual(reported.rows.map(x=>x.ticker),['A','B']);
+ assert.equal(latestBroadReportedSession(set,'invalid',2),null);
+ assert.match(coverageHeatmap(reported.rows),/company.html\?ticker=A/);
+ assert.equal(marketHeatData([{...a,referenceOnly:true}]).length,0);
+});
+test('V61 inventory command returns balanced coverage counts without mutating inputs',()=>{
+ const out=JSON.parse(execFileSync(process.execPath,[new URL('../scripts/audit_price_inventory.cjs',import.meta.url).pathname],{encoding:'utf8'}));
+ assert.equal(out.total,out.records.length);
+ assert.equal(Object.values(out.counts).reduce((a,b)=>a+b,0),out.total);
+ assert.equal(Object.values(out.byVenue).reduce((a,b)=>a+b.total,0),out.total);
+ assert.ok(out.counts.scanner>0);assert.ok(out.records.every(r=>r.id&&r.status));
+});
