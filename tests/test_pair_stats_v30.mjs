@@ -18,3 +18,6 @@ test('no z score for insufficient data or constant series',()=>{
  assert.ok(Number.isFinite(alignedPairStats(a).z));
  assert.equal(alignedPairStats(a.map(p=>({...p,value:1}))).z,null);
 });
+
+const episodes=Function(pick('function thresholdEpisodes(','function thresholdEpisodePanel(')+'\nreturn thresholdEpisodes')();
+test('walk-forward episodes use prior window, fixed mean and unresolved end',()=>{const points=Array.from({length:60},(_,i)=>({date:new Date(Date.UTC(2025,0,i+1)).toISOString().slice(0,10),value:i%2?1.01:.99}));const add=(i,value)=>points.push({date:new Date(Date.UTC(2025,0,i+1)).toISOString().slice(0,10),value});add(60,1.2);add(61,1.1);add(62,.99);add(63,.7);const x=episodes(points);assert.deepEqual(x,{entries:2,completed:1,unresolved:1,medianSessions:2});assert.equal(episodes(points.slice(0,60)),null)});
