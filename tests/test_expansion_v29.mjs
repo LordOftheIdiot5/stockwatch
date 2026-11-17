@@ -11,7 +11,12 @@ test('Expanded listing universe preserves scanner and existing curated records',
  const catalog=read('data/instrument-directory.json').records,keys=new Set(catalog.map(x=>x.mic+':'+x.figi));
  const selected=registry(d);
  assert.equal(w.length,138);assert.equal(t.length,75);assert.ok(selected.length>=294);assert.equal(w.length+t.length+selected.length,213+d.records.length);
- assert.equal(new Set(d.records.map(x=>x.shareClassFIGI)).size,d.records.length);
+ assert.equal(new Set(d.records.map(x=>x.mic+':'+x.figi)).size,d.records.length);
+ const shareGroups=new Map();for(const x of d.records){const key=x.shareClassFIGI;shareGroups.set(key,[...(shareGroups.get(key)||[]),x]);}
+ for(const [share,rows] of shareGroups){if(rows.length===1)continue;
+  assert.equal(share,'BBG001S6SH50');
+  assert.deepEqual(rows.map(x=>x.mic+':'+x.figi).sort(),['XHEL:BBG006X0TY67','XSTO:BBG000BDZQP5']);
+ }
  assert.ok(d.records.every(x=>keys.has(x.mic+':'+x.figi)&&x.quoteStatus==='not_connected'&&x.sourceObservedAt));
  assert.ok(selected.every(x=>x.unavailable&&x.referenceOnly&&x.close==null));
  const known=[...read('data/registered-source-status.json').figiCandidates,...read('data/research-coverage.json').records.flatMap(x=>[x.currentCandidate,x.lastCandidate]).filter(Boolean)];
