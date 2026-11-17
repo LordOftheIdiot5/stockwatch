@@ -32,3 +32,5 @@ test('reference records remain a separate venue+FIGI catalog',()=>{
  assert.equal(catalog.length,new Set(catalog.map(x=>x.ticker)).size);
  assert.ok(catalog.every(x=>x.unavailable&&x.registryOnly&&x.close==null));
 });
+
+test('dated last-known prices remain visible without current-session change',()=>{const old={ticker:'A',name:'A',sector:'Industry',close:12.5,currency:'NOK',date:'2026-11-13',marketQuality:'older',changePct:7};assert.equal(coverageHeatRows([old,rows[2]],'all','priced').length,1);const h=coverageHeatmap([old]);assert.match(h,/12\.5 NOK · 2026-11-13/);assert.match(h,/no-data/);assert.doesNotMatch(h,/sw-heat-cell positive/)});

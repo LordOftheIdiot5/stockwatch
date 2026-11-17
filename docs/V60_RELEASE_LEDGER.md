@@ -32,3 +32,6 @@ Default stock screener is monitored listings; searches and explicit universe con
 
 ## Last-known observations
 Preserve monitored company rows independently of price requests. Retained exact-identity observations keep original dates and cannot generate comparable-session signals. No prior quote yields a research-only monitored row. Dated commodity and freight proxies are retained on partial failures; retained pair snapshots are excluded from current comparisons. No predecessor migration, undated legacy context fallback, new source or redistribution rights. Validation pending.
+
+## Production price recovery
+Tested presentation release 7ed56ff merged via #73; deploy 44160373876 succeeded. Default heatmap/table use listings with known prices. Eight existing A/B reference targets can reuse the exact corresponding already-published dated pair observations, not inferred prices or current scanner signals. No additional redistribution rights established. Other instruments without recorded data remain discovery references. Validation pending.
