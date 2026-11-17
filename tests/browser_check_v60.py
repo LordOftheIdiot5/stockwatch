@@ -30,6 +30,15 @@ def check_interactions(browser):
         assert page.locator("#workspaceCoverage").input_value()=="priced"
         assert page.locator("#workspaceHeatmap .sw-heat-cell").count()>=100
         assert page.locator("#workspaceHeatmap .sw-heat-cell").get_by_text("No data",exact=True).count()==0
+        total=page.locator("#workspaceHeatmap .sw-heat-cell").count()
+        page.locator("#workspaceVenue").select_option("Oslo")
+        assert 0<page.locator("#workspaceHeatmap .sw-heat-cell").count()<=total
+        page.locator("#workspaceHeatExpand").click()
+        assert page.locator("#workspaceHeatExpand").get_attribute("aria-expanded")=="true"
+        assert "sw-heat-expanded" in page.locator("#workspaceHeatmap").get_attribute("class")
+        page.locator("#workspaceHeatExpand").click()
+        page.locator("#workspaceVenue").select_option("all")
+        assert page.locator("#workspaceHeatmap .sw-heat-cell").count()==total
     def search():
         page.goto(base+"search.html?q=SALM.OL&kind=Company")
         page.locator('.gs-result').first.wait_for()
