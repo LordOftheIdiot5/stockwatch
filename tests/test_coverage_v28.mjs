@@ -100,3 +100,29 @@ test('V65: official Ro-Ro history preserves quarter, country, unit, missing peri
  const first=parse(fixture)[0];assert.equal(first.history[0].value,0);assert.equal(first.history.length,2);
  assert.deepEqual(parse({...data,provider:'unknown'}),[]);
 });
+
+test('V66: freight analysis uses exact dated licensed closes and never bridges missing periods',()=>{
+ const start=src.indexOf('function freightPeriodAnalysis('),end=src.indexOf('function freightAnalysisHTML(',start);
+ const analyse=Function(src.slice(start,end)+'\nreturn freightPeriodAnalysis')();
+ const series={frequency:'monthly',observations:[
+ {periodEnd:'2026-06-30',publishedOn:'2026-07-10',value:80},
+ {periodEnd:'2026-07-31',publishedOn:'2026-08-10',value:84},
+ {periodEnd:'2026-09-30',publishedOn:'2026-10-10',value:90}
+ ]};
+ const history={ticker:'WAWI.OL',redistributionPermitted:true,source:'fixture',sourceUrl:'https://example.com',licenseReference:'fixture permission',currency:'NOK',adjusted:false,bars:[{date:'2026-06-30',close:100},{date:'2026-07-30',close:110},{date:'2026-08-01',close:999},{date:'2026-09-20',close:120}]};
+ const x=analyse(series,history,'WAWI.OL');
+ assert.equal(x.pairs.length,1);assert.ok(Math.abs(x.pairs[0].x-5)<1e-9);assert.ok(Math.abs(x.pairs[0].y-10)<1e-9);
+ assert.equal(x.rows[1].stock.date,'2026-07-30');assert.equal(x.rows[2].stock,null);assert.equal(x.rows[2].rateChange,null);assert.equal(x.correlation,null);
+ for(const h of [null,{...history,redistributionPermitted:false},{...history,ticker:'WWI.OL'}]){const y=analyse(series,h,'WAWI.OL');assert.equal(y.licensed,false);assert.equal(y.pairs.length,0);assert.equal(y.rows.length,3)}
+});
+test('V66: correlation requires twelve consecutive paired changes and nonconstant series',()=>{
+ const start=src.indexOf('function freightPeriodAnalysis('),end=src.indexOf('function freightAnalysisHTML(',start);
+ const analyse=Function(src.slice(start,end)+'\nreturn freightPeriodAnalysis')();
+ const observations=[],bars=[];let rate=80,price=100;
+ for(let i=0;i<13;i++){const date=new Date(Date.UTC(2025,i+1,0)).toISOString().slice(0,10);rate*=1+i/100;price*=1+i/50;observations.push({periodEnd:date,publishedOn:date,value:rate});bars.push({date,close:price})}
+ const series={frequency:'monthly',observations};
+ const history={ticker:'TEST',redistributionPermitted:true,source:'fixture',sourceUrl:'https://example.com',licenseReference:'fixture',currency:'NOK',adjusted:false,bars};
+ const x=analyse(series,history,'TEST');assert.equal(x.pairs.length,12);assert.ok(Math.abs(x.correlation-1)<1e-9);
+ assert.equal(analyse({...series,observations:observations.slice(0,12)},history,'TEST').correlation,null);
+ assert.equal(analyse(series,{...history,bars:bars.map(b=>({...b,close:100}))},'TEST').correlation,null);
+});
