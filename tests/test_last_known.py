@@ -28,6 +28,18 @@ class LastKnown(unittest.TestCase):
         r=self.row(fresh={**self.old,"date":"2026-11-17","close":13})
         self.assertEqual(r["priceStatus"],"reported")
         self.assertEqual(r["close"],13)
+    def test_partial_same_session_does_not_destroy_valid_movement(self):
+        for incomplete in ({"volume":0},{"changePct":None},{"volume":None}):
+            row=self.row(fresh={**self.old,**incomplete,"close":13})
+            self.assertEqual(row["priceStatus"],"retained")
+            self.assertEqual(row["date"],self.old["date"])
+            self.assertEqual(row["close"],self.old["close"])
+            self.assertEqual(row["changePct"],self.old["changePct"])
+            self.assertEqual(row["volume"],self.old["volume"])
+        # Never relabel yesterday's change as a newer trading session.
+        row=self.row(fresh={**self.old,"date":"2026-11-17","volume":0,"changePct":0})
+        self.assertEqual(row["date"],"2026-11-17")
+        self.assertEqual(row["volume"],0)
     def test_context_retained_original_date(self):
         old=[dict(ticker="BDRY",unit="USD",date="2026-11-16",last=10)]
         r=context_rows([],old,"freight","new","old","2026-11-17")
