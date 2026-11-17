@@ -22,6 +22,7 @@ def price_quality(row, target):
         return "unconfirmed"
     volume=row.get("volume")
     if not number(volume) or volume<0:return "unconfirmed"
+    if row.get("priceStatus")=="retained":return "older" if day<target else "unconfirmed"
     if volume==0:return "no_volume"
     return "older" if day<target else "comparable"
 

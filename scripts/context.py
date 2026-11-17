@@ -148,7 +148,8 @@ def _quote(ticker: str) -> dict | None:
     data = _chart(ticker)
     if not data:
         return None
-    closes = [c for c in (data["indicators"]["quote"][0].get("close") or []) if c]
+    dated_closes=[(t,c) for t,c in zip(data.get("timestamp") or [], data["indicators"]["quote"][0].get("close") or []) if type(c) in (int,float) and math.isfinite(c) and c>0]
+    closes=[c for _,c in dated_closes]
     if not closes:
         return None
 
@@ -169,6 +170,7 @@ def _quote(ticker: str) -> dict | None:
 
     return {
         "last": round(float(last), 4),
+        "date": utc_day(dated_closes[-1][0]),
         "changePct": pct(previous),
         "monthPct": pct(month_ago),
         # Where it sits in its own year, which says more than a percentage:
@@ -204,7 +206,7 @@ def freight() -> list[dict]:
     for ticker, name, note in FREIGHT:
         quote = _quote(ticker)
         if quote:
-            out.append({"ticker": ticker, "name": name, "note": note,
+            out.append({"ticker": ticker, "name": name, "note": note,"unit":"USD",
                         "proxy": True, **quote})
     return out
 
