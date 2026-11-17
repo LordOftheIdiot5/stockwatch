@@ -18,16 +18,23 @@ const expandedPairListings={
  'BBG000BG96K6':['INVEA','INVE-A.ST'],
  'BBG000BCH127':['VOLVA','VOLV-A.ST'],
  'BBG000BGD8Q1':['SSABB','SSAB-B.ST'],
- 'BBG000BB28Z4':['HUSQA','HUSQ-A.ST']
+ 'BBG000BB28Z4':['HUSQA','HUSQ-A.ST'],
+ 'BBG000BKSXB7':['ODFB','ODFB.OL','XOSL'],
+ 'BBG000BDD8Z8':['WWIB','WWIB.OL','XOSL'],
+ 'BBG000BP71K9':['KINVA','KINV-A.ST','XSTO'],
+ 'BBG000BP73C4':['KINVB','KINV-B.ST','XSTO'],
+ 'BBG000BDZQP5':['SSABA','SSAB-A.ST','XSTO'],
+ 'BBG000BCCG29':['SCAB','SCA-B.ST','XSTO'],
+ 'BBG000BFQ1Y5':['SCAA','SCA-A.ST','XSTO']
 };
 function pairQuote(r,pairs){
  if(!r?.referenceOnly)return null;
  let ticker=null;
  if(r.referenceId&&r.referenceId===r.mic+':'+r.symbol)ticker=pairListings[r.referenceId];
- else if(r.expandedReference===true&&r.registryOnly===true&&r.mic==='XSTO'&&r.ticker==='registry:XSTO:'+r.figi){
-  const m=expandedPairListings[r.figi];if(m&&m[0]===r.symbol)ticker=m[1];
+ else if(r.expandedReference===true&&r.registryOnly===true&&['XSTO','XOSL'].includes(r.mic)&&r.ticker==='registry:'+r.mic+':'+r.figi){
+  const m=expandedPairListings[r.figi];if(m&&m[0]===r.symbol&&(m[2]||'XSTO')===r.mic)ticker=m[1];
  }
- const currency=r.mic==='XCSE'?'DKK':r.mic==='XSTO'?'SEK':null;
+ const currency=r.mic==='XCSE'?'DKK':r.mic==='XSTO'?'SEK':r.mic==='XOSL'?'NOK':null;
  if(!ticker||!currency)return null;
  const matches=(pairs||[]).filter(p=>p.currency===currency&&sessionOK(p.priceDate)&&((p.a===ticker&&num(p.aPrice)&&p.aPrice>0)||(p.b===ticker&&num(p.bPrice)&&p.bPrice>0)));
  if(matches.length!==1)return null;
