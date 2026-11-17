@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T20:07:26+00:00",
+ "generated": "2026-11-17T20:17:59+00:00",
  "commodities": [
   {
    "ticker": "GC=F",
@@ -14,37 +14,37 @@
    "yearLow": 3849.5,
    "yearHigh": 5318.3999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "SI=F",
    "name": "Silver",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 47.14,
+   "last": 47.095,
    "date": "2026-11-17",
-   "changePct": 0.76,
-   "monthPct": -17.26,
-   "yearPosition": 1,
+   "changePct": 0.66,
+   "monthPct": -17.34,
+   "yearPosition": 0,
    "yearLow": 46.785,
    "yearHigh": 115.08,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "HG=F",
    "name": "Copper",
    "group": "metals",
    "unit": "USD/lb",
-   "last": 5.976,
+   "last": 5.974,
    "date": "2026-11-17",
-   "changePct": -0.36,
-   "monthPct": -8.6,
+   "changePct": -0.39,
+   "monthPct": -8.63,
    "yearPosition": 55,
    "yearLow": 4.9595,
    "yearHigh": 6.8035,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "ZNC=F",
@@ -59,52 +59,52 @@
    "yearLow": 2297.0,
    "yearHigh": 4193.5,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "ALI=F",
    "name": "Aluminium",
    "group": "metals",
    "unit": "USD/t",
-   "last": 3006.0,
+   "last": 3004.75,
    "date": "2026-11-17",
-   "changePct": -3.79,
-   "monthPct": -4.53,
+   "changePct": -3.83,
+   "monthPct": -4.57,
    "yearPosition": 21,
    "yearLow": 2684.0,
    "yearHigh": 4195.0,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "PL=F",
    "name": "Platinum",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 1421.7,
+   "last": 1420.3,
    "date": "2026-11-17",
-   "changePct": -1.82,
-   "monthPct": -13.25,
+   "changePct": -1.91,
+   "monthPct": -13.33,
    "yearPosition": 0,
-   "yearLow": 1421.7,
+   "yearLow": 1420.3,
    "yearHigh": 2852.3999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "PA=F",
    "name": "Palladium",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 968.0,
+   "last": 967.5,
    "date": "2026-11-17",
-   "changePct": -0.39,
-   "monthPct": -13.27,
+   "changePct": -0.44,
+   "monthPct": -13.31,
    "yearPosition": 3,
    "yearLow": 930.0,
    "yearHigh": 2169.8999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "NIKL",
@@ -120,7 +120,7 @@
    "yearHigh": 20.59,
    "proxy": true,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "TIO=F",
@@ -135,67 +135,67 @@
    "yearLow": 90.57,
    "yearHigh": 111.42,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "BZ=F",
    "name": "Brent crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 92.61,
+   "last": 92.65,
    "date": "2026-11-17",
-   "changePct": 0.18,
-   "monthPct": -15.46,
+   "changePct": 0.23,
+   "monthPct": -15.43,
    "yearPosition": 57,
    "yearLow": 58.92,
    "yearHigh": 118.35,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "CL=F",
    "name": "WTI crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 85.4,
+   "last": 85.42,
    "date": "2026-11-17",
-   "changePct": -0.37,
-   "monthPct": -17.62,
+   "changePct": -0.35,
+   "monthPct": -17.6,
    "yearPosition": 52,
    "yearLow": 55.27,
    "yearHigh": 112.95,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "NG=F",
    "name": "Natural gas",
    "group": "energy",
    "unit": "USD/MMBtu",
-   "last": 3.19,
+   "last": 3.188,
    "date": "2026-11-17",
-   "changePct": 2.18,
-   "monthPct": 4.32,
-   "yearPosition": 14,
+   "changePct": 2.11,
+   "monthPct": 4.25,
+   "yearPosition": 13,
    "yearLow": 2.523,
    "yearHigh": 7.46,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "URA",
    "name": "Uranium (ETF)",
    "group": "energy",
    "unit": "USD",
-   "last": 29.945,
+   "last": 29.9842,
    "date": "2026-11-17",
-   "changePct": -1.63,
-   "monthPct": -15.1,
+   "changePct": -1.5,
+   "monthPct": -14.99,
    "yearPosition": 0,
-   "yearLow": 29.945,
+   "yearLow": 29.9842,
    "yearHigh": 61.81,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   }
  ],
  "freight": [
@@ -205,15 +205,15 @@
    "note": "tracks dry bulk futures",
    "unit": "USD",
    "proxy": true,
-   "last": 12.9431,
+   "last": 12.97,
    "date": "2026-11-17",
-   "changePct": 2.72,
-   "monthPct": -0.05,
-   "yearPosition": 55,
+   "changePct": 2.94,
+   "monthPct": 0.15,
+   "yearPosition": 56,
    "yearLow": 8.42,
    "yearHigh": 16.58,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "BWET",
@@ -221,15 +221,15 @@
    "note": "tracks tanker futures",
    "unit": "USD",
    "proxy": true,
-   "last": 649.9899,
+   "last": 646.45,
    "date": "2026-11-17",
-   "changePct": 1.81,
-   "monthPct": -25.4,
-   "yearPosition": 64,
+   "changePct": 1.26,
+   "monthPct": -25.81,
+   "yearPosition": 63,
    "yearLow": 18.73,
    "yearHigh": 1012.75,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "ticker": "BOAT",
@@ -245,7 +245,7 @@
    "yearLow": 31.416,
    "yearHigh": 55.2,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   }
  ],
  "shareClasses": [
@@ -290,7 +290,7 @@
    "tradableRange": true,
    "rangePct": 13.36,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -333,7 +333,7 @@
    "tradableRange": true,
    "rangePct": 5.28,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -376,7 +376,7 @@
    "tradableRange": true,
    "rangePct": 2.91,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -419,7 +419,7 @@
    "tradableRange": true,
    "rangePct": 2.89,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -462,7 +462,7 @@
    "tradableRange": true,
    "rangePct": 2.38,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -505,7 +505,7 @@
    "tradableRange": true,
    "rangePct": 1.72,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -548,7 +548,7 @@
    "tradableRange": true,
    "rangePct": 1.38,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -591,7 +591,7 @@
    "tradableRange": true,
    "rangePct": 1.23,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -634,7 +634,7 @@
    "tradableRange": true,
    "rangePct": 1.04,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -677,7 +677,7 @@
    "tradableRange": true,
    "rangePct": 0.97,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -720,7 +720,7 @@
    "tradableRange": true,
    "rangePct": 0.7,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   },
   {
    "rolling": {
@@ -763,7 +763,7 @@
    "tradableRange": false,
    "rangePct": 0.34,
    "observationStatus": "reported",
-   "observedAt": "2026-11-17T20:07:26+00:00"
+   "observedAt": "2026-11-17T20:17:59+00:00"
   }
  ],
  "shareClassCandidateChecks": [
