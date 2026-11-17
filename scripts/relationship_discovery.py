@@ -12,7 +12,7 @@ from urllib.parse import urlsplit
 ROOT=Path(__file__).resolve().parents[1]
 REL=Path("data/company-relationships.json")
 OUT=Path("data/relationship-review.json")
-KINDS={"supplies","supply_contract","service_contract","equity_investment","financing","debt_repayment"}
+KINDS={"supplies","supply_contract","service_contract","equity_investment","financing","debt_repayment","arrangement"}
 EVENT_WORDS=re.compile(r"\b(contract|order|supply|supplier|partner(?:ship)?|financ(?:ing|es)|loan|invest(?:s|ed|ment)?|acqui(?:res|sition)|customer|deal|agreement|leverandør|kontrakt|avtale)\b",re.I)
 def textnorm(s):
     return unicodedata.normalize("NFKC",str(s or "")).casefold()
@@ -44,7 +44,7 @@ def validate(graph):
             raise ValueError("Invalid evidence chronology")
         if e.get("eventOn") and (not day(e["eventOn"]) or e["eventOn"]>e["disclosedOn"]):raise ValueError("Invalid event date")
         a=e["amount"]
-        if a is not None and (type(a.get("value")) is not int or a["value"]<=0 or not re.fullmatch(r"[A-Z]{3}",a["currency"]) or a["comparison"] not in {"exact_reported","greater_than","approximate"} or not a.get("basis")):
+        if a is not None and (type(a.get("value")) is not int or a["value"]<=0 or not re.fullmatch(r"[A-Z]{3}",a["currency"]) or a["comparison"] not in {"exact_reported","greater_than","approximate","up_to"} or not a.get("basis")):
             raise ValueError("Invalid amount")
         ids.add(e["id"])
     return entities
@@ -100,7 +100,18 @@ def run(root=ROOT):
     graph=json.loads((root/REL).read_text(encoding="utf8"))
     items=list(archived_items(root))
     candidates=discover(graph,items)
-    out={"schemaVersion":1,"generated":datetime.now(timezone.utc).isoformat(),"newsRecordsScanned":len(items),"notice":"Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.","candidates":candidates}
+    # A reviewed disclosure can establish a related, narrower fact than the
+    # headline. Link the fact, but do not mark the headline as verified.
+    reviewed={}
+    for e in graph["relationships"]:
+        if e.get("discoveryNewsId"):
+            reviewed.setdefault(e["discoveryNewsId"],[]).append(e["id"])
+    for row in candidates:
+        linked=reviewed.get(row["newsId"],[])
+        if linked:
+            row["status"]="related_evidence_recorded"
+            row["relatedRelationshipIds"]=sorted(linked)
+    out={"schemaVersion":1,"generated":datetime.now(timezone.utc).isoformat(),"newsRecordsScanned":len(items),"notice":"Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.","candidates":candidates,"relatedEvidenceLeadCount":sum(r["status"]=="related_evidence_recorded" for r in candidates)}
     p=root/OUT;tmp=p.with_suffix(".tmp");tmp.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf8");tmp.replace(p)
     print(json.dumps({"newsRecordsScanned":len(items),"verifiedSeedRelationships":len(graph["relationships"]),"reviewCandidates":len(candidates)}))
     return out

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "compiledOn": "2026-11-17",
+  "compiledOn": "2026-11-18",
   "notice": "Manually reviewed factual issuer disclosures, not current verified cash movements, exposure weights or revenue forecasts. Unmapped entities have no invented ticker. Supply arrows represent goods/services, not payment direction. Rights for commercial bulk export must be assessed separately.",
   "entities": [
     {
@@ -79,6 +79,98 @@
       "name": "Triumph Science and Technology Group Co., Ltd.",
       "aliases": [
         "Triumph Science and Technology Group"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "meta",
+      "name": "Meta Platforms, Inc.",
+      "aliases": [
+        "Meta Platforms",
+        "Meta"
+      ],
+      "listingId": "XNAS:META"
+    },
+    {
+      "id": "nokia",
+      "name": "Nokia Corporation",
+      "aliases": [
+        "Nokia"
+      ],
+      "listingId": "NOKIA.HE"
+    },
+    {
+      "id": "constellation",
+      "name": "Constellation Energy Corporation",
+      "aliases": [
+        "Constellation Energy"
+      ],
+      "listingId": "XNAS:CEG"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft Corporation",
+      "aliases": [
+        "Microsoft"
+      ],
+      "listingId": "XNAS:MSFT"
+    },
+    {
+      "id": "airbus",
+      "name": "Airbus SE",
+      "aliases": [
+        "Airbus"
+      ],
+      "listingId": "AIR.PA"
+    },
+    {
+      "id": "middle-east-airlines",
+      "name": "Middle East Airlines",
+      "aliases": [
+        "Middle East Airlines"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "unicredit",
+      "name": "UniCredit S.p.A.",
+      "aliases": [
+        "UniCredit",
+        "Unicredit"
+      ],
+      "listingId": "UCG.MI"
+    },
+    {
+      "id": "premier-energy",
+      "name": "Premier Energy PLC",
+      "aliases": [
+        "Premier Energy"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "premier-energy-2026-syndicate",
+      "name": "Premier Energy 2026 lending syndicate",
+      "aliases": [
+        "Premier Energy 2026 lending syndicate"
+      ],
+      "listingId": null,
+      "entityType": "financing_group"
+    },
+    {
+      "id": "exim-banca-romaneasca",
+      "name": "Exim Banca Romaneasca",
+      "aliases": [
+        "Exim Banca Romaneasca",
+        "Exim Banca Românească"
       ],
       "listingId": null
     }
@@ -278,6 +370,230 @@
       "eventOn": "2026-10-21",
       "status": "reported_repayment",
       "conditions": "The financed amount is not independently established as a payment to Triumph alone."
+    },
+    {
+      "id": "coreweave-openai-aggregate",
+      "from": "coreweave",
+      "to": "openai",
+      "type": "service_contract",
+      "subject": "Combined AI computing capacity agreements",
+      "disclosedOn": "2025-09-25",
+      "sourceUrl": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Expands-Agreement-with-OpenAI-by-up-to-6-5B/",
+      "sourceLocator": "September expansion announcement",
+      "amount": {
+        "currency": "USD",
+        "value": 22400000000,
+        "comparison": "up_to",
+        "basis": "approximate_combined_announced_contract_ceiling"
+      },
+      "status": "reported_contract",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "Aggregate ceiling as disclosed in September 2025, not an additional contract. Includes earlier March ($11.9bn), May ($4bn) and September ($6.5bn) ceilings; not realized revenue.",
+      "history": [
+        {
+          "disclosedOn": "2025-03-10",
+          "amount": {
+            "currency": "USD",
+            "value": 11900000000,
+            "comparison": "up_to",
+            "basis": "initial_contract_ceiling"
+          },
+          "sourceUrl": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx"
+        },
+        {
+          "disclosedOn": "2025-09-25",
+          "amount": {
+            "currency": "USD",
+            "value": 22400000000,
+            "comparison": "up_to",
+            "basis": "approximate_combined_announced_contract_ceiling"
+          },
+          "sourceUrl": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Expands-Agreement-with-OpenAI-by-up-to-6-5B/"
+        }
+      ]
+    },
+    {
+      "id": "openai-coreweave-equity",
+      "from": "openai",
+      "to": "coreweave",
+      "type": "equity_investment",
+      "subject": "Announced issuance of CoreWeave stock to OpenAI",
+      "disclosedOn": "2025-03-10",
+      "sourceUrl": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx",
+      "sourceLocator": "Initial infrastructure agreement announcement",
+      "amount": {
+        "currency": "USD",
+        "value": 350000000,
+        "comparison": "exact_reported",
+        "basis": "announced_stock_issuance"
+      },
+      "status": "announced_investment",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "Share issuance associated with the compute agreement; not established as a separate cash payment."
+    },
+    {
+      "id": "coreweave-meta-2026",
+      "from": "coreweave",
+      "to": "meta",
+      "type": "service_contract",
+      "subject": "Expanded AI cloud capacity agreement",
+      "disclosedOn": "2026-04-09",
+      "sourceUrl": "https://www.coreweave.com/news/coreweave-and-meta-announce-21-billion-expanded-ai-infrastructure-agreement",
+      "sourceLocator": "April 2026 issuer announcement",
+      "amount": {
+        "currency": "USD",
+        "value": 21000000000,
+        "comparison": "approximate",
+        "basis": "expanded_agreement_value"
+      },
+      "status": "reported_contract",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "endOn": "2032-12-31",
+      "conditions": "Separate April 2026 agreement; not cumulative Meta revenue or cash received."
+    },
+    {
+      "id": "nvidia-nokia-equity",
+      "from": "nvidia",
+      "to": "nokia",
+      "type": "equity_investment",
+      "subject": "Directed share issuance to NVIDIA",
+      "disclosedOn": "2025-11-13",
+      "sourceUrl": "https://www.nokia.com/newsroom/directed-share-issuance-to-nvidia-completed-a-change-in-the-total-number-of-nokia-shares/",
+      "sourceLocator": "Stock exchange release: completion of directed share issuance",
+      "amount": {
+        "currency": "USD",
+        "value": 1000000000,
+        "comparison": "approximate",
+        "basis": "announced_equity_subscription"
+      },
+      "status": "reported_completed_issuance",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "ownershipPercent": 2.9,
+      "conditions": "Original investment announced October 28; issuance completed November 13, representing about 2.90% at that date; current ownership not inferred.",
+      "history": [
+        {
+          "disclosedOn": "2025-10-28",
+          "amount": {
+            "currency": "USD",
+            "value": 1000000000,
+            "comparison": "approximate",
+            "basis": "announced_equity_subscription"
+          },
+          "sourceUrl": "https://www.nokia.com/newsroom/inside-information-nvidia-to-make-usd-1-billion-equity-investment-in-nokia-in-addition-to-new-strategic-partnership-nokias-board-resolved-on-directed-share-issuance-to-nvidia/"
+        }
+      ]
+    },
+    {
+      "id": "constellation-microsoft-ppa",
+      "from": "constellation",
+      "to": "microsoft",
+      "type": "supply_contract",
+      "subject": "Electricity from planned Crane Clean Energy Center restart",
+      "disclosedOn": "2024-11-04",
+      "sourceUrl": "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-third-quarter-2024-results",
+      "sourceLocator": "Third-quarter 2024 results; announced PPA",
+      "amount": null,
+      "status": "reported_contract",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "eventOn": "2024-09-20",
+      "conditions": "20-year power purchase agreement; future delivery depends on restart and approvals. No contract price disclosed."
+    },
+    {
+      "id": "constellation-meta-ppa",
+      "from": "constellation",
+      "to": "meta",
+      "type": "supply_contract",
+      "subject": "Clinton Clean Energy Center electricity",
+      "disclosedOn": "2025-06-03",
+      "sourceUrl": "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-meta-sign-20-year-deal-clean-reliable-nuclear",
+      "sourceLocator": "Issuer power purchase agreement announcement",
+      "amount": null,
+      "status": "reported_contract",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "20-year agreement for 1,121 MW, beginning June 2027 as announced; no contract price disclosed."
+    },
+    {
+      "id": "airbus-mea-a321xlr",
+      "from": "airbus",
+      "to": "middle-east-airlines",
+      "type": "supply_contract",
+      "subject": "Firm order for four A321XLR aircraft",
+      "disclosedOn": "2019-06-17",
+      "sourceUrl": "https://www.airbus.com/en/newsroom/press-releases/2019-06-middle-east-airlines-orders-four-airbus-a321xlrs",
+      "sourceLocator": "Issuer aircraft order announcement",
+      "amount": null,
+      "status": "historical_reported_order",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "Historical 2019 order. Does not establish the later delivery date or current outstanding order count.",
+      "discoveryNewsId": "AIR.PA:d719098eec1bca133da6bbc71cb2a2d770984471329d644d542353e381eee9d0"
+    },
+    {
+      "id": "syndicate-premier-facility",
+      "from": "premier-energy-2026-syndicate",
+      "to": "premier-energy",
+      "type": "financing",
+      "subject": "Senior syndicated facility for Evryo acquisition and refinancing",
+      "disclosedOn": "2026-11-17",
+      "sourceUrl": "https://www.eximbank.ro/2026/11/17/exim-banca-romaneasca-parte-a-uneia-dintre-cele-mai-mari-finantari-din-romania/",
+      "sourceLocator": "Participating bank release, facility details",
+      "amount": {
+        "currency": "EUR",
+        "value": 850000000,
+        "comparison": "exact_reported",
+        "basis": "total_syndicated_facility"
+      },
+      "status": "reported_signed_facility",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "EUR 825m term facility and EUR 25m revolver. Facility amount, not actual drawdown; acquisition still expected to close later in 2026.",
+      "discoveryNewsId": "UCG.MI:e97a1665bdda682a513c49a05de5b939df6af56aaf6349d7d274bb7b3bac058f"
+    },
+    {
+      "id": "unicredit-premier-syndicate-role",
+      "from": "unicredit",
+      "to": "premier-energy-2026-syndicate",
+      "type": "arrangement",
+      "subject": "Global coordination and underwriting role",
+      "disclosedOn": "2026-11-17",
+      "sourceUrl": "https://www.eximbank.ro/2026/11/17/exim-banca-romaneasca-parte-a-uneia-dintre-cele-mai-mari-finantari-din-romania/",
+      "sourceLocator": "Participating bank release, syndicate roles",
+      "amount": null,
+      "status": "reported_role",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "UniCredit S.p.A. and UniCredit Bank are named as coordinators and underwriters. Individual commitment unknown; do not add the total facility again."
+    },
+    {
+      "id": "exim-premier-syndicate-role",
+      "from": "exim-banca-romaneasca",
+      "to": "premier-energy-2026-syndicate",
+      "type": "arrangement",
+      "subject": "Mandated lead arranger and consortium participant",
+      "disclosedOn": "2026-11-17",
+      "sourceUrl": "https://www.eximbank.ro/2026/11/17/exim-banca-romaneasca-parte-a-uneia-dintre-cele-mai-mari-finantari-din-romania/",
+      "sourceLocator": "Participating bank release, syndicate roles",
+      "amount": null,
+      "status": "reported_role",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "conditions": "Individual commitment not disclosed. The total is stored only on the syndicate-to-borrower edge."
     }
   ]
 }

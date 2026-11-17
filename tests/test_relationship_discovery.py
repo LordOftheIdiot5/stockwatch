@@ -9,8 +9,8 @@ class RelationshipTests(unittest.TestCase):
     def story(self,headline,**extra):
         return {"id":"test","headline":headline,"published":"2026-11-17T12:00:00Z","url":"https://example.com/test",**extra}
     def test_actual_seed(self):
-        self.assertEqual(len(d.validate(self.graph)),9)
-        self.assertEqual(len(self.graph["relationships"]),11)
+        self.assertEqual(len(d.validate(self.graph)),20)
+        self.assertEqual(len(self.graph["relationships"]),21)
         self.assertTrue(all(x["actualCashFlow"] is False for x in self.graph["relationships"]))
         order=next(x for x in self.graph["relationships"] if x["id"]=="singulus-spacex-line")
         self.assertEqual(order["amount"]["comparison"],"greater_than")
