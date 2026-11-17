@@ -6,6 +6,8 @@ on:
   pull_request:
     paths:
       - 'scripts/delayed_exchange.py'
+      - 'scripts/direct_exchange_audit.py'
+      - 'tests/test_direct_exchange_audit.py'
       - 'scripts/exchange_capacity.py'
       - 'scripts/exchange_profile_audit.py'
       - 'tests/test_exchange_profile_audit.py'
@@ -68,3 +70,20 @@ jobs:
         run: python -m unittest discover -s tests -p test_exchange_capacity.py -v
       - name: Measure seven previous-day equity reports
         run: python scripts/exchange_capacity.py
+
+  direct-reference:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Direct-exchange reference tests
+        run: python -m unittest discover -s tests -p test_direct_exchange_audit.py -v
+      - name: Inspect Cboe overlap and official exchange landing pages (no quotes)
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: python scripts/direct_exchange_audit.py
