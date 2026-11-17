@@ -223,6 +223,16 @@ jobs:
           path: workspace-previews/v31-terminal-*.png
           if-no-files-found: ignore
 
+      - name: Modern overview desktop and mobile checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-modern-overview-')
+        run: python tests/browser_check_modern_overview.py
+      - name: Upload modern overview previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-modern-overview-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: modern-overview-previews
+          path: workspace-previews/modern-overview-*.png
+          if-no-files-found: ignore
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

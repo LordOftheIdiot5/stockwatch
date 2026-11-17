@@ -1,0 +1,3 @@
+# Modern data-first overview
+
+Design benchmark: Koyfin configurable dashboards, TradingView linked chart/screener/heatmap modes, Finviz data-dense overview. Keep Stockwatch identity. Replace hero with compact heading and actual data-coverage strip; distinguish latest comparable observations from research universe and licensed coverage. Chart uses only dated EIA/FRED history with source/unit/date/range controls and honest unavailable state. News is visible early; existing attention, map, screener, module and trust links preserved. Bound heatmap height; responsive desktop/mobile and light/dark. No fake charts or expanded price permissions. First homepage phase only; further design changes to inner pages and configurable workspaces follow validated rollout.
