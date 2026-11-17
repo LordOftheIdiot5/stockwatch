@@ -6,7 +6,7 @@ const require=createRequire(import.meta.url),N=require('../company-network-v84.j
 const load=p=>JSON.parse(fs.readFileSync(new URL('../data/'+p,import.meta.url),'utf8'));
 test('V84 evidence graph preserves exact directions and amount bases',()=>{
  const data=load('company-relationships.json'),g=N.graph(data);
- assert.equal(g.nodes.size,9);assert.equal(g.edges.length,11);
+ assert.equal(g.nodes.size,20);assert.equal(g.edges.length,21);
  const n=N.neighborhood(g,'spacex');
  assert.equal(n.edges.length,2);
  assert.ok(n.edges.some(e=>e.from==='singulus'&&e.to==='spacex'&&e.type==='supply_contract'&&N.amountLabel(e.amount).startsWith('> EUR 60 m')));
@@ -21,7 +21,7 @@ test('V84 evidence graph preserves exact directions and amount bases',()=>{
 test('V84 never displays review-only, fake cash-flow or malformed evidence',()=>{
  const data=load('company-relationships.json');
  for(const change of [{actualCashFlow:true},{evidenceStatus:'review_required'},{sourceUrl:'javascript:alert(1)'},{amount:{value:0,currency:'USD',comparison:'exact_reported',basis:'unknown'}},{disclosedOn:'2026-12-31'}]){
-  const clone=structuredClone(data);clone.relationships[0]={...clone.relationships[0],...change};assert.equal(N.graph(clone).edges.length,10);
+  const clone=structuredClone(data);clone.relationships[0]={...clone.relationships[0],...change};assert.equal(N.graph(clone).edges.length,20);
  }
 });
 test('V84 local photo attribution and exact listing matching',()=>{
