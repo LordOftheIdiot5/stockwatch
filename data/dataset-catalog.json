@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T00:43:02Z",
+  "generated": "2026-11-17T01:04:52Z",
   "datasets": [
     {
       "name": "European issuer directory",
@@ -64,7 +64,7 @@
     {
       "name": "ENTSO-E open energy reference series",
       "path": "data/entsoe-open.json",
-      "records": 1539,
+      "records": 1328,
       "license": "CC BY 4.0; selected load forecasts and physical flows; ENTSO-E Transparency Platform"
     },
     {
@@ -88,7 +88,7 @@
     {
       "name": "Official industry, assets, filings and mineral research",
       "path": "data/free-research.json",
-      "records": 1443,
+      "records": 35365,
       "license": "Per-dataset source terms; Comtrade preview metadata only"
     }
   ]
