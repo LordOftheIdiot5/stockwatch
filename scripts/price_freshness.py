@@ -34,7 +34,18 @@ def coverage(snapshot,watchlist,context,now):
     pairs=context.get("shareClasses") or []
     eligible=sum(p.get("priceDate")==target and p.get("aLatestDate")==target and p.get("bLatestDate")==target and p.get("latestPairEligible") is True and bool(p.get("currency")) for p in pairs)
     total=sum(counts.values())
-    return {"comparisonDate":target,"equities":counts,"total":total,"comparablePairs":eligible,"reportedPairs":len(pairs),
+    venues={}
+    inputs=snapshot.get("priceInputs") or {}
+    for entry in watchlist.get("tickers",[]):
+        ticker=entry.get("ticker","");venue=entry.get("exchange") or ticker.rsplit(".",1)[-1]
+        cell=venues.setdefault(venue,{"total":0,"comparable":0,"licensed":0,"licensedComparable":0})
+        cell["total"]+=1
+        current=price_quality(rows.get(ticker),target)=="comparable"
+        licensed=inputs.get(ticker)=="licensed_history"
+        cell["comparable"]+=int(current)
+        cell["licensed"]+=int(licensed)
+        cell["licensedComparable"]+=int(licensed and current)
+    return {"comparisonDate":target,"equities":counts,"total":total,"byVenue":venues,"comparablePairs":eligible,"reportedPairs":len(pairs),
             "status":"unknown" if not total else "degraded" if counts["comparable"]<total*.9 or eligible<len(pairs) else "coverage_ok",
             "method":"Conservative 22:00 UTC weekday cutoff; no exchange-specific holidays; not a live-quote guarantee."}
 

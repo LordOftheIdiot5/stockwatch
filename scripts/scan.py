@@ -30,6 +30,7 @@ import translate as translate_module                              # noqa: E402
 from translate import Translator                                  # noqa: E402
 import source_telemetry                                            # noqa: E402
 from price_freshness import comparison_date,price_quality,completed_market_baseline
+from licensed_scanner import select_chart
 source_telemetry.install(sources)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -345,8 +346,11 @@ def main() -> int:
 
     # --- prices ---------------------------------------------------------
     companies: list[dict] = []
+    price_inputs = {}
+    licensed_only = os.getenv("STOCKWATCH_LICENSED_PRICES_ONLY")=="true"
     for entry in watchlist:
-        data = sources.chart(entry["ticker"])
+        data, input_status = select_chart(ROOT,entry,now,sources.chart,BASELINE_DAYS+2,licensed_only)
+        price_inputs[entry["ticker"]] = input_status
         if not data:
             continue
         measured = score(data["bars"])
@@ -361,6 +365,7 @@ def main() -> int:
             "thin": bool(entry.get("thin")),
             "spark": spark(data["bars"]),
             "stories": [],
+            "priceProvenance": data.get("priceProvenance"),
             **measured,
         })
 
@@ -391,7 +396,7 @@ def main() -> int:
         if reasons:
             key=f"px:{row['ticker']}:{row['date']}"
             alerts.append({"kind":"price","key":key,"ticker":row["ticker"],"name":row["name"],
-                "headline":" and ".join(reasons),"url":f"https://finance.yahoo.com/quote/{row['ticker']}","fresh":key not in seen})
+                "headline":" and ".join(reasons),"url":(row.get("priceProvenance") or {}).get("sourceUrl") or f"https://finance.yahoo.com/quote/{row['ticker']}","fresh":key not in seen})
             seen.add(key)
 
     by_ticker = {c["ticker"]: c for c in companies}
@@ -603,6 +608,7 @@ def main() -> int:
         "tickers": len(watchlist),
         "marketPct": round(market, 2) if market is not None else None,
         "marketSampleSize": sample_size,
+        "priceInputs": price_inputs,
         "marketComparisonDate": target,
         "languages": sorted({l for _, ls in queries for l in ls}),
         "companies": companies,
