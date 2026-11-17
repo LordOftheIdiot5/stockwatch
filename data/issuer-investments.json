@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "compiledOn": "2026-11-17",
+  "notice": "Issuer-disclosed ownership and accounting contributions, not inferred exposures or investment valuations. Quarter-end accounting values must not be combined with later stake changes as if contemporaneous. Unlisted/unmapped entities have no stock ticker; no inferred links.",
+  "owners": [
+    {
+      "id": "wilh-wilhelmsen-holding",
+      "name": "Wilh. Wilhelmsen Holding ASA",
+      "listingTickers": [
+        "WWI.OL",
+        "WWIB.OL"
+      ],
+      "investments": [
+        {
+          "targetId": "wallenius-wilhelmsen",
+          "targetName": "Wallenius Wilhelmsen ASA",
+          "targetTicker": "WAWI.OL",
+          "relationship": "associate",
+          "ownership": [
+            {
+              "asOf": "2026-09-30",
+              "precision": "day",
+              "percent": 37.9,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            },
+            {
+              "asOf": "2026-10",
+              "precision": "month",
+              "percent": 37.04,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Post-quarter events, p. 2; Note 17, p. 28"
+            }
+          ],
+          "bookValue": {
+            "periodEnd": "2026-09-30",
+            "usdMillion": 1181,
+            "publishedOn": "2026-11-04",
+            "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+            "sourceLocator": "Note 4, p. 22"
+          },
+          "profitContribution": [
+            {
+              "periodEnd": "2025-09-30",
+              "usdMillion": 97,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22 comparative"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "usdMillion": 72,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ]
+        },
+        {
+          "targetId": "hyundai-glovis",
+          "targetName": "Hyundai Glovis Co., Ltd.",
+          "targetTicker": null,
+          "relationship": "associate",
+          "ownership": [
+            {
+              "asOf": "2026-09-30",
+              "precision": "day",
+              "percent": 11,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ],
+          "bookValue": {
+            "periodEnd": "2026-09-30",
+            "usdMillion": 934,
+            "publishedOn": "2026-11-04",
+            "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+            "sourceLocator": "Note 4, p. 22"
+          },
+          "profitContribution": [
+            {
+              "periodEnd": "2025-09-30",
+              "usdMillion": 31,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22 comparative"
+            },
+            {
+              "periodEnd": "2026-09-30",
+              "usdMillion": 51,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ]
+        },
+        {
+          "targetId": "edda-wind",
+          "targetName": "Edda Wind AS",
+          "targetTicker": null,
+          "relationship": "associate",
+          "ownership": [
+            {
+              "asOf": "2026-09-30",
+              "precision": "day",
+              "percent": 37.8,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ],
+          "bookValue": {
+            "periodEnd": "2026-09-30",
+            "usdMillion": 50,
+            "publishedOn": "2026-11-04",
+            "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+            "sourceLocator": "Note 4, p. 22"
+          },
+          "profitContribution": []
+        },
+        {
+          "targetId": "reach-subsea",
+          "targetName": "Reach Subsea ASA",
+          "targetTicker": "REACH.OL",
+          "relationship": "associate",
+          "ownership": [
+            {
+              "asOf": "2026-09-30",
+              "precision": "day",
+              "percent": 29.6,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ],
+          "bookValue": {
+            "periodEnd": "2026-09-30",
+            "usdMillion": 50,
+            "publishedOn": "2026-11-04",
+            "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+            "sourceLocator": "Note 4, p. 22"
+          },
+          "profitContribution": []
+        },
+        {
+          "targetId": "coast-center-base",
+          "targetName": "Coast Center Base",
+          "targetTicker": null,
+          "relationship": "joint_venture",
+          "ownership": [
+            {
+              "asOf": "2026-09-30",
+              "precision": "day",
+              "percent": 50,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ],
+          "bookValue": {
+            "periodEnd": "2026-09-30",
+            "usdMillion": 103,
+            "publishedOn": "2026-11-04",
+            "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+            "sourceLocator": "Note 4, p. 22"
+          },
+          "profitContribution": []
+        },
+        {
+          "targetId": "wilhelmsen-ahrenkiel",
+          "targetName": "Wilhelmsen Ahrenkiel Ship Management",
+          "targetTicker": null,
+          "relationship": "associate",
+          "ownership": [
+            {
+              "asOf": "2026-09-30",
+              "precision": "day",
+              "percent": 50,
+              "publishedOn": "2026-11-04",
+              "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+              "sourceLocator": "Note 4, p. 22"
+            }
+          ],
+          "bookValue": {
+            "periodEnd": "2026-09-30",
+            "usdMillion": 8,
+            "publishedOn": "2026-11-04",
+            "sourceUrl": "https://www.wilhelmsen.com/globalassets/investor-relations/quarterly-reportspresentation/q3-2026/wilhelmsen-q3-2026-report.pdf",
+            "sourceLocator": "Note 4, p. 22"
+          },
+          "profitContribution": []
+        }
+      ]
+    }
+  ]
+}
