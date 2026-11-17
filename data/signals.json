@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T23:25:56+00:00",
+ "generated": "2026-11-17T23:27:35+00:00",
  "tickers": 138,
  "marketPct": null,
  "marketSampleSize": 2,
@@ -301,7 +301,7 @@
    "medianVolume": 745,
    "rvol": 0.13,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -629,7 +629,7 @@
    "medianVolume": 685,
    "rvol": 0.0,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -1812,7 +1812,7 @@
    "medianVolume": 762757,
    "rvol": 0.91,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -3256,7 +3256,7 @@
    "medianVolume": 54931,
    "rvol": 0.56,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -4393,7 +4393,7 @@
    "medianVolume": 754389,
    "rvol": 0.0,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -4887,7 +4887,7 @@
    "medianVolume": 1015574,
    "rvol": 0.53,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -4940,7 +4940,7 @@
    "medianVolume": 217830,
    "rvol": 0.64,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -7856,6 +7856,19 @@
    "stories": [
     {
      "kind": "news",
+     "key": "web:https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMnU2Ylo4OUhhTmx0WFQ5QjZjamdLZmNnZ3ktLWNwRE1PNkhZVTZsSktoNzJzeENfdm5BWnRqQV9uazZaUEczY0lCMTRYbXdZaTJMSlBrQWk4VWVjWG1mYzZnRHZ3ektGSjZzX0NuOHFHWHdjXzZoOVU0ZmZYYlVWWFo5NmMyYkkxaHUw?oc=5",
+     "headline": "Takeaways from the AP and FRONTLINE investigation into sextortion",
+     "english": null,
+     "lang": "en",
+     "publisher": "The Independent",
+     "score": 3,
+     "material": 3,
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMnU2Ylo4OUhhTmx0WFQ5QjZjamdLZmNnZ3ktLWNwRE1PNkhZVTZsSktoNzJzeENfdm5BWnRqQV9uazZaUEczY0lCMTRYbXdZaTJMSlBrQWk4VWVjWG1mYzZnRHZ3ektGSjZzX0NuOHFHWHdjXzZoOVU0ZmZYYlVWWFo5NmMyYkkxaHUw?oc=5",
+     "published": "Tue, 17 Nov 2026 21:55:00 GMT",
+     "fresh": true
+    },
+    {
+     "kind": "news",
      "key": "web:https://news.google.com/rss/articles/CBMi1wFBVV95cUxNNFdsV3ZvUDRSS2lmY1BscUE0TlozU05GTUZLaEthb1F2dTc4RGFFU0N2dEVwUDhvU29DbmVaN0k1ZHVmbThGR3o0Q3Z5VXpPWTByVXBMUVNwVG5RbWJWMzRTMktfWmIycF9DNzdXOTRZMlVVWHdIdzNwOF9NaDlTMV9ISFlRX3pGRVJOVjBmX3pRa0V2OUJFZ0pJN2FhS2w0Y2FHNDQyZHhyVzhyQTBCdnNNZXNBeGNkS0xJNkJtMV9wSGR3cm0tZDdNV09yOHhTZ0lBUnhDNA?oc=5",
      "headline": "AI agents are coming to help hire, schedule and manage frontline workers as Fountain launches Orchestra",
      "english": null,
@@ -7879,19 +7892,6 @@
      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREh5UW9mTTZqUTJIUjJ2S1R2WDMyc0VETVhMU1JOaHRjcjVUVVh2SEhwWFpzSEpJZTQ3WERXQWctNmVGaWx1SVg3VnpuWDFnTzdyZVMyaTRkcHREVThjV2JvT2I2eWRHWWhYQTlBUVFqcXBadDlPYnl1dGdUSW1yN1hUdTM?oc=5",
      "published": "Tue, 17 Nov 2026 05:00:25 GMT",
      "fresh": true
-    },
-    {
-     "kind": "news",
-     "key": "web:https://news.google.com/rss/articles/CBMivwFBVV95cUxOS2JOb3Q3N3R1eTJja0VpYkVLdm1zd1BBQXVIdmktR2M3WlFiSGc2cFFXZmFMWTlJUFRnaHdTaVZEMWdFc1pmcW4zSTVtbFg1aXhmdXhWakVOci1TSml0N1FEc01NVnhpcHJyLWtaQlVyWTBxd0dWc1lQUDRiN2o1eVFpZ2RrWDQzcVctUk9JNk5YNHVKWk03U3hWdmxzSFFpZTFnUi04NlQ0aUlpZDNmNVVLWTNac21hV3Mxa0dyQQ?oc=5",
-     "headline": "Takeaways from the AP and FRONTLINE investigation into sextortion",
-     "english": null,
-     "lang": "en",
-     "publisher": "Durango Herald",
-     "score": 3,
-     "material": 3,
-     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOS2JOb3Q3N3R1eTJja0VpYkVLdm1zd1BBQXVIdmktR2M3WlFiSGc2cFFXZmFMWTlJUFRnaHdTaVZEMWdFc1pmcW4zSTVtbFg1aXhmdXhWakVOci1TSml0N1FEc01NVnhpcHJyLWtaQlVyWTBxd0dWc1lQUDRiN2o1eVFpZ2RrWDQzcVctUk9JNk5YNHVKWk03U3hWdmxzSFFpZTFnUi04NlQ0aUlpZDNmNVVLWTNac21hV3Mxa0dyQQ?oc=5",
-     "published": "Tue, 17 Nov 2026 21:55:40 GMT",
-     "fresh": false
     }
    ],
    "priceStatus": "retained",
@@ -7962,7 +7962,7 @@
    "medianVolume": 542005,
    "rvol": 0.0,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null,
@@ -9046,7 +9046,7 @@
    "medianVolume": 34524,
    "rvol": 2.52,
    "priceStatus": "reported",
-   "priceObservedAt": "2026-11-17T23:25:56+00:00",
+   "priceObservedAt": "2026-11-17T23:27:35+00:00",
    "marketPct": null,
    "excessPct": null,
    "excessSigma": null
@@ -9353,6 +9353,21 @@
    "fresh": true,
    "ticker": "SAP.DE",
    "name": "SAP"
+  },
+  {
+   "kind": "news",
+   "key": "web:https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMnU2Ylo4OUhhTmx0WFQ5QjZjamdLZmNnZ3ktLWNwRE1PNkhZVTZsSktoNzJzeENfdm5BWnRqQV9uazZaUEczY0lCMTRYbXdZaTJMSlBrQWk4VWVjWG1mYzZnRHZ3ektGSjZzX0NuOHFHWHdjXzZoOVU0ZmZYYlVWWFo5NmMyYkkxaHUw?oc=5",
+   "headline": "Takeaways from the AP and FRONTLINE investigation into sextortion",
+   "english": null,
+   "lang": "en",
+   "publisher": "The Independent",
+   "score": 3,
+   "material": 3,
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMnU2Ylo4OUhhTmx0WFQ5QjZjamdLZmNnZ3ktLWNwRE1PNkhZVTZsSktoNzJzeENfdm5BWnRqQV9uazZaUEczY0lCMTRYbXdZaTJMSlBrQWk4VWVjWG1mYzZnRHZ3ektGSjZzX0NuOHFHWHdjXzZoOVU0ZmZYYlVWWFo5NmMyYkkxaHUw?oc=5",
+   "published": "Tue, 17 Nov 2026 21:55:00 GMT",
+   "fresh": true,
+   "ticker": "FRO.OL",
+   "name": "Frontline"
   },
   {
    "kind": "news",
@@ -9740,21 +9755,6 @@
    "material": 2,
    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1TUzY1aU5LTk5meEtPTlVRUndSOGozMEV5c3d5OWZHWFFXcDdnWHZyXzREX1NkVFNuWEx6cFB0YkdwZjlPSDBCM0JoSk9mcS1UU21Oa0tpLVdZS083dE5fXzROUS0tVkdSVGtIU09iZ082ZUR1a3FSNQ?oc=5",
    "published": "Mon, 16 Nov 2026 13:00:00 GMT",
-   "fresh": true,
-   "ticker": "TISG.MI",
-   "name": "The Italian Sea Group"
-  },
-  {
-   "kind": "news",
-   "key": "web:https://news.google.com/rss/articles/CBMihwFBVV95cUxNQWV5TjdJYmdaUm9HcHIzcEFoRjExVUVHOFFHZ2ROd1lCd0p2MXlHZHFmc1g4SDMxNVZKY0lYZW9pUWJFM2JFNV9UUUVDX3VVenRxSDhqbWRzSmZxV2xGTllQUVdwRHpyYmJhRzNQZ2VjT0I5WWloY2dUd29JWERac3Y0dmlNeHc?oc=5",
-   "headline": "Sanlorenzo 2026 results show 16.4% order intake rises as cash generation strengthens",
-   "english": null,
-   "lang": "en",
-   "publisher": "Marine Industry News",
-   "score": 2,
-   "material": 2,
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQWV5TjdJYmdaUm9HcHIzcEFoRjExVUVHOFFHZ2ROd1lCd0p2MXlHZHFmc1g4SDMxNVZKY0lYZW9pUWJFM2JFNV9UUUVDX3VVenRxSDhqbWRzSmZxV2xGTllQUVdwRHpyYmJhRzNQZ2VjT0I5WWloY2dUd29JWERac3Y0dmlNeHc?oc=5",
-   "published": "Mon, 16 Nov 2026 11:28:41 GMT",
    "fresh": true,
    "ticker": "TISG.MI",
    "name": "The Italian Sea Group"

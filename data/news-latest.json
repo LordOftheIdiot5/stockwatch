@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T23:26:51Z",
+  "generated": "2026-11-17T23:28:18Z",
   "items": [
     {
       "id": "FRO.OL:5a31995d21f5eb0c437aafc60bc8e418e16cdc2224ed65428220224f1a9bf0f9",
@@ -19,6 +19,26 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "FRO.OL:89042fc5843491fb02c243c3dc84c4d749f650af73f70083ad5eeb475f2ad87d",
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Takeaways from the AP and FRONTLINE investigation into sextortion",
+      "english": null,
+      "publisher": "The Independent",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMnU2Ylo4OUhhTmx0WFQ5QjZjamdLZmNnZ3ktLWNwRE1PNkhZVTZsSktoNzJzeENfdm5BWnRqQV9uazZaUEczY0lCMTRYbXdZaTJMSlBrQWk4VWVjWG1mYzZnRHZ3ektGSjZzX0NuOHFHWHdjXzZoOVU0ZmZYYlVWWFo5NmMyYkkxaHUw?oc=5",
+      "published": "2026-11-17T21:55:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "FRO.OL:5a31995d21f5eb0c437aafc60bc8e418e16cdc2224ed65428220224f1a9bf0f9"
     },
     {
       "id": "1AST.DE:18a19a13262ec08482e02774c4420db6ae0cf1d9921eaea69223c019fb43e9b2",
@@ -1887,34 +1907,15 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:c3fc48e90e4e63751c2bbaf6b1944a9065378f610ea142d3fd8327e203e28137",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "UniCredit wins EU and US approval for Commerzbank takeover; Deutsche shares fall as leaks reveal systemic failures",
-      "english": null,
-      "publisher": "TheBanker.com",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB2YmgwSXFMY25CN1lHR0xKdUVZaTNYZy01RUVHdnpMcm83MnlwcDJxQmZLem95a3RmN1VVVzE4eFFDTXpYQUMzT3V5SHFyWDRTNDlpa1FON2ZNeDBxNXRpX0FHWEZfcDQ2Rk02SUpPSnJOZGF1T0RQZVh3?oc=5",
-      "published": "2026-11-17T11:10:55Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "M&A",
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 790,
+  "totalStored": 791,
   "limit": 100,
   "quality": {
-    "total": 790,
+    "total": 791,
     "relevant": 540,
     "review": 219,
-    "duplicates": 39,
+    "duplicates": 40,
     "issuerLinked": 0,
     "categories": {
       "Earnings / results": 107,
@@ -1924,7 +1925,7 @@
       "Contracts": 46,
       "Capital & ownership": 0,
       "Management": 36,
-      "General": 530
+      "General": 531
     }
   }
 }
