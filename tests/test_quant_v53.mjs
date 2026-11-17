@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+const Q=createRequire(import.meta.url)('../quant-v53.js');
+const rows=Array.from({length:30},(_,i)=>({date:new Date(Date.UTC(2026,0,i+1)).toISOString().slice(0,10),value:1+i*.01}));
+test('sample gating, quantiles and duplicate rejection',()=>{assert.equal(Q.summary(rows.slice(0,2)).robustZ,null);assert.equal(Q.summary(rows).n,30);assert.ok(Q.summary(rows).robustZ>0);assert.equal(Q.series([...rows,{...rows[0],value:2}]).length,29);assert.equal(Q.summary(rows.map(x=>({...x,value:1}))).robustZ,null)});
+test('liquidity descriptive',()=>{assert.equal(Q.liquidity(1000,2000,100).limitingPct,10);assert.equal(Q.liquidity(0,2000,100),null)});
+const a={listingId:'a',isin:'ISIN-A',mic:'XOSL',currency:'NOK',adjusted:false,redistributionPermitted:true,derivedResearchPermitted:true,licenseReference:'https://example.com/license',bars:[{date:'2026-01-02',close:100,volume:10}]};
+const b={...a,listingId:'b',mic:'XSTO',currency:'SEK',bars:[{date:'2026-01-02',close:80,volume:10}]};
+const r={a:'a',b:'b',kind:'cross_listing',verified:true,sourceUrl:'https://example.com/evidence',sameUnit:true};
+const f={base:'NOK',quote:'SEK',redistributionPermitted:true,derivedResearchPermitted:true,sourceUrl:'https://example.com/fx',licenseReference:'https://example.com/fx-license',rates:[{date:'2026-01-02',value:.8}]};
+test('cross-market alignment requires verified identities, exact dated FX and rights',()=>{assert.deepEqual(Q.align(a,b,r,f),[{date:'2026-01-02',value:1}]);assert.deepEqual(Q.align(a,b,{...r,verified:false},f),[]);assert.deepEqual(Q.align(a,b,r,null),[]);assert.deepEqual(Q.align(a,b,r,{...f,rates:[]}),[]);assert.deepEqual(Q.align(a,{...b,derivedResearchPermitted:false},r,f),[]);assert.deepEqual(Q.align(a,{...b,bars:[{date:'2026-01-02',close:80,volume:0}]},r,f),[])});

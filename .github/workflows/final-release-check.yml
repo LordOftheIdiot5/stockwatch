@@ -79,6 +79,10 @@ jobs:
         run: |
           node --check screener-v51.js
           node --test tests/test_screener_v51.mjs
+      - name: V53 quantitative research tests
+        run: |
+          node --check quant-v53.js
+          node --test tests/test_quant_v53.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
