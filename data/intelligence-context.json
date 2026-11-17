@@ -151,6 +151,398 @@
       "key": null,
       "href": "health.html",
       "source": "ENTSO-E"
+    },
+    {
+      "id": "industry-eu",
+      "label": "European manufacturing output",
+      "file": "data/free-research.json",
+      "key": "eurostat-production",
+      "href": "terminal.html?research=official",
+      "source": "Eurostat"
+    },
+    {
+      "id": "industry-no",
+      "label": "Norwegian industrial production",
+      "file": "data/free-research.json",
+      "key": "ssb-production",
+      "href": "terminal.html?research=official",
+      "source": "SSB"
+    },
+    {
+      "id": "industry-se",
+      "label": "Swedish production value",
+      "file": "data/free-research.json",
+      "key": "scb-production",
+      "href": "terminal.html?research=official",
+      "source": "SCB"
+    },
+    {
+      "id": "industry-fi",
+      "label": "Finnish industrial production",
+      "file": "data/free-research.json",
+      "key": "finland-production",
+      "href": "terminal.html?research=official",
+      "source": "Statistics Finland"
+    },
+    {
+      "id": "industry-dk",
+      "label": "Danish industrial production",
+      "file": "data/free-research.json",
+      "key": "denmark-production",
+      "href": "terminal.html?research=official",
+      "source": "Statistics Denmark"
+    },
+    {
+      "id": "minerals",
+      "label": "USGS mineral commodity statistics",
+      "file": "data/free-research.json",
+      "key": "usgs-mineral-statistics",
+      "href": "terminal.html?research=official",
+      "source": "USGS"
+    },
+    {
+      "id": "oil-fields",
+      "label": "Norwegian offshore fields",
+      "file": "data/free-research.json",
+      "key": "sodir-fields",
+      "href": "terminal.html?research=official",
+      "source": "SODIR"
+    },
+    {
+      "id": "oil-ownership",
+      "label": "Offshore ownership history",
+      "file": "data/free-research.json",
+      "key": "sodir-owner-history",
+      "href": "terminal.html?research=official",
+      "source": "SODIR"
+    },
+    {
+      "id": "policy-no",
+      "label": "Norwegian policy rate",
+      "file": "data/free-research.json",
+      "key": "norges-bank-policy",
+      "href": "terminal.html?research=official",
+      "source": "Norges Bank"
+    },
+    {
+      "id": "policy-se",
+      "label": "Swedish policy rate",
+      "file": "data/free-research.json",
+      "key": "riksbank-policy",
+      "href": "terminal.html?research=official",
+      "source": "Riksbank"
+    },
+    {
+      "id": "policy-eu",
+      "label": "ECB deposit facility rate",
+      "file": "data/free-research.json",
+      "key": "ecb-deposit",
+      "href": "terminal.html?research=official",
+      "source": "ECB"
+    },
+    {
+      "id": "lending-eu",
+      "label": "Euro-area corporate borrowing context",
+      "file": "data/free-research.json",
+      "key": "ecb-corporate-lending",
+      "href": "terminal.html?research=official",
+      "source": "ECB"
+    }
+  ],
+  "driverProfiles": [
+    {
+      "id": "automotive",
+      "sectors": [
+        "Automotive"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Vehicle demand and financing",
+          "question": "Are registrations, orders and affordable vehicle financing supporting sales?",
+          "datasetIds": [
+            "rates",
+            "industry-eu",
+            "lending-eu"
+          ],
+          "missing": "Regional registrations, vehicle loan rates and order books; US Treasury yields are only macro context."
+        },
+        {
+          "category": "Inputs",
+          "label": "Metals and electronic components",
+          "question": "Could steel, aluminium, battery materials or chips constrain production?",
+          "datasetIds": [
+            "minerals"
+          ],
+          "missing": "Product-specific metal and battery costs, chip availability and bill of materials."
+        },
+        {
+          "category": "Infrastructure",
+          "label": "Vehicle logistics",
+          "question": "Could car-carrier availability and port congestion affect delivery?",
+          "datasetIds": [
+            "ports",
+            "connectivity"
+          ],
+          "missing": "RoRo/car-carrier freight rates and actual routes; container indicators are not car freight rates."
+        },
+        {
+          "category": "Risk",
+          "label": "Trade and currency",
+          "question": "Could tariffs, exchange rates and market access change margins?",
+          "datasetIds": [
+            "trade",
+            "fx"
+          ],
+          "missing": "Issuer currency exposures, hedges and applicable tariffs."
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "sectors": [
+        "Tech & space"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Technology capital spending",
+          "question": "Which end markets and capital spending programs drive orders?",
+          "datasetIds": [
+            "industry-eu"
+          ],
+          "missing": "Cloud and telecom capex, semiconductor orders and issuer product mix."
+        },
+        {
+          "category": "Inputs",
+          "label": "Semiconductors and components",
+          "question": "Are manufacturing capacity and component supplies constraining output?",
+          "datasetIds": [
+            "minerals"
+          ],
+          "missing": "Foundry utilization, packaging, memory and component lead times."
+        },
+        {
+          "category": "Infrastructure",
+          "label": "Power and network capacity",
+          "question": "Could power or network constraints affect infrastructure customers?",
+          "datasetIds": [
+            "power"
+          ],
+          "missing": "Data-center load, grid connections and capacity in relevant regions; ENTSO-E series are contextual, not electricity prices."
+        },
+        {
+          "category": "Risk",
+          "label": "Trade and regulation",
+          "question": "Could export rules or currency affect sales and sourcing?",
+          "datasetIds": [
+            "fx",
+            "trade"
+          ],
+          "missing": "Product-specific export controls and company geographic exposures."
+        }
+      ]
+    },
+    {
+      "id": "shipping",
+      "sectors": [
+        "Shipping & offshore"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Cargo and fleet demand",
+          "question": "How might cargo volumes and fleet supply influence utilization?",
+          "datasetIds": [
+            "ports",
+            "connectivity",
+            "industry-eu"
+          ],
+          "missing": "Cargo-specific flows, fleet capacity, vessel class and routes; container activity is broad context only."
+        },
+        {
+          "category": "Inputs",
+          "label": "Fuel and operating costs",
+          "question": "Could fuel and ship operating costs affect earnings?",
+          "datasetIds": [
+            "brent"
+          ],
+          "missing": "Bunker prices, consumption and contractual cost pass-through; Brent is not bunker fuel."
+        },
+        {
+          "category": "Infrastructure",
+          "label": "Port and fleet availability",
+          "question": "Are congestion or capacity constraining voyages?",
+          "datasetIds": [
+            "ports",
+            "connectivity"
+          ],
+          "missing": "Vessel movements, port waiting times, drydock schedules and fleet availability."
+        },
+        {
+          "category": "Risk",
+          "label": "Freight rates and contracts",
+          "question": "How much earnings exposure exists to spot versus contracted rates?",
+          "datasetIds": [
+            "usda"
+          ],
+          "missing": "Vessel-specific rates and charter contracts; USDA grain-route index is not tanker, RoRo or container freight."
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "sectors": [
+        "Energy producers",
+        "Grid & energy"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Commodity and power demand",
+          "question": "How could energy demand affect output prices and volumes?",
+          "datasetIds": [
+            "brent",
+            "wti",
+            "power"
+          ],
+          "missing": "Gas prices, authorized electricity prices and issuer production mix; grid observations are not price data."
+        },
+        {
+          "category": "Inputs",
+          "label": "Production and project costs",
+          "question": "Could service, equipment and financing costs affect projects?",
+          "datasetIds": [
+            "rates",
+            "policy-no",
+            "policy-eu"
+          ],
+          "missing": "Project cost breakdown and regional service-cost series."
+        },
+        {
+          "category": "Infrastructure",
+          "label": "Grid and transport capacity",
+          "question": "Are connections, transmission or transport limiting output?",
+          "datasetIds": [
+            "power",
+            "oil-fields",
+            "oil-ownership"
+          ],
+          "missing": "Asset-level location, contracts, bottlenecks and connection status."
+        },
+        {
+          "category": "Risk",
+          "label": "Hedges and regulation",
+          "question": "Are price sensitivity, taxes and regulation material?",
+          "datasetIds": [
+            "fx"
+          ],
+          "missing": "Hedge book, production taxes, fiscal terms and currency exposures."
+        }
+      ]
+    },
+    {
+      "id": "industrial",
+      "sectors": [
+        "Industry & defence",
+        "Construction",
+        "Mining & minerals"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Industrial orders",
+          "question": "Are infrastructure and industrial investment supporting demand?",
+          "datasetIds": [
+            "trade",
+            "industry-eu",
+            "industry-no",
+            "industry-se",
+            "industry-fi",
+            "industry-dk"
+          ],
+          "missing": "Segment orders, industrial production and relevant public investment."
+        },
+        {
+          "category": "Inputs",
+          "label": "Materials and power",
+          "question": "Which material and energy costs could affect margins?",
+          "datasetIds": [
+            "brent",
+            "power",
+            "minerals"
+          ],
+          "missing": "Product-specific metal prices and authorized local power prices."
+        },
+        {
+          "category": "Infrastructure",
+          "label": "Logistics and capacity",
+          "question": "Could transport availability constrain deliveries?",
+          "datasetIds": [
+            "ports",
+            "connectivity"
+          ],
+          "missing": "Company routes, mode-specific freight and actual plant capacity."
+        },
+        {
+          "category": "Risk",
+          "label": "Finance and currency",
+          "question": "Could borrowing costs or currency changes constrain customers?",
+          "datasetIds": [
+            "rates",
+            "fx"
+          ],
+          "missing": "Issuer debt, currencies, hedging and contractual pass-through."
+        }
+      ]
+    },
+    {
+      "id": "pharma",
+      "sectors": [
+        "Pharma & medtech"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Treatment demand",
+          "question": "Are patient demand, market access and reimbursement supporting sales?",
+          "datasetIds": [],
+          "missing": "Product sales volumes, prescriptions and reimbursement data."
+        },
+        {
+          "category": "Inputs",
+          "label": "Manufacturing inputs",
+          "question": "Could active ingredients, components or manufacturing costs constrain supply?",
+          "datasetIds": [],
+          "missing": "Product-specific input prices, supplier and sourcing evidence."
+        },
+        {
+          "category": "Infrastructure",
+          "label": "Production capacity",
+          "question": "Are regulated manufacturing and distribution capacity adequate?",
+          "datasetIds": [],
+          "missing": "Verified facility capacity, expansions and distribution bottlenecks."
+        },
+        {
+          "category": "Risk",
+          "label": "Trials, patents and regulation",
+          "question": "Could approvals, trial outcomes and patent expiries affect the business?",
+          "datasetIds": [],
+          "missing": "Issuer filings, regulator announcements and patent timelines."
+        }
+      ]
+    }
+  ],
+  "driverIssuerOverrides": [
+    {
+      "ticker": "VOLV-B.ST",
+      "profileId": "automotive",
+      "note": "Commercial vehicle manufacturer: prioritize truck registrations, fleet investment, order intake and freight-cycle demand; passenger-car registrations are not direct Volvo Group sales."
+    },
+    {
+      "ticker": "ASML.AS",
+      "profileId": "technology",
+      "note": "Semiconductor equipment supplier: prioritize lithography orders, foundry capital expenditure, export licensing and customer investment, rather than treating it as a GPU designer."
     }
   ]
 }

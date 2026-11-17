@@ -1,0 +1,5 @@
+# Economic driver research foundation
+
+Adds six editorial sector profiles with demand, inputs, infrastructure and risk categories, and exact issuer research notes for Volvo Group and ASML. Existing catalog datasets are contextual proxies only. Missing company-level and sector-specific evidence is explicit. No quantitative exposure, price forecast, current news attribution or causation is asserted; no new data source activated. Research lab News & intelligence exposes these profiles. Tests include unknown-sector fallback and mobile/desktop browser checks. This is a separate draft from V46 chart navigation; deployment and further company-specific data collection pending.
+
+Official dataset explorer: lazy loading, source retrieval/status, original statistical dimensions, 25-row pagination, search, filing metric/unit selection retaining accession and fiscal period. NVIDIA is a filing-specific view, not an activated quote feed. Sector hypotheses now connect to selected official datasets; no company exposure or causal claim. Browser test uses explicitly synthetic mocked fixture.
