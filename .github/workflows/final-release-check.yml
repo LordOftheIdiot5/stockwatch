@@ -75,6 +75,10 @@ jobs:
         run: node --test tests/test_price_freshness.mjs tests/test_historical_session.mjs
       - name: A/B directional scenario tests
         run: node --test tests/test_ab_review.mjs
+      - name: V51 session-safe screening tests
+        run: |
+          node --check screener-v51.js
+          node --test tests/test_screener_v51.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
