@@ -85,7 +85,7 @@ async function render({root,companies,universe,signals,context,licensedPrices}){
   const native=$('terminalNativeHistory'),g=++gen;
   const entry=(licensedPrices?.records||[]).find(p=>p.listingId===selected&&p.redistributionPermitted===true&&p.priceType==='end_of_day'&&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(p.historyPath||''));
   native.textContent='Native equity chart requires authorized dated price observations; no undated sparkline is treated as price history.';
-  if(entry)get(entry.historyPath).then(h=>{if(g!==gen||h.listingId!==entry.listingId||h.redistributionPermitted!==true||h.priceType!=='end_of_day'||h.source!==entry.source||h.currency!==entry.currency||h.licenseReference!==entry.licenseReference)return;const p=points((h.bars||[]).map(b=>({date:b.date,value:b.close})));if(p.length>=2)chart(native,[{label:r.name,unit:h.currency,points:p}])}).catch(()=>{});
+  if(entry)get(entry.historyPath).then(h=>{if(g!==gen||!window.StockwatchNativeChart?.authorized(entry,h))return;window.StockwatchNativeChart.mount(native,{label:r.name,unit:h.currency,bars:h.bars,equity:true,source:h.sourceUrl,notice:'Licensed end-of-day observations · '+(h.adjusted?'Adjusted':'Unadjusted')+' · '+h.source})}).catch(()=>{});
  }
  function drawSeries(){
   $('terminalSeries').innerHTML=series.map(s=>'<label class="sw-terminal-series"><input type="checkbox" data-terminal-series="'+esc(s.key)+'" '+(keys.includes(s.key)?'checked':'')+'><span><b>'+esc(s.label)+' · '+esc(s.country||'')+'</b><small>'+fmt(s.value)+' '+esc(s.unit)+' · '+esc(s.period||'')+'</small></span></label>').join('')||'<p>No official series available.</p>';
@@ -95,7 +95,7 @@ async function render({root,companies,universe,signals,context,licensedPrices}){
   if(mode==='raw'){const s=selected[0];if(s){const a=points(s.history),end=Date.parse(a.at(-1)?.date);plotted=[{...s,points:a.filter(p=>!days||Date.parse(p.date)>=end-days*86400000)}]}}
   else plotted=compareSeries(selected,days);
   root.querySelectorAll('[data-terminal-days]').forEach(b=>{b.classList.toggle('active',+b.dataset.terminalDays===days);b.setAttribute('aria-pressed',String(+b.dataset.terminalDays===days))});
-  chart($('terminalChart'),plotted,()=>{days=0;drawChart();save()});
+  if(window.StockwatchNativeChart&&plotted.length&&plotted[0].points.length>=2)window.StockwatchNativeChart.mount($('terminalChart'),{label:mode==='raw'?'Official historical observations':'Aligned series · base 100',series:plotted,notice:'Official economic observations, not stock candles.'});else chart($('terminalChart'),plotted);
   $('terminalChartSources').innerHTML='<p class="sw-terminal-foot">'+(mode==='raw'?'Original units; first selected series only.':'Common observation dates only · first overlapping date = 100 · no interpolation. Not investment returns.')+'</p>'+plotted.map((s,i)=>'<a class="sw-terminal-source" href="'+esc(safeUrl(s.sourceUrl))+'" target="_blank" rel="noopener noreferrer"><i style="background:'+colors[i]+'"></i>'+esc(s.label)+' · '+esc(s.provider||'Official source')+' ↗</a>').join('');
  }
  $('terminalCommodities').innerHTML=table(['Series','Last','1D'],[...(context?.commodities||[]),...(context?.freight||[])].slice(0,18).map(r=>'<tr><td>'+esc(r.name)+(r.proxy?' <small>ETF proxy</small>':'')+'</td><td>'+fmt(r.last)+'</td><td class="'+tone(r.changePct)+'">'+pct(r.changePct)+'</td></tr>').join(''));

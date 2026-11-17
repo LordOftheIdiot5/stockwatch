@@ -32,6 +32,8 @@ function filingRows(dataset,tag,unit){
  return dataset.records.filter(x=>x&&x.tag===tag&&x.unit===unit&&finite(x.value)&&dateOK(x.periodEnd)&&dateOK(x.filed)&&x.periodEnd<=x.filed&&(!x.periodStart||(dateOK(x.periodStart)&&x.periodStart<=x.periodEnd))&&/^\d{10}-\d{2}-\d{6}$/.test(x.accession||'')).slice().sort((a,b)=>b.periodEnd.localeCompare(a.periodEnd)||b.filed.localeCompare(a.filed)||a.accession.localeCompare(b.accession));
 }
 
-const api={officialDatasetSummary,filingRows,economicDrivers,clean,sma,ema,rsi,macd,bollinger,alignedReturns,correlation,valuation,pairStats,screen,classify,alertMatches,csv,backtest};
+function chartWindow(total,start,count){if(!Number.isSafeInteger(total)||total<0)return {start:0,end:0};const size=Math.min(total,Math.max(Math.min(5,total),Number.isFinite(count)?Math.round(count):total));const first=Math.max(0,Math.min(total-size,Number.isFinite(start)?Math.round(start):0));return {start:first,end:first+size}}
+function navigateChart(total,range,action,cursor){const r=chartWindow(total,range?.start,(range?.end??total)-(range?.start??0)),n=r.end-r.start;if(action==='reset')return chartWindow(total,0,total);if(action==='older'||action==='newer')return chartWindow(total,r.start+(action==='older'?-1:1)*Math.max(1,Math.floor(n/3)),n);if(action!=='in'&&action!=='out')return r;const anchor=Number.isFinite(cursor)?Math.max(r.start,Math.min(r.end-1,cursor)):r.end-1;const fraction=n>1?(anchor-r.start)/(n-1):0;const target=chartWindow(total,0,action==='in'?Math.floor(n*.6):Math.ceil(n/.6)).end;return chartWindow(total,anchor-fraction*(target-1),target)}
+const api={chartWindow,navigateChart,officialDatasetSummary,filingRows,economicDrivers,clean,sma,ema,rsi,macd,bollinger,alignedReturns,correlation,valuation,pairStats,screen,classify,alertMatches,csv,backtest};
 if(typeof module==='object'&&module.exports)module.exports=api;else global.StockwatchAnalytics=api;
 })(typeof window!=='undefined'?window:{});

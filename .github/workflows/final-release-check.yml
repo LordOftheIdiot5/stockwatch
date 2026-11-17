@@ -98,6 +98,11 @@ jobs:
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
+      - name: V49 native chart core unit tests
+        if: startsWith(github.head_ref, 'feature/stockwatch-v49-')
+        run: |
+          node --check native-chart.js
+          node --test tests/test_native_chart_v49.mjs
       - name: V47 shared navigation rendered checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v47-')
         run: python tests/browser_check_shell_v47.py
