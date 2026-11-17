@@ -27,7 +27,7 @@ test('heatmap uses observed values, bounded color intensity, and functional link
  assert.match(html,/positive" data-strength="3"/);
  assert.match(html,/negative" data-strength="5"/);
  assert.match(html,/flat" data-strength="0"/);
- assert.match(html,/stocks.html\?ticker=B.ST/);
+ assert.match(html,/company.html\?ticker=B\.ST/);
  assert.match(html,/-6.10%/);
  assert.doesNotMatch(html,/NO.OL|BAD.OL|OLD.OL/);
  assert.match(workspaceHeatmap(rows,'Missing'),/No observed price changes/);
