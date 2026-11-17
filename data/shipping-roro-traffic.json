@@ -1,0 +1,999 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-11-17",
+  "sourceUpdated": "2026-11-17T11:00:00+0100",
+  "provider": "Eurostat",
+  "datasetCode": "mar_go_qmc",
+  "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/mar_go_qmc/default/table?lang=en",
+  "apiUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/mar_go_qmc?lang=en&freq=Q&unit=THS_T&cargo=RO_TOT&direct=TOTAL&sinceTimePeriod=2022-Q1&rep_mar=EU27_2020&rep_mar=NO&rep_mar=DE&rep_mar=BE&rep_mar=NL&rep_mar=DK&rep_mar=SE&rep_mar=FI&rep_mar=FR&rep_mar=ES",
+  "licenseUrl": "https://ec.europa.eu/eurostat/help/copyright-notice",
+  "license": "Eurostat statistical data reuse with attribution, subject to source-specific exceptions; EU/EFTA reporting entities selected.",
+  "notice": "Ro-Ro mobile self-propelled and non-self-propelled units, total direction, gross cargo weight handled at main ports. Not freight rates, pure vehicle exports, carrier utilization or issuer route exposure. Country series and EU aggregate overlap; do not sum. No imputation of unpublished quarters.",
+  "series": [
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:EU27_2020",
+      "countryCode": "EU27_2020",
+      "label": "European Union (27)",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q1",
+      "value": 100229,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 105014,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 109928,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 102973,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 100805,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 102899,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 106957,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 99615,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 97943,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 98265,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 106033,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 99136,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 100664,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 99728,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 106587,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 101944,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 101426,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 100229,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:NO",
+      "countryCode": "NO",
+      "label": "Norway",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q2",
+      "value": 1161,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 1158,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 1378,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 1246,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 1220,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 1109,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 1214,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 1122,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 1135,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 969,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 1071,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 978,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 949,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 1036,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 1094,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 1028,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 1089,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 1084,
+          "flag": null
+        },
+        {
+          "period": "2026-Q2",
+          "value": 1161,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:DE",
+      "countryCode": "DE",
+      "label": "Germany",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q1",
+      "value": 9302,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 9887,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 10223,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 9210,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 9353,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 9331,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 9521,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 8875,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 8935,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 8980,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 9497,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 8785,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 8876,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 9156,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 9531,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 8906,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 9064,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 9302,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:BE",
+      "countryCode": "BE",
+      "label": "Belgium",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q1",
+      "value": 6792,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 7298,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 7349,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 7002,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 7017,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 7061,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 7341,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 6801,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 6758,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 6709,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 7114,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 6437,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 6788,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 6758,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 6947,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 6722,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 6786,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 6792,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:NL",
+      "countryCode": "NL",
+      "label": "Netherlands",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q2",
+      "value": 6856,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 7187,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 7606,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 7268,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 6934,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 6866,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 7008,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 6776,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 6242,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 6560,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 6768,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 6692,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 6263,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 6403,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 6806,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 6683,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 6322,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 6455,
+          "flag": null
+        },
+        {
+          "period": "2026-Q2",
+          "value": 6856,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:DK",
+      "countryCode": "DK",
+      "label": "Denmark",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q2",
+      "value": 6041,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 6554,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 6664,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 6027,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 5928,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 5922,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 6042,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 5569,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 5613,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 5760,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 6167,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 5557,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 5674,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 5743,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 5960,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 5507,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 5614,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 5873,
+          "flag": null
+        },
+        {
+          "period": "2026-Q2",
+          "value": 6041,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:SE",
+      "countryCode": "SE",
+      "label": "Sweden",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q2",
+      "value": 12166,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 12610,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 12916,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 11181,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 11501,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 11858,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 11787,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 10449,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 10815,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 11414,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 11792,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 10658,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 11022,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 11038,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 11761,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 10912,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 11432,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 11741,
+          "flag": null
+        },
+        {
+          "period": "2026-Q2",
+          "value": 12166,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:FI",
+      "countryCode": "FI",
+      "label": "Finland",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q1",
+      "value": 4716,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 5092,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 5406,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 4813,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 4642,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 4434,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 4637,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 4197,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 4236,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 4247,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 5001,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 4455,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 4382,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 4648,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 4870,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 4488,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 4476,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 4716,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:FR",
+      "countryCode": "FR",
+      "label": "France",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q1",
+      "value": 7236,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 7511,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 7223,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 6845,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 6762,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 7162,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 7484,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 7113,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 7175,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 7085,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 7608,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 6887,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 7433,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 7070,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 7236,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 6925,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 6982,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 7236,
+          "flag": null
+        }
+      ]
+    },
+    {
+      "key": "eurostat:mar_go_qmc:RO_TOT:ES",
+      "countryCode": "ES",
+      "label": "Spain",
+      "unit": "thousand tonnes",
+      "frequency": "quarterly",
+      "period": "2026-Q2",
+      "value": 9406,
+      "history": [
+        {
+          "period": "2022-Q1",
+          "value": 7290,
+          "flag": null
+        },
+        {
+          "period": "2022-Q2",
+          "value": 8278,
+          "flag": null
+        },
+        {
+          "period": "2022-Q3",
+          "value": 7333,
+          "flag": null
+        },
+        {
+          "period": "2022-Q4",
+          "value": 7646,
+          "flag": null
+        },
+        {
+          "period": "2023-Q1",
+          "value": 7895,
+          "flag": null
+        },
+        {
+          "period": "2023-Q2",
+          "value": 8278,
+          "flag": null
+        },
+        {
+          "period": "2023-Q3",
+          "value": 7368,
+          "flag": null
+        },
+        {
+          "period": "2023-Q4",
+          "value": 7692,
+          "flag": null
+        },
+        {
+          "period": "2024-Q1",
+          "value": 8287,
+          "flag": null
+        },
+        {
+          "period": "2024-Q2",
+          "value": 8837,
+          "flag": null
+        },
+        {
+          "period": "2024-Q3",
+          "value": 7871,
+          "flag": null
+        },
+        {
+          "period": "2024-Q4",
+          "value": 8448,
+          "flag": null
+        },
+        {
+          "period": "2025-Q1",
+          "value": 8681,
+          "flag": null
+        },
+        {
+          "period": "2025-Q2",
+          "value": 9198,
+          "flag": null
+        },
+        {
+          "period": "2025-Q3",
+          "value": 8309,
+          "flag": null
+        },
+        {
+          "period": "2025-Q4",
+          "value": 8539,
+          "flag": null
+        },
+        {
+          "period": "2026-Q1",
+          "value": 8235,
+          "flag": null
+        },
+        {
+          "period": "2026-Q2",
+          "value": 9406,
+          "flag": null
+        }
+      ]
+    }
+  ]
+}
