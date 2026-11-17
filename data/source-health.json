@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-17T23:00:10Z",
-  "latestScan": "2026-11-17T22:59:20+00:00",
-  "scanAgeHours": 0.01,
-  "contextAgeHours": 0.01,
+  "generated": "2026-11-17T23:13:21Z",
+  "latestScan": "2026-11-17T23:06:44+00:00",
+  "scanAgeHours": 0.11,
+  "contextAgeHours": 0.11,
   "priceFreshness": {
     "comparisonDate": "2026-11-17",
     "equities": {
-      "comparable": 130,
+      "comparable": 2,
       "older": 4,
       "no_volume": 3,
-      "unconfirmed": 1,
+      "unconfirmed": 129,
       "unavailable": 0
     },
     "total": 138,
@@ -101,13 +101,13 @@
       "missing": 0
     }
   ],
-  "storedStories": 128,
+  "storedStories": 7,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "request_errors",
+    "Google News": "requests_failed",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -115,37 +115,37 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 78.7,
+      "avgLatencyMs": 71.9,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 600.9,
+      "avgLatencyMs": 615.1,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 762.6,
+      "avgLatencyMs": 981.8,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 593,
-      "failed": 1,
-      "avgLatencyMs": 349.5,
+      "succeeded": 0,
+      "failed": 594,
+      "avgLatencyMs": 7534.6,
       "errorTypes": {
-        "HTTPError": 1
+        "HTTPError": 594
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1661.8,
+      "avgLatencyMs": 2686.2,
       "errorTypes": {}
     }
   },

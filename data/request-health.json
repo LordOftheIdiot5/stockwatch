@@ -1,42 +1,42 @@
 {
-  "generated": "2026-11-17T23:00:10+00:00",
+  "generated": "2026-11-17T23:13:21+00:00",
   "meaning": "HTTP transport-level requests only; success does not establish that a feed returned usable data.",
   "providers": {
     "Yahoo prices": {
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 78.7,
+      "avgLatencyMs": 71.9,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 600.9,
+      "avgLatencyMs": 615.1,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 762.6,
+      "avgLatencyMs": 981.8,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 593,
-      "failed": 1,
-      "avgLatencyMs": 349.5,
+      "succeeded": 0,
+      "failed": 594,
+      "avgLatencyMs": 7534.6,
       "errorTypes": {
-        "HTTPError": 1
+        "HTTPError": 594
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1661.8,
+      "avgLatencyMs": 2686.2,
       "errorTypes": {}
     }
   }
