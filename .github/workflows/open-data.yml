@@ -10,8 +10,11 @@ on:
       - feature/stockwatch-worldbank-port-traffic-20261113
       - feature/stockwatch-maritime-intelligence-v5-20261113
       - feature/entsoe-open-energy-20261116
+      - feature/stockwatch-free-research-data-20261117
     paths:
       - scripts/open_data.py
+      - scripts/free_research.py
+      - tests/test_free_research.py
       - scripts/registered_sources.py
       - scripts/instrument_directory.py
       - scripts/research_coverage.py
@@ -88,9 +91,15 @@ jobs:
           assert all(s['isActualRate'] is False and s['frequency']=='monthly' for s in data['series'])
           print('UNCTAD live monthly series:',len(data['series']))
           PY
+      - name: Probe new official sources without publishing data
+        if: github.ref == 'refs/heads/feature/stockwatch-free-research-data-20261117'
+        env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
+        run: python scripts/free_research.py --probe
       - name: Fetch official no-key and registered-source data
         if: github.ref == 'refs/heads/main'
         env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
           STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
           STOCKWATCH_ENTSOE_TOKEN: ${{ secrets.STOCKWATCH_ENTSOE_TOKEN }}
           STOCKWATCH_FRED_API_KEY: ${{ secrets.STOCKWATCH_FRED_API_KEY }}
@@ -106,6 +115,7 @@ jobs:
           python scripts/shipping_ports.py
           python scripts/shipping_unctad.py
           python scripts/history_coverage.py
+          python scripts/free_research.py
       - name: Commit official-source datasets without racing the market scanner
         if: github.ref == 'refs/heads/main'
         run: python scripts/publish_data.py --mode official
