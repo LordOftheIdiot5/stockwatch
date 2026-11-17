@@ -109,6 +109,17 @@ jobs:
           path: workspace-previews/v47-*.png
           if-no-files-found: ignore
 
+      - name: V48 pagination and mobile density browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v48-')
+        run: python tests/browser_check_mobile_v48.py
+      - name: Upload V48 mobile previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v48-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v48-mobile
+          path: workspace-previews/v48-*.png
+          if-no-files-found: ignore
+
       - name: V21 desktop and mobile browser checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v21-')
         run: python tests/browser_check_v21.py
