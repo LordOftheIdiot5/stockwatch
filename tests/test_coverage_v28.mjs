@@ -126,3 +126,16 @@ test('V66: correlation requires twelve consecutive paired changes and nonconstan
  assert.equal(analyse({...series,observations:observations.slice(0,12)},history,'TEST').correlation,null);
  assert.equal(analyse(series,{...history,bars:bars.map(b=>({...b,close:100}))},'TEST').correlation,null);
 });
+
+test('V67: same-period freight-volume scenarios separate proxy and hypothetical costs',()=>{
+ const start=src.indexOf('function freightScenario('),end=src.indexOf('function freightScenarioHTML(',start);
+ const {freightScenario,freightScenarioBaseline}=Function(src.slice(start,end)+'\nreturn {freightScenario,freightScenarioBaseline}')();
+ const d=JSON.parse(fs.readFileSync(new URL('../data/company-operating-metrics.json',import.meta.url),'utf8'));
+ const b=freightScenarioBaseline(d.companies.find(x=>x.ticker==='WAWI.OL'));
+ assert.equal(b.rate,64.4);assert.equal(b.volume,13.2);assert.equal(b.periodEnd,'2026-09-30');
+ const x=freightScenario(b.rate,b.volume,10,0,15);
+ assert.ok(Math.abs(x.baseline-850.08)<1e-8);assert.ok(Math.abs(x.delta-85.008)<1e-8);assert.ok(Math.abs(x.illustrativeContribution-70.008)<1e-8);
+ assert.equal(freightScenario(64.4,13.2,-101,0,0),null);assert.equal(freightScenario(64.4,13.2,NaN,0,0),null);
+ assert.equal(freightScenario(64.4,13.2,-100,0,0).scenario,0);
+ const wrong=structuredClone(d.companies[0]);wrong.series.find(s=>s.key==='transport_volume').unit='tonnes';assert.equal(freightScenarioBaseline(wrong),null);
+});
