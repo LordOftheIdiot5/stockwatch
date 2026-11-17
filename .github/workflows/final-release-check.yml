@@ -45,6 +45,19 @@ jobs:
           python-version: '3.12'
       - name: Full scanner and research unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: V46 research asset inventory and private warehouse smoke test
+        if: startsWith(github.head_ref, 'feature/stockwatch-v46-')
+        run: |
+          python scripts/research_assets.py
+          python scripts/research_assets.py --private-db "$RUNNER_TEMP/stockwatch-research.sqlite"
+          node --check brand/research-assets.js
+          python - <<'PY'
+          import json
+          r=json.load(open("data/research-assets.json"))
+          assert r["metrics"]["monitoredListings"]==138
+          assert len(r["products"])==5
+          print("Public research inventory verified; private database outside repository")
+          PY
       - name: Worker API and A/B finance tests
         run: node --test tests/test_worker.mjs tests/test_final_js.mjs
       - name: Independent voyage model tests

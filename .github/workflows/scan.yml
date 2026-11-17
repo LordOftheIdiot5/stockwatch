@@ -69,6 +69,9 @@ jobs:
       - name: Build research archive, calendar and data health
         run: python scripts/build_research_data.py
 
+      - name: Refresh research assets inventory
+        run: python scripts/research_assets.py
+
       - name: Evaluate actual observation coverage
         run: |
           python - <<'PY'

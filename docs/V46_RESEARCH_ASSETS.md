@@ -1,0 +1,12 @@
+# V46 research assets
+
+This builds on the existing D1 news archive, R2 open-data allowlist and public research tools, rather than replacing them.
+
+- Run `python scripts/research_assets.py` to refresh the static metadata-only research asset inventory.
+- Run `python scripts/research_assets.py --private-db C:/private/stockwatch/research.sqlite` (or an equivalent path outside the repository) to populate the private SQLite warehouse with existing issuer reference observations, source-linked filing facts, derived operating margins and approved official dataset snapshots. Never upload the SQLite file to Pages.
+- Add `--licensed-inputs /private/series.json --rights /private/entitlements.json` only after reviewing the written licence. Inputs are a JSON array of series objects with provider, sourceUrl, licenseReference, ticker, isin, mic, currency, adjusted and dated bars (close, volume). Rights is a dictionary keyed by ticker, with those identical fields, reviewed=true, evaluationOnly=false, permanentInternalStorage=true, derivedResearch=true, validFrom, validThrough; commercialDerivedRedistribution must be explicitly true for the indicator eligibility flag. These flags are operator assertions, not a legal determination. No public/paid export endpoint is enabled.
+- Identity evidence retains fingerprints, not backdated assumptions. Corporate actions are imported only from source-linked watchlist identity records and preserve the history policy. PR #57 is separate until merged.
+- Equity indicators use 20 observed positive-volume returns and drawdown, not fabricated or filled days. Pair calculations require verified relationships, exact date/currency alignment (or reviewed same-date FX), and matching adjustment convention; same ISIN for cross-listing and different ISIN plus documented issuer for share classes. Pair computation is an offline function, not a live signal or automated ingestion.
+- Private warehouse is opt-in, not a deployed D1 migration or proof of R2 writes. The current market data trial is excluded. The existing public A/B indicator archive retains its own separate rights notice. No new API calls, subscriptions or billing changes.
+
+Products: instrument events/identity history, filing fact history, official industry data snapshots, licensed price histories and quantitative research. Sales and public derived-price exports remain disabled until specific rights are secured. The public page reports actual source coverage, not potential market size.
