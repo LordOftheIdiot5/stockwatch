@@ -103,6 +103,16 @@ jobs:
         run: |
           node --check native-chart.js
           node --test tests/test_native_chart_v49.mjs
+      - name: V49 rendered chart interaction tests
+        if: startsWith(github.head_ref, 'feature/stockwatch-v49-')
+        run: python tests/browser_check_native_v49.py
+      - name: Upload V49 chart previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v49-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v49-native-chart
+          path: workspace-previews/v49-*.png
+          if-no-files-found: ignore
       - name: V47 shared navigation rendered checks
         if: startsWith(github.head_ref, 'feature/stockwatch-v47-')
         run: python tests/browser_check_shell_v47.py

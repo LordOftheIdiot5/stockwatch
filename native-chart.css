@@ -21,3 +21,6 @@
 .sw-chart-range input{flex:1;min-width:0;accent-color:var(--sw-mint)}
 #terminalNativeHistory:has(.sw49-workbench){background:transparent;padding:0}
 @media(max-width:760px){.sw49-toolbar button,.sw-chart-tools button{min-height:36px}.sw49-draw button{min-height:34px}.sw49-workbench{grid-template-columns:30px minmax(0,1fr)}}
+
+/* Touch gestures are captured only inside the chart; page scrolling remains available outside it. */
+@media(pointer:coarse){.sw49-plot{touch-action:none}}
