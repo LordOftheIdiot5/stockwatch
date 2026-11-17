@@ -1,0 +1,2 @@
+# V56 shipping first increment
+Adds user-input voyage financial model for weight-based USD/tonne freight, including laden/ballast sailing, port time, fuel, commissions, TCE and separate operating contribution/break-even. No assumed market prices, no automated conversion of indices into current freight rates. Existing official USDA weekly cost index uses native interactive chart. Prevent stale async route history from replacing a later selection. Geographic route maps, additional benchmark licences and real voyage-distance evidence remain open.

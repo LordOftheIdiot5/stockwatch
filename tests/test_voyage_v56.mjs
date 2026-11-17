@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+const V=createRequire(import.meta.url)('../voyage-v56.js');
+const x={ladenMiles:2400,ballastMiles:1200,speedLaden:10,speedBallast:10,portDays:5,cargoTonnes:100000,freightPerTonne:20,commissionPct:5,fuelLaden:30,fuelBallast:20,fuelPort:5,fuelPrice:500,portCosts:100000,otherVoyageCosts:50000,dailyOpex:10000};
+test('voyage days and TCE separate vessel opex',()=>{const r=V.compute(x);assert.equal(r.totalDays,20);assert.equal(r.fuelTonnes,425);assert.equal(r.gross,2000000);assert.equal(r.commission,100000);assert.equal(r.voyageCosts,362500);assert.equal(r.tce,76875);assert.equal(r.margin,1337500);assert.ok(Math.abs(r.breakEven-562500/95000)<1e-9)});
+test('invalid assumptions and zero rates',()=>{assert.equal(V.compute({...x,speedLaden:0}),null);assert.equal(V.compute({...x,cargoTonnes:0}),null);assert.equal(V.compute({...x,commissionPct:110}),null);assert.equal(V.compute({...x,portCosts:-1}),null);assert.equal(V.compute({...x,commissionPct:100}).breakEven,null);assert.ok(V.compute({...x,freightPerTonne:0}).tce<0)});
