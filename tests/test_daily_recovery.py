@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 from copy import deepcopy
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from daily_recovery import missing_target,merge_exact_day,exact_day_url
+from daily_recovery import missing_target,merge_exact_day,exact_day_url,recovery_validation
 class RecoveryTests(unittest.TestCase):
  def test_exact_session_recovery_and_rejections(self):
   now=datetime(2026,11,17,1,tzinfo=timezone.utc)
@@ -19,7 +19,13 @@ class RecoveryTests(unittest.TestCase):
    x=deepcopy(new);x["meta"][field]=value
    self.assertIsNone(merge_exact_day(old,x,"A.ST",now))
   x=deepcopy(new);x["timestamp"]=[ts+1]
+  self.assertEqual(recovery_validation(old,x,"A.ST",now),"accepted_same_local_session")
+  self.assertEqual(merge_exact_day(old,x,"A.ST",now)["timestamp"],old["timestamp"])
+  x["timestamp"]=[ts+86400]
+  self.assertEqual(recovery_validation(old,x,"A.ST",now),"session_date_mismatch")
   self.assertIsNone(merge_exact_day(old,x,"A.ST",now))
+  x=deepcopy(new);del x["meta"]["exchangeName"]
+  self.assertEqual(recovery_validation(old,x,"A.ST",now),"missing_metadata_exchangeName")
   x=deepcopy(new);x["indicators"]["quote"][0]["volume"]=[0]
   self.assertIsNone(merge_exact_day(old,x,"A.ST",now))
   self.assertIsNone(missing_target(old,datetime(2026,11,18,1,tzinfo=timezone.utc)))

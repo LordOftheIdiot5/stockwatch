@@ -6,11 +6,13 @@ from zoneinfo import ZoneInfo
 from urllib.parse import quote, urlencode
 from copy import deepcopy
 import json, math, os
+from urllib.error import HTTPError
 from price_freshness import comparison_date
 
 FIELDS=("open","high","low","close","volume")
 MAX_RECOVERIES=12
 _attempts=0
+_stopped=False
 
 def positive(value):
     return type(value) in (int,float) and math.isfinite(value) and value>0
@@ -44,29 +46,50 @@ def exact_day_url(ticker,day,zone):
     params=urlencode({"period1":start,"period2":end,"interval":"1d","includePrePost":"false"})
     return "https://query1.finance.yahoo.com/v8/finance/chart/"+quote(ticker,safe="")+"?"+params
 
-def merge_exact_day(original,replacement,ticker,now):
+def recovery_validation(original,replacement,ticker,now):
     target=missing_target(original,now)
-    if not target or not isinstance(replacement,dict):return None
+    if not target:return "original_not_eligible"
+    if not isinstance(replacement,dict):return "replacement_unavailable"
     day,zone,stamp=target
     a,b=original.get("meta") or {},replacement.get("meta") or {}
-    if a.get("symbol")!=ticker or b.get("symbol")!=ticker:return None
-    if any(not a.get(k) or a.get(k)!=b.get(k) for k in ("currency","exchangeName","exchangeTimezoneName","instrumentType","dataGranularity")):return None
+    if a.get("symbol")!=ticker or b.get("symbol")!=ticker:return "symbol_mismatch"
+    for k in ("currency","exchangeName","exchangeTimezoneName","instrumentType","dataGranularity"):
+        if not a.get(k) or not b.get(k):return "missing_metadata_"+k
+        if a[k]!=b[k]:return "metadata_mismatch_"+k
     stamps=replacement.get("timestamp") or []
-    if stamps!=[stamp]:return None
+    if len(stamps)!=1:return "unexpected_bar_count"
+    try:
+        if datetime.fromtimestamp(stamps[0],zone).date()!=day:return "session_date_mismatch"
+    except (ValueError,TypeError,OverflowError):return "invalid_timestamp"
+    # A daily bar identifies an exchange-local session, not an intraday instant.
+    # Keep the original daily series timestamp to preserve alignment.
     q=(replacement.get("indicators",{}).get("quote") or [{}])[0]
-    if any(not isinstance(q.get(k),list) or len(q[k])!=1 or not positive(q[k][0]) for k in FIELDS):return None
+    for k in FIELDS:
+        if not isinstance(q.get(k),list) or len(q[k])!=1 or not positive(q[k][0]):return "invalid_"+k
     o,h,l,c,v=(q[k][0] for k in FIELDS)
-    if not l<=min(o,c)<=max(o,c)<=h:return None
+    if not l<=min(o,c)<=max(o,c)<=h:return "inconsistent_ohlc"
+    dest=(original.get("indicators",{}).get("quote") or [{}])[0]
+    count=len(original["timestamp"])
+    if any(not isinstance(dest.get(k),list) or len(dest[k])!=count for k in FIELDS):return "original_column_shape"
+    try:
+        if sum(datetime.fromtimestamp(x,zone).date()==day for x in original["timestamp"])!=1:return "ambiguous_original_session"
+    except (ValueError,TypeError,OverflowError):return "invalid_original_timestamp"
+    return "accepted_exact_timestamp" if stamps[0]==stamp else "accepted_same_local_session"
+
+def merge_exact_day(original,replacement,ticker,now):
+    status=recovery_validation(original,replacement,ticker,now)
+    if not status.startswith("accepted_"):return None
+    day,zone,stamp=missing_target(original,now)
     out=deepcopy(original)
-    dest=(out.get("indicators",{}).get("quote") or [{}])[0]
-    count=len(out["timestamp"])
-    if any(not isinstance(dest.get(k),list) or len(dest[k])!=count for k in FIELDS):return None
+    dest=out["indicators"]["quote"][0]
+    q=replacement["indicators"]["quote"][0]
     for k in FIELDS:dest[k][-1]=q[k][0]
-    out["_stockwatchRecovery"]={"method":"same_provider_exact_day_daily_bar","date":day.isoformat()}
+    out["_stockwatchRecovery"]={"method":"same_provider_exact_day_daily_bar","date":day.isoformat(),"validation":status}
     return out
 
 def maybe_recover(block,ticker,fetch,now=None):
-    global _attempts
+    global _attempts,_stopped
+    if _stopped:return block
     if os.environ.get("STOCKWATCH_ENABLE_EXACT_DAY_RECOVERY")!="true" or _attempts>=MAX_RECOVERIES:return block
     now=now or datetime.now(timezone.utc)
     target=missing_target(block,now)
@@ -77,5 +100,8 @@ def maybe_recover(block,ticker,fetch,now=None):
         replacement=extract(json.loads(raw))
         merged=merge_exact_day(block,replacement,ticker,now)
         return merged if merged is not None else block
+    except HTTPError as error:
+        if error.code in (401,403,429):_stopped=True
+        return block
     except Exception:
         return block
