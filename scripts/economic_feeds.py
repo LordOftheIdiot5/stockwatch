@@ -3,7 +3,7 @@ import json,math,os,re,urllib.parse,urllib.request,urllib.error,time
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-FRED={'DGS2':('US 2-year Treasury yield','percent'),'DGS10':('US 10-year Treasury yield','percent'),'DFF':('US effective federal funds rate','percent'),'UNRATE':('US unemployment rate','percent')}
+FRED={'DGS2':('US 2-year Treasury yield','percent'),'DGS10':('US 10-year Treasury yield','percent'),'DFF':('US effective federal funds rate','percent'),'UNRATE':('US unemployment rate','percent'),'CPIAUCSL':('US consumer price index','index 1982-84=100'),'INDPRO':('US industrial production','index 2017=100'),'M2SL':('US M2 money stock','billion USD')}
 EIA={'RBRTE':('Brent crude spot price','USD/barrel'),'RWTC':('WTI Cushing crude spot price','USD/barrel')}
 UA='StockwatchResearch/1.0 (+https://stocks.nordl.dev)'
 def timestamp():

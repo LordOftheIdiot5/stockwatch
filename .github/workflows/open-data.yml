@@ -11,9 +11,12 @@ on:
       - feature/stockwatch-maritime-intelligence-v5-20261113
       - feature/entsoe-open-energy-20261116
       - feature/stockwatch-free-research-data-20261117
+      - feature/stockwatch-nordic-sources-20261117
     paths:
       - scripts/open_data.py
       - scripts/free_research.py
+      - scripts/nordic_sources.py
+      - tests/test_nordic_sources.py
       - tests/test_free_research.py
       - scripts/registered_sources.py
       - scripts/instrument_directory.py
@@ -92,7 +95,7 @@ jobs:
           print('UNCTAD live monthly series:',len(data['series']))
           PY
       - name: Probe new official sources without publishing data
-        if: github.ref == 'refs/heads/feature/stockwatch-free-research-data-20261117'
+        if: github.ref == 'refs/heads/feature/stockwatch-free-research-data-20261117' || github.ref == 'refs/heads/feature/stockwatch-nordic-sources-20261117'
         env:
           STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
         run: python scripts/free_research.py --probe
