@@ -1,0 +1,2 @@
+# V52 — chart-first terminal
+Layout switch, width control, focus mode and mobile workspace tabs. Two official series with exact common dates have separate original-unit axes and synchronized viewport/cursor. Existing equity chart stays rights-gated. Layout preferences saved locally. No new price rights or data. Remaining: independent licensed equity instrument panes, persistent drawings, touch acceptance, screenshot review and production verification.

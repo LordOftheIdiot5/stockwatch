@@ -21,7 +21,7 @@ function cleanBars(rows){
 function authorized(entry,payload){
  return !!(entry&&payload&&entry.redistributionPermitted===true&&payload.redistributionPermitted===true&&entry.priceType==='end_of_day'&&payload.priceType==='end_of_day'&&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(entry.historyPath||'')&&['listingId','currency','source','licenseReference'].every(k=>typeof entry[k]==='string'&&entry[k]&&entry[k]===payload[k])&&safe(payload.licenseReference)&&safe(payload.sourceUrl)&&typeof payload.adjusted==='boolean'&&(entry.adjusted===undefined||entry.adjusted===payload.adjusted));
 }
-function mount(host,{label='',unit='',bars=[],series=[],equity=false,source='',notice='',onReset=null}={}){
+function mount(host,{label='',unit='',bars=[],series=[],equity=false,source='',notice='',onReset=null,onChange=null}={}){
  const b=equity?cleanBars(bars):[];
  const sets=equity?[{label,points:b.map(x=>({date:x.date,value:x.close}))}]:series.map(x=>({...x,points:A.clean(x.points)})).filter(x=>x.points.length);
  const dates=[...new Set(sets.flatMap(s=>s.points.map(p=>p.date)))].sort();
@@ -39,7 +39,7 @@ function mount(host,{label='',unit='',bars=[],series=[],equity=false,source='',n
  const plot=host.querySelector('.sw49-plot'),lower=host.querySelector('.sw49-rsi'),info=host.querySelector('.sw-terminal-inspector'),slider=host.querySelector('input');
  if(dates.length<2){plot.textContent='Insufficient authorized dated observations. No chart values generated.';host.querySelectorAll('button,input').forEach(x=>x.disabled=true);return null}
  const W=900,H=330,L=12,R=80,T=14,B=25,Xend=W-R,priceEnd=()=>showVolume?H-B-66:H-B;
- let geom={};
+ let geom={},silent=false;
  const active=(k,on)=>{const e=host.querySelector('[data-act="'+k+'"]');e.setAttribute('aria-pressed',String(on));e.classList.toggle('active',on)};
  function paint(){
   cursor=Math.max(range.start,Math.min(range.end-1,cursor));
@@ -75,7 +75,7 @@ function mount(host,{label='',unit='',bars=[],series=[],equity=false,source='',n
   line.setAttribute('y1',v);line.setAttribute('y2',v);
   slider.value=String(cursor-range.start);
   const row=map.get(d),r=ind.rsi.find(p=>p.date===d);
-  info.textContent=d+' · '+(row?(candles?'O '+F(row.open)+' H '+F(row.high)+' L '+F(row.low)+' ':'')+'Close '+F(row.close)+' '+unit+(num(row.volume)?' · Vol '+F(row.volume):''):sets.map(s=>s.label+' '+F(s.points.find(p=>p.date===d)?.raw??s.points.find(p=>p.date===d)?.value)+' '+(s.unit||unit)).join(' · '))+(rsi&&r?' · RSI '+F(r.value):'');
+  info.textContent=d+' · '+(row?(candles?'O '+F(row.open)+' H '+F(row.high)+' L '+F(row.low)+' ':'')+'Close '+F(row.close)+' '+unit+(num(row.volume)?' · Vol '+F(row.volume):''):sets.map(s=>s.label+' '+F(s.points.find(p=>p.date===d)?.raw??s.points.find(p=>p.date===d)?.value)+' '+(s.unit||unit)).join(' · '))+(rsi&&r?' · RSI '+F(r.value):'');if(!silent&&onChange)onChange({start:range.start,end:range.end,cursor,date:d,firstDate:dates[range.start],lastDate:dates[range.end-1]});
  }
  const indexAt=e=>{const q=plot.getBoundingClientRect(),px=(e.clientX-q.left)/q.width*W;return Math.max(range.start,Math.min(range.end-1,range.start+Math.round((px-L)/(Xend-L)*(range.end-range.start-1))))};
  const yAt=e=>(e.clientY-plot.getBoundingClientRect().top)/plot.getBoundingClientRect().height*H;
@@ -87,7 +87,7 @@ function mount(host,{label='',unit='',bars=[],series=[],equity=false,source='',n
  plot.addEventListener('pointermove',e=>{if(pointers.has(e.pointerId)){pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pinch&&pointers.size===2){const [a,b]=[...pointers.values()];const size=Math.round(pinch.count*pinch.distance/Math.max(1,Math.hypot(a.x-b.x,a.y-b.y)));range=A.chartWindow(dates.length,pinch.anchor-size/2,size);paint();return}}if(drag&&drag.id===e.pointerId){const count=drag.count,shift=Math.round((drag.x-e.clientX)/Math.max(1,plot.clientWidth)*count);range=A.chartWindow(dates.length,drag.start+shift,count);paint()}else inspect(indexAt(e),yAt(e))});
  for(const k of ['pointerup','pointercancel','lostpointercapture'])plot.addEventListener(k,e=>{pointers.delete(e.pointerId);pinch=null;if(drag?.id===e.pointerId)drag=null});
  plot.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();inspect(cursor+(e.key==='ArrowLeft'?-1:1))}else if(e.key==='+'||e.key==='-'){e.preventDefault();action(e.key==='+'?'in':'out')}});
- paint();return {window:()=>({...range}),candles,hasVolume};
+ paint();return {window:()=>({...range}),candles,hasVolume,dates:[...dates],sync(v){if(!v||dates[v.cursor]!==v.date||dates[v.start]!==v.firstDate||dates[v.end-1]!==v.lastDate)return false;silent=true;try{const next=A.chartWindow(dates.length,v.start,v.end-v.start);cursor=v.cursor;if(next.start!==range.start||next.end!==range.end){range=next;paint()}else inspect(cursor);return true}finally{silent=false}}};
 }
 const api={cleanBars,authorized,mount};if(typeof module==='object'&&module.exports)module.exports=api;else global.StockwatchNativeChart=api;
 })(typeof window!=='undefined'?window:{});
