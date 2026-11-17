@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T23:54:11Z",
+  "generated": "2026-11-17T00:08:24Z",
   "items": [
     {
       "id": "UCG.MI:1419cba8dd6a45f61a87e11b35eff903fffe1b698270562875a3ad643a43a081",
@@ -534,6 +534,25 @@
       "sourceDomain": "news.google.com",
       "priority": "high",
       "duplicateOf": "PRY.MI:575f79308fc884680f5d5b934734d9f853f36939c7792fe0ece1a3d95154c363"
+    },
+    {
+      "id": "DOFG.OL:78213fe26512e2cb03fc08c93623516b0bc38a883e32bf9bfcc7618897e12ea1",
+      "ticker": "DOFG.OL",
+      "name": "DOF Group",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "DOF Group Awarded Field Support Vessel Contract in Africa",
+      "english": null,
+      "publisher": "Offshore Engineer Magazine",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQnp4OEIxTjlOTjlINWo4S3VzUmlyOEZvNXpPMERrZ0FucXBCZEtKdTZfUHI2bDV1QlRWLVF1amw1M2kxOWNnVjJOWC1fYkFsQS1NMW5tY2Jhc3RkdGVFYzVDYmR1QkplT29qc0NxUjRFODAtWFJoeUpYRHJYejJCNkhmVDRuNDBNT2NuaFRPMDE2MTZqM2NnVjg4TQ?oc=5",
+      "published": "2026-11-16T16:06:45Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "NOVO-B.CO:c80cde7b18bd68c9790d8df8a3e5b2b06b8144a5d3329080cde34d35b58cdfe2",
@@ -1887,32 +1906,13 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:406ff55dfb2936a983de42cf20424337546646ce636081173267a50dd6edb354",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Unicredit, Ribera: su Commerzbank buon esempio fusione transfrontaliera",
-      "english": "UniCredit, Ribera: Commerzbank is a good example of a cross-border merger",
-      "publisher": "Askanews",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNYlB6MzlPRjdSSWRrenk2cGxlWUtyUXVCdjVySkZIekhyNmJoeWJtaG53aW45SzUtb25DbU83M2g0QzBxdDRaSXVkNnl2WExfVXdBbU80RDRxeDBHYWtDZXRLY0U0UjZ2bS1XR193TzhLWFlJNElXMk5ockpSb2E2UWRCWWlvcG85TXhLb3c3NlZnbWI5THI3YTl0bThkQ0hEWkNN?oc=5",
-      "published": "2026-11-16T11:02:47Z",
-      "lang": "it",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 551,
+  "totalStored": 552,
   "limit": 100,
   "quality": {
-    "total": 551,
-    "relevant": 396,
+    "total": 552,
+    "relevant": 397,
     "review": 140,
     "duplicates": 20,
     "issuerLinked": 0,
@@ -1921,7 +1921,7 @@
       "Dividends": 7,
       "M&A": 21,
       "Guidance": 20,
-      "Contracts": 33,
+      "Contracts": 34,
       "Capital & ownership": 0,
       "Management": 22,
       "General": 368

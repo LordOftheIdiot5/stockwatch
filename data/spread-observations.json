@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T23:53:28+00:00",
+  "generated": "2026-11-17T00:07:44+00:00",
   "method": "Dated snapshots of Stockwatch calculated A/B ratios; NOT reconstructed historical share prices.",
   "frequency": "one UTC observation per day",
   "source": "Stockwatch scanner context",
@@ -13,6 +13,10 @@
       {
         "date": "2026-11-16",
         "value": 1.0655
+      },
+      {
+        "date": "2026-11-17",
+        "value": 1.0655
       }
     ],
     "WWI.OL/WWIB.OL": [
@@ -22,6 +26,10 @@
       },
       {
         "date": "2026-11-16",
+        "value": 1.0417
+      },
+      {
+        "date": "2026-11-17",
         "value": 1.0417
       }
     ],
@@ -33,6 +41,10 @@
       {
         "date": "2026-11-16",
         "value": 0.9834
+      },
+      {
+        "date": "2026-11-17",
+        "value": 0.9834
       }
     ],
     "ODF.OL/ODFB.OL": [
@@ -42,6 +54,10 @@
       },
       {
         "date": "2026-11-16",
+        "value": 1.0155
+      },
+      {
+        "date": "2026-11-17",
         "value": 1.0155
       }
     ],
@@ -53,6 +69,10 @@
       {
         "date": "2026-11-16",
         "value": 1.1443
+      },
+      {
+        "date": "2026-11-17",
+        "value": 1.1443
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
@@ -62,6 +82,10 @@
       },
       {
         "date": "2026-11-16",
+        "value": 0.988
+      },
+      {
+        "date": "2026-11-17",
         "value": 0.988
       }
     ],
@@ -73,6 +97,10 @@
       {
         "date": "2026-11-16",
         "value": 1.0216
+      },
+      {
+        "date": "2026-11-17",
+        "value": 1.0216
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
@@ -82,6 +110,10 @@
       },
       {
         "date": "2026-11-16",
+        "value": 0.9958
+      },
+      {
+        "date": "2026-11-17",
         "value": 0.9958
       }
     ],
@@ -93,6 +125,10 @@
       {
         "date": "2026-11-16",
         "value": 0.9802
+      },
+      {
+        "date": "2026-11-17",
+        "value": 0.9802
       }
     ],
     "SKF-A.ST/SKF-B.ST": [
@@ -102,6 +138,10 @@
       },
       {
         "date": "2026-11-16",
+        "value": 1.01
+      },
+      {
+        "date": "2026-11-17",
         "value": 1.01
       }
     ],
@@ -113,6 +153,10 @@
       {
         "date": "2026-11-16",
         "value": 0.9996
+      },
+      {
+        "date": "2026-11-17",
+        "value": 0.9996
       }
     ],
     "VOLV-A.ST/VOLV-B.ST": [
@@ -122,6 +166,10 @@
       },
       {
         "date": "2026-11-16",
+        "value": 1.0025
+      },
+      {
+        "date": "2026-11-17",
         "value": 1.0025
       }
     ]
