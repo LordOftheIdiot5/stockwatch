@@ -1,8 +1,23 @@
 {
-  "generated": "2026-11-17T00:17:24Z",
-  "latestScan": "2026-11-17T00:16:37+00:00",
+  "generated": "2026-11-17T00:23:09Z",
+  "latestScan": "2026-11-17T00:22:16+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
+  "priceFreshness": {
+    "comparisonDate": "2026-11-16",
+    "equities": {
+      "comparable": 1,
+      "older": 135,
+      "no_volume": 2,
+      "unconfirmed": 0,
+      "unavailable": 0
+    },
+    "total": 138,
+    "comparablePairs": 0,
+    "reportedPairs": 12,
+    "status": "degraded",
+    "method": "Conservative 22:00 UTC weekday cutoff; no exchange-specific holidays; not a live-quote guarantee."
+  },
   "tracked": 138,
   "priced": 138,
   "missing": [],
@@ -86,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 60,
+  "storedStories": 67,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -100,37 +115,37 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 110.2,
+      "avgLatencyMs": 132.9,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 406.0,
+      "avgLatencyMs": 591.0,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1359.5,
+      "avgLatencyMs": 2234.4,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 367,
-      "failed": 227,
-      "avgLatencyMs": 436.5,
+      "succeeded": 422,
+      "failed": 172,
+      "avgLatencyMs": 369.7,
       "errorTypes": {
-        "HTTPError": 227
+        "HTTPError": 172
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1839.6,
+      "avgLatencyMs": 2475.9,
       "errorTypes": {}
     }
   },
@@ -159,6 +174,7 @@
   "abRatios": {
     "tracked": 12,
     "licensedPairs": 0,
-    "snapshotPairs": 12
+    "snapshotPairs": 12,
+    "sessionPairs": 0
   }
 }
