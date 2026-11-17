@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T01:27:16Z",
+  "generated": "2026-11-17T02:07:22Z",
   "items": [
     {
       "id": "RMS.PA:39bdb8355a6e4a113acb356c115894637728ddda62aeb6a35c4835f89aa6fa0d",
@@ -17,6 +17,25 @@
       "match": "name_mentioned",
       "relevance": "mentioned",
       "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "INVE-B.ST:17367ceecccb29307afe6789c90707ce2488485152d2c0e8ac1f5900f0f0a7f7",
+      "ticker": "INVE-B.ST",
+      "name": "Investor AB",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Bill Ackman lays out how an activist investor effort to restore Jensen Huang as Nvidia CEO could work",
+      "english": null,
+      "publisher": "Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT1EtV2hmZUNLdFh2aWNFVTdnYlBIT1VOTVRCYzJwUDRpQk1PSDB2NEx3UEx5cUNGZi1ZcTZNZGlmS2RtQVRKcC04bERwT2RaX3diaHZwTGZLSlhyX0hCQTZiRE1xT2NkSGQyd2hJSnRVSFF1ZDJwX0FUZHhTRWc0VFpub25wOXkzVWlV?oc=5",
+      "published": "2026-11-17T00:14:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Management",
       "sourceDomain": "news.google.com",
       "priority": "normal"
     },
@@ -149,6 +168,25 @@
       "regulatory": false,
       "match": "unverified",
       "relevance": "review",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "UCG.MI:d2790e69d670a5708c1ebff2bdeb758ee71fdc8960d9fd59fb765a3cdd9b6d2d",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Unicredit: ok incondizionato Commissione Ue ad acquisizione Commerz",
+      "english": "UniCredit: Unconditional approval from the European Commission for the acquisition of Commerzbank",
+      "publisher": "Il Sole 24 ORE",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTmZheUtOa1dzQkVoNzBxcE1QUmVGTE8yQklXeE5lOVVNVFZLLUhSQlVTZW9PaXRkY09OT2VFcnJQVktBT2o0c1lFWVE1NVkxNk9FVVFrQ0Z3WDRYLUt5NkdQWS1LV0oyeXQ1eXpjNFJpUnFSZ2VYVW5EX2MtRGpudFZCRXVYNVBpTUI2V3J5QmpkV2tnVS03YkZoN0E0Y3JfejJxTXE2TkdVbzA?oc=5",
+      "published": "2026-11-16T19:38:34Z",
+      "lang": "it",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"

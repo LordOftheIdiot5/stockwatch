@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-17T01:27:16Z",
-  "latestScan": "2026-11-17T01:26:36+00:00",
+  "generated": "2026-11-17T02:07:22Z",
+  "latestScan": "2026-11-17T02:06:31+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "priceFreshness": {
     "comparisonDate": "2026-11-16",
     "equities": {
-      "comparable": 1,
+      "comparable": 0,
       "older": 135,
       "no_volume": 2,
-      "unconfirmed": 0,
+      "unconfirmed": 1,
       "unavailable": 0
     },
     "total": 138,
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 59,
+  "storedStories": 55,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,44 +115,44 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 69.6,
+      "avgLatencyMs": 109.0,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 421.3,
+      "avgLatencyMs": 434.2,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1799.9,
+      "avgLatencyMs": 1525.1,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 409,
-      "failed": 185,
-      "avgLatencyMs": 332.5,
+      "succeeded": 362,
+      "failed": 232,
+      "avgLatencyMs": 402.3,
       "errorTypes": {
-        "HTTPError": 185
+        "HTTPError": 232
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3770.0,
+      "avgLatencyMs": 1945.1,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 556,
-    "relevant": 398,
-    "review": 141,
+    "total": 558,
+    "relevant": 399,
+    "review": 142,
     "duplicates": 22,
     "issuerLinked": 0,
     "categories": {
@@ -162,8 +162,8 @@
       "Guidance": 20,
       "Contracts": 34,
       "Capital & ownership": 0,
-      "Management": 24,
-      "General": 370
+      "Management": 25,
+      "General": 371
     }
   },
   "freightRoutes": {
