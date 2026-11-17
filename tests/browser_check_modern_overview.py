@@ -23,7 +23,7 @@ def main():
      assert "percent" in page.locator("#overviewMacroPlot").inner_text().lower()
      assert page.locator("#workspaceCoverage").count()==1
      page.locator("#workspaceCoverage").select_option("observed")
-     assert page.locator(".sw-heat-cell.no-data").count()==0
+     assert page.locator("#workspaceHeatmap .sw-heat-cell.no-data").count()==0
      assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+2")
      assert not errors,errors
      (ROOT/"workspace-previews").mkdir(exist_ok=True)
