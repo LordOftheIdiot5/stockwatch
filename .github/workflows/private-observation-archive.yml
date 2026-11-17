@@ -1,0 +1,51 @@
+name: Private daily observation archive
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/private_observation_archive.py'
+      - '.github/workflows/private-observation-archive.yml'
+  schedule:
+    - cron: '45 23 * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/private_observation_archive.py'
+      - 'tests/test_private_observation_archive.py'
+      - '.github/workflows/private-observation-archive.yml'
+permissions:
+  contents: read
+concurrency:
+  group: private-observation-archive
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p test_private_observation_archive.py
+  archive:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install 'boto3>=1.40,<2'
+      - name: Store immutable private observation objects
+        env:
+          STOCKWATCH_SCANNER_RETENTION_APPROVED: ${{ vars.STOCKWATCH_SCANNER_RETENTION_APPROVED }}
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: python scripts/private_observation_archive.py
