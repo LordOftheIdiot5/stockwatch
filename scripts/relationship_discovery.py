@@ -100,7 +100,18 @@ def run(root=ROOT):
     graph=json.loads((root/REL).read_text(encoding="utf8"))
     items=list(archived_items(root))
     candidates=discover(graph,items)
-    out={"schemaVersion":1,"generated":datetime.now(timezone.utc).isoformat(),"newsRecordsScanned":len(items),"notice":"Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.","candidates":candidates}
+    # A reviewed disclosure can establish a related, narrower fact than the
+    # headline. Link the fact, but do not mark the headline as verified.
+    reviewed={}
+    for e in graph["relationships"]:
+        if e.get("discoveryNewsId"):
+            reviewed.setdefault(e["discoveryNewsId"],[]).append(e["id"])
+    for row in candidates:
+        linked=reviewed.get(row["newsId"],[])
+        if linked:
+            row["status"]="related_evidence_recorded"
+            row["relatedRelationshipIds"]=sorted(linked)
+    out={"schemaVersion":1,"generated":datetime.now(timezone.utc).isoformat(),"newsRecordsScanned":len(items),"notice":"Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.","candidates":candidates,"relatedEvidenceLeadCount":sum(r["status"]=="related_evidence_recorded" for r in candidates)}
     p=root/OUT;tmp=p.with_suffix(".tmp");tmp.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf8");tmp.replace(p)
     print(json.dumps({"newsRecordsScanned":len(items),"verifiedSeedRelationships":len(graph["relationships"]),"reviewCandidates":len(candidates)}))
     return out
