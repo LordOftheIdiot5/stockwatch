@@ -29,3 +29,16 @@
  body.sw-shell-v47 .sw-tablewrap .sw-table td,body.sw-shell-v47 .sw-tablewrap .sw-table th{padding:10px 12px}
 }
 @media(prefers-reduced-motion:reduce){.sw-mobile-nav *{scroll-behavior:auto;transition:none}}
+
+/* Brand pages retain a distinct editorial header but expose the same routes. */
+.sw-brand-more{position:relative}
+.sw-brand-more>summary{cursor:pointer;list-style:none;padding:9px 11px;border:1px solid var(--edge);border-radius:8px}
+.sw-brand-more>summary::-webkit-details-marker{display:none}
+.sw-brand-more>summary:after{content:" ▾";color:var(--mint)}
+.sw-brand-drawer{position:absolute;top:calc(100% + 7px);right:0;width:min(440px,85vw);max-height:65vh;overflow:auto;z-index:50;background:var(--surface);border:1px solid var(--edge);border-radius:12px;padding:12px;box-shadow:0 14px 45px #0004}
+.sw-brand-drawer section{padding:7px}.sw-brand-drawer section+section{border-top:1px solid var(--edge)}
+.sw-brand-drawer p{color:var(--muted);font-size:10px;letter-spacing:.08em;margin-bottom:5px}
+.sw-brand-drawer section>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+.sw-brand-drawer a{display:flex;align-items:center;gap:7px;padding:8px;font-size:12px;min-height:40px;border-radius:5px}
+.sw-brand-drawer a:focus-visible,.sw-brand-drawer a:hover,.sw-brand-drawer a.active{background:var(--soft);color:var(--mint)}
+@media(max-width:1050px){.sw-brand-more{display:none}}
