@@ -38,5 +38,23 @@ class ArchiveTests(unittest.TestCase):
                 self.assertEqual(status[-1]["day"],"2026-11-17")
                 self.assertTrue(put.call_args.args[2].startswith("observations/scanner-observations/2026-11-17/"))
                 self.assertFalse(status[-1]["publicPublication"])
+    def test_eligible_series_only(self):
+        eia={"key":"eia:RBRTE","provider":"eia","sourceUrl":"https://www.eia.gov/opendata/","license":"EIA attribution","unit":"USD/barrel","history":[{"date":"2026-11-17","value":80}]}
+        denied={**eia,"key":"fred:UNKNOWN"}
+        spoof={**eia,"sourceUrl":"https://www.eia.gov.example.com/"}
+        out=archive.official_snapshot("official-energy-macro",{"generated":STAMP,"series":[eia,denied,spoof],"privateMetadata":"not archived"})
+        self.assertEqual(out["series"],[eia])
+        self.assertNotIn("privateMetadata",out)
+        with self.assertRaises(ValueError):
+            archive.official_snapshot("official-energy-macro",{"series":[denied]})
+    def test_real_published_source_snapshots(self):
+        for kind,filename in archive.OFFICIAL_FILES.items():
+            with self.subTest(kind=kind):
+                d=json.loads((archive.ROOT/"data"/filename).read_text(encoding="utf8"))
+                result=archive.official_snapshot(kind,d)
+                self.assertGreater(len(result["series"]),0)
+                self.assertNotIn("identityCandidates",result)
+                self.assertNotIn("publicShorts",result)
+                self.assertNotIn("sources",result)
 if __name__=="__main__":
     unittest.main()
