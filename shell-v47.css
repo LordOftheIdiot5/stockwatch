@@ -73,3 +73,14 @@ body.sw-shell-v47[data-theme=light] .panel th{background:var(--sw-card-hi);color
  body.sw-shell-v47 .sw-route{padding:12px}
  body.sw-shell-v47 .sw-tablewrap th,body.sw-shell-v47 .tablewrap th{white-space:nowrap}
 }
+
+/* V60 polish: contain long lists without removing any records. */
+@media(max-width:1050px){
+ #terminalLab #labHeat .sw-lab-heatgrid,#terminalLab #labScreen .sw-terminal-scroll,#workspaceHeatmap{max-height:52vh;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+}
+@media(max-width:740px){
+ body[data-page=index] .sw-ws-module-art{height:44px;min-height:44px}
+ body[data-page=index] .sw-ws-module-text{padding:10px}
+ body[data-page=index] .sw-ws-modules{gap:8px}
+ body[data-page=index] .sw-attention-grid{max-height:55vh;overflow:auto;overscroll-behavior:contain}
+}

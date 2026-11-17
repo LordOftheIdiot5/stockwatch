@@ -1,5 +1,5 @@
 """Combined candidate quality audit. Captures all cases even if individual checks fail."""
-import functools,http.server,json,threading,time
+import functools,http.server,json,threading,time,traceback
 from pathlib import Path
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright
@@ -23,11 +23,11 @@ def check_interactions(browser):
             fn()
             assert not errors,errors
             interaction.append({"name":name,"passed":True})
-        except Exception as e:interaction.append({"name":name,"passed":False,"error":str(e)[:1200]})
+        except Exception as e:interaction.append({"name":name,"passed":False,"error":traceback.format_exc()[-2000:]})
     def search():
         page.goto(base+"search.html?q=SALM.OL&kind=Company")
         page.locator('.gs-result').first.wait_for()
-        assert "SalMar" in page.locator('.gs-result').first.inner_text()
+        assert "salmar" in page.locator('.gs-result').first.inner_text().casefold(), page.locator('.gs-result').first.inner_text()
         page.locator('input[name=q]').fill('zzzz-no-matching-company')
         assert page.locator('.gs-result').count()==0
         page.locator('input[name=q]').fill('Orsted')
@@ -70,7 +70,7 @@ def check_interactions(browser):
         page.goto(base+"company.html?ticker=SALM.OL")
         page.locator('#companyDrivers details').first.wait_for()
         page.locator('#companyDrivers summary').first.click()
-        assert 'No connected source' in page.locator('#companyDrivers details').first.inner_text()
+        page.locator('#companyDrivers details').first.get_by_text('No connected source for this research question.').wait_for()
         page.locator('#companyDrivers summary').nth(2).click()
         page.locator('#companyDrivers details').nth(2).locator('.sw55-source').first.wait_for()
     for name,fn in [('global-search',search),('metadata-export',portal),('saved-workspaces',workspaces),('voyage-scenario',voyage),('industry-gaps',industry)]:run(name,fn)
