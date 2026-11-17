@@ -1,5 +1,7 @@
 name: Marketstack private recovery test
 on:
+  pull_request:
+    types: [opened]
   workflow_dispatch:
     inputs:
       session:
@@ -24,6 +26,7 @@ permissions:
   contents: read
 jobs:
   test:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'feature/stockwatch-marketstack-recovery-20261117')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -34,10 +37,10 @@ jobs:
       - name: Verify private probe
         run: python -m unittest discover -s tests -p test_marketstack_recovery.py -v
       - name: Run authorized live evaluation
-        if: inputs.run_live
+        if: github.event_name == 'pull_request' || inputs.run_live
         env:
           STOCKWATCH_MARKETSTACK_API_KEY: ${{ secrets.STOCKWATCH_MARKETSTACK_API_KEY }}
-          SESSION: ${{ inputs.session }}
-          BUDGET: ${{ inputs.budget }}
-          MODE: ${{ inputs.mode }}
+          SESSION: ${{ inputs.session || '2026-11-16' }}
+          BUDGET: ${{ inputs.budget || 20 }}
+          MODE: ${{ inputs.mode || 'sample' }}
         run: python scripts/marketstack_recovery_probe.py --date "$SESSION" --budget "$BUDGET" --mode "$MODE" --authorized-test
