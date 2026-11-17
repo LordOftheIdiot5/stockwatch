@@ -18,6 +18,8 @@ def main():
      assert page.locator(".sw-ws-pulse-grid").bounding_box()["y"] < page.locator(".sw-overview-workbench").bounding_box()["y"]
      assert page.locator(".sw-attention-panel").bounding_box()["y"] < page.locator(".sw-overview-workbench").bounding_box()["y"]
      assert page.locator("#overviewMacroPlot svg").count()==1
+     assert page.locator(".sw-economic-card").count()>=6
+     assert page.locator(".sw-overview-status").count()==1
      page.locator("#overviewMacroSeries").select_option("fred:DGS10")
      page.locator("#overviewMacroRange").select_option("365")
      assert "percent" in page.locator("#overviewMacroPlot").inner_text().lower()
