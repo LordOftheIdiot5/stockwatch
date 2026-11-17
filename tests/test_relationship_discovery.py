@@ -38,6 +38,34 @@ class RelationshipTests(unittest.TestCase):
         self.assertEqual(result[0]["candidateType"],"headline_event")
         self.assertFalse(result[0]["relationshipVerified"])
         self.assertEqual(result[0]["entityIds"],[])
+    def test_review_identity_survives_new_aliases_and_missing_source(self):
+        item=self.story("SpaceX signs supply contract with Singulus",ticker="SIE.DE",match="name_mentioned",relevance="mentioned")
+        initial=d.discover(self.graph,[item])[0]
+        prior=d.merge_review([], [initial],self.graph,"2026-11-18T00:00:00Z")
+        changed={**initial,"entityIds":["spacex"],"candidateType":"headline_event"}
+        current=d.merge_review(prior,[changed],self.graph,"2026-11-18T01:00:00Z")
+        self.assertEqual(current[0]["id"],prior[0]["id"])
+        self.assertEqual(current[0]["firstSeenAt"],"2026-11-18T00:00:00Z")
+        self.assertEqual(current[0]["lastSeenAt"],"2026-11-18T01:00:00Z")
+        self.assertEqual(current[0]["entityIds"],["singulus","spacex"])
+        retained=d.merge_review(current,[],self.graph,"2026-11-18T02:00:00Z")
+        self.assertEqual(len(retained),1)
+        self.assertFalse(retained[0]["currentlyDetected"])
+        self.assertFalse(retained[0]["relationshipVerified"])
+        self.assertEqual(retained[0]["lastSeenAt"],"2026-11-18T01:00:00Z")
+
+    def test_related_evidence_across_duplicate_news_ids(self):
+        graph=copy.deepcopy(self.graph)
+        graph["relationships"][0]["discoveryNewsId"]="other"
+        item=self.story("SpaceX signs supply contract with Singulus",ticker="SIE.DE",match="name_mentioned",relevance="mentioned")
+        rows=d.discover(graph,[item,{**item,"id":"other"}])
+        self.assertEqual(len(rows),1)
+        result=d.merge_review([],rows,graph,"2026-11-18T00:00:00Z")
+        self.assertEqual(result[0]["newsIds"],["other","test"])
+        self.assertEqual(result[0]["relatedRelationshipIds"],[graph["relationships"][0]["id"]])
+        self.assertEqual(result[0]["status"],"related_evidence_recorded")
+        self.assertFalse(result[0]["relationshipVerified"])
+
     def test_fail_closed(self):
         for update in [{"from":"unknown"},{"actualCashFlow":True},{"amount":{"value":0,"currency":"USD","comparison":"exact_reported","basis":"fake"}},{"disclosedOn":"2027-01-01"}]:
             graph=copy.deepcopy(self.graph)
