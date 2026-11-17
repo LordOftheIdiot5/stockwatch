@@ -21,6 +21,15 @@ try:
    assert page.locator("#stocksRows").get_by_text("A/B observation",exact=False).count()>0
    page.locator("#stkSearch").fill("")
    page.locator("#stkCoverage").select_option("priced")
+   page.locator("#stkSessionQuality").select_option("all")
+   page.locator('[data-stk-view=heat]').click()
+   assert page.locator("#stkHeat .sw-compact-heatgrid").count()==1
+   assert page.locator("#stkHeat .sw-heat-cell.positive,#stkHeat .sw-heat-cell.negative").count()>=10
+   assert "Map observation date:" in page.locator("#stkHeat").inner_text()
+   assert page.locator("#stkHeat").evaluate("(el) => el.scrollWidth <= el.clientWidth + 1")
+   assert page.locator(".sw-compact-heatgrid").evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').length")>=2
+   page.screenshot(path=str(out/f"v68-heat-{width}.png"))
+   page.locator('[data-stk-view=table]').click()
    page.locator("#stkSessionQuality").select_option("missing")
    page.locator('[data-stk-view=heat]').click()
    assert page.locator("#stkHeat .sw-heat-cell.no-data").count()>0
