@@ -12,9 +12,12 @@ on:
       - feature/entsoe-open-energy-20261116
       - feature/stockwatch-free-research-data-20261117
       - feature/stockwatch-nordic-sources-20261117
+      - feature/stockwatch-dataset-storage-20261117
     paths:
       - scripts/open_data.py
       - scripts/free_research.py
+      - scripts/dataset_store.py
+      - tests/test_dataset_store.py
       - scripts/nordic_sources.py
       - tests/test_nordic_sources.py
       - tests/test_free_research.py
@@ -119,9 +122,23 @@ jobs:
           python scripts/shipping_unctad.py
           python scripts/history_coverage.py
           python scripts/free_research.py
+      - name: Build compact source-level research index
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/stockwatch-dataset-storage-20261117'
+        run: python scripts/dataset_store.py
       - name: Commit official-source datasets without racing the market scanner
         if: github.ref == 'refs/heads/main'
         run: python scripts/publish_data.py --mode official
+      - name: Archive reviewed official datasets to private R2 (opt-in only)
+        if: github.ref == 'refs/heads/main' && vars.STOCKWATCH_OPEN_DATA_ARCHIVE_ENABLED == 'true'
+        env:
+          STOCKWATCH_OPEN_DATA_ARCHIVE_ENABLED: ${{ vars.STOCKWATCH_OPEN_DATA_ARCHIVE_ENABLED }}
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: |
+          python -m pip install 'boto3>=1.40,<2'
+          python scripts/dataset_store.py --archive
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: refresh
