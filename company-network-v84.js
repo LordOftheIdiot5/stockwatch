@@ -1,7 +1,7 @@
 /* Evidence-linked company network. Never promote review candidates to edges. */
 (function(global){'use strict';
-const types={supplies:'Supply',supply_contract:'Supply contract',service_contract:'Service contract',equity_investment:'Equity investment',financing:'Financing',debt_repayment:'Debt repayment'};
-const colors={supplies:'#249b83',supply_contract:'#249b83',service_contract:'#b88a40',equity_investment:'#4d87db',financing:'#4d87db',debt_repayment:'#4d87db'};
+const types={supplies:'Supply',supply_contract:'Supply contract',service_contract:'Service contract',equity_investment:'Equity investment',financing:'Financing',debt_repayment:'Debt repayment',arrangement:'Financing arrangement'};
+const colors={supplies:'#249b83',supply_contract:'#249b83',service_contract:'#b88a40',equity_investment:'#4d87db',financing:'#4d87db',debt_repayment:'#4d87db',arrangement:'#8a7bb8'};
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x))&&new Date(x).toISOString().slice(0,10)===x;
 const https=x=>{try{const u=new URL(x);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null}catch{return null}};
@@ -14,7 +14,7 @@ function graph(data){
  }
  for(const e of data.relationships||[]){
   if(!e||!e.id||edgeIds.has(e.id)||!nodes.has(e.from)||!nodes.has(e.to)||e.from===e.to||!Object.hasOwn(types,e.type)||e.evidenceStatus!=='issuer_disclosed'||e.actualCashFlow!==false||!validDate(e.disclosedOn)||!validDate(e.reviewedOn)||e.disclosedOn>e.reviewedOn||e.reviewedOn>data.compiledOn||!https(e.sourceUrl)||typeof e.sourceLocator!=='string'||!e.sourceLocator||typeof e.subject!=='string'||!e.subject)continue;
-  const a=e.amount;if(a!==null&&(!a||!Number.isSafeInteger(a.value)||a.value<=0||!/^[A-Z]{3}$/.test(a.currency)||!['exact_reported','greater_than','approximate'].includes(a.comparison)||!a.basis))continue;
+  const a=e.amount;if(a!==null&&(!a||!Number.isSafeInteger(a.value)||a.value<=0||!/^[A-Z]{3}$/.test(a.currency)||!['exact_reported','greater_than','approximate','up_to'].includes(a.comparison)||!a.basis))continue;
   edgeIds.add(e.id);edges.push(e);
  }
  return {nodes,edges};
@@ -29,7 +29,7 @@ function neighborhood(g,id,kind='all',hops=1){
 function amountLabel(a){
  if(!a)return 'Amount not disclosed';
  const scale=a.value>=1e9?[1e9,'bn']:a.value>=1e6?[1e6,'m']:[1,''];
- return (a.comparison==='greater_than'?'> ':a.comparison==='approximate'?'≈ ':'')+a.currency+' '+(a.value/scale[0]).toLocaleString('en-US',{maximumFractionDigits:3})+(scale[1]?' '+scale[1]:'')+' · '+a.basis.replaceAll('_',' ');
+ return (a.comparison==='greater_than'?'> ':a.comparison==='approximate'?'≈ ':a.comparison==='up_to'?'Up to ':'')+a.currency+' '+(a.value/scale[0]).toLocaleString('en-US',{maximumFractionDigits:3})+(scale[1]?' '+scale[1]:'')+' · '+a.basis.replaceAll('_',' ');
 }
 function photo(data,listing){
  const rows=(data?.assets||[]).filter(a=>a?.listing===listing&&a.status==='imported'&&/^[a-z0-9-]+$/.test(a.id)&&a.localAsset==='assets/company/'+a.id+'.webp'&&Number.isInteger(a.width)&&a.width>0&&Number.isInteger(a.height)&&a.height>0&&Number.isInteger(a.bytes)&&a.bytes<=256000&&https(a.sourcePage)&&https(a.licenseUrl)&&a.author&&a.license&&a.caption&&a.alt);
