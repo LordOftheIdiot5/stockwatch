@@ -288,3 +288,5 @@ body[data-page=index] .sw-attention-panel{margin:12px 0}body[data-page=index] .s
 body[data-page=index] .sw-ws-pulse-grid{margin-bottom:12px}body[data-page=index] .sw-attention-panel{margin:12px 0}body[data-page=index] .sw-overview-workbench{margin-top:12px}
 
 .sw-historical-session{margin:14px 0;border-left:3px solid var(--sw-gold)}.sw-historical-session .sw-ws-metrics{margin:10px 0}.sw-historical-map{max-height:300px;overflow:auto;scrollbar-width:thin}.sw-historical-movers{margin-top:10px;border-top:1px solid var(--sw-edge);padding-top:8px}.sw-historical-movers summary{cursor:pointer;color:var(--sw-text);font-weight:650}
+
+.sw-screener-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.sw-screener-head h2{margin:4px 0;font-size:22px}.sw-screener-head p{margin:0}.sw-screener-head .sw-controls{margin:0;flex-wrap:wrap}
