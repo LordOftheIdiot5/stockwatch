@@ -1,7 +1,7 @@
 name: Marketstack private recovery test
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
   workflow_dispatch:
     inputs:
       session:
@@ -41,6 +41,6 @@ jobs:
         env:
           STOCKWATCH_MARKETSTACK_API_KEY: ${{ secrets.STOCKWATCH_MARKETSTACK_API_KEY }}
           SESSION: ${{ inputs.session || '2026-11-16' }}
-          BUDGET: ${{ inputs.budget || 20 }}
+          BUDGET: ${{ inputs.budget || 5 }}
           MODE: ${{ inputs.mode || 'sample' }}
         run: python scripts/marketstack_recovery_probe.py --date "$SESSION" --budget "$BUDGET" --mode "$MODE" --authorized-test
