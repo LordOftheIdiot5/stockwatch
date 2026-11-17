@@ -538,7 +538,7 @@ function companyOperatingRows(data,ticker){
  if(data?.schemaVersion!==1||!date(data.compiledOn)||!Array.isArray(data.companies))return [];
  const hosts={'WAWI.OL':'www.walleniuswilhelmsen.com','HAUTO.OL':'www.hoeghautoliners.com'};
  const counts=new Map();for(const c of data.companies)counts.set(c?.ticker,(counts.get(c?.ticker)||0)+1);
- return data.companies.filter(c=>c&&hosts[c.ticker]&&counts.get(c.ticker)===1&&(!ticker||c.ticker===ticker)&&typeof c.issuer==='string'&&typeof c.scope==='string').map(c=>{
+ return data.companies.filter(c=>c&&Object.hasOwn(hosts,c.ticker)&&counts.get(c.ticker)===1&&(!ticker||c.ticker===ticker)&&typeof c.issuer==='string'&&typeof c.scope==='string'&&Array.isArray(c.series)).map(c=>{
   const seen=new Set(),series=[];
   for(const v of c.series||[]){
    if(!v||typeof v.key!=='string'||seen.has(v.key)||typeof v.label!=='string'||typeof v.unit!=='string'||!['monthly','quarterly'].includes(v.frequency)||!Array.isArray(v.observations))continue;
