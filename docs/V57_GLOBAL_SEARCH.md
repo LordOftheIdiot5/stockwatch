@@ -1,0 +1,2 @@
+# V57 first increment
+Search public metadata across company watchlist, identifier candidates, reference directory, archived news headlines, official index, catalog and route definitions. Accent-insensitive ranking, filters, pagination, shared navigation. Company and news links go directly to their records; dataset/product/route links open their relevant research area, not necessarily an exact selection. No private datasets, prices or AI claims. Browser and live acceptance remain.

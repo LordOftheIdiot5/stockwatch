@@ -1,0 +1,23 @@
+/* Browser-local named configurations. Never store prices, credentials or account data. */
+(function(global){'use strict';
+const str=x=>typeof x==='string'?x.slice(0,160):'';
+const list=(x,n)=>Array.isArray(x)?[...new Set(x.filter(v=>typeof v==='string'&&v.length>0&&v.length<=160))].slice(0,n):[];
+function prefs(x={}){if(!x||typeof x!=='object'||Array.isArray(x))x={};return {selected:str(x.selected),sector:str(x.sector)||'all',pinned:list(x.pinned,500),keys:list(x.keys,5),days:[30,90,365,0].includes(x.days)?x.days:365,mode:x.mode==='raw'?'raw':'normalized',chartMode:x.chartMode==='split'?'split':'overlay',focus:x.focus===true,centerWidth:Number.isFinite(x.centerWidth)?Math.max(1.5,Math.min(3.5,x.centerWidth)):2.7,watchOnly:x.watchOnly===true}}
+const cleanName=x=>typeof x==='string'?x.trim().slice(0,60):'';
+function validate(x){if(!Array.isArray(x))return [];const m=new Map();for(const r of x){const name=cleanName(r?.name);if(!name||m.has(name))continue;m.set(name,{name,prefs:prefs(r.prefs)});if(m.size===30)break}return [...m.values()]}
+function put(rows,name,p){name=cleanName(name);const r=validate(rows);if(!name)return null;const i=r.findIndex(x=>x.name===name);if(i>=0)r[i]={name,prefs:prefs(p)};else{if(r.length>=30)return null;r.push({name,prefs:prefs(p)})}return r}
+function mount(host,{snapshot,restore}){
+ const key='stockwatch-named-workspaces-v59';let rows=[];try{rows=validate(JSON.parse(localStorage.getItem(key)||'[]'))}catch{}
+ host.innerHTML='<details class="sw59-workspaces"><summary>Saved workspaces</summary><p class="sw-meta">Named watchlists and chart layouts stay in this browser. No account or cloud synchronization.</p><div class="sw-controls"><label>Workspace name <input id="sw59Name" maxlength="60" placeholder="e.g. Nordic shipping"></label><button type="button" id="sw59Save" class="sw-primary">Save current</button></div><div class="sw-controls"><label>Saved workspace <select id="sw59Select"></select></label><button type="button" id="sw59Load" class="sw-soft-btn">Load</button><button type="button" id="sw59Delete" class="sw-soft-btn">Delete</button><button type="button" id="sw59Export" class="sw-soft-btn">Export settings</button></div><label>Import settings JSON <input id="sw59Import" type="file" accept=".json,application/json"></label><p id="sw59Status" role="status" class="sw-meta"></p></details>';
+ const $=id=>host.querySelector('#'+id),sel=$('sw59Select'),status=$('sw59Status');
+ function draw(name){sel.replaceChildren(...rows.map(r=>new Option(r.name,r.name)));if(name&&rows.some(x=>x.name===name))sel.value=name;for(const id of ['sw59Load','sw59Delete','sw59Export'])$(id).disabled=!rows.length}
+ function commit(next){try{localStorage.setItem(key,JSON.stringify(next));rows=next;return true}catch{status.textContent='Browser storage unavailable; changes not saved.';return false}}
+ $('sw59Save').onclick=()=>{const name=cleanName($('sw59Name').value),next=put(rows,name,snapshot());if(!next){status.textContent='Enter a name or remove a saved workspace (maximum 30).';return}if(rows.some(r=>r.name===name)&&!global.confirm('Replace saved workspace '+name+'?'))return;if(commit(next)){draw(name);status.textContent='Saved locally.'}};
+ $('sw59Load').onclick=()=>{const r=rows.find(x=>x.name===sel.value);if(r){const ok=restore(r.prefs);status.textContent=ok===false?'Could not restore settings.':'Loaded available instruments and settings.'}};
+ $('sw59Delete').onclick=()=>{const name=sel.value;if(global.confirm('Delete saved workspace '+name+'?')&&commit(rows.filter(r=>r.name!==name))){draw();status.textContent='Deleted local workspace.'}};
+ $('sw59Export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify({schemaVersion:1,workspaces:rows},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='stockwatch-workspaces.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+ $('sw59Import').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>262144)throw Error('size');const d=JSON.parse(await f.text());if(d.schemaVersion!==1||!Array.isArray(d.workspaces))throw Error('format');const incoming=validate(d.workspaces);let next=rows;for(const r of incoming){if(next.some(x=>x.name===r.name))continue;next=put(next,r.name,r.prefs)||next}if(commit(next)){draw();status.textContent='Imported new names only; existing workspaces unchanged.'}}catch{status.textContent='Invalid workspace settings file.'}finally{e.target.value=''}};
+ draw();
+}
+const api={prefs,validate,put,mount};if(typeof module==='object'&&module.exports)module.exports=api;else global.StockwatchWorkspaces=api;
+})(typeof window!=='undefined'?window:{});

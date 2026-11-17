@@ -3,7 +3,7 @@ import json,math,os,re,urllib.parse,urllib.request,urllib.error,time
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-FRED={'DGS2':('US 2-year Treasury yield','percent'),'DGS10':('US 10-year Treasury yield','percent'),'DFF':('US effective federal funds rate','percent'),'UNRATE':('US unemployment rate','percent'),'CPIAUCSL':('US consumer price index','index 1982-84=100'),'INDPRO':('US industrial production','index 2017=100'),'M2SL':('US M2 money stock','billion USD')}
+FRED={'PCU483111483111':('US deep sea freight transportation producer price index','index Jun 1988=100'),'DGS2':('US 2-year Treasury yield','percent'),'DGS10':('US 10-year Treasury yield','percent'),'DFF':('US effective federal funds rate','percent'),'UNRATE':('US unemployment rate','percent'),'CPIAUCSL':('US consumer price index','index 1982-84=100'),'INDPRO':('US industrial production','index 2017=100'),'M2SL':('US M2 money stock','billion USD')}
 EIA={'RBRTE':('Brent crude spot price','USD/barrel'),'RWTC':('WTI Cushing crude spot price','USD/barrel')}
 UA='StockwatchResearch/1.0 (+https://stocks.nordl.dev)'
 def timestamp():
@@ -40,8 +40,11 @@ def fred(key,series_id):
     if not isinstance(data.get('observations'),list):raise ValueError('invalid_fred_response')
     rows=history(data['observations'],'date','value')
     if not rows:raise ValueError('empty_fred_response')
-    return observation('fred',series_id,*FRED[series_id],rows,'US','https://fred.stlouisfed.org/series/'+series_id,
+    item=observation('fred',series_id,*FRED[series_id],rows,'US','https://fred.stlouisfed.org/series/'+series_id,
         'FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights')
+    if series_id=='PCU483111483111':
+        item.update(frequency='monthly',license='U.S. Bureau of Labor Statistics via FRED; public domain, citation requested')
+    return item
 def eia(key,series_id):
     params=urllib.parse.urlencode([('api_key',key),('frequency','daily'),('data[0]','value'),('facets[series][]',series_id),('sort[0][column]','period'),('sort[0][direction]','desc'),('length','370')])
     data=request('https://api.eia.gov/v2/petroleum/pri/spt/data/?'+params,timeout=60,attempts=2)

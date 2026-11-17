@@ -15,6 +15,8 @@ try:
    errors=[];page.on("pageerror",lambda e:errors.append(str(e)))
    page.goto(base+"stocks.html")
    page.locator("#stocksRows tr").first.wait_for()
+   assert page.locator("#stkCoverage").input_value()=="monitored"
+   assert page.locator("#stocksRows").get_by_text("Quote not connected").count()==0
    page.locator("#stkSessionQuality").select_option("missing")
    page.locator('[data-stk-view=heat]').click()
    assert page.locator("#stkHeat .sw-heat-cell.no-data").count()>0

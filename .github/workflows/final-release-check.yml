@@ -84,7 +84,7 @@ jobs:
           node --check quant-v53.js
           node --test tests/test_quant_v53.mjs
       - name: V54 private revision history smoke test
-        if: startsWith(github.head_ref, 'feature/stockwatch-v54-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v54-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: |
           python scripts/financial_history.py --private-db "$RUNNER_TEMP/research-v54.sqlite"
           python scripts/research_assets.py --private-db "$RUNNER_TEMP/research-v46.sqlite"
@@ -92,6 +92,22 @@ jobs:
         run: |
           node --check industry-v55.js
           node --test tests/test_industry_v55.mjs
+      - name: V56 voyage scenario calculation tests
+        run: |
+          node --check voyage-v56.js
+          node --test tests/test_voyage_v56.mjs
+      - name: V57 public research search tests
+        run: |
+          node --check brand/global-search.js
+          node --test tests/test_global_search_v57.mjs
+      - name: V58 data catalog tests
+        run: |
+          node --check brand/data-portal.js
+          node --test tests/test_data_portal_v58.mjs
+      - name: V59 saved workspace settings tests
+        run: |
+          node --check workspaces-v59.js
+          node --test tests/test_workspaces_v59.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js
@@ -116,17 +132,17 @@ jobs:
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
       - name: V50 company research tests
-        if: startsWith(github.head_ref, 'feature/stockwatch-v50-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v50-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: |
           node --check company-research.js
           node --test tests/test_company_v50.mjs
       - name: V49 native chart core unit tests
-        if: startsWith(github.head_ref, 'feature/stockwatch-v49-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v49-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: |
           node --check native-chart.js
           node --test tests/test_native_chart_v49.mjs
       - name: V49 rendered chart interaction tests
-        if: startsWith(github.head_ref, 'feature/stockwatch-v49-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v49-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: python tests/browser_check_native_v49.py
       - name: Upload V49 chart previews
         if: always() && startsWith(github.head_ref, 'feature/stockwatch-v49-')
@@ -136,7 +152,7 @@ jobs:
           path: workspace-previews/v49-*.png
           if-no-files-found: ignore
       - name: V50 rendered company research checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-v50-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v50-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: python tests/browser_check_company_v50.py
       - name: Upload V50 company previews
         if: always() && startsWith(github.head_ref, 'feature/stockwatch-v50-')
@@ -146,7 +162,7 @@ jobs:
           path: workspace-previews/v50-*.png
           if-no-files-found: ignore
       - name: V51 screener browser checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-v51-') || startsWith(github.head_ref, 'feature/stockwatch-v52-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v51-') || startsWith(github.head_ref, 'feature/stockwatch-v60-') || startsWith(github.head_ref, 'feature/stockwatch-v52-')
         run: python tests/browser_check_screener_v51.py
       - name: Upload V51 screener previews
         if: always() && startsWith(github.head_ref, 'feature/stockwatch-v51-')
@@ -156,7 +172,7 @@ jobs:
           path: workspace-previews/v51-*.png
           if-no-files-found: ignore
       - name: V52 synchronized terminal browser checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-v52-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v52-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: python tests/browser_check_terminal_v52.py
       - name: Upload V52 terminal previews
         if: always() && startsWith(github.head_ref, 'feature/stockwatch-v52-')
@@ -166,7 +182,7 @@ jobs:
           path: workspace-previews/v52-*.png
           if-no-files-found: ignore
       - name: V47 shared navigation rendered checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-v47-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v47-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: python tests/browser_check_shell_v47.py
       - name: Upload V47 screenshots
         if: always() && startsWith(github.head_ref, 'feature/stockwatch-v47-')
@@ -177,7 +193,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: V48 pagination and mobile density browser checks
-        if: startsWith(github.head_ref, 'feature/stockwatch-v48-')
+        if: startsWith(github.head_ref, 'feature/stockwatch-v48-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: python tests/browser_check_mobile_v48.py
       - name: Upload V48 mobile previews
         if: always() && startsWith(github.head_ref, 'feature/stockwatch-v48-')
@@ -299,6 +315,16 @@ jobs:
         if: startsWith(github.head_ref, 'feature/stockwatch-v29f-')
         run: python tests/browser_check_v29f.py
 
+      - name: V60 full candidate browser audit
+        if: startsWith(github.head_ref, 'feature/stockwatch-v60-')
+        run: python tests/browser_check_v60.py
+      - name: Upload V60 evidence even on failure
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v60-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v60-audit
+          path: workspace-previews/v60-*
+          if-no-files-found: ignore
       - name: V30b chart display integration checks
         run: python tests/browser_check_v30b.py
 
