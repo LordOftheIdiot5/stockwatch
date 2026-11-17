@@ -36,12 +36,12 @@ test('reference records remain a separate venue+FIGI catalog',()=>{
 
 test('dated last-known prices remain visible without current-session change',()=>{const old={ticker:'A',name:'A',sector:'Industry',close:12.5,currency:'NOK',date:'2026-11-13',marketQuality:'older',changePct:7};assert.equal(coverageHeatRows([old,rows[2]],'all','priced').length,1);const h=coverageHeatmap([old]);assert.match(h,/12\.5 NOK · 2026-11-13/);assert.match(h,/no-data/);assert.doesNotMatch(h,/sw-heat-cell positive/)});
 
-test('V62: latest broadly reported day is bounded by snapshot and excludes retained or zero volume rows',()=>{
+test('V62: latest broadly reported day includes retained valid changes but excludes future or zero-volume rows',()=>{
  const a={ticker:'A',date:'2026-11-17',close:12,currency:'NOK',changePct:1,volume:10};
  const b={...a,ticker:'B'},older={...a,ticker:'C',date:'2026-11-16'};
  const set=[a,b,older,{...a,ticker:'D',date:'2026-11-18'},{...a,ticker:'E',priceStatus:'retained'},{...a,ticker:'F',volume:0},{...a,ticker:'G',referenceOnly:true}];
  const reported=latestBroadReportedSession(set,'2026-11-17T19:42:00Z',2);
- assert.equal(reported.day,'2026-11-17');assert.deepEqual(reported.rows.map(x=>x.ticker),['A','B']);
+ assert.equal(reported.day,'2026-11-17');assert.deepEqual(reported.rows.map(x=>x.ticker),['A','B','E']);
  assert.equal(latestBroadReportedSession(set,'invalid',2),null);
  assert.match(coverageHeatmap(reported.rows),/company.html\?ticker=A/);
  assert.equal(marketHeatData([{...a,referenceOnly:true}]).length,0);
