@@ -78,7 +78,7 @@ jobs:
       - name: Attention signal evidence and recency tests
         run: node --test tests/test_stock_attention.mjs
       - name: Price observation freshness tests
-        run: node --test tests/test_price_freshness.mjs tests/test_historical_session.mjs
+        run: node --test tests/test_price_freshness.mjs tests/test_historical_session.mjs tests/test_retained_heatmap_v85.mjs
       - name: A/B directional scenario tests
         run: node --test tests/test_ab_review.mjs
       - name: V51 session-safe screening tests
