@@ -37,6 +37,9 @@ try:
                     else:
                         assert page.locator(".sw-side a[href='terminal.html']").count()==1,name
                         assert page.locator(".sw-side a[href='price-history.html']").count()==1,name
+                        assert page.locator(".sw-side a[href='intelligence.html']").count()==1,name
+                        links=page.locator(".sw-side .sw-nav a").evaluate_all("(xs)=>xs.map(x=>x.getAttribute('href'))")
+                        assert len(links)==len(set(links)), (name,links)
                 # Verify the shared navigation remains in bounds. Existing page-specific
                 # table overflow is a separate V48 gate, not waived or marked passed.
                 assert page.locator("body").evaluate("(e)=>e.dataset.theme") in ("dark","light")
@@ -45,6 +48,8 @@ try:
                     theme=page.locator("#swTheme,#brandTheme")
                     theme.click()
                     assert page.locator("body").evaluate("(e)=>e.dataset.theme")=="light",name
+                    if width==1440 and page.locator(".sw-side").count():
+                        assert page.locator(".sw-side .sw-link:not(.active)").first.evaluate("(e)=>getComputedStyle(e).color")=="rgb(64, 83, 109)",name
                     page.screenshot(path=str(out/f"v47-{name}-{width}-light.png"))
                     theme.click()
             page.close()

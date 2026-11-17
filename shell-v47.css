@@ -42,3 +42,13 @@
 .sw-brand-drawer a{display:flex;align-items:center;gap:7px;padding:8px;font-size:12px;min-height:40px;border-radius:5px}
 .sw-brand-drawer a:focus-visible,.sw-brand-drawer a:hover,.sw-brand-drawer a.active{background:var(--soft);color:var(--mint)}
 @media(max-width:1050px){.sw-brand-more{display:none}}
+
+/* Readable navigation in daylight; avoid low-contrast transitions in screenshots. */
+body.sw-shell-v47[data-theme="light"] .sw-side .sw-link{color:#40536d}
+body.sw-shell-v47[data-theme="light"] .sw-side .sw-link.active{color:#075f4e;background:#d4eee5}
+body.sw-shell-v47[data-theme="light"] .sw-side .sw-nav-label,
+body.sw-shell-v47[data-theme="light"] .sw-side .sw-side-bottom{color:#4d617a}
+body.sw-shell-v47[data-theme="light"] .sw-mobile-link,
+body.sw-shell-v47[data-theme="light"] .sw-mobile-more>summary{color:#40536d}
+body.sw-shell-v47[data-theme="light"] .sw-mobile-link.active{color:#075f4e}
+@media(prefers-reduced-motion:reduce){body.sw-shell-v47 *{transition:none!important;scroll-behavior:auto!important}}
