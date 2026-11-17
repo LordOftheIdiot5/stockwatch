@@ -6,7 +6,7 @@ const require=createRequire(import.meta.url),N=require('../company-network-v84.j
 const load=p=>JSON.parse(fs.readFileSync(new URL('../data/'+p,import.meta.url),'utf8'));
 test('V84 evidence graph preserves exact directions and amount bases',()=>{
  const data=load('company-relationships.json'),g=N.graph(data);
- assert.equal(g.nodes.size,20);assert.equal(g.edges.length,21);
+ assert.equal(g.nodes.size,40);assert.equal(g.edges.length,34);
  const n=N.neighborhood(g,'spacex');
  assert.equal(n.edges.length,2);
  assert.ok(n.edges.some(e=>e.from==='singulus'&&e.to==='spacex'&&e.type==='supply_contract'&&N.amountLabel(e.amount).startsWith('> EUR 60 m')));
@@ -21,7 +21,7 @@ test('V84 evidence graph preserves exact directions and amount bases',()=>{
 test('V84 never displays review-only, fake cash-flow or malformed evidence',()=>{
  const data=load('company-relationships.json');
  for(const change of [{actualCashFlow:true},{evidenceStatus:'review_required'},{sourceUrl:'javascript:alert(1)'},{amount:{value:0,currency:'USD',comparison:'exact_reported',basis:'unknown'}},{disclosedOn:'2026-12-31'}]){
-  const clone=structuredClone(data);clone.relationships[0]={...clone.relationships[0],...change};assert.equal(N.graph(clone).edges.length,20);
+  const clone=structuredClone(data);clone.relationships[0]={...clone.relationships[0],...change};assert.equal(N.graph(clone).edges.length,33);
  }
 });
 test('V84 local photo attribution and exact listing matching',()=>{
@@ -51,3 +51,5 @@ test('Expanded contracts preserve upper bounds and prevent syndicate double coun
  assert.equal(financing.edges.filter(e=>e.type==='arrangement').length,2);
  assert.equal(N.entityForListing(data,'AIR.PA'),'airbus');
 });
+
+test('News evidence preserves supplier ranges and avoids premature acquisition completion',()=>{const g=N.graph(load('company-relationships.json'));const dof=g.edges.find(e=>e.id==='dof-amplitude-surf');assert.ok(N.amountLabel(dof.amount).startsWith('USD 50–100 m'));assert.equal(g.edges.find(e=>e.id==='siemens-breker-acquisition').status,'signed_pending_close');assert.equal(N.neighborhood(g,'hoegh').edges.length,6);assert.equal(N.entityForListing(load('company-relationships.json'),'HAUTO.OL'),'hoegh');const bad=load('company-relationships.json');bad.relationships.find(e=>e.id==='dof-amplitude-surf').amount.upperValue=1;assert.equal(N.graph(bad).edges.length,33);});

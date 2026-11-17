@@ -173,6 +173,169 @@
         "Exim Banca Românească"
       ],
       "listingId": null
+    },
+    {
+      "id": "dof",
+      "name": "DOF Group ASA",
+      "aliases": [
+        "DOF Group"
+      ],
+      "listingId": "DOFG.OL"
+    },
+    {
+      "id": "amplitude-energy",
+      "name": "Amplitude Energy Limited",
+      "aliases": [
+        "Amplitude Energy"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "nordex",
+      "name": "Nordex SE",
+      "aliases": [
+        "Nordex"
+      ],
+      "listingId": "NDX1.DE"
+    },
+    {
+      "id": "verbund",
+      "name": "VERBUND AG",
+      "aliases": [
+        "VERBUND"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "siemens",
+      "name": "Siemens AG",
+      "aliases": [
+        "Siemens"
+      ],
+      "listingId": "SIE.DE"
+    },
+    {
+      "id": "breker",
+      "name": "Breker Verification Systems, Inc.",
+      "aliases": [
+        "Breker Verification Systems"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "infineon",
+      "name": "Infineon Technologies AG",
+      "aliases": [
+        "Infineon"
+      ],
+      "listingId": "IFX.DE"
+    },
+    {
+      "id": "vertiv",
+      "name": "Vertiv Holdings Co.",
+      "aliases": [
+        "Vertiv"
+      ],
+      "listingId": "XNYS:VRT"
+    },
+    {
+      "id": "subsea7",
+      "name": "Subsea7",
+      "aliases": [
+        "Subsea7",
+        "Subsea 7"
+      ],
+      "listingId": "SUBC.OL"
+    },
+    {
+      "id": "kosmos",
+      "name": "Kosmos Energy Gulf of Mexico Operations, LLC",
+      "aliases": [
+        "Kosmos Energy Gulf of Mexico Operations"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "hoegh",
+      "name": "Höegh Autoliners ASA",
+      "aliases": [
+        "Höegh Autoliners",
+        "Hoegh Autoliners"
+      ],
+      "listingId": "HAUTO.OL"
+    },
+    {
+      "id": "byd-storage",
+      "name": "BYD Energy Storage",
+      "aliases": [
+        "BYD Energy Storage"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "kongsberg-maritime",
+      "name": "Kongsberg Maritime",
+      "aliases": [
+        "Kongsberg Maritime"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "everllence",
+      "name": "Everllence",
+      "aliases": [
+        "Everllence"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "cmhi-jiangsu",
+      "name": "China Merchants Heavy Industry (Jiangsu) Co., Ltd.",
+      "aliases": [
+        "China Merchants Heavy Industry (Jiangsu)",
+        "CMHI"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "dnv",
+      "name": "DNV",
+      "aliases": [
+        "DNV"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "deltamarin",
+      "name": "Deltamarin",
+      "aliases": [
+        "Deltamarin"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "life-flight",
+      "name": "Life Flight Network",
+      "aliases": [
+        "Life Flight Network"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "fastpartner",
+      "name": "Fastpartner AB",
+      "aliases": [
+        "Fastpartner"
+      ],
+      "listingId": null
+    },
+    {
+      "id": "skanska-land",
+      "name": "Skanska Mark och Exploatering",
+      "aliases": [
+        "Skanska Mark och Exploatering"
+      ],
+      "listingId": null
     }
   ],
   "relationships": [
@@ -594,6 +757,248 @@
       "reviewedOn": "2026-11-18",
       "actualCashFlow": false,
       "conditions": "Individual commitment not disclosed. The total is stored only on the syndicate-to-borrower edge."
+    },
+    {
+      "id": "dof-amplitude-surf",
+      "from": "dof",
+      "to": "amplitude-energy",
+      "type": "service_contract",
+      "subject": "East Coast Supply Project subsea services",
+      "disclosedOn": "2026-11-16",
+      "sourceUrl": "https://www.dof.com/news-company-disclosures/dof-group-asa---awarded-subsea-surf-services-contract-in-the-apac-region-by-amplitude-energy-limited",
+      "sourceLocator": "Original issuer announcement",
+      "amount": {
+        "currency": "USD",
+        "value": 50000000,
+        "upperValue": 100000000,
+        "comparison": "range",
+        "basis": "issuer_contract_size_category"
+      },
+      "status": "reported_order",
+      "conditions": "Offshore work planned for late 2027 or early 2028; exact amount not disclosed.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "DOFG.OL:6fd661ab3b7d95adc3cc68fc3476b2b96592b9aa8f76d01d3fac68705ed218c3"
+    },
+    {
+      "id": "nordex-verbund-spille",
+      "from": "nordex",
+      "to": "verbund",
+      "type": "supply_contract",
+      "subject": "Spille wind farm equipment, installation and service",
+      "disclosedOn": "2026-11-09",
+      "sourceUrl": "https://www.nordex-online.com/en/2026/11/nordex-group-to-enter-albania-with-84-mw-order-from-verbund/",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_order",
+      "conditions": "12 turbines totaling 84 MW; includes 15 years of service. Value not disclosed.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "NDX1.DE:54104496efdd92a764d7f709e14b5a2a7f4fe36c0e08d3600933a8e6d00ed3ff",
+      "operatingQuantity": {
+        "value": 84,
+        "unit": "MW"
+      }
+    },
+    {
+      "id": "siemens-breker-acquisition",
+      "from": "siemens",
+      "to": "breker",
+      "type": "acquisition",
+      "subject": "Proposed acquisition of semiconductor verification software business",
+      "disclosedOn": "2026-11-17",
+      "sourceUrl": "https://news.siemens.com/en-us/siemens-to-acquire-breker-verification-systems/",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "signed_pending_close",
+      "conditions": "Agreement signed; anticipated December 2026 closing subject to conditions. Financial terms undisclosed.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "SIE.DE:cd65f651f56d70526313509700c4721f8106695263eb0d30c6c5e8ed1e3bc455"
+    },
+    {
+      "id": "infineon-vertiv-power",
+      "from": "infineon",
+      "to": "vertiv",
+      "type": "supply_contract",
+      "subject": "Silicon and silicon-carbide power semiconductor supply",
+      "disclosedOn": "2026-11-04",
+      "sourceUrl": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/2026/vertiv-and-infineon-deepen-strategic-partnership-for-critical-power-infrastructure/",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_contract",
+      "conditions": "Three-year strategic supply agreement, including components for 800 VDC systems; no contract value disclosed.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "IFX.DE:d240e0b8588683c20c817e84ccc5f7a08cec360341aa177c214c90ce79b0736a"
+    },
+    {
+      "id": "subsea7-kosmos-tiberius",
+      "from": "subsea7",
+      "to": "kosmos",
+      "type": "service_contract",
+      "subject": "Tiberius deepwater development subsea installation",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.subsea7.com/en/media/company-news/2026/Subsea7_awarded_contract_offshore_US_13_Nov_2026.html",
+      "sourceLocator": "Original issuer announcement",
+      "amount": {
+        "currency": "USD",
+        "value": 50000000,
+        "upperValue": 150000000,
+        "comparison": "range",
+        "basis": "issuer_contract_size_category"
+      },
+      "status": "reported_order",
+      "conditions": "Offshore work expected in 2028; exact contract value not disclosed. Contract counterparty is Kosmos subsidiary, not automatically all project owners.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "SUBC.OL:08a0576b1b7ea3e1f5bf59f3618195b3ade0e755591d61dd553f58cd0eae8cb4"
+    },
+    {
+      "id": "byd-hoegh-aurora-battery",
+      "from": "byd-storage",
+      "to": "hoegh",
+      "type": "supply_contract",
+      "subject": "Aurora No. 12 battery technology cooperation",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.hoeghautoliners.com/news/hoegh-autoliners-and-byd-bring-marine-battery-systems-on-board-creating-the-greenest-deep-sea-car-carrier-ever?highlight=contact",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_cooperation",
+      "conditions": "Technical cooperation signed November 9, 2026; no purchase price or binding order volume disclosed.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb",
+      "eventOn": "2026-11-09"
+    },
+    {
+      "id": "kongsberg-hoegh-bridge",
+      "from": "kongsberg-maritime",
+      "to": "hoegh",
+      "type": "supplies",
+      "subject": "Aurora bridge system",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.hoeghautoliners.com/news/hoegh-autoliners-and-byd-bring-marine-battery-systems-on-board-creating-the-greenest-deep-sea-car-carrier-ever?highlight=contact",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_supplier",
+      "conditions": "Programme supplier named in Höegh disclosure; no individual contract value or legal purchase chain established.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb"
+    },
+    {
+      "id": "everllence-hoegh-engine",
+      "from": "everllence",
+      "to": "hoegh",
+      "type": "supplies",
+      "subject": "Aurora main engine",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.hoeghautoliners.com/news/hoegh-autoliners-and-byd-bring-marine-battery-systems-on-board-creating-the-greenest-deep-sea-car-carrier-ever?highlight=contact",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_supplier",
+      "conditions": "Programme supplier named in Höegh disclosure; no individual contract value or legal purchase chain established.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb"
+    },
+    {
+      "id": "cmhi-hoegh-construction",
+      "from": "cmhi-jiangsu",
+      "to": "hoegh",
+      "type": "supplies",
+      "subject": "Aurora class vessel construction",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.hoeghautoliners.com/news/hoegh-autoliners-and-byd-bring-marine-battery-systems-on-board-creating-the-greenest-deep-sea-car-carrier-ever?highlight=contact",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_supplier",
+      "conditions": "Programme supplier named in Höegh disclosure; no individual contract value or legal purchase chain established.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb"
+    },
+    {
+      "id": "dnv-hoegh-class",
+      "from": "dnv",
+      "to": "hoegh",
+      "type": "partnership",
+      "subject": "Aurora vessel classification partner",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.hoeghautoliners.com/news/hoegh-autoliners-and-byd-bring-marine-battery-systems-on-board-creating-the-greenest-deep-sea-car-carrier-ever?highlight=contact",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_partner",
+      "conditions": "Named programme partner; no quantified financial commitment.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb"
+    },
+    {
+      "id": "deltamarin-hoegh-design",
+      "from": "deltamarin",
+      "to": "hoegh",
+      "type": "partnership",
+      "subject": "Aurora vessel design partner",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://www.hoeghautoliners.com/news/hoegh-autoliners-and-byd-bring-marine-battery-systems-on-board-creating-the-greenest-deep-sea-car-carrier-ever?highlight=contact",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_partner",
+      "conditions": "Named programme partner; no quantified financial commitment.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "HAUTO.OL:604afbab3b2b009780143d1965cb4858126186432b33c427669dadcc3896defb"
+    },
+    {
+      "id": "airbus-life-flight-h135",
+      "from": "airbus",
+      "to": "life-flight",
+      "type": "supply_contract",
+      "subject": "H135 medical helicopter order",
+      "disclosedOn": "2026-10-26",
+      "sourceUrl": "https://www.airbus.com/en/newsroom/press-releases/2026-10-life-flight-network-orders-five-airbus-h135-helicopters",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_order",
+      "conditions": "Five newly ordered aircraft, eight including the three ordered in 2025; no price disclosed.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "AIR.PA:8d6b84c7728cc783968525b33d072fb7c735b4a3c4595012589fe7f077a9db08",
+      "operatingQuantity": {
+        "value": 5,
+        "unit": "aircraft"
+      }
+    },
+    {
+      "id": "skanska-land-fastpartner-properties",
+      "from": "skanska-land",
+      "to": "fastpartner",
+      "type": "asset_transfer",
+      "subject": "Three leased light industrial properties in Norrköping",
+      "disclosedOn": "2026-11-13",
+      "sourceUrl": "https://fastpartner.se/pressmeddelanden/fastpartner-optimerar-fastighetsportfoljen/",
+      "sourceLocator": "Original issuer announcement",
+      "amount": null,
+      "status": "reported_acquisition",
+      "conditions": "Buyer confirms properties transferred during Q3/Q4 2026; price undisclosed. Seller identified as Skanska Mark och Exploatering.",
+      "evidenceStatus": "issuer_disclosed",
+      "reviewedOn": "2026-11-18",
+      "actualCashFlow": false,
+      "discoveryNewsId": "SKA-B.ST:caacc41e2ed626b1eee815a8eb8e6964c5c7b8af43cc2705d0a7f916dacfd3ea"
     }
   ]
 }

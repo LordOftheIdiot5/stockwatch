@@ -12,7 +12,7 @@ from urllib.parse import urlsplit
 ROOT=Path(__file__).resolve().parents[1]
 REL=Path("data/company-relationships.json")
 OUT=Path("data/relationship-review.json")
-KINDS={"supplies","supply_contract","service_contract","equity_investment","financing","debt_repayment","arrangement"}
+KINDS={"supplies","supply_contract","service_contract","equity_investment","financing","debt_repayment","arrangement","acquisition","partnership","asset_transfer"}
 EVENT_WORDS=re.compile(r"\b(contract|order|supply|supplier|partner(?:ship)?|financ(?:ing|es)|loan|invest(?:s|ed|ment)?|acqui(?:res|sition)|customer|deal|agreement|leverandør|kontrakt|avtale)\b",re.I)
 def textnorm(s):
     return unicodedata.normalize("NFKC",str(s or "")).casefold()
@@ -44,8 +44,9 @@ def validate(graph):
             raise ValueError("Invalid evidence chronology")
         if e.get("eventOn") and (not day(e["eventOn"]) or e["eventOn"]>e["disclosedOn"]):raise ValueError("Invalid event date")
         a=e["amount"]
-        if a is not None and (type(a.get("value")) is not int or a["value"]<=0 or not re.fullmatch(r"[A-Z]{3}",a["currency"]) or a["comparison"] not in {"exact_reported","greater_than","approximate","up_to"} or not a.get("basis")):
+        if a is not None and (type(a.get("value")) is not int or a["value"]<=0 or not re.fullmatch(r"[A-Z]{3}",a["currency"]) or a["comparison"] not in {"exact_reported","greater_than","approximate","up_to","range"} or not a.get("basis")):
             raise ValueError("Invalid amount")
+        if a is not None and a["comparison"]=="range" and (type(a.get("upperValue")) is not int or a["upperValue"]<=a["value"]):raise ValueError("Invalid contract range")
         ids.add(e["id"])
     return entities
 
