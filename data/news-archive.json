@@ -1,6 +1,25 @@
 {
-  "generated": "2026-11-17T00:31:59Z",
+  "generated": "2026-11-17T01:27:16Z",
   "items": [
+    {
+      "id": "RMS.PA:39bdb8355a6e4a113acb356c115894637728ddda62aeb6a35c4835f89aa6fa0d",
+      "ticker": "RMS.PA",
+      "name": "Hermes",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Turkish Engineer Who Cracked Wall Street’s Algorithm Launches Hermes AI Analyzer",
+      "english": null,
+      "publisher": "Akron Beacon Journal",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQS3NqTGhUX1o1R2cxdV8yREdOQjFkaGpQem96bExMRjBtUGxtNXkxemNlQURBSmhfYndNNmtaeGJ6OEpTSnkxSnB1UTZxU1A2TjIyZUFqZmJveWJCUDdmcWp5SFo4aE01UVluaEUxZjhWUHRYckdkeE94cF9QYnA0Vmp6RldaejRsSGZQdWRueE1sLXpuUG5kT1FQWEhmNXl0RzJGa3B1R2xiWDBCYkVNb2NTNW1wNjNxd2NSeFZqcWRnVUM5WGpwbENwOHlKNXcwYV9R?oc=5",
+      "published": "2026-11-17T00:50:11Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "UCG.MI:1419cba8dd6a45f61a87e11b35eff903fffe1b698270562875a3ad643a43a081",
       "ticker": "UCG.MI",
@@ -246,7 +265,8 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "duplicateOf": "RMS.PA:39bdb8355a6e4a113acb356c115894637728ddda62aeb6a35c4835f89aa6fa0d"
     },
     {
       "id": "RMS.PA:8a258bef100644ccc8ceda84df5f6c3a79a2447d22148d8106126003592aa9b9",
@@ -266,7 +286,7 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal",
-      "duplicateOf": "RMS.PA:684adce1f937192a77b8d293ff6a4d67f647a10438e0b6c14421c849e870accd"
+      "duplicateOf": "RMS.PA:39bdb8355a6e4a113acb356c115894637728ddda62aeb6a35c4835f89aa6fa0d"
     },
     {
       "id": "AIR.PA:9ac540cba9fd978f7dd5ea1733cb88e40cc29b4462d9ae04ba00de3e6b602a66",
@@ -545,6 +565,26 @@
       "publisher": "www.marketscreener.com",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdGNHYXN0SG5qUklnUm1WSXVBWTJScWthekZjTmZONmc1T3hUVHRBTnVrMmRuU2pCTWNQOVFqblItbHF1THNTQUxBX3ZsWDY5VkdrY1JtUEkzMU02VEpJS2FPazdnWHFsbUY5UzBYZXNiaHhhU2lHaV9UNW1ZcnNSTTNWTEV5UlZNQ0xMZVE3Skd1eHd2blR3ck56b19kREFZS242WG9Ybk5jWTdRQjVhZQ?oc=5",
       "published": "2026-11-16T16:23:47Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Management",
+      "sourceDomain": "news.google.com",
+      "priority": "high",
+      "duplicateOf": "PRY.MI:575f79308fc884680f5d5b934734d9f853f36939c7792fe0ece1a3d95154c363"
+    },
+    {
+      "id": "PRY.MI:11454cf4e079fe6ed2eac754386b5d2e2de971a7fa87aaf2b0f36ad01582aa8f",
+      "ticker": "PRY.MI",
+      "name": "Prysmian",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Italy's Prysmian to revisit US dual listing plans, CEO says",
+      "english": null,
+      "publisher": "marketscreener.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOczh4OU15S1dPQmlvaE5pTzdHVHZlNlZiaGhxYm9vSjkwLUFmdlEwczlGRzZSbmJlUGxoMUo5QVZNN1F5OTJxbkE2OGRYRldJaVJrQ245T19sei1nS181cjRGTTRTSXZrUTVMUXpEMWp4UFB4emxFY2VoN3R6R0gyQTBSNWZyZzlaY0t4ZzVDR1JkYWNTOFBxVmFYeE9yVG1ud2M4SG0zUXBPLUQtR01kNA?oc=5",
+      "published": "2026-11-16T16:19:49Z",
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
