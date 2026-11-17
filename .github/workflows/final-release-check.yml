@@ -83,6 +83,11 @@ jobs:
         run: |
           node --check quant-v53.js
           node --test tests/test_quant_v53.mjs
+      - name: V54 private revision history smoke test
+        if: startsWith(github.head_ref, 'feature/stockwatch-v54-')
+        run: |
+          python scripts/financial_history.py --private-db "$RUNNER_TEMP/research-v54.sqlite"
+          python scripts/research_assets.py --private-db "$RUNNER_TEMP/research-v46.sqlite"
       - name: Frontend syntax
         run: |
           node --check v4.js
