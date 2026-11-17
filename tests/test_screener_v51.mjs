@@ -22,3 +22,16 @@ test('V61: expanded venue+FIGI exact share-class identity required',()=>{
   assert.equal(S.pairQuote(row,[{...pair,aPrice:0}]),null);
  }
 });
+
+test('V72: remaining Norwegian and Swedish share-class observations have exact venue, currency and FIGI',()=>{
+ const mappings=[['BBG000BKSXB7','ODFB','ODFB.OL','XOSL','NOK'],['BBG000BDD8Z8','WWIB','WWIB.OL','XOSL','NOK'],['BBG000BP71K9','KINVA','KINV-A.ST','XSTO','SEK'],['BBG000BP73C4','KINVB','KINV-B.ST','XSTO','SEK'],['BBG000BDZQP5','SSABA','SSAB-A.ST','XSTO','SEK'],['BBG000BCCG29','SCAB','SCA-B.ST','XSTO','SEK'],['BBG000BFQ1Y5','SCAA','SCA-A.ST','XSTO','SEK']];
+ for(const [figi,symbol,ticker,mic,currency] of mappings){
+  const row={referenceOnly:true,registryOnly:true,expandedReference:true,mic,figi,symbol,ticker:'registry:'+mic+':'+figi};
+  const pair={a:ticker,b:'OTHER',aPrice:12,bPrice:99,currency,priceDate:day};
+  assert.equal(S.pairQuote(row,[pair]).close,12);
+  assert.equal(S.comparable({...row,pairQuote:S.pairQuote(row,[pair])},day),false);
+  assert.equal(S.pairQuote(row,[{...pair,currency:'USD'}]),null);
+  const wrong=mic==='XOSL'?'XSTO':'XOSL';
+  assert.equal(S.pairQuote({...row,mic:wrong,ticker:'registry:'+wrong+':'+figi},[{...pair,currency:wrong==='XOSL'?'NOK':'SEK'}]),null);
+ }
+});

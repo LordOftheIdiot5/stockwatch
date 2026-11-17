@@ -31,6 +31,8 @@ class ExchangeIdentityTests(unittest.TestCase):
     self.assertEqual(a,[]);self.assertEqual(c["ambiguous_figi"],1)
  def test_universe(self):
     rows=m.universe()
-    self.assertEqual(len(rows),500)
-    self.assertEqual(len({r["id"] for r in rows}),500)
+    self.assertGreaterEqual(len(rows),507)
+    self.assertEqual(len({r["id"] for r in rows}),len(rows))
+    required={"BBG000BKSXB7","BBG000BDD8Z8","BBG000BP71K9","BBG000BP73C4","BBG000BDZQP5","BBG000BCCG29","BBG000BFQ1Y5"}
+    self.assertTrue(required.issubset({r.get("figi") for r in rows}))
 if __name__=="__main__":unittest.main()

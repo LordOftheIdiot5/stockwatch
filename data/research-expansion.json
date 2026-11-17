@@ -3,8 +3,8 @@
   "sourceUrl": "https://www.openfigi.com/api/documentation",
   "sourceGenerated": "2026-11-16T20:17:50Z",
   "sourceBlob": "daf91335842dee15fd62810051e2fd152172a251",
-  "notice": "Editorial reference discovery selection, not a verified active or primary listing universe. Selected from collected common-stock records using venue quotas, symbol and available FIGI/share-class exclusions; possible issuer overlaps remain. No connected price feed.",
-  "selectionPolicy": "Venue quotas: 37 Oslo, 110 Stockholm, 80 Helsinki, 60 Copenhagen. Prioritize selected research-interest symbols where present, then sample remaining source records across the ordered directory. Exclude apparent temporary records, known duplicate share classes, and normalized venue-symbol overlaps; Oslo uses a local-name and currency-suffix heuristic. No confirmed active listing, market-cap or liquidity ranking.",
+  "notice": "Editorial reference discovery selection, not a verified active or primary listing universe. Selected from collected common-stock records using venue quotas, symbol and available FIGI/share-class exclusions; possible issuer overlaps remain. Some exact share-class matches have existing dated paired observations; no independently connected price feed.",
+  "selectionPolicy": "Venue quotas: 37 Oslo, 110 Stockholm, 80 Helsinki, 60 Copenhagen. Prioritize selected research-interest symbols where present, then sample remaining source records across the ordered directory. Exclude apparent temporary records, known duplicate share classes, and normalized venue-symbol overlaps; Oslo uses a local-name and currency-suffix heuristic. No confirmed active listing, market-cap or liquidity ranking. V72: seven explicit pair-leg identities appended from the instrument directory using exact venue and FIGI; no new provider requests. The Stockholm SSAB A listing is explicitly retained alongside its Helsinki cross-listing (same share-class FIGI, distinct security FIGI and MIC); no price substitution across venues.",
   "records": [
     {
       "figi": "BBG00XNPBYR0",
@@ -3736,6 +3736,97 @@
       "source": "OpenFIGI",
       "quoteStatus": "not_connected",
       "sourceObservedAt": "2026-11-16T20:17:39Z"
+    },
+    {
+      "figi": "BBG000BKSXB7",
+      "name": "ODFJELL SE-B SHS",
+      "ticker": "ODFB",
+      "mic": "XOSL",
+      "venue": "Oslo",
+      "shareClassFIGI": "BBG001S77XK9",
+      "compositeFIGI": "BBG000BKSX45",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
+    },
+    {
+      "figi": "BBG000BDD8Z8",
+      "name": "WILH WILHELMSEN HOLDING-B",
+      "ticker": "WWIB",
+      "mic": "XOSL",
+      "venue": "Oslo",
+      "shareClassFIGI": "BBG001S6H9X9",
+      "compositeFIGI": "BBG000BDD8S6",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
+    },
+    {
+      "figi": "BBG000BP71K9",
+      "name": "KINNEVIK AB - A",
+      "ticker": "KINVA",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "shareClassFIGI": "BBG001S92B28",
+      "compositeFIGI": "BBG000BP7156",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
+    },
+    {
+      "figi": "BBG000BP73C4",
+      "name": "KINNEVIK AB - B",
+      "ticker": "KINVB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "shareClassFIGI": "BBG001S92B46",
+      "compositeFIGI": "BBG000BP72Q1",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
+    },
+    {
+      "figi": "BBG000BDZQP5",
+      "name": "SSAB AB-A SHARES",
+      "ticker": "SSABA",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "shareClassFIGI": "BBG001S6SH50",
+      "compositeFIGI": "BBG000BDZQF6",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
+    },
+    {
+      "figi": "BBG000BCCG29",
+      "name": "SVENSKA CELLULOSA AB SCA-B",
+      "ticker": "SCAB",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "shareClassFIGI": "BBG001S69DX9",
+      "compositeFIGI": "BBG000BCCFR4",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
+    },
+    {
+      "figi": "BBG000BFQ1Y5",
+      "name": "SVENSKA CELLULOSA AB-A SHS",
+      "ticker": "SCAA",
+      "mic": "XSTO",
+      "venue": "Stockholm",
+      "shareClassFIGI": "BBG001S6TRG5",
+      "compositeFIGI": "BBG000BFQ0N9",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected",
+      "sourceObservedAt": "2026-11-17T19:38:33Z"
     }
   ]
 }
