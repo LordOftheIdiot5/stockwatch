@@ -31,6 +31,13 @@ class RelationshipTests(unittest.TestCase):
         self.assertEqual(r[0]["issuerTicker"],"WAWI.OL")
         self.assertEqual(r[0]["entityIds"],[])
         self.assertEqual(d.discover(self.graph,[{**item,"match":"unverified"}]),[])
+    def test_headline_event_is_not_verified(self):
+        item=self.story("New supply agreement",type="news",match="name_mentioned",relevance="mentioned",ticker="SIE.DE")
+        result=d.discover(self.graph,[item])
+        self.assertEqual(len(result),1)
+        self.assertEqual(result[0]["candidateType"],"headline_event")
+        self.assertFalse(result[0]["relationshipVerified"])
+        self.assertEqual(result[0]["entityIds"],[])
     def test_fail_closed(self):
         for update in [{"from":"unknown"},{"actualCashFlow":True},{"amount":{"value":0,"currency":"USD","comparison":"exact_reported","basis":"fake"}},{"disclosedOn":"2027-01-01"}]:
             graph=copy.deepcopy(self.graph)
