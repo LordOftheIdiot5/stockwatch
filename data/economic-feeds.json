@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T20:21:00Z",
+  "generated": "2026-11-17T00:42:49Z",
   "notice": "Official dated observations, not tradable quotes; per-series reuse rights apply.",
   "series": [
     {
@@ -1495,7 +1495,7 @@
       ],
       "sourceUrl": "https://www.eia.gov/opendata/",
       "license": "Source: U.S. Energy Information Administration (EIA); attribution required",
-      "observedAt": "2026-11-16T20:20:59Z"
+      "observedAt": "2026-11-17T00:42:49Z"
     },
     {
       "key": "eia:RWTC",
@@ -2990,7 +2990,7 @@
       ],
       "sourceUrl": "https://www.eia.gov/opendata/",
       "license": "Source: U.S. Energy Information Administration (EIA); attribution required",
-      "observedAt": "2026-11-16T20:21:00Z"
+      "observedAt": "2026-11-17T00:42:49Z"
     },
     {
       "key": "fred:DFF",
@@ -2999,13 +2999,9 @@
       "unit": "percent",
       "country": "US",
       "frequency": "official_series",
-      "period": "2026-11-12",
+      "period": "2026-11-13",
       "value": 3.88,
       "history": [
-        {
-          "date": "2025-11-08",
-          "value": 3.87
-        },
         {
           "date": "2025-11-09",
           "value": 3.87
@@ -4481,11 +4477,15 @@
         {
           "date": "2026-11-12",
           "value": 3.88
+        },
+        {
+          "date": "2026-11-13",
+          "value": 3.88
         }
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DFF",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T20:20:58Z"
+      "observedAt": "2026-11-17T00:42:48Z"
     },
     {
       "key": "fred:DGS10",
@@ -4494,13 +4494,9 @@
       "unit": "percent",
       "country": "US",
       "frequency": "official_series",
-      "period": "2026-11-12",
-      "value": 5.1,
+      "period": "2026-11-13",
+      "value": 5.15,
       "history": [
-        {
-          "date": "2025-06-13",
-          "value": 4.41
-        },
         {
           "date": "2025-06-16",
           "value": 4.46
@@ -5912,11 +5908,15 @@
         {
           "date": "2026-11-12",
           "value": 5.1
+        },
+        {
+          "date": "2026-11-13",
+          "value": 5.15
         }
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS10",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T20:20:57Z"
+      "observedAt": "2026-11-17T00:42:47Z"
     },
     {
       "key": "fred:DGS2",
@@ -5925,13 +5925,9 @@
       "unit": "percent",
       "country": "US",
       "frequency": "official_series",
-      "period": "2026-11-12",
-      "value": 4.86,
+      "period": "2026-11-13",
+      "value": 4.88,
       "history": [
-        {
-          "date": "2025-06-13",
-          "value": 3.96
-        },
         {
           "date": "2025-06-16",
           "value": 3.97
@@ -7343,11 +7339,15 @@
         {
           "date": "2026-11-12",
           "value": 4.86
+        },
+        {
+          "date": "2026-11-13",
+          "value": 4.88
         }
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS2",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T20:20:57Z"
+      "observedAt": "2026-11-17T00:42:47Z"
     },
     {
       "key": "fred:UNRATE",
@@ -8646,7 +8646,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/UNRATE",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-16T20:20:58Z"
+      "observedAt": "2026-11-17T00:42:48Z"
     }
   ],
   "sources": {
@@ -8656,7 +8656,7 @@
       "expected": 4,
       "errors": [],
       "sourceUrl": "https://fred.stlouisfed.org/",
-      "lastSuccessAt": "2026-11-16T20:20:58Z"
+      "lastSuccessAt": "2026-11-17T00:42:48Z"
     },
     "eia": {
       "status": "ok",
@@ -8664,7 +8664,7 @@
       "expected": 2,
       "errors": [],
       "sourceUrl": "https://www.eia.gov/opendata/",
-      "lastSuccessAt": "2026-11-16T20:21:00Z"
+      "lastSuccessAt": "2026-11-17T00:42:49Z"
     }
   }
 }

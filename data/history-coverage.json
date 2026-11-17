@@ -1,6 +1,13 @@
 {
-  "generated": "2026-11-16T20:21:03.961133+00:00",
+  "generated": "2026-11-17T00:42:55.056686+00:00",
   "licensedEquityHistory": {
+    "series": 0,
+    "observations": 0,
+    "first": null,
+    "last": null,
+    "details": []
+  },
+  "licensedReferenceHistory": {
     "series": 0,
     "observations": 0,
     "first": null,
@@ -9,15 +16,15 @@
   },
   "dailyABIndicators": {
     "series": 12,
-    "observations": 24,
+    "observations": 36,
     "first": "2026-11-13",
-    "last": "2026-11-16",
+    "last": "2026-11-17",
     "notice": "One observed ratio per UTC scan day, not reconstructed OHLCV; commercial rights need review."
   },
   "newsMetadata": {
-    "records": 540,
+    "records": 554,
     "first": "2026-11-11T06:30:24Z",
-    "last": "2026-11-16T19:57:00Z",
+    "last": "2026-11-16T22:10:49Z",
     "notice": "Source-linked metadata, not full publisher articles."
   },
   "instrumentReference": {
