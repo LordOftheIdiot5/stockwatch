@@ -28,6 +28,7 @@ import feed                                                      # noqa: E402
 import sources                                                   # noqa: E402
 import translate as translate_module                              # noqa: E402
 from translate import Translator                                  # noqa: E402
+from last_known import load,company_row,context_rows
 import source_telemetry                                            # noqa: E402
 from price_freshness import comparison_date,price_quality,completed_market_baseline
 source_telemetry.install(sources)
@@ -345,24 +346,19 @@ def main() -> int:
 
     # --- prices ---------------------------------------------------------
     companies: list[dict] = []
+    previous=load(OUT_PATH)
+    prior={r["ticker"]:r for r in previous.get("companies",[]) if r.get("ticker")}
+    stamp=now.isoformat(timespec="seconds")
     for entry in watchlist:
-        data = sources.chart(entry["ticker"])
-        if not data:
-            continue
-        measured = score(data["bars"])
-        if not measured:
-            continue
-        companies.append({
-            "ticker": data["ticker"],
-            "name": entry.get("name", data["ticker"]),
-            "sector": entry.get("sector", ""),
-            "exchange": data["exchange"],
-            "currency": data["currency"],
-            "thin": bool(entry.get("thin")),
-            "spark": spark(data["bars"]),
-            "stories": [],
-            **measured,
-        })
+        fresh=None
+        try:
+            data=sources.chart(entry["ticker"])
+            measured=score(data["bars"]) if data and data.get("ticker")==entry["ticker"] else None
+            if measured:
+                fresh={"ticker":entry["ticker"],"name":entry.get("name",entry["ticker"]),"sector":entry.get("sector",""),"exchange":data["exchange"],"currency":data["currency"],"thin":bool(entry.get("thin")),"spark":spark(data["bars"]),"stories":[],**{k:entry[k] for k in ("isin","mic") if entry.get(k)},**measured}
+        except Exception as error:
+            print(f"  ! {entry['ticker']}: {type(error).__name__}")
+        companies.append(company_row(entry,fresh,prior.get(entry["ticker"]),now.date().isoformat(),stamp,previous.get("generated")))
 
     # The market baseline is the watchlist's own median move. If everything is
     # up three percent, a stock up four has moved one - and that is what counts.
@@ -376,7 +372,7 @@ def main() -> int:
         eligible = comparable and market is not None
         row["marketPct"] = round(market,2) if eligible else None
         row["excessPct"] = round(row["changePct"]-market,2) if eligible else None
-        sigma_day = abs(row["changePct"]/row["sigma"]) if row["sigma"] else 0
+        sigma_day = abs(row["changePct"]/row["sigma"]) if row.get("sigma") and row.get("changePct") is not None else 0
         row["excessSigma"] = round(row["excessPct"]/sigma_day,2) if eligible and sigma_day else None
         # Do not mark a price alert seen before the completed-session gate
         # permits it. News collection is independent of this restriction.
@@ -619,8 +615,12 @@ def main() -> int:
     try:
         import context
 
+        previous_context=load(CONTEXT_PATH)
+        current=context.build()
+        for key in ("commodities","freight","shareClasses"):
+            current[key]=context_rows(current.get(key,[]),previous_context.get(key,[]),key,stamp,previous_context.get("generated"),now.date().isoformat())
         CONTEXT_PATH.write_text(
-            json.dumps({"generated": now.isoformat(timespec="seconds"), **context.build()},
+            json.dumps({"generated": stamp, **current},
                        indent=1, ensure_ascii=False),
             encoding="utf-8",
         )
