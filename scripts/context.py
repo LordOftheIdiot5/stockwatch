@@ -91,6 +91,36 @@ SHARE_CLASSES = [
     ("VOLV-A.ST", "VOLV-B.ST", "Volvo"),
 ]
 
+# OpenFIGI-discovered candidates. Provider symbols are proposed mappings, not
+# independently confirmed FIGI-to-price identities. No automatic alert promotion.
+AB_CANDIDATES = [
+    ("ELUX-A.ST", "ELUX-B.ST", "Electrolux", "XSTO:ELECTROLUX AB", "SEK", "electrolux"),
+    ("EPI-A.ST", "EPI-B.ST", "Epiroc", "XSTO:EPIROC AB", "SEK", "epiroc"),
+    ("ESSITY-A.ST", "ESSITY-B.ST", "Essity", "XSTO:ESSITY AKTIEBOLAG", "SEK", "essity"),
+    ("SAGA-A.ST", "SAGA-B.ST", "Sagax", "XSTO:SAGAX AB", "SEK", "sagax"),
+    ("SVOL-A.ST", "SVOL-B.ST", "Svolder", "XSTO:SVOLDER AB", "SEK", "svolder"),
+    ("ACRI-A.ST", "ACRI-B.ST", "Acrinova", "XSTO:ACRINOVA AB", "SEK", "acrinova"),
+    ("ALBAV.HE", "ALBBV.HE", "Ålandsbanken", "XHEL:ALANDSBANKEN", "EUR", "landsbanken"),
+    ("METSA.HE", "METSB.HE", "Metsä Board", "XHEL:METSA BOARD OYJ", "EUR", "mets"),
+    ("ORNAV.HE", "ORNBV.HE", "Orion", "XHEL:ORION OYJ-CLASS", "EUR", "orion"),
+]
+
+def candidate_match(data, ticker, currency, name):
+    meta = data.get("meta", {}) if isinstance(data, dict) else {}
+    issuer = str(meta.get("longName") or meta.get("shortName") or "").casefold()
+    return (meta.get("symbol") == ticker and meta.get("currency") == currency
+            and meta.get("instrumentType") == "EQUITY" and name in issuer)
+
+def rolling_summary(ratios, window):
+    # Trading observations, not calendar days.
+    if len(ratios) < window:
+        return None
+    values = ratios[-window:]
+    mean = statistics.mean(values)
+    sd = statistics.pstdev(values)
+    return {"observations": window, "mean": round(mean, 6),
+            "z": round((values[-1]-mean)/sd, 3) if sd else None}
+
 # Both classes need real volume. A spread computed against a class that trades
 # a few hundred shares a day is measuring stale quotes, not a price.
 MIN_CLASS_VOLUME = 3000
@@ -179,7 +209,7 @@ def utc_day(stamp):
 
 def valid_pair_closes(data):
     stamps = data.get("timestamp") or []
-    quote = data["indicators"]["quote"][0]
+    quote = (data.get("indicators",{}).get("quote") or [{}])[0]
     closes = quote.get("close") or []
     volumes = quote.get("volume") or []
     latest = max(stamps, default=None)
@@ -188,7 +218,32 @@ def valid_pair_closes(data):
              and type(v) in (int,float) and math.isfinite(v) and v > 0}
     return valid, latest
 
-def share_classes() -> list[dict]:
+def latest_bar_health(data):
+    """Status only; never substitute metadata price for a daily bar."""
+    if not data:
+        return {"status":"source_unavailable","reportedDate":None,"lastValidDate":None}
+    valid, latest = valid_pair_closes(data)
+    if latest is None:
+        return {"status":"no_timestamp","reportedDate":None,"lastValidDate":None}
+    quote = (data.get("indicators",{}).get("quote") or [{}])[0]
+    stamps = data.get("timestamp") or []
+    i = stamps.index(latest)
+    def at(key):
+        arr = quote.get(key) or []
+        return arr[i] if i < len(arr) else None
+    close, volume = at("close"), at("volume")
+    if type(close) not in (int,float) or not math.isfinite(close) or close <= 0:
+        reason = "missing_or_invalid_close"
+    elif type(volume) not in (int,float) or not math.isfinite(volume) or volume < 0:
+        reason = "missing_or_invalid_volume"
+    elif volume == 0:
+        reason = "zero_volume"
+    else:
+        reason = "valid_bar"
+    return {"status":reason,"reportedDate":utc_day(latest),
+            "lastValidDate":utc_day(max(valid,default=None))}
+
+def share_classes(candidate_status=None, feed_health=None) -> list[dict]:
     """A/B spreads and where each sits against its own year.
 
     Reports the ratio and its z-score. Deliberately does not say what to do
@@ -198,10 +253,21 @@ def share_classes() -> list[dict]:
     program knows.
     """
     out = []
-    for a_ticker, b_ticker, name in SHARE_CLASSES:
+    entries = [(a,b,n,None,None,None) for a,b,n in SHARE_CLASSES] + AB_CANDIDATES
+    for a_ticker, b_ticker, name, candidate_id, expected_currency, issuer in entries:
+        status = {"id": candidate_id, "a": a_ticker, "b": b_ticker, "status": "source_unavailable"} if candidate_id else None
+        if status is not None and candidate_status is not None:
+            candidate_status.append(status)
         a_data, b_data = _chart(a_ticker), _chart(b_ticker)
+        if feed_health is not None:
+            feed_health.append({"name":name,"a":a_ticker,"b":b_ticker,"candidate":bool(candidate_id),"aHealth":latest_bar_health(a_data),"bHealth":latest_bar_health(b_data)})
         if not a_data or not b_data:
             continue
+        if candidate_id and not (candidate_match(a_data,a_ticker,expected_currency,issuer) and candidate_match(b_data,b_ticker,expected_currency,issuer)):
+            status["status"] = "metadata_mismatch"
+            continue
+        if status is not None:
+            status["status"] = "currency_mismatch"
 
         currency = a_data.get("meta", {}).get("currency")
         if not currency or currency != b_data.get("meta", {}).get("currency"):
@@ -209,6 +275,9 @@ def share_classes() -> list[dict]:
         a_closes, a_last = valid_pair_closes(a_data)
         b_closes, b_last = valid_pair_closes(b_data)
         shared = sorted(set(a_closes) & set(b_closes))
+        if status is not None:
+            status["status"] = "insufficient_aligned_observations"
+            status["alignedObservations"] = len(shared)
         if len(shared) < 60:
             continue
 
@@ -217,6 +286,8 @@ def share_classes() -> list[dict]:
 
         a_volume = statistics.median(volumes(a_data) or [0])
         b_volume = statistics.median(volumes(b_data) or [0])
+        if status is not None:
+            status["status"] = "insufficient_volume"
         if min(a_volume, b_volume) < MIN_CLASS_VOLUME:
             continue
 
@@ -241,7 +312,15 @@ def share_classes() -> list[dict]:
         drift = abs(second_half - first_half)
         stationary = bool(deviation and drift < deviation)
 
+        if status is not None:
+            status["status"] = "price_checks_passed_identity_review_required"
+            status["priceDate"] = utc_day(shared[-1])
+            # Do not publish new candidate price statistics until exact listing identities and usage rights are reviewed.
+            continue
         out.append({
+            "rolling": {str(n): rolling_summary(ratios,n) for n in (30,90,240)},
+            "aMedianVolume": int(a_volume),
+            "bMedianVolume": int(b_volume),
             "stationary": stationary,
             "stabilityMethod": "split_half_drift_heuristic",
             "priceDate": utc_day(shared[-1]),
@@ -278,11 +357,15 @@ def build() -> dict:
     print("context: freight")
     rates = freight()
     print("context: share classes")
-    classes = share_classes()
+    candidates = []
+    feed_health = []
+    classes = share_classes(candidates,feed_health)
     return {
         "commodities": metals,
         "freight": rates,
         "shareClasses": classes,
+        "shareClassCandidateChecks": candidates,
+        "shareClassFeedHealth": feed_health,
         "_freightNote": (
             "The Baltic indices are a licensed product with no free feed. "
             "These are ETFs holding freight futures - they move with rates "

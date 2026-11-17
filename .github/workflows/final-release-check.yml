@@ -225,3 +225,7 @@ jobs:
 
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
+
+      - name: Bounded live price-provider diagnostic (status only)
+        if: github.event_name == 'workflow_dispatch' || startsWith(github.head_ref, 'feature/stockwatch-ab-expansion-')
+        run: python scripts/price_provider_diagnostic.py

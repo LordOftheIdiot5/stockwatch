@@ -36,6 +36,7 @@ def build(root: Path, now: datetime | None = None):
     try: history = json.loads(location.read_text(encoding='utf-8'))
     except (OSError, ValueError): history = {}
     pairs = history.get('pairs', {})
+    sessions = history.get('sessionPairs', {})
     cutoff = (now - timedelta(days=MAX_DAYS)).date().isoformat()
     for p in data.get('shareClasses') or []:
         a, b = p.get('a'), p.get('b')
@@ -50,12 +51,27 @@ def build(root: Path, now: datetime | None = None):
                   and type(x.get('value')) in (int,float) and math.isfinite(x['value']) and x['value'] > 0}
         by_day[day] = {'date': day, 'value': round(value, 6)}
         pairs[key] = [by_day[k] for k in sorted(by_day)]
+        # Only matched, positive-volume, date-verified observations are eligible.
+        price_day = p.get('priceDate')
+        try:
+            session = datetime.strptime(price_day, '%Y-%m-%d').date().isoformat()
+        except (ValueError, TypeError):
+            continue
+        if (session != price_day or session > day or session < cutoff
+                or p.get('latestPairEligible') is not True or not p.get('currency')
+                or p.get('aLatestDate') != session or p.get('bLatestDate') != session):
+            continue
+        verified = {x['date']:x for x in sessions.get(key,[]) if isinstance(x,dict)
+                    and cutoff <= str(x.get('date','')) <= day}
+        verified[session] = {'date':session,'value':round(value,6),'scanDate':day}
+        sessions[key] = [verified[k] for k in sorted(verified)]
     result = {'generated': data.get('generated'),
               'method': 'Dated snapshots of Stockwatch calculated A/B ratios; NOT reconstructed historical share prices.',
               'frequency': 'one UTC observation per day',
               'source': 'Stockwatch scanner context',
               'redistributionNotice': 'Derived observations; third-party commercial redistribution rights must be reviewed separately.',
-              'pairs': pairs}
+              'pairs': pairs, 'sessionPairs': sessions,
+              'sessionMethod':'Matched positive-volume source dates, not scan dates; no backfill from legacy snapshots.'}
     location.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return result
 

@@ -49,6 +49,20 @@ class FinalResearch(unittest.TestCase):
    (root/'data/context.json').write_text(json.dumps(context))
    d=build_obs(root,now+timedelta(days=1))
    self.assertEqual(len(d['pairs']['A.ST/B.ST']),2)
+ def test_session_archive_does_not_invent_monday_observation(self):
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);(root/'data').mkdir()
+   now=datetime(2026,11,16,23,tzinfo=timezone.utc)
+   row={'a':'A.ST','b':'B.ST','ratio':1.02,'priceDate':'2026-11-13','aLatestDate':'2026-11-16','bLatestDate':'2026-11-16','latestPairEligible':False,'currency':'SEK'}
+   path=root/'data/context.json'
+   path.write_text(json.dumps({'generated':now.isoformat(),'shareClasses':[row]}))
+   self.assertEqual(build_obs(root,now)['sessionPairs'],{})
+   row.update(priceDate='2026-11-16',latestPairEligible=True)
+   path.write_text(json.dumps({'generated':now.isoformat(),'shareClasses':[row]}))
+   self.assertEqual(len(build_obs(root,now)['sessionPairs']['A.ST/B.ST']),1)
+   later=now+timedelta(days=1)
+   path.write_text(json.dumps({'generated':later.isoformat(),'shareClasses':[row]}))
+   self.assertEqual(len(build_obs(root,later)['sessionPairs']['A.ST/B.ST']),1)
  def test_automated_datasets_and_quality_report(self):
   with tempfile.TemporaryDirectory() as td:
    root=Path(td);folder=root/'data';folder.mkdir()
