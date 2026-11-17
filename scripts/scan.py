@@ -29,6 +29,7 @@ import sources                                                   # noqa: E402
 import translate as translate_module                              # noqa: E402
 from translate import Translator                                  # noqa: E402
 import source_telemetry                                            # noqa: E402
+from price_freshness import comparison_date,price_quality,completed_market_baseline
 source_telemetry.install(sources)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -365,35 +366,32 @@ def main() -> int:
 
     # The market baseline is the watchlist's own median move. If everything is
     # up three percent, a stock up four has moved one - and that is what counts.
-    market = statistics.median([c["changePct"] for c in companies]) if companies else 0.0
-    print(f"  market baseline: median move {market:+.2f}%")
+    market, sample_size = completed_market_baseline(companies,now)
+    target = comparison_date(now)
+    print(f"  comparable market baseline: {market}, {sample_size} observations on {target}")
 
     alerts: list[dict] = []
     for row in companies:
-        row["marketPct"] = round(market, 2)
-        row["excessPct"] = round(row["changePct"] - market, 2)
-        sigma_day = abs(row["changePct"] / row["sigma"]) if row["sigma"] else 0
-        row["excessSigma"] = round(row["excessPct"] / sigma_day, 2) if sigma_day else 0
-        reasons = []
-        # On a listing that trades a few thousand shares a day, three times the
-        # median is one retail order. The number is still shown on the page,
-        # because it is true; it just is not evidence of anything.
+        comparable = price_quality(row,target)=="comparable"
+        eligible = comparable and market is not None
+        row["marketPct"] = round(market,2) if eligible else None
+        row["excessPct"] = round(row["changePct"]-market,2) if eligible else None
+        sigma_day = abs(row["changePct"]/row["sigma"]) if row["sigma"] else 0
+        row["excessSigma"] = round(row["excessPct"]/sigma_day,2) if eligible and sigma_day else None
+        # Do not mark a price alert seen before the completed-session gate
+        # permits it. News collection is independent of this restriction.
+        if not eligible:
+            continue
+        reasons=[]
         if row["rvol"] >= RVOL_ALERT and not row["thin"]:
             reasons.append(f"volume {row['rvol']}x its 20-day median")
-        if abs(row["excessSigma"]) >= MOVE_SIGMA:
+        if row["excessSigma"] is not None and abs(row["excessSigma"]) >= MOVE_SIGMA:
             direction = "up" if row["excessSigma"] > 0 else "down"
-            reasons.append(
-                f"{direction} {abs(row['excessPct'])}% against a {market:+.2f}% market "
-                f"({abs(row['excessSigma'])} sigma)"
-            )
+            reasons.append(f"{direction} {abs(row['excessPct'])}% against a {market:+.2f}% market ({abs(row['excessSigma'])} sigma)")
         if reasons:
-            key = f"px:{row['ticker']}:{row['date']}"
-            alerts.append({
-                "kind": "price", "key": key, "ticker": row["ticker"],
-                "name": row["name"], "headline": " and ".join(reasons),
-                "url": f"https://finance.yahoo.com/quote/{row['ticker']}",
-                "fresh": key not in seen,
-            })
+            key=f"px:{row['ticker']}:{row['date']}"
+            alerts.append({"kind":"price","key":key,"ticker":row["ticker"],"name":row["name"],
+                "headline":" and ".join(reasons),"url":f"https://finance.yahoo.com/quote/{row['ticker']}","fresh":key not in seen})
             seen.add(key)
 
     by_ticker = {c["ticker"]: c for c in companies}
@@ -595,7 +593,7 @@ def main() -> int:
     companies.sort(key=lambda c: (c.get("sector", ""),
                                   not any(s["fresh"] for s in c["stories"]),
                                   -len(c["stories"]),
-                                  -abs(c["excessSigma"])))
+                                  -abs(c["excessSigma"] or 0)))
     for c in companies:
         c["stories"].sort(key=lambda s: (not s["fresh"], -(s.get("material") or 0)))
 
@@ -603,7 +601,9 @@ def main() -> int:
     OUT_PATH.write_text(json.dumps({
         "generated": now.isoformat(timespec="seconds"),
         "tickers": len(watchlist),
-        "marketPct": round(market, 2),
+        "marketPct": round(market, 2) if market is not None else None,
+        "marketSampleSize": sample_size,
+        "marketComparisonDate": target,
         "languages": sorted({l for _, ls in queries for l in ls}),
         "companies": companies,
         "alerts": sorted(alerts, key=lambda a: (
