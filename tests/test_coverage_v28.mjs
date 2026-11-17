@@ -69,3 +69,21 @@ test('V63: issuer operating data keeps dated source, units and reporting scopes 
  assert.equal(operating(bad,'WAWI.OL')[0].series[0].observations.length,2);
  assert.deepEqual(operating({...d,compiledOn:'invalid'}),[]);
 });
+
+test('V64: dated ownership and quarter-end profit stay separate; no name-based mappings',()=>{
+ const start=src.indexOf('function reportedInvestments('),end=src.indexOf('function investmentHTML(',start);
+ const parse=Function(src.slice(start,end)+'\nreturn reportedInvestments')();
+ const data=JSON.parse(fs.readFileSync(new URL('../data/issuer-investments.json',import.meta.url),'utf8'));
+ const all=parse(data);assert.equal(all.length,6);
+ const w=all.find(r=>r.targetId==='wallenius-wilhelmsen');
+ assert.deepEqual(w.ownership.map(p=>[p.asOf,p.percent]),[['2026-09-30',37.9],['2026-10',37.04]]);
+ assert.equal(w.profitContribution.at(-1).usdMillion,72);
+ assert.equal(w.bookValue.periodEnd,'2026-09-30');
+ assert.deepEqual(w.ownerTickers,['WWI.OL','WWIB.OL']);
+ const h=all.find(r=>r.targetId==='hyundai-glovis');assert.equal(h.targetTicker,null);assert.equal(h.profitContribution.at(-1).usdMillion,51);
+ const bad=structuredClone(data);bad.owners[0].investments[0].targetTicker='HAUTO.OL';
+ assert.equal(parse(bad).length,5);
+ const wrongSource=structuredClone(data);wrongSource.owners[0].investments[0].ownership[1].sourceUrl='https://example.com/';
+ assert.equal(parse(wrongSource)[0].ownership.length,1);
+ assert.deepEqual(parse(null),[]);
+});
