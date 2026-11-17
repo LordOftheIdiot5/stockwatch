@@ -15,6 +15,9 @@ on:
       - feature/stockwatch-dataset-storage-20261117
     paths:
       - scripts/open_data.py
+      - scripts/collect_roro_traffic.py
+      - scripts/recover_official_archive.py
+      - tests/test_recover_official_archive.py
       - scripts/free_research.py
       - scripts/dataset_store.py
       - tests/test_dataset_store.py
@@ -122,6 +125,21 @@ jobs:
           python scripts/shipping_unctad.py
           python scripts/history_coverage.py
           python scripts/free_research.py
+      - name: Refresh Eurostat RoRo cargo history
+        if: github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: python scripts/collect_roro_traffic.py
+      - name: Recover missing eligible official series from private archive
+        if: github.ref == 'refs/heads/main'
+        continue-on-error: true
+        env:
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: |
+          python -m pip install 'boto3>=1.40,<2'
+          python scripts/recover_official_archive.py
       - name: Build compact source-level research index
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/stockwatch-dataset-storage-20261117'
         run: python scripts/dataset_store.py
