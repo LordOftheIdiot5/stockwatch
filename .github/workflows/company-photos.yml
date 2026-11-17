@@ -1,0 +1,54 @@
+name: Reviewed company photograph import
+on:
+  pull_request:
+    paths:
+      - 'data/company-image-catalog.json'
+      - 'scripts/import_company_photos.py'
+      - '.github/workflows/company-photos.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import_company_photos.py'
+      - '.github/workflows/company-photos.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: company-photo-import
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'Pillow>=11,<13'
+      - run: python scripts/import_company_photos.py --check-only
+  import:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'Pillow>=11,<13'
+      - run: python scripts/import_company_photos.py
+      - name: Commit reviewed photos and their attribution
+        run: |
+          git config user.name stockwatch
+          git config user.email actions@github.com
+          git add -- assets/company/ data/company-image-catalog.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Store reviewed optimized company photographs"
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -1,5 +1,7 @@
 # stockwatch
 
+**Product direction:** [Locked Nordl Intelligence roadmap](ROADMAP.md) · [Initial US research cohort](data/us-equity-seed.json) · [Company photography catalog](data/company-image-catalog.json). Coverage and release goals are separate from shipped functionality and source rights.
+
 Hourly scanner for European equities. Free data only, no API keys, runs on
 GitHub Actions.
 
