@@ -14,11 +14,14 @@ class NordicTests(unittest.TestCase):
  def test_danish_jsonstat_v1(self):
   d={"dataset":{"dimension":{"id":["Tid"],"size":[1],"Tid":{"category":{"index":["2025M01"]}}},"value":[12]}}
   self.assertEqual(n.jsonstat(n.dk_jsonstat(d))["records"][0]["value"],12)
- def test_swedish_time_selector(self):
+ def test_swedish_metadata_dimensions(self):
+  meta={"id":["SNI","ContentsCode","Month"],"dimension":{"SNI":{"category":{"index":["C"]}},"ContentsCode":{"category":{"index":["PVI"]}},"Month":{"category":{"index":["2025M01","2025M02"]}}}}
   def get(u):
    self.assertIn("statistikdatabasen.scb.se",u)
-   self.assertIn("top%2824%29",u)
-   return {"id":["Tid"],"size":[1],"dimension":{"Tid":{"category":{"index":["2025M01"]}}},"value":[3]}
+   if "/metadata?" in u:return meta
+   self.assertIn("valueCodes%5BMonth%5D=2025M01%2C2025M02",u)
+   self.assertIn("valueCodes%5BSNI%5D=C",u)
+   return {**meta,"size":[1,1,2],"value":[3,4]}
   self.assertEqual(n.scb(get)[1]["records"][0]["value"],3)
  def test_mineral_csv_preserves_original_flags(self):
   from free_research import mineral_csv

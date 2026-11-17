@@ -19,9 +19,28 @@ def raw(u,body=None,accept="application/json",cap=8000000):
     return b
 def get_json(u,body=None):return json.loads(raw(u,body))
 def scb(get=get_json):
-    u=url(SCB+"/data",{"lang":"en","valueCodes[Tid]":"top(24)","outputFormat":"json-stat2"})
+    # All three dimensions on TAB4894 are mandatory. Read the actual
+    # dimension identifiers and period codes instead of assuming "Tid".
+    meta=get(url(SCB+"/metadata",{"lang":"en"}))
+    ids=meta["id"];dims=meta["dimension"]
+    if len(ids)!=3:raise ValueError("unexpected_scb_dimensions")
+    params={"lang":"en","outputFormat":"json-stat2"}
+    size=1;period_id=None
+    for k in ids:
+        cat=dims[k]["category"];idx=cat["index"]
+        codes=idx if isinstance(idx,list) else [x for x,_ in sorted(idx.items(),key=lambda x:x[1])]
+        if not codes or len(codes)!=len(set(codes)):raise ValueError("invalid_scb_codes")
+        if all(re.fullmatch(r"\d{4}M\d{2}",x) for x in codes):
+            if period_id:raise ValueError("ambiguous_scb_period")
+            period_id=k;codes=sorted(codes)[-24:]
+        size*=len(codes)
+        params["valueCodes["+k+"]"]=",".join(codes)
+    if not period_id or size>30000:raise ValueError("invalid_scb_selection")
+    u=url(SCB+"/data",params)
     out=jsonstat(get(u))
-    if not any(d["id"].lower()=="tid" for d in out["dimensions"]):raise ValueError("missing_period_dimension")
+    if {x["id"] for x in out["dimensions"]}!=set(ids):raise ValueError("unexpected_scb_response")
+    out["tableId"]="TAB4894"
+    out["notice"]="Production value index and development measures retain original statistical dimensions; do not combine index and percent values."
     return u,out
 def fin(get=get_json):
     meta=get(FIN)
