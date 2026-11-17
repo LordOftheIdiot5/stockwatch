@@ -71,9 +71,10 @@ def discover(graph,items):
         # Also queue issuer-linked event disclosures for counterparty discovery.
         # An unknown counterparty is not silently added to the graph.
         official=s.get("type")=="disclosure" and s.get("match")=="issuer_code" and s.get("relevance")=="strong" and isinstance(s.get("ticker"),str) and bool(s["ticker"])
-        if len(matched)<2 and not official:continue
-        mode="co_mention" if len(matched)>=2 else "issuer_event"
-        ticker=s["ticker"] if official else None
+        associated=s.get("match")=="name_mentioned" and s.get("relevance") in ("strong","mentioned") and isinstance(s.get("ticker"),str) and bool(s["ticker"])
+        if len(matched)<2 and not official and not associated:continue
+        mode="co_mention" if len(matched)>=2 else "issuer_event" if official else "headline_event"
+        ticker=s["ticker"] if official or associated else None
         key=hashlib.sha256((s["url"]+"|"+mode+"|"+"|".join(matched)+"|"+str(ticker)).encode()).hexdigest()
         row={"id":key,"newsId":s["id"],"entityIds":matched,"issuerTicker":ticker,"candidateType":mode,"published":s["published"],"sourceUrl":s["url"],"status":"review_required","relationshipVerified":False,"amount":None}
         if key not in candidates or row["newsId"]<candidates[key]["newsId"]:candidates[key]=row
