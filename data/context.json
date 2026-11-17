@@ -1,16 +1,16 @@
 {
- "generated": "2026-11-17T00:07:44+00:00",
+ "generated": "2026-11-17T00:16:37+00:00",
  "commodities": [
   {
    "ticker": "GC=F",
    "name": "Gold",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 3865.8,
-   "changePct": -0.53,
-   "monthPct": -7.54,
+   "last": 3862.6001,
+   "changePct": -0.61,
+   "monthPct": -7.62,
    "yearPosition": 0,
-   "yearLow": 3865.8,
+   "yearLow": 3862.6001,
    "yearHigh": 5318.3999
   },
   {
@@ -18,11 +18,11 @@
    "name": "Silver",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 47.135,
-   "changePct": -3.87,
-   "monthPct": -17.3,
+   "last": 47.015,
+   "changePct": -4.11,
+   "monthPct": -17.51,
    "yearPosition": 0,
-   "yearLow": 47.135,
+   "yearLow": 47.015,
    "yearHigh": 115.08
   },
   {
@@ -30,9 +30,9 @@
    "name": "Copper",
    "group": "metals",
    "unit": "USD/lb",
-   "last": 5.994,
-   "changePct": -1.41,
-   "monthPct": -8.22,
+   "last": 5.99,
+   "changePct": -1.47,
+   "monthPct": -8.28,
    "yearPosition": 56,
    "yearLow": 4.9595,
    "yearHigh": 6.8035
@@ -66,9 +66,9 @@
    "name": "Platinum",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 1451.4,
-   "changePct": -2.49,
-   "monthPct": -10.59,
+   "last": 1449.1,
+   "changePct": -2.65,
+   "monthPct": -10.73,
    "yearPosition": 1,
    "yearLow": 1432.4,
    "yearHigh": 2852.3999
@@ -78,9 +78,9 @@
    "name": "Palladium",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 969.5,
-   "changePct": -3.63,
-   "monthPct": -12.92,
+   "last": 967.5,
+   "changePct": -3.83,
+   "monthPct": -13.1,
    "yearPosition": 3,
    "yearLow": 930.0,
    "yearHigh": 2169.8999
@@ -127,9 +127,9 @@
    "name": "WTI crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 85.3,
-   "changePct": -3.68,
-   "monthPct": -15.89,
+   "last": 85.29,
+   "changePct": -3.69,
+   "monthPct": -15.9,
    "yearPosition": 52,
    "yearLow": 55.27,
    "yearHigh": 112.95
@@ -139,9 +139,9 @@
    "name": "Natural gas",
    "group": "energy",
    "unit": "USD/MMBtu",
-   "last": 3.128,
-   "changePct": -3.16,
-   "monthPct": 0.39,
+   "last": 3.126,
+   "changePct": -3.22,
+   "monthPct": 0.32,
    "yearPosition": 12,
    "yearLow": 2.523,
    "yearHigh": 7.46
@@ -199,6 +199,25 @@
  ],
  "shareClasses": [
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.088156,
+     "z": -1.194
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.134378,
+     "z": -1.29
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.135331,
+     "z": -0.941
+    }
+   },
+   "aMedianVolume": 6250,
+   "bMedianVolume": 1042854,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -221,6 +240,25 @@
    "rangePct": 13.39
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.071234,
+     "z": -1.554
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.078806,
+     "z": -2.201
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.104599,
+     "z": -2.178
+    }
+   },
+   "aMedianVolume": 14608,
+   "bMedianVolume": 6235,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -243,6 +281,25 @@
    "rangePct": 5.25
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 0.971574,
+     "z": 1.178
+    },
+    "90": {
+     "observations": 90,
+     "mean": 0.967246,
+     "z": 2.138
+    },
+    "240": {
+     "observations": 240,
+     "mean": 0.980215,
+     "z": 0.226
+    }
+   },
+   "aMedianVolume": 3784,
+   "bMedianVolume": 15424,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -265,6 +322,25 @@
    "rangePct": 2.92
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.015132,
+     "z": 0.053
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.01789,
+     "z": -0.299
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.027184,
+     "z": -0.774
+    }
+   },
+   "aMedianVolume": 39598,
+   "bMedianVolume": 14546,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -287,6 +363,25 @@
    "rangePct": 2.9
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.145779,
+     "z": -0.212
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.146361,
+     "z": -0.247
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.138359,
+     "z": 0.472
+    }
+   },
+   "aMedianVolume": 4233799,
+   "bMedianVolume": 1428818,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -309,6 +404,25 @@
    "rangePct": 2.39
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 0.991136,
+     "z": -0.885
+    },
+    "90": {
+     "observations": 90,
+     "mean": 0.995452,
+     "z": -1.463
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.002929,
+     "z": -1.912
+    }
+   },
+   "aMedianVolume": 739243,
+   "bMedianVolume": 2713123,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -331,6 +445,25 @@
    "rangePct": 1.7
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.01397,
+     "z": 0.968
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.009192,
+     "z": 1.684
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.004699,
+     "z": 2.408
+    }
+   },
+   "aMedianVolume": 22910,
+   "bMedianVolume": 7565493,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -353,6 +486,25 @@
    "rangePct": 1.38
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.000254,
+     "z": -0.961
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.001746,
+     "z": -1.033
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.001365,
+     "z": -0.897
+    }
+   },
+   "aMedianVolume": 16063,
+   "bMedianVolume": 999118,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -375,6 +527,25 @@
    "rangePct": 1.23
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 0.981501,
+     "z": -0.74
+    },
+    "90": {
+     "observations": 90,
+     "mean": 0.983963,
+     "z": -0.964
+    },
+    "240": {
+     "observations": 240,
+     "mean": 0.987996,
+     "z": -1.562
+    }
+   },
+   "aMedianVolume": 336320,
+   "bMedianVolume": 2704095,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -397,6 +568,25 @@
    "rangePct": 1.04
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.000462,
+     "z": 1.908
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.001932,
+     "z": 1.782
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.000991,
+     "z": 2.057
+    }
+   },
+   "aMedianVolume": 5384,
+   "bMedianVolume": 1086054,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -419,6 +609,25 @@
    "rangePct": 0.95
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 0.998254,
+     "z": 0.447
+    },
+    "90": {
+     "observations": 90,
+     "mean": 0.999365,
+     "z": 0.058
+    },
+    "240": {
+     "observations": 240,
+     "mean": 0.999466,
+     "z": 0.034
+    }
+   },
+   "aMedianVolume": 13655,
+   "bMedianVolume": 1625577,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -441,6 +650,25 @@
    "rangePct": 0.7
   },
   {
+   "rolling": {
+    "30": {
+     "observations": 30,
+     "mean": 1.002514,
+     "z": -0.021
+    },
+    "90": {
+     "observations": 90,
+     "mean": 1.001217,
+     "z": 0.701
+    },
+    "240": {
+     "observations": 240,
+     "mean": 1.000538,
+     "z": 1.117
+    }
+   },
+   "aMedianVolume": 89261,
+   "bMedianVolume": 2942140,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
@@ -461,6 +689,412 @@
    "days": 249,
    "tradableRange": false,
    "rangePct": 0.34
+  }
+ ],
+ "shareClassCandidateChecks": [
+  {
+   "id": "XSTO:ELECTROLUX AB",
+   "a": "ELUX-A.ST",
+   "b": "ELUX-B.ST",
+   "status": "insufficient_volume",
+   "alignedObservations": 248
+  },
+  {
+   "id": "XSTO:EPIROC AB",
+   "a": "EPI-A.ST",
+   "b": "EPI-B.ST",
+   "status": "price_checks_passed_identity_review_required",
+   "alignedObservations": 249,
+   "priceDate": "2026-11-13"
+  },
+  {
+   "id": "XSTO:ESSITY AKTIEBOLAG",
+   "a": "ESSITY-A.ST",
+   "b": "ESSITY-B.ST",
+   "status": "price_checks_passed_identity_review_required",
+   "alignedObservations": 249,
+   "priceDate": "2026-11-13"
+  },
+  {
+   "id": "XSTO:SAGAX AB",
+   "a": "SAGA-A.ST",
+   "b": "SAGA-B.ST",
+   "status": "insufficient_volume",
+   "alignedObservations": 249
+  },
+  {
+   "id": "XSTO:SVOLDER AB",
+   "a": "SVOL-A.ST",
+   "b": "SVOL-B.ST",
+   "status": "insufficient_volume",
+   "alignedObservations": 83
+  },
+  {
+   "id": "XSTO:ACRINOVA AB",
+   "a": "ACRI-A.ST",
+   "b": "ACRI-B.ST",
+   "status": "insufficient_volume",
+   "alignedObservations": 248
+  },
+  {
+   "id": "XHEL:ALANDSBANKEN",
+   "a": "ALBAV.HE",
+   "b": "ALBBV.HE",
+   "status": "insufficient_volume",
+   "alignedObservations": 249
+  },
+  {
+   "id": "XHEL:METSA BOARD OYJ",
+   "a": "METSA.HE",
+   "b": "METSB.HE",
+   "status": "insufficient_volume",
+   "alignedObservations": 248
+  },
+  {
+   "id": "XHEL:ORION OYJ-CLASS",
+   "a": "ORNAV.HE",
+   "b": "ORNBV.HE",
+   "status": "price_checks_passed_identity_review_required",
+   "alignedObservations": 249,
+   "priceDate": "2026-11-13"
+  }
+ ],
+ "shareClassFeedHealth": [
+  {
+   "name": "Wilh. Wilhelmsen",
+   "a": "WWI.OL",
+   "b": "WWIB.OL",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Odfjell",
+   "a": "ODF.OL",
+   "b": "ODFB.OL",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Maersk",
+   "a": "MAERSK-A.CO",
+   "b": "MAERSK-B.CO",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Atlas Copco",
+   "a": "ATCO-A.ST",
+   "b": "ATCO-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "SSAB",
+   "a": "SSAB-A.ST",
+   "b": "SSAB-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Ericsson",
+   "a": "ERIC-A.ST",
+   "b": "ERIC-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "SKF",
+   "a": "SKF-A.ST",
+   "b": "SKF-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Husqvarna",
+   "a": "HUSQ-A.ST",
+   "b": "HUSQ-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "SCA",
+   "a": "SCA-A.ST",
+   "b": "SCA-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Kinnevik",
+   "a": "KINV-A.ST",
+   "b": "KINV-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Investor",
+   "a": "INVE-A.ST",
+   "b": "INVE-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Volvo",
+   "a": "VOLV-A.ST",
+   "b": "VOLV-B.ST",
+   "candidate": false,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Electrolux",
+   "a": "ELUX-A.ST",
+   "b": "ELUX-B.ST",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Epiroc",
+   "a": "EPI-A.ST",
+   "b": "EPI-B.ST",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Essity",
+   "a": "ESSITY-A.ST",
+   "b": "ESSITY-B.ST",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Sagax",
+   "a": "SAGA-A.ST",
+   "b": "SAGA-B.ST",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Svolder",
+   "a": "SVOL-A.ST",
+   "b": "SVOL-B.ST",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-11"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Acrinova",
+   "a": "ACRI-A.ST",
+   "b": "ACRI-B.ST",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Ålandsbanken",
+   "a": "ALBAV.HE",
+   "b": "ALBBV.HE",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Metsä Board",
+   "a": "METSA.HE",
+   "b": "METSB.HE",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
+  },
+  {
+   "name": "Orion",
+   "a": "ORNAV.HE",
+   "b": "ORNBV.HE",
+   "candidate": true,
+   "aHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   },
+   "bHealth": {
+    "status": "missing_or_invalid_close",
+    "reportedDate": "2026-11-16",
+    "lastValidDate": "2026-11-13"
+   }
   }
  ],
  "_freightNote": "The Baltic indices are a licensed product with no free feed. These are ETFs holding freight futures - they move with rates rather than with shipping equities, but carry roll cost and tracking error and can diverge from spot.",
