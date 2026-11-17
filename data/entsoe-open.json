@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-17T02:03:39.501034Z",
+  "generated": "2026-11-17T13:52:24.730206Z",
   "source": "ENTSO-E Transparency Platform",
   "sourceUrl": "https://transparency.entsoe.eu/",
   "license": "CC BY 4.0",
@@ -7644,15 +7644,7 @@
       "startUtc": "2026-11-16T00:00:00Z",
       "endUtc": "2026-11-17T00:00:00Z",
       "unit": "MW",
-      "points": [
-        {
-          "startUtc": "2026-11-16T00:00:00Z",
-          "resolutionMinutes": 15,
-          "mw": 0.0,
-          "curveType": "A03"
-        }
-      ],
-      "status": "ok"
+      "status": "unavailable"
     },
     {
       "id": "flow:SE3:NO1",
