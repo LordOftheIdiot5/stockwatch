@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-17T07:05:26+00:00",
+ "generated": "2026-11-17T08:06:25+00:00",
  "commodities": [
   {
    "ticker": "GC=F",
    "name": "Gold",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 3874.3999,
+   "last": 3874.5,
    "changePct": 0.56,
    "monthPct": -6.87,
    "yearPosition": 1,
@@ -18,9 +18,9 @@
    "name": "Silver",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 47.42,
-   "changePct": 1.36,
-   "monthPct": -16.77,
+   "last": 47.48,
+   "changePct": 1.49,
+   "monthPct": -16.66,
    "yearPosition": 1,
    "yearLow": 46.785,
    "yearHigh": 115.08
@@ -30,10 +30,10 @@
    "name": "Copper",
    "group": "metals",
    "unit": "USD/lb",
-   "last": 5.9705,
-   "changePct": -0.45,
-   "monthPct": -8.68,
-   "yearPosition": 55,
+   "last": 5.9615,
+   "changePct": -0.6,
+   "monthPct": -8.82,
+   "yearPosition": 54,
    "yearLow": 4.9595,
    "yearHigh": 6.8035
   },
@@ -66,10 +66,10 @@
    "name": "Platinum",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 1469.1,
-   "changePct": 1.46,
-   "monthPct": -10.36,
-   "yearPosition": 3,
+   "last": 1466.1,
+   "changePct": 1.25,
+   "monthPct": -10.54,
+   "yearPosition": 2,
    "yearLow": 1432.4,
    "yearHigh": 2852.3999
   },
@@ -78,9 +78,9 @@
    "name": "Palladium",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 977.5,
-   "changePct": 0.59,
-   "monthPct": -12.42,
+   "last": 978.5,
+   "changePct": 0.69,
+   "monthPct": -12.33,
    "yearPosition": 4,
    "yearLow": 930.0,
    "yearHigh": 2169.8999
@@ -115,9 +115,9 @@
    "name": "Brent crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 91.8,
-   "changePct": -0.69,
-   "monthPct": -16.2,
+   "last": 91.72,
+   "changePct": -0.78,
+   "monthPct": -16.28,
    "yearPosition": 55,
    "yearLow": 58.92,
    "yearHigh": 118.35
@@ -127,10 +127,10 @@
    "name": "WTI crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 84.94,
-   "changePct": -0.91,
-   "monthPct": -18.06,
-   "yearPosition": 51,
+   "last": 84.98,
+   "changePct": -0.86,
+   "monthPct": -18.02,
+   "yearPosition": 52,
    "yearLow": 55.27,
    "yearHigh": 112.95
   },
@@ -139,9 +139,9 @@
    "name": "Natural gas",
    "group": "energy",
    "unit": "USD/MMBtu",
-   "last": 3.106,
-   "changePct": -0.51,
-   "monthPct": 1.57,
+   "last": 3.124,
+   "changePct": 0.06,
+   "monthPct": 2.16,
    "yearPosition": 12,
    "yearLow": 2.523,
    "yearHigh": 7.46
@@ -202,42 +202,42 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.088156,
-     "z": -1.194
+     "mean": 1.088516,
+     "z": -0.049
     },
     "90": {
      "observations": 90,
-     "mean": 1.134378,
-     "z": -1.29
+     "mean": 1.132818,
+     "z": -0.858
     },
     "240": {
      "observations": 240,
-     "mean": 1.135331,
-     "z": -0.941
+     "mean": 1.13562,
+     "z": -0.65
     }
    },
-   "aMedianVolume": 6250,
+   "aMedianVolume": 6194,
    "bMedianVolume": 1042854,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 5.22,
+   "driftPct": 5.07,
    "name": "Kinnevik",
    "a": "KINV-A.ST",
    "b": "KINV-B.ST",
-   "aPrice": 74.8,
-   "bPrice": 70.2,
-   "ratio": 1.0655,
-   "meanRatio": 1.1313,
-   "sd": 0.0757,
-   "z": -0.87,
-   "days": 249,
+   "aPrice": 74.0,
+   "bPrice": 68.04,
+   "ratio": 1.0876,
+   "meanRatio": 1.1311,
+   "sd": 0.0756,
+   "z": -0.58,
+   "days": 250,
    "tradableRange": true,
-   "rangePct": 13.39
+   "rangePct": 13.37
   },
   {
    "rolling": {
@@ -257,13 +257,13 @@
      "z": -2.178
     }
    },
-   "aMedianVolume": 14608,
-   "bMedianVolume": 6235,
+   "aMedianVolume": 14672,
+   "bMedianVolume": 6231,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
    "latestPairEligible": false,
    "currency": "NOK",
    "driftPct": -2.28,
@@ -284,42 +284,42 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.971574,
-     "z": 1.178
+     "mean": 0.972211,
+     "z": 1.092
     },
     "90": {
      "observations": 90,
-     "mean": 0.967246,
-     "z": 2.138
+     "mean": 0.967383,
+     "z": 2.059
     },
     "240": {
      "observations": 240,
-     "mean": 0.980215,
-     "z": 0.226
+     "mean": 0.980126,
+     "z": 0.227
     }
    },
    "aMedianVolume": 3784,
    "bMedianVolume": 15424,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "DKK",
-   "driftPct": -2.38,
+   "driftPct": -2.36,
    "name": "Maersk",
    "a": "MAERSK-A.CO",
    "b": "MAERSK-B.CO",
-   "aPrice": 20120.0,
-   "bPrice": 20460.0,
-   "ratio": 0.9834,
+   "aPrice": 20000.0,
+   "bPrice": 20340.0,
+   "ratio": 0.9833,
    "meanRatio": 0.9809,
    "sd": 0.0143,
-   "z": 0.18,
-   "days": 247,
+   "z": 0.17,
+   "days": 248,
    "tradableRange": true,
-   "rangePct": 2.92
+   "rangePct": 2.91
   },
   {
    "rolling": {
@@ -339,13 +339,13 @@
      "z": -0.774
     }
    },
-   "aMedianVolume": 39598,
-   "bMedianVolume": 14546,
+   "aMedianVolume": 39620,
+   "bMedianVolume": 14515,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
    "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
    "latestPairEligible": false,
    "currency": "NOK",
    "driftPct": -1.91,
@@ -366,40 +366,40 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.145779,
-     "z": -0.212
+     "mean": 1.14541,
+     "z": 0.196
     },
     "90": {
      "observations": 90,
-     "mean": 1.146361,
-     "z": -0.247
+     "mean": 1.14644,
+     "z": 0.027
     },
     "240": {
      "observations": 240,
-     "mean": 1.138359,
-     "z": 0.472
+     "mean": 1.138511,
+     "z": 0.649
     }
    },
    "aMedianVolume": 4233799,
    "bMedianVolume": 1428818,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 0.95,
+   "driftPct": 0.97,
    "name": "Atlas Copco",
    "a": "ATCO-A.ST",
    "b": "ATCO-B.ST",
-   "aPrice": 192.25,
-   "bPrice": 168.0,
-   "ratio": 1.1443,
+   "aPrice": 189.6,
+   "bPrice": 165.35,
+   "ratio": 1.1467,
    "meanRatio": 1.1373,
    "sd": 0.0136,
-   "z": 0.52,
-   "days": 249,
+   "z": 0.69,
+   "days": 250,
    "tradableRange": true,
    "rangePct": 2.39
   },
@@ -407,81 +407,81 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.991136,
-     "z": -0.885
+     "mean": 0.990782,
+     "z": -0.876
     },
     "90": {
      "observations": 90,
-     "mean": 0.995452,
-     "z": -1.463
+     "mean": 0.995261,
+     "z": -1.461
     },
     "240": {
      "observations": 240,
-     "mean": 1.002929,
-     "z": -1.912
+     "mean": 1.002774,
+     "z": -1.925
     }
    },
    "aMedianVolume": 739243,
    "bMedianVolume": 2713123,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": -1.18,
+   "driftPct": -1.19,
    "name": "SSAB",
    "a": "SSAB-A.ST",
    "b": "SSAB-B.ST",
-   "aPrice": 92.56,
-   "bPrice": 93.68,
-   "ratio": 0.988,
-   "meanRatio": 1.0037,
-   "sd": 0.0085,
+   "aPrice": 91.66,
+   "bPrice": 92.78,
+   "ratio": 0.9879,
+   "meanRatio": 1.0036,
+   "sd": 0.0086,
    "z": -1.83,
-   "days": 249,
+   "days": 250,
    "tradableRange": true,
-   "rangePct": 1.7
+   "rangePct": 1.71
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.01397,
-     "z": 0.968
+     "mean": 1.014337,
+     "z": -0.015
     },
     "90": {
      "observations": 90,
-     "mean": 1.009192,
-     "z": 1.684
+     "mean": 1.009404,
+     "z": 0.664
     },
     "240": {
      "observations": 240,
-     "mean": 1.004699,
-     "z": 2.408
+     "mean": 1.004762,
+     "z": 1.341
     }
    },
    "aMedianVolume": 22910,
    "bMedianVolume": 7565493,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 0.62,
+   "driftPct": 0.63,
    "name": "Ericsson",
    "a": "ERIC-A.ST",
    "b": "ERIC-B.ST",
-   "aPrice": 108.6,
-   "bPrice": 106.3,
-   "ratio": 1.0216,
+   "aPrice": 107.0,
+   "bPrice": 105.5,
+   "ratio": 1.0142,
    "meanRatio": 1.0047,
    "sd": 0.0069,
-   "z": 2.45,
-   "days": 249,
+   "z": 1.37,
+   "days": 250,
    "tradableRange": true,
    "rangePct": 1.38
   },
@@ -489,40 +489,40 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.000254,
-     "z": -0.961
+     "mean": 1.000228,
+     "z": 0.282
     },
     "90": {
      "observations": 90,
-     "mean": 1.001746,
-     "z": -1.033
+     "mean": 1.001642,
+     "z": -0.017
     },
     "240": {
      "observations": 240,
-     "mean": 1.001365,
-     "z": -0.897
+     "mean": 1.001358,
+     "z": 0.03
     }
    },
-   "aMedianVolume": 16063,
+   "aMedianVolume": 16039,
    "bMedianVolume": 999118,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
    "driftPct": 0.22,
    "name": "Husqvarna",
    "a": "HUSQ-A.ST",
    "b": "HUSQ-B.ST",
-   "aPrice": 32.9,
-   "bPrice": 33.04,
-   "ratio": 0.9958,
+   "aPrice": 32.45,
+   "bPrice": 32.4,
+   "ratio": 1.0015,
    "meanRatio": 1.0013,
    "sd": 0.0062,
-   "z": -0.9,
-   "days": 249,
+   "z": 0.04,
+   "days": 250,
    "tradableRange": true,
    "rangePct": 1.23
   },
@@ -530,40 +530,40 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.981501,
-     "z": -0.74
+     "mean": 0.981432,
+     "z": -1.13
     },
     "90": {
      "observations": 90,
-     "mean": 0.983963,
-     "z": -0.964
+     "mean": 0.983891,
+     "z": -1.147
     },
     "240": {
      "observations": 240,
-     "mean": 0.987996,
-     "z": -1.562
+     "mean": 0.987934,
+     "z": -1.707
     }
    },
-   "aMedianVolume": 336320,
+   "aMedianVolume": 335673,
    "bMedianVolume": 2704095,
    "stationary": false,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": -0.75,
+   "driftPct": -0.76,
    "name": "Investor",
    "a": "INVE-A.ST",
    "b": "INVE-B.ST",
-   "aPrice": 427.6,
-   "bPrice": 436.25,
-   "ratio": 0.9802,
-   "meanRatio": 0.9883,
+   "aPrice": 422.2,
+   "bPrice": 431.1,
+   "ratio": 0.9794,
+   "meanRatio": 0.9882,
    "sd": 0.0051,
-   "z": -1.58,
-   "days": 249,
+   "z": -1.73,
+   "days": 250,
    "tradableRange": true,
    "rangePct": 1.04
   },
@@ -571,40 +571,40 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.000462,
-     "z": 1.908
+     "mean": 1.000853,
+     "z": 1.35
     },
     "90": {
      "observations": 90,
-     "mean": 1.001932,
-     "z": 1.782
+     "mean": 1.002031,
+     "z": 1.251
     },
     "240": {
      "observations": 240,
-     "mean": 1.000991,
-     "z": 2.057
+     "mean": 1.001041,
+     "z": 1.524
     }
    },
-   "aMedianVolume": 5384,
-   "bMedianVolume": 1086054,
+   "aMedianVolume": 5375,
+   "bMedianVolume": 1079301,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
    "driftPct": 0.03,
    "name": "SKF",
    "a": "SKF-A.ST",
    "b": "SKF-B.ST",
-   "aPrice": 283.0,
-   "bPrice": 280.2,
-   "ratio": 1.01,
+   "aPrice": 274.0,
+   "bPrice": 271.9,
+   "ratio": 1.0077,
    "meanRatio": 1.0013,
-   "sd": 0.0047,
-   "z": 1.84,
-   "days": 249,
+   "sd": 0.0048,
+   "z": 1.35,
+   "days": 250,
    "tradableRange": true,
    "rangePct": 0.95
   },
@@ -612,40 +612,40 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.998254,
-     "z": 0.447
+     "mean": 0.998425,
+     "z": 1.091
     },
     "90": {
      "observations": 90,
-     "mean": 0.999365,
-     "z": 0.058
+     "mean": 0.999465,
+     "z": 0.595
     },
     "240": {
      "observations": 240,
-     "mean": 0.999466,
-     "z": 0.034
+     "mean": 0.999468,
+     "z": 0.643
     }
    },
-   "aMedianVolume": 13655,
-   "bMedianVolume": 1625577,
+   "aMedianVolume": 13643,
+   "bMedianVolume": 1611668,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
    "driftPct": -0.01,
    "name": "SCA",
    "a": "SCA-A.ST",
    "b": "SCA-B.ST",
-   "aPrice": 121.0,
-   "bPrice": 121.05,
-   "ratio": 0.9996,
+   "aPrice": 116.0,
+   "bPrice": 115.8,
+   "ratio": 1.0017,
    "meanRatio": 0.9995,
    "sd": 0.0035,
-   "z": 0.02,
-   "days": 249,
+   "z": 0.63,
+   "days": 250,
    "tradableRange": true,
    "rangePct": 0.7
   },
@@ -653,40 +653,40 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.002514,
-     "z": -0.021
+     "mean": 1.002513,
+     "z": -0.333
     },
     "90": {
      "observations": 90,
-     "mean": 1.001217,
-     "z": 0.701
+     "mean": 1.001234,
+     "z": 0.36
     },
     "240": {
      "observations": 240,
-     "mean": 1.000538,
-     "z": 1.117
+     "mean": 1.000537,
+     "z": 0.775
     }
    },
    "aMedianVolume": 89261,
    "bMedianVolume": 2942140,
    "stationary": true,
    "stabilityMethod": "split_half_drift_heuristic",
-   "priceDate": "2026-11-13",
-   "aLatestDate": "2026-11-16",
-   "bLatestDate": "2026-11-16",
-   "latestPairEligible": false,
+   "priceDate": "2026-11-17",
+   "aLatestDate": "2026-11-17",
+   "bLatestDate": "2026-11-17",
+   "latestPairEligible": true,
    "currency": "SEK",
    "driftPct": 0.09,
    "name": "Volvo",
    "a": "VOLV-A.ST",
    "b": "VOLV-B.ST",
-   "aPrice": 324.2,
-   "bPrice": 323.4,
-   "ratio": 1.0025,
+   "aPrice": 319.8,
+   "bPrice": 319.2,
+   "ratio": 1.0019,
    "meanRatio": 1.0005,
    "sd": 0.0017,
-   "z": 1.13,
-   "days": 249,
+   "z": 0.78,
+   "days": 250,
    "tradableRange": false,
    "rangePct": 0.34
   }
@@ -704,37 +704,37 @@
    "a": "EPI-A.ST",
    "b": "EPI-B.ST",
    "status": "price_checks_passed_identity_review_required",
-   "alignedObservations": 249,
-   "priceDate": "2026-11-13"
+   "alignedObservations": 250,
+   "priceDate": "2026-11-17"
   },
   {
    "id": "XSTO:ESSITY AKTIEBOLAG",
    "a": "ESSITY-A.ST",
    "b": "ESSITY-B.ST",
    "status": "price_checks_passed_identity_review_required",
-   "alignedObservations": 249,
-   "priceDate": "2026-11-13"
+   "alignedObservations": 250,
+   "priceDate": "2026-11-17"
   },
   {
    "id": "XSTO:SAGAX AB",
    "a": "SAGA-A.ST",
    "b": "SAGA-B.ST",
    "status": "insufficient_volume",
-   "alignedObservations": 249
+   "alignedObservations": 250
   },
   {
    "id": "XSTO:SVOLDER AB",
    "a": "SVOL-A.ST",
    "b": "SVOL-B.ST",
    "status": "insufficient_volume",
-   "alignedObservations": 83
+   "alignedObservations": 84
   },
   {
    "id": "XSTO:ACRINOVA AB",
    "a": "ACRI-A.ST",
    "b": "ACRI-B.ST",
    "status": "insufficient_volume",
-   "alignedObservations": 248
+   "alignedObservations": 249
   },
   {
    "id": "XHEL:ALANDSBANKEN",
@@ -755,8 +755,8 @@
    "a": "ORNAV.HE",
    "b": "ORNBV.HE",
    "status": "price_checks_passed_identity_review_required",
-   "alignedObservations": 249,
-   "priceDate": "2026-11-13"
+   "alignedObservations": 250,
+   "priceDate": "2026-11-17"
   }
  ],
  "shareClassFeedHealth": [
@@ -767,12 +767,12 @@
    "candidate": false,
    "aHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    },
    "bHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    }
   },
@@ -783,12 +783,12 @@
    "candidate": false,
    "aHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    },
    "bHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    }
   },
@@ -798,14 +798,14 @@
    "b": "MAERSK-B.CO",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -814,14 +814,14 @@
    "b": "ATCO-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -830,14 +830,14 @@
    "b": "SSAB-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -846,14 +846,14 @@
    "b": "ERIC-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -862,14 +862,14 @@
    "b": "SKF-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -878,14 +878,14 @@
    "b": "HUSQ-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -894,14 +894,14 @@
    "b": "SCA-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -910,14 +910,14 @@
    "b": "KINV-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -926,14 +926,14 @@
    "b": "INVE-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -942,14 +942,14 @@
    "b": "VOLV-B.ST",
    "candidate": false,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -959,13 +959,13 @@
    "candidate": true,
    "aHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -974,14 +974,14 @@
    "b": "EPI-B.ST",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -990,14 +990,14 @@
    "b": "ESSITY-B.ST",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -1006,14 +1006,14 @@
    "b": "SAGA-B.ST",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -1022,14 +1022,14 @@
    "b": "SVOL-B.ST",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-11"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -1038,14 +1038,14 @@
    "b": "ACRI-B.ST",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -1054,13 +1054,13 @@
    "b": "ALBBV.HE",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    }
   },
@@ -1071,13 +1071,13 @@
    "candidate": true,
    "aHealth": {
     "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
+    "reportedDate": "2026-11-17",
     "lastValidDate": "2026-11-13"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   },
   {
@@ -1086,14 +1086,14 @@
    "b": "ORNBV.HE",
    "candidate": true,
    "aHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    },
    "bHealth": {
-    "status": "missing_or_invalid_close",
-    "reportedDate": "2026-11-16",
-    "lastValidDate": "2026-11-13"
+    "status": "valid_bar",
+    "reportedDate": "2026-11-17",
+    "lastValidDate": "2026-11-17"
    }
   }
  ],

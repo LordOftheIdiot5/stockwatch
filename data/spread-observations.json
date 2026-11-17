@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T07:05:26+00:00",
+  "generated": "2026-11-17T08:06:25+00:00",
   "method": "Dated snapshots of Stockwatch calculated A/B ratios; NOT reconstructed historical share prices.",
   "frequency": "one UTC observation per day",
   "source": "Stockwatch scanner context",
@@ -16,7 +16,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0655
+        "value": 1.0876
       }
     ],
     "WWI.OL/WWIB.OL": [
@@ -44,7 +44,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9834
+        "value": 0.9833
       }
     ],
     "ODF.OL/ODFB.OL": [
@@ -72,7 +72,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.1443
+        "value": 1.1467
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
@@ -86,7 +86,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.988
+        "value": 0.9879
       }
     ],
     "ERIC-A.ST/ERIC-B.ST": [
@@ -100,7 +100,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0216
+        "value": 1.0142
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
@@ -114,7 +114,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9958
+        "value": 1.0015
       }
     ],
     "INVE-A.ST/INVE-B.ST": [
@@ -128,7 +128,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9802
+        "value": 0.9794
       }
     ],
     "SKF-A.ST/SKF-B.ST": [
@@ -142,7 +142,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.01
+        "value": 1.0077
       }
     ],
     "SCA-A.ST/SCA-B.ST": [
@@ -156,7 +156,7 @@
       },
       {
         "date": "2026-11-17",
-        "value": 0.9996
+        "value": 1.0017
       }
     ],
     "VOLV-A.ST/VOLV-B.ST": [
@@ -170,10 +170,81 @@
       },
       {
         "date": "2026-11-17",
-        "value": 1.0025
+        "value": 1.0019
       }
     ]
   },
-  "sessionPairs": {},
+  "sessionPairs": {
+    "KINV-A.ST/KINV-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.0876,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "MAERSK-A.CO/MAERSK-B.CO": [
+      {
+        "date": "2026-11-17",
+        "value": 0.9833,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "ATCO-A.ST/ATCO-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.1467,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "SSAB-A.ST/SSAB-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 0.9879,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "ERIC-A.ST/ERIC-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.0142,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "HUSQ-A.ST/HUSQ-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.0015,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "INVE-A.ST/INVE-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 0.9794,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "SKF-A.ST/SKF-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.0077,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "SCA-A.ST/SCA-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.0017,
+        "scanDate": "2026-11-17"
+      }
+    ],
+    "VOLV-A.ST/VOLV-B.ST": [
+      {
+        "date": "2026-11-17",
+        "value": 1.0019,
+        "scanDate": "2026-11-17"
+      }
+    ]
+  },
   "sessionMethod": "Matched positive-volume source dates, not scan dates; no backfill from legacy snapshots."
 }
