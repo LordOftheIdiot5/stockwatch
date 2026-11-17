@@ -72,7 +72,7 @@ jobs:
       - name: Attention signal evidence and recency tests
         run: node --test tests/test_stock_attention.mjs
       - name: Price observation freshness tests
-        run: node --test tests/test_price_freshness.mjs
+        run: node --test tests/test_price_freshness.mjs tests/test_historical_session.mjs
       - name: A/B directional scenario tests
         run: node --test tests/test_ab_review.mjs
       - name: Frontend syntax
@@ -224,10 +224,10 @@ jobs:
           if-no-files-found: ignore
 
       - name: Modern overview desktop and mobile checks
-        if: (startsWith(github.head_ref, 'feature/stockwatch-modern-overview-') || startsWith(github.head_ref, 'feature/stockwatch-frontpage-price-integrity-'))
+        if: (startsWith(github.head_ref, 'feature/stockwatch-modern-overview-') || startsWith(github.head_ref, 'feature/stockwatch-frontpage-price-integrity-') || startsWith(github.head_ref, 'feature/stockwatch-historical-session-fallback-'))
         run: python tests/browser_check_modern_overview.py
       - name: Upload modern overview previews
-        if: always() && (startsWith(github.head_ref, 'feature/stockwatch-modern-overview-') || startsWith(github.head_ref, 'feature/stockwatch-frontpage-price-integrity-'))
+        if: always() && (startsWith(github.head_ref, 'feature/stockwatch-modern-overview-') || startsWith(github.head_ref, 'feature/stockwatch-frontpage-price-integrity-') || startsWith(github.head_ref, 'feature/stockwatch-historical-session-fallback-'))
         uses: actions/upload-artifact@v5
         with:
           name: modern-overview-previews

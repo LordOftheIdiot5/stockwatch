@@ -286,3 +286,5 @@ body[data-page=index] .sw-attention-panel{margin:12px 0}body[data-page=index] .s
 @media(max-width:600px){body[data-page=index] .sw-content{padding-top:10px}.sw-overview-head{gap:8px}.sw-overview-coverage>div{padding:10px}.sw-overview-coverage strong{font-size:19px}.sw-overview-head .sw-ws-actions{width:100%;flex-wrap:wrap}.sw-overview-chart-controls select{font-size:12px}.sw-overview-workbench{gap:9px}.sw-overview-chart-value strong{font-size:22px}}
 
 body[data-page=index] .sw-ws-pulse-grid{margin-bottom:12px}body[data-page=index] .sw-attention-panel{margin:12px 0}body[data-page=index] .sw-overview-workbench{margin-top:12px}
+
+.sw-historical-session{margin:14px 0;border-left:3px solid var(--sw-gold)}.sw-historical-session .sw-ws-metrics{margin:10px 0}.sw-historical-map{max-height:300px;overflow:auto;scrollbar-width:thin}.sw-historical-movers{margin-top:10px;border-top:1px solid var(--sw-edge);padding-top:8px}.sw-historical-movers summary{cursor:pointer;color:var(--sw-text);font-weight:650}
