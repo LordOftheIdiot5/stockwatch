@@ -1,6 +1,6 @@
 """Bounded official statistical and filing collection; no securities quotations."""
 from __future__ import annotations
-import argparse,json,math,os,time,re,hashlib
+import argparse,json,math,os,time,re,hashlib,csv,io
 from itertools import product
 from pathlib import Path
 from datetime import datetime,timezone
@@ -18,6 +18,8 @@ USGS="https://www.sciencebase.gov/catalog/items"
 COM="https://comtradeapi.un.org/public/v1/preview/C/A/HS"
 LICENSES={"eurostat":"Eurostat reuse policy; source attribution and dataset exceptions","ssb":"CC BY 4.0","sodir":"NLOD 2.0","sec":"SEC public filing content reuse policy","usgs":"CC0 for 2026 MCS parent release; child file review required"}
 TERMS={"eurostat":"https://ec.europa.eu/eurostat/help/copyright-notice","ssb":"https://www.ssb.no/en/api","sodir":"https://www.sodir.no/en/facts/data-and-analyses/open-data/","sec":"https://www.sec.gov/about/webmaster-frequently-asked-questions","usgs":"https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release"}
+LICENSES.update({"scb":"SCB open data CC0 / CC BY 4.0 attribution; exceptions apply","statfin":"CC BY 4.0","dst":"CC BY 4.0","riksbank":"Riksbank reference rates reuse with source attribution; not tradable prices","ecb":"ECB statistical reuse; attribution and third-party exceptions","norges_bank":"NLOD 2.0","world_bank":"CC BY 4.0; indicator exceptions"})
+TERMS.update({"scb":"https://www.scb.se/en/api/","statfin":"https://stat.fi/en/about-us/get-to-know-statistics-finland/legislation/terms-of-use","dst":"https://www.dst.dk/en/Statistik/hjaelp-til-statistikbanken/api","riksbank":"https://www.riksbank.se/en-gb/statistics/interest-rates-and-exchange-rates/retrieving-interest-rates-and-exchange-rates-via-api/faq--the-api-for-interest-rates-and-exchange-rates/","ecb":"https://data.ecb.europa.eu/","norges_bank":"https://www.norges-bank.no/en/topics/Statistics/open-data/","world_bank":"https://data.worldbank.org/summary-terms-of-use"})
 def stamp():return datetime.now(timezone.utc).isoformat(timespec="seconds")
 def number(x):return type(x) in (int,float) and math.isfinite(x)
 def url(base,params):return base+"?"+urlencode(params,doseq=True)
@@ -103,12 +105,62 @@ def sec(get):
     return u,sec_facts(get(u,agent),cik)
 def minerals(get):
     # Discover the official parent release's child inventory. No file guessing.
-    u=url(USGS,{"parentId":"69837e43b66b01367d7ec7c7","format":"json","max":100})
-    data=get(u);items=data.get("items",[])
-    if not items or len(items)>100:raise ValueError("catalog_incomplete")
-    records=[{"id":x["id"],"title":x.get("title"),"sourceUrl":"https://www.sciencebase.gov/catalog/item/"+x["id"]} for x in items if isinstance(x.get("id"),str) and re.fullmatch(r"[0-9a-f]{24}",x["id"])]
+    u="https://www.sciencebase.gov/catalog/item/69837e43b66b01367d7ec7c7?format=json"
+    data=get(u)
+    if data.get("id")!="69837e43b66b01367d7ec7c7" or "Mineral Commodity Summaries 2026" not in str(data.get("title")):raise ValueError("unexpected_release")
+    # The known source-verified collection and salient-statistics child can be
+    # inventoried even if the generic child-list endpoint is unavailable.
+    child=get("https://www.sciencebase.gov/catalog/item/69837ec8b66b01367d7ec7d9?format=json")
+    if child.get("id")!="69837ec8b66b01367d7ec7d9" or "Mineral Commodity Summaries 2026" not in str(child.get("title")):raise ValueError("unexpected_child")
+    items=[data,child]
+    records=[{"id":x["id"],"title":x.get("title"),"sourceUrl":"https://www.sciencebase.gov/catalog/item/"+x["id"],"fileNames":[z.get("name") for z in x.get("files",[]) if isinstance(z.get("name"),str)]} for x in items if isinstance(x.get("id"),str) and re.fullmatch(r"[0-9a-f]{24}",x["id"])]
     if not records:raise ValueError("missing_catalog")
     return u,{"records":records,"notice":"USGS mineral release inventory only; CSV contents and child metadata not yet imported."}
+def mineral_csv(raw,name,source_url):
+    if len(raw)>2_000_000:raise ValueError("mineral_file_limit")
+    reader=csv.DictReader(io.StringIO(raw.decode("utf-8-sig"),newline=""))
+    header=reader.fieldnames or []
+    if not header or len(header)>100 or len(header)!=len(set(header)) or any(not x.strip() for x in header):raise ValueError("invalid_csv_header")
+    records=[]
+    for row in reader:
+        if None in row or any(v is None for v in row.values()):raise ValueError("malformed_csv")
+        if len(records)>=20000:raise ValueError("mineral_row_limit")
+        if any(v.strip() for v in row.values()):records.append({"table":name,"sourceUrl":source_url,"fields":row})
+    if not records:raise ValueError("empty_csv")
+    return records,header
+
+def mineral_download(u):
+    p=urlsplit(u)
+    if p.scheme!="https" or p.hostname not in ("www.sciencebase.gov","sciencebase.gov") or not p.path.startswith("/catalog/file/"):raise ValueError("unreviewed_file_url")
+    req=Request(u,headers={"User-Agent":UA,"Accept":"text/csv,application/octet-stream"})
+    with urlopen(req,timeout=40) as response:
+        dest=urlsplit(response.geturl())
+        if dest.scheme!="https" or dest.hostname not in ("www.sciencebase.gov","sciencebase.gov"):raise ValueError("unexpected_file_redirect")
+        data=response.read(2_000_001)
+    if len(data)>2_000_000:raise ValueError("mineral_file_limit")
+    return data
+
+def mineral_statistics(get,download=mineral_download):
+    child_id="69837ec8b66b01367d7ec7d9"
+    u="https://www.sciencebase.gov/catalog/item/"+child_id+"?format=json"
+    d=get(u)
+    if d.get("id")!=child_id or "Mineral Commodity Summaries 2026" not in str(d.get("title")):raise ValueError("unexpected_child")
+    files=d.get("files") or []
+    selected=[f for f in files if isinstance(f.get("name"),str) and f["name"].lower().endswith(".csv")]
+    if not selected:raise ValueError("no_csv_files_in_child")
+    if len(selected)>32:raise ValueError("mineral_file_count_limit")
+    rows=[];tables=[]
+    for f in sorted(selected,key=lambda x:x["name"]):
+        name=f["name"];link=f.get("url","")
+        p=urlsplit(link)
+        if child_id not in link or p.scheme!="https" or p.hostname not in ("www.sciencebase.gov","sciencebase.gov") or not p.path.startswith("/catalog/file/"):raise ValueError("unexpected_file_identity")
+        raw=download(link)
+        data,header=mineral_csv(raw,name,link)
+        rows.extend(data);tables.append({"file":name,"columns":header,"rows":len(data),"sha256":hashlib.sha256(raw).hexdigest(),"sourceUrl":link})
+        if len(rows)>40000:raise ValueError("aggregate_mineral_row_limit")
+        time.sleep(.35)
+    return u,{"title":d.get("title"),"records":rows,"tables":tables,"license":"USGS public domain / CC0 2026 MCS release","metadataUrl":"https://data.usgs.gov/datacatalog/metadata/USGS.69837ec8b66b01367d7ec7d9.xml","notice":"Original CSV strings preserved, including unit labels, estimates, suppression and footnote codes; no numeric conversion or cross-mineral aggregation."}
+
 def comtrade_probe(get):
     u=url(COM,{"reporterCode":276,"period":2025,"partnerCode":0,"cmdCode":"8703","flowCode":"X"})
     d=get(u);rows=d.get("data") or []
@@ -126,7 +178,10 @@ def build(root=ROOT,get=fetch,probe=False):
       ("sodir-fields","sodir",lambda:sodir(get,7100,["fldNpdidField","fldName","fldCurrentActivitySatus","cmpLongName","cmpNpdidCompany","fldHcType","fldMainArea","fldDateUpdatedMax"],"fldNpdidField")),
       ("sodir-owner-history","sodir",lambda:sodir(get,7111,["fldOwnerHstGUID","fldNpdidField","fldNpdidOwner","fldOwnerName","fldOwnerKind","fldOwnershipFromDate","fldOwnershipToDate","fldOwnerDateUpdated"],"fldOwnerHstGUID")),
       ("sec-nvda","sec",lambda:sec(get)),
-      ("usgs-minerals-index","usgs",lambda:minerals(get))]
+      ("usgs-minerals-index","usgs",lambda:minerals(get)),
+      ("usgs-mineral-statistics","usgs",lambda:mineral_statistics(get))]
+    from nordic_sources import configuration
+    cfg.extend(configuration())
     datasets=[];blocked=set()
     for id,provider,collect in cfg:
         try:
@@ -136,13 +191,14 @@ def build(root=ROOT,get=fetch,probe=False):
         except Exception as e:
             if isinstance(e,HTTPError) and e.code in (401,403,429):blocked.add(provider)
             row={**prior.get(id,{"id":id,"provider":provider,"records":[],"license":LICENSES[provider],"termsUrl":TERMS[provider]}),"status":"stale" if prior.get(id,{}).get("records") else "unavailable","errorType":type(e).__name__,"checkedAt":stamp()}
+            if isinstance(e,HTTPError):row["httpStatus"]=e.code
         datasets.append(row)
-        print("FREE_DATA "+json.dumps({"id":id,"status":row["status"],"records":len(row["records"]),"error":row.get("errorType")}),flush=True)
+        print("FREE_DATA "+json.dumps({"id":id,"status":row["status"],"records":len(row["records"]),"error":row.get("errorType"),"httpStatus":row.get("httpStatus"),"tables":len(row.get("tables",[]))}),flush=True)
         time.sleep(.35)
     try:trade=comtrade_probe(get)
     except Exception as e:trade={"status":"unavailable","errorType":type(e).__name__}
     print("COMTRADE_PROBE "+json.dumps(trade),flush=True)
-    out={"schemaVersion":1,"generated":stamp(),"datasets":datasets,"restrictedSourceChecks":{"comtrade":trade},"notice":"Official source observations, not live market quotes; per-source conditions and dates apply."}
+    out={"schemaVersion":1,"generated":stamp(),"datasets":datasets,"restrictedSourceChecks":{"comtrade":trade,"imf":{"status":"permission_required","sourceUrl":"https://www.imf.org/en/About/copyright-and-terms","reason":"Request commercial reuse permission before systematic production ingestion"}},"notice":"Official source observations, not live market quotes; per-source conditions and dates apply."}
     if not probe:
         folder.mkdir(parents=True,exist_ok=True)
         tmp=target.with_suffix(".tmp");tmp.write_text(json.dumps(out,ensure_ascii=False,separators=(",",":"))+"\n");tmp.replace(target)
