@@ -1,0 +1,2 @@
+# V58 — commercial product discovery
+Eight catalog profiles, snapshot-derived counts, proposed normalized schemas, original sources and per-product access caveats. JSON export contains descriptive metadata only. Added a common navigation entry and methodology link. No commercial API keys, paid checkout, guaranteed availability, resale permission or raw restricted downloads. Actual contract and delivery infrastructure remain pending.
