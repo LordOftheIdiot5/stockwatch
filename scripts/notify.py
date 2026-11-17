@@ -15,6 +15,8 @@ import os
 import urllib.parse
 import urllib.request
 from pathlib import Path
+from datetime import datetime, timezone
+from price_freshness import current_alerts
 
 SIGNALS = Path(__file__).resolve().parent.parent / "data" / "signals.json"
 MAX_PER_RUN = 8
@@ -51,7 +53,7 @@ def send(token: str, chat: str, text: str) -> bool:
         with urllib.request.urlopen(urllib.request.Request(url, data=payload), timeout=20) as r:
             return json.loads(r.read()).get("ok", False)
     except Exception as error:                                   # noqa: BLE001
-        print(f"  ! telegram: {error}")
+        print(f"  ! telegram: {type(error).__name__}")
         return False
 
 
@@ -61,7 +63,7 @@ def main() -> int:
         return 0
 
     data = json.loads(SIGNALS.read_text(encoding="utf-8"))
-    fresh = [a for a in data.get("alerts", []) if a.get("fresh")]
+    fresh = current_alerts(data,datetime.now(timezone.utc))
     if not fresh:
         print("nothing new to send")
         return 0

@@ -35,6 +35,7 @@ import math
 from datetime import datetime, timezone
 import urllib.parse
 import urllib.request
+from daily_recovery import maybe_recover
 
 UA = "Mozilla/5.0 (compatible; stockwatch/1.0; +https://nordl.dev)"
 TIMEOUT = 25
@@ -135,7 +136,11 @@ def _chart(ticker: str, rng: str = "1y", interval: str = "1d") -> dict | None:
         print(f"  ! {ticker}: {error}")
         return None
     result = (payload.get("chart") or {}).get("result")
-    return result[0] if result else None
+    if not result:return None
+    def fetch_exact(url):
+        req=urllib.request.Request(url,headers={"User-Agent":UA})
+        with urllib.request.urlopen(req,timeout=TIMEOUT) as response:return response.read()
+    return maybe_recover(result[0],ticker,fetch_exact) if interval=='1d' else result[0]
 
 
 def _quote(ticker: str) -> dict | None:

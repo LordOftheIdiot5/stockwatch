@@ -14,6 +14,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 from news_quality import annotate, summary
+from price_freshness import coverage as price_coverage
 from build_spread_observations import build as update_spread_observations
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -154,6 +155,7 @@ def build_health(snapshot,watchlist,context,now, transport=None):
     return dict(generated=iso(now),latestScan=snapshot.get('generated'),
                 scanAgeHours=source_age(snapshot.get('generated')),
                 contextAgeHours=source_age(context.get('generated')),
+                priceFreshness=price_coverage(snapshot,watchlist,context,now),
                 tracked=len(universe),priced=len(quotes),missing=[dict(ticker=x['ticker'],name=x.get('name',''),exchange=x.get('exchange','')) for x in universe if x['ticker'] not in quotes],
                 exchanges=exchanges,storedStories=sum(len(x.get('stories') or []) for x in snapshot.get('companies',[])),
                 caveat='Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.',
@@ -204,6 +206,7 @@ def build(root=ROOT, now=None):
     health['abRatios']={'tracked':len(context.get('shareClasses') or []),'licensedPairs':0,'snapshotPairs':0}
     snapshots=update_spread_observations(root,now)
     health['abRatios']['snapshotPairs']=len(snapshots.get('pairs',{}))
+    health['abRatios']['sessionPairs']=len(snapshots.get('sessionPairs',{}))
     issuer_index={'generated':iso(now),'identityLevel':'Watchlist issuer names and listing symbols, not full legal entity verification',
                   'entities':[dict(name=w.get('name'),ticker=w.get('ticker'),sector=w.get('sector'),exchange=w.get('exchange'),
                                    isin='FR0000061459' if w.get('ticker')=='ALPER.PA' else None,
