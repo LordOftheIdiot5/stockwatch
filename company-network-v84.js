@@ -1,7 +1,7 @@
 /* Evidence-linked company network. Never promote review candidates to edges. */
 (function(global){'use strict';
-const types={supplies:'Supply',supply_contract:'Supply contract',service_contract:'Service contract',equity_investment:'Equity investment',financing:'Financing',debt_repayment:'Debt repayment',arrangement:'Financing arrangement'};
-const colors={supplies:'#249b83',supply_contract:'#249b83',service_contract:'#b88a40',equity_investment:'#4d87db',financing:'#4d87db',debt_repayment:'#4d87db',arrangement:'#8a7bb8'};
+const types={supplies:'Supply',supply_contract:'Supply contract',service_contract:'Service contract',equity_investment:'Equity investment',financing:'Financing',debt_repayment:'Debt repayment',arrangement:'Financing arrangement',acquisition:'Proposed acquisition',partnership:'Partnership',asset_transfer:'Asset transfer'};
+const colors={supplies:'#249b83',supply_contract:'#249b83',service_contract:'#b88a40',equity_investment:'#4d87db',financing:'#4d87db',debt_repayment:'#4d87db',arrangement:'#8a7bb8',acquisition:'#8a7bb8',partnership:'#8a7bb8',asset_transfer:'#249b83'};
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x))&&new Date(x).toISOString().slice(0,10)===x;
 const https=x=>{try{const u=new URL(x);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null}catch{return null}};
@@ -14,7 +14,8 @@ function graph(data){
  }
  for(const e of data.relationships||[]){
   if(!e||!e.id||edgeIds.has(e.id)||!nodes.has(e.from)||!nodes.has(e.to)||e.from===e.to||!Object.hasOwn(types,e.type)||e.evidenceStatus!=='issuer_disclosed'||e.actualCashFlow!==false||!validDate(e.disclosedOn)||!validDate(e.reviewedOn)||e.disclosedOn>e.reviewedOn||e.reviewedOn>data.compiledOn||!https(e.sourceUrl)||typeof e.sourceLocator!=='string'||!e.sourceLocator||typeof e.subject!=='string'||!e.subject)continue;
-  const a=e.amount;if(a!==null&&(!a||!Number.isSafeInteger(a.value)||a.value<=0||!/^[A-Z]{3}$/.test(a.currency)||!['exact_reported','greater_than','approximate','up_to'].includes(a.comparison)||!a.basis))continue;
+  const a=e.amount;if(a!==null&&(!a||!Number.isSafeInteger(a.value)||a.value<=0||!/^[A-Z]{3}$/.test(a.currency)||!['exact_reported','greater_than','approximate','up_to','range'].includes(a.comparison)||!a.basis))continue;
+  if(a?.comparison==='range'&&(!Number.isSafeInteger(a.upperValue)||a.upperValue<=a.value))continue;
   edgeIds.add(e.id);edges.push(e);
  }
  return {nodes,edges};
@@ -28,6 +29,7 @@ function neighborhood(g,id,kind='all',hops=1){
 }
 function amountLabel(a){
  if(!a)return 'Amount not disclosed';
+ if(a.comparison==='range'){const scale=a.upperValue>=1e9?[1e9,'bn']:a.upperValue>=1e6?[1e6,'m']:[1,''];return a.currency+' '+(a.value/scale[0]).toLocaleString('en-US')+'–'+(a.upperValue/scale[0]).toLocaleString('en-US')+(scale[1]?' '+scale[1]:'')+' · '+a.basis.replaceAll('_',' ');}
  const scale=a.value>=1e9?[1e9,'bn']:a.value>=1e6?[1e6,'m']:[1,''];
  return (a.comparison==='greater_than'?'> ':a.comparison==='approximate'?'≈ ':a.comparison==='up_to'?'Up to ':'')+a.currency+' '+(a.value/scale[0]).toLocaleString('en-US',{maximumFractionDigits:3})+(scale[1]?' '+scale[1]:'')+' · '+a.basis.replaceAll('_',' ');
 }
