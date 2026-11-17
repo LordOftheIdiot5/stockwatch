@@ -55,7 +55,7 @@ def validate(payload, symbol, mic, currency, day):
     r = rows[0]
     if not isinstance(r, dict):
         return "unknown_schema"
-    if r.get("symbol") != symbol or r.get("exchange") != mic:
+    if r.get("symbol") != symbol or (r.get("exchange_code") or r.get("exchange")) != mic:
         return "identity_mismatch"
     if r.get("price_currency") != currency:
         return "currency_unverified_or_mismatch"
