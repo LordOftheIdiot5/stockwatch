@@ -545,7 +545,7 @@ async function openStock(t){
  '<div class="sw-company-links"><a class="sw-soft-btn" href="stocks.html">Stocks directory</a>'+(page==='company'?'':'<a class="sw-primary" href="'+researchUrl+'">Open full research page ↗</a>')+'<a class="sw-soft-btn" href="https://finance.yahoo.com/quote/'+encodeURIComponent(c.ticker)+'" target="_blank" rel="noopener noreferrer">External price source ↗</a></div>'+
  '<div class="sw-company-tabs" aria-label="Research sections">'+[['chart','Price & activity'],['financials','Financials'],['filings','Company updates'],['peers','Peers'],['events','Corporate events'],['drivers','Industry drivers'],['identity','Identity']].map(([id,label])=>'<button type="button" data-company-tab="'+id+'" class="sw-soft-btn">'+label+'</button>').join('')+'</div>'+
  '<div class="sw-panel-pad"><div class="sw-company-block" data-company-section="chart"><div class="sw-stat-mini"><div><small>Relative volume</small><b>'+E(c.rvol==null?'—':N(c.rvol)+'×')+'</b></div><div><small>Vs watchlist market</small><b class="'+sign(c.excessPct)+'">'+P(c.excessPct)+'</b></div><div><small>Disclosed short</small><b>'+E(c.short?.percent==null?'—':N(c.short.percent)+'%')+'</b></div></div><div class="sw-section-row"><h2>Price history</h2><small>Source coverage determines available periods</small></div><div class="sw-controls">'+[[30,'1 month'],[90,'3 months'],[365,'1 year'],[1825,'5 years'],[0,'All available']].map(([d,l])=>'<button type="button" class="sw-soft-btn" data-period="'+d+'">'+l+'</button>').join('')+'</div><div class="sw-history-source" id="companyHistorySource">Checking history permissions…</div><div id="individualChart">Checking for dated history…</div><p class="sw-meta">Values are daily closes unless an adjusted series is verified. No simulated history or total-return calculation.</p><details class="sw50-external" open><summary>Optional external chart (separate provider)</summary>'+displayChartCard(c)+'</details></div>'+
- '<section class="sw-company-block" data-company-section="financials">'+(research?research.financialHTML(facts):renderFacts(c))+'</section>'+companyOperatingHTML(t)+investmentHTML(t)+roroMarketHTML(t)+
+ '<section class="sw-company-block" data-company-section="financials">'+(research?research.financialHTML(facts):renderFacts(c))+'</section>'+companyOperatingHTML(t)+investmentHTML(t)+roroMarketHTML(t)+'<div id="freightAnalysis"></div>'+
  '<section class="sw-company-block" data-company-section="filings">'+(attention?attentionCard(attention):'')+'<div class="sw-section-row"><h2>Company updates</h2><a class="sw-textlink" href="news.html?q='+encodeURIComponent(c.ticker)+'">All source-linked news ↗</a></div>'+(updates.map(s=>storyBrief({...s,name:c.name,ticker:c.ticker})).join('')||'<p class="sw-meta">No recent source-linked company updates available.</p>')+'</section>'+
  '<section class="sw-company-block" data-company-section="peers"><div class="sw-section-row"><h2>Sector peers</h2><a class="sw-textlink" href="stocks.html?sector='+encodeURIComponent(c.sector||'')+'">Explore sector ↗</a></div><p class="sw-meta">Peers share the Stockwatch sector classification; this is not a verified ownership, competitive or supply-chain relationship. Price changes use the latest scanner observations.</p><div class="sw-company-peers">'+(peers.map(p=>'<a class="sw-peer" href="company.html?ticker='+encodeURIComponent(p.ticker)+'"><strong>'+E(p.name)+'</strong><small>'+E(p.ticker)+' · '+E(p.exchange||'')+'</small><span class="'+sign(p.changePct)+'">'+E(p.unavailable?'Unavailable':P(p.changePct))+'</span></a>').join('')||'<div class="sw-note">No other tracked listing in this sector.</div>')+'</div></section>'+
  '<section class="sw-company-block" data-company-section="events">'+(research?research.actionHTML(t,events,issuer):'<p class="sw-note">Corporate-event coverage unavailable.</p>')+'</section>'+
@@ -557,6 +557,7 @@ async function openStock(t){
  const entry=(state.licensedPrices?.records||[]).find(p=>p.listingId===t&&p.redistributionPermitted===true&&p.priceType==='end_of_day'&&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(p.historyPath||''));
  if(entry&&window.StockwatchNativeChart){try{const payload=await get(entry.historyPath);if(window.StockwatchNativeChart.authorized(entry,payload))hist=payload}catch{}}
  if(container.dataset.currentTicker!==t)return;
+ const freightNode=container.querySelector('#freightAnalysis');if(freightNode)freightNode.innerHTML=freightAnalysisHTML(t,hist);
  const source=container.querySelector('#companyHistorySource');
  const allBars=hist?chartSeries(hist.bars.filter(x=>typeof x.close==='number'&&x.close>0).map(x=>({date:x.date,value:x.close}))):[];
  if(source)source.innerHTML=allBars.length?'<strong>Licensed historical close series</strong><span>'+E(hist.source)+' · '+E(hist.currency)+' · '+(hist.adjusted?'Adjusted closes (provider-defined)':'Unadjusted closes')+' · '+allBars.length+' observations</span><span>'+E(allBars[0].date)+' to '+E(allBars.at(-1).date)+'</span><a class="sw-textlink" href="'+E(link(hist.sourceUrl))+'" target="_blank" rel="noopener noreferrer">Source ↗</a> <a class="sw-textlink" href="'+E(link(hist.licenseReference))+'" target="_blank" rel="noopener noreferrer">Licence ↗</a>':'<strong>Licensed historical series not connected</strong><span>Latest scanner activity is separate from dated historical price data.</span><a class="sw-textlink" href="research.html">Historical coverage &amp; methodology ↗</a>';
@@ -592,6 +593,49 @@ function companyOperatingRows(data,ticker){
   }
   return {...c,series};
  }).filter(c=>c.series.length);
+}
+// V66: match only recorded, authorized equity closes at consecutive reporting-period ends.
+function freightPeriodAnalysis(series,history,ticker){
+ const validDay=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&Number.isFinite(Date.parse(d))&&new Date(Date.parse(d)).toISOString().slice(0,10)===d;
+ const stride=series?.frequency==='monthly'?1:series?.frequency==='quarterly'?3:0;
+ const monthIndex=d=>Number(d.slice(0,4))*12+Number(d.slice(5,7))-1;
+ const monthEnd=d=>validDay(d)&&new Date(Date.parse(d)+86400000).getUTCDate()===1;
+ const valid=!!(history&&history.ticker===ticker&&history.redistributionPermitted===true&&history.source&&history.sourceUrl&&history.licenseReference&&history.currency&&typeof history.adjusted==='boolean'&&Array.isArray(history.bars));
+ const bars=new Map(),conflicts=new Set();
+ if(valid)for(const b of history.bars){
+  if(!b||!validDay(b.date)||!Number.isFinite(b.close)||b.close<=0)continue;
+  if(bars.has(b.date)&&bars.get(b.date)!==b.close)conflicts.add(b.date);
+  bars.set(b.date,b.close);
+ }
+ const dates=[...bars.keys()].filter(d=>!conflicts.has(d)).sort();
+ const match=d=>{const v=dates.filter(x=>x<=d).at(-1);return v&&Date.parse(d)-Date.parse(v)<=7*86400000?{date:v,close:bars.get(v)}:null};
+ const source=Array.isArray(series?.observations)?series.observations:[];
+ const counts=new Map();for(const p of source)counts.set(p?.periodEnd,(counts.get(p?.periodEnd)||0)+1);
+ const rows=stride?source.filter(p=>p&&monthEnd(p.periodEnd)&&validDay(p.publishedOn)&&p.publishedOn>=p.periodEnd&&counts.get(p.periodEnd)===1&&Number.isFinite(p.value)&&p.value>0&&(stride===1||Number(p.periodEnd.slice(5,7))%3===0)).sort((a,b)=>a.periodEnd.localeCompare(b.periodEnd)).map(p=>({...p,stock:match(p.periodEnd),rateChange:null,stockChange:null})): [];
+ const pairs=[];
+ for(let i=1;i<rows.length;i++){
+  const a=rows[i-1],b=rows[i];
+  if(monthIndex(b.periodEnd)-monthIndex(a.periodEnd)!==stride)continue;
+  b.rateChange=100*(b.value/a.value-1);
+  if(a.stock&&b.stock){b.stockChange=100*(b.stock.close/a.stock.close-1);pairs.push({period:b.periodEnd,x:b.rateChange,y:b.stockChange})}
+ }
+ // Descriptive correlation of consecutive changes, never of trending levels.
+ let correlation=null;
+ if(pairs.length>=12){
+  const mx=pairs.reduce((n,p)=>n+p.x,0)/pairs.length,my=pairs.reduce((n,p)=>n+p.y,0)/pairs.length;
+  const xx=pairs.reduce((n,p)=>n+(p.x-mx)**2,0),yy=pairs.reduce((n,p)=>n+(p.y-my)**2,0),xy=pairs.reduce((n,p)=>n+(p.x-mx)*(p.y-my),0);
+  if(xx>1e-12&&yy>1e-12)correlation=Math.max(-1,Math.min(1,xy/Math.sqrt(xx*yy)));
+ }
+ return {rows,pairs,correlation,licensed:valid,minimum:12,currency:valid?history.currency:null,adjusted:valid?history.adjusted:null};
+}
+function freightAnalysisHTML(ticker,history){
+ const links=reportedInvestments(state.investments).filter(r=>r.ownerTickers.includes(ticker)&&r.targetTicker);
+ const direct=companyOperatingRows(state.companyOperating,ticker)[0],investee=links.map(r=>companyOperatingRows(state.companyOperating,r.targetTicker)[0]).find(Boolean);
+ const issuer=direct||investee;if(!issuer)return '';
+ const series=issuer.series.find(r=>r.key==='net_freight');if(!series)return '';
+ const a=freightPeriodAnalysis(series,history,ticker),latest=a.rows.at(-1),quote=companies().find(r=>r.ticker===ticker);
+ if(!latest)return '';
+ return '<section class="sw-panel"><div class="sw-panel-hd"><div><h2>Stock versus reported freight</h2><small>'+E(ticker)+' · '+E(issuer.issuer)+' · '+E(series.frequency)+'</small></div></div><div class="sw-panel-pad"><p class="sw-meta">'+(direct?'Direct issuer operating economics.':'Indirect relationship through a disclosed investment; not the holding company’s own freight rate.')+' Period-end stock closes and freight results are aligned for retrospective comparison only. Results became public on their publication dates, not at period end.</p><div class="sw-stat-mini"><div><small>Latest share close</small><b>'+E(quote&&Number.isFinite(quote.close)?N(quote.close,3)+' '+quote.currency:'Unavailable')+'</b><small>'+E(quote?.date||'No observation')+'</small></div><div><small>Latest realized freight</small><b>'+E(N(latest.value,3)+' '+series.unit)+'</b><small>'+E(latest.periodEnd)+'</small></div><div><small>Consecutive freight change</small><b>'+E(latest.rateChange==null?'Not comparable':P(latest.rateChange))+'</b></div><div><small>Matched period changes</small><b>'+a.pairs.length+'</b><small>12 minimum for correlation</small></div></div><p class="sw-note">'+(a.licensed?(a.correlation==null?'Insufficient nonconstant, matched consecutive observations for correlation.':'Descriptive Pearson correlation: '+E(N(a.correlation,3))+' · '+a.pairs.length+' matched changes. Not a causal or predictive model.'):'Licensed dated share history not connected. Current scanner close is shown separately; undated spark data is never converted to historical prices.')+'</p><div class="sw-tablewrap"><table class="sw-table"><thead><tr><th>Period end</th><th>Freight ('+E(series.unit)+')</th><th>Freight change</th><th>Published</th><th>Period-end share close</th><th>Share change</th></tr></thead><tbody>'+a.rows.map(p=>'<tr><td>'+E(p.periodEnd)+'</td><td>'+E(N(p.value,3))+'</td><td>'+E(p.rateChange==null?'—':P(p.rateChange))+'</td><td><a href="'+E(p.sourceUrl)+'" target="_blank" rel="noopener noreferrer">'+E(p.publishedOn)+'</a></td><td>'+E(p.stock?N(p.stock.close,3)+' '+a.currency:'Not available')+(p.stock?'<small>'+E(p.stock.date)+'</small>':'')+'</td><td>'+E(p.stockChange==null?'—':P(p.stockChange))+'</td></tr>').join('')+'</tbody></table></div><small class="sw-meta">Only consecutive calendar months/quarters; last observed close no more than seven days before period end. '+(a.licensed?(a.adjusted?'Provider-adjusted':'Unadjusted')+' prices; no assumed dividend reinvestment. ':'')+'No interpolation, no invented dates, no look-ahead trading claims.</small></div></section>';
 }
 function companyOperatingHTML(ticker){
  const items=companyOperatingRows(state.companyOperating,ticker);
