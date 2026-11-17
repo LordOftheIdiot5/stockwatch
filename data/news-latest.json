@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:18:35Z",
+  "generated": "2026-11-17T20:40:48Z",
   "items": [
     {
       "id": "DOFG.OL:24ad891d8351cbcfb154a9fc27f0fa86ec311a1281bca0dc8e4a061d2a95c072",
@@ -152,6 +152,25 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "VWS.CO:4dbe5cdb331b19ae85db6c0d4aca2f07c2bb8f84240d7c823cecad1f303636c9",
+      "ticker": "VWS.CO",
+      "name": "Vestas",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Vestas CEO urges EU to take tough line on Chinese wind software: 'Marker they laid goes both ways'",
+      "english": null,
+      "publisher": "Recharge News",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPamF4OWo2TE9YREdPd2hTVFRQYXdZaUx6VUdLRldORmkzUFNvaHB6MlJHT1FLMkdzRFdGdVNZYy1mLWtVbm9veGJHN0F0MDhSb1RZTHhLQkRXY0NXcHBZclNlODVaUWc5endsUE5Jay1uTHhLdnQ2cVlEdE1mVnJ5WkV2dDJlcDgyNmVYdkVpMjNQbHZ1aE9SbUt4RlNYMTRTaVpMelBwcFhJZUE2QjltZ3ItTDczbkEzTWhPeUJfMW1jZi1wR2pPcUhNcUM4VmFSVmcwVHRpYjRnZw?oc=5",
+      "published": "2026-11-17T18:00:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Management",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "RACE.MI:6f9ddd9cf86f6f027a732cac36b055dbce1c2da92f60b9a3abb8da7bf41b23d7",
@@ -456,6 +475,26 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "FCT.MI:af72207120f90254a01c96e4901862c899437d4b0581cd244996ed2d52221a77",
+      "ticker": "FCT.MI",
+      "name": "Fincantieri",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Viking prenota altre 14 nuove navi, di cui 4 oceaniche con Fincantieri",
+      "english": "Viking orders 14 more new ships, including 4 ocean-going vessels from Fincantieri",
+      "publisher": "Shipping Italy",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSHpjVHdhcnVubUJfVmFZcXFTZW8wY2w4a3NlcGt6NTk3WGRKTVI3WUpTODc2SWwwZklGamotc3lHU2ozSHg3aXd4Q2hoOWZTWFFhcUtYdnM3cEZ1VDBzUkk5RXMxd1R4Mlg5ZXFqd3RsZktRN1RjNjNKdkZYOFc0QnQxZUcyUTZrWnpwZzRlZlBMXzdXT0NlTHNJVnN0YUxiODdrSFAtNTZkTUZ6YnJr?oc=5",
+      "published": "2026-11-17T16:19:10Z",
+      "lang": "it",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "FCT.MI:9f52b7448b0d4c7a90a67e8d37d5ded1fbd453068904f75951784bcca6198280"
     },
     {
       "id": "1AST.DE:e3f327df71bfdf6789b68c3f89ec56d0192aaad97e44a139aa43c2b01e20117a",
@@ -1865,53 +1904,15 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "TKMS.DE:6da8d3aa40cb234f1cc37bf8239cf48299a252c727b0ff65806af820c41f87a6",
-      "ticker": "TKMS.DE",
-      "name": "TKMS",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "TKMS får tysk tilläggsorder på fyra fregatter",
-      "english": null,
-      "publisher": "Börsvärlden",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOUVPUm8wREJubWwyYk1RU09qSlYyYXE4YnhGRE5SdjFvNUZMYjJpMk1uTEFJS2xaS3A3U0pGbG9uZDQwR09QVkJSZTJURExOU2JGZGk2QTdoenFSVDVBSWs0QmVIZVdfTkFmZEFWVVNFZWR3dVY0ZF9SMDF2Ym1mUTdncmY?oc=5",
-      "published": "2026-11-17T10:49:00Z",
-      "lang": "sv",
-      "regulatory": false,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "SAP.DE:0799efdddb9b1b1e58ae63167016fafddb7aadfd7aa1c19dad3fa27e7fc4b08a",
-      "ticker": "SAP.DE",
-      "name": "SAP",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "SAP, NABU, AZOV.ONE and Azov launch the Sword of Damocles initiative",
-      "english": null,
-      "publisher": "Mezha.net",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUHRmNThoa3Qzd2lqcTJ6ZVRhbU1GNzZNLVBDRlpQMlQ4Zml5ckZmVXZCckVHQk5GeloyU3RPeVlrYldSdXBCQnlzb1M0MUJxaXh4bXpObW14Y01VM18zTUZneFV3UGhTVUVTOGZ4emlWQ1lkWHllOGlxdU00WWtwR09YWkk?oc=5",
-      "published": "2026-11-17T10:48:04Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 778,
+  "totalStored": 780,
   "limit": 100,
   "quality": {
-    "total": 778,
-    "relevant": 532,
+    "total": 780,
+    "relevant": 533,
     "review": 217,
-    "duplicates": 36,
+    "duplicates": 37,
     "issuerLinked": 0,
     "categories": {
       "Earnings / results": 104,
@@ -1920,8 +1921,8 @@
       "Guidance": 23,
       "Contracts": 44,
       "Capital & ownership": 0,
-      "Management": 35,
-      "General": 524
+      "Management": 36,
+      "General": 525
     }
   }
 }
