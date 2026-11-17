@@ -11,7 +11,7 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler
 from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = "https://api.apilayer.net/marketstack/v2/eod"
+BASE = "https://api.marketstack.com/v2/eod"
 MARKETS = {
     "OL": ("XOSL", "NOK"), "ST": ("XSTO", "SEK"), "CO": ("XCSE", "DKK"),
     "DE": ("XETR", "EUR"), "PA": ("XPAR", "EUR"), "MI": ("XMIL", "EUR"),
@@ -120,8 +120,18 @@ def main():
         p.error("only monitored watchlist symbols are allowed")
     if a.symbol and len(symbols) > a.budget:
         p.error("explicit selection exceeds request budget")
-    rows = probe(symbols[:a.budget], a.date, key)
-    print(json.dumps({"requested": min(len(symbols), a.budget), "attempted": len(rows),
+    try:
+        auth = fetch("AAPL", "XNAS", a.date, key)
+        auth_status = "provider_error" if isinstance(auth, dict) and "error" in auth else "response_ok" if isinstance(auth, dict) and isinstance(auth.get("data"), list) else "unexpected_schema"
+    except HTTPError as e:
+        auth_status = "http_" + str(e.code)
+    except Exception:
+        auth_status = "transport_or_parse_error"
+    print(json.dumps({"authenticationControl":"AAPL", "status":auth_status}), flush=True)
+    if auth_status != "response_ok":
+        return 1
+    rows = probe(symbols[:max(0, a.budget-1)], a.date, key)
+    print(json.dumps({"requested": min(len(symbols), a.budget-1), "attempted": len(rows),
                       "exactSessionBars": sum(r["status"] == "exact_session_bar" for r in rows),
                       "publicationEnabled": False, "pricesStored": False}))
     return 0 if any(r["status"] == "exact_session_bar" for r in rows) else 1
