@@ -9,3 +9,16 @@ test('currency and comparable filters compose',()=>{assert.deepEqual(S.filters([
 test('dated last price remains displayable outside ranking session',()=>{assert.equal(S.hasPrice(b),true);assert.equal(S.latestChange(b),99);assert.equal(S.metric(b,'gain',day),null);assert.equal(S.latestChange(c),null);assert.equal(S.hasPrice(d),false);assert.deepEqual(S.rank([d,b,a],'gain',day).map(x=>x.ticker),['A','B','D'])});
 
 test('existing pair observations never become scanner signals',()=>{const r={referenceOnly:true,referenceId:'XCSE:MAERSK A',mic:'XCSE',symbol:'MAERSK A',unavailable:true};const pair={a:'MAERSK-A.CO',b:'MAERSK-B.CO',aPrice:19980,bPrice:20360,currency:'DKK',priceDate:day};const q=S.pairQuote(r,[pair]);assert.equal(q.close,19980);assert.equal(S.displayPrice({...r,pairQuote:q}).date,day);assert.equal(S.comparable({...r,pairQuote:q},day),false);assert.equal(S.pairQuote({...r,mic:'XSTO'},[pair]),null);assert.equal(S.pairQuote(r,[{...pair,currency:'SEK'}]),null)});
+
+test('V61: expanded venue+FIGI exact share-class identity required',()=>{
+ const mappings=[['BBG000BB48H2','HUSQB','HUSQ-B.ST'],['BBG000BG96K6','INVEA','INVE-A.ST'],['BBG000BCH127','VOLVA','VOLV-A.ST'],['BBG000BGD8Q1','SSABB','SSAB-B.ST'],['BBG000BB28Z4','HUSQA','HUSQ-A.ST']];
+ for(const [figi,symbol,ticker] of mappings){
+  const row={referenceOnly:true,registryOnly:true,expandedReference:true,mic:'XSTO',figi,symbol,ticker:'registry:XSTO:'+figi};
+  const pair={a:ticker,b:'OTHER.ST',aPrice:12,bPrice:999,currency:'SEK',priceDate:day};
+  const q=S.pairQuote(row,[pair]);assert.equal(q.close,12);assert.equal(q.ticker,ticker);
+  assert.equal(S.comparable({...row,pairQuote:q},day),false);
+  for(const bad of [{symbol:'WRONG'},{figi:'WRONG'},{mic:'XCSE'},{ticker:'registry:XSTO:WRONG'},{expandedReference:false}])assert.equal(S.pairQuote({...row,...bad},[pair]),null);
+  assert.equal(S.pairQuote(row,[pair,pair]),null);
+  assert.equal(S.pairQuote(row,[{...pair,aPrice:0}]),null);
+ }
+});
