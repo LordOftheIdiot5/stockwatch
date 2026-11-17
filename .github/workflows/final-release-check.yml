@@ -4,6 +4,12 @@ on:
   pull_request:
     paths:
       - 'v4.js'
+      - 'company-network-v84.js'
+      - 'company-network-v84.css'
+      - 'intelligence.html'
+      - 'data/company-relationships.json'
+      - 'data/company-image-catalog.json'
+      - 'data/us-equity-seed.json'
       - 'terminal.js'
       - 'research-analytics.js'
       - 'research-lab.js'
@@ -131,6 +137,21 @@ jobs:
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
+      - name: V84 commercial network unit checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v84-') && hashFiles('company-network-v84.js') != ''
+        run: |
+          node --check company-network-v84.js
+          node --test tests/test_company_network_v84.mjs
+      - name: V84 commercial network and photo browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v84-') && hashFiles('company-network-v84.js') != ''
+        run: python tests/browser_check_company_network_v84.py
+      - name: Upload V84 rendered previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v84-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v84-network
+          path: workspace-previews/v84-*.png
+          if-no-files-found: ignore
       - name: V50 company research tests
         if: startsWith(github.head_ref, 'feature/stockwatch-v50-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
         run: |
