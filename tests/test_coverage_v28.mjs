@@ -139,3 +139,15 @@ test('V67: same-period freight-volume scenarios separate proxy and hypothetical 
  assert.equal(freightScenario(64.4,13.2,-100,0,0).scenario,0);
  const wrong=structuredClone(d.companies[0]);wrong.series.find(s=>s.key==='transport_volume').unit='tonnes';assert.equal(freightScenarioBaseline(wrong),null);
 });
+
+test('V68: reported-map date is separate from strict filters; retained and pair prices stay neutral',()=>{
+ const start=src.indexOf('function comparisonDate('),end=src.indexOf('function overview()',start);
+ const {screenerHeatRows,compactScreenerHeatmap}=Function('E','P','N',src.slice(start,end)+'\nreturn {screenerHeatRows,compactScreenerHeatmap}')(E,P,x=>String(x));
+ const row={ticker:'WAWI.OL',name:'WAWI',sector:'Shipping',date:'2026-11-17',currency:'NOK',close:166.7,changePct:0.85,volume:100,priceStatus:'reported'};
+ const data=[row,{...row,ticker:'retained',priceStatus:'retained'},{...row,ticker:'older',date:'2026-11-16'},{...row,ticker:'pair',referenceOnly:true,pairQuote:{close:10,date:'2026-11-17',currency:'NOK'}}];
+ const result=screenerHeatRows(data,'2026-11-17','2026-11-16');
+ assert.deepEqual(result.map(x=>x.marketQuality),['observed','unconfirmed','older','unavailable']);
+ const html=compactScreenerHeatmap(result);assert.match(html,/sw-compact-heatgrid/);assert.equal((html.match(/sw-compact-heatsector /g)||[]).length,1);assert.equal((html.match(/class="sw-heat-cell positive"/g)||[]).length,1);
+ assert.ok(screenerHeatRows(data,'2026-11-17','2026-11-16','missing').every(x=>x.marketQuality==='unavailable'));
+ assert.equal(screenerHeatRows([row],'2026-11-17','2026-11-16','comparable')[0].marketQuality,'unconfirmed');
+});
