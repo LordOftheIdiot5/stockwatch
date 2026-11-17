@@ -12,9 +12,22 @@ const pairListings={
  'XSTO:ERIC A':'ERIC-A.ST','XSTO:ERIC B':'ERIC-B.ST',
  'XSTO:SKF A':'SKF-A.ST','XSTO:SKF B':'SKF-B.ST'
 };
+// Explicit venue + FIGI + share-class ticker bindings; no fuzzy name matches.
+const expandedPairListings={
+ 'BBG000BB48H2':['HUSQB','HUSQ-B.ST'],
+ 'BBG000BG96K6':['INVEA','INVE-A.ST'],
+ 'BBG000BCH127':['VOLVA','VOLV-A.ST'],
+ 'BBG000BGD8Q1':['SSABB','SSAB-B.ST'],
+ 'BBG000BB28Z4':['HUSQA','HUSQ-A.ST']
+};
 function pairQuote(r,pairs){
- if(!r?.referenceOnly||!r.referenceId||r.referenceId!==r.mic+':'+r.symbol)return null;
- const ticker=pairListings[r.referenceId],currency=r.mic==='XCSE'?'DKK':r.mic==='XSTO'?'SEK':null;
+ if(!r?.referenceOnly)return null;
+ let ticker=null;
+ if(r.referenceId&&r.referenceId===r.mic+':'+r.symbol)ticker=pairListings[r.referenceId];
+ else if(r.expandedReference===true&&r.registryOnly===true&&r.mic==='XSTO'&&r.ticker==='registry:XSTO:'+r.figi){
+  const m=expandedPairListings[r.figi];if(m&&m[0]===r.symbol)ticker=m[1];
+ }
+ const currency=r.mic==='XCSE'?'DKK':r.mic==='XSTO'?'SEK':null;
  if(!ticker||!currency)return null;
  const matches=(pairs||[]).filter(p=>p.currency===currency&&sessionOK(p.priceDate)&&((p.a===ticker&&num(p.aPrice)&&p.aPrice>0)||(p.b===ticker&&num(p.bPrice)&&p.bPrice>0)));
  if(matches.length!==1)return null;
