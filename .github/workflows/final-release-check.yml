@@ -88,6 +88,10 @@ jobs:
         run: |
           python scripts/financial_history.py --private-db "$RUNNER_TEMP/research-v54.sqlite"
           python scripts/research_assets.py --private-db "$RUNNER_TEMP/research-v46.sqlite"
+      - name: V55 industry context tests
+        run: |
+          node --check industry-v55.js
+          node --test tests/test_industry_v55.mjs
       - name: Frontend syntax
         run: |
           node --check v4.js

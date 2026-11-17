@@ -531,6 +531,48 @@
           "missing": "Issuer filings, regulator announcements and patent timelines."
         }
       ]
+    },
+    {
+      "id": "aquaculture",
+      "sectors": [
+        "Aquaculture"
+      ],
+      "drivers": [
+        {
+          "category": "Demand",
+          "label": "Salmon demand and selling prices",
+          "question": "How are salmon prices and export volumes evolving?",
+          "datasetIds": [],
+          "missing": "Species, grade and market-specific salmon prices and export volumes. No salmon price series connected here yet."
+        },
+        {
+          "category": "Inputs",
+          "label": "Feed, electricity and operating costs",
+          "question": "How do input costs change the operating environment?",
+          "datasetIds": [
+            "power",
+            "brent"
+          ],
+          "missing": "Feed prices, actual local electricity prices and issuer contracts. Power forecasts are not electricity prices."
+        },
+        {
+          "category": "Markets",
+          "label": "Currency and trade",
+          "question": "What external markets and currency conditions matter?",
+          "datasetIds": [
+            "fx",
+            "trade"
+          ],
+          "missing": "Issuer-specific currency exposure and destination-level salmon trade."
+        },
+        {
+          "category": "Risk",
+          "label": "Biological and regulatory risk",
+          "question": "What do production and biological disclosures show?",
+          "datasetIds": [],
+          "missing": "Mortality, biomass, harvest volumes, licences and reported biological events."
+        }
+      ]
     }
   ],
   "driverIssuerOverrides": [
