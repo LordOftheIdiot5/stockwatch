@@ -1,0 +1,26 @@
+name: Live Stockwatch layout audit
+on:
+  push:
+    branches: ['feature/stockwatch-live-layout-audit-*']
+    paths: ['.github/workflows/live-layout-audit.yml','tests/live_layout_audit.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright
+      - run: python -m playwright install chromium --with-deps
+      - name: Capture live public pages (no auth or mutations)
+        run: python tests/live_layout_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stockwatch-live-layout
+          path: live-layout-report/
