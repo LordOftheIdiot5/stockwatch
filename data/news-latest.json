@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T00:23:09Z",
+  "generated": "2026-11-17T00:31:59Z",
   "items": [
     {
       "id": "UCG.MI:1419cba8dd6a45f61a87e11b35eff903fffe1b698270562875a3ad643a43a081",
@@ -76,6 +76,25 @@
       "category": "M&A",
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "TISG.MI:6dd8a36f2669d76d3ac216fbc2fcf592fa4f50cebec7e3cf05d7bbcc18820d3c",
+      "ticker": "TISG.MI",
+      "name": "The Italian Sea Group",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "SRI Global Wins Italian Sea Group Auction at €220m",
+      "english": null,
+      "publisher": "Powerboat News",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9BUlNQcGZxN3RJM0VhUlZlVE9pY1BrVTl6REEwdC0zaWJleWJpYzR6SnBCMXREMFRfZjF4MG9JT1FCM05PN25Meml2NXB4di1NQzFmY202a2p2aG1oVVVLb3J1RWxjRDJqVmdNakhLakhXRXM?oc=5",
+      "published": "2026-11-16T20:28:35Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "TISG.MI:c22c34a70270aa5107329a244470439c8b9227693865f42a251424cd63c5dc99",
@@ -1887,33 +1906,14 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "EUZ.DE:0431a4b5cea29c590ae50730e2420089a8d213fe58265ce3406d50e0c0ac85d2",
-      "ticker": "EUZ.DE",
-      "name": "Eckert & Ziegler",
-      "sector": "Pharma & medtech",
-      "type": "news",
-      "headline": "Eckert & Ziegler Aktie: Ergebnis plus 25 Prozent, Monatsplus 24 Prozent – Aktienanalyse: Zündet jetzt die Radiopharma-Rally?",
-      "english": "Eckert & Ziegler share: Earnings up 25 percent, monthly gain of 24 percent – Share analysis: Is the radiopharma rally now taking off?",
-      "publisher": "AktienCheck.de",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUnp0X2E3cnpRVlhXeXBaWFpWdzNjeDJmblpzWlFWTTFOX1QzTnpZUmdPTWtGYk5vNG1Ldlk4TGYzQTlvN1dxUk9nZHpkLXdYRVlmMUdDRW9QU0hrYkgzeHJfVE5LZlAteWJ5RW52OWpmeVJqZ3lBeVBpSFNpbGZ3WkNMcWtOU0JRdEJZbXI5dlo3U1dMaGJEa1Jvdm5mNzQ?oc=5",
-      "published": "2026-11-16T11:03:16Z",
-      "lang": "de",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 552,
+  "totalStored": 554,
   "limit": 100,
   "quality": {
-    "total": 552,
-    "relevant": 397,
-    "review": 140,
+    "total": 554,
+    "relevant": 398,
+    "review": 141,
     "duplicates": 20,
     "issuerLinked": 0,
     "categories": {
@@ -1923,8 +1923,8 @@
       "Guidance": 20,
       "Contracts": 34,
       "Capital & ownership": 0,
-      "Management": 22,
-      "General": 368
+      "Management": 23,
+      "General": 369
     }
   }
 }
