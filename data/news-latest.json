@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T00:36:24Z",
+  "generated": "2026-11-18T00:54:50Z",
   "items": [
     {
       "id": "ALO.PA:4dcbd2b070f63877cd76883a46dfbbf24040b5a0c182d1bb73ef18cbf3141f35",
@@ -193,6 +193,25 @@
       "priority": "normal"
     },
     {
+      "id": "ALO.PA:feed1db1de84f30a4776b3a678ac3e83836328b984212bb9214dc5222f1e3576",
+      "ticker": "ALO.PA",
+      "name": "Alstom",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Earnings call transcript: Alstom H1 2026/2027 results show deep losses, steady orders",
+      "english": null,
+      "publisher": "Investing.com Canada",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdVlkZmlZZS1yMVVyVUEzNkVaNW5QRU54b21QQVFtM1ZRVF93MnhwQWxlSkY2dmNTRmdnSFp5WVEtTzNCVkFvWGFLbGR1QXFUQTlOVTVKTUZ5NXlnVnJjdVNYbVlCV0ZNS0hYeTUyYkNvc1FRNDIzd2k1cVpUVFVJam9Qb05VNmt2YTA1N2ZUVjhadXBiLXFOUEpCM3A2T0kxRXp3T2Z0ZkpJLURaamlXWlBjUXBKQ1I2a2pXdENtaFAxSktnWGZKU3RLMVh1STZsbDZNOTB3TDRBcnc?oc=5",
+      "published": "2026-11-17T18:57:49Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "ALO.PA:6b2b0f6e5a2adb631b38eb2e2e8ba81d3c33bbf718bbcc65376dd4191d802de0",
       "ticker": "ALO.PA",
       "name": "Alstom",
@@ -209,7 +228,8 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "duplicateOf": "ALO.PA:feed1db1de84f30a4776b3a678ac3e83836328b984212bb9214dc5222f1e3576"
     },
     {
       "id": "ALO.PA:3c0c51b0aa79422ceb8415d14b9ca23e9e5ef49dbe8c7a0890b0c380d0a40d51",
@@ -857,6 +877,25 @@
       "category": "M&A",
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "INVE-B.ST:d56b73316da3677a8cea9c6ad358282d3632955d7270d1a2aa757f1a872b3156",
+      "ticker": "INVE-B.ST",
+      "name": "Investor AB",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Wall Street dips ahead of Nvidia's first earnings since scandal",
+      "english": null,
+      "publisher": "Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPU1NXeW11YUJzQkxoTjJoOFRWNlZZNmMzbFpuZUM4N1FpX0ZGRVh3Qnh3VjNuZEVSSHVxMFlzdDNQVmZTbkdwRW03RFJOdE5MOER4UFJQLUtyUDhRT2ZNaXhOaTA5YWlWRkZLcHZmcWZTaFpPQlVycE1URWlxWDJBbTBrSlJjQQ?oc=5",
+      "published": "2026-11-17T15:39:26Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "REACH.OL:7509e554fb9b4a99f745afb16316a310e84ad2eebceac9cff96c86d748e17a63",
@@ -1869,63 +1908,25 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SOBI.ST:43b23afe343e28a31f3b621b7ef2330313c38b6869bb30bdfe6d02bf952c27cd",
-      "ticker": "SOBI.ST",
-      "name": "Sobi",
-      "sector": "Pharma & medtech",
-      "type": "news",
-      "headline": "Ionis, Sobi granted EU label expansion for Tryngolza",
-      "english": null,
-      "publisher": "Seeking Alpha",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNkhBTWlJX0tWZW5oRmFFYWNaNE55UGticHE5RnU1YUwwWGk4cUVfOUx5Qm1BOHNpYy1QREVndW5RaDhsY21JcWpEQkNJbDJDVlpMdDdZTjRpZmZBRGdQcXBFQmNlUldfOHU1MXlLa1VMQ2ZnY3V2bFRORWRJUHpQeHhINk1jTGYzTjZDc2hQS2thN0F6NTZ1SVNScFh5VTNwWGc?oc=5",
-      "published": "2026-11-17T11:58:57Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "CAF.MC:42ce7688b3e90a0c294b28f4c022ae03618066c36db0d6accc26e622d3ddaaeb",
-      "ticker": "CAF.MC",
-      "name": "CAF",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "CAF and FeedConstruct Sign Landmark Partnership for Global Distribution of African Football",
-      "english": null,
-      "publisher": "Sportscape Magazine",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUllYRmRSUjlvTGVILWl1VjN3R2dPZlAxRHItb0tCS25CUk9aSFU4MkZKX00zYkNQTEtFNkU5NEhNZk9SZkxUR1NWSWRhRnhjUGdpeXFTRm9pQlEyTFliQmx1YWREWXRVZGl3bjFDTnFoeWMxcEp5azEtcTBfaU9aSWk2UFFtcndzekpYaTRIS2djd1BaT3ZISVVOYXVwN0ZTelRzTF9qa3pNdGFNN0RhY0FsNW5KQQ?oc=5",
-      "published": "2026-11-17T11:57:43Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 800,
+  "totalStored": 803,
   "limit": 100,
   "quality": {
-    "total": 800,
+    "total": 803,
     "relevant": 549,
-    "review": 219,
-    "duplicates": 40,
+    "review": 221,
+    "duplicates": 41,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 109,
+      "Earnings / results": 111,
       "Dividends": 9,
       "M&A": 41,
       "Guidance": 23,
       "Contracts": 47,
       "Capital & ownership": 0,
       "Management": 37,
-      "General": 534
+      "General": 535
     }
   }
 }

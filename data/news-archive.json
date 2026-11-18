@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T00:36:24Z",
+  "generated": "2026-11-18T00:54:50Z",
   "items": [
     {
       "id": "ALO.PA:4dcbd2b070f63877cd76883a46dfbbf24040b5a0c182d1bb73ef18cbf3141f35",
@@ -193,6 +193,25 @@
       "priority": "normal"
     },
     {
+      "id": "ALO.PA:feed1db1de84f30a4776b3a678ac3e83836328b984212bb9214dc5222f1e3576",
+      "ticker": "ALO.PA",
+      "name": "Alstom",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Earnings call transcript: Alstom H1 2026/2027 results show deep losses, steady orders",
+      "english": null,
+      "publisher": "Investing.com Canada",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdVlkZmlZZS1yMVVyVUEzNkVaNW5QRU54b21QQVFtM1ZRVF93MnhwQWxlSkY2dmNTRmdnSFp5WVEtTzNCVkFvWGFLbGR1QXFUQTlOVTVKTUZ5NXlnVnJjdVNYbVlCV0ZNS0hYeTUyYkNvc1FRNDIzd2k1cVpUVFVJam9Qb05VNmt2YTA1N2ZUVjhadXBiLXFOUEpCM3A2T0kxRXp3T2Z0ZkpJLURaamlXWlBjUXBKQ1I2a2pXdENtaFAxSktnWGZKU3RLMVh1STZsbDZNOTB3TDRBcnc?oc=5",
+      "published": "2026-11-17T18:57:49Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "ALO.PA:6b2b0f6e5a2adb631b38eb2e2e8ba81d3c33bbf718bbcc65376dd4191d802de0",
       "ticker": "ALO.PA",
       "name": "Alstom",
@@ -209,7 +228,8 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "duplicateOf": "ALO.PA:feed1db1de84f30a4776b3a678ac3e83836328b984212bb9214dc5222f1e3576"
     },
     {
       "id": "ALO.PA:3c0c51b0aa79422ceb8415d14b9ca23e9e5ef49dbe8c7a0890b0c380d0a40d51",
@@ -857,6 +877,25 @@
       "category": "M&A",
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "INVE-B.ST:d56b73316da3677a8cea9c6ad358282d3632955d7270d1a2aa757f1a872b3156",
+      "ticker": "INVE-B.ST",
+      "name": "Investor AB",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Wall Street dips ahead of Nvidia's first earnings since scandal",
+      "english": null,
+      "publisher": "Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPU1NXeW11YUJzQkxoTjJoOFRWNlZZNmMzbFpuZUM4N1FpX0ZGRVh3Qnh3VjNuZEVSSHVxMFlzdDNQVmZTbkdwRW03RFJOdE5MOER4UFJQLUtyUDhRT2ZNaXhOaTA5YWlWRkZLcHZmcWZTaFpPQlVycE1URWlxWDJBbTBrSlJjQQ?oc=5",
+      "published": "2026-11-17T15:39:26Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "REACH.OL:7509e554fb9b4a99f745afb16316a310e84ad2eebceac9cff96c86d748e17a63",
@@ -2665,6 +2704,25 @@
       "regulatory": false,
       "match": "name_mentioned",
       "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "ASML.AS:6f64be88f33ac1e8fbf6e950e0127ed27c4b802889f3ff37b7ee982c49b48559",
+      "ticker": "ASML.AS",
+      "name": "ASML",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Chinese envoy says chip equipment export curbs threaten EU-China trade thaw",
+      "english": null,
+      "publisher": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRHhKT29qSUliWTg1SHhrT1JKUTJsYzVLSmZUalhkYkdEcXM0QzNzczQtVjI0dGF4cmdaOTVaaEdBbnBQR29lbGxZTUxCNlAzWnlta3V1TVFTTVFwYy11b1Q5eVRtYXpCMHZLZ0ZHRFRWWDc5ZVpOYmw1WDlkVUJFOHZ0bm1fVzh4NUdMWUlaeFd1VmIwa01LVUJOMVNtandGVUhyQXJyWXFtLWhOaC1PbndtTHlHYmJ0T1VaY1p1Y3c?oc=5",
+      "published": "2026-11-17T09:29:43Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
