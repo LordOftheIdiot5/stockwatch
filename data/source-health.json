@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-18T23:25:42Z",
-  "latestScan": "2026-11-18T23:24:40+00:00",
-  "scanAgeHours": 0.02,
-  "contextAgeHours": 0.02,
+  "generated": "2026-11-18T23:37:46Z",
+  "latestScan": "2026-11-18T23:37:09+00:00",
+  "scanAgeHours": 0.01,
+  "contextAgeHours": 0.01,
   "priceFreshness": {
     "comparisonDate": "2026-11-18",
     "equities": {
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 134,
+  "storedStories": 133,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,53 +115,53 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 73.9,
+      "avgLatencyMs": 70.0,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 673.5,
+      "avgLatencyMs": 601.5,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1123.2,
+      "avgLatencyMs": 1640.9,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
       "succeeded": 594,
       "failed": 0,
-      "avgLatencyMs": 304.8,
+      "avgLatencyMs": 313.0,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1672.5,
+      "avgLatencyMs": 3102.9,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1402,
-    "relevant": 1089,
-    "review": 270,
+    "total": 1405,
+    "relevant": 1091,
+    "review": 271,
     "duplicates": 52,
     "issuerLinked": 410,
     "categories": {
       "Earnings / results": 228,
       "Dividends": 10,
-      "M&A": 51,
+      "M&A": 52,
       "Guidance": 30,
       "Contracts": 80,
       "Capital & ownership": 0,
       "Management": 42,
-      "General": 961
+      "General": 963
     }
   },
   "secFilings": {
