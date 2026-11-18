@@ -86,6 +86,7 @@ def collect_news(snapshot):
                         type=story['kind'],headline=title,english=story.get('english'),
                         publisher=story.get('publisher') or '',url=link,published=date,
                         lang=story.get('lang') or '',regulatory=story.get('regulatory') is True,
+                        sourceIssuer=story.get('sourceIssuer'),sourceFeed=story.get('sourceFeed'),
                         match=confidence(ticker,name,story)))
     return out
 
@@ -98,7 +99,8 @@ def merge_news(previous, found, now):
         if x and x>=cutoff and x<=now+timedelta(days=1):
             # An old record can be refined by a better source match later.
             prior=merged.get(item['id'])
-            if not prior or (prior.get('match') == 'unverified' and item['match'] != 'unverified'):
+            rank={'unverified':0,'name_mentioned':1,'issuer_code':2}
+            if not prior or rank.get(item.get('match'),0)>rank.get(prior.get('match'),0):
                 merged[item['id']]=item
     return sorted(merged.values(),key=lambda x:x['published'],reverse=True)[:MAX_NEWS]
 

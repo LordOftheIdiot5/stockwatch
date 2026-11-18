@@ -334,6 +334,25 @@ def spark(bars: list[dict], points: int = 30) -> list[float]:
     return [round(b["close"], 4) for b in bars[-points:] if b["close"]]
 
 
+def filing_entry(item, watchlist):
+    """Use a source-provided Oslo issuer code; never confuse shared symbols across venues."""
+    explicit = str(item.get("issuerCode") or "").strip().upper()
+    primary = item.get("source") == "newsweb"
+    candidates = [e for e in watchlist if not primary or e["ticker"].endswith(".OL")]
+    if primary and explicit:
+        matches = [e for e in candidates if e["ticker"].split(".")[0].upper() == explicit]
+        return (matches[0], explicit) if len(matches)==1 else (None,None)
+    for code in (str(item.get("issuer") or "").strip().upper(), ticker_from_title(item.get("title") or "")):
+        if not code:
+            continue
+        matches = [e for e in candidates if e["ticker"].split(".")[0].upper() == code]
+        if len(matches) == 1:
+            return matches[0], None
+        if len(matches) > 1:
+            return None, None
+    return None, None
+
+
 def main() -> int:
     config = json.loads((ROOT / "watchlist.json").read_text(encoding="utf-8"))
     watchlist = config["tickers"]
@@ -433,19 +452,13 @@ def main() -> int:
         seen.add(key)
 
     # --- gather regulated disclosures ------------------------------------
-    symbols = {e["ticker"].split(".")[0].upper(): e for e in watchlist}
     told: dict[str, list[str]] = {}
     filings = []
     for item in sources.newsweb(120) + sources.mfn(80):
-        symbol = (item.get("issuer") or "").upper() or ticker_from_title(item["title"])
-        if not symbol or symbol not in symbols:
+        entry, issuer_code = filing_entry(item, watchlist)
+        if not entry or is_routine(item["title"]) or entry["ticker"] not in by_ticker:
             continue
-        if is_routine(item["title"]):
-            continue
-        entry = symbols[symbol]
-        if entry["ticker"] not in by_ticker:
-            continue
-        filings.append((entry, item))
+        filings.append((entry, {**item, "verifiedIssuerCode": issuer_code}))
 
     # --- gather open web, in every language -------------------------------
     # The reading order moves with the hour. Translation is rationed, whoever
@@ -534,7 +547,9 @@ def main() -> int:
             "lang": lang,
             "regulatory": item.get("regulatory"),
             "url": item["url"], "published": item.get("published"),
-            "publisher": "Regulated filing",
+            "publisher": "Oslo NewsWeb" if item["source"] == "newsweb" else "MFN",
+            "sourceIssuer": item.get("verifiedIssuerCode"),
+            "sourceFeed": item["source"],
             "material": 3,
             "fresh": key not in seen,
         }
