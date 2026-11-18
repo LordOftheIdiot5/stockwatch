@@ -33,7 +33,11 @@ try:
             assert str(expected)+" with changes" in page.locator("#workspaceHeatCount").inner_text()
             page.goto(base+"stocks.html")
             page.locator("#stocksRows tr").first.wait_for()
-            page.locator("[data-stk-view=heat]").click()
+            button=page.locator("[data-stk-view=heat]")
+            assert button.count()==1
+            # Test the real control, not a forced click or DOM event.
+            button.click(timeout=5000)
+            assert button.get_attribute("aria-pressed")=="true"
             assert page.locator("#stkHeat").locator(selector).count()==expected
             page.locator("#stkSessionQuality").select_option("comparable")
             assert page.locator("#stkHeat").locator(selector).count()==0
