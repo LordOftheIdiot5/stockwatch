@@ -102,7 +102,8 @@ def annotate(items):
     chosen = {}
     for idx in order:
         x = out[idx]
-        finger = headline_fingerprint(x)
+        # Distinct SEC accession numbers are distinct filings, even when form titles match.
+        finger = ('sec:'+str(x['sourceAccession'])) if x.get('sourceFeed')=='sec_edgar' and x.get('sourceAccession') else headline_fingerprint(x)
         if not finger:
             continue
         key = (x.get('ticker'), finger)

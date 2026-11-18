@@ -38,3 +38,9 @@ class SecTests(unittest.TestCase):
             self.assertEqual(b["items"],a["items"])
             self.assertEqual(b["issuers"][SEED["cik"]]["status"],"error")
             self.assertEqual(b["issuers"][SEED["cik"]]["lastSuccess"],a["issuers"][SEED["cik"]]["lastSuccess"])
+
+    def test_distinct_filings_are_not_duplicate_generic_form_titles(self):
+        from news_quality import annotate
+        row=s.parse(SEED,sample(),NOW)[0]
+        second={**row,"id":"sec:second","sourceAccession":"0001045810-26-000004"}
+        self.assertTrue(all(not x.get("duplicateOf") for x in annotate([row,second])))
