@@ -102,6 +102,7 @@ def newsweb(count: int = 100) -> list[dict]:
                 "id": str(message.get("messageId")),
                 "title": (message.get("title") or "").strip(),
                 "issuer": (message.get("issuerSign") or message.get("issuerName") or "").strip(),
+                "issuerCode": (message.get("issuerSign") or "").strip(),
                 "published": message.get("publishedTime"),
                 "regulatory": any("NON-REGULATORY" not in l for l in labels) if labels else False,
                 "categories": labels,

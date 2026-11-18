@@ -28,3 +28,15 @@ class DirectoryTests(unittest.TestCase):
             self.assertEqual(len(result["records"]),1)
             self.assertEqual(result["venues"]["XOSL"]["status"],"error")
 if __name__=="__main__":unittest.main()
+
+class EuropeanDirectoryTests(unittest.TestCase):
+    def test_expansion_is_reference_only_and_bounded(self):
+        self.assertEqual(d.normalize(DirectoryTests().row(),"XETR")["quoteStatus"],"not_connected")
+        calls=[]
+        def fetch(p,k):
+            calls.append(p)
+            return {"data":[DirectoryTests().row()],"next":str(len(calls))}
+        rows,complete=d.collect("XLON","fake",fetch,lambda _:None)
+        self.assertEqual(len(calls),8)
+        self.assertFalse(complete)
+        self.assertEqual(len(rows),1)

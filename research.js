@@ -14,19 +14,20 @@ function fallbackNews(){const c=state.signals?.companies||[];const out=[];for(co
 function showError(msg){$('app').innerHTML=`<div class="notice">${esc(msg)}</div>`}
 function archiveNews(){return (state.archive?.items?.length?state.archive.items:fallbackNews()).sort((a,b)=>new Date(b.published)-new Date(a.published))}
 async function showNews(){
- const all=archiveNews().slice(0,100);
+ let all=archiveNews().slice(0,100);
  const p=new URLSearchParams(location.search),initial=p.get('q')||'';
  const sectors=[...new Set(all.map(x=>x.sector).filter(Boolean))].sort();
  const dates=arr=>[...new Set(arr.map(x=>{const d=new Date(x.published);return Number.isFinite(d.getTime())?d.toISOString().slice(0,10):''}).filter(Boolean))].sort().reverse();
  const days=dates(all);
  $('app').innerHTML=`${!state.archive?.items?.length?'<div class="notice">No saved recent-news index yet. Showing stories from the current market scan.</div>':''}
+ <div class="toolbar"><button type="button" id="newsScope" class="sw-soft-btn" aria-pressed="false">Search full local archive</button><span id="newsScopeStatus" role="status" class="muted">Latest 100 updates</span></div>
  <div class="toolbar"><input id="q" type="search" aria-label="Search news" placeholder="Search company, headline, ticker…" value="${esc(initial)}"><select id="sector">${selectOptions(sectors,'All industries')}</select><select id="event"><option value="all">All updates</option><option value="news">News</option><option value="disclosure">Regulatory & filings</option></select><select id="newsDay"><option value="all">All available days</option>${days.map(d=>`<option value="${esc(d)}">${date(d+'T00:00:00Z')}</option>`).join('')}</select><select id="relevance" aria-label="Issuer association confidence"><option value="relevant">Relevant news</option><option value="all">All including unverified</option><option value="strong">Issuer-confirmed filings</option><option value="mentioned">Company mentioned</option><option value="review">Needs review</option></select><select id="topic" aria-label="News category"><option value="all">All topics</option><option value="Earnings / results">Earnings</option><option value="Dividends">Dividends</option><option value="M&A">M&amp;A</option><option value="Guidance">Guidance</option><option value="Contracts">Contracts</option><option value="Capital & ownership">Capital &amp; ownership</option><option value="Management">Management</option><option value="General">Other</option></select></div>
  <div class="panel"><div class="panelhead"><h2>Search persistent news database</h2><span class="count">Cloudflare D1 · source-linked metadata</span></div><div class="toolbar"><input type="search" id="d1Ticker" placeholder="Exact symbol, e.g. NOVO-B.CO" aria-label="Search archived ticker"><button type="button" id="d1Search" class="sw-soft-btn">Find ticker updates</button></div><div id="d1Results" class="news-groups"><div class="note">Search the permanent cloud archive by exact ticker. No article content is reproduced.</div></div></div>
- <div class="panel"><div class="panelhead"><h2>Latest 100 updates</h2><span class="count" id="newsCount"></span></div><div id="newsGroups" class="news-groups"></div><div class="note">Up to 100 latest updates, grouped by UTC day. Relevant news is shown by default; switch to All to inspect uncertain matches. Source links and every raw archived record are preserved.</div></div>
+ <div class="panel"><div class="panelhead"><h2 id="newsHeading">Latest 100 updates</h2><span class="count" id="newsCount"></span></div><div id="newsGroups" class="news-groups"></div><div class="note">Browse the latest 100 or load the full local archive using the control above. Grouped by UTC day. Relevant news is shown by default; switch to All to inspect uncertain matches. Source links and every raw archived record are preserved.</div></div>
 <div class="panel"><div class="panelhead"><h2>Historical news archive</h2><span class="count" id="archiveCount">Checking saved months…</span></div><div class="toolbar"><select id="archiveMonth" aria-label="Archived month"><option value="">Choose a month</option></select><button type="button" id="loadArchive" class="sw-soft-btn">Load month</button></div><div id="archivedResults" class="news-groups"><div class="note">Search older articles by selecting a month. Records are stored as versioned monthly snapshots; use the separate cloud database search for exact tickers.</div></div></div>`;
  const safeDate=x=>{const d=new Date(x);return Number.isFinite(d.getTime())?d.toISOString().slice(0,10):'unknown'};
  const pages=new Map();
- const renderRows=(items,node,max=100,independent=false)=>{
+ const renderRows=(items,node,max=Infinity,independent=false)=>{
   const query=$('q').value.trim().toLowerCase(),sec=$('sector').value,typ=$('event').value,day=$('newsDay').value,rel=$('relevance').value,topic=$('topic').value;
   const level=x=>x.relevance||(x.match==='issuer_code'?'strong':x.match==='name_mentioned'?'mentioned':'review');
   const filtered=items.filter(x=>safeDate(x.published)!=='unknown').filter(x=>independent||((sec==='all'||x.sector===sec)&&(typ==='all'||x.type===typ)&&(day==='all'||safeDate(x.published)===day)&&(topic==='all'||x.category===topic)&&(rel==='all'||(rel==='relevant'?level(x)!=='review'&&!x.duplicateOf:level(x)===rel))&&(!query||[x.ticker,x.name,x.headline,x.english,x.publisher].join(' ').toLowerCase().includes(query)))).slice(0,max);
@@ -45,7 +46,21 @@ async function showNews(){
  }catch{$('d1Results').innerHTML='<div class="notice">Cloud archive search unavailable. Local monthly archives still work.</div>'}
  });
  let oldItems=[];
- const render=()=>{$('newsCount').textContent=`${renderRows(all,'newsGroups')} matching · ${all.length} latest`;if(oldItems.length)renderRows(oldItems,'archivedResults',500)};
+ const render=()=>{$('newsCount').textContent=`${renderRows(all,'newsGroups')} matching · ${all.length} available`;if(oldItems.length)renderRows(oldItems,'archivedResults')};
+ let fullArchive=false;
+ $('newsScope').addEventListener('click',async()=>{
+  const button=$('newsScope'),status=$('newsScopeStatus');button.disabled=true;
+  try{
+   if(fullArchive){all=archiveNews().slice(0,100);fullArchive=false}
+   else{const data=await fetchJson('data/news-archive.json');if(!Array.isArray(data.items)||!data.items.length)throw Error('Archive unavailable');all=data.items.slice().sort((a,b)=>new Date(b.published)-new Date(a.published));fullArchive=true}
+   $('newsHeading').textContent=fullArchive?'Search all locally archived news':'Latest 100 updates';
+   status.textContent=all.length+' source-linked records';button.textContent=fullArchive?'Return to latest 100':'Search full local archive';button.setAttribute('aria-pressed',String(fullArchive));
+   $('sector').innerHTML=selectOptions([...new Set(all.map(x=>x.sector).filter(Boolean))].sort(),'All industries');
+   $('newsDay').innerHTML='<option value="all">All available days</option>'+dates(all).map(d=>'<option value="'+esc(d)+'">'+date(d+'T00:00:00Z')+'</option>').join('');
+   pages.set('newsGroups',1);render();
+  }catch{status.textContent='Local archive temporarily unavailable; current results retained.'}
+  finally{button.disabled=false}
+ });
  for(const id of ['q','sector','event','newsDay','relevance','topic'])$(id).addEventListener(id==='q'?'input':'change',()=>{pages.set('newsGroups',1);pages.set('archivedResults',1);render()});
  render();
  let index;

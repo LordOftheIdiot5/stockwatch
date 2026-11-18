@@ -6,7 +6,9 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT="data/instrument-directory.json"
 SOURCE="https://www.openfigi.com/api/documentation"
 URL="https://api.openfigi.com/v3/filter"
-VENUES={"XOSL":"Oslo","XSTO":"Stockholm","XCSE":"Copenhagen","XHEL":"Helsinki"}
+VENUES={"XOSL":"Oslo","XSTO":"Stockholm","XCSE":"Copenhagen","XHEL":"Helsinki",
+        "XETR":"XETRA","XPAR":"Paris","XAMS":"Amsterdam","XLON":"London"}
+EXPANSION_VENUES={"XETR","XPAR","XAMS","XLON"}
 MAX_PAGES=15
 def stamp():
     return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00","Z")
@@ -43,7 +45,7 @@ def collect(mic,key,fetch=request,pause=time.sleep):
     token=None
     seen=set()
     rows={}
-    for page in range(MAX_PAGES):
+    for page in range(8 if mic in EXPANSION_VENUES else MAX_PAGES):
         payload={"micCode":mic,"marketSecDes":"Equity","securityType":"Common Stock"}
         if token: payload["start"]=token
         data=fetch(payload,key)
@@ -84,7 +86,7 @@ def build(root=ROOT,fetch=request,pause=time.sleep):
     target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     path=root/"data/dataset-catalog.json"
     if path.exists():
-        catalog=json.loads(path.read_text());catalog["datasets"]=[x for x in catalog.get("datasets",[]) if x.get("path")!=OUT]+[{"name":"Nordic common-stock instrument directory","path":OUT,"records":len(records),"license":"OpenFIGI open symbology and associated metadata; no quote rights implied"}];path.write_text(json.dumps(catalog,indent=2,ensure_ascii=False)+"\n")
+        catalog=json.loads(path.read_text());catalog["datasets"]=[x for x in catalog.get("datasets",[]) if x.get("path")!=OUT]+[{"name":"European common-stock instrument directory","path":OUT,"records":len(records),"license":"OpenFIGI open symbology and associated metadata; no quote rights implied"}];path.write_text(json.dumps(catalog,indent=2,ensure_ascii=False)+"\n")
     print("OpenFIGI directory:",len(records),"venue reference records;",{m:v["status"] for m,v in status.items()})
     return result
 if __name__=="__main__": build()

@@ -95,3 +95,19 @@ class HistoryValidationTests(unittest.TestCase):
                             {'date':'unparseable','close':4,'volume':5}])
         self.assertEqual([b['date'] for b in bars],['2026-11-11','2026-11-12'])
         self.assertEqual(bars[0]['close'],18)
+
+class FilingProvenanceTests(unittest.TestCase):
+    def test_source_code_survives_archive_and_upgrades_existing_match(self):
+        s=story("Quarterly update",ticker="CMBTO.OL")
+        s.update(sourceIssuer="CMBTO",sourceFeed="newsweb")
+        snapshot={"generated":NOW.isoformat(),"companies":[{"ticker":"CMBTO.OL","name":"CMB.TECH","stories":[s]}]}
+        row=collect_news(snapshot)[0]
+        self.assertEqual(row["match"],"issuer_code")
+        self.assertEqual(row["sourceIssuer"],"CMBTO")
+        self.assertEqual(merge_news([{**row,"match":"name_mentioned"}],[row],NOW)[0]["match"],"issuer_code")
+    def test_venue_safe_association(self):
+        from scan import filing_entry
+        rows=[{"ticker":"ABC.OL"},{"ticker":"ABC.ST"}]
+        self.assertEqual(filing_entry({"source":"newsweb","issuerCode":"ABC","title":"Update"},rows), (rows[0],"ABC"))
+        self.assertEqual(filing_entry({"source":"mfn","issuer":"ABC","title":"Update"},rows),(None,None))
+        self.assertEqual(filing_entry({"source":"newsweb","issuerCode":"UNKNOWN","title":"ABC: Update"},rows),(None,None))
