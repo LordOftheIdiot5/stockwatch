@@ -1,6 +1,6 @@
 """Keep exact-identity dated observations during temporary source failures."""
 import json,math
-from datetime import date
+from datetime import date,timedelta
 def load(path):
     try:
         v=json.loads(path.read_text(encoding="utf8"))
@@ -37,7 +37,7 @@ def company_row(entry,fresh,old,today,stamp,prior_stamp,seed=None):
         if not valid(x,today) or not valid_move(x) or x["date"] >= row["date"]:
             return False
         return all(x.get(k)==row.get(k) for k in ("ticker","name","currency","exchange","isin","mic"))
-    sources = [old, (old or {}).get("lastValidMovement"), seed]
+    sources = [old, (old or {}).get("lastValidMovement"), fresh, seed]
     # An old nested observation may not cross a listing identity change.
     options = [x for x in sources if candidate(x)]
     if options:
@@ -46,6 +46,35 @@ def company_row(entry,fresh,old,today,stamp,prior_stamp,seed=None):
         row["lastValidMovement"] = {k:x[k] for k in keys if k in x}
     else:
         row.pop("lastValidMovement",None)
+    return row
+
+def preserve_pair_moves(row, *sources):
+    """A newer retained pair price must not discard a valid earlier return."""
+    for side in ("a","b"):
+        daily, saved = side+"DailyMove", side+"SavedDailyMove"
+        def normalize(m):
+            if not isinstance(m,dict) or m.get("method")!="individual_daily_closes" or not dated(m.get("date")) or not dated(m.get("previousDate")) or not numeric(m.get("changePct")) or m["changePct"] < -100 or not numeric(m.get("close")) or m["close"]<=0 or m.get("ticker")!=row.get(side) or m.get("currency")!=row.get("currency"):
+                return None
+            d=date.fromisoformat(m["date"])
+            if d.weekday()>=5:return None
+            prev=d-timedelta(days=1)
+            while prev.weekday()>=5:prev-=timedelta(days=1)
+            if m["previousDate"]!=str(prev) or m["date"]>row["priceDate"]:return None
+            return m
+        def direct(p):
+            m=p.get(daily)
+            if not isinstance(m,dict) or m.get("date")!=p.get("priceDate"):return None
+            return normalize({**m,"ticker":p.get(side),"currency":p.get("currency"),"close":p.get(side+"Price")})
+        options=[]
+        for p in (row,*sources):
+            if not p or any(p.get(k)!=row.get(k) for k in ("a","b","currency")):continue
+            for m in (direct(p),normalize(p.get(saved))):
+                if m and (m["date"]<row["priceDate"] or m["close"]==row.get(side+"Price")):options.append(m)
+        row.pop(saved,None)
+        if direct(row):continue
+        if options:
+            m=max(options,key=lambda m:m["date"])
+            row[saved]={k:m[k] for k in ("date","previousDate","changePct","method","close","ticker","currency")}
     return row
 
 def context_rows(new,old,key,stamp,prior_stamp,today):
@@ -63,7 +92,8 @@ def context_rows(new,old,key,stamp,prior_stamp,today):
         if not valid(r):
             if p:out.append(retained(p))
             continue
-        if p and all(p[k]==r[k] for k in fields) and p[dkey]>r[dkey]:out.append(retained(p))
-        else:out.append({**r,"observationStatus":"reported","observedAt":stamp})
+        if p and all(p[k]==r[k] for k in fields) and p[dkey]>r[dkey]:chosen=retained(p)
+        else:chosen={**r,"observationStatus":"reported","observedAt":stamp}
+        out.append(preserve_pair_moves(chosen,p,r) if key=="shareClasses" else chosen)
     out.extend(retained(p) for p in prior.values())
     return out

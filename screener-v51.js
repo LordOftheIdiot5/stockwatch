@@ -39,7 +39,9 @@ function pairQuote(r,pairs){
  const matches=(pairs||[]).filter(p=>p.currency===currency&&sessionOK(p.priceDate)&&((p.a===ticker&&num(p.aPrice)&&p.aPrice>0)||(p.b===ticker&&num(p.bPrice)&&p.bPrice>0)));
  if(matches.length!==1)return null;
  const p=matches[0];
- const move=pairDailyMove(p.a===ticker?p.aDailyMove:p.bDailyMove,p.priceDate);
+ const side=p.a===ticker?'a':'b',saved=p[side+'SavedDailyMove'];
+ const fallback=saved&&saved.ticker===ticker&&saved.currency===currency&&sessionOK(saved.date)&&saved.date<=p.priceDate&&num(saved.close)&&saved.close>0&&(saved.date<p.priceDate||saved.close===p[side+'Price'])?pairDailyMove(saved,saved.date):null;
+ const move=pairDailyMove(p[side+'DailyMove'],p.priceDate)||(fallback?{...fallback,close:saved.close,saved:true}:null);
  return {close:p.a===ticker?p.aPrice:p.bPrice,date:p.priceDate,currency,source:'Existing A/B research observation',ticker,...(move?{dailyMove:move}:{}),...(p.observationStatus==='retained'?{retained:true}:{})};
 }
 function displayPrice(r){return hasPrice(r)?{close:r.close,date:r.date,currency:r.currency,source:'Scanner observation'}:r?.pairQuote||null}

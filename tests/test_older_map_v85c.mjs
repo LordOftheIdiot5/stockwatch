@@ -39,3 +39,10 @@ test('saved positive-volume move remains distinct from recent zero-volume price'
   assert.doesNotMatch(render(reportedMapRows([{...r,lastValidMovement:{...r.lastValidMovement,currency:'EUR'}}],day),day,true),/saved movement/);
  }
 });
+
+test('historical share-class movement keeps original price and date',()=>{
+ const r={ticker:'ref:XCSE:MAERSK A',referenceOnly:true,unavailable:true,sector:'Shipping',name:'Maersk',pairQuote:{close:101,currency:'DKK',date:day,dailyMove:{date:'2026-11-16',previousDate:'2026-11-13',changePct:2,method:'individual_daily_closes',saved:true,close:99}}};
+ for(const render of [coverageHeatmap,compactScreenerHeatmap]){
+   const h=render(reportedMapRows([r],day),day,true);assert.match(h,/2% · 2026-11-16/);assert.match(h,/99 DKK · A\/B daily move · saved/);assert.match(h,/101 DKK · latest price 2026-11-17/);
+ }
+});

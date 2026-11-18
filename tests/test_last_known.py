@@ -67,3 +67,16 @@ class LastKnown(unittest.TestCase):
         self.assertEqual(seeded(self.old)["lastValidMovement"]["changePct"],2)
         for bad in ({"currency":"SEK"},{"name":"Other"},{"ticker":"OTHER"},{"date":"2026-11-17"},{"volume":0},{"isin":"OTHER"}):
             self.assertNotIn("lastValidMovement",seeded({**self.old,**bad}))
+
+    def test_newer_pair_price_retains_independent_older_movement(self):
+        base=dict(a="A",b="B",currency="NOK",ratio=1.1,aPrice=11,bPrice=10,priceDate="2026-11-17")
+        move=dict(date="2026-11-16",previousDate="2026-11-13",changePct=2,method="individual_daily_closes")
+        earlier={**base,"priceDate":"2026-11-16","aPrice":10.5,"aDailyMove":move}
+        result=context_rows([earlier],[base],"shareClasses","new","old","2026-11-17")[0]
+        self.assertEqual(result["priceDate"],"2026-11-17")
+        self.assertEqual(result["aPrice"],11)
+        self.assertEqual(result["aSavedDailyMove"]["date"],"2026-11-16")
+        self.assertEqual(result["aSavedDailyMove"]["close"],10.5)
+        self.assertEqual(context_rows([], [result],"shareClasses","later","new","2026-11-17")[0]["aSavedDailyMove"],result["aSavedDailyMove"])
+        mismatch=context_rows([{**earlier,"currency":"SEK"}],[base],"shareClasses","new","old","2026-11-17")[0]
+        self.assertNotIn("aSavedDailyMove",mismatch)
