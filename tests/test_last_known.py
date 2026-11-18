@@ -47,3 +47,23 @@ class LastKnown(unittest.TestCase):
         self.assertEqual(r[0]["observationStatus"],"retained")
         self.assertEqual(r[0]["observedAt"],"old")
         self.assertEqual(context_rows([], [dict(ticker="BDRY",unit="USD",last=10)],"freight","new","old","2026-11-17"),[])
+
+    def test_older_valid_move_survives_new_zero_volume_without_mixing_prices(self):
+        fresh={**self.old,"date":"2026-11-17","close":13,"volume":0,"changePct":0}
+        r=self.row(fresh=fresh)
+        self.assertEqual(r["close"],13)
+        self.assertEqual(r["changePct"],0)
+        self.assertEqual(r["lastValidMovement"]["close"],12)
+        self.assertEqual(r["lastValidMovement"]["date"],"2026-11-16")
+        self.assertEqual(r["lastValidMovement"]["changePct"],2)
+        retained=self.row(old=r)
+        self.assertEqual(retained["lastValidMovement"],r["lastValidMovement"])
+        recovered=self.row(fresh={**fresh,"volume":100,"changePct":3},old=r)
+        self.assertNotIn("lastValidMovement",recovered)
+    def test_seed_requires_exact_identity_and_older_date(self):
+        fresh={**self.old,"date":"2026-11-17","close":13,"volume":0,"changePct":0}
+        def seeded(seed):
+            return company_row(self.entry,fresh,None,"2026-11-17","new","old",seed)
+        self.assertEqual(seeded(self.old)["lastValidMovement"]["changePct"],2)
+        for bad in ({"currency":"SEK"},{"name":"Other"},{"ticker":"OTHER"},{"date":"2026-11-17"},{"volume":0},{"isin":"OTHER"}):
+            self.assertNotIn("lastValidMovement",seeded({**self.old,**bad}))

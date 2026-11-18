@@ -29,3 +29,13 @@ test('individual A/B return renders in both display maps but never strict counts
   assert.doesNotMatch(render(rows,'2026-11-16',true),/1.25%/);
  }
 });
+
+test('saved positive-volume move remains distinct from recent zero-volume price',()=>{
+ const r={ticker:'TEST',name:'Test',currency:'NOK',sector:'Other',date:day,close:22,volume:0,changePct:0,lastValidMovement:{ticker:'TEST',name:'Test',currency:'NOK',date:'2026-11-16',close:21,volume:100,changePct:5}};
+ const rows=reportedMapRows([r],day);
+ for(const render of [coverageHeatmap,compactScreenerHeatmap]){
+  const html=render(rows,day,true);assert.match(html,/5% · 2026-11-16/);assert.match(html,/21 NOK · saved movement/);assert.match(html,/22 NOK · latest price 2026-11-17/);assert.doesNotMatch(html,/sw-heat-cell positive/);
+  assert.doesNotMatch(render(rows,day,false),/saved movement/);
+  assert.doesNotMatch(render(reportedMapRows([{...r,lastValidMovement:{...r.lastValidMovement,currency:'EUR'}}],day),day,true),/saved movement/);
+ }
+});
