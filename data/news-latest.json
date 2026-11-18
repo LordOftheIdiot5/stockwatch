@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T23:23:55Z",
+  "generated": "2026-11-18T23:25:42Z",
   "items": [
     {
       "id": "ALO.PA:2f123bf41a9b497edc04ad862716191c5c0152e3d320843633f76d88f2fbda29",
@@ -8,7 +8,7 @@
       "sector": "Industry & defence",
       "type": "news",
       "headline": "Alstom : perte nette de 954 millions d’euros au semestre, les contrats allemands en cause",
-      "english": "Alstom: Net loss of €954 million for the half-year, German contracts in question",
+      "english": "Alstom: Net loss of €954 million for the half-year, with German contracts at issue",
       "publisher": "Revue économique de France",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNU0xmaXFuM190dk5YTElMc19BVThQVHZQTW01TXhfYU8xR2NzendIRHFpaWJhdE1heHhlbjJ1SWtlckdaVUJiWTNmMVNRWFRrN0lidzFmSW9rRUxiV1ZZUjIwWGRxUHZpOV9DNDFXTGtFMUFxV3JVTmxTVlRQVEJJOThLN0NNdFM1UFdJeWRIRjJfZUFUVXl0M0JMb2FyaHJ3RGRFQVg3VlA3UQ?oc=5",
       "published": "2026-11-18T23:17:32Z",
@@ -228,6 +228,27 @@
       "lang": "en",
       "regulatory": false,
       "match": "unverified",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "AIR.PA:af191539cd18f92222abf52f1a1ab93162a72d492bdc1f7d5cb9112d30659cb3",
+      "ticker": "AIR.PA",
+      "name": "Airbus",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Macron chez Airbus lundi à Toulouse",
+      "english": null,
+      "publisher": "France 24",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY3o0cGhaNjgxaks3OVV5VmdiSXVrcUMwUVlGOC0ta2laSThBd3lpeHQyNnV5WkQycmRsbDloWVZ3R1VyZGd4d1hBVFk1ZE1tejhEM3Z1OFRXX2tfZUI5UjlESU9fT0V2S1haektlQUY2aFJibXRtaVVNOXBOem9mZTF5YTJjZ3ZqaVBweUNvaU1pZTZHNTRmZQ?oc=5",
+      "published": "2026-11-18T19:23:29Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
@@ -1892,44 +1913,25 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SIE.DE:c788243f122fda0b04687b5ac8d739403ebfd0553c41c7df0facd9e7abff7375",
-      "ticker": "SIE.DE",
-      "name": "Siemens",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Siemens to acquire Breker for expanded SoC verification",
-      "english": null,
-      "publisher": "Engineering.com",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUnU3UXVZYnpGcnFBYlBfckltZjF6UzhCY2ZCOEJGbnFNMndxZmtGZDhWUThha2QwUVR4ZVJtT3FGc0V5cnNLWDdPREFXMEd6LU8tY29UYnE4dWJVb20zZmtoZk5mdVk2QkRRMVJkTEpJVFR1X1FOUEs4MTY5NzgzNG9JaUxNa1RrWTJMQw?oc=5",
-      "published": "2026-11-18T09:43:17Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "M&A",
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 994,
+  "totalStored": 1402,
   "limit": 100,
   "quality": {
-    "total": 994,
-    "relevant": 681,
+    "total": 1402,
+    "relevant": 1089,
     "review": 270,
     "duplicates": 52,
-    "issuerLinked": 2,
+    "issuerLinked": 410,
     "categories": {
-      "Earnings / results": 128,
+      "Earnings / results": 228,
       "Dividends": 10,
       "M&A": 51,
       "Guidance": 30,
       "Contracts": 80,
       "Capital & ownership": 0,
       "Management": 42,
-      "General": 653
+      "General": 961
     }
   }
 }
