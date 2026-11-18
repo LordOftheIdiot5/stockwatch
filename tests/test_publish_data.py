@@ -76,5 +76,21 @@ class PublishDataTests(unittest.TestCase):
         self.assertEqual({x["path"] for x in result["datasets"]},
                          {"data/economic-feeds.json","data/shipping-open.json"})
 
+class SignalPublicationTests(unittest.TestCase):
+    def test_complete_failure_keeps_dated_changes_but_never_redates(self):
+        row={"ticker":"AAA","name":"Example","currency":"NOK","date":"2026-11-17","close":12,"volume":100,"changePct":3,"priceStatus":"reported"}
+        old={"generated":"2026-11-17T20:00:00Z","companies":[row]}
+        new={"generated":"2026-11-18T00:00:00Z","companies":[{**row,"priceStatus":"retained"}]}
+        wl={"tickers":[{"ticker":"AAA"}]}
+        encode=lambda x:json.dumps(x).encode()
+        self.assertEqual(publish_data.guarded_signals(encode(new),encode(old),encode(wl)),encode(new))
+        for bad in ([],[{**row,"volume":0}],[{**row,"close":None}],[{**row,"date":"2026-11-16"}],[row,row]):
+            with self.assertRaises(ValueError):
+                publish_data.guarded_signals(encode({**new,"companies":bad}),encode(old),encode(wl))
+        with self.assertRaises(ValueError):
+            publish_data.guarded_signals(encode({**new,"generated":"2026-11-16T20:00:00Z"}),encode(old),encode(wl))
+        with self.assertRaises(ValueError):
+            publish_data.guarded_signals(b"corrupt",encode(old),encode(wl))
+
 if __name__=="__main__":
     unittest.main()
