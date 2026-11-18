@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-17T23:28:18.764692+00:00",
-  "newsRecordsScanned": 791,
+  "generated": "2026-11-18T00:11:33.140532+00:00",
+  "newsRecordsScanned": 797,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -1072,6 +1072,20 @@
       "relatedRelationshipIds": [
         "siemens-breker-acquisition"
       ]
+    },
+    {
+      "id": "74f4c7d70c7469a4400986c59821d487b7c573e91e6e6c01917e6f9ac5691e84",
+      "newsId": "DOFG.OL:49524294c36566234336d652d778b51cbb5250ea234854c6440cc8d55d64bba2",
+      "entityIds": [
+        "dof"
+      ],
+      "issuerTicker": "DOFG.OL",
+      "candidateType": "headline_event",
+      "published": "2026-11-17T14:17:31Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWUlaTkFtaC1tbnBiRTZpWkROUkhic2Q5blkwSnVyLVdfZGRkMVpkdVhzdHhlNTQwaGVxZUdfeFRhQnZQMkFOS25INWVLUjRsNGtaS1dOOUgyWURIckNfcW9KWEJ2MkhMTHZTMmRMYmxZN3pRbFhDb3dZcGdZaVZTbTRDMzVqTm1vcWhvekhMTy10OXZ4aEdpeXQ3ZEl1T3k0OXNPeWk3cjg?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
     },
     {
       "id": "c692310ac234616ca0194338b0d533449ba9edaaf84c99a3d249f5d06b2106ab",

@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-17T23:28:18Z",
-  "latestScan": "2026-11-17T23:27:35+00:00",
+  "generated": "2026-11-18T00:11:32Z",
+  "latestScan": "2026-11-18T00:10:51+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "priceFreshness": {
     "comparisonDate": "2026-11-17",
     "equities": {
-      "comparable": 2,
+      "comparable": 1,
       "older": 4,
       "no_volume": 3,
-      "unconfirmed": 129,
+      "unconfirmed": 130,
       "unavailable": 0
     },
     "total": 138,
@@ -101,13 +101,13 @@
       "missing": 0
     }
   ],
-  "storedStories": 127,
+  "storedStories": 117,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "requests_ok",
+    "Google News": "request_errors",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -115,53 +115,55 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 70.0,
+      "avgLatencyMs": 76.9,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 845.0,
+      "avgLatencyMs": 332.4,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1731.6,
+      "avgLatencyMs": 1142.7,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 594,
-      "failed": 0,
-      "avgLatencyMs": 338.7,
-      "errorTypes": {}
+      "succeeded": 549,
+      "failed": 45,
+      "avgLatencyMs": 342.6,
+      "errorTypes": {
+        "HTTPError": 45
+      }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2778.5,
+      "avgLatencyMs": 1321.3,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 791,
-    "relevant": 540,
+    "total": 797,
+    "relevant": 546,
     "review": 219,
     "duplicates": 40,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 107,
+      "Earnings / results": 108,
       "Dividends": 9,
-      "M&A": 39,
+      "M&A": 41,
       "Guidance": 23,
-      "Contracts": 46,
+      "Contracts": 47,
       "Capital & ownership": 0,
-      "Management": 36,
-      "General": 531
+      "Management": 37,
+      "General": 532
     }
   },
   "freightRoutes": {
