@@ -102,6 +102,16 @@ def capture(base, out, selected, devices, chromium_path=None):
                         filename=f"{name}-{device}-{suffix}.png"
                         page.screenshot(path=str(out/filename),animations="disabled",timeout=12000)
                         row["screenshots"].append(filename)
+                    if name=="overview" and page.locator("#overviewEconomy").count():
+                        try:
+                            page.locator("#overviewEconomy > summary").click(timeout=5000)
+                            page.locator("#overviewMacroPlot svg").wait_for(timeout=12000)
+                            page.locator("#overviewMacroPlot").scroll_into_view_if_needed()
+                            filename=f"{name}-{device}-macro-lens.png"
+                            page.screenshot(path=str(out/filename),animations="disabled",timeout=12000)
+                            row["screenshots"].append(filename)
+                        except Exception as error:
+                            row["interactionWarning"]=str(error)[:2000]
                     if name=="stocks":
                         page.evaluate("window.scrollTo(0,0)")
                         try:

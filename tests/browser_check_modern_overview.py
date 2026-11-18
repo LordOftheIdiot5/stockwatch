@@ -13,16 +13,31 @@ def main():
      page.add_init_script(f"localStorage.setItem('stockwatch-theme','{theme}')")
      errors=[];page.on("pageerror",lambda e:errors.append(str(e)))
      page.goto(f"http://127.0.0.1:{server.server_port}/index.html")
-     page.locator("#overviewMacroSeries").wait_for(timeout=25000)
+     page.locator("#workspaceHeatmap .sw-heat-cell").first.wait_for(timeout=25000)
      assert "Market overview" in page.locator(".sw-overview-head").inner_text()
-     assert page.locator(".sw-ws-pulse-grid").bounding_box()["y"] < page.locator(".sw-overview-workbench").bounding_box()["y"]
-     assert page.locator(".sw-attention-panel").bounding_box()["y"] < page.locator(".sw-overview-workbench").bounding_box()["y"]
+     assert page.locator(".sw-ws-heatmap").bounding_box()["y"] < page.locator("#overviewEconomy").bounding_box()["y"]
+     assert page.locator("#overviewEconomy").get_attribute("open") is None
+     assert page.locator("#overviewMacroSeries").count()==0
+     page.locator("#overviewEconomy > summary").click()
+     page.locator("#overviewMacroSeries").wait_for(timeout=25000)
      assert page.locator("#overviewMacroPlot svg").count()==1
      assert page.locator(".sw-economic-card").count()>=6
      assert page.locator(".sw-overview-status").count()==1
      page.locator("#overviewMacroSeries").select_option("fred:DGS10")
      page.locator("#overviewMacroRange").select_option("365")
      assert "percent" in page.locator("#overviewMacroPlot").inner_text().lower()
+     page.locator("#overviewMacroMode").select_option("delta")
+     chart=page.locator("#overviewMacroPlot svg")
+     chart.focus()
+     chart.press("Home")
+     assert page.locator("#overviewLensValue").inner_text()=="0"
+     first=page.locator("#overviewLensDate").inner_text()
+     chart.press("ArrowRight")
+     assert page.locator("#overviewLensDate").inner_text()!=first
+     chart.press("End")
+     assert "Observed:" in page.locator("#overviewLensDetail").inner_text()
+     page.locator("#overviewMacroMode").select_option("absolute")
+     page.locator("#overviewEconomy > summary").click()
      assert page.locator("#workspaceCoverage").count()==1
      page.locator("#workspaceCoverage").select_option("observed")
      assert page.locator("#workspaceHeatmap .sw-heat-cell.no-data").count()==0
