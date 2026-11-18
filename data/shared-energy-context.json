@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "sourceGenerated": "2026-11-16T16:21:21.344766+00:00",
+  "sourceUrl": "https://energy.nordl.dev/data/hydro-plants-v1.json",
+  "originalSource": "https://api.nve.no/web/Powerplant/GetHydroPowerPlantsInOperation",
+  "license": "https://data.norge.no/nlod/",
+  "attribution": "NVE; Nordl normalization",
+  "plants": 1867,
+  "missingCapacity": 33,
+  "zones": [
+    {
+      "zone": "NO1",
+      "plants": 199,
+      "capacityRecords": 198,
+      "capacityMW": 3778.8935
+    },
+    {
+      "zone": "NO2",
+      "plants": 536,
+      "capacityRecords": 524,
+      "capacityMW": 11636.927
+    },
+    {
+      "zone": "NO3",
+      "plants": 554,
+      "capacityRecords": 546,
+      "capacityMW": 4822.3586
+    },
+    {
+      "zone": "NO4",
+      "plants": 288,
+      "capacityRecords": 284,
+      "capacityMW": 5522.4526
+    },
+    {
+      "zone": "NO5",
+      "plants": 290,
+      "capacityRecords": 282,
+      "capacityMW": 8376.5289
+    }
+  ],
+  "notice": "Reported nameplate capacity by bidding zone; not actual production, reservoir fill, company exposure or equity-adjusted ownership."
+}
