@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T22:28:04Z",
+  "generated": "2026-11-18T22:51:58Z",
   "items": [
     {
       "id": "AIR.PA:c3dbe95754d9d20d8c6eae8c9b124452403fe006118c67e304746b51b0921752",
@@ -5319,6 +5319,26 @@
       "priority": "normal"
     },
     {
+      "id": "SOBI.ST:f66318d76ec42d9444719b5d475c041e37c32e61ca0fc84c6f2a2db70adeb265",
+      "ticker": "SOBI.ST",
+      "name": "Sobi",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Ionis, Sobi granted EU label expansion for Tryngolza",
+      "english": null,
+      "publisher": "Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ0x3c3JiWS1NTS1nY3k1UjhHN0pwSllrWGw2Y3VXSVZNM01QY2JQZ3c0aGV1NGtuQnlNNGlaMWc5ZlFIamNncGNib2VnVEtGMGM1b2N0X1EweW91WlNWUTNhbS1xb096YnE0NjU0WjRDeTNYTlZHQzFCRHRKbGtFQjJHTkQtNnJK?oc=5",
+      "published": "2026-11-17T11:58:57Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "unverified",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "SOBI.ST:43b23afe343e28a31f3b621b7ef2330313c38b6869bb30bdfe6d02bf952c27cd"
+    },
+    {
       "id": "CAF.MC:42ce7688b3e90a0c294b28f4c022ae03618066c36db0d6accc26e622d3ddaaeb",
       "ticker": "CAF.MC",
       "name": "CAF",
@@ -6767,6 +6787,25 @@
       "priority": "normal"
     },
     {
+      "id": "EL.PA:913f9888299b1bb3eec311d32bf5fe47ee8ee7f9e5ddb047420b3d8fb92f16fd",
+      "ticker": "EL.PA",
+      "name": "EssilorLuxottica",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Avis d'analystes du jour : Stellantis, EssilorLuxottica et Air Liquide se font dégrader",
+      "english": "Today's Analyst Opinions: Stellantis, EssilorLuxottica and Air Liquide Downgraded",
+      "publisher": "Zonebourse",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOeXFXM3EwYTJWclRGZlN4czNEbFNrU2VOWjNqdkt6NTVkNF9Oa2w4eDhobngyNk4zTDZ3d25CTjhhRF9HSU42aEs4TExMWVJ0Z0E4T0xEMV9rYzJWR1RMUVVrRzVUdi15ZU01UGNIa2MzNUJveWpBVnU4cE9fLU1maGp1VS1Ka3BiS1VvNG96cVpwSnRoQ2NCWnp3Vjh0VXE2NVdrU2QyeExSdDhrelpUQzNFZEtFNzdZWVJRcDd5VThpdUJ1dTZIQnphWWE3N1JHZ0lUdklBR25xeUR0NGc?oc=5",
+      "published": "2026-11-17T07:25:08Z",
+      "lang": "fr",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "CMBTO.OL:2c029cdf08b64c41e7d7dda9e3baa8a97e3bf87d28dd832cd57b1fd6625f3fd3",
       "ticker": "CMBTO.OL",
       "name": "CMB.TECH",
@@ -6976,6 +7015,25 @@
       "priority": "normal"
     },
     {
+      "id": "ANDF.OL:9a026a77112847cd37ffd1194fe182ba7dd264dc64d761ac09321e3ed5d92195",
+      "ticker": "ANDF.OL",
+      "name": "Andfjord Salmon",
+      "sector": "Aquaculture",
+      "type": "news",
+      "headline": "Andfjord Salmon Q3 2026 Earnings Call Is Live",
+      "english": null,
+      "publisher": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNODBYWlJzMS1YamlEb3NMWUFyeHBaZ1VqUE8yN2l0OXFtTGo1TnVteXdVX1pBU3o2MDlWeG5DanBUOGFwck9IOTN2SlJMaVNqanhLQkV3d19kbEJaMlBTbXI2RzI2NGkzNUhvYUI0M0dZQ244T0RDWV9qQ2ZuQXVvZUllRXJ1ck5UdUhheGlQNWRXaUN5akQ5eWt3bzZQeUExMmUwOUI3ZDZTeWVmdW9QRkFIS0o?oc=5",
+      "published": "2026-11-17T06:58:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "TISG.MI:82d0e2751e56d9eb606354715ea6f7aa271ab652fe9d69a116cd47527fe07e8a",
       "ticker": "TISG.MI",
       "name": "The Italian Sea Group",
@@ -7012,6 +7070,25 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "1AST.DE:c981531452041859c6e214127cfc62391e16350bc7745cf695c2a46964252c8c",
+      "ticker": "1AST.DE",
+      "name": "ASTA Energy Solutions",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "ASTA Energy Solutions: Strong 9M growth and reaffirmed guidance, with demand still exceeding capacity",
+      "english": null,
+      "publisher": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNXzIwTHB3bzl3eEI1UDZGZ1hvcXBVLTJnZTRnOXdyb3QyZ1Z4dksycTdrZ2xOdld5cjZQODdQbzlRVDJJMWU0emhlY3VtbnZhenBHbFp1Q3U5UjZCSEpOVGJJTUs5LWRhdWlieFlNT1JGR0lQUldXV25odGN6QTdZOVFDNEFPS2JyTmZhLWVsMmxwV1MyQkk2eTNzYTRvLTB4bmloVUNOS25LTWg4RDROLWJlb1VCdlN2Q25RUTFaRF9ncmRPT2dmTzNhdmtKZDJ0S2xQVXg1cnFyeUlOa3oydVI5dV8tdDdhNlltZnB3RENld3I3MWw5ZHN1TjkwSnJ2eW8yMVBlRHYwWXF3Qmtj?oc=5",
+      "published": "2026-11-17T06:48:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Guidance",
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "AZA.ST:8659837a115952f71c60a8d2ecc89b167347df5641e39d3db76783c1b1dea650",
