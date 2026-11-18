@@ -13,6 +13,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from last_known import valid, valid_move
 
 ROOT = Path(__file__).resolve().parents[1]
 OFFICIAL = frozenset({
@@ -64,6 +65,44 @@ def merge_catalog(remote, generated, mode):
     return (json.dumps(remote, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
+def guarded_signals(incoming, previous, watchlist):
+    """Reject malformed or destructive replacements of the existing published snapshot.
+
+    Never restore a removed listing, substitute across identities, invent a date,
+    or publish a saved row as a fresh signal. A failed check leaves main unchanged.
+    """
+    data=json.loads(incoming)
+    old=json.loads(previous) if previous else {"companies":[]}
+    expected=json.loads(watchlist)["tickers"]
+    if not isinstance(data,dict) or not isinstance(data.get("companies"),list):
+        raise ValueError("invalid scanner snapshot")
+    def stamp(s):
+        t=datetime.fromisoformat(s.replace("Z","+00:00"))
+        if t.tzinfo is None:raise ValueError("missing scanner time zone")
+        return t
+    generated=stamp(data["generated"])
+    if old.get("generated") and generated<stamp(old["generated"]):
+        raise ValueError("scanner snapshot older than published data")
+    rows=data["companies"]
+    ids=[r["ticker"] for r in rows]
+    expected_ids=[r["ticker"] for r in expected]
+    if not expected_ids or len(ids)!=len(set(ids)) or set(ids)!=set(expected_ids):
+        raise ValueError("incomplete or duplicate scanner listing coverage")
+    today=generated.date().isoformat()
+    prior={r["ticker"]:r for r in old.get("companies",[]) if isinstance(r,dict) and r.get("ticker")}
+    for row in rows:
+        p=prior.get(row["ticker"])
+        if not p or not valid(p,today):continue
+        # Only compare the identical listing. A security migration is handled
+        # by the watchlist and identity policy, not by copying old quotes.
+        if p.get("name")!=row.get("name") or any(row.get(k) and p.get(k)!=row[k] for k in ("isin","mic","currency")):continue
+        if not valid(row,today) or row["date"]<p["date"]:
+            raise ValueError("refusing loss or regression of saved observation: "+row["ticker"])
+        if row["date"]==p["date"] and valid_move(p) and not valid_move(row):
+            raise ValueError("refusing incomplete same-session replacement: "+row["ticker"])
+    return incoming
+
+
 def publish(mode, retries=5):
     git("config", "user.name", "stockwatch")
     git("config", "user.email", "actions@github.com")
@@ -87,6 +126,9 @@ def publish(mode, retries=5):
             if path == CATALOG:
                 continue
             dest = ROOT / path
+            if path=="data/signals.json":
+                if content is None:raise ValueError("refusing deletion of published scanner snapshot")
+                guarded_signals(content,dest.read_bytes() if dest.is_file() else None,(ROOT/"watchlist.json").read_bytes())
             if content is None:
                 dest.unlink(missing_ok=True)
             else:
