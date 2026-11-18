@@ -373,6 +373,12 @@ jobs:
           name: modern-overview-previews
           path: workspace-previews/modern-overview-*.png
           if-no-files-found: ignore
+      - name: V87c company event lens checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v87c-')
+        run: |
+          node --test tests/test_company_events_v87c.mjs
+          python tests/browser_check_company_events_v87c.py
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 
