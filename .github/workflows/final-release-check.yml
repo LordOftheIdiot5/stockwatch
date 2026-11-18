@@ -153,7 +153,6 @@ jobs:
           path: workspace-previews/v84-*.png
           if-no-files-found: ignore
       - name: V85 both maps during full scanner outage
-        if: startsWith(github.head_ref, 'feature/stockwatch-v85-')
         run: python tests/browser_check_retained_heatmap_v85.py
       - name: V50 company research tests
         if: startsWith(github.head_ref, 'feature/stockwatch-v50-') || startsWith(github.head_ref, 'feature/stockwatch-v60-')
