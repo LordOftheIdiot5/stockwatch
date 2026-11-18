@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-18T17:06:45.117351+00:00",
-  "newsRecordsScanned": 953,
+  "generated": "2026-11-18T22:28:04.644446+00:00",
+  "newsRecordsScanned": 989,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -1215,6 +1215,18 @@
       "amount": null
     },
     {
+      "id": "8993860070771f518eff450775b672319f30593bcdf1789253635335cb139b16",
+      "newsId": "SKA-B.ST:a0fbd36cd41f6a15b9d9295e2326b846712cb965668b2962d1c15eb34597a5bd",
+      "entityIds": [],
+      "issuerTicker": "SKA-B.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T06:36:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTWdVQWVjaFNtYk4zdm5sMllZc29sUzRnTDJBbGV1N3p3RklibElRb2Y3SjlCbHJKX0VsY2xIRjg4a0hsU0lOV1Y5MS1NWlZDYTgwc3hnV3VqeTVXNDE0d0lSN1p2dzV6el9hVzFaUWJCVEdjTmNmRm84SDB0clBFV3M1OXBSMGpYT2c3N1BHdkp2OVFjSlhMeG8yaFlnQTl2VXozU1c4dHpEd1BnX2FlMUlfWTlxRkxJamlQb0dwVjBBQXZDVHVzYTk1V1A0QQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "f3396e1e857fe2f390b98dd708b55db152530608f8d77b3c5d4502be1c20d0b2",
       "newsId": "SKA-B.ST:a9318fdb1d0963da3f4202c4416f9e9a322a1e8f5f899dfdbd326e57b327904c",
       "entityIds": [],
@@ -1258,6 +1270,18 @@
       "candidateType": "headline_event",
       "published": "2026-11-18T07:04:14Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZnY4VFhCZUs2eHd0S1d1bjlPSmdBVkswNmlveWpaRTNpTFROeWlocHJCRkVNTVNOSXhtSnJPSnYyZGoxeThoVFFNdENtYlJUd3M2SVNoeEdqVWNoRk45OHVzSjhSVlh6TmY3RmNOUWJlUXJKSFlWSGY2d1pOTXJ0STZXWlRGeXQ1?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "d658cea5467ede39543e0c1e1d7bcb8168c6992247585b08694b1b2b00a0e1ce",
+      "newsId": "SKA-B.ST:534121380e4c5019b591bcac0de78fd9bacf056c3e0abc3db20f38670273ef63",
+      "entityIds": [],
+      "issuerTicker": "SKA-B.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T07:05:02Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTE1IOFpVVDhxZzhfbEtnMmx6eE8waDBkTnN5Z2NwTlN1aHFxQi1xcEdzUkJYTmw4b0ttSzlqbnhQS19VWG94eUlBMWg2QnU0Qjh2X3AtSjM4VWJlZjlUX1VyWmNWR3BtR012VHhUZWVTaHVMRFNiX3o4VXJ0bV9zMG9wS2dVNmNLbjdTanFR?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
@@ -1565,6 +1589,18 @@
       "candidateType": "headline_event",
       "published": "2026-11-18T17:03:28Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMGZDQWRSa045ajZsVEJQREJlbl9oUGE2UXdFZHVfWHdOOVJRYWxHdmdzVkRsNFRoWjZoZ3BNVEdkV1NITU9HV1drcGQzQXEyYi14OGdCdFcxbjEzaXlpRU5MRnYzVklUQllrWGVYa3VPU0ZnWGJTTUhzMnplRlpPanhaNzhEQ1RucFFzR1ltVQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "7e9e96069dc17d2b050cdb96ab18a228e05d9b1f821f534d17ccc00eab1dc85d",
+      "newsId": "RACE.MI:77f7a99c9af4ac3a62204cb5c241af1fd7c7ffe98cfeb6e48bb4b56005c80391",
+      "entityIds": [],
+      "issuerTicker": "RACE.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T19:05:57Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNzZJYnlHYk9ZQ3pLMnExRVoxR3M0RjZmeEVPSDZUNTE2aC1mMjJwT1ROb2hyTFlXN3JoQnE1QjdZeE5PSUwyMURvLWZHTXhQSVVsc2NPakpZbGxTX05KeWw5cTcwTUhOYTZwQ1Zaakh3eGh0Y1BCcm13S01NcjU2QUZfdEFDQkVOdjFvbWJxVWxaVXRXVElyUA?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
