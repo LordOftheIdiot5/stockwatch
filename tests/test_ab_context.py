@@ -35,4 +35,22 @@ class PairContextTests(unittest.TestCase):
         self.assertEqual(context.latest_bar_health(None)["status"],"source_unavailable")
     def test_utc_day(self):
         self.assertEqual(context.utc_day(0),"1970-01-01")
+    def test_individual_daily_move_requires_exact_adjacent_positive_bars(self):
+        from datetime import datetime, timezone
+        def stamp(d):
+            return int(datetime.fromisoformat(d).replace(tzinfo=timezone.utc).timestamp())
+        fri, mon, tue = map(stamp, ("2026-11-13", "2026-11-16", "2026-11-17"))
+        data = {"meta": {"symbol": "ATCO-A.ST", "currency": "SEK", "dataGranularity":"1d"},
+                "timestamp": [fri,mon,tue], "indicators":{"quote":[{"close":[100,120,108],"volume":[10,20,30]}]}}
+        def move(at=tue, ticker="ATCO-A.ST"):
+            return context.individual_pair_move(data,ticker,"SEK",at)
+        self.assertEqual(move()["changePct"], -10)
+        self.assertEqual(move()["previousDate"],"2026-11-16")
+        self.assertEqual(move(mon)["changePct"],20)
+        self.assertIsNone(move(ticker="ATCO-B.ST"))
+        data["indicators"]["quote"][0]["volume"][1]=0
+        self.assertIsNone(move())
+        data["timestamp"]=[fri,tue]
+        data["indicators"]["quote"][0]={"close":[100,108],"volume":[100,100]}
+        self.assertIsNone(move())
 if __name__=="__main__":unittest.main()

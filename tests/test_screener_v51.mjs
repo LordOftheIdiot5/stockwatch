@@ -22,3 +22,13 @@ test('V61: expanded venue+FIGI exact share-class identity required',()=>{
   assert.equal(S.pairQuote(row,[{...pair,aPrice:0}]),null);
  }
 });
+
+test('individual A/B changes remain separate from scanner ranks',()=>{
+ const r={referenceOnly:true, referenceId:'XCSE:MAERSK A',mic:'XCSE',symbol:'MAERSK A',unavailable:true};
+ const m={date:'2026-11-17',previousDate:'2026-11-16',changePct:2.5,method:'individual_daily_closes'};
+ const p={a:'MAERSK-A.CO',b:'MAERSK-B.CO',aPrice:100,bPrice:200,priceDate:m.date,currency:'DKK',aDailyMove:m,bDailyMove:{...m,changePct:-3},observationStatus:'retained'};
+ const q=S.pairQuote(r,[p]);assert.equal(q.dailyMove.changePct,2.5);assert.equal(q.retained,true);
+ const b=S.pairQuote({...r,referenceId:'XCSE:MAERSK B',symbol:'MAERSK B'},[p]);assert.equal(b.dailyMove.changePct,-3);
+ assert.equal(S.comparable({...r,pairQuote:q},m.date),false);assert.equal(S.latestChange({...r,pairQuote:q}),null);
+ for(const bad of [{...m,previousDate:'2026-11-13'},{...m,date:'2026-11-18'},{...m,method:'ratio'},{...m,changePct:NaN}])assert.equal(S.pairQuote(r,[{...p,aDailyMove:bad}]).dailyMove,undefined);
+});

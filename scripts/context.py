@@ -32,7 +32,7 @@ from __future__ import annotations
 import json
 import statistics
 import math
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import urllib.parse
 import urllib.request
 from daily_recovery import maybe_recover
@@ -225,6 +225,44 @@ def valid_pair_closes(data):
              and type(v) in (int,float) and math.isfinite(v) and v > 0}
     return valid, latest
 
+def individual_pair_move(data, ticker, currency, matched_stamp):
+    """Display-only close-to-close change from two verified individual bars.
+
+    Conservative weekday adjacency: weekends are allowed, weekday gaps
+    (including unverified exchange holidays) are not. No ratio backfill,
+    metadata-price substitution, or additional source requests.
+    """
+    meta = data.get("meta") or {}
+    if (meta.get("symbol") != ticker or meta.get("currency") != currency
+            or meta.get("dataGranularity", "1d") != "1d"
+            or meta.get("instrumentType", "EQUITY") != "EQUITY"):
+        return None
+    stamps = data.get("timestamp") or []
+    if any(type(s) not in (int, float) or not math.isfinite(s) for s in stamps):
+        return None
+    try:
+        dates = [utc_day(s) for s in stamps]
+        day = utc_day(matched_stamp)
+        current = datetime.fromisoformat(day).date()
+    except (ValueError, TypeError, OverflowError, OSError):
+        return None
+    if current.weekday() >= 5 or len(set(dates)) != len(dates):
+        return None
+    previous = current - timedelta(days=1)
+    while previous.weekday() >= 5:
+        previous -= timedelta(days=1)
+    previous_day = previous.isoformat()
+    valid, _ = valid_pair_closes(data)
+    prior = next((s for s in stamps if utc_day(s) == previous_day), None)
+    if matched_stamp not in valid or prior not in valid:
+        return None
+    change = 100 * (valid[matched_stamp] / valid[prior] - 1)
+    if not math.isfinite(change):
+        return None
+    return {"date": day, "previousDate": previous_day,
+            "changePct": round(change, 6), "method": "individual_daily_closes"}
+
+
 def latest_bar_health(data):
     """Status only; never substitute metadata price for a daily bar."""
     if not data:
@@ -341,6 +379,8 @@ def share_classes(candidate_status=None, feed_health=None) -> list[dict]:
             "b": b_ticker,
             "aPrice": round(a_closes[shared[-1]], 4),
             "bPrice": round(b_closes[shared[-1]], 4),
+            "aDailyMove": individual_pair_move(a_data, a_ticker, currency, shared[-1]),
+            "bDailyMove": individual_pair_move(b_data, b_ticker, currency, shared[-1]),
             "ratio": round(current, 4),
             "meanRatio": round(mean, 4),
             "sd": round(deviation, 4),

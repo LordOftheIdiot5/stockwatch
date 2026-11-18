@@ -19,3 +19,13 @@ test('invalid dates, same session, zero volume and reference prices never gain o
  assert.match(neutralMapDetail({...old,volume:0},day,true),/No trading volume/);
  assert.match(neutralMapDetail({referenceOnly:true,pairQuote:{close:20,date:day,currency:'SEK'}},day,true),/A\/B price only/);
 });
+
+test('individual A/B return renders in both display maps but never strict counts',()=>{
+ const pair={ticker:'ref:XCSE:MAERSK A',referenceOnly:true,unavailable:true,sector:'Shipping',name:'Maersk',pairQuote:{close:101,currency:'DKK',date:day,dailyMove:{date:day,previousDate:'2026-11-16',changePct:1.25,method:'individual_daily_closes'}}};
+ const rows=reportedMapRows([pair],day);
+ for(const render of [coverageHeatmap,compactScreenerHeatmap]){
+  const h=render(rows,day,true);assert.match(h,/1.25% · 2026-11-17/);assert.match(h,/A\/B daily move/);assert.doesNotMatch(h,/sw-heat-cell positive/);
+  assert.doesNotMatch(render(rows,day,false),/1.25%/);
+  assert.doesNotMatch(render(rows,'2026-11-16',true),/1.25%/);
+ }
+});
