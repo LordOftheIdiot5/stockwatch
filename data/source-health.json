@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18T16:06:51Z",
-  "latestScan": "2026-11-18T16:05:47+00:00",
+  "generated": "2026-11-18T17:06:44Z",
+  "latestScan": "2026-11-18T17:05:33+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "priceFreshness": {
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 121,
+  "storedStories": 129,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,55 +115,55 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 69.0,
+      "avgLatencyMs": 70.0,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 607.2,
+      "avgLatencyMs": 848.7,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 774.7,
+      "avgLatencyMs": 904.8,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 560,
-      "failed": 34,
-      "avgLatencyMs": 366.3,
+      "succeeded": 585,
+      "failed": 9,
+      "avgLatencyMs": 305.7,
       "errorTypes": {
-        "HTTPError": 34
+        "HTTPError": 9
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2628.1,
+      "avgLatencyMs": 6766.7,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 945,
-    "relevant": 645,
-    "review": 259,
+    "total": 953,
+    "relevant": 650,
+    "review": 262,
     "duplicates": 50,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 125,
+      "Earnings / results": 126,
       "Dividends": 10,
       "M&A": 49,
       "Guidance": 26,
       "Contracts": 74,
       "Capital & ownership": 0,
       "Management": 40,
-      "General": 621
+      "General": 628
     }
   },
   "freightRoutes": {
