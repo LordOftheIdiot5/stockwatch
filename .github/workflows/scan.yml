@@ -66,6 +66,12 @@ jobs:
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: python scripts/scan.py
 
+      - name: Collect SEC filing metadata (daily bounded refresh)
+        continue-on-error: true
+        env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
+        run: python scripts/sec_filings.py
+
       - name: Build research archive, calendar and data health
         run: python scripts/build_research_data.py
 

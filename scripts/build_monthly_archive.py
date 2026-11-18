@@ -35,7 +35,8 @@ def build(root=ROOT, now=None):
         by_id = {row['id']:row for row in existing if row.get('id')}
         for row in batch:
             old = by_id.get(row['id'])
-            if old is None or (old.get('match') == 'unverified' and row.get('match') != 'unverified'):
+            rank={'unverified':0,'name_mentioned':1,'issuer_code':2}
+            if old is None or rank.get(row.get('match'),0)>rank.get(old.get('match'),0):
                 by_id[row['id']] = row
         # URL/key attributions can be shared across companies. Preserve unique issuer + id.
         ordered = sorted(by_id.values(), key=lambda x:(x['published'],x['id']), reverse=True)

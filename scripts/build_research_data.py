@@ -173,7 +173,13 @@ def build(root=ROOT, now=None):
     context=json.loads((folder/'context.json').read_text(encoding='utf-8')) if (folder/'context.json').exists() else {}
     old_path=folder/'news-archive.json'
     prev=json.loads(old_path.read_text(encoding='utf-8')).get('items',[]) if old_path.exists() else []
-    news=annotate(merge_news(prev,collect_news(snapshot),now))
+    sec_path=folder/'sec-filings.json'
+    sec={}
+    if sec_path.exists():
+        try:sec=json.loads(sec_path.read_text(encoding='utf-8'))
+        except (ValueError,OSError):pass
+    official=[x for x in sec.get('items',[]) if x.get('sourceFeed')=='sec_edgar' and x.get('match')=='issuer_code']
+    news=annotate(merge_news(prev,collect_news(snapshot)+official,now))
     quality=summary(news)
     archive=dict(generated=iso(now),items=news,retentionDays=RETENTION_DAYS)
     latest=dict(generated=iso(now),items=news[:100],totalStored=len(news),limit=100,quality=quality)
@@ -192,6 +198,7 @@ def build(root=ROOT, now=None):
     transport=json.loads(transport_path.read_text(encoding='utf-8')) if transport_path.exists() else None
     health=build_health(snapshot,watchlist,context,now,transport)
     health['newsQuality']=quality
+    health['secFilings']={'records':len(official),'issuers':sec.get('issuers',{}),'lastAttempt':sec.get('lastAttempt')}
     # Static, inspectable source catalog. Unknown market licences remain pending.
     routes_path=folder/'freight-routes.json'
     routes=json.loads(routes_path.read_text(encoding='utf-8')).get('routes',[]) if routes_path.exists() else []
@@ -218,6 +225,7 @@ def build(root=ROOT, now=None):
     (folder/'news-quality.json').write_text(json.dumps(dict(generated=iso(now),**quality),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     (folder/'dataset-catalog.json').write_text(json.dumps(dict(generated=iso(now),datasets=[
       {'name':'European issuer directory','path':'data/issuer-identities.json','records':len(issuer_index['entities']),'license':'Original watchlist identities; underlying exchange identifiers subject to source terms'},
+      {'name':'SEC EDGAR filing metadata','path':'data/sec-filings.json','records':len(official),'license':'Official public filing metadata and source links only'},
       {'name':'Latest company news','path':'data/news-latest.json','records':len(latest['items']),'license':'Metadata and outbound source links, not reproduced articles'},
       {'name':'Historical article index','path':'data/news-store/index.json','records':len(news),'license':'Git-backed source-linked metadata; inspect original publisher terms'},
       {'name':'A/B indicator observations','path':'data/spread-observations.json','records':sum(len(v) for v in snapshots.get('pairs',{}).values()),'license':'Derived research indicators; no raw historical OHLCV'},
