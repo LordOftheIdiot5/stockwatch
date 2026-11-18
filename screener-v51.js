@@ -20,6 +20,13 @@ const expandedPairListings={
  'BBG000BGD8Q1':['SSABB','SSAB-B.ST'],
  'BBG000BB28Z4':['HUSQA','HUSQ-A.ST']
 };
+function pairDailyMove(move,day){
+ if(!move||move.method!=='individual_daily_closes'||move.date!==day||!sessionOK(day)||!sessionOK(move.previousDate)||!num(move.changePct)||move.changePct < -100)return null;
+ const prev=new Date(day);if(prev.getUTCDay()===0||prev.getUTCDay()===6)return null;
+ prev.setUTCDate(prev.getUTCDate()-1);while(prev.getUTCDay()===0||prev.getUTCDay()===6)prev.setUTCDate(prev.getUTCDate()-1);
+ if(prev.toISOString().slice(0,10)!==move.previousDate)return null;
+ return {date:day,previousDate:move.previousDate,changePct:move.changePct,method:move.method};
+}
 function pairQuote(r,pairs){
  if(!r?.referenceOnly)return null;
  let ticker=null;
@@ -32,7 +39,8 @@ function pairQuote(r,pairs){
  const matches=(pairs||[]).filter(p=>p.currency===currency&&sessionOK(p.priceDate)&&((p.a===ticker&&num(p.aPrice)&&p.aPrice>0)||(p.b===ticker&&num(p.bPrice)&&p.bPrice>0)));
  if(matches.length!==1)return null;
  const p=matches[0];
- return {close:p.a===ticker?p.aPrice:p.bPrice,date:p.priceDate,currency,source:'Existing A/B research observation',ticker};
+ const move=pairDailyMove(p.a===ticker?p.aDailyMove:p.bDailyMove,p.priceDate);
+ return {close:p.a===ticker?p.aPrice:p.bPrice,date:p.priceDate,currency,source:'Existing A/B research observation',ticker,...(move?{dailyMove:move}:{}),...(p.observationStatus==='retained'?{retained:true}:{})};
 }
 function displayPrice(r){return hasPrice(r)?{close:r.close,date:r.date,currency:r.currency,source:'Scanner observation'}:r?.pairQuote||null}
 function latestChange(r){return hasPrice(r)&&num(r.volume)&&r.volume>0&&num(r.changePct)?r.changePct:null}
