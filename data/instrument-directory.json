@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T00:14:19Z",
+  "generated": "2026-11-18T13:27:11Z",
   "sourceUrl": "https://www.openfigi.com/api/documentation",
   "notice": "Reference records only; not independently verified primary listings or monitored prices. Per-venue results may overlap at issuer or share-class level.",
   "venues": {
@@ -7,25 +7,25 @@
       "status": "ok",
       "records": 1322,
       "complete": true,
-      "checkedAt": "2026-11-18T00:13:42Z"
+      "checkedAt": "2026-11-18T13:26:35Z"
     },
     "XSTO": {
       "status": "ok",
       "records": 418,
       "complete": true,
-      "checkedAt": "2026-11-18T00:14:01Z"
+      "checkedAt": "2026-11-18T13:26:53Z"
     },
     "XCSE": {
       "status": "ok",
       "records": 116,
       "complete": true,
-      "checkedAt": "2026-11-18T00:14:08Z"
+      "checkedAt": "2026-11-18T13:27:00Z"
     },
     "XHEL": {
       "status": "ok",
       "records": 155,
       "complete": true,
-      "checkedAt": "2026-11-18T00:14:15Z"
+      "checkedAt": "2026-11-18T13:27:07Z"
     }
   },
   "records": [
@@ -6066,6 +6066,18 @@
       "quoteStatus": "not_connected"
     },
     {
+      "figi": "BBG026N646T6",
+      "name": "CETUS MARITIME HOLDINGS LTD",
+      "ticker": "CTUS",
+      "mic": "XOSL",
+      "venue": "Oslo",
+      "shareClassFIGI": "BBG025MCZHC6",
+      "compositeFIGI": "BBG025MCZHB7",
+      "securityType": "Common Stock",
+      "source": "OpenFIGI",
+      "quoteStatus": "not_connected"
+    },
+    {
       "figi": "BBG00PQ1YPY3",
       "name": "CHEMINS DE FER DEPARTEMENTAU",
       "ticker": "MLCFDEUR",
@@ -9517,18 +9529,6 @@
       "venue": "Oslo",
       "shareClassFIGI": "BBG004FZH179",
       "compositeFIGI": "BBG00YVVMY85",
-      "securityType": "Common Stock",
-      "source": "OpenFIGI",
-      "quoteStatus": "not_connected"
-    },
-    {
-      "figi": "BBG00PPYQD78",
-      "name": "HEDER BANK ASA",
-      "ticker": "MYBANNOK",
-      "mic": "XOSL",
-      "venue": "Oslo",
-      "shareClassFIGI": "BBG00FWKMJV6",
-      "compositeFIGI": "BBG00PPYQCV3",
       "securityType": "Common Stock",
       "source": "OpenFIGI",
       "quoteStatus": "not_connected"
