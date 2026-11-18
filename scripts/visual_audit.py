@@ -113,7 +113,7 @@ def capture(base, out, selected, devices, chromium_path=None):
                             row["screenshots"].append(filename)
                             row["screenerHeatmapTiles"]=page.locator("#stkHeat .sw-heat-cell").count()
                         except Exception as error:
-                            row["interactionWarning"]=str(error).splitlines()[0]
+                            row["interactionWarning"]=str(error)[:2000]
                 except Exception as error:
                     row["error"]=str(error).splitlines()[0]
                 row.update(pageErrors=errors[:15], failedRequests=failed[:20], httpErrors=http_errors[:20])
@@ -142,7 +142,7 @@ def main():
             threading.Thread(target=server.serve_forever,daemon=True).start()
             base=f"http://127.0.0.1:{server.server_port}/"
         records=capture(base,Path(args.output),args.pages,args.devices,args.chromium_path)
-        failures=sum(bool(r.get("error") or r.get("status",0)>=400 or r["pageErrors"]) for r in records)
+        failures=sum(bool(r.get("error") or r.get("status",0)>=400 or r["pageErrors"] or r.get("interactionWarning")) for r in records)
         print(json.dumps({"captures":len(records),"errors":failures,"output":args.output}),flush=True)
         return int(failures>0)
     finally:
