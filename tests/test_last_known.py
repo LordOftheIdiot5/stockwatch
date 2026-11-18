@@ -47,3 +47,36 @@ class LastKnown(unittest.TestCase):
         self.assertEqual(r[0]["observationStatus"],"retained")
         self.assertEqual(r[0]["observedAt"],"old")
         self.assertEqual(context_rows([], [dict(ticker="BDRY",unit="USD",last=10)],"freight","new","old","2026-11-17"),[])
+
+    def test_older_valid_move_survives_new_zero_volume_without_mixing_prices(self):
+        fresh={**self.old,"date":"2026-11-17","close":13,"volume":0,"changePct":0}
+        r=self.row(fresh=fresh)
+        self.assertEqual(r["close"],13)
+        self.assertEqual(r["changePct"],0)
+        self.assertEqual(r["lastValidMovement"]["close"],12)
+        self.assertEqual(r["lastValidMovement"]["date"],"2026-11-16")
+        self.assertEqual(r["lastValidMovement"]["changePct"],2)
+        retained=self.row(old=r)
+        self.assertEqual(retained["lastValidMovement"],r["lastValidMovement"])
+        recovered=self.row(fresh={**fresh,"volume":100,"changePct":3},old=r)
+        self.assertNotIn("lastValidMovement",recovered)
+    def test_seed_requires_exact_identity_and_older_date(self):
+        fresh={**self.old,"date":"2026-11-17","close":13,"volume":0,"changePct":0}
+        def seeded(seed):
+            return company_row(self.entry,fresh,None,"2026-11-17","new","old",seed)
+        self.assertEqual(seeded(self.old)["lastValidMovement"]["changePct"],2)
+        for bad in ({"currency":"SEK"},{"name":"Other"},{"ticker":"OTHER"},{"date":"2026-11-17"},{"volume":0},{"isin":"OTHER"}):
+            self.assertNotIn("lastValidMovement",seeded({**self.old,**bad}))
+
+    def test_newer_pair_price_retains_independent_older_movement(self):
+        base=dict(a="A",b="B",currency="NOK",ratio=1.1,aPrice=11,bPrice=10,priceDate="2026-11-17")
+        move=dict(date="2026-11-16",previousDate="2026-11-13",changePct=2,method="individual_daily_closes")
+        earlier={**base,"priceDate":"2026-11-16","aPrice":10.5,"aDailyMove":move}
+        result=context_rows([earlier],[base],"shareClasses","new","old","2026-11-17")[0]
+        self.assertEqual(result["priceDate"],"2026-11-17")
+        self.assertEqual(result["aPrice"],11)
+        self.assertEqual(result["aSavedDailyMove"]["date"],"2026-11-16")
+        self.assertEqual(result["aSavedDailyMove"]["close"],10.5)
+        self.assertEqual(context_rows([], [result],"shareClasses","later","new","2026-11-17")[0]["aSavedDailyMove"],result["aSavedDailyMove"])
+        mismatch=context_rows([{**earlier,"currency":"SEK"}],[base],"shareClasses","new","old","2026-11-17")[0]
+        self.assertNotIn("aSavedDailyMove",mismatch)

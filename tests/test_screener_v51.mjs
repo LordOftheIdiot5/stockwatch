@@ -32,3 +32,12 @@ test('individual A/B changes remain separate from scanner ranks',()=>{
  assert.equal(S.comparable({...r,pairQuote:q},m.date),false);assert.equal(S.latestChange({...r,pairQuote:q}),null);
  for(const bad of [{...m,previousDate:'2026-11-13'},{...m,date:'2026-11-18'},{...m,method:'ratio'},{...m,changePct:NaN}])assert.equal(S.pairQuote(r,[{...p,aDailyMove:bad}]).dailyMove,undefined);
 });
+
+test('older individual pair move survives independently of newer retained quote',()=>{
+ const r={referenceOnly:true, referenceId:'XCSE:MAERSK A',mic:'XCSE',symbol:'MAERSK A',unavailable:true};
+ const saved={date:'2026-11-16',previousDate:'2026-11-13',changePct:2,method:'individual_daily_closes',ticker:'MAERSK-A.CO',currency:'DKK',close:95};
+ const p={a:'MAERSK-A.CO',b:'MAERSK-B.CO',aPrice:100,bPrice:200,priceDate:'2026-11-17',currency:'DKK',aSavedDailyMove:saved};
+ const q=S.pairQuote(r,[p]);assert.equal(q.close,100);assert.equal(q.dailyMove.close,95);assert.equal(q.dailyMove.date,'2026-11-16');
+ assert.equal(q.dailyMove.saved,true);assert.equal(S.comparable({...r,pairQuote:q},p.priceDate),false);
+ assert.equal(S.pairQuote(r,[{...p,aSavedDailyMove:{...saved,ticker:'MAERSK-B.CO'}}]).dailyMove,undefined);
+});

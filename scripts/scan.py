@@ -348,6 +348,7 @@ def main() -> int:
     companies: list[dict] = []
     previous=load(OUT_PATH)
     prior={r["ticker"]:r for r in previous.get("companies",[]) if r.get("ticker")}
+    movement_seeds=load(ROOT / "scripts" / "last-valid-movement-seeds.json")
     stamp=now.isoformat(timespec="seconds")
     for entry in watchlist:
         fresh=None
@@ -358,7 +359,7 @@ def main() -> int:
                 fresh={"ticker":entry["ticker"],"name":entry.get("name",entry["ticker"]),"sector":entry.get("sector",""),"exchange":data["exchange"],"currency":data["currency"],"thin":bool(entry.get("thin")),"spark":spark(data["bars"]),"stories":[],**{k:entry[k] for k in ("isin","mic") if entry.get(k)},**measured}
         except Exception as error:
             print(f"  ! {entry['ticker']}: {type(error).__name__}")
-        companies.append(company_row(entry,fresh,prior.get(entry["ticker"]),now.date().isoformat(),stamp,previous.get("generated")))
+        companies.append(company_row(entry,fresh,prior.get(entry["ticker"]),now.date().isoformat(),stamp,previous.get("generated"),movement_seeds.get(entry["ticker"])))
 
     # The market baseline is the watchlist's own median move. If everything is
     # up three percent, a stock up four has moved one - and that is what counts.
