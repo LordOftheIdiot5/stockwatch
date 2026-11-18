@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-18T11:07:50.509539+00:00",
-  "newsRecordsScanned": 886,
+  "generated": "2026-11-18T12:07:36.327350+00:00",
+  "newsRecordsScanned": 899,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -1394,6 +1394,44 @@
       "candidateType": "headline_event",
       "published": "2026-11-18T10:47:40Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQMThfSG54ZUdIQmhwYUc5M3VJcUdoWXNTN0N0dy0yVVNYSlliQkgxV3hzWmt0Q2lvNDhuQk1RNzItNWEydVUzQm5YSW9va1ZqZUg5TTN5YnFIbmpIbHp5clpVRU56ekR6bnpaUkE1SXhnVm1aelBPaEF6RElidTZkNDNkVnJiTElTOVZkTmhWenNMQVdicUpVTjVKN1RiSDBvUTMwSUhYcHhEUDVsRkZPZTcxNmlRbEJjLVZtRFRuamJpTnlDVVBGbQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "10e21d8eef714366a80237d4a4af13bd48d0e5f74e6eb7ac7024eceba37d5a84",
+      "newsId": "SIE.DE:f4a0aeb6dbea27ac9eb3bd4f56a492b717b71ba497c4092f497629585ef74d60",
+      "entityIds": [
+        "siemens"
+      ],
+      "issuerTicker": "SIE.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T11:08:16Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA3UWhRVlIxSXdvcUVBaURLa3Q2U3d3SjU4TWVMUkc4RFlKbGFZeHlzRkFrajM4X1RQby1jb0k3eV9rTlN0NVY2Nmthbk9UdDRPLVJLeXNvMFlhZFpOcDhsUmNQUnJCUE5ZbTZj?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "a37079180f22fc7dba57f1cd7da116eefb9ba0d9c49407baf7c7734616b39684",
+      "newsId": "NOVO-B.CO:556430e55fffe89acf8bf413ea3bff4b28a58e17b9534e64901cf496c357ac8e",
+      "entityIds": [],
+      "issuerTicker": "NOVO-B.CO",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T11:14:16Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTy1IUXZjQmQ4c0pVYWEzd2dLRnRPODlOYXFJSTZ3dkpmOHFtbkI1LS1UVU1YY3ZfNTNsQ3UtVGh6VHMwWG9Fc0NlZ1lIaE1VLVRuX2NGUU5HaUxSWGo2WUpYUTZjbHFVX0V2c2paLThiMFF3Vkx5Q0dBbm4ydFhPQzdKc0dUTVV2ME42UHZ2Zm5IWHc4dkR3Q1hnVDhSejE2cG14WTE1c1M2STk2OTZtcFF1Z1hlajdlN0hJZ01KRTVjUVlPQTZVNUw3Z1BFLU5YM2FMUFZkczdaUTQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "773f6e3f9f54a31c5f4b7370fc1b287a674fe232e8160215db58fac383308428",
+      "newsId": "SMOP.OL:8b80d43bfc9c108446789c67837662468b1ea80eb75207956bf4270f1c83369e",
+      "entityIds": [],
+      "issuerTicker": "SMOP.OL",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T12:00:17Z",
+      "sourceUrl": "https://newsweb.oslobors.no/message/686814",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
