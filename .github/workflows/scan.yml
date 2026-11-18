@@ -72,6 +72,10 @@ jobs:
           STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
         run: python scripts/sec_filings.py
 
+      - name: Reuse Nordl Energy hydro context (daily)
+        continue-on-error: true
+        run: python scripts/shared_energy.py
+
       - name: Build research archive, calendar and data health
         run: python scripts/build_research_data.py
 
