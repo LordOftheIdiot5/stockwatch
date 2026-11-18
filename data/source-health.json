@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-18T07:06:49Z",
-  "latestScan": "2026-11-18T07:06:04+00:00",
-  "scanAgeHours": 0.01,
-  "contextAgeHours": 0.01,
+  "generated": "2026-11-18T08:07:50Z",
+  "latestScan": "2026-11-18T08:06:39+00:00",
+  "scanAgeHours": 0.02,
+  "contextAgeHours": 0.02,
   "priceFreshness": {
     "comparisonDate": "2026-11-17",
     "equities": {
@@ -115,55 +115,55 @@
       "requests": 138,
       "succeeded": 138,
       "failed": 0,
-      "avgLatencyMs": 66.8,
+      "avgLatencyMs": 64.8,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 309.8,
+      "avgLatencyMs": 564.1,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 367.0,
+      "avgLatencyMs": 1155.6,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 594,
-      "succeeded": 479,
-      "failed": 115,
-      "avgLatencyMs": 315.8,
+      "succeeded": 561,
+      "failed": 33,
+      "avgLatencyMs": 311.5,
       "errorTypes": {
-        "HTTPError": 115
+        "HTTPError": 33
       }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1507.6,
+      "avgLatencyMs": 2746.1,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 831,
-    "relevant": 564,
-    "review": 231,
+    "total": 847,
+    "relevant": 576,
+    "review": 235,
     "duplicates": 44,
     "issuerLinked": 0,
     "categories": {
-      "Earnings / results": 114,
-      "Dividends": 9,
-      "M&A": 41,
-      "Guidance": 23,
-      "Contracts": 55,
+      "Earnings / results": 116,
+      "Dividends": 10,
+      "M&A": 42,
+      "Guidance": 24,
+      "Contracts": 58,
       "Capital & ownership": 0,
       "Management": 38,
-      "General": 551
+      "General": 559
     }
   },
   "freightRoutes": {
