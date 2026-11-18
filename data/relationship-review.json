@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-18T13:06:51.098637+00:00",
-  "newsRecordsScanned": 908,
+  "generated": "2026-11-18T14:06:48.502376+00:00",
+  "newsRecordsScanned": 919,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -1432,6 +1432,21 @@
       "candidateType": "headline_event",
       "published": "2026-11-18T11:14:16Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTy1IUXZjQmQ4c0pVYWEzd2dLRnRPODlOYXFJSTZ3dkpmOHFtbkI1LS1UVU1YY3ZfNTNsQ3UtVGh6VHMwWG9Fc0NlZ1lIaE1VLVRuX2NGUU5HaUxSWGo2WUpYUTZjbHFVX0V2c2paLThiMFF3Vkx5Q0dBbm4ydFhPQzdKc0dUTVV2ME42UHZ2Zm5IWHc4dkR3Q1hnVDhSejE2cG14WTE1c1M2STk2OTZtcFF1Z1hlajdlN0hJZ01KRTVjUVlPQTZVNUw3Z1BFLU5YM2FMUFZkczdaUTQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "0b8b513d3a22aaa5bceef31a0c2790f3209a931d51cf45200e2ba398dfc79380",
+      "newsId": "UCG.MI:0ae1db3b92f8c902d20b6db05096bcb03e3f17bd48793dc0e1cae34d88bbd911",
+      "entityIds": [
+        "premier-energy",
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "co_mention",
+      "published": "2026-11-18T11:49:54Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNEJiUTlkZjk0RHI0Vy1CZXBFcV9OanUzekhqOFZFME5zMDVIQ09hZHVFM0xaNjlubW5mdkxKQU1KVC1vbTVWbjVVTjBQc1pBV09QSGltVUdNZjBlaGdDZElmak0zSGd2bW1YaFctbTVKMmpnenNudkVsT2F5Q3IzZWRLc1YyMVdlcEpjbDVQLWEtdG5JT0ZNNGVjbTRFWkMzZVcxRw?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
