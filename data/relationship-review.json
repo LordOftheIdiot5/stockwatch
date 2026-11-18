@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-18T00:54:51.024743+00:00",
-  "newsRecordsScanned": 803,
+  "generated": "2026-11-18T03:45:24.621186+00:00",
+  "newsRecordsScanned": 809,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -1183,6 +1183,21 @@
       "candidateType": "headline_event",
       "published": "2026-11-17T17:23:59Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZm43alBzYTNQaXFuR0t1Yk5BbW9CNHFvbzQzOHc4U2lNT2ljQU0wUi1LM3ZzeE9ObnBFNmt5TURGRnZ1MXBjdmFlSGNhZ1paQWtrNG4xSDVyWjk3dHBkcFVnc2o0cDJtZ0NLQ05HQ2R4N2lNMW9GUkVsRHVZaGIwM2VCVUxmaE11WkRlbDlHZWVXUVdqcGpJ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "1e0c12632ac3204a8795dbad68806b1eef319f3a769c11f7b51c8e3d6de45403",
+      "newsId": "DOFG.OL:fe1e51fa6356204a21dfe0666e4d24ab112d523b8d42eb0df68e372818bd693f",
+      "entityIds": [
+        "amplitude-energy",
+        "dof"
+      ],
+      "issuerTicker": "DOFG.OL",
+      "candidateType": "co_mention",
+      "published": "2026-11-18T03:33:31Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSjFRUERBakkxTDJBZmtBT1BoS1cxZW5iRXFQZzNjdkNHN1hZWEhQWkRLVGp1R05lMUJHVWVpTjZ3QnVNcVF2TmZsTFdZVER5VXV6R09fNTRfWnEwaVEwaEdIa0hVcU1pRkdpa05Tc3ZHZXZ5bllZdXBoWF9LTEl2aW1pNl9LRkMwTzJfdlM5NldzNkxmU01HVzlKcDFCRU1BcTZCSFYxODd6UUZwbVktamNrRS11bm5iLV9HaG5WOXR1SzlSajNPLUpMUVV1TnViTDVWWHoyU0Y?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
