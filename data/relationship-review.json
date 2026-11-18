@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-18T14:06:48.502376+00:00",
-  "newsRecordsScanned": 919,
+  "generated": "2026-11-18T15:07:48.905702+00:00",
+  "newsRecordsScanned": 931,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -1459,6 +1459,44 @@
       "candidateType": "headline_event",
       "published": "2026-11-18T12:00:17Z",
       "sourceUrl": "https://newsweb.oslobors.no/message/686814",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "ce088d7f67c33c552dea4807c408e4737495f157e32f44e8be939e6409f09e73",
+      "newsId": "FRO.OL:250bf7880d8d64e09fdaed21fbc7f51b6fd7f4df1c966c6d481271eb58f29b2e",
+      "entityIds": [],
+      "issuerTicker": "FRO.OL",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T14:20:21Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNmdWOHJxNVNRbHJaRjd3YWstNXczMFdLZjhXRm13QUQ4Y2p1OUhKUnlHSDJ2N0ZBcnVHWXk1VXJsWlZVc293RVFLa3BSSmJCMEJMbWx3OGQwMDJxNDFzVFVURjJMNld1eG5yRmo4OU5seVpma2Q4cWpCN0lKTGduTVRHdjdDbl9wbnNQTHdfMHh3cnIwV21pRzJqRUNZVjdjVlY1dXNFVFhJVmZYNUthRUh3ZG5EVzhERXRtQmFzZ200azVBN1lyTVBn?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "13f952a3a91ddf1165f3aacf989e5c93eebe0f3f3defcce9f78c568c36ac45ed",
+      "newsId": "UCG.MI:8ebd3f445c8994da8e559d180a1246527305377412668072742b2de996d8e474",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T14:36:39Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQOFVyWDMyOVgwNE5FUkFzQ0V6dWR2MFFRR01RYVc0ZmxWaTVtcEJ0X0xNdUJPNy1Ba0hUUWNfbWRGeDZpTDFrU1JIVnNsQTRfWC1jOFNPdV8xaFZEcnA0NVREeDFMVi12c3ZDNWRZTVNmWjFLOXpEQlhlMHZnN2NHbHhIeG04d3hScDJyT0RvN1RzdzFHNEVnaGNGeFI5RWJHRjZJVGhTWGNqcHJZaWhwdWtZdmNxWi1OWXp3eEVWWUlKa05YZ0luRQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "e68601d7eef58afd8c10f0dae9d2a750b8bc359f670ad7f7acdb6e5a6bf786ab",
+      "newsId": "VNA.DE:86ffaaf5b04ecc76b49250fd09e7bbde668a320418b8700d93a9a5209105416c",
+      "entityIds": [],
+      "issuerTicker": "VNA.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-18T14:42:40Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQd1ZjbmRSZmU3a3RMU0ZWUVczVXF2NE9UaUxoX0xkQVlNQVk5ZmtuVUVrRHBDT3IwZTlQWHJhV1RhZGRmOXFlQWtMbW0wWEdDN2JXakJONm1wUUEtZjM4cm1FTTBMcTRqcmdySFFYQVY0TjBqdEljamFDbGljNW1nQzRrbEdleWpuanRYU1FOVTI3U0VvcWlkUDhka3FiS3pNNmRUc0RXN2VlYTdOOWczNUh1Y2RvblV6OWhiZXB4WnpGT2VCeWF6UUVCS0NxLTRTb2k4VXo2RUxLeGV6RDc0?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
