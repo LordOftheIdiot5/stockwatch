@@ -1,0 +1,36 @@
+name: Stockwatch visual audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/visual_audit.py'
+      - '.github/workflows/visual-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  screenshots:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install browser
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Capture checkout on desktop and mobile
+        run: python scripts/visual_audit.py --output visual-audit/checkout
+      - name: Capture public production pages
+        if: always()
+        run: python scripts/visual_audit.py --base-url https://stocks.nordl.dev/ --output visual-audit/live --pages overview stocks company terminal shipping spreads calendar health
+        continue-on-error: true
+      - name: Save screenshots and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-visual-audit
+          path: visual-audit/
+          retention-days: 14
+          if-no-files-found: error
