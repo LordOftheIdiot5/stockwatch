@@ -10,7 +10,7 @@ class Mobile48(unittest.TestCase):
         self.assertIn("routePage=1;draw()",v)
         self.assertIn('filtered.slice((current-1)*size,current*size)',r)
         self.assertIn("renderRows(rows,'d1Results',100,true)",r)
-        self.assertLess(r.index('<h2>Search persistent news database'),r.index('<h2>Latest 100 updates'))
+        self.assertLess(r.index('<h2>Search persistent news database'),r.index('<h2 id="newsHeading">Latest 100 updates'))
     def test_css(self):
         c=(ROOT/'shell-v47.css').read_text()
         self.assertIn('position:sticky;top:0',c)
