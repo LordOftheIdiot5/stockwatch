@@ -29,6 +29,8 @@ try:
             selector=".sw-heat-cell.positive,.sw-heat-cell.negative,.sw-heat-cell.flat"
             page.goto(base+"index.html")
             page.locator("#workspaceHeatmap .sw-heat-cell").first.wait_for()
+            assert page.locator(".sw-overview-coverage").count()==0
+            assert page.locator("#overviewEvents").get_attribute("open") is not None
             assert page.locator("#workspaceHeatmap").locator(selector).count()==expected
             assert str(expected)+" with changes" in page.locator("#workspaceHeatCount").inner_text()
             page.goto(base+"stocks.html")
@@ -41,6 +43,10 @@ try:
             assert page.locator("#stkHeat").locator(selector).count()==expected
             page.locator("#stkSessionQuality").select_option("comparable")
             assert page.locator("#stkHeat").locator(selector).count()==0
+            page.goto(base+"health.html")
+            page.locator("#marketCoverage .sw-overview-coverage").wait_for()
+            assert "Priced listings with moves" in page.locator("#marketCoverage").inner_text()
+            assert "Research listings" in page.locator("#marketCoverage").inner_text()
             assert not errors,errors
             page.close()
         browser.close()
