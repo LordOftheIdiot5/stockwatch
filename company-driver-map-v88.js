@@ -11,6 +11,12 @@ const defs=[
 function nodes(ticker){
  return defs.map(d=>({...d,sub:ticker==="NHY.OL"&&d.id==="prices"?"Materials & power":ticker==="NHY.OL"&&d.id==="operations"?"Hydro assets & production":d.sub}));
 }
+function resolveProfile(registry,key){
+ if(registry?.schemaVersion!==1||!Object.hasOwn(registry.profiles||{},key))return null;
+ const p=registry.profiles[key],drivers=p?.drivers;
+ if(!drivers||!defs.every(d=>{const v=drivers[d.id],s=registry.sources?.[v?.source];return v&&typeof v.sub==="string"&&typeof v.description==="string"&&safe(s?.url)&&Array.isArray(v.datasetIds)}))return null;
+ return {name:p.name,drivers:Object.fromEntries(defs.map(d=>{const v=drivers[d.id],m=v.metric,valid=m&&Number.isFinite(m.value)&&typeof m.label==="string"&&typeof m.unit==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(m.periodEnd);return [d.id,{...v,metric:valid?m:null,evidence:registry.sources[v.source]}]}))};
+}
 function selectNews(items,driver){
  if(!driver)return [];
  return (Array.isArray(items)?items:[]).filter(x=>x&&typeof x.headline==="string"&&["strong","mentioned"].includes(x.confidence)&&(driver.news===null||driver.news.includes(x.category))&&safe(x.url)).slice(0,5);
@@ -21,8 +27,8 @@ function mount(host,{company,config,load,events=[],sections=null}){
  const n=(tag,txt,cls)=>{const e=document.createElement(tag);if(txt!==undefined)e.textContent=txt;if(cls)e.className=cls;return e};
  const btn=(txt,cls)=>{const e=n("button",txt,cls);e.type="button";return e};
  const a=(txt,url)=>{const e=n("a",txt,"sw-textlink");e.href=url;e.target="_blank";e.rel="noopener noreferrer";return e};
- const all=nodes(company.ticker),buttons=new Map();let selected="prices",currentEvents=events;
- const root=n("div",undefined,"sw88-driver"),head=n("div",undefined,"sw-section-row");head.append(n("h2","Company intelligence map"),n("small","Research context · no driver ranking yet"));root.append(head,n("p","Choose a driver to explore evidence, linked datasets and existing research sections.","sw-meta"));
+ let all=nodes(company.ticker),profile=null;const buttons=new Map();let selected="prices",currentEvents=events;const key=company.driverKey||company.ticker;
+ const root=n("div",undefined,"sw88-driver"),head=n("div",undefined,"sw-section-row");const status=n("small","Sector context · no driver ranking yet");head.append(n("h2","Company intelligence map"),status);root.append(head,n("p","Choose a driver to explore evidence, linked datasets and existing research sections.","sw-meta"));
  const map=n("div",undefined,"sw88-map");map.setAttribute("aria-label","Company research categories");
  const center=n("div",undefined,"sw88-center");center.append(n("strong",company.name),n("small",company.ticker));map.append(center);
  for(const d of all){const b=btn(undefined,"sw88-node");b.dataset.driverNode=d.id;b.setAttribute("aria-controls","sw88-driver-detail");b.append(n("strong",d.label),n("small",d.sub));b.onclick=()=>draw(d.id);buttons.set(d.id,b);map.append(b)}
@@ -32,11 +38,13 @@ function mount(host,{company,config,load,events=[],sections=null}){
   const d=all.find(x=>x.id===id);if(!d)return;selected=id;
   for(const [key,b] of buttons)b.setAttribute("aria-pressed",String(key===id));
   panel.replaceChildren(n("h3",d.label+" · "+d.sub),n("p",d.description,"sw-meta"));
+  if(d.evidence){panel.append(a("Issuer evidence · "+d.evidence.label+" ↗",d.evidence.url));if(d.metric){const card=n("div",undefined,"sw-peer");card.append(n("small",d.metric.label+" · reported period example"),n("strong",d.metric.value.toLocaleString("en-GB",{maximumFractionDigits:3})+" "+d.metric.unit),n("small","Period ended "+d.metric.periodEnd+" · not necessarily latest"));panel.append(card)}if(d.missing)panel.append(n("p","Coverage gap: "+d.missing,"sw-meta"));}
   const links=n("div",undefined,"sw-controls");
   for(const [key,label] of d.sections){const target=sections?.querySelector('[data-company-section="'+key+'"]');if(!target)continue;const b=btn(label+" ↗","sw-soft-btn");b.onclick=()=>target.scrollIntoView({block:"start",behavior:"auto"});links.append(b)}
   if(company.ticker==="NHY.OL"&&id==="operations"&&sections){const target=sections.querySelector('[data-company-section="ownership-pilot"]');if(target){const b=btn("Reported ownership & assets ↗","sw-soft-btn");b.onclick=()=>target.scrollIntoView({block:"start",behavior:"auto"});links.append(b)}}
   if(links.children.length)panel.append(links);
-  if(d.groups.length&&global.StockwatchIndustry&&config){
+  if(profile&&d.datasetIds?.length&&global.StockwatchIndustry&&config){const contextual=n("div");panel.append(contextual);global.StockwatchIndustry.mount(contextual,{config:{...config,driverProfiles:[{sectors:[company.sector],drivers:[{category:"Context",label:"Explore related official observations",question:"Background series only; no measured company exposure or price impact.",missing:d.missing||"Issuer-level linkage not quantified.",datasetIds:d.datasetIds}]}]},sector:company.sector,ticker:company.ticker,load});}
+  else if(!profile&&d.groups.length&&global.StockwatchIndustry&&config){
    const p=(config.driverProfiles||[]).find(x=>x.sectors?.includes(company.sector));
    const drivers=(p?.drivers||[]).filter(x=>d.groups.includes(x.category));
    if(drivers.length){const contextual=n("div");panel.append(contextual);global.StockwatchIndustry.mount(contextual,{config:{...config,driverProfiles:[{...p,drivers}]},sector:company.sector,ticker:company.ticker,load});}
@@ -49,7 +57,8 @@ function mount(host,{company,config,load,events=[],sections=null}){
   panel.setAttribute("aria-label",d.label+" research detail");
  }
  draw(selected);
+ if(typeof load==="function")Promise.resolve().then(()=>load("data/company-driver-profiles-v1.json")).then(registry=>{if(!host.contains(root))return;profile=resolveProfile(registry,key);if(!profile)return;all=nodes(company.ticker).map(d=>({...d,...profile.drivers[d.id]}));status.textContent="Issuer-reviewed business context · not price sensitivity";for(const d of all)buttons.get(d.id).querySelector("small").textContent=d.sub;draw(selected)}).catch(()=>{});
  return {updateEvents(items){currentEvents=items;draw(selected)},select:draw};
 }
-const api={nodes,selectNews,mount};if(typeof module==="object"&&module.exports)module.exports=api;else global.StockwatchDriverMap=api;
+const api={nodes,resolveProfile,selectNews,mount};if(typeof module==="object"&&module.exports)module.exports=api;else global.StockwatchDriverMap=api;
 })(typeof window!=="undefined"?window:{});

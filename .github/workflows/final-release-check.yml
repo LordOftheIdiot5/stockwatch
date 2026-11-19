@@ -402,6 +402,19 @@ jobs:
           path: workspace-previews/v88-driver-map-*.png
           if-no-files-found: ignore
 
+      - name: V88b curated driver profile checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v88b-')
+        run: |
+          node --test tests/test_company_driver_profiles_v88b.mjs
+          python tests/browser_check_company_driver_profiles_v88b.py
+      - name: Upload V88b profile previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v88b-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v88b-profiles
+          path: workspace-previews/v88b-*.png
+          if-no-files-found: ignore
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

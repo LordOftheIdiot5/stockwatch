@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-19",
+  "notice": "Curated business relevance, not measured price sensitivity. Dated example metrics are not necessarily latest values. Context series are not issuer exposure.",
+  "sources": {
+    "hydro": {
+      "url": "https://www.hydro.com/en/global/media/news/2026/hydros-third-quarter-2026-solid-results-and-strong-performance/",
+      "label": "Hydro Q3 2026 results"
+    },
+    "frontline": {
+      "url": "https://www.frontlineplc.cy/fro-second-quarter-and-six-months-2026-results/",
+      "label": "Frontline Q2 2026 results"
+    },
+    "mowi": {
+      "url": "https://mowi.com/corporate/a-record-fourth-quarter-ends-a-record-year-for-mowi/",
+      "label": "Mowi FY2025 results"
+    },
+    "mowiRisk": {
+      "url": "https://mowi.com/knowledge/risk-and-risk-management/",
+      "label": "Mowi risk disclosure"
+    },
+    "nvda": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "label": "NVIDIA FY2026 Form 10-K"
+    }
+  },
+  "profiles": {
+    "NHY.OL": {
+      "name": "Norsk Hydro",
+      "drivers": {
+        "numbers": {
+          "sub": "Adjusted EBITDA & cash flow",
+          "description": "Track segment profit, margins and working capital.",
+          "datasetIds": [],
+          "missing": "Quarterly statements still incomplete.",
+          "metric": {
+            "label": "Adjusted EBITDA",
+            "value": 9089,
+            "unit": "million NOK",
+            "periodEnd": "2026-09-30"
+          },
+          "source": "hydro"
+        },
+        "prices": {
+          "sub": "Aluminium & electricity",
+          "description": "Track metal and alumina prices, power costs and currency effects. Generation and purchase exposure differ across the group.",
+          "datasetIds": [
+            "power",
+            "minerals"
+          ],
+          "missing": "Authorized aluminium history, USD/NOK and company-specific power contracts not connected.",
+          "metric": null,
+          "source": "hydro"
+        },
+        "operations": {
+          "sub": "Smelters & hydro assets",
+          "description": "Track production, disruptions and low-carbon process investments.",
+          "datasetIds": [],
+          "missing": "Plant-level generation history not connected; see ownership evidence.",
+          "metric": null,
+          "source": "hydro"
+        },
+        "potential": {
+          "sub": "Low-carbon aluminium",
+          "description": "Track technology milestones, power agreements and demand.",
+          "datasetIds": [
+            "industry-eu"
+          ],
+          "missing": "Project economics and future volumes incomplete.",
+          "metric": null,
+          "source": "hydro"
+        },
+        "attention": {
+          "sub": "Results & project coverage",
+          "description": "Review source-linked news on operations and strategy; this is not a sentiment score.",
+          "datasetIds": [],
+          "missing": "",
+          "metric": null,
+          "source": "hydro"
+        },
+        "risk": {
+          "sub": "Energy, FX & input risk",
+          "description": "Investigate energy disruptions, currency effects and input costs.",
+          "datasetIds": [
+            "power"
+          ],
+          "missing": "Hedge positions and quantitative risk history incomplete.",
+          "metric": null,
+          "source": "hydro"
+        }
+      }
+    },
+    "FRO.OL": {
+      "name": "Frontline",
+      "drivers": {
+        "numbers": {
+          "sub": "Profit & dividends",
+          "description": "Track net profit, distributions and financing costs.",
+          "datasetIds": [],
+          "missing": "Normalized quarterly history incomplete.",
+          "metric": {
+            "label": "Quarterly net profit",
+            "value": 659.2,
+            "unit": "million USD",
+            "periodEnd": "2026-06-30"
+          },
+          "source": "frontline"
+        },
+        "prices": {
+          "sub": "Tanker charter earnings",
+          "description": "Track realized TCE by vessel class. Brent is oil-market context, not tanker freight or bunker prices.",
+          "datasetIds": [
+            "brent"
+          ],
+          "missing": "Licensed daily tanker route histories unavailable.",
+          "metric": {
+            "label": "VLCC average spot TCE",
+            "value": 152700,
+            "unit": "USD/day",
+            "periodEnd": "2026-06-30"
+          },
+          "source": "frontline"
+        },
+        "operations": {
+          "sub": "Fleet & utilization",
+          "description": "Track vessel acquisitions, disposals, deliveries and charter activity.",
+          "datasetIds": [],
+          "missing": "Daily vessel-level utilization not connected.",
+          "metric": null,
+          "source": "frontline"
+        },
+        "potential": {
+          "sub": "Charters & fleet renewal",
+          "description": "Track charter commitments and fleet changes; these are not guaranteed earnings.",
+          "datasetIds": [],
+          "missing": "",
+          "metric": null,
+          "source": "frontline"
+        },
+        "attention": {
+          "sub": "Freight & results coverage",
+          "description": "Monitor source-linked tanker market and company news.",
+          "datasetIds": [],
+          "missing": "",
+          "metric": null,
+          "source": "frontline"
+        },
+        "risk": {
+          "sub": "Spot exposure & financing",
+          "description": "Investigate variable tanker earnings and funding costs.",
+          "datasetIds": [
+            "rates"
+          ],
+          "missing": "Treasury yields are general context, not company borrowing rates.",
+          "metric": null,
+          "source": "frontline"
+        }
+      }
+    },
+    "XOSL:MOWI": {
+      "name": "Mowi",
+      "drivers": {
+        "numbers": {
+          "sub": "Operational EBIT & margin",
+          "description": "Track operational profitability, sales and harvest-related costs.",
+          "datasetIds": [],
+          "missing": "Normalized quarterly history incomplete.",
+          "metric": {
+            "label": "FY turnover",
+            "value": 5.73,
+            "unit": "billion EUR",
+            "periodEnd": "2025-12-31"
+          },
+          "source": "mowi"
+        },
+        "prices": {
+          "sub": "Salmon & feed prices",
+          "description": "Track realized salmon prices, contract mix and feed inputs.",
+          "datasetIds": [],
+          "missing": "Salmon benchmark and feed cost time series not connected.",
+          "metric": null,
+          "source": "mowiRisk"
+        },
+        "operations": {
+          "sub": "Harvest volumes & biology",
+          "description": "Track harvest volumes, biological outcomes and production efficiency.",
+          "datasetIds": [],
+          "missing": "Site-level biomass and mortality history not connected.",
+          "metric": {
+            "label": "FY harvest volume",
+            "value": 559000,
+            "unit": "tonnes",
+            "periodEnd": "2025-12-31"
+          },
+          "source": "mowi"
+        },
+        "potential": {
+          "sub": "Volume growth & processing",
+          "description": "Track expansion plans and downstream products; plans are not guarantees.",
+          "datasetIds": [],
+          "missing": "",
+          "metric": null,
+          "source": "mowi"
+        },
+        "attention": {
+          "sub": "Harvest & price coverage",
+          "description": "Review reported harvest, pricing and earnings news.",
+          "datasetIds": [],
+          "missing": "",
+          "metric": null,
+          "source": "mowi"
+        },
+        "risk": {
+          "sub": "Biology & supply",
+          "description": "Investigate supply, biological conditions, quality and licence-related risks.",
+          "datasetIds": [],
+          "missing": "Quantitative risk series incomplete.",
+          "metric": null,
+          "source": "mowiRisk"
+        }
+      }
+    },
+    "XNAS:NVDA": {
+      "name": "NVIDIA",
+      "drivers": {
+        "numbers": {
+          "sub": "Data-centre revenue & margins",
+          "description": "Track data-centre sales, segment growth and gross margin.",
+          "datasetIds": [],
+          "missing": "Harmonized quarterly statements incomplete.",
+          "metric": {
+            "label": "FY data-centre revenue",
+            "value": 193737,
+            "unit": "million USD",
+            "periodEnd": "2026-01-25"
+          },
+          "source": "nvda"
+        },
+        "prices": {
+          "sub": "Product mix & input costs",
+          "description": "Track system mix, procurement costs and inventory charges.",
+          "datasetIds": [],
+          "missing": "Leivro product data not joined; retail prices are not NVIDIA realized selling prices.",
+          "metric": null,
+          "source": "nvda"
+        },
+        "operations": {
+          "sub": "Foundry & component supply",
+          "description": "Track supplier capacity, inventory commitments and product ramps.",
+          "datasetIds": [],
+          "missing": "Supplier allocation and production volumes not quantified.",
+          "metric": null,
+          "source": "nvda"
+        },
+        "potential": {
+          "sub": "AI infrastructure demand",
+          "description": "Track computing demand, new platforms and deployment constraints.",
+          "datasetIds": [
+            "power"
+          ],
+          "missing": "Power data is general context, not customer-specific expenditure.",
+          "metric": null,
+          "source": "nvda"
+        },
+        "attention": {
+          "sub": "AI narratives & disclosures",
+          "description": "Track official announcements and named coverage, separately from orders and earnings.",
+          "datasetIds": [],
+          "missing": "",
+          "metric": null,
+          "source": "nvda"
+        },
+        "risk": {
+          "sub": "Export controls & concentration",
+          "description": "Track restrictions, manufacturing reliance, customer concentration and product transitions.",
+          "datasetIds": [],
+          "missing": "Quantified exposure and regulatory event history incomplete.",
+          "metric": null,
+          "source": "nvda"
+        }
+      }
+    }
+  }
+}
