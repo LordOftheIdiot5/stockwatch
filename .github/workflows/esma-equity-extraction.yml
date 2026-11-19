@@ -1,0 +1,22 @@
+name: ESMA equity extraction validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/esma_equity_extract.py'
+      - 'tests/test_esma_equity_extract.py'
+      - '.github/workflows/esma-equity-extraction.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install defusedxml==0.7.1
+      - run: python -m unittest discover -s tests -p 'test_esma_equity_extract.py' -v
+      - run: python scripts/esma_equity_extract.py
