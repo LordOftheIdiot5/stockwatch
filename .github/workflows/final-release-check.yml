@@ -383,6 +383,10 @@ jobs:
         if: startsWith(github.head_ref, 'feature/stockwatch-v87e-')
         run: node --test tests/test_ownership_v87e.mjs
 
+      - name: V87f company navigation checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v87f-')
+        run: python tests/browser_check_company_navigation_v87f.py
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

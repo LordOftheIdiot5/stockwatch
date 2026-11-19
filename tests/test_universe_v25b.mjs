@@ -10,9 +10,11 @@ test('all curated targets visible without activating scanner prices',()=>{
  const targets=read('../data/research-targets.json');
  const rows=researchUniverse(monitored,targets,null);
  const extra=rows.filter(r=>r.referenceOnly);
- assert.equal(monitored.length,138);
+ assert.equal(monitored.length,139);
+ assert.ok(monitored.some(r=>r.ticker==='NHY.OL'&&r.mic==='XOSL'&&r.isin==='NO0005052605'));
+ assert.ok(!extra.some(r=>r.referenceId==='XOSL:NHY'));
  assert.equal(targets.targets.length,75);
- assert.equal(extra.length,75);
+ assert.equal(extra.length,74);
  assert.equal(rows.length,213);
  assert.equal(new Set(rows.map(r=>r.ticker)).size,rows.length);
  assert.ok(extra.every(r=>r.unavailable===true&&r.close==null&&r.changePct==null&&r.sector));
