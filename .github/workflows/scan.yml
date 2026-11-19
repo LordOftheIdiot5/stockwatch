@@ -107,6 +107,10 @@ jobs:
       - name: Build listing coverage inventory
         run: node scripts/audit_listing_coverage.cjs --write
 
+      - name: Refresh GLEIF security-to-issuer identity evidence
+        continue-on-error: true
+        run: python scripts/gleif_isin_lei.py
+
       - name: Optional database archive ingestion
         id: archive_ingest
         # Never block scanner commits / site freshness when the external D1 API is down.
