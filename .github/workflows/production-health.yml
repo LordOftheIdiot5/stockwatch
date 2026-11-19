@@ -1,0 +1,51 @@
+name: Stockwatch production health
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/production_health.py'
+      - 'scripts/production_health_notify.py'
+      - 'tests/test_production_health.py'
+      - '.github/workflows/production-health.yml'
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: stockwatch-production-health-${{ github.event_name == 'pull_request' && github.ref || 'live' }}
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_production_health.py' -v
+      - name: Check actual public production endpoints
+        run: python scripts/production_health.py --require-sec --require-gleif
+      - name: Save diagnostics
+        uses: actions/upload-artifact@v5
+        with:
+          name: production-health
+          path: production-health.json
+          retention-days: 30
+      - name: Create or update incident and optional Telegram notice
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/production_health_notify.py
+      - name: Flag production failure
+        if: github.event_name != 'pull_request'
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('production-health.json'))
+          if d['status']=='critical':raise SystemExit('Critical production failure; see incident and diagnostic artifact')
+          if d['status']=='degraded':print('::warning::Production data quality degraded; see artifact')
+          PY
