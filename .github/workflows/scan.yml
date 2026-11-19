@@ -98,6 +98,8 @@ jobs:
 
       - name: Build historical catalyst evidence index
         run: python scripts/catalyst_evidence.py
+      - name: Build listing coverage inventory
+        run: node scripts/audit_listing_coverage.cjs --write
 
       - name: Optional database archive ingestion
         id: archive_ingest

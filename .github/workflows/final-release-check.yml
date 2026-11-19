@@ -125,6 +125,12 @@ jobs:
           node --check research-lab.js
           node --check research.js
           node --check catalyst-evidence-v1.js
+          node --check scripts/audit_listing_coverage.cjs
+      - name: V89e listing coverage inventory
+        if: startsWith(github.head_ref, 'feature/stockwatch-v89e-')
+        run: |
+          node --test tests/test_listing_coverage_v89e.cjs
+          node scripts/audit_listing_coverage.cjs --write
           node --check brand/brand.js
           node --check brand/research-coverage.js
       - name: Watchlist identity migration guard
