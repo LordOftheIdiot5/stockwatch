@@ -96,6 +96,9 @@ jobs:
         continue-on-error: true
         run: python scripts/relationship_discovery.py
 
+      - name: Build historical catalyst evidence index
+        run: python scripts/catalyst_evidence.py
+
       - name: Optional database archive ingestion
         id: archive_ingest
         # Never block scanner commits / site freshness when the external D1 API is down.

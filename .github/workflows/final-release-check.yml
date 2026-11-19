@@ -121,6 +121,7 @@ jobs:
           node --check research-analytics.js
           node --check research-lab.js
           node --check research.js
+          node --check catalyst-evidence-v1.js
           node --check brand/brand.js
           node --check brand/research-coverage.js
       - name: Watchlist identity migration guard
