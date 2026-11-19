@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T21:25:40Z",
+  "generated": "2026-11-19T21:27:50Z",
   "items": [
     {
       "id": "BONHR.OL:acaa86d4649a2b14d888172e3d0ce480b581c6a6bceca89e788c7545f50e2023",
@@ -87,29 +87,6 @@
       "sourceFeed": null,
       "match": "name_mentioned",
       "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "P911.DE:935dad8210cc681dc35d50cf28f58e2a1ea2c39fae3f106bd0b49d42f561d731",
-      "ticker": "P911.DE",
-      "name": "Porsche",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "Schwerbehinderung: Porsche-Fahrer unter fatalem Verdacht: Gericht ordnet Prüfung des Ausweises an",
-      "english": "Severe disability: Porsche driver under serious suspicion: Court orders license check",
-      "publisher": "Gegen Hartz IV",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaWF3QWF3LVJaaElRVlRSZnlyNzlIN1I5ZG9QZnVtU3IxSjBBVUttUnJDQzNoWE5mR2JBZjRIVXdMZjR5RmlCUDFMNFFRaVFkeXFWZklTdURaQldKbHJsMnVMZjR0S0o4MnFDZzNiUEEyd2VhUTNZY1N2VUxOY0Z1SThydnpzY2dFZ2JwWU1udjh6SHFnZ29CNkNYY29uX040UzlabFQteENFelFZLVNCUGROMFE3YU9yMmtqSEpoUzRBTWpU?oc=5",
-      "published": "2026-11-19T20:26:36Z",
-      "lang": "fr",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "review",
       "category": "General",
       "driverVersion": 1,
       "driverTags": [],
@@ -1252,7 +1229,7 @@
       "sector": "Industry & defence",
       "type": "news",
       "headline": "IG Metall kündigt 24-Stunden-Warnstreiks an",
-      "english": "IG Metall announces 24-hour warning strikes",
+      "english": null,
       "publisher": "NDR.de",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUVVOenhWWFdlUHBhclNJN0tBZFc0d2o2X0RYWU1nQ3FnQVNjTzVLUW5MUDFPeFVqVEg2T0VteVFjM1doMmNzUnJZNDVHejlpRHZLV1Etdy13WmhtcDdwamFUbE01RG1ycVNCeDhfRmNjRk5jZTRZMC1CM01MSEx2UzM2MGc0YzdYckRFNktiTEF5dllaV2l1VXNJVnR4ZFBON1E?oc=5",
       "published": "2026-11-19T15:12:01Z",
@@ -2428,24 +2405,52 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "UCG.MI:feb449ec9f5310c140cad06987887436a9da079a90c7d09c57616a7123301bcf",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Commerzbank welcomes UniCredit commitments after Berlin agreement",
+      "english": null,
+      "publisher": "Euronews.com",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdkg3dS1XdnBqWlp4TE5XOVJ5cVRpREpVdkM5R010LUdfTDJrTDFsRzBERi1vX2JBLWR5MlJqQjg5Q0hpc3dyWDFsNWZFUGZvb0NrZnlvR2pkLUR1SXFoNEdCWEtmX0tUanJlWFRMMklrV1p4aXE1V1MyQjVmYV9HVElNTzdrQ0w2UjFDd01tcExlTGIwTXVrbVA3VEI0N2xVNnBV?oc=5",
+      "published": "2026-11-19T11:03:03Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     }
   ],
-  "totalStored": 1646,
+  "totalStored": 1643,
   "limit": 100,
   "quality": {
-    "total": 1646,
-    "relevant": 1223,
-    "review": 366,
+    "total": 1643,
+    "relevant": 1222,
+    "review": 364,
     "duplicates": 74,
     "issuerLinked": 418,
     "driverClassification": {
       "version": 1,
-      "classified": 399,
+      "classified": 398,
       "categories": {
         "numbers": 238,
         "prices": 4,
         "operations": 1,
-        "potential": 174,
+        "potential": 173,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
@@ -2455,10 +2460,10 @@
       "Dividends": 12,
       "M&A": 68,
       "Guidance": 34,
-      "Contracts": 113,
+      "Contracts": 111,
       "Capital & ownership": 1,
       "Management": 52,
-      "General": 1112
+      "General": 1111
     }
   }
 }

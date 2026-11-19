@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-19T21:25:40Z",
+  "generated": "2026-11-19T21:27:50Z",
   "windowStart": "2026-11-05",
   "windowEnd": "2026-11-18",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -11719,18 +11719,10 @@
         {
           "date": "2026-11-18",
           "issuer": 1,
-          "media": 1
+          "media": 0
         }
       ],
       "potential": [
-        {
-          "id": "SMOP.OL:e0b349c2bc7ef831050a4ff080929ebc2278b54efe813725a7e2155042c61731",
-          "published": "2026-11-18T12:00:17Z",
-          "headline": "SMOP: Smartoptics completes picture of northern Sweden connectivity with AC-Net contract",
-          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPcnNROEJlWDFWRDBJczA4Tm5lSWtNVmNKZk5tME9jSTI5alBRX1NESm9EcWRNRXZVcVphNzN6S2dNNEJReE5ZQklnNmsycE03NTdXdm8xclgyb0xpNDBTU1RsdGpqZ0h5ejBXVjJ6cFBpRkpTNVNVLUlCZVdBMkoyZzd0amxkRVg5M3g1Rk9KVnItbFhocndNalRTRzJ5RGp0ek41cFFSSThSMVpSVGlTMWxpZHpuSmIzN292X1J5UHhWTmJKZDloNmQ4cklTb3lxSkl6X2JOY0VKSVNVVFFqYlFzc2ZLZDRTZXVPMkE2UENQbmNsUWhDUkNtbGo4YUFjSElFeV94R3M?oc=5",
-          "evidence": "named_reference",
-          "topic": "Contracts / agreements"
-        },
         {
           "id": "SMOP.OL:8b80d43bfc9c108446789c67837662468b1ea80eb75207956bf4270f1c83369e",
           "published": "2026-11-18T12:00:17Z",
@@ -11740,13 +11732,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 3,
+      "observedRecords": 2,
       "latestRecord": "2026-11-18T12:00:17Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 2,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
@@ -11755,7 +11747,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 2
+        "media": 1
       }
     },
     "SOBI.ST": {
@@ -13347,7 +13339,7 @@
         {
           "date": "2026-11-18",
           "issuer": 0,
-          "media": 3
+          "media": 2
         }
       ],
       "potential": [
@@ -13360,7 +13352,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 23,
+      "observedRecords": 22,
       "latestRecord": "2026-11-19T18:34:44Z",
       "topicCounts": {
         "numbers": 2,
@@ -13375,7 +13367,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 20
+        "media": 19
       }
     },
     "VOLV-B.ST": {
@@ -13778,12 +13770,12 @@
         {
           "date": "2026-11-18",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-18T23:32:54Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13797,7 +13789,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     },
     "WWI.OL": {
