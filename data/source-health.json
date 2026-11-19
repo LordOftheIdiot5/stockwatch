@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T08:06:57Z",
-  "latestScan": "2026-11-19T08:05:59+00:00",
-  "scanAgeHours": 0.02,
-  "contextAgeHours": 0.02,
+  "generated": "2026-11-19T09:08:10Z",
+  "latestScan": "2026-11-19T09:06:18+00:00",
+  "scanAgeHours": 0.03,
+  "contextAgeHours": 0.03,
   "priceFreshness": {
     "comparisonDate": "2026-11-18",
     "equities": {
-      "comparable": 1,
-      "older": 4,
-      "no_volume": 3,
+      "comparable": 6,
+      "older": 0,
+      "no_volume": 2,
       "unconfirmed": 131,
       "unavailable": 0
     },
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 145,
+  "storedStories": 143,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,65 +115,65 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 67.1,
+      "avgLatencyMs": 67.2,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 435.1,
+      "avgLatencyMs": 283.9,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 835.0,
+      "avgLatencyMs": 567.9,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 283.7,
+      "avgLatencyMs": 297.4,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3171.7,
+      "avgLatencyMs": 1948.5,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1470,
-    "relevant": 1113,
-    "review": 318,
-    "duplicates": 54,
+    "total": 1488,
+    "relevant": 1123,
+    "review": 322,
+    "duplicates": 58,
     "issuerLinked": 416,
     "driverClassification": {
       "version": 1,
-      "classified": 357,
+      "classified": 360,
       "categories": {
-        "numbers": 223,
+        "numbers": 224,
         "prices": 2,
         "operations": 1,
-        "potential": 145,
+        "potential": 147,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 234,
-      "Dividends": 11,
-      "M&A": 57,
+      "Earnings / results": 236,
+      "Dividends": 12,
+      "M&A": 58,
       "Guidance": 32,
-      "Contracts": 93,
+      "Contracts": 96,
       "Capital & ownership": 1,
       "Management": 43,
-      "General": 999
+      "General": 1010
     }
   },
   "secFilings": {
