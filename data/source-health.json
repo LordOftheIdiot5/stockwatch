@@ -1,25 +1,25 @@
 {
-  "generated": "2026-11-18T23:37:46Z",
-  "latestScan": "2026-11-18T23:37:09+00:00",
-  "scanAgeHours": 0.01,
-  "contextAgeHours": 0.01,
+  "generated": "2026-11-19T00:24:27Z",
+  "latestScan": "2026-11-19T00:23:28+00:00",
+  "scanAgeHours": 0.02,
+  "contextAgeHours": 0.02,
   "priceFreshness": {
     "comparisonDate": "2026-11-18",
     "equities": {
-      "comparable": 2,
-      "older": 3,
+      "comparable": 1,
+      "older": 4,
       "no_volume": 3,
-      "unconfirmed": 130,
+      "unconfirmed": 131,
       "unavailable": 0
     },
-    "total": 138,
+    "total": 139,
     "comparablePairs": 0,
     "reportedPairs": 12,
     "status": "degraded",
     "method": "Conservative 22:00 UTC weekday cutoff; no exchange-specific holidays; not a live-quote guarantee."
   },
-  "tracked": 138,
-  "priced": 138,
+  "tracked": 139,
+  "priced": 139,
   "missing": [],
   "exchanges": [
     {
@@ -72,8 +72,8 @@
     },
     {
       "name": "Oslo",
-      "total": 43,
-      "priced": 43,
+      "total": 44,
+      "priced": 44,
       "missing": 0
     },
     {
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 133,
+  "storedStories": 136,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -112,45 +112,45 @@
   },
   "sourceRequests": {
     "Yahoo prices": {
-      "requests": 138,
-      "succeeded": 138,
+      "requests": 139,
+      "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 70.0,
+      "avgLatencyMs": 75.6,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 601.5,
+      "avgLatencyMs": 449.3,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1640.9,
+      "avgLatencyMs": 998.3,
       "errorTypes": {}
     },
     "Google News": {
-      "requests": 594,
-      "succeeded": 594,
+      "requests": 598,
+      "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 313.0,
+      "avgLatencyMs": 325.5,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3102.9,
+      "avgLatencyMs": 1979.4,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1405,
-    "relevant": 1091,
-    "review": 271,
+    "total": 1409,
+    "relevant": 1093,
+    "review": 273,
     "duplicates": 52,
     "issuerLinked": 410,
     "categories": {
@@ -161,7 +161,7 @@
       "Contracts": 80,
       "Capital & ownership": 0,
       "Management": 42,
-      "General": 963
+      "General": 967
     }
   },
   "secFilings": {
@@ -170,355 +170,355 @@
       "0001045810": {
         "ticker": "NVDA",
         "records": 9,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000002488": {
         "ticker": "AMD",
         "records": 9,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001730168": {
         "ticker": "AVGO",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000789019": {
         "ticker": "MSFT",
         "records": 9,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000320193": {
         "ticker": "AAPL",
         "records": 6,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001652044": {
         "ticker": "GOOGL",
         "records": 10,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001018724": {
         "ticker": "AMZN",
         "records": 9,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001326801": {
         "ticker": "META",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001341439": {
         "ticker": "ORCL",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000723125": {
         "ticker": "MU",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000050863": {
         "ticker": "INTC",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001596532": {
         "ticker": "ANET",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001571996": {
         "ticker": "DELL",
         "records": 13,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001375365": {
         "ticker": "SMCI",
         "records": 12,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001321655": {
         "ticker": "PLTR",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0002115436": {
         "ticker": "XOM",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000093410": {
         "ticker": "CVX",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001163165": {
         "ticker": "COP",
         "records": 6,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000087347": {
         "ticker": "SLB",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000003570": {
         "ticker": "LNG",
         "records": 12,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001692819": {
         "ticker": "VST",
         "records": 12,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001868275": {
         "ticker": "CEG",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000753308": {
         "ticker": "NEE",
         "records": 16,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000018230": {
         "ticker": "CAT",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000315189": {
         "ticker": "DE",
         "records": 6,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000040545": {
         "ticker": "GE",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001996810": {
         "ticker": "GEV",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000773840": {
         "ticker": "HON",
         "records": 11,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000936468": {
         "ticker": "LMT",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000101829": {
         "ticker": "RTX",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001133421": {
         "ticker": "NOC",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000100885": {
         "ticker": "UNP",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001090727": {
         "ticker": "UPS",
         "records": 9,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001048911": {
         "ticker": "FDX",
         "records": 15,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000019617": {
         "ticker": "JPM",
         "records": 15,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000070858": {
         "ticker": "BAC",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000886982": {
         "ticker": "GS",
         "records": 11,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000895421": {
         "ticker": "MS",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0002012383": {
         "ticker": "BLK",
         "records": 5,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001403161": {
         "ticker": "V",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001141391": {
         "ticker": "MA",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000104169": {
         "ticker": "WMT",
         "records": 6,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000909832": {
         "ticker": "COST",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000354950": {
         "ticker": "HD",
         "records": 8,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000080424": {
         "ticker": "PG",
         "records": 13,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001318605": {
         "ticker": "TSLA",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000200406": {
         "ticker": "JNJ",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000059478": {
         "ticker": "LLY",
         "records": 4,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0000731766": {
         "ticker": "UNH",
         "records": 7,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       },
       "0001551152": {
         "ticker": "ABBV",
         "records": 12,
-        "lastAttempt": "2026-11-18T23:25:22Z",
+        "lastAttempt": "2026-11-19T00:24:05Z",
         "status": "ok",
-        "lastSuccess": "2026-11-18T23:25:22Z"
+        "lastSuccess": "2026-11-19T00:24:05Z"
       }
     },
-    "lastAttempt": "2026-11-18T23:25:22Z"
+    "lastAttempt": "2026-11-19T00:24:05Z"
   },
   "freightRoutes": {
     "cataloged": 30,

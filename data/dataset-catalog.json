@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T23:37:56Z",
+  "generated": "2026-11-19T00:24:33Z",
   "datasets": [
     {
       "name": "Official macroeconomic and FX observations",
@@ -58,7 +58,7 @@
     {
       "name": "European issuer directory",
       "path": "data/issuer-identities.json",
-      "records": 138,
+      "records": 139,
       "license": "Original watchlist identities; underlying exchange identifiers subject to source terms"
     },
     {
@@ -76,13 +76,13 @@
     {
       "name": "Historical article index",
       "path": "data/news-store/index.json",
-      "records": 1405,
+      "records": 1409,
       "license": "Git-backed source-linked metadata; inspect original publisher terms"
     },
     {
       "name": "A/B indicator observations",
       "path": "data/spread-observations.json",
-      "records": 48,
+      "records": 60,
       "license": "Derived research indicators; no raw historical OHLCV"
     },
     {
@@ -94,7 +94,7 @@
     {
       "name": "Source quality",
       "path": "data/source-health.json",
-      "records": 138,
+      "records": 139,
       "license": "Original scanner telemetry"
     }
   ]
