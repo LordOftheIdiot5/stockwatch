@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-19T18:54:25.009198+00:00",
-  "newsRecordsScanned": 1619,
+  "generated": "2026-11-19T19:55:40.655291+00:00",
+  "newsRecordsScanned": 1629,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -2086,6 +2086,20 @@
       "amount": null
     },
     {
+      "id": "44fd11bf90cf401009fda455120fe54cc2d7c8537456ea93b026584dc4ed0274",
+      "newsId": "SUBC.OL:bfd53c7fbf3220f71b4960c6612485f3a894feb951c0958be26bd62b2836f9b8",
+      "entityIds": [
+        "subsea7"
+      ],
+      "issuerTicker": "SUBC.OL",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T10:33:12Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOanFYNGJPUnY4ek5FMTMyWDBXUWdGLXVkaDBCN1dNSjMwVEpMMFhFajlQajRySk5sd3E0cURQNkZHRktwR29UX1RNT1RJOTc2a1kxMG0tWnRFLXdEdkxKSUxqanhfZ2dkWmxtUHdWVTRoT0ZBeW9yNDBuMG91c25GZTFSUWJOSWEwVXFmUm9iWDlwMkRkUTZVc1NMQWxDMUo5Y3JRWmhFQWpmOFpxTlNCdGEzRWE3MnJ5U3h0Nl9nakrSAVpBVV95cUxPbGRBUU5GTTVJRXEzdkFhYjB3QUNBQVp6QWdzQk5fd0szQXZ2UUNjZHhQS1VuYXZmMFBudms2UnlSdk5aX2F0TXJlaDlSR185ekUtZ2pzaHFiVWc?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "e87fb3bcabb8e41e96087ebbb865c66c79bc896a3bfc00c0dc798854f0799bfe",
       "newsId": "FCT.MI:1b2f7b75c9f7f4fb385c7c93cb646821598ea97d79ee27dd4c81f39b69bcbbae",
       "entityIds": [],
@@ -2364,6 +2378,44 @@
       "candidateType": "headline_event",
       "published": "2026-11-19T18:44:22Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaFNTNWdxQTkyLW1KNlV1bFUzMy0zYmNKOHhhRFFUOG9yYnFRNUNWcjVRZURXWlBITG9aOXlSQllaakVOMWpocE5FOWVrTi1nX043Q2lQMkJvM1hsX0s5aGRndE43NXR5OU9SbmJ4STVnMXU0TnVOZGNpT0tjYmhkSVdPS01HMXQtNVUzNVZCUkh5RElzb0VPN2lTMGd6SnhWVG1TbmstNjRMYXFtRVJDbQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "951b448faf99589a2733313a9a435525d27712e263dc5de8cfa1eee616d3981b",
+      "newsId": "UCG.MI:46a3098d173c45ef53b1aae659bbe52fa03c0bdee2cb2ce0f7c2b6cffc46e6b0",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T18:56:39Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOEdPdEc3aWVlTFRobXRHZkoyM3RaUEJkcVBWNDZnUzFBOHhQcm9hZFlUWXpDQkg3RFFZakFLRTlUanVRamhJbTBlR2hXX0NFUzE0LXVoYVlRdDVaRlhBZTFla0daY18tYWVNaGZCQTdJQ2FxMzdpTGpJZHBwMDJMdWtYYWRrY1BlZWw5cWY4UzhKLTVTd2dOSmFjU0FodV9IblNNQ0NfelZGVmxDajZEZFhB?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "3221055bc1212c9ab0f1b82b026d121c2efa857fef7bde649f81ab14784c75ef",
+      "newsId": "FCT.MI:1a862fe7cf8911f000e7cfedd8e13490cb84ce5bdbec0426e7ae42b0aa34f47b",
+      "entityIds": [],
+      "issuerTicker": "FCT.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T19:19:25Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQb0ticmhLYzJVUXRmM3pMZW9KWExoeWpmSkRqMndnazE0VmJubEllVjhaWElIZWpSTHpHYzJCLXU0QnFjdi1IZFNEdlprOXFycld2dnRCUFcwYlFYeTlac2lINUpUNlllTVkzYXYxVEFwcnZzdzhKT1g3VmtjdGJqX2NCWGs3aWlpb2FsTTlZUWNNSVJkVlE?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "f6d1f6a7e3917ec841a2dbf966a299524a55469db2d098122e10475ba2d54821",
+      "newsId": "GOMX.ST:08f1e5c52ed64adc88979d6323cb6587b70065248b2a15e87683e0c5a9d32127",
+      "entityIds": [],
+      "issuerTicker": "GOMX.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T19:36:21Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYjhRV2YyX0JkbmFkUFRNaXBIaUlJMU5lRzlkYkNVRmdVT3pMMTcwZ1RrcUFuakZTWHZSYUp6UkkzUDNKSkhlaEF2MVVvVGhKWHBQZU1pUjFfX191Mi1oTlR6enBKV1JIelVpMUJSbEstYnl1a1NJMEpvSnNkWFliRmJkNjI3OVdCX2JKbUxXcUE1QU03alZtSzlCc2V4SGZKeHd3Rl85UHExeXc?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
