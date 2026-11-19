@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T22:59:54Z",
+  "generated": "2026-11-19T23:24:03Z",
   "items": [
     {
       "id": "SAP.DE:f73fee912a1085634d82ab54770662573b191e1b46db164bfd33fa67ad3744bf",
@@ -23,6 +23,30 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "SAP.DE:9264bd0a7aecb64c3608318749c7e767bece649dfb3c8ea9f0b3b698bbcb210f",
+      "ticker": "SAP.DE",
+      "name": "SAP",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "SAP Concur warns of rising fraud losses in finance",
+      "english": null,
+      "publisher": "SecurityBrief Australia",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQkVjSC04aWM5SDh0am5nWS1NZTJwT01McnJYMzBXUjhqWXhwaGlITTNrWnE0TkYzQnIwUWd4S043emVMTkh6Z2hjMWYtQXNIMTlab3R3OTgxMmRfWlRDZ0NaUWZ3SE1xdXQyTFBxY3FPS0k3M3lOdi1wTG15WTg5eUdSUWY5MVR6Y0pwSU53?oc=5",
+      "published": "2026-11-19T22:55:03Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "SAP.DE:f73fee912a1085634d82ab54770662573b191e1b46db164bfd33fa67ad3744bf"
     },
     {
       "id": "BONHR.OL:acaa86d4649a2b14d888172e3d0ce480b581c6a6bceca89e788c7545f50e2023",
@@ -2391,43 +2415,15 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SAAB-B.ST:7a4c85b166348701e2274cde9c1522a0d1947318e7014adef45eb20f7ca16424",
-      "ticker": "SAAB-B.ST",
-      "name": "Saab",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Saab får ny USA-order på pansarvärnsvapen",
-      "english": null,
-      "publisher": "Metal Supply",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNDhSNDF3bmM2N1RDQkhOUXRQb2tEQTRtR0JxLWhsWG0zeFZYNGJZSDlMeFRYSjg3WkZzdDBEakhaRl9iRER1OFhYdlRzb3M4cXE2MG50U2dwZ2gzZ2xkdGpzR1E0bDZvRktjVWpvdEw2OFhKbGtjMUtYbEtTQnZ1SUhfbzJRanc0M21yX1hXN3NjZV9QN1c5X3NhWTBZdw?oc=5",
-      "published": "2026-11-19T11:38:30Z",
-      "lang": "sv",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "Contracts",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: Contracts"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1657,
+  "totalStored": 1658,
   "limit": 100,
   "quality": {
-    "total": 1657,
+    "total": 1658,
     "relevant": 1229,
-    "review": 370,
-    "duplicates": 75,
+    "review": 371,
+    "duplicates": 76,
     "issuerLinked": 418,
     "driverClassification": {
       "version": 1,
@@ -2449,7 +2445,7 @@
       "Contracts": 114,
       "Capital & ownership": 1,
       "Management": 52,
-      "General": 1121
+      "General": 1122
     }
   }
 }
