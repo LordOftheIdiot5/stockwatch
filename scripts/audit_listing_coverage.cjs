@@ -65,6 +65,7 @@ function run(){
  const out=build(inventory,{watchlist:read('watchlist.json'),signals:read('data/signals.json'),targets:read('data/research-targets.json'),expansion:read('data/research-expansion.json'),issuer:read('data/issuer-identities.json'),coverage:read('data/research-coverage.json'),fundamentals:read('data/fundamentals.json'),news,operating:read('data/company-operating-metrics.json')});
  if(process.argv.includes('--write')){
   const dest=path.join(ROOT,'data/listing-coverage-v1.json');fs.writeFileSync(dest+'.tmp',JSON.stringify(out,null,2)+'\n');fs.renameSync(dest+'.tmp',dest);
+  require('./price_source_queue.cjs').write(out,ROOT);
  }
  console.log(JSON.stringify({generated:out.generated,summary:out.summary,byGroup:out.byGroup,byVenue:out.byVenue},null,2));
 }

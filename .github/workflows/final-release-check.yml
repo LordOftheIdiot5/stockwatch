@@ -126,6 +126,9 @@ jobs:
           node --check research.js
           node --check catalyst-evidence-v1.js
           node --check scripts/audit_listing_coverage.cjs
+          node --check scripts/price_source_queue.cjs
+      - name: V89f price source queue tests
+        run: node --test tests/test_price_source_queue_v89f.cjs
       - name: V89e listing coverage inventory
         if: startsWith(github.head_ref, 'feature/stockwatch-v89e-')
         run: |
