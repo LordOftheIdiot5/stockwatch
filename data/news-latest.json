@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T20:17:27Z",
+  "generated": "2026-11-19T20:24:22Z",
   "items": [
     {
       "id": "SAP.DE:883cd7ca124233484d07929e288201e918109090c1433e83b47b7c90f673ee29",
@@ -207,6 +207,29 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaFNTNWdxQTkyLW1KNlV1bFUzMy0zYmNKOHhhRFFUOG9yYnFRNUNWcjVRZURXWlBITG9aOXlSQllaakVOMWpocE5FOWVrTi1nX043Q2lQMkJvM1hsX0s5aGRndE43NXR5OU9SbmJ4STVnMXU0TnVOZGNpT0tjYmhkSVdPS01HMXQtNVUzNVZCUkh5RElzb0VPN2lTMGd6SnhWVG1TbmstNjRMYXFtRVJDbQ?oc=5",
       "published": "2026-11-19T18:44:22Z",
       "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "VNA.DE:c2404156272055a52ff2dbee12cf2f7b45c56354d0a32d4395475c49f64f6c95",
+      "ticker": "VNA.DE",
+      "name": "Vonovia",
+      "sector": "Property",
+      "type": "news",
+      "headline": "Der Tag: Was der Vonovia-Chef im Streit über bezahlbares Wohnen vorschlägt",
+      "english": "Der Tag: What the CEO of Vonovia proposes in the dispute over affordable housing",
+      "publisher": "n-tv.de",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWk83Q0RlSnpNX2twaUJJY0xKcklvdUZiUnhONmJhVEg4U29Mc2VTMWZNcU52N0RVUjg2Z3kxNXhGXzAtOWRsZjJMWEpvdjJ0WGJ4bHk3TkRiOFZ1bzlwbW8xZHJQb3ZnZU94a001dHBHczlVMlduanVyclBfUGdBZEhNckFoV0U0TERITmFQRWFCdjNzb3VCMERlTXp4TFNZWGNHN0xJUlZUVXk2TGY3dg?oc=5",
+      "published": "2026-11-19T18:34:44Z",
+      "lang": "de",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -2427,36 +2450,13 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high"
-    },
-    {
-      "id": "NKT.CO:61a679c065144f10c5c0351bc24b06b26820a565047d8d74306fad6dfe899f8b",
-      "ticker": "NKT.CO",
-      "name": "NKT A/S",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "NKT: Backlog and margins held firm as capacity ramps and Q4 supports year-end guidance",
-      "english": null,
-      "publisher": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOaDhYU3dWZ0lTXzhraEhrNFNuTUlDT3dNNUJDYXdDbFlxTmpCTVJIOTU4NWpxRURzWkpoUkVCR3dsZ3BnVGJxRjR0cjhQckVZZ1VwSE9BRTllQ1RvU0E2cHNlblhaVFg1N2l5dk1ZcmJFOElBNm5nWDB2NTRxa2hDRzVGV0cyTWR0ZGEzMGdndVlja0RFRldCdThXcG1rVy1hUGlfNGs1ZmlkemJpRXRjN2taa254aVhXdzdVZ1BjV1RzTV81c1VESGFadk5nczU4c3pocTNZQ3JoZU50dmpvdkNrZ3dNb2V1RHZxSzlzNXFKbXMtYnc3bFRzd1JySGp3eGc?oc=5",
-      "published": "2026-11-19T10:38:11Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1635,
+  "totalStored": 1636,
   "limit": 100,
   "quality": {
-    "total": 1635,
-    "relevant": 1217,
+    "total": 1636,
+    "relevant": 1218,
     "review": 363,
     "duplicates": 72,
     "issuerLinked": 418,
@@ -2480,7 +2480,7 @@
       "Contracts": 111,
       "Capital & ownership": 1,
       "Management": 51,
-      "General": 1104
+      "General": 1105
     }
   }
 }
