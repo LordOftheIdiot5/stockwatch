@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T21:27:50Z",
+  "generated": "2026-11-19T21:55:39Z",
   "items": [
     {
       "id": "BONHR.OL:acaa86d4649a2b14d888172e3d0ce480b581c6a6bceca89e788c7545f50e2023",
@@ -94,6 +94,29 @@
       "priority": "normal"
     },
     {
+      "id": "P911.DE:935dad8210cc681dc35d50cf28f58e2a1ea2c39fae3f106bd0b49d42f561d731",
+      "ticker": "P911.DE",
+      "name": "Porsche",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Schwerbehinderung: Porsche-Fahrer unter fatalem Verdacht: Gericht ordnet Prüfung des Ausweises an",
+      "english": "Severe disability: Porsche driver under serious suspicion: Court orders license check",
+      "publisher": "Gegen Hartz IV",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaWF3QWF3LVJaaElRVlRSZnlyNzlIN1I5ZG9QZnVtU3IxSjBBVUttUnJDQzNoWE5mR2JBZjRIVXdMZjR5RmlCUDFMNFFRaVFkeXFWZklTdURaQldKbHJsMnVMZjR0S0o4MnFDZzNiUEEyd2VhUTNZY1N2VUxOY0Z1SThydnpzY2dFZ2JwWU1udjh6SHFnZ29CNkNYY29uX040UzlabFQteENFelFZLVNCUGROMFE3YU9yMmtqSEpoUzRBTWpU?oc=5",
+      "published": "2026-11-19T20:26:36Z",
+      "lang": "fr",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "SAP.DE:883cd7ca124233484d07929e288201e918109090c1433e83b47b7c90f673ee29",
       "ticker": "SAP.DE",
       "name": "SAP",
@@ -161,6 +184,29 @@
       "sourceFeed": null,
       "match": "name_mentioned",
       "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "DOFG.OL:6358f7844616fbdae0cc53954d386c017a8e8456760f23d71da6ab3e3bd916c9",
+      "ticker": "DOFG.OL",
+      "name": "DOF Group",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "A.P. Møller Maritime kjøper DOF-aksjer for 154,9 millioner",
+      "english": null,
+      "publisher": "E24",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5XOThaMmpmRFQzX0kyMFR6WWFrNU5LTW9McW1URF9YMDIyWDNSUER4b2dnTHNJUGRkTVdlX3VZQ01DWmlHTmFDQ2xsUUVhc09WSGNST0RyVlJMbTdWcml3QmRvV1o2dw?oc=5",
+      "published": "2026-11-19T19:33:40Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
       "category": "General",
       "driverVersion": 1,
       "driverTags": [],
@@ -1375,6 +1421,29 @@
       "priority": "normal"
     },
     {
+      "id": "CAF.MC:125d9e8679cbe7674124a7c3a4cf32abaa21045410a2095cbf3f097130b81955",
+      "ticker": "CAF.MC",
+      "name": "CAF",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "CAF together with Hosts Kenya, Tanzania and Uganda Launch TotalEnergies CAF AFCON 2027 “Shield Inspired” LOGO",
+      "english": null,
+      "publisher": "CAFOnline.com",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPck9obnlidzhrQ0kxQ0dyeGF4cEsteHN0NHdINFMySFlKUDNhYkE0aGNvcThFTWE1a2h0WFoxOVo0OUpWclBDZDNhQVROYnRYR0Y4Sk8takwwNXlLNlVhYnhSaU15WGo5cjRVOGxQUFRxVE5CbTRmYTYzNnRlaUk4RkkzbUVTcE9ndm1fR3NrN1BqNzNUcExqdkJvQXk4bDZjX1hjdVUtcEJ0M3VUb3RXdzlvcnFNX0stYm5sSU9BNFo2VlFIOG83SW9hYUxYTmhxUFdrMFlvdERQRWJ4?oc=5",
+      "published": "2026-11-19T13:59:50Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "SAND.ST:0b65d08766f8c2e05bb55d50edb07cc94b3d6cea0ae7ef03dfe07f1db85530a6",
       "ticker": "SAND.ST",
       "name": "Sandvik",
@@ -2354,116 +2423,37 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "ALRIB.PA:01978f546114708426e659e5c39048fb24c39ece628a311aaa35fa0ed578dc0c",
-      "ticker": "ALRIB.PA",
-      "name": "Riber",
-      "sector": "Tech & space",
-      "type": "news",
-      "headline": "Riber shares jump 11.5% after an MBE 6000 order in Asia",
-      "english": null,
-      "publisher": "Idéal Investisseur",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQc0ROSWNLNjBsUUZXcGxncWxWTzJETGJFZERBSmhBOHhMdkFhMDdiZms3a2dPUWo5WTdqYWFsSTlEMG9NLVhIQ3d0SkxoQjVWSmFYUUhWU2ZYaVFhU0dJZHdJSDNDbmpnZGx4US00NDhnUDdGNVF5MWpoUU4tbmJQN1JUQXpVR2RXS3c2RkliUnl5OE9kUk9lNUZCNFQ2RmtrMExWcURSSHZlc3gxa09wbDg2dw?oc=5",
-      "published": "2026-11-19T11:14:00Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Contracts",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: Contracts"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
-    },
-    {
-      "id": "ODF.OL:a2c38cc6dd2aa3013c733ea402bd45f262d31be7d027a9d1d5c49cdf9d0c2048",
-      "ticker": "ODF.OL",
-      "name": "Odfjell",
-      "sector": "Shipping & offshore",
-      "type": "news",
-      "headline": "Odfjell-operated chemical tanker sold by Japanese owner",
-      "english": null,
-      "publisher": "TradeWinds News",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcEg5LWhUNU5PZzh2VFp1WjNBdW90Vkd5eVlpeUdabjY4R0lDbndPczBGZWEtSGhIajdwbUhaU0FzWnl1dFpvSEZoX2dMXzFaX1hFWGtEcVNtOHNpdThBaXg1WHhuMG1TWWRTZmVOWG5ydTliNXhrcVh6Z1VNYnYyZi13bnNhSUlWdENkX19IdEtzUGU4eEVLM24wX0ZUbmZhOHV5YWF4SXdnQQ?oc=5",
-      "published": "2026-11-19T11:11:37Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:feb449ec9f5310c140cad06987887436a9da079a90c7d09c57616a7123301bcf",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Commerzbank welcomes UniCredit commitments after Berlin agreement",
-      "english": null,
-      "publisher": "Euronews.com",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdkg3dS1XdnBqWlp4TE5XOVJ5cVRpREpVdkM5R010LUdfTDJrTDFsRzBERi1vX2JBLWR5MlJqQjg5Q0hpc3dyWDFsNWZFUGZvb0NrZnlvR2pkLUR1SXFoNEdCWEtmX0tUanJlWFRMMklrV1p4aXE1V1MyQjVmYV9HVElNTzdrQ0w2UjFDd01tcExlTGIwTXVrbVA3VEI0N2xVNnBV?oc=5",
-      "published": "2026-11-19T11:03:03Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Contracts",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: Contracts"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1643,
+  "totalStored": 1649,
   "limit": 100,
   "quality": {
-    "total": 1643,
-    "relevant": 1222,
-    "review": 364,
+    "total": 1649,
+    "relevant": 1225,
+    "review": 367,
     "duplicates": 74,
     "issuerLinked": 418,
     "driverClassification": {
       "version": 1,
-      "classified": 398,
+      "classified": 401,
       "categories": {
-        "numbers": 238,
+        "numbers": 239,
         "prices": 4,
         "operations": 1,
-        "potential": 173,
+        "potential": 175,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 254,
+      "Earnings / results": 255,
       "Dividends": 12,
       "M&A": 68,
       "Guidance": 34,
-      "Contracts": 111,
+      "Contracts": 113,
       "Capital & ownership": 1,
       "Management": 52,
-      "General": 1111
+      "General": 1114
     }
   }
 }

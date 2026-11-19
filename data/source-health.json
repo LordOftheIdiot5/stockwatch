@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-19T21:27:50Z",
-  "latestScan": "2026-11-19T21:26:25+00:00",
+  "generated": "2026-11-19T21:55:39Z",
+  "latestScan": "2026-11-19T21:54:30+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "priceFreshness": {
@@ -115,65 +115,65 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 138.9,
+      "avgLatencyMs": 176.8,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 707.7,
+      "avgLatencyMs": 648.0,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1436.9,
+      "avgLatencyMs": 1536.7,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 355.3,
+      "avgLatencyMs": 382.5,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1922.6,
+      "avgLatencyMs": 1755.8,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1643,
-    "relevant": 1222,
-    "review": 364,
+    "total": 1649,
+    "relevant": 1225,
+    "review": 367,
     "duplicates": 74,
     "issuerLinked": 418,
     "driverClassification": {
       "version": 1,
-      "classified": 398,
+      "classified": 401,
       "categories": {
-        "numbers": 238,
+        "numbers": 239,
         "prices": 4,
         "operations": 1,
-        "potential": 173,
+        "potential": 175,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 254,
+      "Earnings / results": 255,
       "Dividends": 12,
       "M&A": 68,
       "Guidance": 34,
-      "Contracts": 111,
+      "Contracts": 113,
       "Capital & ownership": 1,
       "Management": 52,
-      "General": 1111
+      "General": 1114
     }
   },
   "secFilings": {
