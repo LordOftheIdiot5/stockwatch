@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-19T13:07:10.960320+00:00",
-  "newsRecordsScanned": 1549,
+  "generated": "2026-11-19T14:07:14.582457+00:00",
+  "newsRecordsScanned": 1564,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -712,24 +712,6 @@
       "amount": null
     },
     {
-      "id": "a1ee30469fba67ece9df2142f9f00edfc10f2e1cc90669763da851cbce874218",
-      "newsId": "IFX.DE:d240e0b8588683c20c817e84ccc5f7a08cec360341aa177c214c90ce79b0736a",
-      "entityIds": [
-        "infineon",
-        "vertiv"
-      ],
-      "issuerTicker": "IFX.DE",
-      "candidateType": "co_mention",
-      "published": "2026-11-16T11:33:48Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORVUyazFTTDhOSWp1dzJ5UFRjWjRHRnd2VnpaRk1zWm9Ta2xRNGltRkVleDA0OFJOSG9sZGVMNmI5Qm5jNWdrSV9EU3UwU2JRa0hGYzFhNXJtUUdrbGNWd1A0eW5BYm00Z3d6UEFmWWIwNGpXY0I4TXlDMVc4bWh2eTRvbEJpWXF6NlE2ZjJtQ2tUVVZKTkNXWGhnRHkyNmRJVTJPQVlVTVJ3NTV2cWJUSU4wWlgxY0hnU3o3anN5UQ?oc=5",
-      "status": "related_evidence_recorded",
-      "relationshipVerified": false,
-      "amount": null,
-      "relatedRelationshipIds": [
-        "infineon-vertiv-power"
-      ]
-    },
-    {
       "id": "13f8e6427723583cf1322c6878654c58080572fcf913ce47fff13b1515cfce9f",
       "newsId": "UCG.MI:2c9f6cc74ceb93a4c8d1a93a449225342cfeb2cca8177d318aa53aa15703023c",
       "entityIds": [
@@ -1080,6 +1062,21 @@
       "candidateType": "headline_event",
       "published": "2026-11-17T07:01:56Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUjN2YnYtQmtyS1JIeVRzYkk0ZHFIQkJnNTd4VE1ld2sxdVdJak9WcmJIV2c5bjcxVVo5ZGgyMk1aUkdfYmJZWjhnZjRaNVl1bFYtdGVWV0szaEFCTjVvaThzLXNEM2lFZTdYbGczX2JORk9hTVM3aDJnNUE4NHA0QnVEMVd6a1NpVnhLUmFyRk1sdERFTUdxSXpYV2NPNm4tNlNLZDVOSnN3TF83MlRzSUJZU1lKZG9OUl9sTFpJLURxcWh3Y0diaGVsREFSWTVHWWdF?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "296f6b12ae0c7a734208027cea3ef62079250ff43d5158a72b37d0bc61956a27",
+      "newsId": "IFX.DE:4addfe93363175da0ca677a61249f748ccad5b6d5298eb4d2212c9928b1504cb",
+      "entityIds": [
+        "infineon",
+        "vertiv"
+      ],
+      "issuerTicker": "IFX.DE",
+      "candidateType": "co_mention",
+      "published": "2026-11-17T08:35:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZUU3bjcya19XSllYQUl1emkzTDhlMThiM3ZhbzFwQTNwb1MtVHFIZVVoSE81QUxNZERrZ0hoeWhSOFVuNXRIWGNZamZDN0IxOFpwdXU1Z3REcE51VW8wT2wxbHdjMmVDX0FWLUxqTE9OQUhYVW5kTG5XdHJkSXBkNzlHcHA1OTFkM2NuVGxtWWdqaGFVM0VuNE81Snc3SG9qVkNZaDlsWHdIRDVzbDJWbGxhUkRFWGNtSVZMT1M1QkF1S0I0MUtvdEppWnV5eXJxNUhwNXpUVV9uSTIz?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
@@ -1995,21 +1992,6 @@
       "amount": null
     },
     {
-      "id": "eeafc72ce025f39ce65c04d7cc83c4eef52c3a34fd1fe6dbe0b1d32ab14304c0",
-      "newsId": "IFX.DE:b4deac6d655ad6d23332a22ef6384ed3e754a5df1dbfd75b995bb2d124b0d182",
-      "entityIds": [
-        "infineon",
-        "vertiv"
-      ],
-      "issuerTicker": "IFX.DE",
-      "candidateType": "co_mention",
-      "published": "2026-11-19T08:34:54Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPT2swRlQ0TUJmR3poU2RlZ1NGUElDYUJ4UmJ5d2VuMVZpdE03LUdMdG96OG9jX0VhWW1pRkFqQ1NtaTQ2MlJ4Z09qQVRaT3VYTzZIMDZjSGVqSkMzV0VkdEZ0VDY3Vy1LRjVqdjZvcTZYZnBwQ21mUUJMOXl2ZWRKT2s4Tk1jZ2ZjZkJEcGxWOWZTRzJ1SVdROEFqeHI0U2k4MEJtdzEtVTk?oc=5",
-      "status": "review_required",
-      "relationshipVerified": false,
-      "amount": null
-    },
-    {
       "id": "0aa9bffd1dc9fa4d0680cd45294653689db7673fa68479e6f8d82e6c7d7374dc",
       "newsId": "UCG.MI:11c15236a9be0755589e523d100030ce945915514905aacbd8b695e06f740616",
       "entityIds": [
@@ -2168,6 +2150,20 @@
       "amount": null
     },
     {
+      "id": "e40081b7430979311e5e87569ec4117fee4a7cf271bd8214971932f6d55c365b",
+      "newsId": "UCG.MI:5833cd9f0736348077eab09dda8545bcc8f4868480bb57f9732e3427697f6f88",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T11:41:34Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSnhQYkNyR0hiNm9ZM3RkRkJNT0FsY0VNOHVhU0oxcjlfYzdmWVYzbGJhRW9XYVZTY1pCclFtQ1hIZGFOOXE4YkY5cWxucXEyM3c3QXBqLWE4XzA2ZHFhaWQ0V1RfUVNMRVo0MF90THE0amVJRUFyQWFZRjJ5Z0tJTUpBbHZzbTBxNXl6Z3c2QVhpZ0pxbXFRLTRkaw?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "3b6c2f1a8eaaf23c99ef4c78b11bc125dca0b842adb6b0021bd7945409857809",
       "newsId": "AIR.PA:28b4d61c6a7e46cbc5db80e42c95b438158c5c2d4d2bc7cebed34f6e8fae7ecc",
       "entityIds": [
@@ -2206,7 +2202,36 @@
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
+    },
+    {
+      "id": "3446a2dcde1aec995de736eb31b42a80ab38789526b053b325f8e431f0ea3df5",
+      "newsId": "AIR.PA:4d14ce1b96b88bc4bd56d4421a479dfb62f1f0fbfd789f2ad25f54142ed7707c",
+      "entityIds": [
+        "airbus"
+      ],
+      "issuerTicker": "AIR.PA",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T13:05:12Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPRU1YLUpPUVdON19MRGVjMlVRdkJXMkhhajFBaDhFZzJ5dzNHRzN5WE02NWF1SDZES21HMVNKMXVIWWFPVUpHSURpbGZSMXBLODg5Mm01Tm8tM2hDME1vTVBESVlUODdRNUM0UUJ1c0JiZ3NDLWo3cThEZTdCeW1fU2EwT256dWFkcjZNQVk4U0RNNDh6a0tNdVNoUW84a0h0Z1g3Z3diaEQtamJuR1ZjNWJYNXphLUJZa0NmWWFtd0RfSDFKM0NSWXdwVHFSVWd5UDMyMVg2eUN0N3lIbl9CUkZCQUxHTU54UnVJUERtN1FrQ00?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "2e833d36e9e7c9e129e989ec20f64f53ddcc73c3fec18b5ccb4271aa06336a81",
+      "newsId": "IFX.DE:e1d468f56e909d6c1c86d1d68fb6df70231b3a5cc2725a4b8ba8381e0540a907",
+      "entityIds": [
+        "infineon",
+        "vertiv"
+      ],
+      "issuerTicker": "IFX.DE",
+      "candidateType": "co_mention",
+      "published": "2026-11-19T13:51:31Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZUx1ZDBSdXNvM1pBM3JPaUJnWDJldUNxT1UxRUFuNE5fUENHUzZVZnhHbmM5d0NHdzVIOHlvNm1MU1ljSFp1ZVI5VmczcF90UEtiNVl0cHdpSTdiRU13U0VQMUhObkxXX1BMc2E4eFRqTV90Qm91T1F4NHIwTEJ3TnRFLXNBQWdtS3N5RzJHLTlfRkIyVkJkRjVTOEI1bUZTWHdPSUhvNDJTdFAxZWdRWmtRRkZBeEVZSl9v?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
     }
   ],
-  "relatedEvidenceLeadCount": 9
+  "relatedEvidenceLeadCount": 8
 }
