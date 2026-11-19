@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T17:07:46Z",
+  "generated": "2026-11-19T18:54:34Z",
   "datasets": [
     {
       "name": "Official macroeconomic and FX observations",
@@ -68,6 +68,12 @@
       "license": "Official public filing metadata and source links only"
     },
     {
+      "name": "Company driver attention",
+      "path": "data/driver-attention-v1.json",
+      "records": 189,
+      "license": "Derived archive counts and source-linked metadata; not market-wide attention or forecasts"
+    },
+    {
       "name": "Latest company news",
       "path": "data/news-latest.json",
       "records": 100,
@@ -76,7 +82,7 @@
     {
       "name": "Historical article index",
       "path": "data/news-store/index.json",
-      "records": 1605,
+      "records": 1619,
       "license": "Git-backed source-linked metadata; inspect original publisher terms"
     },
     {
