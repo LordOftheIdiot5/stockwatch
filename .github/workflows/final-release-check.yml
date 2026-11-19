@@ -51,6 +51,9 @@ jobs:
           python-version: '3.12'
       - name: Full scanner and research unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Build catalyst index from the actual retained archive
+        if: startsWith(github.head_ref, 'feature/stockwatch-v89d-')
+        run: python scripts/catalyst_evidence.py
       - name: Worker API and A/B finance tests
         run: node --test tests/test_worker.mjs tests/test_final_js.mjs
       - name: Independent voyage model tests
@@ -121,6 +124,7 @@ jobs:
           node --check research-analytics.js
           node --check research-lab.js
           node --check research.js
+          node --check catalyst-evidence-v1.js
           node --check brand/brand.js
           node --check brand/research-coverage.js
       - name: Watchlist identity migration guard
