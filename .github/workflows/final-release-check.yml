@@ -379,6 +379,10 @@ jobs:
           node --test tests/test_company_events_v87c.mjs
           python tests/browser_check_company_events_v87c.py
 
+      - name: V87e ownership evidence checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v87e-')
+        run: node --test tests/test_ownership_v87e.mjs
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

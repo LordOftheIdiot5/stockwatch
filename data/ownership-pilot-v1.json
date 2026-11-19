@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "notice": "Pilot historical ownership facts; NVE reported main-owner plant capacity, not current equity-adjusted group capacity or output.",
+  "links": [
+    {
+      "ticker": "NHY.OL",
+      "parent": "Norsk Hydro ASA",
+      "subsidiary": "Hydro Energi AS",
+      "orgNumber": "930187240",
+      "sharePct": 100,
+      "asOf": "2025-12-31",
+      "ownershipSource": "https://www.hydro.com/globalassets/06-investors/reports-and-presentations/annual-report/ar-2025/integrated-annual-report-2025.pdf#page=217",
+      "sourceLocator": "2025 annual report, page 217, note 7",
+      "identitySource": "https://virksomhet.brreg.no/nb/oppslag/enheter/930187240",
+      "reviewedOn": "2026-11-19"
+    }
+  ],
+  "assetSnapshot": {
+    "generated": "2026-11-16T16:21:21.344766+00:00",
+    "source": "https://energy.nordl.dev/data/hydro-owners-v1.json",
+    "license": "https://data.norge.no/nlod/",
+    "attribution": "NVE; Nordl aggregation",
+    "rows": [
+      {
+        "orgNumber": "930187240",
+        "plantIds": [
+          85,
+          94,
+          100,
+          145,
+          273,
+          284,
+          419,
+          429,
+          493,
+          815,
+          1563,
+          1851
+        ],
+        "zones": [
+          "NO2",
+          "NO5"
+        ],
+        "reportedCapacityMW": 1329.52,
+        "capacityRecords": 12
+      }
+    ]
+  }
+}

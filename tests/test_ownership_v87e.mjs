@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import api from '../ownership-v87e.js';
+const d=JSON.parse(fs.readFileSync(new URL('../data/ownership-pilot-v1.json',import.meta.url)));
+test('asset joined by organisation number, never by name',()=>{const r=api.select(d,'NHY.OL');assert.equal(r.length,1);assert.equal(r[0].asset.reportedCapacityMW,1329.52);assert.equal(r[0].asset.plantIds.length,12);assert.equal(api.select(d,'NHY').length,0);const q=structuredClone(d);q.assetSnapshot.rows[0].orgNumber='000000000';assert.equal(api.select(q,'NHY.OL')[0].asset,null)});
+test('duplicate and nonapproved source rejected',()=>{const q=structuredClone(d);q.assetSnapshot.rows.push(q.assetSnapshot.rows[0]);assert.equal(api.select(q,'NHY.OL')[0].asset,null);q.assetSnapshot.license='unknown';assert.equal(api.select(q,'NHY.OL').length,0)});

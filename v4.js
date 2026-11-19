@@ -644,6 +644,8 @@ async function openStock(t){
   const entity=rel.entityForListing(state.relationships,t);
   if(entity){const host=document.createElement('div');host.id='companyCommercialNetwork';container.append(host);rel.mount(host,state.relationships,{selected:entity,review:state.relationshipReview});}
  }
+ const ownership=window.StockwatchOwnership;
+ if(ownership&&t==='NHY.OL'){const host=document.createElement('section');host.className='sw-company-block';const drivers=container.querySelector('#companyDrivers');if(drivers)drivers.before(host);get('data/ownership-pilot-v1.json').then(d=>{if(host.isConnected&&container.dataset.currentTicker===t)ownership.mount(host,d,t)}).catch(()=>{});}
  mountFreightScenario(container);
  if(window.StockwatchIndustry)window.StockwatchIndustry.mount(container.querySelector('#companyDrivers'),{config:state.intelligence,sector:c.sector,ticker:t,load:get});
  container.querySelectorAll('[data-company-tab]').forEach(b=>b.addEventListener('click',()=>{const section=container.querySelector('[data-company-section="'+b.dataset.companyTab+'"]');if(section)section.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}));
