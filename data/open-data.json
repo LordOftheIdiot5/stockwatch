@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T13:25:33Z",
+  "generated": "2026-11-19T13:52:56Z",
   "mode": "daily",
   "notice": "Official statistical series, not tradable live security prices or freight quotations.",
   "series": [
@@ -780,13 +780,9 @@
       "country": "NO",
       "unit": "NOK per EUR",
       "frequency": "business_day",
-      "period": "2026-11-17",
-      "value": 10.5755,
+      "period": "2026-11-18",
+      "value": 10.6045,
       "history": [
-        {
-          "date": "2026-07-21",
-          "value": 10.987
-        },
         {
           "date": "2026-07-22",
           "value": 10.947
@@ -1126,10 +1122,14 @@
         {
           "date": "2026-11-17",
           "value": 10.5755
+        },
+        {
+          "date": "2026-11-18",
+          "value": 10.6045
         }
       ],
-      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.EUR.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-21",
-      "observedAt": "2026-11-18T13:25:20Z",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.EUR.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-22",
+      "observedAt": "2026-11-19T13:52:21Z",
       "license": "NLOD 2.0"
     },
     {
@@ -1139,13 +1139,9 @@
       "country": "EU",
       "unit": "USD per EUR",
       "frequency": "business_day",
-      "period": "2026-11-17",
-      "value": 1.0989,
+      "period": "2026-11-18",
+      "value": 1.0968,
       "history": [
-        {
-          "date": "2026-07-15",
-          "value": 1.1406
-        },
         {
           "date": "2026-07-16",
           "value": 1.1467
@@ -1501,10 +1497,14 @@
         {
           "date": "2026-11-17",
           "value": 1.0989
+        },
+        {
+          "date": "2026-11-18",
+          "value": 1.0968
         }
       ],
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata&lastNObservations=90",
-      "observedAt": "2026-11-18T13:25:28Z",
+      "observedAt": "2026-11-19T13:52:30Z",
       "license": "ECB statistics free reuse, attribution; third-party exceptions"
     },
     {
@@ -1514,13 +1514,9 @@
       "country": "NO",
       "unit": "NOK per USD",
       "frequency": "business_day",
-      "period": "2026-11-17",
-      "value": 9.6237,
+      "period": "2026-11-18",
+      "value": 9.6686,
       "history": [
-        {
-          "date": "2026-07-21",
-          "value": 9.6225
-        },
         {
           "date": "2026-07-22",
           "value": 9.5959
@@ -1860,10 +1856,14 @@
         {
           "date": "2026-11-17",
           "value": 9.6237
+        },
+        {
+          "date": "2026-11-18",
+          "value": 9.6686
         }
       ],
-      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-21",
-      "observedAt": "2026-11-18T13:25:20Z",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=csvfile&locale=en&startPeriod=2026-07-22",
+      "observedAt": "2026-11-19T13:52:20Z",
       "license": "NLOD 2.0"
     },
     {
@@ -1966,7 +1966,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-18T13:25:30Z",
+      "observedAt": "2026-11-19T13:52:52Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2069,7 +2069,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=DK&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-18T13:25:30Z",
+      "observedAt": "2026-11-19T13:52:52Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2172,7 +2172,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=FR&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-18T13:25:30Z",
+      "observedAt": "2026-11-19T13:52:53Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2275,7 +2275,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=NO&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-18T13:25:28Z",
+      "observedAt": "2026-11-19T13:52:51Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     },
     {
@@ -2378,7 +2378,7 @@
         }
       ],
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?format=JSON&geo=SE&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2025-01&lang=EN",
-      "observedAt": "2026-11-18T13:25:29Z",
+      "observedAt": "2026-11-19T13:52:51Z",
       "license": "Eurostat reuse policy; dataset exceptions apply"
     }
   ],
@@ -2401,8 +2401,8 @@
       "license": "ECB statistics free reuse, attribution; third-party exceptions",
       "documentation": "https://data.ecb.europa.eu/help/api/data-examples",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T13:25:28Z",
-      "lastAttemptAt": "2026-11-18T13:25:20Z",
+      "lastSuccessAt": "2026-11-19T13:52:30Z",
+      "lastAttemptAt": "2026-11-19T13:52:21Z",
       "records": 1,
       "error": null
     },
@@ -2412,8 +2412,8 @@
       "license": "Eurostat reuse policy; dataset exceptions apply",
       "documentation": "https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-introduction",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T13:25:30Z",
-      "lastAttemptAt": "2026-11-18T13:25:28Z",
+      "lastSuccessAt": "2026-11-19T13:52:53Z",
+      "lastAttemptAt": "2026-11-19T13:52:50Z",
       "records": 5,
       "error": null
     },
@@ -2423,8 +2423,8 @@
       "license": "NLOD 2.0; only publicly disclosed positions",
       "documentation": "https://ssr.finanstilsynet.no/api/v2/",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T13:25:33Z",
-      "lastAttemptAt": "2026-11-18T13:25:30Z",
+      "lastSuccessAt": "2026-11-19T13:52:56Z",
+      "lastAttemptAt": "2026-11-19T13:52:53Z",
       "records": 104,
       "error": null
     },
@@ -2446,8 +2446,8 @@
       "license": "NLOD 2.0",
       "documentation": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T13:25:20Z",
-      "lastAttemptAt": "2026-11-18T13:25:20Z",
+      "lastSuccessAt": "2026-11-19T13:52:21Z",
+      "lastAttemptAt": "2026-11-19T13:52:20Z",
       "records": 2,
       "error": null
     },
@@ -2456,10 +2456,10 @@
       "name": "World Bank WDI",
       "license": "CC BY 4.0, subject to indicator-level third-party exceptions",
       "documentation": "https://data.worldbank.org/summary-terms-of-use",
-      "status": "ok",
+      "status": "error",
       "lastSuccessAt": "2026-11-18T13:25:28Z",
-      "lastAttemptAt": "2026-11-18T13:25:28Z",
-      "error": null,
+      "lastAttemptAt": "2026-11-19T13:52:30Z",
+      "error": "TimeoutError",
       "records": 18
     }
   ],
