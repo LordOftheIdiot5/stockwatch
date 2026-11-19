@@ -1,0 +1,48 @@
+name: Recover durable D1 news archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/news-archive-recovery.yml'
+  schedule:
+    - cron: '45 3 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stockwatch-news-archive-recovery
+  cancel-in-progress: false
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Validate durable archive and recovery code
+        run: |
+          python -m unittest discover -s tests -p 'test_news_archive_recovery_v89c.py' -v
+          python scripts/push_archive.py --backfill --dry-run
+      - name: Replay all retained source-linked IDs into D1
+        env:
+          STOCKWATCH_ARCHIVE_URL: https://stockwatch-research-api.gauchovidar.workers.dev/api/news/ingest
+          STOCKWATCH_ARCHIVE_TOKEN: ${{ secrets.STOCKWATCH_ARCHIVE_TOKEN }}
+        run: python scripts/push_archive.py --backfill --require-config
+      - name: Read database health after replay
+        run: |
+          python - <<'PY'
+          import json, urllib.request
+          req=urllib.request.Request('https://stockwatch-research-api.gauchovidar.workers.dev/api/health',headers={'User-Agent':'StockwatchResearch/1.0 (+https://stocks.nordl.dev)'})
+          with urllib.request.urlopen(req,timeout=30) as response:
+              result=json.load(response)
+          if result.get('status')!='ok' or result.get('storage')!='d1':
+              raise SystemExit('D1 health not verified')
+          print(json.dumps(result))
+          print('All archive IDs submitted and acknowledged; aggregate count is diagnostic, not exact readback.')
+          PY
