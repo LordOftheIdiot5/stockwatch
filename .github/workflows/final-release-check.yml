@@ -421,6 +421,9 @@ jobs:
       - name: V88d historical sensitivity regression
         run: node --test tests/test_driver_sensitivity_v88d.mjs
 
+      - name: V88e archive attention regression
+        run: node --test tests/test_driver_attention_v88e.mjs
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

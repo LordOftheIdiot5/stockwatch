@@ -27,7 +27,7 @@ function mount(host,{company,config,load,events=[],sections=null}){
  const n=(tag,txt,cls)=>{const e=document.createElement(tag);if(txt!==undefined)e.textContent=txt;if(cls)e.className=cls;return e};
  const btn=(txt,cls)=>{const e=n("button",txt,cls);e.type="button";return e};
  const a=(txt,url)=>{const e=n("a",txt,"sw-textlink");e.href=url;e.target="_blank";e.rel="noopener noreferrer";return e};
- let all=nodes(company.ticker),profile=null;const buttons=new Map();let selected="prices",currentEvents=events;const key=company.driverKey||company.ticker;let history=null,analysisRevision=0;
+ let all=nodes(company.ticker),profile=null;const buttons=new Map();let selected="prices",currentEvents=events;const key=company.driverKey||company.ticker;let history=null,analysisRevision=0,attentionData=null,attentionRequest=null;
  const root=n("div",undefined,"sw88-driver"),head=n("div",undefined,"sw-section-row");const status=n("small","Sector context · no driver ranking yet");head.append(n("h2","Company intelligence map"),status);root.append(head,n("p","Choose a driver to explore evidence, linked datasets and existing research sections.","sw-meta"));
  const map=n("div",undefined,"sw88-map");map.setAttribute("aria-label","Company research categories");
  const center=n("div",undefined,"sw88-center");center.append(n("strong",company.name),n("small",company.ticker));map.append(center);
@@ -50,6 +50,12 @@ function mount(host,{company,config,load,events=[],sections=null}){
    const p=(config.driverProfiles||[]).find(x=>x.sectors?.includes(company.sector));
    const drivers=(p?.drivers||[]).filter(x=>d.groups.includes(x.category));
    if(drivers.length){const contextual=n("div");panel.append(contextual);global.StockwatchIndustry.mount(contextual,{config:{...config,driverProfiles:[{...p,drivers}]},sector:company.sector,ticker:company.ticker,load});}
+  }
+  if((id==="attention"||id==="potential")&&global.StockwatchAttention){const box=n("section",undefined,"sw88-attention");panel.append(box);const engine=global.StockwatchAttention;
+   if(attentionData)engine.render(box,engine.select(attentionData,key),id);
+   else{box.append(n("p","Checking archived activity…","sw-meta"));if(!attentionRequest){attentionRequest=Promise.resolve().then(()=>load("data/driver-attention-v1.json")).then(data=>{attentionData=data;return data}).catch(()=>null);}
+    attentionRequest.then(data=>{if(host.contains(box))engine.render(box,engine.select(data,key),id);if(!data)attentionRequest=null;});
+   }
   }
   const related=selectNews(currentEvents,d);
   const news=n("div",undefined,"sw88-news");news.append(n("h4",id==="attention"?"Latest source-linked updates":"Related news and filings"),n("p","Topic tags are based on headlines or filing forms, not measured price impact. Attention lists all relevant news; it does not measure hype.","sw-meta"));

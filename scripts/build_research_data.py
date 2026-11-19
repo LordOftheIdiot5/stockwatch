@@ -14,6 +14,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 from news_quality import annotate, summary
+from driver_attention import build as build_driver_attention
 from price_freshness import coverage as price_coverage
 from build_spread_observations import build as update_spread_observations
 
@@ -181,6 +182,13 @@ def build(root=ROOT, now=None):
     official=[x for x in sec.get('items',[]) if x.get('sourceFeed')=='sec_edgar' and x.get('match')=='issuer_code']
     news=annotate(merge_news(prev,collect_news(snapshot)+official,now))
     quality=summary(news)
+    seed_path=folder/'us-equity-seed.json'
+    us_seed=json.loads(seed_path.read_text(encoding='utf-8')).get('records',[]) if seed_path.exists() else []
+    attention=build_driver_attention(news,watchlist.get('tickers',[]),us_seed,now)
+    attention_path=folder/'driver-attention-v1.json'
+    attention_tmp=attention_path.with_suffix('.tmp')
+    attention_tmp.write_text(json.dumps(attention,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    attention_tmp.replace(attention_path)
     archive=dict(generated=iso(now),items=news,retentionDays=RETENTION_DAYS)
     latest=dict(generated=iso(now),items=news[:100],totalStored=len(news),limit=100,quality=quality)
     (folder/'news-latest.json').write_text(json.dumps(latest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -226,6 +234,7 @@ def build(root=ROOT, now=None):
     (folder/'dataset-catalog.json').write_text(json.dumps(dict(generated=iso(now),datasets=[
       {'name':'European issuer directory','path':'data/issuer-identities.json','records':len(issuer_index['entities']),'license':'Original watchlist identities; underlying exchange identifiers subject to source terms'},
       {'name':'SEC EDGAR filing metadata','path':'data/sec-filings.json','records':len(official),'license':'Official public filing metadata and source links only'},
+      {'name':'Company driver attention','path':'data/driver-attention-v1.json','records':len(attention['listings']),'license':'Derived archive counts and source-linked metadata; not market-wide attention or forecasts'},
       {'name':'Latest company news','path':'data/news-latest.json','records':len(latest['items']),'license':'Metadata and outbound source links, not reproduced articles'},
       {'name':'Historical article index','path':'data/news-store/index.json','records':len(news),'license':'Git-backed source-linked metadata; inspect original publisher terms'},
       {'name':'A/B indicator observations','path':'data/spread-observations.json','records':sum(len(v) for v in snapshots.get('pairs',{}).values()),'license':'Derived research indicators; no raw historical OHLCV'},
