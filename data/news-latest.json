@@ -1,6 +1,135 @@
 {
-  "generated": "2026-11-19T14:07:14Z",
+  "generated": "2026-11-19T15:06:58Z",
   "items": [
+    {
+      "id": "FRO.OL:8168a60c5a37d237a6ab589c7986573d017077691ec6403d99ac8cdc1803ca8b",
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Frontline earnings up next as tanker rates tumble from peak By Investing.com",
+      "english": null,
+      "publisher": "Investing.com South Africa",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQ2w4b0VQVjJ5NjBvbjFSM2xMVWtLNm1KZ2laQWk5SVFSemNENjBMWXd1WkRmakFxRTVjalFDZGN3LVJ3QWZpRXBFVXFhejFkZV9NbjdMMDZndFN6YlZPaVZWNWpkT2g4c054dlh0TmZIR1B6UXpiMkQ1S0ZlRV96aEZEVzhHUk04eHRSbWMzOFh6WG9HQ2lOand3bUNfdG1sazNxZ292UjBST0FYMlA4WFMybWxraUhoM25mMw?oc=5",
+      "published": "2026-11-19T15:01:26Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        },
+        {
+          "driver": "prices",
+          "basis": "headline phrase: tanker rates"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "NELLY.ST:7f38ee514c3ad414034fde7722415aab81012c13cb420dfacb7ceb590c4204ed",
+      "ticker": "NELLY.ST",
+      "name": "Nelly",
+      "sector": "Retail",
+      "type": "news",
+      "headline": "Nelly Korda Eyes LPGA Earnings Record at $11M Season Finale",
+      "english": null,
+      "publisher": "Front Office Sports",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMlVLbHVsVFkwcGFzNWVuSnBBalY4STBubDdKdDF3U2ctVmltNk10cVV2aFMtZ2dfcDBOcXZycUF5OVJJWUNSRF9JQmJnOE81TW5uMTJlaXY4dEg2WWtaenZES1l1TXFLQlR5OXp6bnk1U0dZMklkeVhkMDVqcm5QRW5ILUlCZmJETTlkeVNaaVhrMmxwNXVOcTdtTzVpQQ?oc=5",
+      "published": "2026-11-19T14:37:58Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "EL.PA:1973c9125fbc4fc114f83e261899356de0e3fd29ee94da8e8efce2af91fb1ffa",
+      "ticker": "EL.PA",
+      "name": "EssilorLuxottica",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "L’Oréal et EssilorLuxottica chercheraient à acquérir 15 % du capital d’Armani",
+      "english": "L’Oréal and EssilorLuxottica reportedly seeking to acquire 15% of Armani’s capital",
+      "publisher": "Zonebourse",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOMjRBbFpfRTBKMmlocy1UNjd4SmVpTUxuTEMyZ1VTOGtwcEpwcjJmNGZRTk5HcE5nUVpUQ3lYZHFWb05XOXRvZmZZVEVFTUZ1cG1SVnBNeFdMM2IzSy1oWGJyQnlVZEsydTFYZF9CdV9KNWlhMmxEenBjbG96WUd2OW03SzVvWFl5ZXNDVHJsdUY1ZnI2VkhPX256N2ZXdEctWEhQOFp0aHJYTS1iRVpTS2hOUFd4N0FEVi1mY3NBYU8yRnk5N2FDN2hKNGtTUHphbmotTQ?oc=5",
+      "published": "2026-11-19T14:12:30Z",
+      "lang": "fr",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "RACE.MI:913770a02def12f987b1f3c2f4d779adab30a7d15a490b38e812cf84593f36c5",
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "WEC | Ferrari: Alessandro Pier Guidi ha rinnovato e continuerà a correre per il Cavallino Rampante",
+      "english": "WEC | Ferrari: Alessandro Pier Guidi has renewed his contract and will continue to race for the Prancing Horse",
+      "publisher": "Motorsport.com",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZ1FXUWRuZzZwd0lJV3hMYlRra013dHU1WHFRckVudnM5ZGtoaUdqalVsNVhrNFJSZ0R2NExwWGVZOWZlNS1xVGt5blZRdDhfUEQwNkZqc0hhMlFQSndxd1dCcWI4Q0NOUElaYmR0eS02RUdyNXZsdS1SSGk5LVd2T1dpdno5aTRUQlBoNFdQaklhUExsVFhWZlFiak81R1RQeEM4aTlsaG9XZ0lBU1JRX1MweTUxY1UwUlE2QVBSWDJDNm5QZXg5Z2RibG5LZm8telc4N29wVQ?oc=5",
+      "published": "2026-11-19T14:08:45Z",
+      "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "SAND.ST:0b65d08766f8c2e05bb55d50edb07cc94b3d6cea0ae7ef03dfe07f1db85530a6",
+      "ticker": "SAND.ST",
+      "name": "Sandvik",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Enig om sluttavtale i lukka møte",
+      "english": null,
+      "publisher": "avisa-st.no",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxObTVqNm5kSndPUlBseHdpZkkwd1FuWUlLblhlVFJ0MEdyc3ZCZ0JwRjZzQkk5X1Q5cFd4TTVjTUpKZ2xjOWxMZENEWTN4X21aSmhZVFhEdDI4eEd2Mlh6SmhZcVRvTE9YZmhUdXRXc21DYXhnbWMtQzhFakF6bWFvVlFPOA?oc=5",
+      "published": "2026-11-19T13:59:23Z",
+      "lang": "da",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "P911.DE:4298465c5ebdfd653787070dd47d4296c9d13d568230bc3878bfa3ac2b991a75",
       "ticker": "P911.DE",
@@ -1709,6 +1838,34 @@
       "priority": "normal"
     },
     {
+      "id": "NKT.CO:ae0329e57d96ac7d976a02b219239c525741c647f5607aed85d9739ec4f440ac",
+      "ticker": "NKT.CO",
+      "name": "NKT A/S",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "NKT A/S (NKT.CO) Q3 FY2026 earnings call transcript",
+      "english": null,
+      "publisher": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYW43VTV0SWhJSVY3XzFKalB0ZDRzaFRtb2N1aDZLeDhyMlRNNTZGNTUzVlRIUU4wU0NiRk9oM0VCUlh5ZTluUGM4cmdfemR2Unl5N0JsOFZJU096MjhFZHJMbVl2V0UzTFNqQ3ZZLWg4aFJrdlJmRnhtZmpOSGVXQ1JQSU5uMlZlY0Z0Y1ZuN0RfUQ?oc=5",
+      "published": "2026-11-19T09:00:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "UCG.MI:46a77a490c8fa24a3547f385c33cbbc3f173bdc757f885fc36cea12b9e38467a",
       "ticker": "UCG.MI",
       "name": "Unicredit",
@@ -2336,191 +2493,22 @@
       "sourceDomain": "news.google.com",
       "priority": "normal",
       "duplicateOf": "IFX.DE:e1d468f56e909d6c1c86d1d68fb6df70231b3a5cc2725a4b8ba8381e0540a907"
-    },
-    {
-      "id": "SUBC.OL:fe421fe0628bd64dccd41fbde427225013d73307e7050c2df47641d432f97c05",
-      "ticker": "SUBC.OL",
-      "name": "Subsea 7",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Subsea 7 Q3 Results: Revenue beats estimate by 4.60%, EPS meets consensus",
-      "english": null,
-      "publisher": "scanx.trade",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdEZ2NG9KeHk3aktyNnJLTDRrbjVBYWdpZl9FSmhkQlZzSUN3WnpqUVViMENOcmw0R1ljQkFDc3BsQVR0Z2pMS0o0VjRJek5LTURCQW5wRzY3allBZXVjMC1nSVNhd1lINkJLLVpURlRQMkVleGlOVW5sa2l4dUJGLXZMZG1fay1LajN5aVF3UmNVcEtMZ1o2WmtGQXRqc1FKMWJLWUEtek5KMDJrbnMzazJZWDZONzJnMjBVQXhLck1Ydw?oc=5",
-      "published": "2026-11-19T07:21:22Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "numbers",
-          "basis": "headline category: Earnings / results"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
-    },
-    {
-      "id": "SUBC.OL:c9c1651af590bf47f290d98cb97e5649df6f02d7514a82edf6764824eb0b323e",
-      "ticker": "SUBC.OL",
-      "name": "Subsea 7",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Kruttsterkt resultat for Subsea 7",
-      "english": null,
-      "publisher": "E24",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOFF5dXc0NTJ5SV9NeVo2aFBnZ2hpbG1NcTZDMG9XcUxzeUFjd081ekVRVmJaWDBOZU9YTU9WLWx4NGFnY1FtVWtkSjYzUGFKbUQ5QVdjUThob1pKUGxXQ0pxVVlnLUNGamlaMGJfaTBQNjNMdTBha2xMTDNvMVhOdHNxN2M4ZVU?oc=5",
-      "published": "2026-11-19T07:14:06Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "numbers",
-          "basis": "headline category: Earnings / results"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high",
-      "duplicateOf": "SUBC.OL:f7641e4691a929e820fb22435000251f8a5ac3fae73735a01b5b6e6f6a5b57e6"
-    },
-    {
-      "id": "SUBC.OL:cd9f6a94da72ca07d4a1a5d92bba5c4e54484fa9d05b6b968ce642ba837e8525",
-      "ticker": "SUBC.OL",
-      "name": "Subsea 7",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Kruttsterkt resultat for Subsea 7",
-      "english": null,
-      "publisher": "E24",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9yWWg0UmVKVVU1VDRYMXZ5YVFzQktweFhQS1hWN1NHMFJjdjVSMThlbmhLUEQ2cDBjNmNiazBrTm5kdHYxMEEyNmhmOHZ3TF9TSVpKUTJIS3N3LVdSZTdEMkktcXhSQQ?oc=5",
-      "published": "2026-11-19T07:13:24Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "numbers",
-          "basis": "headline category: Earnings / results"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high",
-      "duplicateOf": "SUBC.OL:f7641e4691a929e820fb22435000251f8a5ac3fae73735a01b5b6e6f6a5b57e6"
-    },
-    {
-      "id": "SIE.DE:434f226ab5ffd5a75083a3dadf3010d5597333b8a3531cc066348c02026b67f9",
-      "ticker": "SIE.DE",
-      "name": "Siemens",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Siemens Launches AI Engineering Agent In India After 16 Customer Pilots",
-      "english": null,
-      "publisher": "APAC Media",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ2ZLVF9ZWHp1MjMxSERGUjRkVGMzcTlneHh6VllFejhScnV3Y1JWYXUtcmlvZXhib05Yei1OTlZuUHVyMkFwZ3lvYmQwWTNUVWI4Nm5uSVM1aUpiTVZRc3FKRUkzWmhoV1VmLWNQSXE3cnd6MkFXWUd2YkhsTURQZEdFc08zWkRyckQ3QVlxeXRmSWRzdkNTSnFPWjdXbW1kZ2VKRFZrSWNuVDBS?oc=5",
-      "published": "2026-11-19T07:12:17Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "SIE.DE:1655fe2de8b7b623a5bcfbc8ed4fd26514b0640b29f13160e2129dbc33f78514",
-      "ticker": "SIE.DE",
-      "name": "Siemens",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Siemens übernimmt Bahntechnik-Spezialisten mit 430 Millionen Euro Umsatz - Rail Vision beschleunigt den Einsatz von KI-Wahrnehmungstechnologie",
-      "english": "Siemens acquires railway technology specialists with €430 million in sales – Rail Vision accelerates the deployment of AI perception technology",
-      "publisher": "FinanzNachrichten.de",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQRzk0S2tGcGlIa3gyOEVWRjdYSE9OaC14bHpTRUZNVFh5ZWVWTWNJYTU1TnZNQjRZSnVDRUxhVElpOXJuN1pQQXRKcjFMb3VXUmI4aXRhZ1ptVEVHTVplaGM2WjI3bGhKQnM0T0JlZ0FpaGdPcFN2VVBlc1J0R0dSeUhidWc2VmdtZ01ZWHAybEZIWVNYQVluSFk0TXJiM0s4cXEtR2ViZW1vV1ctc1BneHBIZ1V6bjlwa2p4MWF2V09TZ25pWTBOTXpVMk5hVWxFWWw5SGhFem5FSHJ0bVduQXRGbDMwRFhQZ3FiMHViZnYxWmNCX3hJSkE3MTNrQkNDOHVDbDhKb3ZfVktNaXR1Ty1OdTdHQzdCMmloNVo3N2xTUDRzbVJKRUdjRlJiZkpfT25UZTVR?oc=5",
-      "published": "2026-11-19T07:10:00Z",
-      "lang": "de",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "numbers",
-          "basis": "headline phrase: umsatz"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "SUBC.OL:85b1dcd4df6ef92f53ccc13f20cd2a2aff90e75ffb6b0b9cfd1b7826309640fc",
-      "ticker": "SUBC.OL",
-      "name": "Subsea 7",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Luxembourg's Subsea 7 Q3 revenue rises on high offshore activity; raises guidance",
-      "english": null,
-      "publisher": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQMlJGMmVKQjV1Z0xnRmRKLVl1VFk4MWNINXlPUTRrTzFHaHVoenlUaFljbTdHRGRCaWFDVlVSYlVMdTlya0QwX0FCZlF1VGZ0VTB0ZTdnV1ZDbFV5TTFqOE5YeFBVcnBYTmhKblY4c0JnLXlJeTZXMVRLbnpuQWRaX05nSUhfcWV5d3JCYnJiZ09vTmwzcFJsclBhTzdBSjdFbm81YWtGYjItd2xoekptTnE3d2xrSV9DUjA0Ylk3VnJQUm9rc1czNTBKaGNJYnNfOUMyUFBmNTR5cERxNHBaYWpnbGM?oc=5",
-      "published": "2026-11-19T07:09:00Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "numbers",
-          "basis": "headline category: Earnings / results"
-        },
-        {
-          "driver": "potential",
-          "basis": "headline phrase: guidance"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1564,
+  "totalStored": 1571,
   "limit": 100,
   "quality": {
-    "total": 1564,
-    "relevant": 1172,
-    "review": 341,
-    "duplicates": 66,
+    "total": 1571,
+    "relevant": 1177,
+    "review": 342,
+    "duplicates": 67,
     "issuerLinked": 418,
     "driverClassification": {
       "version": 1,
-      "classified": 383,
+      "classified": 386,
       "categories": {
-        "numbers": 229,
-        "prices": 3,
+        "numbers": 232,
+        "prices": 4,
         "operations": 1,
         "potential": 167,
         "risk": 3
@@ -2528,14 +2516,14 @@
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 244,
+      "Earnings / results": 247,
       "Dividends": 12,
       "M&A": 66,
       "Guidance": 34,
       "Contracts": 105,
       "Capital & ownership": 1,
       "Management": 45,
-      "General": 1057
+      "General": 1061
     }
   }
 }
