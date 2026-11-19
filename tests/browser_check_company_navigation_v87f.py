@@ -23,16 +23,16 @@ try:
    link=page.locator("#swQuickResults a[href='company.html?ticker=NHY.OL']")
    assert link.count()==1
    link.click()
-   page.locator(".sw-company-heading h2").get_by_text("Norsk Hydro").wait_for()
+   page.locator(".sw-company-heading h2",has_text="Norsk Hydro").wait_for()
    assert page.locator(".sw-side").count()==1 and page.locator(".sw-mobile-nav").count()==1
    page.get_by_text("Reported corporate ownership & assets").wait_for()
    page.goto(base+"research.html?instrument=XOSL%3ANHY#targetDetail")
    page.wait_for_url("**/company.html?ticker=NHY.OL")
-   page.locator(".sw-company-heading h2").get_by_text("Norsk Hydro").wait_for()
+   page.locator(".sw-company-heading h2",has_text="Norsk Hydro").wait_for()
    page.goto(base+"research.html?instrument=XOSL%3ANHY&mapping=1#targetDetail")
    page.locator("#targetDetail").get_by_text("Norsk Hydro",exact=True).wait_for()
    page.goto(base+"company.html?ticker=ref%3AXOSL%3ANHY")
-   page.locator(".sw-company-heading h2").get_by_text("Norsk Hydro").wait_for()
+   page.locator(".sw-company-heading h2",has_text="Norsk Hydro").wait_for()
    page.goto(base+"stocks.html?q=NHY")
    page.locator("#stocksRows").get_by_text("Norsk Hydro",exact=True).wait_for()
    assert page.locator("#stocksRows [data-stock='NHY.OL']").count()==1

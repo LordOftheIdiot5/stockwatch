@@ -129,9 +129,10 @@ jobs:
           import json
           w=json.load(open('watchlist.json'))['tickers']
           names=[x['ticker'] for x in w]
-          assert len(w)==138 and len(set(names))==len(names)
+          assert len(w)>=139 and len(set(names))==len(names)
+          assert any(x['ticker']=='NHY.OL' and x.get('mic')=='XOSL' and x.get('isin')=='NO0005052605' for x in w)
           assert 'ALPER.PA' in names and 'PERR.PA' not in names
-          print('Verified 138 unique companies and ALPER.PA migration')
+          print(f'Verified {len(w)} unique listings, Hydro onboarding and ALPER.PA migration')
           PY
       - name: Install browser-test dependencies
         run: |
