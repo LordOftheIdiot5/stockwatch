@@ -27,10 +27,22 @@ def universe(root=ROOT):
         if fig.valid_figi(x.get("figi")):candidates[x["ticker"]].add(x["figi"])
     coverage={r["id"]:r for r in read(root,"data/research-coverage.json")["records"]}
     rows=[]
+    monitored_keys=set()
+    targets=read(root,"data/research-targets.json")["targets"]
     for w in watches:
-        fs=candidates[w["ticker"]];i=issuers.get(w["ticker"],{})
-        rows.append({"id":w["ticker"],"mic":VENUES.get(w["exchange"]),"figi":next(iter(fs)) if len(fs)==1 else None,"isin":i.get("isin") if i.get("evidence") else None})
-    for t in read(root,"data/research-targets.json")["targets"]:
+        fs=set(candidates[w["ticker"]]);i=issuers.get(w["ticker"],{})
+        mic=VENUES.get(w["exchange"])
+        isin=i.get("isin") if i.get("evidence") else None
+        if w.get("mic")==mic and valid_isin(w.get("isin")):
+            exact=[t for t in targets if t.get("mic")==mic and t.get("isin")==w["isin"] and t.get("symbol")+".OL"==w["ticker"] and mic=="XOSL"]
+            if len(exact)==1 and (not isin or isin==w["isin"]):
+                isin=w["isin"]
+                c=coverage.get(exact[0]["id"],{});m=c.get("currentCandidate") or {}
+                if c.get("mappingStatus")=="candidate" and c.get("mic")==mic and c.get("isin")==isin and c.get("symbol")==exact[0]["symbol"] and fig.valid_figi(m.get("figi")):fs.add(m["figi"])
+                monitored_keys.add((mic,isin))
+        rows.append({"id":w["ticker"],"mic":mic,"figi":next(iter(fs)) if len(fs)==1 else None,"isin":isin})
+    for t in targets:
+        if (t.get("mic"),t.get("isin")) in monitored_keys:continue
         c=coverage.get(t["id"],{});m=c.get("currentCandidate") or {}
         candidate=m.get("figi") if c.get("mappingStatus")=="candidate" and c.get("mic")==t["mic"] and c.get("symbol")==t["symbol"] and c.get("isin")==t.get("isin") else None
         rows.append({"id":"ref:"+t["id"],"mic":t["mic"],"figi":candidate,"isin":t.get("isin")})

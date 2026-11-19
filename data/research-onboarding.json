@@ -44,16 +44,6 @@
       "identityStatus": "exchange_reference_pending_provider_mapping"
     },
     {
-      "ticker": "NHY",
-      "name": "Norsk Hydro",
-      "isin": "NO0005052605",
-      "mic": "XOSL",
-      "sector": "Materials",
-      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
-      "quoteStatus": "not_connected",
-      "identityStatus": "exchange_reference_pending_provider_mapping"
-    },
-    {
       "ticker": "MOWI",
       "name": "Mowi",
       "isin": "NO0003054108",
@@ -172,6 +162,21 @@
       "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
       "quoteStatus": "not_connected",
       "identityStatus": "exchange_reference_pending_provider_mapping"
+    }
+  ],
+  "promoted": [
+    {
+      "ticker": "NHY",
+      "name": "Norsk Hydro",
+      "isin": "NO0005052605",
+      "mic": "XOSL",
+      "sector": "Materials",
+      "sourceUrl": "https://live.euronext.com/en/popout-page/getIndexComposition/NO0007035376-XOSL",
+      "quoteStatus": "awaiting_observation",
+      "identityStatus": "exchange_reference_pending_provider_mapping",
+      "promotedTicker": "NHY.OL",
+      "promotedOn": "2026-11-19",
+      "status": "monitoring_configured"
     }
   ]
 }
