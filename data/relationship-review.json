@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-19T07:07:47.678165+00:00",
-  "newsRecordsScanned": 1454,
+  "generated": "2026-11-19T08:06:57.942456+00:00",
+  "newsRecordsScanned": 1470,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -712,6 +712,24 @@
       "amount": null
     },
     {
+      "id": "a1ee30469fba67ece9df2142f9f00edfc10f2e1cc90669763da851cbce874218",
+      "newsId": "IFX.DE:d240e0b8588683c20c817e84ccc5f7a08cec360341aa177c214c90ce79b0736a",
+      "entityIds": [
+        "infineon",
+        "vertiv"
+      ],
+      "issuerTicker": "IFX.DE",
+      "candidateType": "co_mention",
+      "published": "2026-11-16T11:33:48Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORVUyazFTTDhOSWp1dzJ5UFRjWjRHRnd2VnpaRk1zWm9Ta2xRNGltRkVleDA0OFJOSG9sZGVMNmI5Qm5jNWdrSV9EU3UwU2JRa0hGYzFhNXJtUUdrbGNWd1A0eW5BYm00Z3d6UEFmWWIwNGpXY0I4TXlDMVc4bWh2eTRvbEJpWXF6NlE2ZjJtQ2tUVVZKTkNXWGhnRHkyNmRJVTJPQVlVTVJ3NTV2cWJUSU4wWlgxY0hnU3o3anN5UQ?oc=5",
+      "status": "related_evidence_recorded",
+      "relationshipVerified": false,
+      "amount": null,
+      "relatedRelationshipIds": [
+        "infineon-vertiv-power"
+      ]
+    },
+    {
       "id": "13f8e6427723583cf1322c6878654c58080572fcf913ce47fff13b1515cfce9f",
       "newsId": "UCG.MI:2c9f6cc74ceb93a4c8d1a93a449225342cfeb2cca8177d318aa53aa15703023c",
       "entityIds": [
@@ -1062,21 +1080,6 @@
       "candidateType": "headline_event",
       "published": "2026-11-17T07:01:56Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUjN2YnYtQmtyS1JIeVRzYkk0ZHFIQkJnNTd4VE1ld2sxdVdJak9WcmJIV2c5bjcxVVo5ZGgyMk1aUkdfYmJZWjhnZjRaNVl1bFYtdGVWV0szaEFCTjVvaThzLXNEM2lFZTdYbGczX2JORk9hTVM3aDJnNUE4NHA0QnVEMVd6a1NpVnhLUmFyRk1sdERFTUdxSXpYV2NPNm4tNlNLZDVOSnN3TF83MlRzSUJZU1lKZG9OUl9sTFpJLURxcWh3Y0diaGVsREFSWTVHWWdF?oc=5",
-      "status": "review_required",
-      "relationshipVerified": false,
-      "amount": null
-    },
-    {
-      "id": "296f6b12ae0c7a734208027cea3ef62079250ff43d5158a72b37d0bc61956a27",
-      "newsId": "IFX.DE:4addfe93363175da0ca677a61249f748ccad5b6d5298eb4d2212c9928b1504cb",
-      "entityIds": [
-        "infineon",
-        "vertiv"
-      ],
-      "issuerTicker": "IFX.DE",
-      "candidateType": "co_mention",
-      "published": "2026-11-17T08:35:00Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZUU3bjcya19XSllYQUl1emkzTDhlMThiM3ZhbzFwQTNwb1MtVHFIZVVoSE81QUxNZERrZ0hoeWhSOFVuNXRIWGNZamZDN0IxOFpwdXU1Z3REcE51VW8wT2wxbHdjMmVDX0FWLUxqTE9OQUhYVW5kTG5XdHJkSXBkNzlHcHA1OTFkM2NuVGxtWWdqaGFVM0VuNE81Snc3SG9qVkNZaDlsWHdIRDVzbDJWbGxhUkRFWGNtSVZMT1M1QkF1S0I0MUtvdEppWnV5eXJxNUhwNXpUVV9uSTIz?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
@@ -1860,7 +1863,128 @@
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
+    },
+    {
+      "id": "5a6f93c86ed29467250199d9807868b90eaf4f17084dce820ac53dc1f43a13b7",
+      "newsId": "SIE.DE:1655fe2de8b7b623a5bcfbc8ed4fd26514b0640b29f13160e2129dbc33f78514",
+      "entityIds": [
+        "siemens"
+      ],
+      "issuerTicker": "SIE.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T07:10:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQRzk0S2tGcGlIa3gyOEVWRjdYSE9OaC14bHpTRUZNVFh5ZWVWTWNJYTU1TnZNQjRZSnVDRUxhVElpOXJuN1pQQXRKcjFMb3VXUmI4aXRhZ1ptVEVHTVplaGM2WjI3bGhKQnM0T0JlZ0FpaGdPcFN2VVBlc1J0R0dSeUhidWc2VmdtZ01ZWHAybEZIWVNYQVluSFk0TXJiM0s4cXEtR2ViZW1vV1ctc1BneHBIZ1V6bjlwa2p4MWF2V09TZ25pWTBOTXpVMk5hVWxFWWw5SGhFem5FSHJ0bVduQXRGbDMwRFhQZ3FiMHViZnYxWmNCX3hJSkE3MTNrQkNDOHVDbDhKb3ZfVktNaXR1Ty1OdTdHQzdCMmloNVo3N2xTUDRzbVJKRUdjRlJiZkpfT25UZTVR?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "70c738e9622a6129181c66876e96d199f147b386c109050a80df4dd80aa65abb",
+      "newsId": "SIE.DE:434f226ab5ffd5a75083a3dadf3010d5597333b8a3531cc066348c02026b67f9",
+      "entityIds": [
+        "siemens"
+      ],
+      "issuerTicker": "SIE.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T07:12:17Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ2ZLVF9ZWHp1MjMxSERGUjRkVGMzcTlneHh6VllFejhScnV3Y1JWYXUtcmlvZXhib05Yei1OTlZuUHVyMkFwZ3lvYmQwWTNUVWI4Nm5uSVM1aUpiTVZRc3FKRUkzWmhoV1VmLWNQSXE3cnd6MkFXWUd2YkhsTURQZEdFc08zWkRyckQ3QVlxeXRmSWRzdkNTSnFPWjdXbW1kZ2VKRFZrSWNuVDBS?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "1434d7d24a0b36ad8a04a37c45ff105cd67e50db36b01f7d6b80ff3e0c301042",
+      "newsId": "IFX.DE:eccb43b6acc9304f75f3ec92112ca849a482812d044d508a2d249556e474c827",
+      "entityIds": [
+        "infineon",
+        "vertiv"
+      ],
+      "issuerTicker": "IFX.DE",
+      "candidateType": "co_mention",
+      "published": "2026-11-19T07:21:39Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQ1E4emw1Z0dId0pTczUyT2dHMnhfZmVjR0JyM0tMVTRkZ3ZnU1FKbi1CamJOOVRfd0F2MzBDeEpheTFPU2J4SDUyLW5USDRRVU92ZUlFdUc2VnV4N2tBY3NZQVU5eHlsclh1aTU3MGhRRlg2Nzk2OERpUy1pcGFYakdBeUFSRV9VTUQyRlBjZjlvUzkwMnVmU2Rtd010NUtYUnQtekpjR1RtWFg5SGlFeg?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "71d4ab1d069dfc5e19c013d54e50980870c8c79c93b38127822ed2db5ebc77c8",
+      "newsId": "MYCR.ST:08ce7b21e6fe044ca1c1e4bb7531894a6135a936c29984c2e303fc4f62772a74",
+      "entityIds": [],
+      "issuerTicker": "MYCR.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T07:43:38Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxORmZ4NjBYRDdQcWVWX19BM3JSOEVmV0FwOVRkYWg3bDB2U3lhaDR0NDEyVWFtM0NGZGNwdXZLUmNBLTVKYmlMMmNmYkhjSTR1MVhKdG01MGhKaDBjWDZCVnprTUttUlYxS3pkZHRFQWQyREttNjZEai1DVmNwMWZ4Sm4tNW90bEsybkxyRV9oS1lkR3JELVpMdVVldVdKa2NwcU14dUZhMG5hd2ViSGtwSA?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "7ef1cfe6a491d190034d8ab8425de43f5db732da2520a584b80bcc57faf21f58",
+      "newsId": "ALRIB.PA:98059d392ea4cd1bc110447e0a5caf4d570a8195ccea588c9f4a858cacadb526",
+      "entityIds": [],
+      "issuerTicker": "ALRIB.PA",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T07:44:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORklBQXVpaXFEWDF2RzczRVdOYi12QzNYWGNrQ2lOWkZYM3p3YUlpeHdXRHVMaEwxY1h0ZVRVUDRUWU5VVWdDeVVVVE1QeEtudE9fNWJNNDZ0MU9kZURGeWpSM3d4SnNhdVBqR2J3dkRDMUdxS1VRT0RubUt0eGZ1XzdNMkdJaXFYbDlsbFlweEVkRWxXY0ZrQUdvQzF1d1Q5eUlxbzR4RFdkT1NMZnEway0tbVJJdjR5Um1hbVBCcVlGZlNuRW5lVHFoT0g?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "3525bdc0e622b03fd6cd1b6a7cf0e781cffc5d5d461c2d5f45599414621cf6cb",
+      "newsId": "SIE.DE:8c3f216c0ed6cac3fb89a9afd66c6c90dd99f4427cab13d7cbed2ee97e9d0f10",
+      "entityIds": [
+        "siemens"
+      ],
+      "issuerTicker": "SIE.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T07:45:32Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdzdVb2lQRThSb3BsLVpOZW5qZHJtVGIwa0JkN0RSc0dCU1V6WlZLNElWMkJwbXdTdThVdW83QThEVERleVdwOS12U0t5N0ZoX0c0UEwzalNkcEpXNkFJSUJ3TlNOS2FrM0o1cTdacnZ6cXh5WXc2dUppQVVTcVZ5OXZWNU91emM4R2hZ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "6827c901d6f1f2e2849e12e2ef96c17390c792c6adcffbd80b398f1adc4caf48",
+      "newsId": "MYCR.ST:255033c9b7c778d2ed804975c691177a7716ebeb32e250a7fc8fc75365c36d47",
+      "entityIds": [],
+      "issuerTicker": "MYCR.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T07:56:56Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE02cFVvZmE2ZmlTZzBjdW51VTMzTjhIMWR3NVlWR1hlX1ZkWmNJTXFDdml5MkhzSk1jUXplb0ZnNWNXRnFoVkdBSXgtZFp5Qzgtbk5kMlFoTG5WVXA5VHdsaEtzQjI?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "43c7506dc23487f8cb764022353150a7a7566a00c886a7c79e5c8206275981d4",
+      "newsId": "UCG.MI:122272952c3f035b71d72632dfd463fc22489deab820cb249be90ed429792cf5",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T08:02:52Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTHRxSlUtdkhxXzZodnNZY0xRbUJHTFNwV0VnTi1jSzdNckp3VDgtTXRNMDdMTl9KZDNINkdRdENGOUVlRk9hSGdRcjFKNTNuSkJfeDdsRG83WUoybG5BX3pnMGZROHY3UGhlR2t0Q1kteTJwanZ3emJTeW16VzllX2JZTTc?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "65594c8630957d42676bb79247367f752845427f13350879ca5d72795025aa67",
+      "newsId": "UCG.MI:1e5b71bb0dceb2a78885dbf472a43ab054daf397eccd0946d6b7fcdf274c6ccf",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T08:05:43Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkViaExfWjlsUjdMY3BTNVM5ZUtXeThfR1pGWF9MdkVMNkRRcHZOanh5VHRPT09qeF9QeDNHTHpmdmxQRzgtRGlhVlRlalJ1WlpfQk1BX3I5QlhkRkVRREZFZlNhUnp6WUYzOFA4Sm83WXo3WTdtU0lSbUs0WGJYTUNvaG12NDU5N3VmcVl2SGZ6TUh3a0VvajZ3?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
     }
   ],
-  "relatedEvidenceLeadCount": 8
+  "relatedEvidenceLeadCount": 9
 }
