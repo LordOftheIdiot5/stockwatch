@@ -424,6 +424,10 @@ jobs:
       - name: V88e archive attention regression
         run: node --test tests/test_driver_attention_v88e.mjs
 
+      - name: V88e attention desktop and mobile checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v88e-')
+        run: python tests/browser_check_driver_attention_v88e.py
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 
