@@ -79,10 +79,13 @@ def main(argv=None, root=ROOT):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--backfill', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--require-config', action='store_true', help='Fail if database ingestion is not configured')
     args = parser.parse_args(argv)
     dest = os.getenv('STOCKWATCH_ARCHIVE_URL', '').strip()
     token = clean_token(os.getenv('STOCKWATCH_ARCHIVE_TOKEN', ''))
     if not args.dry_run and (not dest or not token):
+        if args.require_config:
+            raise SystemExit('D1 archive recovery requires an endpoint and authentication; Git archive remains available')
         print('D1 archive push disabled: URL/token not configured; Git archive remains available')
         return 0
     if dest and (not dest.startswith('https://') or not dest.endswith('/api/news/ingest')):
