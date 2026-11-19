@@ -70,3 +70,7 @@ are and the scan logic is untouched.
 The cron stays in the workflow as a fallback: if the VPS is down, best effort
 beats nothing. When both fire, the trigger sees a run already in progress and
 skips, so the overlap is harmless.
+
+## OpenFIGI facilitator listing
+
+Nordl is listed on [OpenFIGI's Facilitators page](https://www.openfigi.com/about/facilitators/third-parties/nordl) (confirmed 2026-11-19). FIGI supports instrument identification; this listing does not confer pricing, historical data or redistribution rights.
