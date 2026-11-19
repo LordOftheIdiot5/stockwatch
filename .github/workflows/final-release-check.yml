@@ -120,6 +120,7 @@ jobs:
       - name: Frontend syntax
         run: |
           node --check v4.js
+          node --check sec-financials-v89g.js
           node --check terminal.js
           node --check research-analytics.js
           node --check research-lab.js
@@ -127,6 +128,10 @@ jobs:
           node --check catalyst-evidence-v1.js
           node --check scripts/audit_listing_coverage.cjs
           node --check scripts/price_source_queue.cjs
+          node --check brand/brand.js
+          node --check brand/research-coverage.js
+      - name: SEC company financial interface tests
+        run: node --test tests/test_sec_financials_ui_v89g.cjs
       - name: V89f price source queue tests
         run: node --test tests/test_price_source_queue_v89f.cjs
       - name: V89e listing coverage inventory
@@ -134,8 +139,6 @@ jobs:
         run: |
           node --test tests/test_listing_coverage_v89e.cjs
           node scripts/audit_listing_coverage.cjs --write
-          node --check brand/brand.js
-          node --check brand/research-coverage.js
       - name: Watchlist identity migration guard
         run: |
           python - <<'PY'
