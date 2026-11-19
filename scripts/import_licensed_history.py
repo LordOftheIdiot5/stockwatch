@@ -60,7 +60,7 @@ def import_csv(root, csv_path, manifest_path):
     data.mkdir(exist_ok=True,parents=True)
     common={'source':m['provider'],'sourceUrl':m['sourceUrl'],'licenseReference':m['licenseReference'],
             'redistributionPermitted':True,'updated':datetime.now(timezone.utc).isoformat(timespec='seconds')}
-    payload=({**common,'ticker':key,'currency':m['currency'],'adjusted':m['adjusted'],'bars':list(series.values())} if asset=='equity'
+    payload=({**common,'ticker':key,'currency':m['currency'],'adjusted':m['adjusted'],'derivedResearchPermitted':m.get('derivedResearchPermitted') is True,'bars':list(series.values())} if asset=='equity'
              else {**common,'code':key,'unit':m['unit'],'observations':list(series.values())})
     # Append compatible observations without silently discarding earlier dates.
     field='bars' if asset=='equity' else 'observations'
@@ -71,6 +71,8 @@ def import_csv(root, csv_path, manifest_path):
         immutable+=['ticker','currency','adjusted'] if asset=='equity' else ['code','unit']
         if any(previous.get(k)!=payload.get(k) for k in immutable):
             raise ValueError('Existing history has different identity, source, adjustment or licence; separate review required')
+        if asset=='equity' and previous.get('derivedResearchPermitted') is True and payload.get('derivedResearchPermitted') is not True:
+            raise ValueError('Previously authorized analytics requires an explicit current manifest; review permission before merging')
         combined={x['date']:x for x in previous[field]}
         for observation in payload[field]:
             old=combined.get(observation['date'])
