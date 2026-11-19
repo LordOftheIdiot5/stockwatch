@@ -72,6 +72,12 @@ jobs:
           STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
         run: python scripts/sec_filings.py
 
+      - name: Collect SEC company financial facts (daily bounded refresh)
+        continue-on-error: true
+        env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
+        run: python scripts/sec_companyfacts.py
+
       - name: Reuse Nordl Energy hydro context (daily)
         continue-on-error: true
         run: python scripts/shared_energy.py
