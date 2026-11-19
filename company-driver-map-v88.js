@@ -27,13 +27,15 @@ function mount(host,{company,config,load,events=[],sections=null}){
  const n=(tag,txt,cls)=>{const e=document.createElement(tag);if(txt!==undefined)e.textContent=txt;if(cls)e.className=cls;return e};
  const btn=(txt,cls)=>{const e=n("button",txt,cls);e.type="button";return e};
  const a=(txt,url)=>{const e=n("a",txt,"sw-textlink");e.href=url;e.target="_blank";e.rel="noopener noreferrer";return e};
- let all=nodes(company.ticker),profile=null;const buttons=new Map();let selected="prices",currentEvents=events;const key=company.driverKey||company.ticker;
+ let all=nodes(company.ticker),profile=null;const buttons=new Map();let selected="prices",currentEvents=events;const key=company.driverKey||company.ticker;let history=null,analysisRevision=0;
  const root=n("div",undefined,"sw88-driver"),head=n("div",undefined,"sw-section-row");const status=n("small","Sector context · no driver ranking yet");head.append(n("h2","Company intelligence map"),status);root.append(head,n("p","Choose a driver to explore evidence, linked datasets and existing research sections.","sw-meta"));
  const map=n("div",undefined,"sw88-map");map.setAttribute("aria-label","Company research categories");
  const center=n("div",undefined,"sw88-center");center.append(n("strong",company.name),n("small",company.ticker));map.append(center);
  for(const d of all){const b=btn(undefined,"sw88-node");b.dataset.driverNode=d.id;b.setAttribute("aria-controls","sw88-driver-detail");b.append(n("strong",d.label),n("small",d.sub));b.onclick=()=>draw(d.id);buttons.set(d.id,b);map.append(b)}
  root.append(map);
- const panel=n("section",undefined,"sw88-detail");panel.id="sw88-driver-detail";root.append(panel);host.replaceChildren(root);
+ const panel=n("section",undefined,"sw88-detail");panel.id="sw88-driver-detail";root.append(panel);const sensitivity=n("section",undefined,"sw88-detail");sensitivity.id="sw88-sensitivity";root.append(sensitivity);host.replaceChildren(root);
+ function refreshSensitivity(){const engine=global.StockwatchSensitivity;if(!engine)return;const revision=++analysisRevision;engine.analyze({id:key,history,events:currentEvents,load}).then(result=>{if(revision===analysisRevision&&host.contains(root))engine.render(sensitivity,result)}).catch(()=>{if(revision===analysisRevision&&host.contains(root))engine.render(sensitivity,{status:"inputs_required"})})}
+ refreshSensitivity();
  function draw(id){
   const d=all.find(x=>x.id===id);if(!d)return;selected=id;
   for(const [key,b] of buttons)b.setAttribute("aria-pressed",String(key===id));
@@ -58,7 +60,7 @@ function mount(host,{company,config,load,events=[],sections=null}){
  }
  draw(selected);
  if(typeof load==="function")Promise.resolve().then(()=>load("data/company-driver-profiles-v1.json")).then(registry=>{if(!host.contains(root))return;profile=resolveProfile(registry,key);if(!profile)return;all=nodes(company.ticker).map(d=>({...d,...profile.drivers[d.id]}));status.textContent="Issuer-reviewed business context · not price sensitivity";for(const d of all)buttons.get(d.id).querySelector("small").textContent=d.sub;draw(selected)}).catch(()=>{});
- return {updateEvents(items){currentEvents=items;draw(selected)},select:draw};
+ return {updateEvents(items){currentEvents=items;draw(selected);refreshSensitivity()},updateHistory(value){history=value;refreshSensitivity()},select:draw};
 }
 const api={nodes,resolveProfile,selectNews,mount};if(typeof module==="object"&&module.exports)module.exports=api;else global.StockwatchDriverMap=api;
 })(typeof window!=="undefined"?window:{});

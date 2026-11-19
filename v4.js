@@ -674,6 +674,7 @@ async function openStock(t){
  const entry=(state.licensedPrices?.records||[]).find(p=>p.listingId===t&&p.redistributionPermitted===true&&p.priceType==='end_of_day'&&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(p.historyPath||''));
  if(entry&&window.StockwatchNativeChart){try{const payload=await get(entry.historyPath);if(window.StockwatchNativeChart.authorized(entry,payload))hist=payload}catch{}}
  if(container.dataset.currentTicker!==t)return;
+ driverMap?.updateHistory(hist);
  const freightNode=container.querySelector('#freightAnalysis');if(freightNode)freightNode.innerHTML=freightAnalysisHTML(t,hist);
  const source=container.querySelector('#companyHistorySource');
  const allBars=hist?chartSeries(hist.bars.filter(x=>typeof x.close==='number'&&x.close>0).map(x=>({date:x.date,value:x.close}))):[];
