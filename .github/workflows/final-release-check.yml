@@ -120,6 +120,9 @@ jobs:
       - name: Frontend syntax
         run: |
           node --check v4.js
+          node --check sec-financials-v89g.js
+      - name: SEC company financial interface tests
+        run: node --test tests/test_sec_financials_ui_v89g.cjs
           node --check terminal.js
           node --check research-analytics.js
           node --check research-lab.js
