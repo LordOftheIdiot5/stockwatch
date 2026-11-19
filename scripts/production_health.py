@@ -43,8 +43,12 @@ def audit(get=fetch,now=None,require_gleif=False,require_sec=False):
         def page(body,h,p=p):
             require("<html" in body.lower(),"HTML missing")
             head=Head();head.feed(body)
-            require(head.canonical==[BASE+p.split("?")[0]],"canonical mismatch")
-            require(not any(re.search(r"\b(noindex|none)\b",s) for s in head.robots+[h.get("x-robots-tag","")]),"unexpected noindex")
+            if "?" not in p:
+                require(head.canonical==[BASE+p],"canonical mismatch")
+                require(not any(re.search(r"\b(noindex|none)\b",s) for s in head.robots+[h.get("x-robots-tag","")]),"unexpected noindex")
+            else:
+                # Parameterized company workspaces are intentionally outside the sitemap.
+                require("company research" in body.lower(),"company workspace shell missing")
         check("page:"+p,BASE+p,page)
     def robots(body,h):
         require("Sitemap: "+BASE+"sitemap.xml" in body,"sitemap directive missing")
