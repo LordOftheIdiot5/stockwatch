@@ -1,0 +1,22 @@
+name: ESMA FIRDS reference manifest preflight
+on:
+  pull_request:
+    paths:
+      - 'scripts/esma_firds_preflight.py'
+      - 'tests/test_esma_firds_preflight.py'
+      - '.github/workflows/esma-firds-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_esma_firds_preflight.py' -v
+      - name: Validate official FIRDS file manifest
+        run: python scripts/esma_firds_preflight.py
