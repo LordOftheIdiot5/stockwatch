@@ -1,0 +1,30 @@
+name: Test private Telegram alerts
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Verify configured credentials and send one private test
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import os, sys
+          sys.path.insert(0, 'scripts')
+          from notify import send
+          token, chat = os.getenv('TELEGRAM_BOT_TOKEN'), os.getenv('TELEGRAM_CHAT_ID')
+          if not token or not chat:
+              raise SystemExit('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID repository secret')
+          if not send(token, chat, 'Nordl Stockwatch: private operational alert test.'):
+              raise SystemExit('Telegram delivery failed; check bot, recipient and Start permission')
+          print('Telegram accepted the private alert. No credentials printed.')
+          PY

@@ -15,7 +15,7 @@ class HealthTests(unittest.TestCase):
             if p=="data/listing-coverage-v1.json":return json.dumps({"summary":{"listings":500,"priced":n,"missingPrice":500-n},"records":rows}),{}
             if p=="data/signals.json":return json.dumps({"generated":"2026-11-19T21:00:00Z","companies":[{}]*139}),{}
             if p=="data/source-health.json":return json.dumps({"priceFreshness":{"status":"coverage_ok"}}),{}
-            return '<html><head><link rel="canonical" href="'+BASE+p.split("?")[0]+'"></head></html>',{"x-robots-tag":"noindex"} if noindex else {}
+            return '<html><head><link rel="canonical" href="'+BASE+p.split("?")[0]+'"></head><body>Company research</body></html>',{"x-robots-tag":"noindex"} if noindex else {}
         return audit(get,datetime(2026,11,19,22,tzinfo=timezone.utc))
     def test_known_gap_not_incident(self):
         d=self.run_fixture();self.assertEqual(d["status"],"ok");self.assertEqual(d["metrics"]["knownPriceGap"],348)
