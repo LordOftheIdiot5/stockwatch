@@ -7,7 +7,11 @@ class CompanyResearchTests(unittest.TestCase):
         watch=json.loads((ROOT/'watchlist.json').read_text())['tickers']
         current={r['ticker'].removesuffix('.OL') for r in watch}
         rows=d['records']
-        self.assertEqual(len(rows),17)
+        self.assertEqual(len(rows),16)
+        promoted=d['promoted']
+        self.assertEqual(len(promoted),1)
+        self.assertEqual(promoted[0]['promotedTicker'],'NHY.OL')
+        self.assertTrue(any(x['ticker']==promoted[0]['promotedTicker'] and x.get('isin')==promoted[0]['isin'] and x.get('mic')==promoted[0]['mic'] for x in watch))
         self.assertEqual(len({x['isin'] for x in rows}),len(rows))
         for x in rows:
             self.assertNotIn(x['ticker'],current)

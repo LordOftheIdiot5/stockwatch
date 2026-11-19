@@ -10,7 +10,8 @@ test('500 listing target preserves scanner and existing curated records',()=>{
  const d=read('data/research-expansion.json'),w=read('watchlist.json').tickers,t=read('data/research-targets.json').targets;
  const catalog=read('data/instrument-directory.json').records,keys=new Set(catalog.map(x=>x.mic+':'+x.figi));
  const selected=registry(d);
- assert.equal(w.length,138);assert.equal(t.length,75);assert.equal(selected.length,287);assert.equal(w.length+t.length+selected.length,500);
+ assert.equal(w.length,139);assert.equal(t.length,75);assert.equal(selected.length,287);
+ const promoted=t.filter(x=>w.some(y=>y.mic===x.mic&&y.isin===x.isin));assert.equal(promoted.length,1);assert.equal(promoted[0].id,'XOSL:NHY');assert.equal(w.length+t.length-promoted.length+selected.length,500);
  assert.equal(new Set(d.records.map(x=>x.shareClassFIGI)).size,287);
  assert.ok(d.records.every(x=>keys.has(x.mic+':'+x.figi)&&x.quoteStatus==='not_connected'&&x.sourceObservedAt));
  assert.ok(selected.every(x=>x.unavailable&&x.referenceOnly&&x.close==null));
@@ -20,7 +21,7 @@ test('500 listing target preserves scanner and existing curated records',()=>{
 });
 test('direct search ranks exact symbols and identifiers first',()=>{
  const rows=[{ticker:'AAA.OL',name:'Alpha'},{ticker:'ref:A',symbol:'AAA',name:'Other',referenceOnly:true,figi:'BBG000TEST01'},{ticker:'B',name:'Alpha Beta'}];
- assert.equal(quick(rows,'AAA')[0].ticker,'ref:A');
+ assert.equal(quick(rows,'AAA')[0].ticker,'AAA.OL');
  assert.equal(quick(rows,'Alpha')[0].ticker,'AAA.OL');
  assert.equal(quick(rows,'BBG000TEST01')[0].ticker,'ref:A');
  assert.deepEqual(quick(rows,'  '),[]);

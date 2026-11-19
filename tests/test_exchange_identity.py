@@ -32,5 +32,8 @@ class ExchangeIdentityTests(unittest.TestCase):
  def test_universe(self):
     rows=m.universe()
     self.assertEqual(len(rows),500)
+    hydro=[r for r in rows if r.get("isin")=="NO0005052605" and r.get("mic")=="XOSL"]
+    self.assertEqual(len(hydro),1)
+    self.assertEqual(hydro[0]["id"],"NHY.OL")
     self.assertEqual(len({r["id"] for r in rows}),500)
 if __name__=="__main__":unittest.main()

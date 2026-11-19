@@ -15,7 +15,7 @@ test('coverage preserves true zero and distinguishes missing data',()=>{
  const html=coverageHeatmap(rows);
  assert.match(html,/class="sw-heat-cell flat"/);
  assert.match(html,/class="sw-heat-cell no-data"/);
- assert.match(html,/research.html\?instrument=X%3AC/);
+ assert.match(html,/company.html\?ticker=ref%3AX%3AC/);
 });
 test('filters reject unavailable observations and thin volume',()=>{
  let defaults={move:'',volume:'',volatility:'',signal:false};
