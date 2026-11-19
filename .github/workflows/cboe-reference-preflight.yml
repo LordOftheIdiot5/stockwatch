@@ -1,0 +1,23 @@
+name: Cboe standard reference preflight
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/cboe_reference_probe.py'
+      - 'tests/test_cboe_reference_probe.py'
+      - '.github/workflows/cboe-reference-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_cboe_reference_probe.py' -v
+      - name: Validate official standard CSV without storing vendor rows
+        run: python scripts/cboe_reference_probe.py
