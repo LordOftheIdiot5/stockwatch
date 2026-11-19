@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-19T21:55:39Z",
+  "generated": "2026-11-19T22:59:54Z",
   "windowStart": "2026-11-05",
   "windowEnd": "2026-11-18",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -7419,8 +7419,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-19T17:10:46Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-19T18:01:52Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8270,10 +8270,18 @@
         {
           "date": "2026-11-18",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [
+        {
+          "id": "OBCK.DE:22336fe123cf06cced360d23249a938c0d467d05ad9af1da2418af603d264335",
+          "published": "2026-11-18T07:19:39Z",
+          "headline": "WIRobotics signs North American distribution agreement with Ottobock HealthCare - Vietnam Investment Review",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZjlPc0F0a2dPbm5lLTduY2I3dDZfWmwyalVSUFdoczhrOXk5c21WdXIwRFo0Z2tGTTJvWlNBR2JrdTlfbVM4TE1rSkNRdmxxcUVLU2tYd1NLVS1hNEdxRWNSLUpZa0MtM0hiR0FhcXQ2Vi1LT0xjaU1YN2VObU5UaWZ0S2IyM3ZjUmk5Ny12VkZ4cHB0RmxXOEV3ek80Z191Y2RUdHdSNjRBS0ZCdExZ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "OBCK.DE:ce9be90f00e1077c9331d81ca6857f794318f5eca57857da1715d05aebddceb1",
           "published": "2026-11-17T15:43:19Z",
@@ -8299,13 +8307,13 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-17T15:43:19Z",
+      "observedRecords": 9,
+      "latestRecord": "2026-11-18T07:19:39Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
         "operations": 0,
-        "potential": 3,
+        "potential": 4,
         "risk": 0
       },
       "prior7": {
@@ -8314,7 +8322,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 8
+        "media": 9
       }
     },
     "ODF.OL": {
@@ -9777,8 +9785,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 27,
-      "latestRecord": "2026-11-19T18:22:00Z",
+      "observedRecords": 29,
+      "latestRecord": "2026-11-19T21:00:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
