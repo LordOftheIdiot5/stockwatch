@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T20:07:09Z",
+  "generated": "2026-11-19T20:17:27Z",
   "items": [
     {
       "id": "SAP.DE:883cd7ca124233484d07929e288201e918109090c1433e83b47b7c90f673ee29",
@@ -3038,6 +3038,30 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "TISG.MI:6b8271779cad2d72b3ec877479a3a97eb562ffed716f7071bbec316e3d5cb6f3",
+      "ticker": "TISG.MI",
+      "name": "The Italian Sea Group",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Seized Russia-linked superyacht helped derail €210 million bid for Italian shipbuilder - Reuters",
+      "english": null,
+      "publisher": "Hromadske",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTEwyMDMtMVlsYVlxeWhldFNMeG5jdFdKdWhtdHZHZ1ZWcG5mbDRwZjBLTkFuRHBycjR1eTljZ19nUkozSmhfRUYwNjk3cndfRjQ0Y2xDczFQcndGcjd2WjhiNWpTeTc1U2dUWkEwaWVSa25fcEpnRFVaR0FGSnhLUWxwLS16aW5UNTJ6MVRxcS1PTVZrTTR6RTVFci1QdXB4RzhpYi1IVjBwRHBzS1dWLVREQlpXRUZ0d1hUQktYVmlPWjZpMkVLX01Sb3pSZDY20gHQAUFVX3lxTE5MTDIwMy0xWWxhWXF5aGV0U0x4bmN0V0p1aG10dkdnVlZwbmZsNHBmMEtOQW5EcHJyNHV5OWNnX2dSSjNKaF9FRjA2OTdyd19GNDRjbENzMVByd0ZyN3ZaOGI1alN5NzVTZ1RaQTBpZVJrbl9wSmdEVVpHQUZKeEtRbHAtLXppblQ1MnoxVHFxLU9NVmtNNHpFNUVyLVB1cHhHOGliLUhWMHBEcHNLV1YtVERCWldFRnR3WFRCS1hWaU9aNmkyRUtfTVJvelJkNjY?oc=5",
+      "published": "2026-11-19T09:15:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "TISG.MI:9834c46291b1a5942503f1886c17879ee0f176d63b688769209963e196ba4465"
     },
     {
       "id": "KCC.OL:d33003f49806d7299a5f1e35dd1959790760b7119c24d56563bbcf2454fc5d86",
@@ -7749,6 +7773,29 @@
       "driverTags": []
     },
     {
+      "id": "GMAB.CO:9e014ffa98ffbf17a4973a3bce73f2eb9a09b8d605b43cedf85eb6218543e6a8",
+      "ticker": "GMAB.CO",
+      "name": "Genmab",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "UBS lifts its Genmab target by 58 per cent as all twelve houses go up",
+      "english": null,
+      "publisher": "Biostock",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQalpWWmUtajZwWk9HcXlROWcwQTA2N2w1bFlKZDc3WHRPQzRFTkNqQm1zM1M0T1U3V0VYSlEzTllBQWl5c1VjOUxqWHVreklKUmc3dDhqZUxYelBDVWllNEZTWEY5V3k0N1hibnF6YkVNa3Q5S2ZDRXp1UVhPaE1zN3hISkNiV3BSQW9SRlY1azB3RHhaRGZUbDdOYVVpWG5MZHBz?oc=5",
+      "published": "2026-11-18T09:59:32Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "SIE.DE:e059beb24b4d3e3e631672cdabebf73a5910f8d6f4ef896b4f052b7648561304",
       "ticker": "SIE.DE",
       "name": "Siemens",
@@ -7887,7 +7934,8 @@
       "sourceDomain": "news.google.com",
       "priority": "normal",
       "driverVersion": 1,
-      "driverTags": []
+      "driverTags": [],
+      "duplicateOf": "GMAB.CO:9e014ffa98ffbf17a4973a3bce73f2eb9a09b8d605b43cedf85eb6218543e6a8"
     },
     {
       "id": "NDX1.DE:6011f01c03097fc603220dbb0e0e40c6b442ead4caf25619e5f4b42fc0d90e70",
