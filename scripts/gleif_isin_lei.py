@@ -19,7 +19,7 @@ def valid_lei(s):
         for d in (str(ord(c)-55) if c.isalpha() else c):n=(10*n+int(d))%97
     return n==1
 def get(url):
-    with urlopen(Request(url,headers={"User-Agent":"StockwatchResearch/1.0 (+https://stocks.nordl.dev/)","Accept":"application/zip"}),timeout=60) as response:
+    with urlopen(Request(url,headers={"User-Agent":"StockwatchResearch/1.0 (+https://stocks.nordl.dev/)","Accept":"*/*"}),timeout=60) as response:
         if response.geturl()!=url:raise ValueError("unexpected_redirect")
         raw=response.read(LIMIT+1)
     if len(raw)>LIMIT:raise ValueError("archive_size")
