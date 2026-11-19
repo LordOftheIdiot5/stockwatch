@@ -21,6 +21,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 
@@ -167,5 +168,20 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: .
+      - name: Confirm Pages artifact is visible before deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 12); do
+            count=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length' 2>/dev/null || true)
+            if [ "$count" = "1" ]; then
+              echo "Pages artifact is available."
+              exit 0
+            fi
+            echo "Artifact metadata not ready (attempt $attempt/12)"
+            sleep 5
+          done
+          echo "::error::Pages artifact not visible after bounded retries"
+          exit 1
       - id: deployment
         uses: actions/deploy-pages@v5
