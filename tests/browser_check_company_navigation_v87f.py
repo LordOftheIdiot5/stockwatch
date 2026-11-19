@@ -29,6 +29,8 @@ try:
    page.goto(base+"research.html?instrument=XOSL%3ANHY#targetDetail")
    page.wait_for_url("**/company.html?ticker=NHY.OL")
    page.locator(".sw-company-heading h2").get_by_text("Norsk Hydro").wait_for()
+   page.goto(base+"research.html?instrument=XOSL%3ANHY&mapping=1#targetDetail")
+   page.locator("#targetDetail").get_by_text("Norsk Hydro",exact=True).wait_for()
    page.goto(base+"company.html?ticker=ref%3AXOSL%3ANHY")
    page.locator(".sw-company-heading h2").get_by_text("Norsk Hydro").wait_for()
    page.goto(base+"stocks.html?q=NHY")
