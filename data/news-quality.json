@@ -1,18 +1,30 @@
 {
-  "generated": "2026-11-19T00:24:27Z",
-  "total": 1409,
-  "relevant": 1093,
-  "review": 273,
+  "generated": "2026-11-19T02:32:22Z",
+  "total": 1416,
+  "relevant": 1072,
+  "review": 306,
   "duplicates": 52,
   "issuerLinked": 410,
+  "driverClassification": {
+    "version": 1,
+    "classified": 334,
+    "categories": {
+      "numbers": 214,
+      "prices": 2,
+      "operations": 1,
+      "potential": 130,
+      "risk": 3
+    },
+    "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
+  },
   "categories": {
     "Earnings / results": 228,
     "Dividends": 10,
-    "M&A": 52,
-    "Guidance": 30,
-    "Contracts": 80,
+    "M&A": 53,
+    "Guidance": 31,
+    "Contracts": 83,
     "Capital & ownership": 0,
     "Management": 42,
-    "General": 967
+    "General": 969
   }
 }

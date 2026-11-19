@@ -1,6 +1,136 @@
 {
-  "generated": "2026-11-19T00:24:27Z",
+  "generated": "2026-11-19T02:32:22Z",
   "items": [
+    {
+      "id": "RACE.MI:b2b2c40ae0f39616fe46a2dc3f3ad4b34eab8737d550994aacf2e0cb088dc77e",
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Bearman's strange Ferrari contract situation explained",
+      "english": null,
+      "publisher": "The Race",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOckhKaG9ndVJGT1JwOWttZ0dqS0xXOGI3YV9fbzdPeDZ2SDdZT1hzYnRDVk9Nb2xtcnZZeG5oQmE1YWlndG1zTEJvZ24xQTdRbF9Da2FmejJDOXppYkFlSktFU0tKTkVwRjBSZWV6STBBNFBoQ0FsU1RhTFdOb2MyM1BEZEstU0EwMXoyWmxSNUNnZkRKRTg0?oc=5",
+      "published": "2026-11-19T02:07:23Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "P911.DE:9e1b493657de71af1724bbfb780bec64a08cbc31ed9b805cb60ad48cad41c017",
+      "ticker": "P911.DE",
+      "name": "Porsche",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Voodoo Blue Is a Factory Special-Order Color",
+      "english": null,
+      "publisher": "Motorious",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQZXp5V0RPeXl0aE1BYVZJcGluRFEtZjJ3RGJoU2QzRFo4RVZOTDhra1Vod1ZGdmZIVTUzZFZySEVnSU14bTZSdl9MVzd5UGlEd094dGI4Tk1NdFIySGlZZDgzNjRTWjVQWkUzVy1wY1NRY1VSMXZjOXp0QjRrVkliMnRudE80NE01NjROTFRIemNLYkVmdkl1NUNxWkkzN2pQdEV3cnJycEVBemZJZWtmUGZPSngweE5aNjU1THZuaDRGVlYxYnBWNWI3Y2FQZlMybkw1OFo4aS00YlJKYWtwR01rY09MS0pKWGNtTw?oc=5",
+      "published": "2026-11-19T02:03:29Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "UCG.MI:aa0653400637e9ddb40e6a09f0634684926704466a7d23ba1295b1f7560988be",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "UniCredit and Berlin strike a deal on Commerzbank, settling the key terms of its €45B takeover after a two-year fight",
+      "english": null,
+      "publisher": "Dealroom",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMFNCMEVybDRkZ0xFYjd6a1hmcHcxbjV2aUh3YjU4aHdPSDY2ZW1TR3dreDE4Y1M3S2N0aDRyN0VPVlJueXZQYVYwalJmT2JBdm1JdWt0bVVzSEZxV0htdEtBNFU2N1lSNkw5OXVlZFhMLVRmSlhGNHJmT21DQ1gxNTJ0b29iaUJ5M2dPdUpNYWZFbWFYdS1SQS1JQm1BT2otVlU1enhyaTBQVlNzUVJwNDFXOWJCbUg2dVVmNlhGNExNS1hDUFZWX0t6MkJybVN1ck9BRU5fVUswTS1tXzBfVlZjdw?oc=5",
+      "published": "2026-11-19T01:27:05Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "CAF.MC:f0b22cee16b625275e9477b91a386263f9c919d8ef3d4e0d50fd6a58b69e4abc",
+      "ticker": "CAF.MC",
+      "name": "CAF",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Airborne 11.18.26: CAF Georgia, Vulcan Launch Mishap, T-38 Life Extension",
+      "english": null,
+      "publisher": "Aero-News Network",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTU1xVUtDWTBoRlZ4WDBOYWFQUjF2eFh0cmE4V29JUkFPX0RSc2NYUjFjdVFablR0bnhHXzZMZW0yeDl4LWNnZi1sYlZRQjdTT0JZWmNXVVpPVzdDamlzYzNiVnoxS1U3UUs3WThYUGh6TUZILWxxbGNwclRpNm0xNGdpLVJjZjBVdUd0MjFLcW40ZnQ5MUpYbkJjMUpkcEZ5NFE?oc=5",
+      "published": "2026-11-19T01:04:52Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "MRL.MC:36e3973bbf2f3002b7244f4ed0c72857436f5c868f8e9329941242c2f3a2eb51",
+      "ticker": "MRL.MC",
+      "name": "Merlin Properties",
+      "sector": "Property",
+      "type": "news",
+      "headline": "Merlin Properties stock: 2026 FFO outlook raised to EUR 0.58",
+      "english": null,
+      "publisher": "ad-hoc-news.de",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdDVNWjRxQ0J2eWU0VWJzeEIxTVdqd0JyZVliTFprTzBOWlpabFdMTlRHclBCNXZ3S2RReEk1cVBxM2NPSEFQdHE4blo1SGxyZDV6OG5sR1k0Ny1uWEhkS0R4OUZKcElJaktxT3FzS1cyY2JKXzNmTW9qbEx6N3h4NnBVaEszVENvMnR5TFJaUTVfUzEzOHpSSk1qbU53WnVONFZiRzFkY2EtV1k5Q1AyTkJ3SlhLUTY0cVE?oc=5",
+      "published": "2026-11-19T00:24:05Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Guidance",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Guidance"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "STB.OL:a179915e3bc8c9a16b9d184bba639cae1e2899ce3342b6348ba1e8c28e62e64a",
       "ticker": "STB.OL",
@@ -20,7 +150,14 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "risk",
+          "basis": "headline phrase: skattesak"
+        }
+      ]
     },
     {
       "id": "VOLV-B.ST:1bb536bd819a390d3fc3643f124f2b841b58be105949470ff71802948d52e253",
@@ -41,7 +178,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "FRO.OL:5371dc00371fc8d43232991533ac8c9d775e6c9b683a46dd8588aa078664c647",
@@ -59,10 +198,12 @@
       "sourceIssuer": null,
       "sourceFeed": null,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:ed464a367f2235db20bb8ca43a55498f689483ad57a533f261643da8b790442d",
@@ -83,7 +224,14 @@
       "relevance": "mentioned",
       "category": "M&A",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ]
     },
     {
       "id": "ALO.PA:2f123bf41a9b497edc04ad862716191c5c0152e3d320843633f76d88f2fbda29",
@@ -104,7 +252,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:6b98b871b3ce5a1e7244ba8acf7afd81c9755a204b11422391cf654b5b23c4ac",
@@ -125,7 +275,14 @@
       "relevance": "mentioned",
       "category": "M&A",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ]
     },
     {
       "id": "AIR.PA:c3dbe95754d9d20d8c6eae8c9b124452403fe006118c67e304746b51b0921752",
@@ -144,7 +301,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "1913.HK:de3d27ba6d5d3d28fc90d8bd4fc01a62d852908944be3a15d430288c8ef7c5b3",
@@ -163,7 +322,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "FRO.OL:d0074e8c96ca22038ec4c5b150a9d20688e609084dffb30307faf5d2ee479804",
@@ -182,7 +343,14 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ]
     },
     {
       "id": "P911.DE:c0b7f562d635fc8b697b64d89fb6bf54dc3ad3da85d6469abf3b77f9abcd7485",
@@ -198,10 +366,12 @@
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "Management",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SAND.ST:ed87b6e889223a49230f63272014fc5ac3082584af87db27e7e7e18ca2746fb6",
@@ -220,7 +390,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SAP.DE:391bd4702511d840149bb86c7d9f3b91795afb609bb279b94af3c72f5c07b37b",
@@ -239,7 +411,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "MTRS.ST:76b0e87b796ee81f5903fcb3f4a13dc51adfb6fb1dc17801b7ab518292a20cb3",
@@ -258,7 +432,14 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline phrase: expansion plans"
+        }
+      ]
     },
     {
       "id": "AIR.PA:b8c91cd0d2ac96caf8e656ee2b09cbae5622de0042dc065ac07b679bc49d878f",
@@ -277,7 +458,14 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline phrase: new orders"
+        }
+      ]
     },
     {
       "id": "YACHT.MI:67599334bdfd8dc4da66859ae856d7ff67b4da089587ff5be2460f8f61d7d20a",
@@ -296,7 +484,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "TKMS.DE:09d900141e8af9d4463043a226185271af98681bf0f8a1d17af1f006e969cf58",
@@ -315,7 +505,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "AIR.PA:af191539cd18f92222abf52f1a1ab93162a72d492bdc1f7d5cb9112d30659cb3",
@@ -336,7 +528,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "RACE.MI:77f7a99c9af4ac3a62204cb5c241af1fd7c7ffe98cfeb6e48bb4b56005c80391",
@@ -355,7 +549,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "TKMS.DE:7e52b97626186a56e518e849a6f1661efbb517f8552a8bebe3f2f9c32bc975f0",
@@ -374,7 +575,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "CAF.MC:7557539dbf6db4a891c335260fd3727157dece8b5c80d9964cf61a2472493944",
@@ -393,7 +596,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SUBC.OL:0188d55014df792a9e678a323b7e71c1808459d65372dd6aae8931f83d676436",
@@ -412,7 +617,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SBO.OL:b9918c7c932d1dd0e3db0ceb407e0e274f025c0a542135fdde821e7f946fc493",
@@ -431,7 +638,14 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ]
     },
     {
       "id": "AIR.PA:65de20b52ab1189d0267fa07289fe90e9fe937a840c3807c9d727851b89f9f58",
@@ -450,7 +664,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "UCG.MI:f31014afbb8294c4f2450083055e03db145b544ce0f1fc54a33252c43181f11f",
@@ -469,7 +690,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SUBC.OL:e147baea43237225ff81d387943b4dc3eeee1a0216ed24ed1e0b9b3d7ebe1fd3",
@@ -488,7 +711,14 @@
       "relevance": "mentioned",
       "category": "M&A",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ]
     },
     {
       "id": "SCATC.OL:916169cc47009474f1acb8fec0339cec69c76065a8cc6b96235b80000ea4943f",
@@ -507,7 +737,9 @@
       "relevance": "mentioned",
       "category": "Management",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "AIR.PA:79546c3ff7ce50541f5679b09e2dd6b6a2522ed04253f6911dc358ca737f5ee1",
@@ -526,7 +758,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:b1f14773c629aaceef8cb4c5d98e209c3e823d950144715f45f71887dafe7679",
@@ -547,7 +781,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ORSTED.CO:48b86707b804fb4ae7eb7b6acd0ab44839d00b01f154e03d390f3a1c4769ee36",
@@ -566,7 +802,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SAAB-B.ST:6eff3aded7ded5a1e28c2b592628fb515f80d07f04cf732985d5832821ff6a40",
@@ -585,7 +823,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "NDX1.DE:f4ef2342e8e554b5bf995eca38579f540db42a9dd8347b7cde3d5f59be11d6ad",
@@ -604,7 +849,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:282b664d50a395219af50769f9394574f4e29e0262a1a048b9ebb3a3c19ef195",
@@ -623,7 +870,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "STB.OL:7aa6f048ecc96fabac0b028656ffbb9cc3b8308e325cb84ad3e9f39b153d248d",
@@ -642,7 +891,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "RACE.MI:035207ee94f6a1baa41055815ea712029504d675354d1379bdce7c572eb0951e",
@@ -661,7 +912,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "DOFG.OL:28deb6a9d6ba8cf36e79885ad33148ca5b4a222df724949b41883b809dcd43d1",
@@ -680,7 +933,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:8e277e5bc98785a280a52721db6c060aad6a525e1e3976badbc8bd5ee473d5ee",
@@ -699,7 +954,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "FRO.OL:2723333eea393ccb1d6357dd113558005f8be25c84d1bf629af3018f4429a58a",
@@ -715,10 +972,12 @@
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "Guidance",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SIE.DE:d8542f11565cc7982be49f194fc154d6db7065a57f5d073f23c1ab624efd01f0",
@@ -737,7 +996,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "AKRBP.OL:acffbb3ecc4547ab01f25882218350f79e4124eb9409eff00f019cdd361c634b",
@@ -756,7 +1017,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "EL.PA:6e4c921d659d46175bb6fb75c49b47d1550be694236ee223459331922f172d77",
@@ -775,7 +1038,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "PFSE.DE:220ab32a30e9a7eb6679824a41d084b022001ea549979a786c94e5e3b36e23da",
@@ -794,7 +1059,14 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ]
     },
     {
       "id": "FRO.OL:4ec29d9b2eb46906df33d6df04b8de29c3cc97cb849bb27fc04dc15ade3e16aa",
@@ -810,10 +1082,12 @@
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ANDF.OL:65cf2a567d130c8765662ac8365d40b5b42e9589e4b2e9999ee92445baba2bb3",
@@ -832,7 +1106,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "AIR.PA:be7fad02085ee352eec3f25fb3472698b2f6acd84a357b561594db7c6783dd99",
@@ -851,7 +1127,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SAP.DE:593d4c9b1bc59fd61970cd0b97f90c4cdb42fdff30cd4263b35083f7d46083c5",
@@ -870,7 +1148,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "TKMS.DE:9b6a446d31004e9c63a35395812e37d9e473f6fe45e744bcbe61ef09430ffa1f",
@@ -889,7 +1169,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "CAF.MC:5ce7f76ee89ab4195e3f8decc8bcae51863e0e6fbdd1bb095a81e73b81d16531",
@@ -908,7 +1195,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "FCT.MI:a89bb8f0138ca49eee612010243516867fb321c4ff82d625fa7ce0b036f2e8a6",
@@ -927,7 +1216,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SIE.DE:00d2bbee96937d606f09d307b50fbc391758a8d68f945cd4f7d8421be8b44c60",
@@ -946,7 +1237,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "SIE.DE:51b409b05f574dd52ace57d9ae9573e018e9edb42bccaecccc8ffe632322ba87",
@@ -965,7 +1263,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "AIR.PA:878d770c8e7e1ecf75480b5c0fad9d155f6948d1a4738bf0c7d7a6e71dbbe78c",
@@ -984,7 +1289,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ANDF.OL:3132dbbc1d87a9e57ef088572b73e569c01e1ca4d4d954fe515998659c01d824",
@@ -1003,7 +1310,14 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ]
     },
     {
       "id": "GJF.OL:c619b8445134c19b2bc62f92aea33eebc8a73de5eca4941bd2931c19d4b51d96",
@@ -1022,7 +1336,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "AIR.PA:bd6c842b8a42273f6ca479852443336fca732160364ee44c898f1864cc3048a8",
@@ -1041,7 +1357,9 @@
       "relevance": "review",
       "category": "Management",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "VNA.DE:86ffaaf5b04ecc76b49250fd09e7bbde668a320418b8700d93a9a5209105416c",
@@ -1060,7 +1378,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SIE.DE:6380a3c69950cd4dd96f30880b17cd74a5127aa45959a182c845d03bf725c298",
@@ -1079,7 +1399,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:8ebd3f445c8994da8e559d180a1246527305377412668072742b2de996d8e474",
@@ -1098,7 +1420,14 @@
       "relevance": "mentioned",
       "category": "M&A",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ]
     },
     {
       "id": "RACE.MI:64f64035cb08d7815b76fba57923bcdb8e900d97548028936aa220f08969e913",
@@ -1117,7 +1446,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "FRO.OL:250bf7880d8d64e09fdaed21fbc7f51b6fd7f4df1c966c6d481271eb58f29b2e",
@@ -1133,10 +1464,12 @@
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "Guidance",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ORSTED.CO:fbdcac05877d245b6ba20d9fa05b23053f20f8285dce0c859e86b1a2069b53f5",
@@ -1155,7 +1488,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "1913.HK:92d7fb55b778624664dcf668f1a430cb97b47418b2bf6e75e1029085c1a830ec",
@@ -1174,7 +1509,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "1913.HK:621a44ed65688718ea8cf8aecc0a6ea2d9538969f0a78747168ffe2ba0599107",
@@ -1194,6 +1531,8 @@
       "category": "General",
       "sourceDomain": "news.google.com",
       "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [],
       "duplicateOf": "1913.HK:92d7fb55b778624664dcf668f1a430cb97b47418b2bf6e75e1029085c1a830ec"
     },
     {
@@ -1213,7 +1552,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ORSTED.CO:ecd07ef1be75d49af100f12aaec0d9187038f6624358ad29e7544c6f9880e6e5",
@@ -1232,7 +1573,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SAP.DE:1b45536e791e74038a9baa8e5cada21136c6f7893ea1e8ea0bbd2e68be47a52e",
@@ -1251,7 +1594,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "AIR.PA:07d24a46d7ab16b63c44558ab9a624c7b5dcef496c1d2b59c98aa8ab63bdb369",
@@ -1270,7 +1615,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ASML.AS:a0247642ab5c1a6e91515fe4d66403ac9c98271e669145194b2cfbd3a93ff2c2",
@@ -1289,7 +1636,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "S92.DE:f26292328925d8171954d9a711374f39a77d2ee086a44436b6d5286ead487f47",
@@ -1308,7 +1657,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SBNOR.OL:8d86248506279b997ee2adad1a2bd54e68991740e8792ed91d00ce4e26ee2099",
@@ -1329,7 +1680,14 @@
       "relevance": "strong",
       "category": "General",
       "sourceDomain": "newsweb.oslobors.no",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "prices",
+          "basis": "headline phrase: rente"
+        }
+      ]
     },
     {
       "id": "PFSE.DE:0abb8489cbaf9dd75e2fdde9807a66211252f36f773d875894502e89d903394b",
@@ -1348,7 +1706,14 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ]
     },
     {
       "id": "RACE.MI:bf01eb2bafdfd9e1324b54296121eee7c219057e068f8069b8bc7b6e634cc949",
@@ -1367,7 +1732,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SALM.OL:da6d961814ed9fea22b694324be1e632994c00007a517c37dd5fa62d06ade146",
@@ -1386,7 +1753,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:6651153829060bdd6d7e3d3ab4e241d283dd3101c2332dde0c9b52fa32f4d1b8",
@@ -1405,7 +1774,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "VWS.CO:d1a9048a69eaad718eee1d132bd03c2b6712e2a666b8d06a8c0f156f857382ac",
@@ -1424,7 +1795,9 @@
       "relevance": "mentioned",
       "category": "Management",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SALM.OL:377e9b520b35a0d78385043421193070bbcf77302d2ede9df0a5e3a38b7a0b95",
@@ -1443,7 +1816,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "PFSE.DE:bf6cf57ffb58a2380a8b0056765b4b8ae5c6cc0d6dd7b6de9bb9a6e5b15fd572",
@@ -1462,7 +1837,14 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline phrase: umsatz"
+        }
+      ]
     },
     {
       "id": "ORSTED.CO:78b11083c35e6bbe5d7b341da44e4fd920831ba90aac2dccf598e09d10bcd64d",
@@ -1481,7 +1863,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:f3a4be4bd545f9fbf52a7bf084966117c7249b315cb3003ac351ff03eca7eecc",
@@ -1500,7 +1884,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ALO.PA:9536ba1ea4a233409ee9c131b3afc02adcfef42d6b0c78b306448706021893d9",
@@ -1519,7 +1905,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SMOP.OL:8b80d43bfc9c108446789c67837662468b1ea80eb75207956bf4270f1c83369e",
@@ -1540,7 +1928,14 @@
       "relevance": "strong",
       "category": "Contracts",
       "sourceDomain": "newsweb.oslobors.no",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "TISG.MI:411898b2cf2a4b3d3bd847829808705dad4de5b61d68c8d21a99ec89daf71087",
@@ -1559,7 +1954,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "UCG.MI:0ae1db3b92f8c902d20b6db05096bcb03e3f17bd48793dc0e1cae34d88bbd911",
@@ -1578,7 +1975,14 @@
       "relevance": "mentioned",
       "category": "M&A",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ]
     },
     {
       "id": "SAP.DE:434c674f8a45fec0075cc0e399e4df9817ee70aafb6d4ae8ce245d1b67ea1cba",
@@ -1597,7 +2001,9 @@
       "relevance": "review",
       "category": "M&A",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "ALO.PA:8bd8a4ec9462bf0d8c504fc2dc3849216616328ed1125935708251e8ae17af64",
@@ -1616,7 +2022,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "NOVO-B.CO:556430e55fffe89acf8bf413ea3bff4b28a58e17b9534e64901cf496c357ac8e",
@@ -1635,7 +2043,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "RACE.MI:8a7b9b58881d81ecb0e30dc7c6a7e56ecbf763181861899c7c8155d0f3dd347b",
@@ -1654,7 +2064,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "SIE.DE:f4a0aeb6dbea27ac9eb3bd4f56a492b717b71ba497c4092f497629585ef74d60",
@@ -1673,7 +2085,14 @@
       "relevance": "mentioned",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ]
     },
     {
       "id": "TPE.DE:dccc296d94073b6d0f775b8c68dfb37b94b61b85e606f7ba4582726d13f8f286",
@@ -1692,7 +2111,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "PFSE.DE:081807962791fc6dbe4926472c15d963713677a4ceee4b670bc5761e17e18248",
@@ -1711,7 +2132,18 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        },
+        {
+          "driver": "potential",
+          "basis": "headline phrase: outlook"
+        }
+      ]
     },
     {
       "id": "FRO.OL:8bef7a033ef0253a8f1103b09ecefc1a55f0041b7a1f66cfbe7cc6f48a69ff2c",
@@ -1727,10 +2159,12 @@
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "Contracts",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "DOFG.OL:f7edf9337a83abafc790d05001ee95486348053b255637313bc9ed41c2eaf7fb",
@@ -1749,7 +2183,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "NDX1.DE:39b0ae5b0b558ed498dd10f213c7ec64b1072682871921cc7cf2fa5bb67bad82",
@@ -1768,7 +2204,9 @@
       "relevance": "mentioned",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "PFSE.DE:72b1a58989d113142fc4f605ea1bdb20496c48a0ee8cf0c492649b632d544f3b",
@@ -1787,7 +2225,14 @@
       "relevance": "mentioned",
       "category": "Earnings / results",
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ]
     },
     {
       "id": "DOFG.OL:4c555bf6a4f32cbd7ee4ea25d486c455f8f485a647fa41f0836e8af1479ca494",
@@ -1806,7 +2251,9 @@
       "relevance": "review",
       "category": "General",
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": []
     },
     {
       "id": "FRO.OL:3ccf9e9ab0a20cdbab1d20bb7072130a350b05f97fc560fe7a95a7a03bbe2eac",
@@ -1822,126 +2269,44 @@
       "lang": "en",
       "regulatory": false,
       "match": "name_mentioned",
-      "relevance": "mentioned",
+      "relevance": "review",
       "category": "Guidance",
       "sourceDomain": "news.google.com",
-      "priority": "high",
+      "priority": "normal",
+      "driverVersion": 1,
+      "driverTags": [],
       "duplicateOf": "FRO.OL:250bf7880d8d64e09fdaed21fbc7f51b6fd7f4df1c966c6d481271eb58f29b2e"
-    },
-    {
-      "id": "ORSTED.CO:7fcd679a79a8331e4908861db69de699cd2b3779ff1455728165ad36f9bc3322",
-      "ticker": "ORSTED.CO",
-      "name": "Ørsted",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "Ørsted Awarded Earthshot Prize For Energy Transformation",
-      "english": null,
-      "publisher": "The Engineer",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOEdsYjZmaWRtbnZwdjZXaXJ5ZVJ4MXZEUG95Q3p6TG05NDU0N3pmVWRXM29CbXAzZUVISXZjQ0g5UXphUk42MEN4R3NaMUpta01ncHhiakU1d0U3NFhfMk9pWjhpSWxiMGt2c2VVcWFJX1dHYk4xVXdUTm1IUkFRSmUtNERWaVhSVVdzYi0zdmVYMUw0MnotSlBReHR3Rk5RaWc?oc=5",
-      "published": "2026-11-18T10:26:11Z",
-      "lang": "no",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Contracts",
-      "sourceDomain": "news.google.com",
-      "priority": "high"
-    },
-    {
-      "id": "PFSE.DE:63e7519e4fc46f33f44fc414ec7b072b0c38ac444b597d11132ad9f826d23bc8",
-      "ticker": "PFSE.DE",
-      "name": "Pfisterer",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "PFISTERER Q3 2026 slides: record orders, profit surge amid caution By Investing.com",
-      "english": null,
-      "publisher": "Investing.com India",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORnl4MEgtNGVjeml2X2RqQTUyTmdhbk5FWncwQmM0Q1EzTGxoeVBmRE1BUHJSYjVNTXQtVWE3T3F3ZzdPZWVfNkVrSlF4WmItb3B0SFZfT2NwMXA1bUFqcnZwUFZtR2N5YVgzT3NBS3FSTmJ1Ukx1X2pvS2c5QTl0QlBWS0thT1FXenZkcklPWXQwUll4dHU3emZvNVJzV0R5MmRWX1RuRjJQaEViZzRhXzU0Q1ZXUDhiNV9fQUkxemgxQkk?oc=5",
-      "published": "2026-11-18T10:23:14Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "sourceDomain": "news.google.com",
-      "priority": "high",
-      "duplicateOf": "PFSE.DE:72b1a58989d113142fc4f605ea1bdb20496c48a0ee8cf0c492649b632d544f3b"
-    },
-    {
-      "id": "ALO.PA:56996095e5e32362dff5472c5728c26eb0392e4b084552e7a4d5d6b175c38212",
-      "ticker": "ALO.PA",
-      "name": "Alstom",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Alstom au plus bas depuis 2005 après ses résultats: Action en soldes ou cas désespéré?",
-      "english": "Alstom at its lowest since 2005 after its results: A bargain or a lost cause?",
-      "publisher": "Investing.com France",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPY0huaHZZNDJYV1Y1VEtrbndqaXRJdjRhSUhUeDFtSURxT3huSmtiQjA3bjhtZXRmZWVaTVgxMmN5ZzBsSUdzei02WlhrS3gyVzJ2czBnRFA2bVdmMlBzVDV3WXJoQXJWM01raHdkNW9NRW1tUW5SVm5LY1lDTVZXVDYzR2NONFBOUU9OZDVIZFlsRTdTQ2VPSFVqSzBCODdkeVhIekdQalBKRDlWZzhwdXBCaHk4UzhUaGRFenZzY0FvUTA2bVRUb1FlYjZOa0VHUm1fakNBdw?oc=5",
-      "published": "2026-11-18T10:20:00Z",
-      "lang": "fr",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "PFSE.DE:822ba38cd87f85d56d03e1fe377d7e5a007b73b311988c005a9cb35944d7d626",
-      "ticker": "PFSE.DE",
-      "name": "Pfisterer",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "Earnings call transcript: PFISTERER posts strong Q3 2026 growth, stock slips",
-      "english": null,
-      "publisher": "Investing.com Canada",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUlZmWHJuREZrNmN2YUpQNGpzTTNxd0N4dnRMcHZGemlKU1ljM3liZ1IyUjBzaG9PVVhjU2xFMHEybHNzQXBGMVZYQUVXTHN1c2ZMb2NoRi02T1VuOTc5czkydkVPVWN6NkFfZVJOMHBCWDkwdDFuek13NTRKOWlaN21MeXlqTm9LTF9MZmhTRFVrclNlNl91YzJNblVOY1RwNU5Ob0VQN1dVOFE3QmJRLVVEdm11LTdnM2xkcGloLTJYTUw5YWlFa2NKak9UNWxN?oc=5",
-      "published": "2026-11-18T10:18:25Z",
-      "lang": "en",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "sourceDomain": "news.google.com",
-      "priority": "high"
-    },
-    {
-      "id": "PFSE.DE:59d0f75d82c28f52060149eecf6a9ff6d5c52006a7587c3aab30aef27a7d7204",
-      "ticker": "PFSE.DE",
-      "name": "Pfisterer",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "Earnings Call: PFISTERER wächst in Q3 2026 zweistellig – Aktie gerät dennoch unter Druck",
-      "english": "Earnings Call: PFISTERER grows by double digits in Q3 2026 – but the share price nevertheless comes under pressure",
-      "publisher": "Investing.com Deutsch",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNVjZlc2ZUbWp1VTl1d1YyVG9CLTIzLXV6d0lWeGFOLXVNWjFFZE9kejNFdnMzd3N5RVdTVnl1dFN5TUFTUnJNNnpOQU1Md3lKUVBUUm8zcF9fNkowWlQ4QlpIWFUyNHRSeDdyR1pIZFZkQmVEdXZFeE5aMGpiNTRnNjIzTVlBLXpad2g4T1dXRjN6cFNmN0pWeGpsUFpyamExeGpjSkdHNUNzR0lmc201UlQ3QWNOd3FsNG1MRFhoTGNuQkQ2aEhLZmZ3QjZxYzI0S1hLOTBCc18?oc=5",
-      "published": "2026-11-18T10:13:00Z",
-      "lang": "de",
-      "regulatory": false,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "Earnings / results",
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1409,
+  "totalStored": 1416,
   "limit": 100,
   "quality": {
-    "total": 1409,
-    "relevant": 1093,
-    "review": 273,
+    "total": 1416,
+    "relevant": 1072,
+    "review": 306,
     "duplicates": 52,
     "issuerLinked": 410,
+    "driverClassification": {
+      "version": 1,
+      "classified": 334,
+      "categories": {
+        "numbers": 214,
+        "prices": 2,
+        "operations": 1,
+        "potential": 130,
+        "risk": 3
+      },
+      "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
+    },
     "categories": {
       "Earnings / results": 228,
       "Dividends": 10,
-      "M&A": 52,
-      "Guidance": 30,
-      "Contracts": 80,
+      "M&A": 53,
+      "Guidance": 31,
+      "Contracts": 83,
       "Capital & ownership": 0,
       "Management": 42,
-      "General": 967
+      "General": 969
     }
   }
 }

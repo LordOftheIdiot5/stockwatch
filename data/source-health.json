@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-19T00:24:27Z",
-  "latestScan": "2026-11-19T00:23:28+00:00",
+  "generated": "2026-11-19T02:32:22Z",
+  "latestScan": "2026-11-19T02:31:14+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "priceFreshness": {
@@ -107,7 +107,7 @@
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "requests_ok",
+    "Google News": "request_errors",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -115,53 +115,67 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 75.6,
+      "avgLatencyMs": 118.4,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 449.3,
+      "avgLatencyMs": 508.7,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 998.3,
+      "avgLatencyMs": 1297.2,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 598,
-      "failed": 0,
-      "avgLatencyMs": 325.5,
-      "errorTypes": {}
+      "succeeded": 592,
+      "failed": 6,
+      "avgLatencyMs": 399.8,
+      "errorTypes": {
+        "HTTPError": 6
+      }
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1979.4,
+      "avgLatencyMs": 1815.5,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1409,
-    "relevant": 1093,
-    "review": 273,
+    "total": 1416,
+    "relevant": 1072,
+    "review": 306,
     "duplicates": 52,
     "issuerLinked": 410,
+    "driverClassification": {
+      "version": 1,
+      "classified": 334,
+      "categories": {
+        "numbers": 214,
+        "prices": 2,
+        "operations": 1,
+        "potential": 130,
+        "risk": 3
+      },
+      "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
+    },
     "categories": {
       "Earnings / results": 228,
       "Dividends": 10,
-      "M&A": 52,
-      "Guidance": 30,
-      "Contracts": 80,
+      "M&A": 53,
+      "Guidance": 31,
+      "Contracts": 83,
       "Capital & ownership": 0,
       "Management": 42,
-      "General": 967
+      "General": 969
     }
   },
   "secFilings": {
