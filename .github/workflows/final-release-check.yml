@@ -388,6 +388,20 @@ jobs:
         if: startsWith(github.head_ref, 'feature/stockwatch-v87f-')
         run: python tests/browser_check_company_navigation_v87f.py
 
+      - name: V88 company driver map checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v88-')
+        run: |
+          node --test tests/test_company_driver_map_v88.mjs
+          python tests/browser_check_company_navigation_v87f.py
+          python tests/browser_check_company_driver_map_v88.py
+      - name: Upload V88 driver map previews
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v88-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v88-driver-map
+          path: workspace-previews/v88-driver-map-*.png
+          if-no-files-found: ignore
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 
