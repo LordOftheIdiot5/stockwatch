@@ -415,6 +415,9 @@ jobs:
           path: workspace-previews/v88b-*.png
           if-no-files-found: ignore
 
+      - name: V88c driver topic regression
+        run: node --test tests/test_news_drivers_v88c.mjs
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

@@ -12,7 +12,7 @@ function select(items,{ticker,cik=null}={}){
   if(cik){if(x.sourceFeed!=="sec_edgar"||x.sourceIssuer!==cik||x.match!=="issuer_code")continue}
   else if(x.sourceFeed==="sec_edgar")continue;
   const day=utcDay(x.published);if(!day||day>new Date().toISOString().slice(0,10)||!x.id||seen.has(x.id))continue;
-  seen.add(x.id);out.push({id:x.id,date:day,published:x.published,headline:x.headline,category:x.category||"General",publisher:x.publisher||"Source",url:x.url,confidence:x.relevance,form:x.form||null});
+  seen.add(x.id);out.push({id:x.id,date:day,published:x.published,headline:x.headline,category:x.category||"General",publisher:x.publisher||"Source",url:x.url,confidence:x.relevance,form:x.form||null,driverVersion:x.driverVersion||null,driverTags:Array.isArray(x.driverTags)?x.driverTags.filter(t=>t&&["numbers","prices","operations","potential","risk"].includes(t.driver)&&typeof t.basis==="string"):[]});
  }
  return out.sort((a,b)=>Date.parse(b.published)-Date.parse(a.published)||a.id.localeCompare(b.id));
 }

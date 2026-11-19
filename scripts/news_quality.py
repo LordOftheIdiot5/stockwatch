@@ -10,6 +10,7 @@ import re
 import unicodedata
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
+from news_drivers import classify, VERSION
 
 CATEGORIES = {
     "Earnings / results": r"\b(earnings?|results?|quarterly|q[1-4]|half.year|annual report|interim|resultat|rapport|delars|arseresultat)\b",
@@ -62,6 +63,17 @@ def association(item):
         # When Siemens Energy is mentioned alongside Siemens, retain the story
         # as an explicitly ambiguous association rather than a confident match.
         return 'review'
+    # Ambiguous common nouns / brand names require issuer-specific context.
+    # Keep raw records for review rather than deleting them.
+    normalized=norm(title)
+    if ticker == 'FRO.OL' and not re.search(r'\b(frontline (?:plc|ltd|limited)|fro (?:stock|shares)|frontline (?:tanker|shipping|shares|stock|earnings|results|dividend|fleet)|(?:tanker|shipping company) frontline)\b',normalized):
+        return 'review'
+    if ticker in ('P911.DE','PAH3.DE'):
+        # distinguish Porsche AG the manufacturer from Porsche SE the holding
+        # company. A car mention is not an issuer reference.
+        exact=r'\bporsche ag\b' if ticker=='P911.DE' else r'\bporsche (?:se|automobil holding)\b'
+        if not re.search(exact,normalized):
+            return 'review'
     # Avoid matching generic corporate suffixes as issuers.
     if has_phrase(title, name):
         return 'mentioned'
@@ -86,6 +98,8 @@ def annotate(items):
         x = dict(item)
         x['relevance'] = association(x)
         x['category'] = topic(x.get('headline') or x.get('english') or '')
+        x['driverVersion'] = VERSION
+        x['driverTags'] = classify(x,norm(x.get('headline') or x.get('english') or ''))
         x['sourceDomain'] = (urlsplit(x.get('url') or '').hostname or '').lower()
         x['priority'] = 'high' if x['category'] != 'General' and x['relevance'] != 'review' else 'normal'
         x.pop('duplicateOf', None)
@@ -121,4 +135,8 @@ def summary(items):
             'review': sum(x.get('relevance') == 'review' for x in items),
             'duplicates': sum(bool(x.get('duplicateOf')) for x in items),
             'issuerLinked': sum(x.get('relevance') == 'strong' for x in items),
+            'driverClassification': {'version':VERSION,
+                'classified':sum(bool(x.get('driverTags')) and not x.get('duplicateOf') for x in items),
+                'categories':{k:sum(not x.get('duplicateOf') and any(t['driver']==k for t in x.get('driverTags',[])) for x in items) for k in ('numbers','prices','operations','potential','risk')},
+                'notice':'Multi-label topical association; not sentiment, price effect or verified headline facts.'},
             'categories': {k: sum(x.get('category') == k for x in items) for k in [*CATEGORIES,'General']}}

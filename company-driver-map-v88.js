@@ -19,7 +19,7 @@ function resolveProfile(registry,key){
 }
 function selectNews(items,driver){
  if(!driver)return [];
- return (Array.isArray(items)?items:[]).filter(x=>x&&typeof x.headline==="string"&&["strong","mentioned"].includes(x.confidence)&&(driver.news===null||driver.news.includes(x.category))&&safe(x.url)).slice(0,5);
+ return (Array.isArray(items)?items:[]).filter(x=>x&&typeof x.headline==="string"&&["strong","mentioned"].includes(x.confidence)&&(driver.id==="attention"||(x.driverVersion===1?x.driverTags?.some(t=>t.driver===driver.id):driver.news===null||driver.news.includes(x.category)))&&safe(x.url)).slice(0,5);
 }
 function safe(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password}catch{return false}}
 function mount(host,{company,config,load,events=[],sections=null}){
@@ -50,9 +50,9 @@ function mount(host,{company,config,load,events=[],sections=null}){
    if(drivers.length){const contextual=n("div");panel.append(contextual);global.StockwatchIndustry.mount(contextual,{config:{...config,driverProfiles:[{...p,drivers}]},sector:company.sector,ticker:company.ticker,load});}
   }
   const related=selectNews(currentEvents,d);
-  const news=n("div",undefined,"sw88-news");news.append(n("h4",id==="attention"?"Latest source-linked updates":"Related news and filings"));
+  const news=n("div",undefined,"sw88-news");news.append(n("h4",id==="attention"?"Latest source-linked updates":"Related news and filings"),n("p","Topic tags are based on headlines or filing forms, not measured price impact. Attention lists all relevant news; it does not measure hype.","sw-meta"));
   if(!related.length)news.append(n("p","No matching categorized records in the loaded company archive. Unclassified news remains in Company updates.","sw-meta"));
-  for(const e of related){const row=n("div",undefined,"sw88-story");row.append(a(e.headline,e.url),n("small",e.date+" · "+e.publisher+" · "+(e.confidence==="strong"?"Issuer-confirmed":"Named reference")));news.append(row)}
+  for(const e of related){const row=n("div",undefined,"sw88-story");row.append(a(e.headline,e.url),n("small",e.date+" · "+e.publisher+" · "+(e.confidence==="strong"?"Issuer-confirmed":"Named reference")));const basis=e.driverVersion===1?e.driverTags?.find(t=>t.driver===id)?.basis:null;if(basis)row.append(n("small","Topic evidence: "+basis));news.append(row)}
   panel.append(news);
   panel.setAttribute("aria-label",d.label+" research detail");
  }

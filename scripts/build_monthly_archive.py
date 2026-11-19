@@ -11,6 +11,7 @@ from collections import defaultdict
 from pathlib import Path
 from datetime import datetime, timezone
 from build_research_data import dt, collect_news, merge_news
+from news_quality import annotate
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -39,7 +40,7 @@ def build(root=ROOT, now=None):
             if old is None or rank.get(row.get('match'),0)>rank.get(old.get('match'),0):
                 by_id[row['id']] = row
         # URL/key attributions can be shared across companies. Preserve unique issuer + id.
-        ordered = sorted(by_id.values(), key=lambda x:(x['published'],x['id']), reverse=True)
+        ordered = annotate(sorted(by_id.values(), key=lambda x:(x['published'],x['id']), reverse=True))
         tmp = path.with_suffix('.tmp')
         tmp.write_text(json.dumps({'month':month,'items':ordered},ensure_ascii=False,separators=(',',':'))+'\n', encoding='utf8')
         tmp.replace(path)
