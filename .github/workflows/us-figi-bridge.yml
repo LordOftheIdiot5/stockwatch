@@ -1,0 +1,24 @@
+name: US security identifier bridge validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/us_figi_bridge.py'
+      - 'tests/test_us_figi_bridge.py'
+      - '.github/workflows/us-figi-bridge.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_us_figi_bridge.py' -v
+      - name: Probe existing OpenFIGI connection
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: python scripts/us_figi_bridge.py
