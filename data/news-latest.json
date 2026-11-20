@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T00:26:15Z",
+  "generated": "2026-11-20T00:38:48Z",
   "items": [
     {
       "id": "UCG.MI:088da44aeeb92ee7ae8a7ea758a99e86475c9a08dbbfb06c213ca40dc3b6434c",
@@ -79,6 +79,35 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "NIBE-B.ST:c9a074e0c0eb085d0035b66b3b962efa14c65c2a3c40664bc9aa39c7f1286dca",
+      "ticker": "NIBE-B.ST",
+      "name": "Nibe Industrier",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "NIBE Industrier AB (publ) 2026 Q3 - Results - Earnings Call Presentation (OTCMKTS:NDRBF) 2026-11-19",
+      "english": null,
+      "publisher": "Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQkI2aUFLNC1xeENTMG1lRUVodEVPRHZqN3RBaVNXY3pZNmt1d1FFUURtN3pLdEVTdWNnYzV2S2VwQVJGOC1hUmdCa2ZyN3dGQlZUWU1QUFQzUlhPMXZ4NmF3QnBSeHhzY3hLeWhJWUdmU1ZUYmJZM3R5VHJGUHdHVmMzWlMxUHRZYldnN0pwYWc2YUVpSS1ZRV9jUjJPSFJFTFpwSDkyM0kzZFU?oc=5",
+      "published": "2026-11-19T23:18:33Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high",
+      "duplicateOf": "NIBE-B.ST:f7100987d1207ff1c205307f67c598cf9761cd80909470d58ecb3b67a3e576c5"
     },
     {
       "id": "IFX.DE:caa0690e35648cc52f2a5085ddd01e3d9968e1df26625ff0f3c5a0eaa54e2356",
@@ -2392,65 +2421,37 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:84cb3743647af73953c9398a6dae75ad0a7a43cb83c31f77cbae63888a77b4af",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Germany and UniCredit reach broad agreement in Commerzbank takeover battle",
-      "english": null,
-      "publisher": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTHdSVEt1Z1plekU1SWRUOVA3TWNZbDdEUXhPMzZYUDRRWGNwQmlRSkdJTnloUWNVZ016NUozb1VaYk5ETVNZV2prckowTF9sU2tWWGFWdl9CTlFURDBTRHJnbW5iaVdXZXFaLUh6LWhQTXRKLS1jem04OTQ4YUZlRFRGOWVOa25wVkZPeGtEZzBPekJsWWZ2M05VV2RlWksxOHBKQUhB?oc=5",
-      "published": "2026-11-19T12:09:06Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "M&A",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: M&A"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1670,
+  "totalStored": 1675,
   "limit": 100,
   "quality": {
-    "total": 1670,
-    "relevant": 1238,
-    "review": 374,
-    "duplicates": 76,
+    "total": 1675,
+    "relevant": 1241,
+    "review": 375,
+    "duplicates": 77,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 406,
+      "classified": 408,
       "categories": {
-        "numbers": 243,
+        "numbers": 244,
         "prices": 4,
         "operations": 1,
-        "potential": 176,
+        "potential": 177,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 260,
+      "Earnings / results": 262,
       "Dividends": 12,
       "M&A": 68,
       "Guidance": 34,
-      "Contracts": 116,
+      "Contracts": 117,
       "Capital & ownership": 1,
       "Management": 53,
-      "General": 1126
+      "General": 1128
     }
   }
 }
