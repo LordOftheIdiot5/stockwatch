@@ -1,6 +1,57 @@
 {
-  "generated": "2026-11-20T22:04:50Z",
+  "generated": "2026-11-20T22:35:47Z",
   "items": [
+    {
+      "id": "CAF.MC:a54968f95863a13b3c6babf3f78cf462f80b29b3f2aae8250435393153ae8946",
+      "ticker": "CAF.MC",
+      "name": "CAF",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "CAF Executive Committee approves historic launch of U-17 Women’s Africa Cup of Nations and opens bidding for WAFCON 2028",
+      "english": null,
+      "publisher": "CAFOnline.com",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNYjZ1bDVJOHJkUkRsYzllaGdoNlNyUFpDelFxWU9CU2paT21ycy0yeFFQc0VMN0JUWS1xdy00Nk56Ykg2bUdkb215anpsWjRFVXNEa0lJaU9YWXdHYjJ6Yk5HNzdtaUgwQjAyeXZlYmUxc3I2ZDN1R19sUDFnSEcxc3pxMlRGcl9jYWFhUWZPemNjTXFyNnR0c0x5M2ZfWEQ0ZnROcHNTMC1hNDVHcGhZLWU0ZE8tYW9oT3ZxdEF6UDloTko4Rzh5eFdHNGgzazVUTjQyTkRuWFRPX0diaC03VjgxRVFmMEVubjFidHNaMTlubG1CLXc?oc=5",
+      "published": "2026-11-20T22:32:20Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "FRO.OL:96a18cdf72f8fcdebe7bd94d3c1e46586267eaff7974176331798b9b3d9cf2a1",
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Frontline Ltd. Q3 2026 Earnings Call Summary",
+      "english": null,
+      "publisher": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZHJvNWQyYl9QV0FDTFRHQmRnTWM3N0tsTV9vQ2xsbVlhdFVYeldWamg2R3oyVEM5djBIbEozakcxYUR5S1EzZ2kzdlhKOHBpLVJ0Rkw3ZEJPZ3BpQ1ZReHEwVVZxMkh1a2ltOXdFYU1GV091MUVvRDBMMVZIVElGd1l6aE10a2JLczRsY1RNTU9UeTRqTFBwVGljSQ?oc=5",
+      "published": "2026-11-20T21:50:21Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "IFX.DE:d6052aaa5d5d4ea242c8aa7c3f81ebba7fb678c24ad8cbb0521bae345bf375ab",
       "ticker": "IFX.DE",
@@ -7373,6 +7424,29 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "ALRIB.PA:1fec6e15712478189f0f7f6d810aa8d377c57bbc781a1d7a3c96d7527dff49fe",
+      "ticker": "ALRIB.PA",
+      "name": "Riber",
+      "sector": "Tech & space",
+      "type": "news",
+      "headline": "L'action Riber s'envole de 11,5 % après une commande de MBE 6000 en Asie",
+      "english": "Riber's share price soars by 11.5% following an MBE 6000 order in Asia",
+      "publisher": "Idéal Investisseur",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMU9RMFFIaERTUENZM0ZMekxJTTFxSVVpN3psc0liWllFd2lvbkdvbU9ETXZDX2FqWU81R3Y0czhmZXNha2RUNDRqaHRBS0FzUFJUVU9yOEk2OExFUkR1Rk1odExXWEhrNDZodW5YSkVtSDAwWlBmakVWR1hBUWdFREVRcHlOa2JkUkV0VTNudGxOTll3Mm9keldySm1IOUdCbjBPS085UTFsb1hfN1ZfblFMbWVESmNyclBuVWVrbw?oc=5",
+      "published": "2026-11-19T11:14:00Z",
+      "lang": "fr",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "ODF.OL:a2c38cc6dd2aa3013c733ea402bd45f262d31be7d027a9d1d5c49cdf9d0c2048",
