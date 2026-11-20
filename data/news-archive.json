@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T01:05:05Z",
+  "generated": "2026-11-20T01:11:48Z",
   "items": [
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
@@ -3765,6 +3765,34 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMndXQlg5aUlOQ0N2bHFTOE5DbTRaRTEyYzBEUjY0dllsUFh4S1djbmgxNDNfSUNaRUtIVTZSNmFScFFFVDlrVXhlVnh5Zll1UmpYVmFadkZyYm9hbDZoNXVwQjZUX3dQWEdEaVZVRWItZVpTU3hjSWVKWmJfOS1JbHBnbTFZaDd2ZlpfWWZLdw?oc=5",
       "published": "2026-11-19T09:36:24Z",
       "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "GOMX.ST:1a7b615be128ac58108f67b82f3aab269749333b09f2f15e1613544cbf8a5096",
+      "ticker": "GOMX.ST",
+      "name": "Gomspace",
+      "sector": "Tech & space",
+      "type": "news",
+      "headline": "GomSpace vinner kontrakt på 8 miljoner euro för månuppdragets andra fas",
+      "english": null,
+      "publisher": "Securities.io",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUTRoN2VJWjlOeXo1OEROYmYyT3ZvLTRfZFpuR0lIdkNYYWh6VVE3OWNuYVBPcjlzZWl1Z3ZDOFB2MWh3bjdtYWVtU01kYklfQTZ5SWhzaW1uemxMM1QzNU1NZFVtdVFyWjJhckkxSFJleXI2TkREWWk2cFVFRkRkTmZUWTJ1VWtBcE54TWZDZ1h5Zm8?oc=5",
+      "published": "2026-11-19T09:36:24Z",
+      "lang": "sv",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -10423,6 +10451,30 @@
           "basis": "headline category: Guidance"
         }
       ]
+    },
+    {
+      "id": "KCR.HE:d301edf2e727871f230b7623039f4ab9475a1440ff245926d56ccbf9e6de333f",
+      "ticker": "KCR.HE",
+      "name": "Konecranes",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Konecranes Oyj (K34.HA) Analyst insights, Price targets and Recommendations",
+      "english": null,
+      "publisher": "Yahoo Finance Australia",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE85Z2MyNWViQy1mLXNHbkg3bHpzMnk2bm51ZG94dVZtZkVfZWxPRnZNRVRXVzQ4X3hna0VMT2VHOVRVRDZYbEZKOFdQTlI3Wm9ETjFra3JXV01WT0hyRUthMzZPTmxKX2NOVUtJ?oc=5",
+      "published": "2026-11-18T05:18:46Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "KCR.HE:e2fe90e95163b091a85ec069f2e840d1a71bacc27634f25082a63031f3981f4e"
     },
     {
       "id": "EL.PA:b5d067808179e2d9e6b877c107ee5a75e02d8a1f7df680c44d353d1719411801",
