@@ -13,10 +13,11 @@ class ReferencePriceTests(unittest.TestCase):
             mf=root/"grant.json";csv=root/"feed.csv"
             p.write(mf,grant)
             csv.write_text("listing_id,date,close,volume\n"+id+",2025-01-02,100,200\n"+id+",2025-01-03,102,300\n")
-            with self.assertRaisesRegex(ValueError,"publicRawRedistribution"):p.import_batch(root,csv,mf)
-            self.assertFalse((root/p.OUT).exists())
-            grant["publicRawRedistribution"]=True;p.write(mf,grant)
             d=p.import_batch(root,csv,mf);r=d["records"][0]
+            self.assertTrue(r["publicDisplayPermitted"])
+            self.assertFalse(r["rawRedistributionPermitted"])
+            self.assertFalse(r["redistributionPermitted"])
+            self.assertTrue(p.read(root/r["historyPath"])["publicDisplayPermitted"])
             self.assertEqual(r["changePct"],2);self.assertEqual(r["observations"],2)
             dest=root/r["historyPath"];before=dest.read_bytes()
             csv.write_text("listing_id,date,close,volume\n"+id+",2025-01-03,999,300\n")
@@ -26,4 +27,13 @@ class ReferencePriceTests(unittest.TestCase):
             r=p.import_batch(root,csv,mf)["records"][0]
             self.assertEqual(r["observations"],3);self.assertEqual(r["previousDate"],"2025-01-03")
             self.assertEqual(r["firstDate"],"2025-01-02")
+    def test_public_display_cannot_be_inferred_from_raw_rights(self):
+        grant={"provider":"Test","sourceUrl":"https://example.invalid/feed","licenseReference":"https://example.invalid/rights","publicRawRedistribution":True,"publicDisplay":False,"historicalStorage":True,"derivedAnalytics":True,"identityReviewed":True,"priceType":"end_of_day","listings":{"ref:XOSL:EQNR":{"mic":"XOSL","providerSymbol":"TEST","currency":"NOK","adjusted":False}}}
+        with self.assertRaisesRegex(ValueError,"publicDisplay"):p.validate_grant(grant)
+        grant["publicDisplay"]=True
+        grant["historicalStorage"]=False
+        with self.assertRaisesRegex(ValueError,"historicalStorage"):p.validate_grant(grant)
+        grant["historicalStorage"]=True
+        del grant["publicRawRedistribution"]
+        with self.assertRaisesRegex(ValueError,"publicRawRedistribution"):p.validate_grant(grant)
 if __name__=="__main__":unittest.main()
