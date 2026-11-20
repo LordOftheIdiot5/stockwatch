@@ -47,3 +47,6 @@ No net loss of working UI routes, heatmap coverage, price last-known fallback, n
 
 ## Shared Nordl consistency
 Coordinate cross-site visual standards with [Leivro master plan #172](https://github.com/LordOftheIdiot5/models/issues/172). Shared fundamentals: sensible typography, responsive/accessible controls, clear data provenance, graceful missing data, professional visuals. Stockwatch can remain a dense terminal; Leivro is a consumer-facing shopping decision platform and Energy is map/chart-first—do not force identical homepage layouts.
+
+## Approved mockup reference (replaces annotated concept)
+See [Approved Stockwatch Design Target V1](APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md). The reference image is stored in the user's Library at `/Stockwatch/Design References/stockwatch-approved-full-width-overview-v1.png`. This is the **public UI direction without any right-side internal goals/style/palette panel**. The right column of the public dashboard is genuine research content. Source-aligned numbers only; concept imagery is illustrative. Apply the V90–V96 acceptance gates and preserve currently functioning data/heatmap fallbacks.
