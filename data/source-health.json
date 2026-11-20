@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-20T01:21:23Z",
-  "latestScan": "2026-11-20T01:20:26+00:00",
-  "scanAgeHours": 0.02,
-  "contextAgeHours": 0.02,
+  "generated": "2026-11-20T01:23:21Z",
+  "latestScan": "2026-11-20T01:22:43+00:00",
+  "scanAgeHours": 0.01,
+  "contextAgeHours": 0.01,
   "priceFreshness": {
     "comparisonDate": "2026-11-19",
     "equities": {
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 139,
+  "storedStories": 143,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,28 +115,28 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 120.5,
+      "avgLatencyMs": 69.4,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 519.2,
+      "avgLatencyMs": 403.1,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1210.9,
+      "avgLatencyMs": 1402.5,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 598,
       "succeeded": 569,
       "failed": 29,
-      "avgLatencyMs": 383.1,
+      "avgLatencyMs": 297.0,
       "errorTypes": {
         "HTTPError": 29
       }
@@ -145,13 +145,13 @@
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 8096.8,
+      "avgLatencyMs": 3611.4,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1686,
-    "relevant": 1246,
+    "total": 1687,
+    "relevant": 1247,
     "review": 379,
     "duplicates": 80,
     "issuerLinked": 419,
@@ -174,7 +174,7 @@
       "Guidance": 34,
       "Contracts": 118,
       "Capital & ownership": 1,
-      "Management": 54,
+      "Management": 55,
       "General": 1134
     }
   },
