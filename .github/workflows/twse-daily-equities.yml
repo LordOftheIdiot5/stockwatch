@@ -1,0 +1,40 @@
+name: Official TWSE daily securities price pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/twse_daily_equities.py'
+      - 'tests/test_twse_daily_equities.py'
+      - '.github/workflows/twse-daily-equities.yml'
+  workflow_dispatch:
+    inputs:
+      retain_private:
+        description: 'Store attributed official daily securities observations in private R2'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_twse_daily_equities.py' -v
+      - name: Read-only official source validation
+        if: github.event_name != 'workflow_dispatch' || inputs.retain_private != true || github.ref != 'refs/heads/main'
+        run: python scripts/twse_daily_equities.py
+      - name: Install archive client
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.retain_private == true
+        run: pip install 'boto3>=1.40,<2'
+      - name: Collect and verify private historical archive
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.retain_private == true
+        env:
+          STOCKWATCH_TWSE_PRIVATE_RETENTION: 'true'
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: python scripts/twse_daily_equities.py --retain-private
