@@ -4,6 +4,8 @@ on:
     paths:
       - 'scripts/listing_identity_batch.py'
       - 'tests/test_listing_identity_batch.py'
+      - 'scripts/listing_identity_r2.py'
+      - 'tests/test_listing_identity_r2.py'
       - '.github/workflows/listing-identity-batch.yml'
   workflow_dispatch:
     inputs:
@@ -11,6 +13,10 @@ on:
         type: choice
         options: [nordic, euronext, other]
         default: nordic
+      retain_private:
+        description: 'Retain scoped identity candidates privately in R2'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -27,9 +33,24 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install defusedxml==0.7.1
       - run: python -m unittest discover -s tests -p 'test_listing_identity_batch.py' -v
+      - run: python -m unittest discover -s tests -p 'test_listing_identity_r2.py' -v
       - name: Official reference batch and existing OpenFIGI mapping
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' || github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        if: (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.retain_private != true) || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
         env:
           STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
           GROUP: ${{ inputs.group || 'nordic' }}
         run: python scripts/listing_identity_batch.py --group "$GROUP"
+      - name: Install private archive client
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.retain_private == true
+        run: pip install 'boto3>=1.40,<2'
+      - name: Collect and verify private candidate evidence
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.retain_private == true
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+          GROUP: ${{ inputs.group }}
+          STOCKWATCH_IDENTITY_PRIVATE_RETENTION: 'true'
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: python scripts/listing_identity_batch.py --group "$GROUP" --retain-private
