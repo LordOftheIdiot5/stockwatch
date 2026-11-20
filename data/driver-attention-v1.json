@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T08:08:02Z",
+  "generated": "2026-11-20T09:09:18Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -4403,8 +4403,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 41,
-      "latestRecord": "2026-11-19T19:19:25Z",
+      "observedRecords": 42,
+      "latestRecord": "2026-11-20T08:55:07Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 0,
@@ -8752,8 +8752,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-17T16:37:19Z",
+      "observedRecords": 3,
+      "latestRecord": "2026-11-20T07:53:16Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -9602,17 +9602,26 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "QBEN.ST:4ad4d8ebb420f98fe4077dab6f179cc3b9a7be20bdee09ae74568508e5cb6f6d",
+          "published": "2026-11-19T13:00:00Z",
+          "headline": "Qben Infra AB (QBEN) Secures About NOK 57M Over Three-Year Eltel Agreement",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSWlMbkg2N1BRdGo4Z0ZDUnRZNldjaFZfbS1ESlFIby0weG1pYXMxblZIZ1UtTk1QVDhEZDU1bHdmQ3F6ZkhyT1l6WmFRQ2E5dTkwS3lTUThpUEpOZ0ZBVWZ1V0JST0VqSzVxOUhIV3ZYc1MxOTFlQVpBcXdyYkx4ZUpxcVlCNjAyOGVOVkFuVnVxV2xOUDhjaW1XWTZ6TzFTbVBCcHRtRzdSMVpfNktUTUd1U1RiR0VEdWhQYkhhQ1Q4cEpWYWk3WHhrUlFVUmc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 1,
+      "latestRecord": "2026-11-19T13:00:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
@@ -9621,7 +9630,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     },
     "QLIRO.ST": {
@@ -9793,6 +9802,14 @@
       ],
       "potential": [
         {
+          "id": "RACE.MI:9415a20605fe825fab6bab4ff9d9cf1e543268f55903767532e0b3add57442b7",
+          "published": "2026-11-20T08:42:38Z",
+          "headline": "Lewis Hamilton shares fresh update on Ferrari contract situation: \"No need to think about it\"",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdDh0UU1JY2RHdTk5MmJYbmtYQ0xFQmpqY3pJbTNrUUJXM0ZKUTA5MTRHWVBPYWdrZVVoaUtVc2xFTXMyWkNrY2FHMzR4THJaQnoyeEtaWkRCX1c1UHpfR0lCT0xpN0pJNFR0Z2ZxRXB4bzdxQ2dYMG52bXFUS1lhWjZLdDc5WF9MYXhya3BWY0lkUURZTlRkTnFieWNFSGJLZm8xNGhmZWt6eGFWX1RxNGJXMHRUWXBtbnh0MzR3?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "RACE.MI:f642d9122d8476f0c3596a5a9ccda4c5ba0af6f47ec734456b632afa458b73e2",
           "published": "2026-11-20T06:20:00Z",
           "headline": "Lewis Hamilton says he has ‘not even thought about’ new Ferrari contract",
@@ -9857,8 +9874,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 32,
-      "latestRecord": "2026-11-20T07:42:42Z",
+      "observedRecords": 33,
+      "latestRecord": "2026-11-20T08:42:38Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10132,7 +10149,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 2
+          "media": 3
         }
       ],
       "potential": [
@@ -10145,8 +10162,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-19T12:32:56Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-20T08:52:34Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10160,7 +10177,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 8
+        "media": 9
       }
     },
     "S92.DE": {
@@ -11340,8 +11357,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 43,
-      "latestRecord": "2026-11-19T13:03:26Z",
+      "observedRecords": 44,
+      "latestRecord": "2026-11-20T05:00:00Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -12914,6 +12931,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:f639b795fab355dba64c21144627357943b3d9960caa5664cfec6872c6d59ddd",
+          "published": "2026-11-20T08:59:05Z",
+          "headline": "Deutsche Bank upgrades Unicredit stock on strong earnings outlook",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdThpdWlzalRKRUt2Y3BoQXUtWUJ6R3VNVzByaXY4TXMtSVpJMFN2YmJMMlZuWk03WTVfbWpOU0cyeUtWZEFqeGU0QzZmYkZQU0RoczY5amkwRWs1dXBaNzZlSzlNMlFhUkc3bk5vRmNhYkJfYV9YcXFOUjVRTlktQVBWNUNMZ2VGUGpTMWFRb19jTERnZ3Q5bWhFYmltaUNVWl9iVUs2VW1QYkFrd1ZFYWtWYmdEeC1uWDFXaGlQcHd6QVIyQWc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "UCG.MI:4012323dac859b73d62cacd52c6ee6d8683f01d8c70c9f0611f2bd423c4059b2",
           "published": "2026-11-20T05:45:22Z",
           "headline": "UniCredit-Commerz, agreement with Berlin on eight binding points",
@@ -13064,18 +13089,10 @@
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNEJiUTlkZjk0RHI0Vy1CZXBFcV9OanUzekhqOFZFME5zMDVIQ09hZHVFM0xaNjlubW5mdkxKQU1KVC1vbTVWbjVVTjBQc1pBV09QSGltVUdNZjBlaGdDZElmak0zSGd2bW1YaFctbTVKMmpnenNudkVsT2F5Q3IzZWRLc1YyMVdlcEpjbDVQLWEtdG5JT0ZNNGVjbTRFWkMzZVcxRw?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:66e56c960bb347b4bcbbba2d016ddc40c29e46b21c5860ce74afd17ba5114fdc",
-          "published": "2026-11-17T23:48:26Z",
-          "headline": "EU clears UniCredit-Commerzbank takeover citing Mittelstand impact",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYlFnR1o0eDFuRVY0czlrdXNweEdZNGdUNzk5Mk1yTUNaaERUR0dMaUdfSTZfakJITmNRY2Y0TWliTTRPLThCX2szWVJSSS1fdG9wNWxETFowTnNPNWt4YmtUWUVJeGlSODhoRUE5S2pUUFp5T0RWRnhtOHdZcG5aZVhwMzY4ZUFwdTMycmt6RTB1dU05WGZ1SFJoUWp3SER1ZThuVFFJT2FZQjBoeWdDUmdoaGh6UQ?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 102,
-      "latestRecord": "2026-11-20T07:21:00Z",
+      "observedRecords": 104,
+      "latestRecord": "2026-11-20T08:59:05Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -13801,8 +13818,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 18,
-      "latestRecord": "2026-11-20T06:33:13Z",
+      "observedRecords": 19,
+      "latestRecord": "2026-11-20T08:42:31Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
