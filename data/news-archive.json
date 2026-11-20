@@ -1,6 +1,34 @@
 {
-  "generated": "2026-11-20T03:16:57Z",
+  "generated": "2026-11-20T03:33:13Z",
   "items": [
+    {
+      "id": "GOMX.ST:6ed8495101f62755a03f6efd1d3706764f38b0ec98449aa4ddf0d12cf4d4f425",
+      "ticker": "GOMX.ST",
+      "name": "Gomspace",
+      "sector": "Tech & space",
+      "type": "news",
+      "headline": "Lunar Prospecting Satellites: GomSpace Wins €8M Phase Two Contract, Names No Customer or Instruments",
+      "english": null,
+      "publisher": "Tech Times",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQODdCc2w0QUVJMVBZOEFLLTNnbnFBcGYyNTl4VHpSTTdqUkNlYkVSVVJGWGlkOGpwRDJrUmotMG5sQXhJSmhad3EzbXMzdEFDdW9RSGFBaWNiWmk0QzNMMlVfMk1mZ3IyQnVqUHhveG94SmZRdERTMUZwSm5vY1RGcFBrelRUdVBZeTZURmhlTl9iTjJFYWJnVWI3VFJwbGJBREFqeGxvYm5vRVNUbWFXMVFzamFPMldRcllhaHhkeGJCVlZaTUZJaXlhRzNvbVFycHNpYjRiSnI0TXVpLUNPM3BPTGpMQVk?oc=5",
+      "published": "2026-11-20T03:29:10Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "UCG.MI:a4661ee68db2c045161e6902255f2eb6db9e8885731958ea6df7307f92a25147",
       "ticker": "UCG.MI",
@@ -8514,6 +8542,30 @@
       "priority": "normal",
       "driverVersion": 1,
       "driverTags": []
+    },
+    {
+      "id": "SALM.OL:851dd5423efd1eebc483ca7f9043f73cb959086a213c06da3974ce8aabba21f4",
+      "ticker": "SALM.OL",
+      "name": "Salmar",
+      "sector": "Aquaculture",
+      "type": "news",
+      "headline": "Fire år med lakseskatten: – Blir færre familieeide gründerbedrifter (+)",
+      "english": null,
+      "publisher": "Dagens Næringsliv",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbF8zWVZSR0ppeW5ob1BPNk1qUlBKMkdPTGZzVHB0SHhOWm5QckxPb1c5UVJyT1pKdVVXblBwTTJOZmN2bmRDT3l0Y19TYjBXMDhnNjB4OFo0NGhnUndreUFwRWpMcFBBZWVGVDJPUndLVlR0YTdWRzFJRXNCdE1UcmVYS212UVgwdW4yTFJES0RfNElPb0Q0Y0NFUS1VNnlvZldJRDlVYktHX1RPZDlKZXc1U2stZm1RVUg1aV80S0tQcXJwU3g4YQ?oc=5",
+      "published": "2026-11-18T12:32:00Z",
+      "lang": "da",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal",
+      "duplicateOf": "SALM.OL:377e9b520b35a0d78385043421193070bbcf77302d2ede9df0a5e3a38b7a0b95"
     },
     {
       "id": "PFSE.DE:bf6cf57ffb58a2380a8b0056765b4b8ae5c6cc0d6dd7b6de9bb9a6e5b15fd572",

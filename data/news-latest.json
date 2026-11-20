@@ -1,6 +1,34 @@
 {
-  "generated": "2026-11-20T03:16:57Z",
+  "generated": "2026-11-20T03:33:13Z",
   "items": [
+    {
+      "id": "GOMX.ST:6ed8495101f62755a03f6efd1d3706764f38b0ec98449aa4ddf0d12cf4d4f425",
+      "ticker": "GOMX.ST",
+      "name": "Gomspace",
+      "sector": "Tech & space",
+      "type": "news",
+      "headline": "Lunar Prospecting Satellites: GomSpace Wins €8M Phase Two Contract, Names No Customer or Instruments",
+      "english": null,
+      "publisher": "Tech Times",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQODdCc2w0QUVJMVBZOEFLLTNnbnFBcGYyNTl4VHpSTTdqUkNlYkVSVVJGWGlkOGpwRDJrUmotMG5sQXhJSmhad3EzbXMzdEFDdW9RSGFBaWNiWmk0QzNMMlVfMk1mZ3IyQnVqUHhveG94SmZRdERTMUZwSm5vY1RGcFBrelRUdVBZeTZURmhlTl9iTjJFYWJnVWI3VFJwbGJBREFqeGxvYm5vRVNUbWFXMVFzamFPMldRcllhaHhkeGJCVlZaTUZJaXlhRzNvbVFycHNpYjRiSnI0TXVpLUNPM3BPTGpMQVk?oc=5",
+      "published": "2026-11-20T03:29:10Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "UCG.MI:a4661ee68db2c045161e6902255f2eb6db9e8885731958ea6df7307f92a25147",
       "ticker": "UCG.MI",
@@ -2413,47 +2441,24 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "P911.DE:e5343df85c61023b70a771459ce459c39e91b00d811c1575bc6563d6fe4fa480",
-      "ticker": "P911.DE",
-      "name": "Porsche",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "Porsche’s Iconic GT3 RS Fender Vents Could Get Full-On Active Aero Upgrades",
-      "english": null,
-      "publisher": "CarBuzz",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUkFxQlRXQmU4dW9CN2xKVHduYV9LNlJWRG01RmlJaWwzSWM4cTAwRFNMQkxjdVVRYjZ3SEd5V1B4SEoyLTBLbDZqcjVDZW90ZjdMcGVFTTM1MzllRlp0MHY0cUM0bkZ3NVA5MGNnQmpBVWVndjBuS0czVkdXQUhZRQ?oc=5",
-      "published": "2026-11-19T13:00:11Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "review",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1697,
+  "totalStored": 1699,
   "limit": 100,
   "quality": {
-    "total": 1697,
-    "relevant": 1255,
-    "review": 380,
-    "duplicates": 81,
+    "total": 1699,
+    "relevant": 1256,
+    "review": 381,
+    "duplicates": 82,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 417,
+      "classified": 418,
       "categories": {
         "numbers": 248,
         "prices": 5,
         "operations": 1,
-        "potential": 183,
+        "potential": 184,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
@@ -2463,10 +2468,10 @@
       "Dividends": 12,
       "M&A": 70,
       "Guidance": 34,
-      "Contracts": 120,
+      "Contracts": 121,
       "Capital & ownership": 1,
       "Management": 56,
-      "General": 1137
+      "General": 1138
     }
   }
 }
