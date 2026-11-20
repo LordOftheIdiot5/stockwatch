@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T16:07:21Z",
+  "generated": "2026-11-20T17:07:51Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -9802,6 +9802,14 @@
       ],
       "potential": [
         {
+          "id": "RACE.MI:395deb91df7894b0e8e5707f9010a2d3471ef3c8a333fab080812ed0fbde88e3",
+          "published": "2026-11-20T16:54:14Z",
+          "headline": "Lewis Hamilton on his Ferrari contract: “I don’t need to think about that”",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNYUR6R2hKNjF2QXFSclBGTFg1dHRwU21PQmR4a2x4dEE2dUlWN2ZkdzFCUUJGSUpOZDZxVjFpWUZvN3VpWURrakNnc1lFRndOTTlWcWhZU0ItX3BzdGZSMzBHc2x3YngxM0RIcEZDN0dXYy14d244RXFJNnQwdzVmTjhRQWNOVk9HOFE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "RACE.MI:807a6d978d10b145441714bed1d89f8a3069b1d05d560641694b75d63fcf87d5",
           "published": "2026-11-20T10:35:59Z",
           "headline": "Mark Hughes: Bearman’s Haas contract delay is a Ferrari problem",
@@ -9882,8 +9890,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 39,
-      "latestRecord": "2026-11-20T15:42:00Z",
+      "observedRecords": 40,
+      "latestRecord": "2026-11-20T16:54:14Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
