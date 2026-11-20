@@ -1,6 +1,29 @@
 {
-  "generated": "2026-11-20T00:46:56Z",
+  "generated": "2026-11-20T00:56:51Z",
   "items": [
+    {
+      "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Ganztägiger Warnstreik auf Kieler Werften angelaufen",
+      "english": "Full-day warning strike begins at Kiel shipyards",
+      "publisher": "T-Online",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNemprNHNYLXFZeHVqbUFBUDZHWWg0aW9VcW56YjU1SU9IREpjRlFjQW0tWExmOTRJbFVYLWxySzZ2QWoyVmhpY21xck1HVmlKQmt5a0NETmpWaUtNUmh4elJoQ0s3aERmTXhwbXJHcVFZdHJ4UTdxaUFNMTZ0THlGa3FZR1hjbC12aVVaRjhYcmg3azdHRklXWVphRFRPdmQtNURpaTR1Q29TcXM?oc=5",
+      "published": "2026-11-20T00:44:08Z",
+      "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "UCG.MI:088da44aeeb92ee7ae8a7ea758a99e86475c9a08dbbfb06c213ca40dc3b6434c",
       "ticker": "UCG.MI",
@@ -1715,6 +1738,38 @@
       "priority": "high"
     },
     {
+      "id": "FRO.OL:3433fd22466d1f15c38ec3a7bc6e5d1fd019cd929f777fd135063570f8ad702d",
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Frontline earnings up next as tanker rates tumble from peak",
+      "english": null,
+      "publisher": "Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVUprcGxKS0VrVzJzSEQtMVVZNW5Ldl9WR0lxU19qRzVaSnc1SXNRWWZfSzViUzROZzVsODlac1AyLTV3dDRyQ29wNWhoZEM1QnhPUTg3dkllOC1NWmRDYVhob3A2R2Ywd2FnbzU4a0JSY2VPT0ZlS3dIZ0VoRFdhNTZxdTkzU0hTc0xnQWJYMGUzU1JzRTJ1b3RFVVlON3JRT3d1LU56bi1QOW5QNi1XY3R3?oc=5",
+      "published": "2026-11-19T14:44:13Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        },
+        {
+          "driver": "prices",
+          "basis": "headline phrase: tanker rates"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "NELLY.ST:7f38ee514c3ad414034fde7722415aab81012c13cb420dfacb7ceb590c4204ed",
       "ticker": "NELLY.ST",
       "name": "Nelly",
@@ -2375,68 +2430,22 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "ORSTED.CO:15c74f8429f23ec77a2a6f47ce0ae607edce9b41827d6e3cfdb4bb5711341e0f",
-      "ticker": "ORSTED.CO",
-      "name": "Ørsted",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "Ørsted wins The Earthshot Prize 2026",
-      "english": null,
-      "publisher": "Energy Global",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbHlIakVYX2kteThYWWdLTlpodUtSZjFJUlN5cnFWZVVVbWstdmMyQnc3VGdFdDUtcVhRZVI1SDFtMnJBYXM0NUQzSU5BQVc5VkdKRHl3eFIwdmp4eDQtTmZWVEF1MG9NMnJGZWdYeDZxWFlSM05Pb3lHeDlfRTctTUtyZmhRUQ?oc=5",
-      "published": "2026-11-19T12:12:21Z",
-      "lang": "no",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:48a963a85c275fd9594a1cacabdf7c034cc95d38a16fd0668ed1763ef27c879e",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Breakingviews - COMMENTARY: Germany gives tactical nod to European bank M&A",
-      "english": null,
-      "publisher": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNkFXS2tsOGhIT09YZEpYdWlVSkhsNGZKd0xzWXhEWFgyc2otZHNETHZrdWNCS2JiR3NPR2ZtU3ZqdGtBb0ZUMGc3MkVKdnQtMUdBXzBCTml2U3ZhbHplWUgyZUgxNUYzUklWSkhtMHI3WVZYZXMwVk03RTV0QmRsOHVuTlBKX3hsQVBPMnFYYU1RNmFZU1lDaUpXd1E5dEw0RC15OWdlbw?oc=5",
-      "published": "2026-11-19T12:12:20Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1679,
+  "totalStored": 1681,
   "limit": 100,
   "quality": {
-    "total": 1679,
-    "relevant": 1244,
-    "review": 376,
+    "total": 1681,
+    "relevant": 1245,
+    "review": 377,
     "duplicates": 77,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 409,
+      "classified": 410,
       "categories": {
-        "numbers": 245,
-        "prices": 4,
+        "numbers": 246,
+        "prices": 5,
         "operations": 1,
         "potential": 178,
         "risk": 3
@@ -2444,14 +2453,14 @@
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 263,
+      "Earnings / results": 264,
       "Dividends": 12,
       "M&A": 68,
       "Guidance": 34,
       "Contracts": 117,
       "Capital & ownership": 1,
       "Management": 54,
-      "General": 1130
+      "General": 1131
     }
   }
 }

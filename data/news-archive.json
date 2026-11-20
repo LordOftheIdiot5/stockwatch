@@ -1,6 +1,29 @@
 {
-  "generated": "2026-11-20T00:46:56Z",
+  "generated": "2026-11-20T00:56:51Z",
   "items": [
+    {
+      "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Ganztägiger Warnstreik auf Kieler Werften angelaufen",
+      "english": "Full-day warning strike begins at Kiel shipyards",
+      "publisher": "T-Online",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNemprNHNYLXFZeHVqbUFBUDZHWWg0aW9VcW56YjU1SU9IREpjRlFjQW0tWExmOTRJbFVYLWxySzZ2QWoyVmhpY21xck1HVmlKQmt5a0NETmpWaUtNUmh4elJoQ0s3aERmTXhwbXJHcVFZdHJ4UTdxaUFNMTZ0THlGa3FZR1hjbC12aVVaRjhYcmg3azdHRklXWVphRFRPdmQtNURpaTR1Q29TcXM?oc=5",
+      "published": "2026-11-20T00:44:08Z",
+      "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "UCG.MI:088da44aeeb92ee7ae8a7ea758a99e86475c9a08dbbfb06c213ca40dc3b6434c",
       "ticker": "UCG.MI",
@@ -1693,6 +1716,38 @@
       "publisher": "Investing.com South Africa",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQ2w4b0VQVjJ5NjBvbjFSM2xMVWtLNm1KZ2laQWk5SVFSemNENjBMWXd1WkRmakFxRTVjalFDZGN3LVJ3QWZpRXBFVXFhejFkZV9NbjdMMDZndFN6YlZPaVZWNWpkT2g4c054dlh0TmZIR1B6UXpiMkQ1S0ZlRV96aEZEVzhHUk04eHRSbWMzOFh6WG9HQ2lOand3bUNfdG1sazNxZ292UjBST0FYMlA4WFMybWxraUhoM25mMw?oc=5",
       "published": "2026-11-19T15:01:26Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        },
+        {
+          "driver": "prices",
+          "basis": "headline phrase: tanker rates"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "FRO.OL:3433fd22466d1f15c38ec3a7bc6e5d1fd019cd929f777fd135063570f8ad702d",
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Frontline earnings up next as tanker rates tumble from peak",
+      "english": null,
+      "publisher": "Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVUprcGxKS0VrVzJzSEQtMVVZNW5Ldl9WR0lxU19qRzVaSnc1SXNRWWZfSzViUzROZzVsODlac1AyLTV3dDRyQ29wNWhoZEM1QnhPUTg3dkllOC1NWmRDYVhob3A2R2Ywd2FnbzU4a0JSY2VPT0ZlS3dIZ0VoRFdhNTZxdTkzU0hTc0xnQWJYMGUzU1JzRTJ1b3RFVVlON3JRT3d1LU56bi1QOW5QNi1XY3R3?oc=5",
+      "published": "2026-11-19T14:44:13Z",
       "lang": "en",
       "regulatory": false,
       "sourceIssuer": null,

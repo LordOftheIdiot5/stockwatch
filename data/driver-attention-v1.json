@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T00:46:56Z",
+  "generated": "2026-11-20T00:56:51Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -4476,15 +4476,15 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [],
-      "observedRecords": 4,
+      "observedRecords": 5,
       "latestRecord": "2026-11-19T15:01:26Z",
       "topicCounts": {
-        "numbers": 3,
-        "prices": 1,
+        "numbers": 4,
+        "prices": 2,
         "operations": 0,
         "potential": 0,
         "risk": 0
@@ -4495,7 +4495,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 5
       }
     },
     "FYB.DE": {
