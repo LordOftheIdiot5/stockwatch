@@ -47,6 +47,27 @@ class ArchiveTests(unittest.TestCase):
         self.assertNotIn("privateMetadata",out)
         with self.assertRaises(ValueError):
             archive.official_snapshot("official-energy-macro",{"series":[denied]})
+    def test_reviewed_index_objects_and_hash(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=pathlib.Path(temp);(root/"data").mkdir()
+            ident="twse:TAIEX";fn,endpoint,source=archive.INDEX_FILES[ident]
+            row={"date":"2026-11-19","close":100.0,"changePoints":1.0,"changePct":1.01}
+            d={"key":ident,"endpoint":endpoint,"sourceUrl":source,"license":"Taiwan Open Government Data License 1.0; attribution required","licenseUrl":"https://data.gov.tw/en/license","name":"TAIEX","market":"Taiwan","provider":"TWSE","notice":"Dated observations","history":[row],"latest":row,"lastAttempt":"first"}
+            p=root/"data"/fn;p.write_text(json.dumps(d))
+            with patch.object(archive,"immutable_put",return_value="created") as put:
+                result=archive.archive_reviewed_snapshots(object(),root,"2026-11-20")
+                self.assertEqual(result[0]["observations"],1)
+                first=put.call_args.args[2]
+                d["lastAttempt"]="second";p.write_text(json.dumps(d))
+                archive.archive_reviewed_snapshots(object(),root,"2026-11-20")
+                self.assertEqual(first,put.call_args.args[2])
+            d["sourceUrl"]="https://example.com";p.write_text(json.dumps(d))
+            with self.assertRaises(ValueError):list(archive.index_objects(root,"2026-11-20"))
+    def test_live_esma_pointer_integrity(self):
+        if not (archive.ROOT/"data/esma-equity-history/index.json").exists():self.skipTest("ESMA snapshot not present")
+        raw,day=archive.esma_object(archive.ROOT,dt.date.today().isoformat())
+        self.assertGreater(len(raw),0)
+        self.assertTrue(archive.dated(day))
     def test_real_published_source_snapshots(self):
         for kind,filename in archive.OFFICIAL_FILES.items():
             with self.subTest(kind=kind):

@@ -96,3 +96,6 @@ Materials: audit already imported USGS MCS 2026 CSVs before expanding; map lithi
 
 ## V89j.2 — broader Global Market Pulse
 TWSE TAIEX retained; add separately licensed daily TPEx and cross-market Formosa feeds, using Taiwan OGDL 1.0 dataset 11391 and 11669. Separate collection and fallback; no fake index observations. OECD DF_FINMARK monthly share-price API is a promising international layer (not daily exchanges); audit underlying third-party rights before publication. Japan/Korea/Thailand/Philippines permissions or licensed feeds remain needed. Expand to all markets possible under verified source terms rather than relabeling proxies as exchange benchmarks.
+
+## V89h phase 1 — existing private R2 infrastructure
+Extend daily observation archive and public research catalog to the three reviewed Taiwan daily index feeds and dated ESMA identity snapshot. Verify exact source and licence, archive content-addressed index histories without volatile retrieval metadata, verify ESMA pointer and hash; preserve old versions. Extend approved BLS public-domain series set. No raw exchange data, SEC ownership/insider evidence, credentials or extra service introduced by this phase. Live R2 write validation required before marking operational. Remaining V89h work: independently reviewed SEC records, durable receipt/index layer and retrieval checks; V90 interface follows.
