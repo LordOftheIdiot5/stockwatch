@@ -1,15 +1,25 @@
 name: Euronext source-dated price staging
 on:
+  schedule:
+    - cron: '0 21 * * 1-5'
   pull_request:
     paths:
       - 'scripts/euronext_price_stage.py'
+      - 'scripts/euronext_last_trade_r2.py'
       - 'tests/test_euronext_price_stage.py'
+      - 'tests/test_euronext_last_trade_r2.py'
       - '.github/workflows/euronext-price-stage.yml'
   workflow_dispatch:
+    inputs:
+      retain_private:
+        description: 'Retain dated Euronext trade observations in private R2; requires prior legal review'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
   stage:
+    if: github.event_name != 'schedule' || (vars.STOCKWATCH_R2_RETENTION_APPROVED == 'true' && vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED == 'true')
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
@@ -19,9 +29,26 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install defusedxml==0.7.1
       - name: Validate actual price handling and source gates
-        run: python -m unittest discover -s tests -p 'test_euronext_price_stage.py' -v
-      - name: Stage exact daily exchange trade observations in ephemeral memory
-        if: (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+        run: |
+          python -m unittest discover -s tests -p 'test_euronext_price_stage.py' -v
+          python -m unittest discover -s tests -p 'test_euronext_last_trade_r2.py' -v
+      - name: Install scoped private R2 client
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.retain_private == true)
+        run: python -m pip install 'boto3>=1.40,<2'
+      - name: Stage exact daily exchange trade observations
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
         env:
           STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
-        run: python scripts/euronext_price_stage.py
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+          STOCKWATCH_R2_RETENTION_APPROVED: ${{ vars.STOCKWATCH_R2_RETENTION_APPROVED }}
+          STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED: ${{ (github.event_name == 'schedule' && vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.retain_private) }}
+          RETAIN: ${{ (github.event_name == 'schedule' && vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.retain_private) }}
+        run: |
+          if [ "$RETAIN" = "true" ]; then
+            python scripts/euronext_price_stage.py --retain-private
+          else
+            python scripts/euronext_price_stage.py
+          fi
