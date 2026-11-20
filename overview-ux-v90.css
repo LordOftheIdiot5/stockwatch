@@ -1,0 +1,111 @@
+/* Stockwatch V90 UX-S1/S2: visible, fluid overview. Source data and nav routes unchanged.
+   All page-level overrides are scoped to index; other research pages keep their layout. */
+body[data-page="index"] .sw-content{
+  box-sizing:border-box;
+  width:100%;
+  max-width:none;
+  margin-inline:0;
+  min-width:0;
+  padding:clamp(18px,1.7vw,30px) clamp(16px,2vw,36px) 48px;
+}
+body[data-page="index"] .sw-main{min-width:0}
+body[data-page="index"] #v4app{min-width:0;width:100%}
+body[data-page="index"] .sw-overview-head h1{
+  font-size:clamp(26px,2.1vw,38px);
+  line-height:1.22;
+}
+body[data-page="index"] .sw-overview-head p,
+body[data-page="index"] .sw-overview-status,
+body[data-page="index"] .sw-index-sources,
+body[data-page="index"] .sw-index-main small,
+body[data-page="index"] .sw-index-foot,
+body[data-page="index"] .sw-ws-heat-toolbar,
+body[data-page="index"] .sw-overview-chart-controls label{
+  font-size:12px;
+  line-height:1.5;
+}
+body[data-page="index"] .sw-overview-coverage span,
+body[data-page="index"] .sw-overview-coverage small,
+body[data-page="index"] .sw-stat-label,
+body[data-page="index"] .sw-stat-sub{
+  font-size:12px;
+  line-height:1.45;
+}
+body[data-page="index"] .sw-stat-num{font-size:clamp(23px,1.7vw,30px);line-height:1.2}
+body[data-page="index"] .sw-overview-news .sw-brief{padding:13px 16px}
+body[data-page="index"] .sw-overview-news .sw-brief h4{font-size:14px;line-height:1.5}
+body[data-page="index"] .sw-overview-news .sw-brief p,
+body[data-page="index"] .sw-overview-news .sw-brief-kicker{font-size:12px;line-height:1.4}
+body[data-page="index"] .sw-overview-news .sw-tag{font-size:10px}
+body[data-page="index"] .sw-index-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  width:100%;
+  max-width:1180px;
+  gap:12px;
+}
+body[data-page="index"] .sw-index-card{max-width:none;padding:12px 14px}
+body[data-page="index"] .sw-index-top{font-size:13px}
+body[data-page="index"] .sw-index-close{font-size:clamp(19px,1.5vw,25px);font-weight:700}
+body[data-page="index"] .sw-index-spark svg{height:42px}
+body[data-page="index"] .sw87-market-grid{
+  grid-template-columns:minmax(0,1.75fr) minmax(290px,1fr);
+  gap:16px;
+}
+body[data-page="index"] .sw87-market-grid .sw-brief{padding:13px 16px}
+body[data-page="index"] .sw87-market-grid .sw-brief h4{font-size:14px;line-height:1.45}
+body[data-page="index"] .sw-heat-cell{min-height:62px}
+body[data-page="index"] .sw-heat-cell strong,
+body[data-page="index"] .sw-heat-cell span{font-size:12px}
+body[data-page="index"] .sw-ws-heat-toolbar select,
+body[data-page="index"] .sw-overview-chart-controls select{
+  min-height:38px;
+  font-size:13px;
+}
+body[data-page="index"] .sw-index-sources summary{padding-block:6px}
+/* The sidebar is still a terminal navigation. Improve legibility, do not hide routes. */
+body[data-page="index"] .sw-nav-label{font-size:11px;line-height:1.4}
+body[data-page="index"] .sw-link{font-size:13.5px;line-height:1.45;min-height:42px}
+body[data-page="index"] .sw-side-bottom{font-size:11px}
+body[data-page="index"] .sw-breadcrumb{font-size:13px}
+body[data-page="index"] .sw-quick-search input{font-size:13px}
+body[data-page="index"] .sw-tape{font-size:12px}
+body[data-page="index"] .sw-tape>span:first-child{font-size:11px}
+body[data-page="index"] .sw-tape-content b{font-size:12px}
+body[data-page="index"] .sw-theme{width:40px;height:40px}
+body[data-page="index"] :is(a,button,input,select,summary):focus-visible{
+  outline:3px solid var(--sw-mint);
+  outline-offset:3px;
+}
+body[data-page="index"] .sw-skip-content-v90{
+  position:fixed;left:12px;top:12px;z-index:500;
+  padding:12px 16px;border-radius:8px;
+  background:var(--sw-card-hi);color:var(--sw-text);
+  transform:translateY(-160%);
+  text-decoration:underline;
+}
+body[data-page="index"] .sw-skip-content-v90:focus{transform:translateY(0)}
+@media(max-width:1250px){
+  body[data-page="index"] .sw87-market-grid{grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr)}
+}
+@media(max-width:1000px){
+  body[data-page="index"] .sw87-market-grid{grid-template-columns:minmax(0,1fr)}
+  body[data-page="index"] .sw-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:740px){
+  body[data-page="index"] .sw-content{padding:14px 12px 30px}
+  body[data-page="index"] .sw-index-grid{grid-template-columns:minmax(0,1fr)}
+  body[data-page="index"] .sw-overview-news .sw-brief{padding:12px}
+  body[data-page="index"] .sw-overview-head p{font-size:13px}
+  body[data-page="index"] .sw-overview-coverage>div{padding:10px}
+  body[data-page="index"] .sw-overview-coverage small{font-size:11px}
+  body[data-page="index"] .sw-heat-cell{min-height:54px}
+  body[data-page="index"] .sw-ws-heat-toolbar label{font-size:12px}
+  body[data-page="index"] .sw-ws-heat-toolbar select{min-height:44px}
+}
+@media(max-width:390px){
+  body[data-page="index"] .sw-content{padding-inline:10px}
+  body[data-page="index"] .sw-overview-head h1{font-size:25px}
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-page="index"] .sw-skip-content-v90{transition:none}
+}
