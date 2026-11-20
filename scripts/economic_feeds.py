@@ -4,6 +4,8 @@ from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 FRED={'PCU483111483111':('US deep sea freight transportation producer price index','index Jun 1988=100'),'DGS2':('US 2-year Treasury yield','percent'),'DGS10':('US 10-year Treasury yield','percent'),'DFF':('US effective federal funds rate','percent'),'UNRATE':('US unemployment rate','percent'),'CPIAUCSL':('US consumer price index','index 1982-84=100'),'INDPRO':('US industrial production','index 2017=100'),'M2SL':('US M2 money stock','billion USD')}
+BLS_PPI={'PCU483111483111','WPU301301','WPU301302','WPU1017','WPU0652'}
+FRED.update({'WPU301301':('US deep sea water freight PPI','index Dec 2008=100'),'WPU301302':('US coastal and intercoastal water freight PPI','index Dec 2008=100'),'WPU1017':('US steel mill products PPI','index 1982=100'),'WPU0652':('US fertilizer materials PPI','index 1982=100')})
 EIA={'RBRTE':('Brent crude spot price','USD/barrel'),'RWTC':('WTI Cushing crude spot price','USD/barrel')}
 UA='StockwatchResearch/1.0 (+https://stocks.nordl.dev)'
 def timestamp():
@@ -42,7 +44,7 @@ def fred(key,series_id):
     if not rows:raise ValueError('empty_fred_response')
     item=observation('fred',series_id,*FRED[series_id],rows,'US','https://fred.stlouisfed.org/series/'+series_id,
         'FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights')
-    if series_id=='PCU483111483111':
+    if series_id in BLS_PPI:
         item.update(frequency='monthly',license='U.S. Bureau of Labor Statistics via FRED; public domain, citation requested')
     return item
 def eia(key,series_id):
