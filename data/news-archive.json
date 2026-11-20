@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T01:23:21Z",
+  "generated": "2026-11-20T01:35:40Z",
   "items": [
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
@@ -723,6 +723,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "SUBC.OL:87a7f56c05dae4c203443047a332b3c0b0fd8357496731c1cc9d1063fbb7407f",
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Saipem, Subsea 7 target early 2027 to complete merger",
+      "english": null,
+      "publisher": "Pipeline and Gas Journal",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUTljVzNMUWt5Y3lOZTc5OGpBcXJIQ2dSa1B1Z0VTeUl3ejgyRHpSQk5fbnlTSUxoNjBMcmFKTWxCWi1tRWVsY1NDcDdzWDBWNVBQdG04UUJSN1hkMmJTNEtWV0NsamdOY0N5ZmVvZGZmSkJGVldSb1FMdFllQ29ZUnlGREZXM1piZ0J5QmpENkh3WV81aVNQWTJqSmhvTkFRZTlYYTl0cjVzcmNzM2lGamUxa2Q2TDkxYWdhbVI5SVZPZWNfTzJQR1A4UmFtQzIz?oc=5",
+      "published": "2026-11-19T18:35:42Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "VNA.DE:c2404156272055a52ff2dbee12cf2f7b45c56354d0a32d4395475c49f64f6c95",
@@ -2576,6 +2604,34 @@
       "priority": "high"
     },
     {
+      "id": "SUBC.OL:c3a8a586695fc9a8f9eac238077930be78e985b20f4e8656eb88338147717bb0",
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Subsea 7 S.A. (SUBCY) Q3 FY2026 earnings call transcript",
+      "english": null,
+      "publisher": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQ0dISWs0X0FRRkdLc0oyUGlxZFQzM01uUVZjSFMyRjlRU0RvWnlsWWl0TzFGVUtVenNRRjdaUFgwNzY1cXFBNFE5WVBCWExTcVVYVURzRElJbWRYaEkzczJSRWFmUHBZVUtUNDlQWTRHaFRERlFfeHZRTW9EamE2d2YxaDNiTDhsRG5iRVdlVQ?oc=5",
+      "published": "2026-11-19T12:00:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "sec:0000104169:WMT:0000104169-26-000168",
       "ticker": "WMT",
       "name": "Walmart",
@@ -2600,6 +2656,34 @@
       "driverTags": [],
       "sourceDomain": "www.sec.gov",
       "priority": "normal"
+    },
+    {
+      "id": "SUBC.OL:437a8463435887d1ef758eb15deb26cacd5272d5a8ddbb2dcc4fd62fbfd402bb",
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Subsea 7 Q3 2026 Earnings Call Is Live",
+      "english": null,
+      "publisher": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZGx0NVlnT3o4dUMxalh4S0FScHJuZjlKbDFrMVhlMGRDRUpPcjJ5bVZwNG9YWlE3ZXpmNHVNU2VDRWVkbTluSVRvRUpoUUZLNm9oN0NOZE5tSzdyUEc3YjI2QjBBLW91LWZLMjZKU253NThCX291WmdSVGxpcWVCM2xqZk5YYzAtaVE3TDRqTm53MTBPWVZfTGJhM3hnZ0hod2wzUG13N1o0NWs?oc=5",
+      "published": "2026-11-19T11:58:37Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "AIR.PA:28b4d61c6a7e46cbc5db80e42c95b438158c5c2d4d2bc7cebed34f6e8fae7ecc",

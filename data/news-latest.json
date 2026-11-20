@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T01:23:21Z",
+  "generated": "2026-11-20T01:35:40Z",
   "items": [
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
@@ -723,6 +723,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "SUBC.OL:87a7f56c05dae4c203443047a332b3c0b0fd8357496731c1cc9d1063fbb7407f",
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Saipem, Subsea 7 target early 2027 to complete merger",
+      "english": null,
+      "publisher": "Pipeline and Gas Journal",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUTljVzNMUWt5Y3lOZTc5OGpBcXJIQ2dSa1B1Z0VTeUl3ejgyRHpSQk5fbnlTSUxoNjBMcmFKTWxCWi1tRWVsY1NDcDdzWDBWNVBQdG04UUJSN1hkMmJTNEtWV0NsamdOY0N5ZmVvZGZmSkJGVldSb1FMdFllQ29ZUnlGREZXM1piZ0J5QmpENkh3WV81aVNQWTJqSmhvTkFRZTlYYTl0cjVzcmNzM2lGamUxa2Q2TDkxYWdhbVI5SVZPZWNfTzJQR1A4UmFtQzIz?oc=5",
+      "published": "2026-11-19T18:35:42Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "VNA.DE:c2404156272055a52ff2dbee12cf2f7b45c56354d0a32d4395475c49f64f6c95",
@@ -2403,55 +2431,32 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SAP.DE:e65e5a44cf309b02d2c36f3e98aa20c4b29efd7f7f71f2ce230f6e935d8eda2f",
-      "ticker": "SAP.DE",
-      "name": "SAP",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Who Wins the Next Disruption: Five Rules for Creating Supply Chains that Can Take a Hit",
-      "english": null,
-      "publisher": "SAP News Center",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRUlCdDQ2Vk04QWNCSVpKaF85MkRfM2lkNWhPSG41OXFGUUhiOXFIMndzUHFwZkprWjV3cy1OcTBxSmwtbFdpeko4bXJYQ1ZxeEZ4T0NwQWhjQ0o3RzhFYkUxdDhISUdCOEZGZHV1VGhuN0ZrR0NMazhCUGRlNHVfNWR4N053WG1mUmM0?oc=5",
-      "published": "2026-11-19T12:23:44Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1687,
+  "totalStored": 1690,
   "limit": 100,
   "quality": {
-    "total": 1687,
-    "relevant": 1247,
+    "total": 1690,
+    "relevant": 1250,
     "review": 379,
     "duplicates": 80,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 411,
+      "classified": 414,
       "categories": {
-        "numbers": 246,
+        "numbers": 248,
         "prices": 5,
         "operations": 1,
-        "potential": 179,
+        "potential": 180,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 265,
+      "Earnings / results": 267,
       "Dividends": 12,
-      "M&A": 68,
+      "M&A": 69,
       "Guidance": 34,
       "Contracts": 118,
       "Capital & ownership": 1,

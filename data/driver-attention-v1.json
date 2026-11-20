@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T01:23:21Z",
+  "generated": "2026-11-20T01:35:40Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -12140,10 +12140,18 @@
         {
           "date": "2026-11-19",
           "issuer": 1,
-          "media": 12
+          "media": 15
         }
       ],
       "potential": [
+        {
+          "id": "SUBC.OL:87a7f56c05dae4c203443047a332b3c0b0fd8357496731c1cc9d1063fbb7407f",
+          "published": "2026-11-19T18:35:42Z",
+          "headline": "Saipem, Subsea 7 target early 2027 to complete merger",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUTljVzNMUWt5Y3lOZTc5OGpBcXJIQ2dSa1B1Z0VTeUl3ejgyRHpSQk5fbnlTSUxoNjBMcmFKTWxCWi1tRWVsY1NDcDdzWDBWNVBQdG04UUJSN1hkMmJTNEtWV0NsamdOY0N5ZmVvZGZmSkJGVldSb1FMdFllQ29ZUnlGREZXM1piZ0J5QmpENkh3WV81aVNQWTJqSmhvTkFRZTlYYTl0cjVzcmNzM2lGamUxa2Q2TDkxYWdhbVI5SVZPZWNfTzJQR1A4UmFtQzIz?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
         {
           "id": "SUBC.OL:7f6b6e1507ccc4c8a879f0404012dcbd3fd7cd04d4a8198242d9ed5281cbab1c",
           "published": "2026-11-19T11:51:48Z",
@@ -12217,13 +12225,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 18,
-      "latestRecord": "2026-11-19T13:31:52Z",
+      "observedRecords": 21,
+      "latestRecord": "2026-11-19T18:35:42Z",
       "topicCounts": {
-        "numbers": 7,
+        "numbers": 9,
         "prices": 0,
         "operations": 0,
-        "potential": 9,
+        "potential": 10,
         "risk": 0
       },
       "prior7": {
@@ -12232,7 +12240,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 17
+        "media": 20
       }
     },
     "TISG.MI": {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T01:22:43+00:00",
+  "generated": "2026-11-20T01:34:37+00:00",
   "notice": "Coverage of exact UI listing IDs, not unique issuers or verified security deduplication. Candidate FIGIs are not verified. Prices are dated observations, not proof of display or storage entitlements. News counts use exact non-SEC archive ticker IDs only; missing matches do not mean no news. Fundamentals and descriptions count only explicit fields in the inspected files. No provider requests or fabricated data.",
   "summary": {
     "listings": 500,
@@ -1697,7 +1697,7 @@
       "licensedHistory": false,
       "sector": "Original ten",
       "descriptionAvailable": false,
-      "newsRecords": 18,
+      "newsRecords": 21,
       "newsAssociation": "exact_archive_ticker_only",
       "fundamentalsAvailable": false,
       "operatingMetricsAvailable": false,
