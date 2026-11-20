@@ -13,12 +13,12 @@ FIELDS={"Date","Code","Name","TradeVolume","TradeValue","OpeningPrice","HighestP
 def number(x,integer=False,nullable=False):
     if not isinstance(x,str):raise ValueError("unexpected number type")
     s=x.strip().replace(",","")
-    if nullable and s in ("","--","---","N/A"):return None
+    if nullable and s in ("","-","--","---","N/A"):return None
     if not re.fullmatch(r"\d+" if integer else r"\d+(\.\d+)?",s) or len(s)>30:raise ValueError("unexpected numeric field")
     return int(s) if integer else str(Decimal(s))
 def parse(data,today):
     if not isinstance(data,list) or not 1<=len(data)<=10000:raise ValueError("payload bound")
-    days=set();seen=set();rows=[]
+    days=set();seen=set();rows=[];quarantined=0
     for r in data:
         if not isinstance(r,dict) or not FIELDS<=set(r):raise ValueError("unexpected schema")
         d=r["Date"]
@@ -31,15 +31,23 @@ def parse(data,today):
         seen.add(code)
         name=r["Name"]
         if not isinstance(name,str) or not name.strip() or len(name)>150:raise ValueError("invalid name")
-        o,h,l,c=[number(r[k],nullable=True) for k in ("OpeningPrice","HighestPrice","LowestPrice","ClosingPrice")]
-        v=number(r["TradeVolume"],integer=True)
-        if all(x is not None for x in (o,h,l,c)):
-            if min(map(Decimal,(o,h,l,c)))<=0 or not Decimal(l)<=min(Decimal(o),Decimal(c))<=max(Decimal(o),Decimal(c))<=Decimal(h):raise ValueError("invalid OHLC")
-        status="reported" if v>0 and all(x is not None for x in (o,h,l,c)) else "no_volume" if v==0 else "incomplete"
-        rows.append({"securityId":"XTAI:"+code,"code":code,"name":name,"currency":"TWD","date":day.isoformat(),"open":o,"high":h,"low":l,"close":c,"volume":v,"tradeValue":number(r["TradeValue"],integer=True),"tradeCount":number(r["Transaction"],integer=True),"status":status})
+        base={"securityId":"XTAI:"+code,"code":code,"name":name,"currency":"TWD","date":day.isoformat()}
+        try:
+            o,h,l,c=[number(r[k],nullable=True) for k in ("OpeningPrice","HighestPrice","LowestPrice","ClosingPrice")]
+            v=number(r["TradeVolume"],integer=True)
+            value=number(r["TradeValue"],integer=True)
+            count=number(r["Transaction"],integer=True)
+            if all(x is not None for x in (o,h,l,c)):
+                if min(map(Decimal,(o,h,l,c)))<=0 or not Decimal(l)<=min(Decimal(o),Decimal(c))<=max(Decimal(o),Decimal(c))<=Decimal(h):raise ValueError("invalid OHLC")
+            status="reported" if v>0 and all(x is not None for x in (o,h,l,c)) else "no_volume" if v==0 else "incomplete"
+            rows.append({**base,"open":o,"high":h,"low":l,"close":c,"volume":v,"tradeValue":value,"tradeCount":count,"status":status})
+        except ValueError:
+            quarantined+=1
+            rows.append({**base,"open":None,"high":None,"low":None,"close":None,"volume":None,"tradeValue":None,"tradeCount":None,"status":"quarantined"})
     if len(days)!=1:raise ValueError("mixed trading sessions")
+    if quarantined>max(1,len(rows)//100):raise ValueError("quarantine threshold exceeded")
     if not any(x["status"]=="reported" for x in rows):raise ValueError("no traded observations")
-    return {"schemaVersion":1,"sourceUrl":SOURCE,"endpoint":URL,"licenseUrl":LICENSE,"attribution":ATTRIBUTION,"market":"XTAI","sessionDate":next(iter(days)),"records":sorted(rows,key=lambda r:r["code"]),"notice":"Official reported daily securities observations, not necessarily ordinary shares; no cross-listing substitution, adjustment or inferred price."}
+    return {"schemaVersion":1,"sourceUrl":SOURCE,"endpoint":URL,"licenseUrl":LICENSE,"attribution":ATTRIBUTION,"market":"XTAI","sessionDate":next(iter(days)),"quarantined":quarantined,"records":sorted(rows,key=lambda r:r["code"]),"notice":"Official reported daily securities observations, not necessarily ordinary shares; no cross-listing substitution, adjustment or inferred price."}
 def fetch():
     with urlopen(Request(URL,headers={"User-Agent":"Nordl Stockwatch (+https://stocks.nordl.dev/)","Accept":"application/json"}),timeout=45) as r:
         if r.geturl()!=URL:raise ValueError("unexpected redirect")
@@ -67,7 +75,7 @@ def archive(client,data,source):
 def main():
     p=argparse.ArgumentParser();p.add_argument("--retain-private",action="store_true");args=p.parse_args()
     raw=fetch();data=parse(json.loads(raw),datetime.now(ZoneInfo("Asia/Taipei")).date())
-    stats={"sessionDate":data["sessionDate"],"rows":len(data["records"]),"reported":sum(r["status"]=="reported" for r in data["records"]),"sourceSha256":sha(raw),"readbackVerified":False}
+    stats={"sessionDate":data["sessionDate"],"rows":len(data["records"]),"quarantined":data["quarantined"],"reported":sum(r["status"]=="reported" for r in data["records"]),"sourceSha256":sha(raw),"readbackVerified":False}
     if args.retain_private:
         if os.environ.get("STOCKWATCH_TWSE_PRIVATE_RETENTION")!="true":raise ValueError("retention not enabled")
         from private_r2_archive import configuration
@@ -80,5 +88,5 @@ def main():
 if __name__=="__main__":
     try:main()
     except Exception as exc:
-        print("TWSE_EQUITY_FAILED "+type(exc).__name__+(" "+str(exc) if isinstance(exc,ValueError) and str(exc) in {"unexpected number type","unexpected numeric field","payload bound","unexpected schema","unexpected ROC session date","invalid source date","invalid or duplicate security code","invalid name","invalid OHLC","mixed trading sessions","no traded observations","unexpected redirect","response bound"} else ""))
+        print("TWSE_EQUITY_FAILED "+type(exc).__name__+(" "+str(exc) if isinstance(exc,ValueError) and str(exc) in {"unexpected number type","unexpected numeric field","payload bound","unexpected schema","unexpected ROC session date","invalid source date","invalid or duplicate security code","invalid name","invalid OHLC","mixed trading sessions","no traded observations","unexpected redirect","response bound","quarantine threshold exceeded"} else ""))
         raise SystemExit(1) from None
