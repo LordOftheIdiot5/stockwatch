@@ -66,7 +66,7 @@ def match(keys,rows,targets,key,mapper=reconcile):
         retained.append({**r,"lei":lei,"cfi":cfi,"currency":currency})
     if len({r["listingId"] for r in retained})!=len(retained):raise ValueError("duplicate candidate")
     return retained,counts
-def run(group,root=ROOT,api_key=None):
+def run(group,root=ROOT,api_key=None,retain_private=False):
     target=eligible(json.loads((root/"data/price-source-queue-v1.json").read_text()),group)
     if not target:raise ValueError("no eligible queue listings")
     key=api_key or os.getenv("STOCKWATCH_OPENFIGI_KEY","").strip()
@@ -82,12 +82,15 @@ def run(group,root=ROOT,api_key=None):
             parts.append({"name":f["name"],"sha256":meta["sha256"],"rows":n});p.unlink()
     candidates,counts=match(keys,universe(root),target,key)
     summary={"group":group,"sourceDate":full["date"],"sourceRows":total,"sourceParts":parts,"eligibleListings":len(target),"scopedSecurityPairs":len(keys),"ambiguousPairs":sum(len(v)>1 for v in keys.values()),"candidateMatches":len(candidates),"byMic":dict(Counter(r["mic"] for r in candidates)),"mappingOutcomes":counts,"currentStateEstablished":False,"publishedPrices":0,"retainedCandidateRecords":0}
-    print("LISTING_IDENTITY_BATCH "+json.dumps(summary,sort_keys=True),flush=True)
     if not candidates:raise ValueError("no exact candidate matches")
+    if retain_private:
+        from listing_identity_r2 import archive_live
+        summary.update(archive_live(summary,candidates,target))
+    print("LISTING_IDENTITY_BATCH "+json.dumps(summary,sort_keys=True),flush=True)
     return summary
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--group",choices=VENUES,default="nordic");a=p.parse_args()
-    try:run(a.group)
+    p=argparse.ArgumentParser();p.add_argument("--group",choices=VENUES,default="nordic");p.add_argument("--retain-private",action="store_true");a=p.parse_args()
+    try:run(a.group,retain_private=a.retain_private)
     except Exception as e:
         # Avoid propagating URLs or payloads from upstream exceptions.
         print("LISTING_IDENTITY_FAILED "+type(e).__name__,flush=True)
