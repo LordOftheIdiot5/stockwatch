@@ -1,0 +1,21 @@
+name: OECD global share price source validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/oecd_share_prices.py'
+      - 'tests/test_oecd_share_prices.py'
+      - '.github/workflows/oecd-share-prices.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_oecd_share_prices.py' -v
+      - run: python scripts/oecd_share_prices.py
