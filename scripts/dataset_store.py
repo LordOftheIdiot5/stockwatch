@@ -18,6 +18,8 @@ FILES=(
  "data/research-coverage.json","data/history-coverage.json",
  "data/issuer-identities.json","data/fundamentals.json","data/freight-routes.json",
  "data/licensed-price-coverage.json","data/source-health.json","data/news-quality.json",
+ "data/global-indices-v1.json","data/global-index-tpex.json","data/global-index-formosa.json",
+ "data/esma-equity-history/index.json",
 )
 # Exact reviewed public statistical datasets only. No catch-all 'open' policy.
 APPROVED={
@@ -79,6 +81,9 @@ def index(root=ROOT):
                 if isinstance(x,dict):
                     item=summarize(x,path,d)
                     if item:entries.append(item)
+        if path in ("data/global-indices-v1.json","data/global-index-tpex.json","data/global-index-formosa.json"):
+            item=summarize({**d,"label":d.get("name"),"unit":"index points","frequency":"daily","period":d.get("latest",{}).get("date"),"retrievedAt":d.get("lastSuccessAt")},path,d)
+            if item:entries.append(item)
         datasets.extend(entries)
         r=rows(d)
         # Series counts and observation counts are distinct; no overall

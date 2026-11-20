@@ -9,6 +9,7 @@ import hashlib
 import json
 import math
 import os
+import re
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -93,7 +94,7 @@ def eligible_series(kind,r):
     if kind=="unctad-connectivity":
         return key.startswith("unctad:lsci-monthly:") and host_is(url,"unctadstat.unctad.org") and "CC BY 3.0 IGO" in r["license"]
     if kind=="official-energy-macro":
-        return (key in ("eia:RBRTE","eia:RWTC") and host_is(url,"www.eia.gov") and r.get("provider")=="eia") or (key=="fred:PCU483111483111" and host_is(url,"fred.stlouisfed.org") and "public domain" in r["license"])
+        return (key in ("eia:RBRTE","eia:RWTC") and host_is(url,"www.eia.gov") and r.get("provider")=="eia") or (key in {"fred:PCU483111483111","fred:WPU301301","fred:WPU301302","fred:WPU1017","fred:WPU0652"} and host_is(url,"fred.stlouisfed.org") and "public domain" in r["license"])
     if kind=="official-fx-macro":
         return (key in ("fx:EUR/NOK","fx:USD/NOK") and host_is(url,"data.norges-bank.no") and r["license"]=="NLOD 2.0") or (key=="fx:EUR/USD" and host_is(url,"data-api.ecb.europa.eu") and r.get("provider")=="ecb") or (key.startswith("hicp_yoy:") and host_is(url,"ec.europa.eu") and r.get("provider")=="eurostat") or (key.split(":")[0] in ("NE.EXP.GNFS.ZS","NY.GDP.MKTP.KD.ZG") and host_is(url,"api.worldbank.org") and "CC BY 4.0" in r["license"])
     return False
@@ -123,6 +124,58 @@ def archive_dataset(client,kind,obj,day):
     status=immutable_put(client,raw,key,{"type":kind,"publicpublication":"false"},"application/json")
     return {"dataset":kind,"day":day,"storageStatus":status,"publicPublication":False}
 
+# Only the already published, individually reviewed official index feeds.
+INDEX_FILES={
+    "twse:TAIEX":("global-indices-v1.json","https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK","https://data.gov.tw/en/datasets/11672"),
+    "tpex:TPEx":("global-index-tpex.json","https://www.tpex.org.tw/openapi/v1/tpex_index","https://data.gov.tw/dataset/11391"),
+    "twse:FORMOSA":("global-index-formosa.json","https://openapi.twse.com.tw/v1/indicesReport/FRMSA","https://data.gov.tw/dataset/11669"),
+}
+def index_objects(root,today):
+    for ident,(filename,endpoint,source) in INDEX_FILES.items():
+        path=root/"data"/filename
+        if not path.exists():continue
+        d=json.loads(path.read_text(encoding="utf8"))
+        if d.get("key")!=ident or d.get("endpoint")!=endpoint or d.get("sourceUrl")!=source or d.get("license")!="Taiwan Open Government Data License 1.0; attribution required" or d.get("licenseUrl")!="https://data.gov.tw/en/license":
+            raise ValueError("unreviewed index source")
+        history=d.get("history")
+        if not isinstance(history,list) or not history or len(history)>20000:raise ValueError("invalid history")
+        dates=set();allowed={"date","close","changePoints","changePct"}
+        for row in history:
+            day=row.get("date")
+            if set(row)!=allowed or not dated(day) or day>today or day in dates or not positive(row.get("close")):raise ValueError("invalid index record")
+            dates.add(day)
+            for k in ("changePoints","changePct"):
+                v=row.get(k)
+                if v is not None and (type(v) not in (float,int) or not math.isfinite(v)):raise ValueError("invalid index movement")
+        if d.get("latest")!=max(history,key=lambda x:x["date"]):raise ValueError("index latest mismatch")
+        # Retrieval telemetry remains outside the immutable observation object.
+        obj={k:d[k] for k in ("key","name","market","provider","endpoint","sourceUrl","license","licenseUrl","notice")}
+        obj.update({"schemaVersion":1,"observations":sorted(history,key=lambda x:x["date"]),"throughDate":max(dates),"publicPublication":False})
+        yield ident.replace(":","-").lower(),obj
+def esma_object(root,today):
+    p=root/"data/esma-equity-history/index.json"
+    if not p.exists():return None
+    idx=json.loads(p.read_text(encoding="utf8"));rel=idx.get("snapshot","")
+    if not re.fullmatch(r"data/esma-equity-history/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-f0-9]{64}[.]json",rel):raise ValueError("invalid identity pointer")
+    raw=(root/rel).read_bytes()
+    if len(raw)>16_000_000 or hashlib.sha256(raw).hexdigest()!=idx.get("snapshotSha256"):raise ValueError("identity checksum or size")
+    obj=json.loads(raw)
+    if obj.get("source")!="ESMA FIRDS" or obj.get("sourceRights")!="https://registers.esma.europa.eu/publication/legalNoticePage" or obj.get("sourceDate")!=idx.get("sourceDate") or not dated(obj["sourceDate"]) or obj["sourceDate"]>today or obj.get("currentStateEstablished") is not False:raise ValueError("unreviewed identity snapshot")
+    return raw,obj["sourceDate"]
+def archive_reviewed_snapshots(client,root,today):
+    result=[]
+    for ident,obj in index_objects(root,today):
+        raw=payload(obj);digest=hashlib.sha256(raw).hexdigest()
+        key="official-index/v1/"+ident+"/objects/"+digest+".json"
+        state=immutable_put(client,raw,key,{"dataset":ident,"publicpublication":"false"},"application/json")
+        result.append({"dataset":ident,"storageStatus":state,"observations":len(obj["observations"]),"throughDate":obj["throughDate"],"publicPublication":False})
+    e=esma_object(root,today)
+    if e:
+        raw,day=e;digest=hashlib.sha256(raw).hexdigest()
+        state=immutable_put(client,raw,"esma-identity/v1/"+day+"/"+digest+".json",{"dataset":"esma-identity","publicpublication":"false"},"application/json")
+        result.append({"dataset":"esma-identity","storageStatus":state,"sourceDate":day,"publicPublication":False})
+    return result
+
 def collect(client,env,root=ROOT,now=None):
     now=(now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     day=now.date().isoformat()
@@ -141,6 +194,10 @@ def collect(client,env,root=ROOT,now=None):
             statuses.append(result)
         except Exception as exc:
             statuses.append({"dataset":kind,"storageStatus":"failed","errorType":type(exc).__name__,"publicPublication":False})
+    try:
+        statuses.extend(archive_reviewed_snapshots(client,root,day))
+    except Exception as exc:
+        statuses.append({"dataset":"reviewed-index-identity","storageStatus":"failed","errorType":type(exc).__name__,"publicPublication":False})
     if env.get("STOCKWATCH_SCANNER_RETENTION_APPROVED")!="true":
         statuses.append({"dataset":"scanner-observations","storageStatus":"permission_pending","publicPublication":False})
         return statuses
