@@ -46,7 +46,7 @@ def inspect(d,wanted,year=2025):
     if orphans:raise ValueError("unresolved filing/entity join")
     return {"source":SOURCE,"terms":TERMS,"periodEndYear":year,"indexedFilings":len(seen),"referenceCountries":dict(countries),"targetLEIs":len(wanted),"matchedLEIs":len(matches),"matchedFilings":sum(map(len,matches.values())),"matchedFilingsWithJSON":sum(x["hasJSON"] for arr in matches.values() for x in arr),"matchedFilingsWithNoReportedErrors":sum(x["errors"]==0 for arr in matches.values() for x in arr),"financialFactsPublished":0,"notice":"Exact issuer identity candidates from a dated ESMA/GLEIF agreement; repository is incomplete. Multiple filings/languages are separate observations. No financial values, copies of reports, or current-issuer claims published."}
 def main():
-    with urlopen(Request(URL,headers={"User-Agent":"Nordl Stockwatch (+https://stocks.nordl.dev/)","Accept":"application/vnd.api+json"}),timeout=60) as r:
+    with urlopen(Request(URL,headers={"User-Agent":"Nordl Stockwatch (+https://stocks.nordl.dev/)","Accept":"*/*"}),timeout=60) as r:
         if r.geturl()!=URL:raise ValueError("unexpected redirect")
         raw=r.read(64*1024**2+1)
     if len(raw)>64*1024**2:raise ValueError("index bound")
