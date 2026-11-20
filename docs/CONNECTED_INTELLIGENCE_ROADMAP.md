@@ -33,3 +33,25 @@ Initial bounded collectors: Eurostat manufacturing production (2021=100, SCA), S
 Added central bank policy/lending/reference FX series, national production tables (SCB TAB4894, Statistics Finland 14mh, Denmark IPOP21), World Bank manufacturing value added and additional FRED US macro series. Existing NVE/MET collection is owned by Energy Nordl; retain shared data links rather than new duplicate collectors. IMF link only pending commercial permission; UN Comtrade preview only. Source-level failures remain explicit. USGS parent/known child metadata discovery corrected; raw mineral observations still require verified file schema. SEC contact variable remains mandatory until actual contact is supplied. No paid sources.
 
 - SEC contact configured and manual test 43990731467 returned 660 NVIDIA filing facts; World Bank manufacturing 140 observations. Sweden request changed to published PxWeb v2 host and top(24) selector; Denmark uses documented TABLEINFO POST and JSONSTAT, handling legacy wrapper. USGS 2026 salient-statistics child is independently listed public domain, bounded CSV ingestion preserves all strings/units/flags and hashes; no inferred values. Pending revised live validation. Previous ECB lending success 69 records, later timeout; preserve last successful dataset in production. Record HTTP status for debugging without exposing URLs containing secrets.
+
+
+## 2026-11-20 — Price coverage first; real-time remains the long-term goal
+User-approved priorities: accurate prices for every existing listing (500-listing baseline) before expanding the main research universe. Provide real-time prices wherever a reliable authorized source permits them; otherwise explicitly labeled 5/15-minute delayed, other delayed, completed-session closing prices, or last known valid observation with the actual date/time and source. Never call retained prices live or substitute another share class, venue or currency. No new paid commitments without approval. Aim for 500/500 useful company profiles, then expand. For each source separately verify access, internal retention, public display, derived analytics and commercial/API redistribution rights; keep non-public evidence in private R2. No invented prices. Track coverage by unique listing and differentiate reported transaction observations from actual official session closes.
+
+| Version | Objective / acceptance |
+| --- | --- |
+| V89h.3 | Exact ESMA revision archive; merged PR 149, private R2 live readback pending |
+| V89j.1 | Price diagnostics; merged PR 151; verify next actual scanner outcome |
+| V89j.2 | Official open-licensed TWSE prices and global market expansion; PR 150 live schema currently failing; separate pilot, not a substitute for existing European listings |
+| V89j.3 | Direct European delayed transactions; PR 152 matched 16/16 exact Oslo targets, 29,573 observations on Nov 19 from 104,329 rows; final CI, trade corrections/session/rights gates pending |
+| V89j.4 | Nasdaq Nordic discovery and multi-source recovery; prioritize 270 missing Nordic listings, then remaining Euronext and other venues; exact ISIN/MIC evidence |
+| V89j.5 | Permanent authorized daily price archive; immutable source-date receipts, full readback, corrections, D1 query layer; no resale unless allowed |
+| V90 | Unified company profiles; 500 useful profiles with explicit gaps, prices, news, identities, fundamentals and exposures |
+| V91 | A/B switching and historical anomaly intelligence; costs and matched-session evidence |
+| V92 | Shipping, freight, minerals and commodity exposures |
+| V93 | Company supply/customer/ownership relationship graph and source-backed economic dependencies |
+| V94 | Commercial datasets and API, rights allowlist and provenance |
+| V95 | Full production, accessibility, mobile/desktop and design audit |
+| V96 | Pattern intelligence, point-in-time data and out-of-sample backtests; avoid causal or performance claims without evidence |
+
+Real-time capability should remain an independent optional adapter tier and not block delayed/EOD release. European IFRS pilot PR 148 merged: 101 candidates across 12 Norwegian reports, consolidation/amendments/retention unresolved. SEC insider and 13F private R2 readbacks passed; 3,442 insider rows and 19,523 institutional candidates; historical matches/rights remain separate. Coverage baseline 152/500 dated observations, 348 missing (270 Nasdaq Nordic, 62 Euronext, 16 other). Track missing unique securities and overlapping reference listings separately; no counting a trade-match probe as public price coverage.
