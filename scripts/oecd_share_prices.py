@@ -5,12 +5,12 @@ from datetime import date
 from urllib.request import Request,urlopen
 SOURCE="https://www.oecd.org/en/data/indicators/share-prices.html"
 TERMS="https://www.oecd.org/en/about/terms-conditions.html"
-URL="https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/.M.SHARE.IX.....?startPeriod=2025-01&format=csvfile"
+URL="https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/.M.SHARE.IX.....?startPeriod=2025-01&format=csvfile&dimensionAtObservation=AllDimensions&lang=en"
 REQUIRED={"REF_AREA","FREQ","MEASURE","UNIT_MEASURE","ACTIVITY","ADJUSTMENT","TRANSFORMATION","TIME_HORIZON","METHODOLOGY","TIME_PERIOD","OBS_VALUE","OBS_STATUS","UNIT_MULT","BASE_PER"}
 def inspect(raw,today=None):
     today=today or date.today()
     r=csv.DictReader(io.StringIO(raw))
-    if not REQUIRED<=set(r.fieldnames or []):raise ValueError("unexpected SDMX CSV header")
+    if not REQUIRED<=set(r.fieldnames or []):raise ValueError("unexpected SDMX CSV header: "+str((r.fieldnames or [])[:25])[:500])
     groups=defaultdict(dict);rejected=0
     for row in r:
         if None in row or None in row.values():raise ValueError("malformed row")
@@ -29,7 +29,7 @@ def inspect(raw,today=None):
     if not groups:raise ValueError("no qualifying series")
     return {"source":SOURCE,"sourceTerms":TERMS,"frequency":"monthly","unit":"2015=100","referenceAreas":len(groups),"observations":sum(len(g) for g in groups.values()),"coverage":[{"area":a,"first":min(g),"last":max(g),"observations":len(g)} for a,g in sorted(groups.items())],"excludedRows":rejected,"publishedValues":0,"rightsStatus":"individual_source_review_required","notice":"Monthly averages, not daily closing exchange benchmarks. OECD terms have exceptions for third-party ownership; no public observations until source-level rights reviewed."}
 def main():
-    with urlopen(Request(URL,headers={"User-Agent":"Nordl Stockwatch (+https://stocks.nordl.dev/)","Accept":"text/csv"}),timeout=60) as r:
+    with urlopen(Request(URL,headers={"User-Agent":"Nordl Stockwatch (+https://stocks.nordl.dev/)","Accept":"application/vnd.sdmx.data+csv;version=1.0.0","Accept-Language":"en"}),timeout=60) as r:
         if r.geturl()!=URL:raise ValueError("unexpected redirect")
         raw=r.read(4*1024**2+1)
     if len(raw)>4*1024**2:raise ValueError("response bound")
