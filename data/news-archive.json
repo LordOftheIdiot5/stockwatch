@@ -1,6 +1,57 @@
 {
-  "generated": "2026-11-20T20:45:50Z",
+  "generated": "2026-11-20T21:12:45Z",
   "items": [
+    {
+      "id": "IFX.DE:d6052aaa5d5d4ea242c8aa7c3f81ebba7fb678c24ad8cbb0521bae345bf375ab",
+      "ticker": "IFX.DE",
+      "name": "Infineon",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Infineon Aktie: Der KI-Ausverkauf schlägt wieder zu",
+      "english": "Infineon share: The AI sell-off strikes again",
+      "publisher": "Finanztrends",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTWVjTlFGMXpOVGwxQXhCeGhidVNOZDFIMjl5bGpBcUswM01tQlZoUkZuSzNqMDl4UmFQaml3NzFQa3lteVFUVFF5TVdIWmVKNmZVV2x1Rnk0SFJjdXlQXzJyWWJhcmw4NjFITFlUb2I3TTlRNFFBczNUZXVHVFFNaExublM2TU9k?oc=5",
+      "published": "2026-11-20T21:05:24Z",
+      "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "SUBC.OL:950bebf672118ed2b9bde4f4c98238e123da808f4552ec7a5abe5e2023bc571a",
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Kruttsterkt resultat for Subsea 7",
+      "english": null,
+      "publisher": "E24",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9sa00tX29uR3pibW4wanhlaEJhcXU4X2o1bHNlN2VXODZFS2dyd0dST3EzNkRDRkZNV1NzTXpHcTg0U0MtNG9vT2NKal9STHNxU2Ixby1SRGROcXJySzJ0Vm1VNXhLVWJaQnVTVnQzSzlQTHZ5TVE?oc=5",
+      "published": "2026-11-20T20:55:45Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "AIR.PA:23ddbb45bbc27a572214b53d10fb1345e8771d54b0f6f73bcbd0eb22193b4cb7",
       "ticker": "AIR.PA",
@@ -602,6 +653,29 @@
       "sourceIssuer": null,
       "sourceFeed": null,
       "match": "name_mentioned",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "DOFG.OL:4f61ccd301a7de8922583299a34ec9a50f298472e83bbd6605c080dff8088afe",
+      "ticker": "DOFG.OL",
+      "name": "DOF Group",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Pål Wibe har kjøpt Oda-aksjer for fem millioner",
+      "english": null,
+      "publisher": "E24",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONVdkcS1sZ1JuXy15VEVWdTlaRklxODMtNzJuUzAwMjY0bDFVYU5LVTFXa2JFY1c0dDc3VDRYZGQza3ZtZmxPZzV6cjhMenZtZEU4Z3VsVktuRE1OekVmbmNwOE9DdU16TG5rQlNPaFBacGpVaWVLZ3VPZGhBNU9pVFFYOWpiazlTa2tv?oc=5",
+      "published": "2026-11-20T15:30:48Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
       "relevance": "review",
       "category": "General",
       "driverVersion": 1,
@@ -7400,7 +7474,8 @@
         }
       ],
       "sourceDomain": "news.google.com",
-      "priority": "high"
+      "priority": "high",
+      "duplicateOf": "SUBC.OL:950bebf672118ed2b9bde4f4c98238e123da808f4552ec7a5abe5e2023bc571a"
     },
     {
       "id": "FCT.MI:1b2f7b75c9f7f4fb385c7c93cb646821598ea97d79ee27dd4c81f39b69bcbbae",
@@ -9398,7 +9473,7 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high",
-      "duplicateOf": "SUBC.OL:f7641e4691a929e820fb22435000251f8a5ac3fae73735a01b5b6e6f6a5b57e6"
+      "duplicateOf": "SUBC.OL:950bebf672118ed2b9bde4f4c98238e123da808f4552ec7a5abe5e2023bc571a"
     },
     {
       "id": "SUBC.OL:cd9f6a94da72ca07d4a1a5d92bba5c4e54484fa9d05b6b968ce642ba837e8525",
@@ -9427,7 +9502,7 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high",
-      "duplicateOf": "SUBC.OL:f7641e4691a929e820fb22435000251f8a5ac3fae73735a01b5b6e6f6a5b57e6"
+      "duplicateOf": "SUBC.OL:950bebf672118ed2b9bde4f4c98238e123da808f4552ec7a5abe5e2023bc571a"
     },
     {
       "id": "SIE.DE:434f226ab5ffd5a75083a3dadf3010d5597333b8a3531cc066348c02026b67f9",
