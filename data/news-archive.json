@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T22:42:22Z",
+  "generated": "2026-11-20T23:35:56Z",
   "items": [
     {
       "id": "CAF.MC:a54968f95863a13b3c6babf3f78cf462f80b29b3f2aae8250435393153ae8946",
@@ -452,6 +452,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "UCG.MI:6a501b2b9643cd76e03c9bca7e0e8e5ed7141c21be66a19d97f62f794598ae22",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Commerzbank CEO raises 2026 profit outlook as UniCredit takeover nears By Reuters",
+      "english": null,
+      "publisher": "Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd1VPdXdyYjBYWTU5ZnplUVdBZXVvVXdEUlVBcjdoWVJJRzNtQ2YtMW5DVzd4N2pSaUxhT25GTW00RzI4MWVxZi1YandCbzk0bl9fQWJfZFBxYktsaXk1eEluaVU0RG1uSVZrU193U1l6SFV4SHhsQlZieE9hbnpRTnhHdzFYdjNfWEtfRGNjRjM3SjR2VkFCZlNnZGNJblczZmZpYkhCcU53NFlCUTNld3IwaE43eThDOHJXeGZUZ1JibEkwVkE?oc=5",
+      "published": "2026-11-20T17:15:57Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "NOVO-B.CO:e2fc9f99a822fb336a792319a22f2fa1d79c9a0846e1d89293341dede7dc67e1",
@@ -2011,6 +2039,29 @@
       "sourceIssuer": null,
       "sourceFeed": null,
       "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "TKMS.DE:8a91ae923646f2db4734ed7c5751b8cee86a43b192573aebfeb2ed97353e6a75",
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "24-Stunden-Warnstreiks bei Neptun und TKMS",
+      "english": "24-hour warning strikes at Neptun and TKMS",
+      "publisher": "WELT",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOMzNGdzB0a0tyZzl4bFBkU1A5VmhrbGRldUxJbWFzcGxwamRfLW1PYnVSWnZNU0tadVozNmotVmNSR3B2aVlVY3QxSGktUktaMFk4Y1Y5N3FzYVR5cThJZlhObGk0TklHcU9JV09aVWVXZjNLTEphSWNrVVY3VUdxNFdHcDdXNUlaNzVIempRYXA1T3lTcmRVZDV1OXI5c0pvRVhXX0M4QTZHaldORUtxOEVad24tQ2FKVV81VHcwSEt4Qk5hNF9MbHJMbTZOUQ?oc=5",
+      "published": "2026-11-20T11:22:28Z",
+      "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
       "relevance": "mentioned",
       "category": "General",
       "driverVersion": 1,
