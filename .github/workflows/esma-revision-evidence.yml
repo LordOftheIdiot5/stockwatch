@@ -1,0 +1,28 @@
+name: ESMA exact revision evidence validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/esma_revision_evidence.py'
+      - 'tests/test_esma_revision_evidence.py'
+      - '.github/workflows/esma-revision-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install defusedxml==0.7.1
+      - run: python -m unittest discover -s tests -p 'test_esma_revision_evidence.py' -v
+      - run: python scripts/esma_revision_evidence.py --write
+      - uses: actions/upload-artifact@v5
+        with:
+          name: exact-esma-revision-evidence
+          path: data/esma-delta-history/
+          retention-days: 7
+          if-no-files-found: error
