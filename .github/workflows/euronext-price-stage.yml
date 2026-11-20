@@ -1,0 +1,27 @@
+name: Euronext source-dated price staging
+on:
+  pull_request:
+    paths:
+      - 'scripts/euronext_price_stage.py'
+      - 'tests/test_euronext_price_stage.py'
+      - '.github/workflows/euronext-price-stage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install defusedxml==0.7.1
+      - name: Validate actual price handling and source gates
+        run: python -m unittest discover -s tests -p 'test_euronext_price_stage.py' -v
+      - name: Stage exact daily exchange trade observations in ephemeral memory
+        if: (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: python scripts/euronext_price_stage.py
