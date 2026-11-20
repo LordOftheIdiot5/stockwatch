@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T17:07:51Z",
+  "generated": "2026-11-20T20:06:46Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -736,8 +736,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 50,
-      "latestRecord": "2026-11-20T15:56:09Z",
+      "observedRecords": 51,
+      "latestRecord": "2026-11-20T20:00:03Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4403,8 +4403,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 52,
-      "latestRecord": "2026-11-20T15:29:29Z",
+      "observedRecords": 53,
+      "latestRecord": "2026-11-20T19:00:06Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 0,
@@ -5780,8 +5780,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 24,
-      "latestRecord": "2026-11-20T05:58:50Z",
+      "observedRecords": 25,
+      "latestRecord": "2026-11-20T17:42:04Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -6654,7 +6654,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
@@ -6665,15 +6665,23 @@
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSnlDYURvVVFIY0lRWFhlUmVvS2EzdlRFaGJrT2NDYWhGRjhYS2ZPQ3V5NXlHdG8zNEVTVjlDWGp0T05uNlNWdGR0eV9Zd0tWOWhkbXhUVzA2REQ4RTFqSmxwSWhsWGVaOXl4aUZDRWI2WFd2eHVLbFZBbjF5VEY4THQ3VU1rNFNMT1JuamxiQ2M5ZFNSUFVwbk1CWl9Ea0V5WHg4ZFBR?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
+        },
+        {
+          "id": "LOGI-B.ST:c1e32aea61d2d1724d5d1e25bd8f3e82da0f03cd9dfac8d3e79882030f59bcd8",
+          "published": "2026-11-19T12:40:00Z",
+          "headline": "Logistea acquires industrial property in Köping in a sale-leaseback transaction with LEAX Group",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPenVXTUlaUE1ZTHVqQWgtV05ROVJfQ2pCekFDZUFfYWh3ZkFxOHFwZENWV3U2ZTJzU19hcjNGWjRsRHBuSnR6dktra1FoeGNTVjBIYlk0RWtHQTBCUG56U2VydW9uSGw1UjNtSDRvclRVVlNpdGtqTnFkQnd0VjNRMWZ5ZzFYVTFxclRQZ3AwR3Bod0dzWXZTcUxRU24yX1RIVlVQSmV2NHMyemFZLVJ6SktuQUFyc3pSSF9xS0w2cTc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
         }
       ],
-      "observedRecords": 1,
+      "observedRecords": 2,
       "latestRecord": "2026-11-19T12:44:23Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -6682,7 +6690,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       }
     },
     "MORROW.ST": {
@@ -7067,6 +7075,14 @@
       ],
       "potential": [
         {
+          "id": "MYCR.ST:496f3c009f4f9f7da71e820bdb451b6dbcc224c4bb45642cb731434ceb8202d6",
+          "published": "2026-11-20T13:21:00Z",
+          "headline": "Mycronic Wins Order for Display Photomask Repair System in Asia",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbElvalRiaGpFNHA1Mi1wc2JqX2JYdWJJM3dxVHJqM0t3czVSZUkwYmtrX1JQTUo3NGtzTHdxYUZkNWtiSmQ0YXgxS0lzVDJjZWtRVVI1d2FKejZhSGFmQTh5WVRsU0c1MFJpcjF1TTJaVVpDTEVLRzBuOFNNai1xVWMtVlB3VDV4UjBkSWlxRHpMSEYwSVA4cmRNY2lYek5SOG12ZGNpWWwtd3FTNlFIdllpQQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "MYCR.ST:eb4af7fd8c342507921e2c7e2760f633502fe514f0b4ded70b6236497dceddda",
           "published": "2026-11-19T09:24:25Z",
           "headline": "Mycronic Lands Order for Photomask Repair System in Asia",
@@ -7155,8 +7171,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 14,
-      "latestRecord": "2026-11-19T11:10:29Z",
+      "observedRecords": 15,
+      "latestRecord": "2026-11-20T13:21:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7475,8 +7491,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-19T18:01:52Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-20T14:24:30Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -7568,8 +7584,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-20T15:30:00Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-20T19:00:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8144,8 +8160,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 17,
-      "latestRecord": "2026-11-20T13:49:00Z",
+      "observedRecords": 18,
+      "latestRecord": "2026-11-20T17:02:02Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9513,8 +9529,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-19T10:02:45Z",
+      "observedRecords": 9,
+      "latestRecord": "2026-11-20T19:16:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9890,8 +9906,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 40,
-      "latestRecord": "2026-11-20T16:54:14Z",
+      "observedRecords": 43,
+      "latestRecord": "2026-11-20T19:00:01Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12987,6 +13003,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:e41cf8bac7fe9be0605cdd35157c73586b9c82378edba2212c09d58ed27683a5",
+          "published": "2026-11-20T14:56:45Z",
+          "headline": "Commerzbank CEO raises 2026 profit outlook as UniCredit takeover nears",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEhYRzN6UGhFNGpvbkt3clB5bTFsNzBabHBQMFNldFRBSkRBQVdpZlpKY3U5Y0Fka3BBSjV6OFpCRHRuSEoyY3dPT2FCSWI0R2g2MDNVM05aTUZud0RIa3JPd29uTHdTTDh5NERqbTRObmhqWVhRYTkwYWtWSVVNc1FNd3NXMWlaaFNvdUJCRG5yUGtQRTV3NFZ2ZHhySmU1UXpURlRDWmtWNzNXR04tTA?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "UCG.MI:4628d101ab08de55f54450b4258b80d202f4989208c48a97f8b872801f91a03e",
           "published": "2026-11-20T14:36:23Z",
           "headline": "Commerzbank Ramps Up Client Retention Efforts Ahead of UniCredit Takeover",
@@ -13137,18 +13161,10 @@
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPTWZVVTJSWEkzaEkxVWk3R3B4bDhQdjNPSjhzME9UN2JwVHh5UnB4SGg5WXVWVUphbDVWV3Q5UTkwVGVnVDU1cEtMbW9KQmhEelZoVjF3N2Mydkh3bENvMW1WTWFqc2ZQNU55cEEyWVpiMzJOQVNKZkR4a2g5MnhEcXpHODgtTWJPN3FFS1daSmxiQXlZVTQ4NEtMZzlfM1JtTzVDY21ucllDRHZXR1J5Q3BZSkt5S3B1OFVIUUo4RDBNY3RqcmF6MmR6OGtKcG1jcjhJ?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:aa0653400637e9ddb40e6a09f0634684926704466a7d23ba1295b1f7560988be",
-          "published": "2026-11-19T01:27:05Z",
-          "headline": "UniCredit and Berlin strike a deal on Commerzbank, settling the key terms of its €45B takeover after a two-year fight",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMFNCMEVybDRkZ0xFYjd6a1hmcHcxbjV2aUh3YjU4aHdPSDY2ZW1TR3dreDE4Y1M3S2N0aDRyN0VPVlJueXZQYVYwalJmT2JBdm1JdWt0bVVzSEZxV0htdEtBNFU2N1lSNkw5OXVlZFhMLVRmSlhGNHJmT21DQ1gxNTJ0b29iaUJ5M2dPdUpNYWZFbWFYdS1SQS1JQm1BT2otVlU1enhyaTBQVlNzUVJwNDFXOWJCbUg2dVVmNlhGNExNS1hDUFZWX0t6MkJybVN1ck9BRU5fVUswTS1tXzBfVlZjdw?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 115,
-      "latestRecord": "2026-11-20T14:47:02Z",
+      "observedRecords": 118,
+      "latestRecord": "2026-11-20T14:56:45Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -13545,8 +13561,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-20T10:04:24Z",
+      "observedRecords": 25,
+      "latestRecord": "2026-11-20T18:24:12Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
