@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T12:08:33Z",
+  "generated": "2026-11-20T13:07:56Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -736,8 +736,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 45,
-      "latestRecord": "2026-11-20T07:22:35Z",
+      "observedRecords": 47,
+      "latestRecord": "2026-11-20T12:19:49Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4403,8 +4403,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 49,
-      "latestRecord": "2026-11-20T11:00:00Z",
+      "observedRecords": 51,
+      "latestRecord": "2026-11-20T12:38:18Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 0,
@@ -7568,8 +7568,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-12T13:49:19Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-20T12:50:45Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8038,12 +8038,12 @@
         {
           "date": "2026-11-19",
           "issuer": 2,
-          "media": 3
+          "media": 2
         }
       ],
       "potential": [],
       "observedRecords": 5,
-      "latestRecord": "2026-11-19T11:21:53Z",
+      "latestRecord": "2026-11-20T06:13:49Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -8057,7 +8057,7 @@
       },
       "recent7": {
         "issuer": 2,
-        "media": 3
+        "media": 2
       }
     },
     "NOVO-B.CO": {
@@ -10390,6 +10390,14 @@
       ],
       "potential": [
         {
+          "id": "SAAB-B.ST:b3e3be5a84a3666a4497aa43698753b00ca0e2f31442808e2dcebf207903f449",
+          "published": "2026-11-20T12:19:00Z",
+          "headline": "Saab and Dezamet sign licensing agreement for mortar ammunition production in Poland",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQR05uOGRYd2QtUTVfVGZnMmpSX1dwRVNXNVh6aHVzTGtkanlmaldGZjk4UEJEdTFFSWhQY0FDbXY5S1F2NVZwZFJ1akNuV2ItWUVXaWVVRUFsbUw1NXY5SjBpcm1iOTRGZnQ0bWZObnNjSzVvaEpXR3F5Y09VTi0zc0FpdUd1Qkw0OTJoeHNKY3VpLXpHQkNHWUZ2ZmN2dVFZTzkydVkwcEVhcTdDTHIzeFFlZw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "SAAB-B.ST:dbd2186ebb124d18f1d5c121c92b887215da3630f353af1a3f90c2d6fb789889",
           "published": "2026-11-20T11:01:19Z",
           "headline": "Saab Signs License Agreement for Production in Poland",
@@ -10438,8 +10446,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-20T11:01:19Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-20T12:19:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -12590,8 +12598,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 26,
-      "latestRecord": "2026-11-20T11:34:07Z",
+      "observedRecords": 28,
+      "latestRecord": "2026-11-20T12:26:46Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12963,6 +12971,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:e10b5ef2a7fab1fd3066982654bbcf0d10ac8bda5a40e9969bbabaa96d8bc9cf",
+          "published": "2026-11-20T11:51:13Z",
+          "headline": "Commerzbank raises 2026 profit forecast as UniCredit takeover approaches",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObzBiX1NyNlVJdzEybTRCRW5GQm9qcXNEXzEwRzNDMDRyYXdPSF9seU1GTlYyU09VREd0dWNRWlFmM21PNEJiVlVuZEpLemU2WmEwNUJ5QldNMGJqQjZaQVJnOTl2MXVGUko3LVZXeDNmN0EzaURUQ20zYUNab1BKX2g1OUZRMlIzS182WmFUSTRPWXRUMWRpV3paSHhtS2FsdHNTQ3ljdmFMRllkNDVWd2g4M0hqS0dIdURrZXpwdWtiU00?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "UCG.MI:58386082741661686f42206ff82fbf62632753dd0a38b27065722d08cc6d0106",
           "published": "2026-11-20T11:47:31Z",
           "headline": "Commerzbank raises profit outlook ahead of UniCredit deal",
@@ -13113,17 +13129,9 @@
           "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ3Y0SVhIRlo1SFM0aHhEcEdHamd3cnhCOGRVdHpYVjM3QjBxZVdwd2FicE9MbDY3aW14QlpQbWczQWE5cmIyZTQwNXFJd1doYUZQcWZOWkY0WkxabTRoeEJsMlBWUVh1WVppMEZzbUZaT19Dc180Z2Y3dzRQSHFUY3BORTQtdU5qczNrYmRLOC1uME0wekFnbjkwMzhkUQ?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:6b98b871b3ce5a1e7244ba8acf7afd81c9755a204b11422391cf654b5b23c4ac",
-          "published": "2026-11-18T23:09:49Z",
-          "headline": "EXCLUSIVE: UniCredit and Germany reach broad agreement on Commerzbank takeover",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbzY3bmFvcDFWWmUtWmRlTkg1OElfODl6Z1BCWG1LQlp3U0xsbXktUlo3SXRKczAxdEI2bGRSTmxLRDUwMXRMZU9LOGJuX0QyTkxLNHVnS254WkF6MVNRNmNsUkxZRXZreWh2d0R5M2JmZk1pUWZHYVg0R1BjUDBXNVlFOXpZRGhtRUxLd1F6UnViV0VQcHBGSWw0VjF4ZUU2dk9zQ3liMzNmY3k0TExRXzlVMA?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 107,
+      "observedRecords": 108,
       "latestRecord": "2026-11-20T11:51:13Z",
       "topicCounts": {
         "numbers": 2,
