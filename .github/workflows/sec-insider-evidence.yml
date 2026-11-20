@@ -4,8 +4,15 @@ on:
     paths:
       - 'scripts/sec_insider_evidence.py'
       - 'tests/test_sec_insider_evidence.py'
+      - 'scripts/sec_insider_r2.py'
+      - 'tests/test_sec_insider_r2.py'
       - '.github/workflows/sec-insider-evidence.yml'
   workflow_dispatch:
+    inputs:
+      retain_private:
+        description: 'Retain scoped SEC evidence in private R2 and verify readback'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -18,6 +25,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -p 'test_sec_insider_evidence.py' -v
+      - run: python -m unittest discover -s tests -p 'test_sec_insider_r2.py' -v
       - name: Validate scoped immutable evidence
         env:
           STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
@@ -28,3 +36,14 @@ jobs:
           path: validation-artifacts/sec-insider/
           retention-days: 7
           if-no-files-found: error
+      - name: Install private storage client
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.retain_private == true
+        run: pip install 'boto3>=1.40,<2'
+      - name: Verify permanent private storage
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.retain_private == true
+        env:
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: python scripts/sec_insider_r2.py
