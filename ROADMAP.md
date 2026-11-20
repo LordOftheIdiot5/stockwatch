@@ -99,3 +99,9 @@ TWSE TAIEX retained; add separately licensed daily TPEx and cross-market Formosa
 
 ## V89h phase 1 — existing private R2 infrastructure
 Extend daily observation archive and public research catalog to the three reviewed Taiwan daily index feeds and dated ESMA identity snapshot. Verify exact source and licence, archive content-addressed index histories without volatile retrieval metadata, verify ESMA pointer and hash; preserve old versions. Extend approved BLS public-domain series set. No raw exchange data, SEC ownership/insider evidence, credentials or extra service introduced by this phase. Live R2 write validation required before marking operational. Remaining V89h work: independently reviewed SEC records, durable receipt/index layer and retrieval checks; V90 interface follows.
+
+
+## Standing visual design & UX workstream (2026-11-21)
+The Stockwatch visual quality program is tracked in [issue #165](https://github.com/LordOftheIdiot5/stockwatch/issues/165), with screenshot-derived acceptance criteria and an implementation order. **Treat these as mandatory polish/QA gates across existing and new feature versions, not proof of a deployed redesign.** Detailed review rubric is in [docs/VISUAL-QUALITY-WORKPLAN-20261121.md](docs/VISUAL-QUALITY-WORKPLAN-20261121.md).
+
+Priority: remove unintended desktop whitespace and improve typography/menu scanability first; then invest in readable native financial charts, a usable reliable heatmap, geography-accurate market-pulse cards, clearer company/news/freight data, and mobile/keyboard/light-dark design. Do not rebuild or discard working data ingestion, preserve Stockwatch identity and quality/source-rights/freshness controls. Every two versions or any material UI/graph/navigation change requires actual desktop+tablet+mobile screenshot/interaction audit, regression tests, signed-off findings and post-deployment checks. Preserve date/source/units and never imply delayed observations are live data.
