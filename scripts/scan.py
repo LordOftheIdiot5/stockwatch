@@ -31,6 +31,7 @@ from translate import Translator                                  # noqa: E402
 from last_known import load,company_row,context_rows
 import source_telemetry                                            # noqa: E402
 from price_freshness import comparison_date,price_quality,completed_market_baseline
+from price_quality_diagnostics import outcome as price_outcome,summarize as price_diagnostics
 source_telemetry.install(sources)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -369,16 +370,23 @@ def main() -> int:
     prior={r["ticker"]:r for r in previous.get("companies",[]) if r.get("ticker")}
     movement_seeds=load(ROOT / "scripts" / "last-valid-movement-seeds.json")
     stamp=now.isoformat(timespec="seconds")
+    price_reasons={}
     for entry in watchlist:
         fresh=None
+        data=None
+        measured=None
+        price_error=False
         try:
             data=sources.chart(entry["ticker"])
             measured=score(data["bars"]) if data and data.get("ticker")==entry["ticker"] else None
             if measured:
                 fresh={"ticker":entry["ticker"],"name":entry.get("name",entry["ticker"]),"sector":entry.get("sector",""),"exchange":data["exchange"],"currency":data["currency"],"thin":bool(entry.get("thin")),"spark":spark(data["bars"]),"stories":[],**{k:entry[k] for k in ("isin","mic") if entry.get(k)},**measured}
         except Exception as error:
+            price_error=True
             print(f"  ! {entry['ticker']}: {type(error).__name__}")
-        companies.append(company_row(entry,fresh,prior.get(entry["ticker"]),now.date().isoformat(),stamp,previous.get("generated"),movement_seeds.get(entry["ticker"])))
+        chosen=company_row(entry,fresh,prior.get(entry["ticker"]),now.date().isoformat(),stamp,previous.get("generated"),movement_seeds.get(entry["ticker"]))
+        companies.append(chosen)
+        price_reasons[entry["ticker"]]=price_outcome(entry,data,measured,prior.get(entry["ticker"]),chosen,price_error)
 
     # The market baseline is the watchlist's own median move. If everything is
     # up three percent, a stock up four has moved one - and that is what counts.
@@ -616,6 +624,7 @@ def main() -> int:
         "marketPct": round(market, 2) if market is not None else None,
         "marketSampleSize": sample_size,
         "marketComparisonDate": target,
+        "priceDiagnostics": price_diagnostics(companies,price_reasons,target),
         "languages": sorted({l for _, ls in queries for l in ls}),
         "companies": companies,
         "alerts": sorted(alerts, key=lambda a: (
