@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T21:12:45Z",
+  "generated": "2026-11-20T21:16:58Z",
   "items": [
     {
       "id": "IFX.DE:d6052aaa5d5d4ea242c8aa7c3f81ebba7fb678c24ad8cbb0521bae345bf375ab",
@@ -1190,6 +1190,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "UCG.MI:eaa2ab7c3a43dda011f832c8c84e757d8faa5f1bd2c1e03078b099269ca33829",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "UniCredit S.p.A. Stock | Price | Dividend | News (A2DJV6, IT0005239360)",
+      "english": null,
+      "publisher": "extraETF",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE14cFpCRXdHcXlTc1J6Skw0akp0ckhBeHdlbjBnamdFMHJ4SkI3VWtKLUdtY25qdzVzZE9tajI5b2lXbGY1ZVVUNDRMZk1uZ3BseWJzWENtZzZ6QXNjUjE4?oc=5",
+      "published": "2026-11-20T13:26:05Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Dividends",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Dividends"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "MYCR.ST:496f3c009f4f9f7da71e820bdb451b6dbcc224c4bb45642cb731434ceb8202d6",

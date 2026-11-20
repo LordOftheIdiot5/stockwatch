@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T21:12:45Z",
+  "generated": "2026-11-20T21:16:58Z",
   "items": [
     {
       "id": "IFX.DE:d6052aaa5d5d4ea242c8aa7c3f81ebba7fb678c24ad8cbb0521bae345bf375ab",
@@ -1192,6 +1192,34 @@
       "priority": "normal"
     },
     {
+      "id": "UCG.MI:eaa2ab7c3a43dda011f832c8c84e757d8faa5f1bd2c1e03078b099269ca33829",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "UniCredit S.p.A. Stock | Price | Dividend | News (A2DJV6, IT0005239360)",
+      "english": null,
+      "publisher": "extraETF",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE14cFpCRXdHcXlTc1J6Skw0akp0ckhBeHdlbjBnamdFMHJ4SkI3VWtKLUdtY25qdzVzZE9tajI5b2lXbGY1ZVVUNDRMZk1uZ3BseWJzWENtZzZ6QXNjUjE4?oc=5",
+      "published": "2026-11-20T13:26:05Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Dividends",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Dividends"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "MYCR.ST:496f3c009f4f9f7da71e820bdb451b6dbcc224c4bb45642cb731434ceb8202d6",
       "ticker": "MYCR.ST",
       "name": "Mycronic",
@@ -2368,44 +2396,21 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "VNA.DE:af5f021beb599ac6a77e66832607ba255e957c534a68f64e9a263b31868a2377",
-      "ticker": "VNA.DE",
-      "name": "Vonovia",
-      "sector": "Property",
-      "type": "news",
-      "headline": "Vonovia-Aktie: Mit klar positivem Vorzeichen in den Handelstag gestartet",
-      "english": "Vonovia share: Started the trading day with a clearly positive outlook",
-      "publisher": "WELT",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPanhvU1IwZkdBV0ZmeWFSZlhScUtXTUtiNFpDeE1lRVZvcC1kWjVwWFV5MHZYS09yVVF0VXVzeTA2VGtQdUUwaXJLaVFValFRbTBackk3RTBKajR4MGVfdzI2MHpibXctbnZLSVlEdU4xWVFVRDhaajlUQlZIanJnUjlmN1E1WHdWT2cxVEcxaUJiazBDaExwYnBMV1R6bklUaHB3Zkx3M3dEYVFuWlk5VkJEVXVoZFpDZ0xLMl94VFRLTTJldFM4ZVFqbzVSd3NkcVdva3ZEV3ozcU9Y?oc=5",
-      "published": "2026-11-20T10:04:24Z",
-      "lang": "de",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1875,
+  "totalStored": 1876,
   "limit": 100,
   "quality": {
-    "total": 1875,
-    "relevant": 1371,
+    "total": 1876,
+    "relevant": 1372,
     "review": 439,
     "duplicates": 89,
     "issuerLinked": 425,
     "driverClassification": {
       "version": 1,
-      "classified": 450,
+      "classified": 451,
       "categories": {
-        "numbers": 258,
+        "numbers": 259,
         "prices": 6,
         "operations": 1,
         "potential": 207,
@@ -2415,7 +2420,7 @@
     },
     "categories": {
       "Earnings / results": 278,
-      "Dividends": 20,
+      "Dividends": 21,
       "M&A": 77,
       "Guidance": 36,
       "Contracts": 136,

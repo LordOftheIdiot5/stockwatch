@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-20T21:12:45Z",
-  "latestScan": "2026-11-20T21:11:45+00:00",
-  "scanAgeHours": 0.02,
-  "contextAgeHours": 0.02,
+  "generated": "2026-11-20T21:16:58Z",
+  "latestScan": "2026-11-20T21:16:18+00:00",
+  "scanAgeHours": 0.01,
+  "contextAgeHours": 0.01,
   "priceFreshness": {
     "comparisonDate": "2026-11-19",
     "equities": {
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 142,
+  "storedStories": 141,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,49 +115,49 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 145.6,
+      "avgLatencyMs": 69.6,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 658.6,
+      "avgLatencyMs": 668.0,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 512.7,
+      "avgLatencyMs": 1142.0,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 304.2,
+      "avgLatencyMs": 329.3,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2125.0,
+      "avgLatencyMs": 3704.8,
       "errorTypes": {}
     }
   },
   "newsQuality": {
-    "total": 1875,
-    "relevant": 1371,
+    "total": 1876,
+    "relevant": 1372,
     "review": 439,
     "duplicates": 89,
     "issuerLinked": 425,
     "driverClassification": {
       "version": 1,
-      "classified": 450,
+      "classified": 451,
       "categories": {
-        "numbers": 258,
+        "numbers": 259,
         "prices": 6,
         "operations": 1,
         "potential": 207,
@@ -167,7 +167,7 @@
     },
     "categories": {
       "Earnings / results": 278,
-      "Dividends": 20,
+      "Dividends": 21,
       "M&A": 77,
       "Guidance": 36,
       "Contracts": 136,
