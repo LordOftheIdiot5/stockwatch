@@ -1,0 +1,76 @@
+{
+  "ambiguousPairs": 0,
+  "comparisonCounts": {
+    "agree": 16,
+    "not_comparable": 1
+  },
+  "currentStateEstablished": false,
+  "deltaReplayComplete": false,
+  "eligiblePairs": 17,
+  "lastAttempt": "2026-11-20T00:28:10+00:00",
+  "lastSuccess": "2026-11-20T00:28:10+00:00",
+  "matchedPairs": 17,
+  "notice": "Selected and normalized ESMA FIRDS reference facts. Original data is available free of charge from ESMA; ESMA does not endorse Nordl. Third-party rights and any stated exceptions remain applicable. Weekly snapshot evidence only; subsequent modifications, cancellations and terminations not applied.",
+  "pendingUpdateSets": [
+    {
+      "complete": true,
+      "date": "2026-11-14",
+      "expectedParts": 4,
+      "foundParts": 4,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-15",
+      "expectedParts": 1,
+      "foundParts": 1,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-16",
+      "expectedParts": 1,
+      "foundParts": 1,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-17",
+      "expectedParts": 4,
+      "foundParts": 4,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-18",
+      "expectedParts": 4,
+      "foundParts": 4,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-19",
+      "expectedParts": 4,
+      "foundParts": 4,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-14",
+      "expectedParts": 2,
+      "foundParts": 2,
+      "type": "FULCAN"
+    }
+  ],
+  "schemaVersion": 1,
+  "snapshot": "data/esma-equity-history/2026-11-14-92ed71eb8a2b28b9d97492a9c1f52c58126fa46a5c613a4898a21daa3a74c105.json",
+  "snapshotSha256": "92ed71eb8a2b28b9d97492a9c1f52c58126fa46a5c613a4898a21daa3a74c105",
+  "source": "ESMA FIRDS",
+  "sourceDate": "2026-11-14",
+  "sourceRights": "https://registers.esma.europa.eu/publication/legalNoticePage",
+  "sourceRows": 748923,
+  "sourceUrl": "https://www.esma.europa.eu/document/firds-instructions-access-and-download-full-and-delta-reference-data-files",
+  "status": "ok",
+  "transformation": "Exact ISIN/MIC subset, normalized fields; separate GLEIF comparison",
+  "unmatchedPairs": 0
+}
