@@ -28,3 +28,15 @@ class Tests(unittest.TestCase):
         with patch("private_r2_archive.immutable_put",c.put):
             a=archive(c,d,b"source");b=archive(c,d,b"source")
         self.assertTrue(a["readbackVerified"]);self.assertEqual(b["storageStatus"],"already_present");self.assertEqual(len(c.objects),2)
+
+    def test_quarantine_numeric_exception_without_inventing_price(self):
+        bad={**ROW,"Code":"9999","ClosingPrice":"unknown"}
+        d=parse([ROW,bad],DAY)
+        self.assertEqual(d["quarantined"],1)
+        x=d["records"][1]
+        self.assertEqual(x["status"],"quarantined")
+        self.assertIsNone(x["close"])
+        self.assertIsNone(x["volume"])
+    def test_quarantine_threshold(self):
+        with self.assertRaises(ValueError):
+            parse([ROW,{**ROW,"Code":"9998","ClosingPrice":"unknown"},{**ROW,"Code":"9999","ClosingPrice":"unknown"}],DAY)
