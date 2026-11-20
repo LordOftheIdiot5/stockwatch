@@ -1,0 +1,21 @@
+name: Euronext exact trade condition audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/euronext_condition_evidence.py'
+      - 'tests/test_euronext_condition_evidence.py'
+      - '.github/workflows/euronext-condition-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_euronext_condition_evidence.py' -v
+      - run: python scripts/euronext_condition_evidence.py
