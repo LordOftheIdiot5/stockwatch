@@ -1,6 +1,29 @@
 {
-  "generated": "2026-11-20T03:00:13Z",
+  "generated": "2026-11-20T03:16:57Z",
   "items": [
+    {
+      "id": "UCG.MI:a4661ee68db2c045161e6902255f2eb6db9e8885731958ea6df7307f92a25147",
+      "ticker": "UCG.MI",
+      "name": "Unicredit",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Accordo su Commerz: il disgelo tra Unicredit e governo Merz",
+      "english": "Agreement on Commerz: the thaw between UniCredit and the Merz government",
+      "publisher": "Quotidiano Nazionale",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa0ExaVBhRnNwSmFZRlg0SFVpby1LLTRwcUhpVlZ1cFlRbnhEbXR5TWRSMlhDXzUxR3BCUnBkeUJKU2RkNlZ4WXR2Q3kzMXQwbmdxdV85OEVQWU9ISFRpWGc3eUlpc1hVYW9TMDZYTXJFMHJHZkVydnZKdkk2ZXplcEVKbjJKNVlOU0EwejRRQjVKcUo5cjB1aF9wN2t5X3lBdWxuZ1Fn?oc=5",
+      "published": "2026-11-20T03:00:00Z",
+      "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "NOVO-B.CO:81992768730c7e24f3a7a68e98c8687c7eb5fdec1a1daab1ec26062270685d5d",
       "ticker": "NOVO-B.CO",
@@ -2413,38 +2436,15 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "INVE-B.ST:010800ea98d7899d843287f38d3ca127a9f5b438339e09b51053575e70d18af5",
-      "ticker": "INVE-B.ST",
-      "name": "Investor AB",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Rezolve Ai CEO: “The Long-Term Winners in AI Will Be the Vertical Market Specialists”",
-      "english": null,
-      "publisher": "Yahoo Finance UK",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBBLXRfMTN2MnVzeEM5dzZqYXN4dUdMMl9oTnAzV2xlS2M0VGhNbTlmenVwOFRHUEk2VGxaMVFWSVUwUDBFazRGNzdzbWlCM0c4YjVUUlc4QS1lRmtTTW84RzRvU2RVczQwdDFkbW5sZGlKSGlqcHdqT050amFZdw?oc=5",
-      "published": "2026-11-19T13:00:00Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "Management",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1695,
+  "totalStored": 1697,
   "limit": 100,
   "quality": {
-    "total": 1695,
-    "relevant": 1254,
+    "total": 1697,
+    "relevant": 1255,
     "review": 380,
-    "duplicates": 80,
+    "duplicates": 81,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
@@ -2465,8 +2465,8 @@
       "Guidance": 34,
       "Contracts": 120,
       "Capital & ownership": 1,
-      "Management": 55,
-      "General": 1136
+      "Management": 56,
+      "General": 1137
     }
   }
 }
