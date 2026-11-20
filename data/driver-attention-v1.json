@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T03:33:13Z",
+  "generated": "2026-11-20T07:39:05Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -664,6 +664,14 @@
       ],
       "potential": [
         {
+          "id": "AIR.PA:c238b3e7476ae063a555ac9f4de26a6c5c0c6600739f0fe5deca74072e41e5af",
+          "published": "2026-11-20T07:22:35Z",
+          "headline": "WLFC completes acquisition of Two Airbus A320s",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5mMG5tak1LZEtjdk5ETmN2LWhZblhxYmtVR1VOUjgzNnBoY1RQQXNOZFllM0lEYmdYRGdKMUZJOG5rN1Q1dXdxT1d5Si05bHZKTllVNl9HWE1TR0pnUXVnLTNWX0Jqb0pwalNEcDFsWjhjWlppTmZJ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "AIR.PA:e4496046daede930c868ee910c43c949308ecd989e8caf2d6378b674ed180276",
           "published": "2026-11-20T01:15:47Z",
           "headline": "Virgin in talks with Boeing, Airbus as it looks to order more planes",
@@ -728,8 +736,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 44,
-      "latestRecord": "2026-11-20T01:15:47Z",
+      "observedRecords": 45,
+      "latestRecord": "2026-11-20T07:22:35Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -830,8 +838,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-17T16:29:00Z",
+      "observedRecords": 3,
+      "latestRecord": "2026-11-20T06:35:11Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -3374,8 +3382,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 9,
-      "latestRecord": "2026-11-19T19:35:53Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-20T06:00:11Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4488,8 +4496,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-19T15:01:26Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-20T07:31:34Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 2,
@@ -4958,7 +4966,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 5
+          "media": 6
         }
       ],
       "potential": [
@@ -5009,15 +5017,23 @@
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcEdxbFUyUHpYMVR1Z2k5aGpTaGo0ekRSTjBWODN3RnN1bExlSjdrWXlQcDk1WXp4eXhaWmJRREMxRHZOLUYxUFJ1UGhYdWNGV19fVjRWbWhkaHJ4NzN2ck45RHJHNlFaVUMwUl9YQklELVAwVmFzdDlYU3FTWlNSX2F0NzFfR2N2dG9FeU5TY2F5a2tDa2dEeGN3?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
+        },
+        {
+          "id": "GOMX.ST:1f65d4b60339907cda7ea0308828ed26ff1db9ab69ae5250fc4f06e3a08c4d72",
+          "published": "2026-11-19T09:00:00Z",
+          "headline": "GomSpace continues to support advanced lunar exploration with an 8 MEUR (89.1 MSEK) contract with a leading North American space company",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxObnlHM3VndTVSeTdXU0RUc3F1cVo0YVBsZl9hbFNHbUZyUkxSb2dIMjhDS09VLVVIQUVjV3ZpalREdzRuTUkxMDluUHFibnJLZHJ6V0pqLUluZFZyMWxsUUEtVG9aM1dfVTNfS2hiMUFiSTZRNDJWRHRHTjc5OXZnOGFtNzN6ckZYSkVhbU9nd05BZDR0TmtTTjd6ek9INVpDLWpncmhRMUJaT2dNclEzaUJsSWVFb0VpOVY2NE9KSG4xa01nRThOcURaQlJEY2hTVDJ3SUV3VWJnZlFTNnBkLTNB?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 6,
+      "observedRecords": 7,
       "latestRecord": "2026-11-20T03:29:10Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 5,
+        "potential": 6,
         "risk": 0
       },
       "prior7": {
@@ -5026,7 +5042,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 5
+        "media": 6
       }
     },
     "GUBRA.CO": {
@@ -5104,8 +5120,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-13T12:00:00Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-20T07:06:49Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -5290,8 +5306,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-19T18:59:57Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-20T06:37:17Z",
       "topicCounts": {
         "numbers": 8,
         "prices": 0,
@@ -5764,8 +5780,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-19T23:06:38Z",
+      "observedRecords": 24,
+      "latestRecord": "2026-11-20T05:58:50Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -6229,8 +6245,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-20T06:05:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -9777,6 +9793,22 @@
       ],
       "potential": [
         {
+          "id": "RACE.MI:f642d9122d8476f0c3596a5a9ccda4c5ba0af6f47ec734456b632afa458b73e2",
+          "published": "2026-11-20T06:20:00Z",
+          "headline": "Lewis Hamilton says he has ‘not even thought about’ new Ferrari contract",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQzhFdXdmQ2pmc2FiZk41ZXI5TGtNX0RMWElLU1VtRDhKZWsxd0R1WVdXQTZGSGl1cDk4dDVpeDhrZkRKUXp5ZHZUZzgxR09FZVh3NDJqOS1Tcm5WVDNOci03LUdybW1tY2pRclJGLUZxd2NydnVHdTJhS3RHNnowVGo0UUkwRGNuYmt2X3JrLTJtMUVWLTQ4eTVVdUY0N1hXajhudTlLWkVWR3Yxd1E?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
+          "id": "RACE.MI:6053f63fb28337ef284a7f0fa465a508ef8a5bfff65349878861752545112d6f",
+          "published": "2026-11-20T05:48:53Z",
+          "headline": "Ferrari extends works driver contract with Alessandro Pier Guidi",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdldyOUhxYlRTOVVLN0xKOG4xNVRYRV9iZkRXWEx2cFBnWGNWaFZ4VGtoYVBNZnIwdkM0NzlqTGpEazJzdTlTY01ENEJLeXRlNk1Ja2d2QkFwUjRIa1Q1aHFMNHlvcXlPTTBpUUdnLWZmb1NpbnlOYXBucVVWYndfZXlKWE9VMkd5YkFMaVRnQQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "RACE.MI:14a2a1e8c3b3f3c27f3a55bcdd49b79870464d67fda0f0148aa21566cec0629f",
           "published": "2026-11-19T15:14:29Z",
           "headline": "Ferrari Extends Pier Guidi’s Contract Into 2027",
@@ -9825,8 +9857,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 29,
-      "latestRecord": "2026-11-19T21:00:00Z",
+      "observedRecords": 31,
+      "latestRecord": "2026-11-20T06:20:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10652,8 +10684,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-17T10:49:26Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-20T05:39:27Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12257,8 +12289,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 21,
-      "latestRecord": "2026-11-19T18:35:42Z",
+      "observedRecords": 22,
+      "latestRecord": "2026-11-20T07:15:16Z",
       "topicCounts": {
         "numbers": 9,
         "prices": 0,
@@ -12509,8 +12541,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-19T09:00:34Z",
+      "observedRecords": 24,
+      "latestRecord": "2026-11-20T07:22:12Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12882,6 +12914,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:4012323dac859b73d62cacd52c6ee6d8683f01d8c70c9f0611f2bd423c4059b2",
+          "published": "2026-11-20T05:45:22Z",
+          "headline": "UniCredit-Commerz, agreement with Berlin on eight binding points",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVldrd0htOVY1WUFDZUxXajRNRTdkRkIzYWEzUlFNaTdtYWF5amRhUEI2Y3hsaTB1LTFfZGkydTFJOUtaX2drczYzNm1IRVhTbWQ1OUVveFdDQjdZRkI2NWpVNTM5MTE5U0pNRFBobEJjbEh3eDNQa1FmRzNoUDVyS0l5bTM0bXAzV1JOV3NmZGY4RlFXY2NzLTZnZE1EbXFycXpfcTYyQVI5R1A4N0NGa3c4UHBiM0E?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "UCG.MI:3dfea6efc12334bb991c448c94ce34bacd0fb25b2f15586b995217e199c3868e",
           "published": "2026-11-19T16:55:37Z",
           "headline": "German Stocks Fall; Berlin Reaches Deal with UniCredit on Commerzbank Takeover",
@@ -13032,18 +13072,10 @@
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYlFnR1o0eDFuRVY0czlrdXNweEdZNGdUNzk5Mk1yTUNaaERUR0dMaUdfSTZfakJITmNRY2Y0TWliTTRPLThCX2szWVJSSS1fdG9wNWxETFowTnNPNWt4YmtUWUVJeGlSODhoRUE5S2pUUFp5T0RWRnhtOHdZcG5aZVhwMzY4ZUFwdTMycmt6RTB1dU05WGZ1SFJoUWp3SER1ZThuVFFJT2FZQjBoeWdDUmdoaGh6UQ?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:e97a1665bdda682a513c49a05de5b939df6af56aaf6349d7d274bb7b3bac058f",
-          "published": "2026-11-17T17:11:01Z",
-          "headline": "UniCredit coordinates landmark EUR 850 million financing for Premier Energy's acquisition of Evryo Group",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPVEZSdHNsbHVxVUdxdkFvM0NBalVaSG11QVplbVdqMURHcWYzWU5sZDJZMnhvZ2h5VmRpTVRxLWE0SjFaX3pCVnU0UnRFWWhva01FVWlrb0R4VHhGLThYaG1IMjktMl9oU3RZbGxLUkk0bnZ1ZHlGYjJxM28yenZRbm56ZUp2MlR4T3JTeFdfSDc4T1JOalZNbWcxYWt6RUxRWEdzWERMNkZaUzJBN3pLcEtxbjZwQzVJZHhvY1hwcWw1R1JPVkl4SEpLZVhHcXFXb1pQN2ZaSThpci1fNDlyTDVPMFJzZw?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 100,
-      "latestRecord": "2026-11-20T03:00:00Z",
+      "observedRecords": 101,
+      "latestRecord": "2026-11-20T05:45:22Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -13769,8 +13801,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 17,
-      "latestRecord": "2026-11-19T21:13:53Z",
+      "observedRecords": 18,
+      "latestRecord": "2026-11-20T06:33:13Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -18787,11 +18819,11 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 2
+          "media": 3
         }
       ],
       "potential": [],
-      "observedRecords": 5,
+      "observedRecords": 6,
       "latestRecord": "2026-11-19T09:55:50Z",
       "topicCounts": {
         "numbers": 0,
@@ -18806,7 +18838,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 5
       }
     },
     "ZAP.OL": {

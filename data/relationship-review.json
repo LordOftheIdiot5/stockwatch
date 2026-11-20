@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T03:33:14.443414+00:00",
-  "newsRecordsScanned": 1699,
+  "generated": "2026-11-20T07:39:06.474475+00:00",
+  "newsRecordsScanned": 1724,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -2054,6 +2054,18 @@
       "amount": null
     },
     {
+      "id": "955feb2f21a7eca63b4295cee31f241888a9ad3f9d0d45a0b39d0a9ac3ae02b0",
+      "newsId": "GOMX.ST:1f65d4b60339907cda7ea0308828ed26ff1db9ab69ae5250fc4f06e3a08c4d72",
+      "entityIds": [],
+      "issuerTicker": "GOMX.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T09:00:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxObnlHM3VndTVSeTdXU0RUc3F1cVo0YVBsZl9hbFNHbUZyUkxSb2dIMjhDS09VLVVIQUVjV3ZpalREdzRuTUkxMDluUHFibnJLZHJ6V0pqLUluZFZyMWxsUUEtVG9aM1dfVTNfS2hiMUFiSTZRNDJWRHRHTjc5OXZnOGFtNzN6ckZYSkVhbU9nd05BZDR0TmtTTjd6ek9INVpDLWpncmhRMUJaT2dNclEzaUJsSWVFb0VpOVY2NE9KSG4xa01nRThOcURaQlJEY2hTVDJ3SUV3VWJnZlFTNnBkLTNB?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "47ab33e3572beb77e18cc127e2180199f0213342d120a202d45d7b20b23c7d62",
       "newsId": "GOMX.ST:13719d390a557c8efffe630d9cfffff1e86b50f3ef492ff1212605d2eaa0c4a2",
       "entityIds": [],
@@ -2570,6 +2582,58 @@
       "candidateType": "headline_event",
       "published": "2026-11-20T03:29:10Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQODdCc2w0QUVJMVBZOEFLLTNnbnFBcGYyNTl4VHpSTTdqUkNlYkVSVVJGWGlkOGpwRDJrUmotMG5sQXhJSmhad3EzbXMzdEFDdW9RSGFBaWNiWmk0QzNMMlVfMk1mZ3IyQnVqUHhveG94SmZRdERTMUZwSm5vY1RGcFBrelRUdVBZeTZURmhlTl9iTjJFYWJnVWI3VFJwbGJBREFqeGxvYm5vRVNUbWFXMVFzamFPMldRcllhaHhkeGJCVlZaTUZJaXlhRzNvbVFycHNpYjRiSnI0TXVpLUNPM3BPTGpMQVk?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "41bd96a90e8083346c61ff5b846ecae2e57d4e908f909e8f57d74de37a1ab3d2",
+      "newsId": "UCG.MI:4012323dac859b73d62cacd52c6ee6d8683f01d8c70c9f0611f2bd423c4059b2",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T05:45:22Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVldrd0htOVY1WUFDZUxXajRNRTdkRkIzYWEzUlFNaTdtYWF5amRhUEI2Y3hsaTB1LTFfZGkydTFJOUtaX2drczYzNm1IRVhTbWQ1OUVveFdDQjdZRkI2NWpVNTM5MTE5U0pNRFBobEJjbEh3eDNQa1FmRzNoUDVyS0l5bTM0bXAzV1JOV3NmZGY4RlFXY2NzLTZnZE1EbXFycXpfcTYyQVI5R1A4N0NGa3c4UHBiM0E?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "a58e908b6a950836f9fc1fad21bd533e4f629f59e78c074b8bbc6ebb18174142",
+      "newsId": "RACE.MI:6053f63fb28337ef284a7f0fa465a508ef8a5bfff65349878861752545112d6f",
+      "entityIds": [],
+      "issuerTicker": "RACE.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T05:48:53Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdldyOUhxYlRTOVVLN0xKOG4xNVRYRV9iZkRXWEx2cFBnWGNWaFZ4VGtoYVBNZnIwdkM0NzlqTGpEazJzdTlTY01ENEJLeXRlNk1Ja2d2QkFwUjRIa1Q1aHFMNHlvcXlPTTBpUUdnLWZmb1NpbnlOYXBucVVWYndfZXlKWE9VMkd5YkFMaVRnQQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "420decbe4932576b46b3838a7dcf3355dfd063cbe73f63d2ba374265b6ec2e88",
+      "newsId": "RACE.MI:f642d9122d8476f0c3596a5a9ccda4c5ba0af6f47ec734456b632afa458b73e2",
+      "entityIds": [],
+      "issuerTicker": "RACE.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T06:20:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQzhFdXdmQ2pmc2FiZk41ZXI5TGtNX0RMWElLU1VtRDhKZWsxd0R1WVdXQTZGSGl1cDk4dDVpeDhrZkRKUXp5ZHZUZzgxR09FZVh3NDJqOS1Tcm5WVDNOci03LUdybW1tY2pRclJGLUZxd2NydnVHdTJhS3RHNnowVGo0UUkwRGNuYmt2X3JrLTJtMUVWLTQ4eTVVdUY0N1hXajhudTlLWkVWR3Yxd1E?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "b4f72ea5cafeba63da048c31a192a5da9a6f3c820e866554c6c5524558edd6e4",
+      "newsId": "AIR.PA:c238b3e7476ae063a555ac9f4de26a6c5c0c6600739f0fe5deca74072e41e5af",
+      "entityIds": [
+        "airbus"
+      ],
+      "issuerTicker": "AIR.PA",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T07:22:35Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5mMG5tak1LZEtjdk5ETmN2LWhZblhxYmtVR1VOUjgzNnBoY1RQQXNOZFllM0lEYmdYRGdKMUZJOG5rN1Q1dXdxT1d5Si05bHZKTllVNl9HWE1TR0pnUXVnLTNWX0Jqb0pwalNEcDFsWjhjWlppTmZJ?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
