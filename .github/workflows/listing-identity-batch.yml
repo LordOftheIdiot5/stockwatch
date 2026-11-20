@@ -1,0 +1,35 @@
+name: Missing listing identity batch
+on:
+  pull_request:
+    paths:
+      - 'scripts/listing_identity_batch.py'
+      - 'tests/test_listing_identity_batch.py'
+      - '.github/workflows/listing-identity-batch.yml'
+  workflow_dispatch:
+    inputs:
+      group:
+        type: choice
+        options: [nordic, euronext, other]
+        default: nordic
+permissions:
+  contents: read
+concurrency:
+  group: listing-identity-batch
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install defusedxml==0.7.1
+      - run: python -m unittest discover -s tests -p 'test_listing_identity_batch.py' -v
+      - name: Official reference batch and existing OpenFIGI mapping
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' || github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+          GROUP: ${{ inputs.group || 'nordic' }}
+        run: python scripts/listing_identity_batch.py --group "$GROUP"
