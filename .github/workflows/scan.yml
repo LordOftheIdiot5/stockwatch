@@ -123,6 +123,10 @@ jobs:
         continue-on-error: true
         run: python scripts/global_indices.py
 
+      - name: Collect additional authorized daily market indices
+        continue-on-error: true
+        run: python scripts/extra_global_indices.py
+
       - name: Optional database archive ingestion
         id: archive_ingest
         # Never block scanner commits / site freshness when the external D1 API is down.
