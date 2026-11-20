@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T14:01:48Z",
+  "generated": "2026-11-20T00:22:16Z",
   "notice": "Annual country container-port throughput in TEUs; NOT spot freight rates, charter earnings, daily vessel movements or Baltic benchmarks.",
   "source": {
     "status": "error",
@@ -7,7 +7,7 @@
     "lastSuccessAt": "2026-11-18T13:30:51Z",
     "errorType": "HTTPError",
     "note": "Previous observations retained with their original dates; not refreshed.",
-    "httpStatus": 502
+    "httpStatus": 400
   },
   "series": [
     {
