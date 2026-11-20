@@ -32,8 +32,8 @@ def build(root=ROOT,now=None,get=fetch,probe=False):
     now=now or datetime.now(timezone.utc);stamp=now.isoformat();path=root/"data/global-indices-v1.json"
     old=json.loads(path.read_text()) if path.exists() else {}
     # Taiwan normally closes at 05:30 UTC. Avoid hourly repeat requests after successful daily collection.
-    if not probe and now.hour<6:return old
-    if not probe and old.get("lastSuccessAt","")[:10]==now.date().isoformat():return old
+    if not probe and now.hour<6 and old.get("history"):return old
+    if not probe and old.get("lastSuccessAt","")[:10]==now.date().isoformat() and old.get("latest",{}).get("date")==now.date().isoformat():return old
     try:
         points=parse(get(),now.date());previous={x["date"]:x for x in old.get("history",[])}
         if previous and points[-1]["date"]<max(previous):raise ValueError("source regressed")

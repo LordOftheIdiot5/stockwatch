@@ -16,3 +16,11 @@ class IndexTests(unittest.TestCase):
             def fail():raise TimeoutError()
             with self.assertRaises(TimeoutError):build(root,datetime(2026,11,21,7,tzinfo=timezone.utc),fail)
             b=json.loads((root/"data/global-indices-v1.json").read_text());self.assertEqual(b["latest"],a["latest"]);self.assertEqual(b["status"],"retained_after_error")
+
+    def test_bootstrap_before_close_and_refresh_after_close(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            a=build(root,datetime(2026,11,20,1,tzinfo=timezone.utc),lambda:[ROW])
+            self.assertEqual(a["latest"]["date"],"2026-11-19")
+            b=build(root,datetime(2026,11,20,7,tzinfo=timezone.utc),lambda:[ROW,dict(ROW,Date="1151120")])
+            self.assertEqual(b["latest"]["date"],"2026-11-20")
