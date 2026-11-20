@@ -66,7 +66,7 @@ def match(keys,rows,targets,key,mapper=reconcile):
         retained.append({**r,"lei":lei,"cfi":cfi,"currency":currency})
     if len({r["listingId"] for r in retained})!=len(retained):raise ValueError("duplicate candidate")
     return retained,counts
-def run(group,root=ROOT,api_key=None,retain_private=False):
+def run(group,root=ROOT,api_key=None,retain_private=False,inspect_candidates=None):
     target=eligible(json.loads((root/"data/price-source-queue-v1.json").read_text()),group)
     if not target:raise ValueError("no eligible queue listings")
     key=api_key or os.getenv("STOCKWATCH_OPENFIGI_KEY","").strip()
@@ -83,6 +83,8 @@ def run(group,root=ROOT,api_key=None,retain_private=False):
     candidates,counts=match(keys,universe(root),target,key)
     summary={"group":group,"sourceDate":full["date"],"sourceRows":total,"sourceParts":parts,"eligibleListings":len(target),"scopedSecurityPairs":len(keys),"ambiguousPairs":sum(len(v)>1 for v in keys.values()),"candidateMatches":len(candidates),"byMic":dict(Counter(r["mic"] for r in candidates)),"mappingOutcomes":counts,"currentStateEstablished":False,"publishedPrices":0,"retainedCandidateRecords":0}
     if not candidates:raise ValueError("no exact candidate matches")
+    if inspect_candidates is not None:
+        summary["downstreamProbe"]=inspect_candidates(candidates)
     if retain_private:
         from listing_identity_r2 import archive_live
         summary.update(archive_live(summary,candidates,target))
