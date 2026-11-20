@@ -289,6 +289,7 @@ function overview(){
  ];
  const pulse=(state.context?.commodities||[]).filter(x=>['Gold','Copper','Brent crude','Natural gas'].includes(x.name)).map(x=>'<a class="sw-ws-pulse" href="commodities.html"><span>'+E(x.name)+'</span><strong>'+N(x.last,3)+' <small>'+E(x.unit||'')+'</small></strong><b class="'+sign(x.changePct)+'">'+P(x.changePct)+'</b></a>').join('');
  const pendingListings=displayUniverse.filter(r=>!r.referenceOnly&&!displayObservation(r));
+ const globalPulse=$('globalMarketPulse');if(globalPulse)globalPulse.remove();
  $('v4app').innerHTML=
  '<section class="sw-overview-head"><div><span class="sw-ws-eyebrow">EUROPEAN MARKET INTELLIGENCE</span><h1>Market overview</h1><p>Reported market observations · '+E(displayDate||'Date unavailable')+'</p></div><div class="sw-ws-actions"><a class="sw-primary" href="terminal.html">Open research terminal ↗</a><a class="sw-soft-btn" href="stocks.html">Stock screener</a></div></section>'+
  '<div class="sw-overview-status"><span>Market map, company news and research tools · dated observations</span><a class="sw-textlink" href="health.html">Data health ↗</a></div>'+
@@ -313,6 +314,9 @@ function overview(){
  '<div class="sw-section-row"><h2>Research workspace</h2><small>Specialized tools, common data principles</small></div><div class="sw-ws-modules">'+modules.map(([kind,title,desc,url,ic])=>'<a class="sw-card sw-ws-module" href="'+url+'"><div class="sw-ws-module-art '+kind+'" aria-hidden="true"><span>'+ic+'</span><i></i><i></i><i></i></div><div class="sw-ws-module-text"><h3>'+E(title)+' <span>↗</span></h3><p>'+E(desc)+'</p></div></a>').join('')+'</div>'+
  '<section class="sw-panel sw-ws-trust">'+panelHeader('Trust & data infrastructure','Data health','health.html','Source provenance, freshness and coverage')+'<div class="sw-panel-pad"><div><b>Stockwatch</b><p>Independent market research. Observations can be delayed; missing data is not invented.</p><a class="sw-textlink" href="intelligence.html">Explore connected intelligence ↗</a> <a class="sw-textlink" href="research.html">OpenFIGI integration &amp; historical evidence ↗</a></div><div><b>Leivro</b><p>Our intended central dataset and API platform. Shared infrastructure is being developed.</p><a class="sw-textlink" href="https://leivro.com/">Explore Leivro ↗</a></div></div></section>'+
  '</details>';
+ const overview=$('v4app'),marketGrid=overview.querySelector('.sw87-market-grid'),marketSummary=overview.querySelector('.sw87-market-summary');
+ if(globalPulse&&marketGrid)marketGrid.before(globalPulse);
+ if(marketGrid&&marketSummary){const heading=marketSummary.querySelector('.sw-section-row'),metrics=marketSummary.querySelector('.sw-ws-metrics');if(heading&&metrics){const snapshot=document.createElement('div');snapshot.className='sw87-market-summary sw-overview-priority';snapshot.append(heading,metrics);marketGrid.before(snapshot);}}
  document.body.classList.add('sw-workspace-ready');
  const economy=$('overviewEconomy');let economicStarted=false;
  economy.addEventListener('toggle',()=>{if(!economy.open||economicStarted)return;economicStarted=true;overviewResearch().catch(()=>{if($('overviewMacro'))$('overviewMacro').textContent='Official history unavailable.'})});

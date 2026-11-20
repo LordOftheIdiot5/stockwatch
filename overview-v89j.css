@@ -1,0 +1,23 @@
+/* Overview-only responsive desktop layout. Preserve shared shell and heatmap behavior. */
+body[data-page=index] .sw-content{max-width:1760px;width:100%;box-sizing:border-box;margin-inline:auto;padding-inline:clamp(14px,2vw,30px)}
+body[data-page=index] .sw-overview-indices{margin:10px 0 15px;min-width:0}
+.sw-index-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+.sw-index-heading h2{font-size:15px;margin:0;color:var(--sw-text)}
+.sw-index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,275px),1fr));gap:8px}
+.sw-index-card{min-width:0;max-width:420px;border:1px solid var(--sw-edge);border-radius:9px;background:var(--sw-card);padding:10px 12px;box-sizing:border-box;color:var(--sw-text);font-variant-numeric:tabular-nums}
+.sw-index-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(58px,32%);column-gap:10px;align-items:center}
+.sw-index-top{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:12px}
+.sw-index-top strong{font-size:15px;white-space:nowrap}
+.sw-index-close{grid-column:1;font-size:18px;letter-spacing:-.025em}
+.sw-index-main small{grid-column:1;font-size:10px;color:var(--sw-muted)}
+.sw-index-spark{grid-column:2;grid-row:2/4;min-width:0}
+.sw-index-spark svg{display:block;width:100%;height:34px}
+.sw-index-foot{display:flex;gap:12px;margin-top:5px;font-size:10px}
+.sw-index-sources{font-size:11px;color:var(--sw-muted);margin-top:6px}
+.sw-index-sources summary{cursor:pointer;display:list-item;width:fit-content}
+.sw-index-sources p{margin:6px 0}
+body[data-page=index] .sw-overview-priority{margin:10px 0}
+body[data-page=index] .sw87-market-grid{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}
+@media(min-width:1450px){body[data-page=index] .sw87-market-grid #workspaceHeatmap:not(.sw-heat-expanded){max-height:clamp(365px,46vh,610px)}body[data-page=index] .sw87-market-grid .sw-overview-news{max-height:clamp(520px,62vh,720px)}}
+@media(max-width:1000px){body[data-page=index] .sw87-market-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:740px){body[data-page=index] .sw-content{padding-inline:12px}.sw-index-card{max-width:none}}
