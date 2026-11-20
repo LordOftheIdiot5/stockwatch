@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T07:39:06.474475+00:00",
-  "newsRecordsScanned": 1724,
+  "generated": "2026-11-20T08:08:03.307796+00:00",
+  "newsRecordsScanned": 1733,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -2634,6 +2634,18 @@
       "candidateType": "headline_event",
       "published": "2026-11-20T07:22:35Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5mMG5tak1LZEtjdk5ETmN2LWhZblhxYmtVR1VOUjgzNnBoY1RQQXNOZFllM0lEYmdYRGdKMUZJOG5rN1Q1dXdxT1d5Si05bHZKTllVNl9HWE1TR0pnUXVnLTNWX0Jqb0pwalNEcDFsWjhjWlppTmZJ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "ce4971db507918273fd5ac7a24a3cdbaa50756e6c789a9ead9d289cf90a48ed1",
+      "newsId": "RACE.MI:09abb210a935b047bfef6fe3b7cb619cec926421684b4f2ec585ac72766315e8",
+      "entityIds": [],
+      "issuerTicker": "RACE.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T07:42:42Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQVFIR1R0SWIyU3ZGai1fTjh6RmUtUjZ3NUdWZE9wbHJPbzFjZFo5aWlNcng2TzJoOWFkS2hDTE9qWlRpaW9obHJHLUV6Tzg0aXprSGRYRGdZMVRYRUZJa3l0ZmY3ZVdnZlJNRjF6azBaeG5JYzNUWmdnSmlwNEltc1B3?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
