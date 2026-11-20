@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T13:07:56.901573+00:00",
-  "newsRecordsScanned": 1799,
+  "generated": "2026-11-20T14:08:13.292135+00:00",
+  "newsRecordsScanned": 1814,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -2863,6 +2863,18 @@
       "amount": null
     },
     {
+      "id": "10551e33facca9731d7a7f55deda22b4c3f4b9ba58507b74de3dd21261761659",
+      "newsId": "RACE.MI:a3c8eb3c31c40ade35f2c50f00974e4db76d963a56a597267d0fc042ef87905b",
+      "entityIds": [],
+      "issuerTicker": "RACE.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T12:33:39Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeWRKTldNQnYxYWpWZ0g0YVlSVEd2SlZnUHJCb3Nqd2Fka0xLWTZPMGJtTUJsc3NuUnZMQXVibWx4SWFhdDVWQk9wcFhtalc2MHVVRUxXMElBVU92b05QQzQzelZDOTNyRVBQMEdScnBZNk1DbEF4SndRdkZPQXhGenhpUWdVbVhXak5zUC1GUG02aFB1YkxkNzMyMWFRSVXSAaQBQVVfeXFMT3VpeGdJWENMZnBwQnp6RzNUMUpYeWN0MVo3NGlFN2JDTDhQZmFkdERYb2IxR2hhZFlibjhIQTM2dHhLSzN1MjZjdXAza0RTU2hLYVFZVTdET1A5YjE3MHhkWGJhOVRxS2NvQnZMR2luUnlHbWdFZERfMmtZZWVSRUtlb0JoTGpkVm9JVTlzMF92eTlFTXNFaEJSRU1HU21TVlNDMW0?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "539e1b204e7c01e8fd10719147abf4e83533c81d6b2782e7f5e14d654d584a43",
       "newsId": "FCT.MI:70590a30e799d32905d5be5592fdec13fff9d08236fd5734cc82a439d755daa9",
       "entityIds": [],
@@ -2870,6 +2882,34 @@
       "candidateType": "headline_event",
       "published": "2026-11-20T12:38:18Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBkMDhZSU14R3hXU1BobVdrRWxZUUZhdzZnWWtJVG1XYUhRREFRUnpfQTVSNFQ4cUNHWUt6THJ5YllRLTYtOEZIc0JmbXBCQURlZXl0VVEyb2RYODRvbUdZVUVFTUZFOEpZU01WQVJKRDYtSHlCbC13?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "d55559effe41f597d607c3b504b4e370a08f2f1dc2e22eb11a35c531b541caed",
+      "newsId": "UCG.MI:2d3c17621a34fb19e9a307cd7a52e6ff9599e7eb6e436b93328ce84a8fcf9e84",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T12:55:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNZnphM1pqcDJvWFFvb0lQN2c3N3pKR3NrWXNSSk9DeGc0bEZ3YmhDOXVvdVYwWmJUVGlVN3p5eW50UmhYXzRyWVNBazB1VnllT0xFSFF3RnBoWFVscWtwR0tLVmZfYUxqZlNHMFN1RDFadWtjdVA1YlRyVmNCTW5KSVZOSWpFendwbGZpeTVHM2hwVE9RRU1uNEdERzlTcVB3Tmlna2RiMmpPYll5MWJscFFKTEFmVWlWUV9zN3BLWTZhTW5sNElrOVk2ZmNoWHU1VGZucEIwbFotZk9meHNCM2lRVmE?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "9674d44738a35c894482d0657e851015ead127e32609d30045df443b7da45b7c",
+      "newsId": "UCG.MI:c52f77fa6046618425ba0b03418b1ff0560aad1c4f421e78f92a195335e4cd5e",
+      "entityIds": [
+        "unicredit"
+      ],
+      "issuerTicker": "UCG.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-20T13:07:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTTFlMVJsOU5GQ25xdmVHSVNtc3R6blppdDctOGdsQ19iRU1XdmJwR3pDX1JLQXU5QXU1QUhBaVFqUWJadk11RXo1X3hhVG5ZSzNaVzUyRjQ0UHBvYklnRHhwSVhiS1lreVFQd2tpeU1XcXdwV2R3Ulhpa3c1WlhveU1tV21SSzJ1LWtxVlUzaWxTLTRHXzkwbF80ZnpRYmhPYW5sLUN2UmM1V18wVWhXMTg5a2ZmYjVTUHRKT2pXVQ?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
