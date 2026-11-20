@@ -1,6 +1,12 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict');
-const fs=require('node:fs'),path=require('node:path');
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const __dirname=path.dirname(fileURLToPath(import.meta.url));
 const src=fs.readFileSync(path.join(__dirname,'../v4.js'),'utf8');
 const begin=src.indexOf('function licensedReferenceRows('),end=src.indexOf('function licensedReferenceCount(',begin);
 assert.ok(begin>=0&&end>begin);
