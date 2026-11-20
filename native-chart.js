@@ -19,7 +19,7 @@ function cleanBars(rows){
  return [...m].filter(([d])=>!bad.has(d)).sort(([d],[e])=>d.localeCompare(e)).map(([,b])=>b);
 }
 function authorized(entry,payload){
- return !!(entry&&payload&&entry.redistributionPermitted===true&&payload.redistributionPermitted===true&&entry.priceType==='end_of_day'&&payload.priceType==='end_of_day'&&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(entry.historyPath||'')&&['listingId','currency','source','licenseReference'].every(k=>typeof entry[k]==='string'&&entry[k]&&entry[k]===payload[k])&&safe(payload.licenseReference)&&safe(payload.sourceUrl)&&typeof payload.adjusted==='boolean'&&(entry.adjusted===undefined||entry.adjusted===payload.adjusted));
+ return !!(entry&&payload&&(entry.publicDisplayPermitted===true||(entry.publicDisplayPermitted===undefined&&entry.redistributionPermitted===true))&&(payload.publicDisplayPermitted===true||(payload.publicDisplayPermitted===undefined&&payload.redistributionPermitted===true))&&entry.priceType==='end_of_day'&&payload.priceType==='end_of_day'&&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(entry.historyPath||'')&&['listingId','currency','source','licenseReference'].every(k=>typeof entry[k]==='string'&&entry[k]&&entry[k]===payload[k])&&safe(payload.licenseReference)&&safe(payload.sourceUrl)&&typeof payload.adjusted==='boolean'&&(entry.adjusted===undefined||entry.adjusted===payload.adjusted));
 }
 function mount(host,{label='',unit='',bars=[],series=[],equity=false,source='',notice='',events=[],onReset=null,onChange=null}={}){
  const b=equity?cleanBars(bars):[];
