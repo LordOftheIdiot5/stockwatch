@@ -136,6 +136,10 @@ jobs:
           node --check brand/research-coverage.js
       - name: SEC company financial interface tests
         run: node --test tests/test_sec_financials_ui_v89g.cjs
+      - name: Unified listing onboarding queue validation
+        run: |
+          node --test tests/test_listing_enrichment_queue.cjs
+          node scripts/audit_listing_coverage.cjs --write
       - name: V89f price source queue tests
         run: node --test tests/test_price_source_queue_v89f.cjs
       - name: V89e listing coverage inventory
