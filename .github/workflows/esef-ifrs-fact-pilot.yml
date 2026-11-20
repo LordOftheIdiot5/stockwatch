@@ -1,0 +1,21 @@
+name: IFRS financial fact pilot validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/esef_ifrs_fact_pilot.py'
+      - 'tests/test_esef_ifrs_fact_pilot.py'
+      - '.github/workflows/esef-ifrs-fact-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_esef_ifrs_fact_pilot.py' -v
+      - run: python scripts/esef_ifrs_fact_pilot.py
