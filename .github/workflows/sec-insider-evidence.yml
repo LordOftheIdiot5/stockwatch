@@ -1,0 +1,30 @@
+name: SEC insider evidence retention validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/sec_insider_evidence.py'
+      - 'tests/test_sec_insider_evidence.py'
+      - '.github/workflows/sec-insider-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_sec_insider_evidence.py' -v
+      - name: Validate scoped immutable evidence
+        env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
+        run: python scripts/sec_insider_evidence.py
+      - uses: actions/upload-artifact@v5
+        with:
+          name: sec-insider-evidence-validation
+          path: validation-artifacts/sec-insider/
+          retention-days: 7
+          if-no-files-found: error
