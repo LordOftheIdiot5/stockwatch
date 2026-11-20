@@ -80,5 +80,5 @@ def main():
 if __name__=="__main__":
     try:main()
     except Exception as exc:
-        print("TWSE_EQUITY_FAILED "+type(exc).__name__)
+        print("TWSE_EQUITY_FAILED "+type(exc).__name__+(" "+str(exc) if isinstance(exc,ValueError) and str(exc) in {"unexpected number type","unexpected numeric field","payload bound","unexpected schema","unexpected ROC session date","invalid source date","invalid or duplicate security code","invalid name","invalid OHLC","mixed trading sessions","no traded observations","unexpected redirect","response bound"} else ""))
         raise SystemExit(1) from None
