@@ -1,21 +1,21 @@
 {
-  "generated": "2026-11-20T21:46:55Z",
-  "latestScan": "2026-11-20T21:46:12+00:00",
+  "generated": "2026-11-20T22:04:50Z",
+  "latestScan": "2026-11-20T22:04:12+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "priceFreshness": {
-    "comparisonDate": "2026-11-19",
+    "comparisonDate": "2026-11-20",
     "equities": {
-      "comparable": 2,
-      "older": 0,
+      "comparable": 133,
+      "older": 3,
       "no_volume": 2,
-      "unconfirmed": 135,
+      "unconfirmed": 1,
       "unavailable": 0
     },
     "total": 139,
-    "comparablePairs": 0,
+    "comparablePairs": 12,
     "reportedPairs": 12,
-    "status": "degraded",
+    "status": "coverage_ok",
     "method": "Conservative 22:00 UTC weekday cutoff; no exchange-specific holidays; not a live-quote guarantee."
   },
   "tracked": 139,
@@ -101,7 +101,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 135,
+  "storedStories": 137,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -115,35 +115,35 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 70.5,
+      "avgLatencyMs": 72.7,
       "errorTypes": {}
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 673.8,
+      "avgLatencyMs": 692.9,
       "errorTypes": {}
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 855.1,
+      "avgLatencyMs": 1550.5,
       "errorTypes": {}
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 288.7,
+      "avgLatencyMs": 286.9,
       "errorTypes": {}
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3619.2,
+      "avgLatencyMs": 4321.0,
       "errorTypes": {}
     }
   },
