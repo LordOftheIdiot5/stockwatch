@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "key": "tpex:TPEx",
+  "name": "TPEx",
+  "market": "Taipei Exchange",
+  "provider": "Taipei Exchange / Financial Supervisory Commission",
+  "endpoint": "https://www.tpex.org.tw/openapi/v1/tpex_index",
+  "sourceUrl": "https://data.gov.tw/dataset/11391",
+  "license": "Taiwan Open Government Data License 1.0; attribution required",
+  "licenseUrl": "https://data.gov.tw/en/license",
+  "notice": "Dated official closing observations. Formosa changes are calculated from adjacent retained source observations when the date gap is at most four calendar days; not live quotes.",
+  "status": "ok",
+  "lastAttempt": "2026-11-20T01:05:05.982398+00:00",
+  "lastSuccessAt": "2026-11-20T01:05:05.982398+00:00",
+  "history": [
+    {
+      "date": "2026-11-02",
+      "close": 369.24,
+      "changePoints": -1.02,
+      "changePct": -0.275482
+    },
+    {
+      "date": "2026-11-03",
+      "close": 345.52,
+      "changePoints": -23.72,
+      "changePct": -6.424006
+    },
+    {
+      "date": "2026-11-04",
+      "close": 343.5,
+      "changePoints": -2.02,
+      "changePct": -0.584626
+    },
+    {
+      "date": "2026-11-05",
+      "close": 321.47,
+      "changePoints": -22.03,
+      "changePct": -6.413392
+    },
+    {
+      "date": "2026-11-06",
+      "close": 304.02,
+      "changePoints": -17.45,
+      "changePct": -5.428189
+    },
+    {
+      "date": "2026-11-09",
+      "close": 321.97,
+      "changePoints": 17.95,
+      "changePct": 5.904217
+    },
+    {
+      "date": "2026-11-10",
+      "close": 332.97,
+      "changePoints": 11.0,
+      "changePct": 3.416467
+    },
+    {
+      "date": "2026-11-11",
+      "close": 344.11,
+      "changePoints": 11.14,
+      "changePct": 3.345647
+    },
+    {
+      "date": "2026-11-12",
+      "close": 335.73,
+      "changePoints": -8.38,
+      "changePct": -2.435268
+    },
+    {
+      "date": "2026-11-13",
+      "close": 342.41,
+      "changePoints": 6.68,
+      "changePct": 1.989694
+    },
+    {
+      "date": "2026-11-16",
+      "close": 319.12,
+      "changePoints": -23.29,
+      "changePct": -6.801787
+    },
+    {
+      "date": "2026-11-17",
+      "close": 306.61,
+      "changePoints": -12.51,
+      "changePct": -3.920155
+    },
+    {
+      "date": "2026-11-18",
+      "close": 307.55,
+      "changePoints": 0.94,
+      "changePct": 0.306578
+    },
+    {
+      "date": "2026-11-19",
+      "close": 285.33,
+      "changePoints": -22.22,
+      "changePct": -7.224841
+    }
+  ],
+  "latest": {
+    "date": "2026-11-19",
+    "close": 285.33,
+    "changePoints": -22.22,
+    "changePct": -7.224841
+  }
+}
