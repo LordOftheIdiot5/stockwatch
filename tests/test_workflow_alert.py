@@ -13,5 +13,5 @@ class WorkflowAlertTests(unittest.TestCase):
     def test_retry_and_failure(self):
         calls=[]
         def send(t,c,m):calls.append(m);return len(calls)==2
-        self.assertTrue(deliver("test","test","a < b",send,lambda n:None));self.assertEqual(calls,["a &lt; b"]*2)
+        self.assertTrue(deliver("a < b","test","test",send,lambda n:None));self.assertEqual(calls,["a &lt; b"]*2)
         with self.assertRaises(RuntimeError):deliver("test","test","x",lambda *a:False,lambda n:None)
