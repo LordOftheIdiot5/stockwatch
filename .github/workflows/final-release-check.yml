@@ -123,6 +123,7 @@ jobs:
         run: |
           node --check v4.js
           node --check global-market-pulse.js
+          python -m unittest discover -s tests -p "test_overview_v89j.py" -v
           node --check sec-financials-v89g.js
           node --check terminal.js
           node --check research-analytics.js
