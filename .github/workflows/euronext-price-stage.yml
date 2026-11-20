@@ -6,8 +6,10 @@ on:
     paths:
       - 'scripts/euronext_price_stage.py'
       - 'scripts/euronext_last_trade_r2.py'
+      - 'scripts/euronext_archive_preflight.py'
       - 'tests/test_euronext_price_stage.py'
       - 'tests/test_euronext_last_trade_r2.py'
+      - 'tests/test_euronext_archive_preflight.py'
       - '.github/workflows/euronext-price-stage.yml'
   workflow_dispatch:
     inputs:
@@ -32,6 +34,13 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_euronext_price_stage.py' -v
           python -m unittest discover -s tests -p 'test_euronext_last_trade_r2.py' -v
+          python -m unittest discover -s tests -p 'test_euronext_archive_preflight.py' -v
+      - name: Verify private archive approval before downloading exchange files
+        env:
+          RETAIN: ${{ (github.event_name == 'schedule' && vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.retain_private) }}
+          STOCKWATCH_R2_RETENTION_APPROVED: ${{ vars.STOCKWATCH_R2_RETENTION_APPROVED }}
+          STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED: ${{ vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED }}
+        run: python scripts/euronext_archive_preflight.py
       - name: Install scoped private R2 client
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.retain_private == true)
         run: python -m pip install 'boto3>=1.40,<2'
@@ -44,7 +53,7 @@ jobs:
           STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
           STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
           STOCKWATCH_R2_RETENTION_APPROVED: ${{ vars.STOCKWATCH_R2_RETENTION_APPROVED }}
-          STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED: ${{ (github.event_name == 'schedule' && vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.retain_private) }}
+          STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED: ${{ vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED }}
           RETAIN: ${{ (github.event_name == 'schedule' && vars.STOCKWATCH_EURONEXT_STAGE_RETENTION_APPROVED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.retain_private) }}
         run: |
           if [ "$RETAIN" = "true" ]; then
