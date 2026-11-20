@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T22:35:47Z",
+  "generated": "2026-11-20T22:37:50Z",
   "items": [
     {
       "id": "CAF.MC:a54968f95863a13b3c6babf3f78cf462f80b29b3f2aae8250435393153ae8946",
@@ -4178,6 +4178,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "VWS.CO:2963392d990903e3407cf8392dc2fffe1ae77c095184d1cadbc806297ce2eac2",
+      "ticker": "VWS.CO",
+      "name": "Vestas",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "SKF får order från Vestas",
+      "english": null,
+      "publisher": "INDUSTRInyheter.se",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUldjVk4tLTRaN1lZRHVXb0FBbFl6WldRX29ydENYX25DR0NWak1zSUJ6eWNGazZZNmJudGk0dzJNQmF0V3BtSVNURWU3UWpHa3FiM3BkT25ZTmFoZThQb1pZaldVTTBLSG1Qc0owN0ZBRU1RRnNUWVZ5YWhvQUhZMTZJdlRENW9Jc1E?oc=5",
+      "published": "2026-11-19T23:59:14Z",
+      "lang": "sv",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "UCG.MI:088da44aeeb92ee7ae8a7ea758a99e86475c9a08dbbfb06c213ca40dc3b6434c",

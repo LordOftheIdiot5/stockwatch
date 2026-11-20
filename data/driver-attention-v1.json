@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T22:35:47Z",
+  "generated": "2026-11-20T22:37:50Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -13861,10 +13861,18 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
+        {
+          "id": "VWS.CO:2963392d990903e3407cf8392dc2fffe1ae77c095184d1cadbc806297ce2eac2",
+          "published": "2026-11-19T23:59:14Z",
+          "headline": "SKF får order från Vestas",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUldjVk4tLTRaN1lZRHVXb0FBbFl6WldRX29ydENYX25DR0NWak1zSUJ6eWNGazZZNmJudGk0dzJNQmF0V3BtSVNURWU3UWpHa3FiM3BkT25ZTmFoZThQb1pZaldVTTBLSG1Qc0owN0ZBRU1RRnNUWVZ5YWhvQUhZMTZJdlRENW9Jc1E?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "VWS.CO:293e772da945e94e1c99c13db6989433d4728deda8f54e63e43296ed45400e61",
           "published": "2026-11-17T02:21:07Z",
@@ -13898,13 +13906,13 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 20,
+      "observedRecords": 21,
       "latestRecord": "2026-11-20T13:00:48Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
         "operations": 0,
-        "potential": 2,
+        "potential": 3,
         "risk": 0
       },
       "prior7": {
@@ -13913,7 +13921,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 10
+        "media": 11
       }
     },
     "WAWI.OL": {
