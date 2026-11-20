@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T10:06:54Z",
+  "generated": "2026-11-20T11:07:05Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -4403,8 +4403,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 45,
-      "latestRecord": "2026-11-20T09:19:40Z",
+      "observedRecords": 48,
+      "latestRecord": "2026-11-20T10:44:40Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 0,
@@ -9874,8 +9874,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 34,
-      "latestRecord": "2026-11-20T09:33:00Z",
+      "observedRecords": 35,
+      "latestRecord": "2026-11-20T09:48:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10382,6 +10382,14 @@
       ],
       "potential": [
         {
+          "id": "SAAB-B.ST:dbd2186ebb124d18f1d5c121c92b887215da3630f353af1a3f90c2d6fb789889",
+          "published": "2026-11-20T11:01:19Z",
+          "headline": "Saab Signs License Agreement for Production in Poland",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSHVBSkNsWV9ld3h4Zm96VXlYQUM4T3hJOVE1Y2JGelptd3NJM0dfbTF5X0VCZi1tZDd2US1BSDZZVURpUjl3LU9vSzZJUUVxMTRQWUpIQllxWE04cGxWcy1MVmlxMDJCMjVXWGpOeHlHUklYMnQ3R2lyeTlxZGlvQko1dElvNm9ERlpyYndES2tOcjhyT21wa19EeEdQSWNXbU1CX3d6YmJFQQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "SAAB-B.ST:7a4c85b166348701e2274cde9c1522a0d1947318e7014adef45eb20f7ca16424",
           "published": "2026-11-19T11:38:30Z",
           "headline": "Saab får ny USA-order på pansarvärnsvapen",
@@ -10422,8 +10430,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 9,
-      "latestRecord": "2026-11-19T11:38:30Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-20T11:01:19Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -11357,8 +11365,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 44,
-      "latestRecord": "2026-11-20T05:00:00Z",
+      "observedRecords": 46,
+      "latestRecord": "2026-11-20T10:30:34Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -11743,8 +11751,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-17T14:30:23Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-20T10:35:42Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12505,10 +12513,18 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
+        {
+          "id": "TKMS.DE:285378f6c5e16d9780a900fef0bd3c99528954ae35191aa858b93e004155a2b6",
+          "published": "2026-11-19T14:11:22Z",
+          "headline": "TKMS Doubles Its Frigate Order Book, but the Real Story Is Factory Floor Time",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPYW1ZemRKTE9hZF9qemozeEpna0FlTUJqQU1jMUwwTkJDc2xzRFZad0IzdE0tRnFfdkpELTRVeW9JTTRYMHFqZ2gwa1Q5c0duczBtMmhoNVQxdVVIM21xazZXbkdTRFJEUzBGUjYtZ3I1bUE5bHJvc3VDdUNwNFdTdjhoU0JyR1Z2U29KbEhURzdfbE1YZE5xYjNJNG5UVzZzRU55RmhETUoySUtmN2xKVFo3UWdDa3VrUDBrQ0pVeTByNmd1N0FkOUc1MDVKUHduWTllYVFYa3BheVdaejJiV2ln?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "TKMS.DE:9b6a446d31004e9c63a35395812e37d9e473f6fe45e744bcbe61ef09430ffa1f",
           "published": "2026-11-18T15:26:33Z",
@@ -12558,13 +12574,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 24,
+      "observedRecords": 25,
       "latestRecord": "2026-11-20T07:22:12Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 6,
+        "potential": 7,
         "risk": 0
       },
       "prior7": {
@@ -12573,7 +12589,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 23
+        "media": 24
       }
     },
     "TPE.DE": {
@@ -12931,6 +12947,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:dfd02ae769363eefb1252f832627391385cf9d8e237b8444ed19fefc278dc9fb",
+          "published": "2026-11-20T10:56:34Z",
+          "headline": "Commerzbank CEO welcomes clarity in UniCredit and German government's agreement",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQb2RWaXpodTV6RGlab0ZpbU8zN0tDRE1BZlpvSkNXVjZJUXNURko5YjhHcEo3WUZITEJBMlRVNWhHMEJyT3N0OEhmbzBBTXBwb3FJak1BYm5tdUlVNVNoc0phTlN2N3ZMclFjTmx0a1RITmoyS2VQWUltSXNiNHp4RDNfRDdSS2ltNmlCV0tkV3NFYkRYY2tVVVo2TTlzREhXZE1WeEN4cVZGZGxlbFJqaWRMS1FhN2FrZDBrdU1VUWxBX3BtTGJWZkVZeE0?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "UCG.MI:f639b795fab355dba64c21144627357943b3d9960caa5664cfec6872c6d59ddd",
           "published": "2026-11-20T08:59:05Z",
           "headline": "Deutsche Bank upgrades Unicredit stock on strong earnings outlook",
@@ -13081,18 +13105,10 @@
           "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQOFVyWDMyOVgwNE5FUkFzQ0V6dWR2MFFRR01RYVc0ZmxWaTVtcEJ0X0xNdUJPNy1Ba0hUUWNfbWRGeDZpTDFrU1JIVnNsQTRfWC1jOFNPdV8xaFZEcnA0NVREeDFMVi12c3ZDNWRZTVNmWjFLOXpEQlhlMHZnN2NHbHhIeG04d3hScDJyT0RvN1RzdzFHNEVnaGNGeFI5RWJHRjZJVGhTWGNqcHJZaWhwdWtZdmNxWi1OWXp3eEVWWUlKa05YZ0luRQ?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:0ae1db3b92f8c902d20b6db05096bcb03e3f17bd48793dc0e1cae34d88bbd911",
-          "published": "2026-11-18T11:49:54Z",
-          "headline": "UniCredit Romania coordinates EUR 850 million syndicated loan backing Premier Energy’s acquisition of Evryo Group",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNEJiUTlkZjk0RHI0Vy1CZXBFcV9OanUzekhqOFZFME5zMDVIQ09hZHVFM0xaNjlubW5mdkxKQU1KVC1vbTVWbjVVTjBQc1pBV09QSGltVUdNZjBlaGdDZElmak0zSGd2bW1YaFctbTVKMmpnenNudkVsT2F5Q3IzZWRLc1YyMVdlcEpjbDVQLWEtdG5JT0ZNNGVjbTRFWkMzZVcxRw?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 104,
-      "latestRecord": "2026-11-20T08:59:05Z",
+      "observedRecords": 105,
+      "latestRecord": "2026-11-20T10:56:34Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -13489,8 +13505,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 22,
-      "latestRecord": "2026-11-19T18:34:44Z",
+      "observedRecords": 23,
+      "latestRecord": "2026-11-20T10:04:24Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
