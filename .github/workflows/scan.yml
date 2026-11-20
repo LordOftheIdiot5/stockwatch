@@ -200,3 +200,5 @@ jobs:
           exit 1
       - id: deployment
         uses: actions/deploy-pages@v5
+      - name: Verify actual published files match this release
+        run: python scripts/verify_pages_release.py --attempts 12 --interval 10

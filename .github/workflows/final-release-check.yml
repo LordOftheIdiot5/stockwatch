@@ -136,6 +136,8 @@ jobs:
           node --check brand/research-coverage.js
       - name: Licensed EOD public-display permission regression
         run: node --test tests/test_licensed_display_rights_v89j8.mjs
+      - name: Customer price-desk and exchange quote links
+        run: node --test tests/test_price_desk_v89j9.cjs
       - name: SEC company financial interface tests
         run: node --test tests/test_sec_financials_ui_v89g.cjs
       - name: Unified listing onboarding queue validation
