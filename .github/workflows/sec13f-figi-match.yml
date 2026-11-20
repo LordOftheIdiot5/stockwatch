@@ -1,0 +1,25 @@
+name: SEC 13F candidate FIGI join validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/sec13f_figi_match.py'
+      - 'tests/test_sec13f_figi_match.py'
+      - '.github/workflows/sec13f-figi-match.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_sec13f_figi_match.py' -v
+      - name: Validate source join without publishing holdings
+        env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+        run: python scripts/sec13f_figi_match.py
