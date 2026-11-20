@@ -21,8 +21,12 @@ def allowed(root):
     extra=read(root/"data/research-expansion.json")["records"]
     return {"ref:"+x["id"]:x["mic"] for x in targets}|{"registry:"+x["mic"]+":"+x["figi"]:x["mic"] for x in extra}
 def validate_grant(m):
-    for k in ("publicRawRedistribution","publicDisplay","historicalStorage","derivedAnalytics","identityReviewed"):
+    for k in ("publicDisplay","historicalStorage","derivedAnalytics","identityReviewed"):
         if m.get(k) is not True:raise ValueError("Explicit reviewed permission required: "+k)
+    # A licensed public EOD chart does not necessarily grant raw trade/file redistribution.
+    # Require the raw right to be explicit, but never elevate it to a publication prerequisite.
+    if type(m.get("publicRawRedistribution")) is not bool:
+        raise ValueError("Explicit reviewed permission required: publicRawRedistribution (true or false)")
     for k in ("provider","sourceUrl","licenseReference"):
         if not isinstance(m.get(k),str) or not m[k].strip():raise ValueError("Missing "+k)
     for k in ("sourceUrl","licenseReference"):
@@ -54,7 +58,7 @@ def import_batch(root,csv_path,manifest_path):
     now=datetime.now(timezone.utc).isoformat()
     for id,bars in grouped.items():
         info=m["listings"][id];rel="data/licensed-reference-history/"+key(id)+".json";dest=root/rel
-        fixed={"listingId":id,"mic":info["mic"],"providerSymbol":info["providerSymbol"],"currency":info["currency"],"adjusted":info["adjusted"],"source":m["provider"],"sourceUrl":m["sourceUrl"],"licenseReference":m["licenseReference"],"redistributionPermitted":True,"priceType":"end_of_day"}
+        fixed={"listingId":id,"mic":info["mic"],"providerSymbol":info["providerSymbol"],"currency":info["currency"],"adjusted":info["adjusted"],"source":m["provider"],"sourceUrl":m["sourceUrl"],"licenseReference":m["licenseReference"],"publicDisplayPermitted":True,"rawRedistributionPermitted":m["publicRawRedistribution"],"redistributionPermitted":m["publicRawRedistribution"],"priceType":"end_of_day"}
         if dest.exists():
             prior=read(dest)
             if any(prior.get(k)!=v for k,v in fixed.items()):raise ValueError("Identity or licence changed; review before merging")
@@ -68,7 +72,7 @@ def import_batch(root,csv_path,manifest_path):
         prepared.append((dest,{**fixed,"updated":now,"bars":series}))
     # All input conflicts are checked before any write.
     for p,d in prepared:write(p,d)
-    result={"generated":now,"notice":"Licensed EOD observations, not live quotes; adjacent recorded closes may span non-trading days or gaps. Not included in legacy scanner breadth.", "records":sorted(records.values(),key=lambda r:r["listingId"])}
+    result={"generated":now,"notice":"Licensed public-display EOD observations, not live quotes or a right to redistribute raw vendor data; adjacent recorded closes may span non-trading days or gaps. Not included in legacy scanner breadth.", "records":sorted(records.values(),key=lambda r:r["listingId"])}
     write(index,result)
     return result
 if __name__=="__main__":
