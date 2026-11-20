@@ -97,7 +97,7 @@ def stage(raw,expected):
     stats["matchedPairs"]=len(matched);stats["derivedSessions"]=len(candidates)
     return candidates,{"counts":dict(stats),"quarantined":dict(reasons)}
 
-def inspect(queue,candidates,fetch=downloaded,window="PREVIOUS_TRADING_DAY"):
+def inspect(queue,candidates,fetch=downloaded,window="PREVIOUS_TRADING_DAY",retain=None):
     groups,total,added=joined(queue,candidates)
     out=[];private_candidates=[]
     for market,expected in sorted(groups.items()):
@@ -112,12 +112,25 @@ def inspect(queue,candidates,fetch=downloaded,window="PREVIOUS_TRADING_DAY"):
         "ephemeralDatedObservations":len(private_candidates),
         "markets":out,"publishedPrices":0,"officialCloses":0,
         "rawRowsRetained":0,"internalArchiveWritten":False}
+    if retain is not None:
+        receipt=retain(private_candidates,out)
+        if receipt.get("publicPublication") is not False or receipt.get("readbackVerified") is not True or receipt.get("retainedObservations")!=len(private_candidates):
+            raise ValueError("Invalid private archive receipt")
+        summary.update(internalArchiveWritten=True,retainedPrivateDatedObservations=receipt["retainedObservations"],readbackVerified=True)
     print("EURONEXT_PRICE_STAGE "+json.dumps(summary,sort_keys=True),flush=True)
     return summary
 
 def main():
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--retain-private",action="store_true",help="Requires explicit approved private R2 retention scope")
+    args=parser.parse_args()
+    archive=None
+    if args.retain_private:
+        from euronext_last_trade_r2 import archive_live
+        archive=archive_live
     queue=json.loads((ROOT/"data/price-source-queue-v1.json").read_text())
-    run("euronext",inspect_candidates=lambda ids:inspect(queue,ids))
+    run("euronext",inspect_candidates=lambda ids:inspect(queue,ids,retain=archive))
 
 if __name__=="__main__":
     try:main()
