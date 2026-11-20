@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T02:42:24.371095+00:00",
-  "newsRecordsScanned": 1694,
+  "generated": "2026-11-20T02:44:13.703153+00:00",
+  "newsRecordsScanned": 1695,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -2502,6 +2502,20 @@
       "candidateType": "headline_event",
       "published": "2026-11-19T19:36:21Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYjhRV2YyX0JkbmFkUFRNaXBIaUlJMU5lRzlkYkNVRmdVT3pMMTcwZ1RrcUFuakZTWHZSYUp6UkkzUDNKSkhlaEF2MVVvVGhKWHBQZU1pUjFfX191Mi1oTlR6enBKV1JIelVpMUJSbEstYnl1a1NJMEpvSnNkWFliRmJkNjI3OVdCX2JKbUxXcUE1QU03alZtSzlCc2V4SGZKeHd3Rl85UHExeXc?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "b3b3b19d4fce6a22c78afbd1303d3276f47a1797376cd9d7c4123a0fa0337668",
+      "newsId": "NDX1.DE:da89cd2a4f2e09272759ed64f3a9e47fffdfe97a753eaa94686e6ff114996385",
+      "entityIds": [
+        "nordex"
+      ],
+      "issuerTicker": "NDX1.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-19T20:25:21Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoM3VPa1dtU084VmhYdURVZ01kMkgxMVRzLUpWSDBhUUtGUmtFbHRWX2NpdFk4WEZtU0tJNVYyR1g3RXpyMXFRMXFqcmJuNmZaU3FqeDk4dmhVTTYyWkFPMDIyT1FlTkd6blR3?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null

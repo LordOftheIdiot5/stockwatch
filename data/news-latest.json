@@ -1,6 +1,29 @@
 {
-  "generated": "2026-11-20T02:42:23Z",
+  "generated": "2026-11-20T02:44:13Z",
   "items": [
+    {
+      "id": "NOVO-B.CO:81992768730c7e24f3a7a68e98c8687c7eb5fdec1a1daab1ec26062270685d5d",
+      "ticker": "NOVO-B.CO",
+      "name": "Novo Nordisk",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Novo Nordisk (NYSE: NVO) And AI Firm nference Launch Joint Venture Framework To Tackle Obesity, Diabetes And Heart Disease",
+      "english": null,
+      "publisher": "Foreign Policy Journal",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQVUU4eE03SHR5UTZweXpXalRsdkpBQlRHS01vakVzZUR5YlZpUUFpQ3JXakkxUEdVbTE0a0JSWkQzemJaN29mTWtVV2FuZWRfdmdITzd4VUY3aTZ1QmdVSzFIbXFDa0k1dHVBMDlTNVRLcTVPTkVJeVBGUlVQV05Vd2g1bE85djQtSEFzUC0zMDNfbUZSTnFQYVFtZGd0LUxFak5SRUxBeGZzYm1GaS1Bb3pIeDJxWWx2ZFJJVVYyb2RrT2Y3RjVZY0Q1WmtYUjk1QkJTanAyQnY0R1dsT2Q5NndGVnhwU0ljUEFzZlFmdHU4c3RlekU5S3Fsbw?oc=5",
+      "published": "2026-11-20T02:37:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "SAP.DE:0b2e34c397d9532c58c8b563dfe1febb5789337703d849ccbda36a99d15a320c",
       "ticker": "SAP.DE",
@@ -487,6 +510,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "NDX1.DE:da89cd2a4f2e09272759ed64f3a9e47fffdfe97a753eaa94686e6ff114996385",
+      "ticker": "NDX1.DE",
+      "name": "Nordex",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Nordex Group acquires Dutch tower engineering firm C1 Connections to expand onshore wind technology portfolio",
+      "english": null,
+      "publisher": "Energies Media",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoM3VPa1dtU084VmhYdURVZ01kMkgxMVRzLUpWSDBhUUtGUmtFbHRWX2NpdFk4WEZtU0tJNVYyR1g3RXpyMXFRMXFqcmJuNmZaU3FqeDk4dmhVTTYyWkFPMDIyT1FlTkd6blR3?oc=5",
+      "published": "2026-11-19T20:25:21Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "SAP.DE:883cd7ca124233484d07929e288201e918109090c1433e83b47b7c90f673ee29",
@@ -2385,75 +2436,24 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "P911.DE:3140b319b9a41b9b14fa17fdb644b73128ae1fbaa1839b1a1b8641d8cd0b38be",
-      "ticker": "P911.DE",
-      "name": "Porsche",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "IG Metall Baden-Württemberg: Ganztägige „Powerstreiks“ in 90 Betrieben – ab Donnerstagabend rollt die Welle",
-      "english": "IG Metall Baden-Württemberg: Full-day \"power strikes\" at 90 companies – the wave will start rolling from Thursday evening",
-      "publisher": "Stuttgarter Nachrichten",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOZGM4dXJvV09aX0ZVZDgtTW1FdWxza0dvUHZuOHNEcmY4bFVtb2pfYXRheDhhZ0laVFFMRUQtZHF2MTUtY05FbjAwUjBOYVZ6bTZ4aXpUcDc2SkYxSVRkZFFwNzcteTgxSnY1bkVvY1VJUk1wSG9mR0JkZTh4aXVHV0Q0TEhPMXVpNkF6Nk5nci1CSHhOanlGdDNKR2NDZXZ6T3FZNFhaV1NfNDBFVkhlbE9KdXFEbXdxUGY4OEdmYXR4ZkFpSFh1V1U4UWktUjgwa0xGT1VPcHFoeFl5S0F3c0gyWjkzUkF4TFE5TkZxaXllSTdHVkdsdkhxSnk?oc=5",
-      "published": "2026-11-19T12:56:32Z",
-      "lang": "de",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "LOGI-B.ST:c91753f4aadb83260d75057cd5b550e2136c4040940ba01e975192bc100141ab",
-      "ticker": "LOGI-B.ST",
-      "name": "Logistea",
-      "sector": "Property",
-      "type": "news",
-      "headline": "Logistea acquires property in Köping for SEK 67.5m",
-      "english": null,
-      "publisher": "marketscreener.com",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSnlDYURvVVFIY0lRWFhlUmVvS2EzdlRFaGJrT2NDYWhGRjhYS2ZPQ3V5NXlHdG8zNEVTVjlDWGp0T05uNlNWdGR0eV9Zd0tWOWhkbXhUVzA2REQ4RTFqSmxwSWhsWGVaOXl4aUZDRWI2WFd2eHVLbFZBbjF5VEY4THQ3VU1rNFNMT1JuamxiQ2M5ZFNSUFVwbk1CWl9Ea0V5WHg4ZFBR?oc=5",
-      "published": "2026-11-19T12:44:23Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "M&A",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: M&A"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1694,
+  "totalStored": 1695,
   "limit": 100,
   "quality": {
-    "total": 1694,
-    "relevant": 1253,
+    "total": 1695,
+    "relevant": 1254,
     "review": 380,
     "duplicates": 80,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 416,
+      "classified": 417,
       "categories": {
         "numbers": 248,
         "prices": 5,
         "operations": 1,
-        "potential": 182,
+        "potential": 183,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
@@ -2461,7 +2461,7 @@
     "categories": {
       "Earnings / results": 267,
       "Dividends": 12,
-      "M&A": 69,
+      "M&A": 70,
       "Guidance": 34,
       "Contracts": 120,
       "Capital & ownership": 1,

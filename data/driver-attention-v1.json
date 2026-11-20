@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T02:42:23Z",
+  "generated": "2026-11-20T02:44:13Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -7313,10 +7313,18 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 2
+          "media": 3
         }
       ],
       "potential": [
+        {
+          "id": "NDX1.DE:da89cd2a4f2e09272759ed64f3a9e47fffdfe97a753eaa94686e6ff114996385",
+          "published": "2026-11-19T20:25:21Z",
+          "headline": "Nordex Group acquires Dutch tower engineering firm C1 Connections to expand onshore wind technology portfolio",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoM3VPa1dtU084VmhYdURVZ01kMkgxMVRzLUpWSDBhUUtGUmtFbHRWX2NpdFk4WEZtU0tJNVYyR1g3RXpyMXFRMXFqcmJuNmZaU3FqeDk4dmhVTTYyWkFPMDIyT1FlTkd6blR3?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
         {
           "id": "NDX1.DE:54104496efdd92a764d7f709e14b5a2a7f4fe36c0e08d3600933a8e6d00ed3ff",
           "published": "2026-11-16T04:22:25Z",
@@ -7350,13 +7358,13 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-19T16:52:51Z",
+      "observedRecords": 24,
+      "latestRecord": "2026-11-19T20:25:21Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 3,
+        "potential": 4,
         "risk": 0
       },
       "prior7": {
@@ -7365,7 +7373,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 18
+        "media": 19
       }
     },
     "NELLY.ST": {
@@ -8112,8 +8120,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 15,
-      "latestRecord": "2026-11-18T11:14:16Z",
+      "observedRecords": 16,
+      "latestRecord": "2026-11-20T02:37:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -13406,7 +13414,7 @@
         {
           "date": "2026-11-18",
           "issuer": 0,
-          "media": 3
+          "media": 2
         },
         {
           "date": "2026-11-19",
@@ -13424,7 +13432,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 23,
+      "observedRecords": 22,
       "latestRecord": "2026-11-19T18:34:44Z",
       "topicCounts": {
         "numbers": 2,
@@ -13439,7 +13447,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 20
+        "media": 19
       }
     },
     "VOLV-B.ST": {

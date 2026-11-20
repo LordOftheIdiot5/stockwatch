@@ -1,6 +1,29 @@
 {
-  "generated": "2026-11-20T02:42:23Z",
+  "generated": "2026-11-20T02:44:13Z",
   "items": [
+    {
+      "id": "NOVO-B.CO:81992768730c7e24f3a7a68e98c8687c7eb5fdec1a1daab1ec26062270685d5d",
+      "ticker": "NOVO-B.CO",
+      "name": "Novo Nordisk",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Novo Nordisk (NYSE: NVO) And AI Firm nference Launch Joint Venture Framework To Tackle Obesity, Diabetes And Heart Disease",
+      "english": null,
+      "publisher": "Foreign Policy Journal",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQVUU4eE03SHR5UTZweXpXalRsdkpBQlRHS01vakVzZUR5YlZpUUFpQ3JXakkxUEdVbTE0a0JSWkQzemJaN29mTWtVV2FuZWRfdmdITzd4VUY3aTZ1QmdVSzFIbXFDa0k1dHVBMDlTNVRLcTVPTkVJeVBGUlVQV05Vd2g1bE85djQtSEFzUC0zMDNfbUZSTnFQYVFtZGd0LUxFak5SRUxBeGZzYm1GaS1Bb3pIeDJxWWx2ZFJJVVYyb2RrT2Y3RjVZY0Q1WmtYUjk1QkJTanAyQnY0R1dsT2Q5NndGVnhwU0ljUEFzZlFmdHU4c3RlekU5S3Fsbw?oc=5",
+      "published": "2026-11-20T02:37:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "SAP.DE:0b2e34c397d9532c58c8b563dfe1febb5789337703d849ccbda36a99d15a320c",
       "ticker": "SAP.DE",
@@ -487,6 +510,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "NDX1.DE:da89cd2a4f2e09272759ed64f3a9e47fffdfe97a753eaa94686e6ff114996385",
+      "ticker": "NDX1.DE",
+      "name": "Nordex",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Nordex Group acquires Dutch tower engineering firm C1 Connections to expand onshore wind technology portfolio",
+      "english": null,
+      "publisher": "Energies Media",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoM3VPa1dtU084VmhYdURVZ01kMkgxMVRzLUpWSDBhUUtGUmtFbHRWX2NpdFk4WEZtU0tJNVYyR1g3RXpyMXFRMXFqcmJuNmZaU3FqeDk4dmhVTTYyWkFPMDIyT1FlTkd6blR3?oc=5",
+      "published": "2026-11-19T20:25:21Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "SAP.DE:883cd7ca124233484d07929e288201e918109090c1433e83b47b7c90f673ee29",
@@ -8611,29 +8662,6 @@
       "sourceDomain": "news.google.com",
       "priority": "high",
       "duplicateOf": "SMOP.OL:8b80d43bfc9c108446789c67837662468b1ea80eb75207956bf4270f1c83369e"
-    },
-    {
-      "id": "VNA.DE:67974008214b657e047eef2a7fa10747525e60b4dd1ec079055651deec5a5a84",
-      "ticker": "VNA.DE",
-      "name": "Vonovia",
-      "sector": "Property",
-      "type": "news",
-      "headline": "Vonovia SE (VNAA.F) Analyst insights, Price targets and Recommendations",
-      "english": null,
-      "publisher": "Yahoo Finance UK",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBDQXVxMzRHMll5YTJYNjVkdzY0S3hmN0NhTi1SU0R1U1hqbEFLRUlQdE80cE9MRGxnTzFiWlJrRDdnNUhzaG1kSk1iQV9Ud0p4RWtRT2RuRjVIbURmQ2pzbUR4cjhYR0lJUW5z?oc=5",
-      "published": "2026-11-18T11:50:16Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     },
     {
       "id": "UCG.MI:0ae1db3b92f8c902d20b6db05096bcb03e3f17bd48793dc0e1cae34d88bbd911",
