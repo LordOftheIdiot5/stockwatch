@@ -1,0 +1,24 @@
+name: European IFRS financial extraction pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/esef_ifrs_pilot.py'
+      - 'scripts/esef_filing_index.py'
+      - 'tests/test_esef_ifrs_pilot.py'
+      - '.github/workflows/esef-ifrs-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_esef_filing_index.py' -v
+      - run: python -m unittest discover -s tests -p 'test_esef_ifrs_pilot.py' -v
+      - name: Inspect bounded filing cohort without publishing or retaining financial facts
+        run: python scripts/esef_ifrs_pilot.py
