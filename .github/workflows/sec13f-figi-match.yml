@@ -4,8 +4,15 @@ on:
     paths:
       - 'scripts/sec13f_figi_match.py'
       - 'tests/test_sec13f_figi_match.py'
+      - 'scripts/sec13f_candidate_r2.py'
+      - 'tests/test_sec13f_candidate_r2.py'
       - '.github/workflows/sec13f-figi-match.yml'
   workflow_dispatch:
+    inputs:
+      retain_private:
+        description: 'Approve private retention of SEC 13F candidate evidence in R2'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -18,8 +25,24 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -p 'test_sec13f_figi_match.py' -v
+      - run: python -m unittest discover -s tests -p 'test_sec13f_candidate_r2.py' -v
       - name: Validate source join without publishing holdings
+        if: github.event_name != 'workflow_dispatch' || inputs.retain_private != true || github.ref != 'refs/heads/main'
         env:
           STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
           STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
         run: python scripts/sec13f_figi_match.py
+      - name: Install private archive client
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.retain_private == true
+        run: pip install 'boto3>=1.40,<2'
+      - name: Collect and verify private candidate archive
+        if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.retain_private == true
+        env:
+          STOCKWATCH_SEC_USER_AGENT: ${{ vars.STOCKWATCH_SEC_USER_AGENT }}
+          STOCKWATCH_OPENFIGI_KEY: ${{ secrets.STOCKWATCH_OPENFIGI_KEY }}
+          STOCKWATCH_13F_PRIVATE_RETENTION: 'true'
+          STOCKWATCH_R2_BUCKET: ${{ vars.STOCKWATCH_R2_BUCKET }}
+          STOCKWATCH_R2_ACCOUNT_ID: ${{ secrets.STOCKWATCH_R2_ACCOUNT_ID }}
+          STOCKWATCH_R2_ACCESS_KEY_ID: ${{ secrets.STOCKWATCH_R2_ACCESS_KEY_ID }}
+          STOCKWATCH_R2_SECRET_ACCESS_KEY: ${{ secrets.STOCKWATCH_R2_SECRET_ACCESS_KEY }}
+        run: python scripts/sec13f_figi_match.py --retain-private
