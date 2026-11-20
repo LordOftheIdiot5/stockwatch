@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T20:06:46Z",
+  "generated": "2026-11-20T20:45:50Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -664,6 +664,14 @@
       ],
       "potential": [
         {
+          "id": "AIR.PA:4cb2170a4fa87f03dbd17d42248d7fcc9cbc6c36adad820960c3eaf1399273ba",
+          "published": "2026-11-20T20:19:05Z",
+          "headline": "Dassault takes Airbus to arbitration over billion-euro drone contract",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORTZWN3BVVm9jazVuYUVwNUg5RTIya3phc2hnZS1iRk1KSHI1Wkptdi1lQzk3a3A1b0hjSV9TQlF5ZTZPWExNNVNha0NnZjdXb3l1ZTY4bmFnT3o4U0x2UU5SUUJpUVdmMllLY09tMXk2TzFCVDdoN0s0MkRySFZ3VEIyb1c4MnR1WGhVRXUxeXNGZFZvcVNnbUxMSHIyOFhIV0NiMzF2ZjRLT1lDeWdJ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "AIR.PA:c238b3e7476ae063a555ac9f4de26a6c5c0c6600739f0fe5deca74072e41e5af",
           "published": "2026-11-20T07:22:35Z",
           "headline": "WLFC completes acquisition of Two Airbus A320s",
@@ -736,8 +744,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 51,
-      "latestRecord": "2026-11-20T20:00:03Z",
+      "observedRecords": 53,
+      "latestRecord": "2026-11-20T20:42:19Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13163,8 +13171,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 118,
-      "latestRecord": "2026-11-20T14:56:45Z",
+      "observedRecords": 119,
+      "latestRecord": "2026-11-20T16:27:08Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
