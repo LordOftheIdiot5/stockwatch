@@ -1,0 +1,20 @@
+name: Global index source validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/global_indices.py'
+      - 'tests/test_global_indices.py'
+      - '.github/workflows/global-index-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_global_indices.py' -v
+      - run: python scripts/global_indices.py --probe

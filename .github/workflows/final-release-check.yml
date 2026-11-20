@@ -122,6 +122,7 @@ jobs:
       - name: Frontend syntax
         run: |
           node --check v4.js
+          node --check global-market-pulse.js
           node --check sec-financials-v89g.js
           node --check terminal.js
           node --check research-analytics.js
