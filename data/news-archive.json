@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T00:38:48Z",
+  "generated": "2026-11-20T00:46:56Z",
   "items": [
     {
       "id": "UCG.MI:088da44aeeb92ee7ae8a7ea758a99e86475c9a08dbbfb06c213ca40dc3b6434c",
@@ -298,6 +298,29 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "CAF.MC:c9722344364f6caba2f5d02f8de9cf31b2b560d08fc150a9444cbac13871950a",
+      "ticker": "CAF.MC",
+      "name": "CAF",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "CAF launches AFCON 2027 logo and visual identity",
+      "english": null,
+      "publisher": "TribalFootball",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYjhMa3IxeFhaNmpHMUYyMmJlTGdPb2Z5bGtlZWtVS216OG04Nk8zZ2t0dWxicFdFVDhNU3hhczM2VHZHUjRzWHJoTTZBODlZN19GcXQ5aXVqN0NzTGNmVFFMaU1VQnJrWU1Ray1oZHZPQ0lGYk42ZHhBN2NQOG55NjAtUzRGWHFMWE1BU0VaUThnQTF3SkhjdXh2WnRCLXR1cnpxLVEyYjRvRVlUTzBSSW5vN214UmFrY080SmNnTkdTZw?oc=5",
+      "published": "2026-11-19T20:52:07Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "AIR.PA:1c8a4314f16c91b5e5fd0f85b62bab4bddc44240b0f2393b3129a508c5b30445",
@@ -2551,6 +2574,38 @@
       "priority": "normal"
     },
     {
+      "id": "SUBC.OL:7f6b6e1507ccc4c8a879f0404012dcbd3fd7cd04d4a8198242d9ed5281cbab1c",
+      "ticker": "SUBC.OL",
+      "name": "Subsea 7",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Subsea 7 shares jump over 5% as Q3 results lift 2026 revenue outlook",
+      "english": null,
+      "publisher": "Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ0N0aGh6VnE2MUNkbTA5TFRUN3lEb09Ya3YyemViSlhDVWNfcWJpa2JRd0h1UDFyT1NfMXZXakdSdlpOdENXOHZPQ2V0ZndONzhOZFc5elM2akFEVUlNZVpoVmtIZUI4TVRnQ3c3OUtQbmFoQ0lldU1fY2JRT2VGaVpmXzN5MzFFZURnTGptdUQxcUNPRWxJNEw0bFVvMGhhdXNrTG1xUkdwbmxvZ1dEZXp5ZGxaMWNfMUlnMUl2ZndhRGM3WlJ6Uk94T2U?oc=5",
+      "published": "2026-11-19T11:51:48Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        },
+        {
+          "driver": "potential",
+          "basis": "headline phrase: outlook"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "GMAB.CO:48db45288b07113b01cd8616f6137c766fd8dc7f3531685cf23952037a2ec223",
       "ticker": "GMAB.CO",
       "name": "Genmab",
@@ -3298,6 +3353,29 @@
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNHg3dGZCM0g2UktSX1R6WE96VHBRbEdSS0I4U0ZlZ2t3U1Btam1Mb0pCTHpod2tlNmNlb3g4STdjQ1V5a3pmR2NESUpVYVM2Ylc1bS1RYWI0a2FzRExDQXBscEhFa1dOTVRXcmZILWkyYXdFVEZTYjRrX2I0VlVPdTdfWnQ1ai1WMnhZNmdTYm1MQy1uTzRtZ24xdW8ySGFlWVFYeg?oc=5",
       "published": "2026-11-19T10:27:15Z",
       "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "KCR.HE:e2fe90e95163b091a85ec069f2e840d1a71bacc27634f25082a63031f3981f4e",
+      "ticker": "KCR.HE",
+      "name": "Konecranes",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Konecranes Oyj (K34.HA) Analyst insights, Price targets and Recommendations",
+      "english": null,
+      "publisher": "Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1JeVp2bml4THBMWnRSZlE4NU5Gc1VxQVY2R2w5dmhzcWtZSkpjQ0R2d1ZEdE11YlNPSmpzSnVfZDZWQnV4NENwRlFfZnJhaXFJdFo2UzZ3Z2ZZb2FPTDZ1MkpfMmMxMU41NDlR?oc=5",
+      "published": "2026-11-19T10:26:38Z",
+      "lang": "en",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -4519,6 +4597,29 @@
           "basis": "headline category: Contracts"
         }
       ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
+      "id": "IFX.DE:d166cb74f1282ae67c05eb680124d72ff2acd018fbddc748e78ea353b7acb8a5",
+      "ticker": "IFX.DE",
+      "name": "Infineon",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "India a market of tremendous importance: Infineon CEO",
+      "english": null,
+      "publisher": "DD News",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbWVwR2JCZm1mZkp3NG9wWEdOTFM4ZHVMeU0taDNZNS1IcG1taWlJR3dWclI2UzRmY0Y5SExsVlRGT3RJQzZkQW5oQ1laMWMzZTdnY0xNcUV3LU9xYm92dnRLOHlyVW1Yby1LTjItempjdjdCQXZVR0luT2pkQl9VOHd0cTU?oc=5",
+      "published": "2026-11-19T07:44:20Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Management",
+      "driverVersion": 1,
+      "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "high"
     },

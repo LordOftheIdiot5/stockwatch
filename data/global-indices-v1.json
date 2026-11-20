@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "key": "twse:TAIEX",
+  "market": "Taiwan",
+  "name": "TAIEX",
+  "provider": "Taiwan Stock Exchange / Financial Supervisory Commission",
+  "sourceUrl": "https://data.gov.tw/en/datasets/11672",
+  "endpoint": "https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK",
+  "license": "Taiwan Open Government Data License 1.0; attribution required",
+  "licenseUrl": "https://data.gov.tw/en/license",
+  "status": "ok",
+  "lastSuccessAt": "2026-11-20T00:46:57.166035+00:00",
+  "lastAttempt": "2026-11-20T00:46:57.166035+00:00",
+  "history": [
+    {
+      "date": "2026-11-02",
+      "close": 44920.14,
+      "changePoints": -291.69,
+      "changePct": -0.645163
+    },
+    {
+      "date": "2026-11-03",
+      "close": 43307.54,
+      "changePoints": -1612.6,
+      "changePct": -3.589926
+    },
+    {
+      "date": "2026-11-04",
+      "close": 42948.91,
+      "changePoints": -358.63,
+      "changePct": -0.828101
+    },
+    {
+      "date": "2026-11-05",
+      "close": 41574.72,
+      "changePoints": -1374.19,
+      "changePct": -3.199592
+    },
+    {
+      "date": "2026-11-06",
+      "close": 39701.64,
+      "changePoints": -1873.08,
+      "changePct": -4.505334
+    },
+    {
+      "date": "2026-11-09",
+      "close": 41661.7,
+      "changePoints": 1960.06,
+      "changePct": 4.936975
+    },
+    {
+      "date": "2026-11-10",
+      "close": 42711.92,
+      "changePoints": 1050.22,
+      "changePct": 2.520828
+    },
+    {
+      "date": "2026-11-11",
+      "close": 44257.15,
+      "changePoints": 1545.23,
+      "changePct": 3.617796
+    },
+    {
+      "date": "2026-11-12",
+      "close": 43091.87,
+      "changePoints": -1165.28,
+      "changePct": -2.632976
+    },
+    {
+      "date": "2026-11-13",
+      "close": 43675.12,
+      "changePoints": 583.25,
+      "changePct": 1.353504
+    },
+    {
+      "date": "2026-11-16",
+      "close": 41040.08,
+      "changePoints": -2635.04,
+      "changePct": -6.033275
+    },
+    {
+      "date": "2026-11-17",
+      "close": 40092.11,
+      "changePoints": -947.97,
+      "changePct": -2.309864
+    },
+    {
+      "date": "2026-11-18",
+      "close": 40194.91,
+      "changePoints": 102.8,
+      "changePct": 0.25641
+    },
+    {
+      "date": "2026-11-19",
+      "close": 38426.89,
+      "changePoints": -1768.02,
+      "changePct": -4.398617
+    }
+  ],
+  "latest": {
+    "date": "2026-11-19",
+    "close": 38426.89,
+    "changePoints": -1768.02,
+    "changePct": -4.398617
+  },
+  "notice": "Completed-session index observations; not live quotes. Daily percentage derived from source close and reported point change. Session date is Taiwan local date."
+}

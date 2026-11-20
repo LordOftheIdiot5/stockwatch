@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T00:38:48Z",
+  "generated": "2026-11-20T00:46:56Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -5727,7 +5727,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 5
+          "media": 6
         }
       ],
       "potential": [
@@ -5740,7 +5740,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 22,
+      "observedRecords": 23,
       "latestRecord": "2026-11-19T23:06:38Z",
       "topicCounts": {
         "numbers": 1,
@@ -5755,7 +5755,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 19
+        "media": 20
       }
     },
     "INSTA.OL": {
@@ -6387,7 +6387,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
@@ -6432,8 +6432,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-19T08:01:20Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-19T10:26:38Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -6447,7 +6447,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 5
+        "media": 6
       }
     },
     "KLDVK.OL": {
@@ -12132,10 +12132,18 @@
         {
           "date": "2026-11-19",
           "issuer": 1,
-          "media": 11
+          "media": 12
         }
       ],
       "potential": [
+        {
+          "id": "SUBC.OL:7f6b6e1507ccc4c8a879f0404012dcbd3fd7cd04d4a8198242d9ed5281cbab1c",
+          "published": "2026-11-19T11:51:48Z",
+          "headline": "Subsea 7 shares jump over 5% as Q3 results lift 2026 revenue outlook",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ0N0aGh6VnE2MUNkbTA5TFRUN3lEb09Ya3YyemViSlhDVWNfcWJpa2JRd0h1UDFyT1NfMXZXakdSdlpOdENXOHZPQ2V0ZndONzhOZFc5elM2akFEVUlNZVpoVmtIZUI4TVRnQ3c3OUtQbmFoQ0lldU1fY2JRT2VGaVpmXzN5MzFFZURnTGptdUQxcUNPRWxJNEw0bFVvMGhhdXNrTG1xUkdwbmxvZ1dEZXp5ZGxaMWNfMUlnMUl2ZndhRGM3WlJ6Uk94T2U?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
         {
           "id": "SUBC.OL:f2bb89b27232af786e5bc5de8d5740f5845be617fc581e8805c00d6abcbfce8f",
           "published": "2026-11-19T10:38:20Z",
@@ -12201,13 +12209,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 17,
+      "observedRecords": 18,
       "latestRecord": "2026-11-19T13:31:52Z",
       "topicCounts": {
-        "numbers": 6,
+        "numbers": 7,
         "prices": 0,
         "operations": 0,
-        "potential": 8,
+        "potential": 9,
         "risk": 0
       },
       "prior7": {
@@ -12216,7 +12224,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 16
+        "media": 17
       }
     },
     "TISG.MI": {

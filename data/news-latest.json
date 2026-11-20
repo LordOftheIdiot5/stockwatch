@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T00:38:48Z",
+  "generated": "2026-11-20T00:46:56Z",
   "items": [
     {
       "id": "UCG.MI:088da44aeeb92ee7ae8a7ea758a99e86475c9a08dbbfb06c213ca40dc3b6434c",
@@ -298,6 +298,29 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "high"
+    },
+    {
+      "id": "CAF.MC:c9722344364f6caba2f5d02f8de9cf31b2b560d08fc150a9444cbac13871950a",
+      "ticker": "CAF.MC",
+      "name": "CAF",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "CAF launches AFCON 2027 logo and visual identity",
+      "english": null,
+      "publisher": "TribalFootball",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYjhMa3IxeFhaNmpHMUYyMmJlTGdPb2Z5bGtlZWtVS216OG04Nk8zZ2t0dWxicFdFVDhNU3hhczM2VHZHUjRzWHJoTTZBODlZN19GcXQ5aXVqN0NzTGNmVFFMaU1VQnJrWU1Ray1oZHZPQ0lGYk42ZHhBN2NQOG55NjAtUzRGWHFMWE1BU0VaUThnQTF3SkhjdXh2WnRCLXR1cnpxLVEyYjRvRVlUTzBSSW5vN214UmFrY080SmNnTkdTZw?oc=5",
+      "published": "2026-11-19T20:52:07Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "AIR.PA:1c8a4314f16c91b5e5fd0f85b62bab4bddc44240b0f2393b3129a508c5b30445",
@@ -2398,60 +2421,37 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "RMS.PA:0a5d15c01c382397f516d18ef43a3e887f9ec386d6989b9e40d54189351fd8bf",
-      "ticker": "RMS.PA",
-      "name": "Hermes",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "Sjokkbrekket hos Hermès: Varer for rundt 2 millioner stjålet",
-      "english": null,
-      "publisher": "NRK",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQbmJNdzJVMjR1Qmgyc2pUYnIxOXRXMEFzdkFfdWVld2EzMGliRnByRldmWWdpVE1JR0ZhMEh6SEhObFNYaVNrQURDLWtpTnE1T2FiVVROS3F5V0VBVFo2b2JzU05NbVZVZHNOTHJZRi1Za3pYQnFreWNoWTJmcUMycUdPaUR0c2tCazJFTjdGTnhHelVOZzR5Q09RQQ?oc=5",
-      "published": "2026-11-19T12:10:41Z",
-      "lang": "no",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1675,
+  "totalStored": 1679,
   "limit": 100,
   "quality": {
-    "total": 1675,
-    "relevant": 1241,
-    "review": 375,
+    "total": 1679,
+    "relevant": 1244,
+    "review": 376,
     "duplicates": 77,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 408,
+      "classified": 409,
       "categories": {
-        "numbers": 244,
+        "numbers": 245,
         "prices": 4,
         "operations": 1,
-        "potential": 177,
+        "potential": 178,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 262,
+      "Earnings / results": 263,
       "Dividends": 12,
       "M&A": 68,
       "Guidance": 34,
       "Contracts": 117,
       "Capital & ownership": 1,
-      "Management": 53,
-      "General": 1128
+      "Management": 54,
+      "General": 1130
     }
   }
 }
