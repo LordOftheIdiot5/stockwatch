@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'scripts/esma_equity_extract.py'
+      - 'scripts/esma_identity_history.py'
+      - 'tests/test_esma_identity_history.py'
       - 'tests/test_esma_equity_extract.py'
       - '.github/workflows/esma-equity-extraction.yml'
   workflow_dispatch:
@@ -19,4 +21,5 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install defusedxml==0.7.1
       - run: python -m unittest discover -s tests -p 'test_esma_equity_extract.py' -v
-      - run: python scripts/esma_equity_extract.py
+      - run: python -m unittest discover -s tests -p 'test_esma_identity_history.py' -v
+      - run: python scripts/esma_identity_history.py --probe
