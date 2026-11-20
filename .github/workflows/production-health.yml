@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/production_health.py'
       - 'scripts/production_health_notify.py'
+      - 'scripts/workflow_alert.py'
       - 'tests/test_production_health.py'
       - '.github/workflows/production-health.yml'
 permissions:
@@ -34,7 +35,7 @@ jobs:
           path: production-health.json
           retention-days: 30
       - name: Create or update incident and optional Telegram notice
-        if: github.event_name != 'pull_request'
+        if: always() && github.event_name != 'pull_request' && hashFiles('production-health.json') != ''
         env:
           GH_TOKEN: ${{ github.token }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
