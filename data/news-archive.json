@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T01:11:48Z",
+  "generated": "2026-11-20T01:21:23Z",
   "items": [
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
@@ -12,6 +12,29 @@
       "publisher": "T-Online",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNemprNHNYLXFZeHVqbUFBUDZHWWg0aW9VcW56YjU1SU9IREpjRlFjQW0tWExmOTRJbFVYLWxySzZ2QWoyVmhpY21xck1HVmlKQmt5a0NETmpWaUtNUmh4elJoQ0s3aERmTXhwbXJHcVFZdHJ4UTdxaUFNMTZ0THlGa3FZR1hjbC12aVVaRjhYcmg3azdHRklXWVphRFRPdmQtNURpaTR1Q29TcXM?oc=5",
       "published": "2026-11-20T00:44:08Z",
+      "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "TKMS.DE:390d9b5df5673900a334121dd8213a1ac86fd549b79309a0a52017521dabd335",
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Tarifkonflikt - Ganztägiger Warnstreik auf Kieler Werften angelaufen - Wirtschaft - SZ.de",
+      "english": "Collective bargaining dispute – Full-day warning strike begins at Kiel shipyards – Economy – SZ.de",
+      "publisher": "SZ.de",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNd01ac3BkR3JNeUJSXzBnRUlWcEtNcHo1ai1kVUhyam53YjZQTXJZdGhLTWFiMzhPcmVuOUJjRkVxUXF5aGI2ZmRtZzdkZlhZaDNSXzZaOGJ0ZXJmRzFrVWRPUHdMckRXQXN6NTNCTWFsU3FvWTVmV0s4VXRsQ3Q1YnJiY3oxQ3NheHhGYUlROXBuNHMzOEJka2JGakZEcHhQYlY5RmlsUUJNTVFDSlRZZDdQMXZJaURRX1pfZlNiRktJclRNNGJFekVQekxhODczRUZvTFlZYlk0ZUtYNktRTXlvUDBsQVVSbDNZ?oc=5",
+      "published": "2026-11-20T00:42:31Z",
       "lang": "de",
       "regulatory": false,
       "sourceIssuer": null,
@@ -7362,6 +7385,35 @@
           "basis": "headline category: Earnings / results"
         }
       ]
+    },
+    {
+      "id": "PFSE.DE:9587bda8eaefded3d1e518f1fd58109c1a2f5eb9a6f3e3b231fcdece8f6dd2ff",
+      "ticker": "PFSE.DE",
+      "name": "Pfisterer",
+      "sector": "Grid & energy",
+      "type": "news",
+      "headline": "Transcript : PFISTERER Holding SE, Q3 2026 Earnings Call, Nov 18, 2026",
+      "english": "Transcript: PFISTERER Holding SE, Q3 2026 Earnings Call, Nov. 18, 2026",
+      "publisher": "MarketScreener Schweiz",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPYkRfTVk0SnI5Z29qd3QySXVlakl6MTlCRjhHTmpkS0xoTXotQkx2czN1aDZCZUhSTjVlNnZkRDBjRXNMUDlfMEhURFg3ci1ZamVNZjdtendXSk8wMnpzLUdiSUFONnFwcENqV3ZYMS1OcF9GV1V6QzJlVm1Nbm9rb0dtTjJsZHlXVXRrQW5mN1VhTzd3ZGpoaU13aGx0LWkxX0ZrWW9rV0FqWW4zbHJZMThzaGZDbG4xRllJbzVQcmo4T0xUVVdLSFFuNm9iaGl0UmtFbUJySncyd1ZHcnFhbkRSSjh0cFk?oc=5",
+      "published": "2026-11-18T16:07:11Z",
+      "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high",
+      "duplicateOf": "PFSE.DE:220ab32a30e9a7eb6679824a41d084b022001ea549979a786c94e5e3b36e23da"
     },
     {
       "id": "FRO.OL:4ec29d9b2eb46906df33d6df04b8de29c3cc97cb849bb27fc04dc15ade3e16aa",
