@@ -1,0 +1,21 @@
+name: Euronext missing price coverage pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/euronext_price_coverage.py'
+      - 'tests/test_euronext_price_coverage.py'
+      - '.github/workflows/euronext-price-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_euronext_price_coverage.py' -v
+      - run: python scripts/euronext_price_coverage.py
