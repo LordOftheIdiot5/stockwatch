@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T00:56:51Z",
+  "generated": "2026-11-20T00:58:42Z",
   "items": [
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
@@ -8,11 +8,34 @@
       "sector": "Industry & defence",
       "type": "news",
       "headline": "Ganztägiger Warnstreik auf Kieler Werften angelaufen",
-      "english": "Full-day warning strike begins at Kiel shipyards",
+      "english": null,
       "publisher": "T-Online",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNemprNHNYLXFZeHVqbUFBUDZHWWg0aW9VcW56YjU1SU9IREpjRlFjQW0tWExmOTRJbFVYLWxySzZ2QWoyVmhpY21xck1HVmlKQmt5a0NETmpWaUtNUmh4elJoQ0s3aERmTXhwbXJHcVFZdHJ4UTdxaUFNMTZ0THlGa3FZR1hjbC12aVVaRjhYcmg3azdHRklXWVphRFRPdmQtNURpaTR1Q29TcXM?oc=5",
       "published": "2026-11-20T00:44:08Z",
       "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "DOFG.OL:70db73c77383c206aca18f7122242cf2f7761f2e61e5a257953e4d88302386a3",
+      "ticker": "DOFG.OL",
+      "name": "DOF Group",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "A.P. Møller Maritime kjøper DOF-aksjer for 154,9 millioner",
+      "english": null,
+      "publisher": "E24",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5RdFlMZ09hVW1rSk1yek1XTm1Tek56clBmdWF1T1J4cGxyU1YtTW5JWFlZRW50ei0xRjU4dXhrMER3Ml9lN08tZDctQ2M?oc=5",
+      "published": "2026-11-20T00:05:59Z",
+      "lang": "no",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -509,7 +532,8 @@
       "driverVersion": 1,
       "driverTags": [],
       "sourceDomain": "news.google.com",
-      "priority": "normal"
+      "priority": "normal",
+      "duplicateOf": "DOFG.OL:70db73c77383c206aca18f7122242cf2f7761f2e61e5a257953e4d88302386a3"
     },
     {
       "id": "FCT.MI:1a862fe7cf8911f000e7cfedd8e13490cb84ce5bdbec0426e7ae42b0aa34f47b",
