@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-20T01:35:40Z",
+  "generated": "2026-11-20T02:09:30Z",
   "windowStart": "2026-11-06",
   "windowEnd": "2026-11-19",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -664,6 +664,14 @@
       ],
       "potential": [
         {
+          "id": "AIR.PA:e4496046daede930c868ee910c43c949308ecd989e8caf2d6378b674ed180276",
+          "published": "2026-11-20T01:15:47Z",
+          "headline": "Virgin in talks with Boeing, Airbus as it looks to order more planes",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQTlydnpIUkdSdGFZeDRoX0RfYlpqLW9DSG5WN3pJdlNlSmhESVFtUzVkRy1mRWVPdlROMlRwUkx4Y1NzWHltbXhsUzY0UlhCZ1RQWXR2aUZBNEhNMkRxdjBqYmttemtLR0xFazRpa1dpVUlpQV9yc3hXSmRlSDQwaGZCdkFVRHFoVWRuNEY1ZmFPSDJYaVZWTHVnMDNwWnl6dlgwTXZKYmo5cGNPdlFZNS1FMzRzNnA1OU81U2RhTnhYU2V6SmZhQmVn?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "AIR.PA:4d14ce1b96b88bc4bd56d4421a479dfb62f1f0fbfd789f2ad25f54142ed7707c",
           "published": "2026-11-19T13:05:12Z",
           "headline": "Willis Lease Finance Corporation Expands Fleet With Acquisition Of Two Airbus A320 Aircraft",
@@ -720,8 +728,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 43,
-      "latestRecord": "2026-11-19T20:33:19Z",
+      "observedRecords": 44,
+      "latestRecord": "2026-11-20T01:15:47Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,

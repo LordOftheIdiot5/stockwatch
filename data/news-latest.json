@@ -1,6 +1,57 @@
 {
-  "generated": "2026-11-20T01:35:40Z",
+  "generated": "2026-11-20T02:09:30Z",
   "items": [
+    {
+      "id": "SAP.DE:0b2e34c397d9532c58c8b563dfe1febb5789337703d849ccbda36a99d15a320c",
+      "ticker": "SAP.DE",
+      "name": "SAP",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Dollar near 19-month peak as AI jitters sap risk appetite",
+      "english": null,
+      "publisher": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSWwtcmZqemtkQmd4OWJQUHN1OXZLZTgxM1FtVk5JTlAtNndPYzRndHkxbEZ2MEdNZGtRdWUwMUxlblhtLThfQ0NoRHYtZ1lzd2VkSHc4N0U3UlFjUGFubjBkOFc4bDhpR3lELUoxalJBN1lkUUtUYk1NSk9sanNaeUZrZVVXTWlDV2Zja1FFQ3lPaXNUN2FXb3BST0dmZHd3?oc=5",
+      "published": "2026-11-20T01:47:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "AIR.PA:e4496046daede930c868ee910c43c949308ecd989e8caf2d6378b674ed180276",
+      "ticker": "AIR.PA",
+      "name": "Airbus",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Virgin in talks with Boeing, Airbus as it looks to order more planes",
+      "english": null,
+      "publisher": "SMH.com.au",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQTlydnpIUkdSdGFZeDRoX0RfYlpqLW9DSG5WN3pJdlNlSmhESVFtUzVkRy1mRWVPdlROMlRwUkx4Y1NzWHltbXhsUzY0UlhCZ1RQWXR2aUZBNEhNMkRxdjBqYmttemtLR0xFazRpa1dpVUlpQV9yc3hXSmRlSDQwaGZCdkFVRHFoVWRuNEY1ZmFPSDJYaVZWTHVnMDNwWnl6dlgwTXZKYmo5cGNPdlFZNS1FMzRzNnA1OU81U2RhTnhYU2V6SmZhQmVn?oc=5",
+      "published": "2026-11-20T01:15:47Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
       "ticker": "TKMS.DE",
@@ -2385,70 +2436,24 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high"
-    },
-    {
-      "id": "SUBC.OL:031ca37e57323b3484e22cee5f5ea60ec8058e482d8a89c37fb33c6d8c528660",
-      "ticker": "SUBC.OL",
-      "name": "Subsea 7",
-      "sector": "Original ten",
-      "type": "news",
-      "headline": "Saipem Baked Middle East War Costs Into Its 2027 Outlook",
-      "english": null,
-      "publisher": "Finimize",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNX2hIM2RHbm1qVkVKSlZMX2hxNXdyMDhYZWtzQzdBbU9yb0YxVnJzUVZYOG1iVHJxeXRXTmFZSnBNamE2OHhoaUlTNjdjUzVMaUlvSjU0T0lRcWNqXy1raE5TMUNMWEJOcmJ2dkh3V2JLVW84WmNyT09HUU9yYXhZNVNCZw?oc=5",
-      "published": "2026-11-19T12:33:33Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "Guidance",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "RMS.PA:7991d07f59553c8699e5f87152c217a50f0d945f5f01192ba969b1c2a2c12c70",
-      "ticker": "RMS.PA",
-      "name": "Hermes",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "Innbrudd hos Hermès i Oslo: Utbyttet var på 2 millioner kroner",
-      "english": null,
-      "publisher": "Finansavisen",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVy1rMTNoM3ZyWE1PbHVtbEZ3XzBQcXBaZVl5ckxaZ3I2SGxvUm1xVnNOd3ZMRzNPck1MS1NuVURLSExOR0N3LTI0Z3JodTVSeGF1ZDkzMjhZbGVCR2tLd0p0aDVPeV9qOEVvV0UtNW5pYmpuQmVVamxZSG44R2NOa0NGQWxvN01uWUdoRXZkZ0pnd0lwZVJDbGNwa0FHbThJa3YxcVg0MXFuaTNmblJSSFExV29SZDA?oc=5",
-      "published": "2026-11-19T12:32:56Z",
-      "lang": "no",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1690,
+  "totalStored": 1692,
   "limit": 100,
   "quality": {
-    "total": 1690,
-    "relevant": 1250,
-    "review": 379,
+    "total": 1692,
+    "relevant": 1251,
+    "review": 380,
     "duplicates": 80,
     "issuerLinked": 419,
     "driverClassification": {
       "version": 1,
-      "classified": 414,
+      "classified": 415,
       "categories": {
         "numbers": 248,
         "prices": 5,
         "operations": 1,
-        "potential": 180,
+        "potential": 181,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
@@ -2458,10 +2463,10 @@
       "Dividends": 12,
       "M&A": 69,
       "Guidance": 34,
-      "Contracts": 118,
+      "Contracts": 119,
       "Capital & ownership": 1,
       "Management": 55,
-      "General": 1134
+      "General": 1135
     }
   }
 }

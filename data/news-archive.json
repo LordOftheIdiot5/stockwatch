@@ -1,6 +1,57 @@
 {
-  "generated": "2026-11-20T01:35:40Z",
+  "generated": "2026-11-20T02:09:30Z",
   "items": [
+    {
+      "id": "SAP.DE:0b2e34c397d9532c58c8b563dfe1febb5789337703d849ccbda36a99d15a320c",
+      "ticker": "SAP.DE",
+      "name": "SAP",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Dollar near 19-month peak as AI jitters sap risk appetite",
+      "english": null,
+      "publisher": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSWwtcmZqemtkQmd4OWJQUHN1OXZLZTgxM1FtVk5JTlAtNndPYzRndHkxbEZ2MEdNZGtRdWUwMUxlblhtLThfQ0NoRHYtZ1lzd2VkSHc4N0U3UlFjUGFubjBkOFc4bDhpR3lELUoxalJBN1lkUUtUYk1NSk9sanNaeUZrZVVXTWlDV2Zja1FFQ3lPaXNUN2FXb3BST0dmZHd3?oc=5",
+      "published": "2026-11-20T01:47:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "AIR.PA:e4496046daede930c868ee910c43c949308ecd989e8caf2d6378b674ed180276",
+      "ticker": "AIR.PA",
+      "name": "Airbus",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Virgin in talks with Boeing, Airbus as it looks to order more planes",
+      "english": null,
+      "publisher": "SMH.com.au",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQTlydnpIUkdSdGFZeDRoX0RfYlpqLW9DSG5WN3pJdlNlSmhESVFtUzVkRy1mRWVPdlROMlRwUkx4Y1NzWHltbXhsUzY0UlhCZ1RQWXR2aUZBNEhNMkRxdjBqYmttemtLR0xFazRpa1dpVUlpQV9yc3hXSmRlSDQwaGZCdkFVRHFoVWRuNEY1ZmFPSDJYaVZWTHVnMDNwWnl6dlgwTXZKYmo5cGNPdlFZNS1FMzRzNnA1OU81U2RhTnhYU2V6SmZhQmVn?oc=5",
+      "published": "2026-11-20T01:15:47Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "TKMS.DE:5dcb0c15725f3082f9f60c026b38b508d2aa22998cb032b64da810e8f8527a73",
       "ticker": "TKMS.DE",
