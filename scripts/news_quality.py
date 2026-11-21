@@ -95,6 +95,11 @@ def identity_evidence(item):
         pattern, reason = ISSUER_CONTEXT[ticker]
         if not re.search(pattern, normalized):
             return 'review', reason
+        # An acronym shorter than four characters is intentionally excluded
+        # by has_phrase(); sector/legal context can make it a *named reference*,
+        # never an issuer-confirmed original disclosure.
+        if ticker == 'CAF.MC' and re.search(r'\bcaf\b', normalized):
+            return 'mentioned', 'CAF plus railway/business context only; not issuer-confirmed'
     if ticker in ('P911.DE', 'PAH3.DE'):
         legal = r'\bporsche ag\b' if ticker == 'P911.DE' else r'\bporsche (?:se|automobil holding)\b'
         if not re.search(legal, normalized):
