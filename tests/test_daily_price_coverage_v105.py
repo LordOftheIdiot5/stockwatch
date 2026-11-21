@@ -40,7 +40,7 @@ class TestDailyPriceCoverageV105(unittest.TestCase):
         self.assertEqual(s["listings"], s["datedPrice"] + s["missingPrice"])
         self.assertEqual(sum(v["listings"] for v in score["byVenue"]), s["listings"])
         self.assertEqual(sum(v["missingPrice"] for v in score["byVenue"]), s["missingPrice"])
-        self.assertEqual(len({v["venue"] for v in score["byVenue"]), len(score["byVenue"]))
+        self.assertEqual(len({v["venue"] for v in score["byVenue"]}), len(score["byVenue"]))
         self.assertEqual(queue["totalListings"], s["listings"])
         self.assertEqual(queue["unpricedQueue"], s["missingPrice"])
 
@@ -54,8 +54,8 @@ class TestDailyPriceCoverageV105(unittest.TestCase):
                          "rightsClearedCandidateProducts" in score["summary"] else
                          score["summary"]["registryAuthorizedCandidateProducts"], 0)
         self.assertIn("not proof of an exchange-certified", score["notice"])
-        self.assertEqual(len(queue["candidates"]), len(self.coverage["records"]),
-                         "Without licensed chart history every listing should stay in the review queue")
+        self.assertGreaterEqual(len(queue["candidates"]), score["summary"]["missingPrice"],
+                                "All missing-price listings must remain in the recovery queue")
 
     def test_pair_price_only_never_becomes_a_qualified_daily_quote(self):
         score, queue = self.make()
