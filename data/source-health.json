@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T03:04:03Z",
-  "latestScan": "2026-11-21T03:03:27+00:00",
+  "generated": "2026-11-21T03:18:18Z",
+  "latestScan": "2026-11-21T03:17:34+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "priceFreshness": {
@@ -823,7 +823,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 133,
+  "storedStories": 131,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -837,53 +837,53 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 68.2,
+      "avgLatencyMs": 73.0,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T03:03:37+00:00",
+      "lastSuccessAt": "2026-11-21T03:17:45+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 411.9,
+      "avgLatencyMs": 378.6,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T03:03:41+00:00",
+      "lastSuccessAt": "2026-11-21T03:17:49+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1188.3,
+      "avgLatencyMs": 1508.2,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T03:03:42+00:00",
+      "lastSuccessAt": "2026-11-21T03:17:51+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 287.9,
+      "avgLatencyMs": 288.1,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T03:03:57+00:00",
+      "lastSuccessAt": "2026-11-21T03:18:05+00:00",
       "lastFailureAt": null
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3078.1,
+      "avgLatencyMs": 3573.2,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T03:03:40+00:00",
+      "lastSuccessAt": "2026-11-21T03:17:49+00:00",
       "lastFailureAt": null
     }
   },
   "newsQuality": {
-    "total": 1897,
+    "total": 1899,
     "relevant": 1390,
-    "review": 441,
-    "duplicates": 90,
+    "review": 442,
+    "duplicates": 91,
     "issuerLinked": 430,
     "driverClassification": {
       "version": 1,
@@ -905,7 +905,7 @@
       "Contracts": 139,
       "Capital & ownership": 1,
       "Management": 60,
-      "General": 1281
+      "General": 1283
     }
   },
   "secFilings": {
