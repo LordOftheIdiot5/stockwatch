@@ -47,12 +47,20 @@ def main():
      chart=page.locator('.sw98-primary .sw92-focus-chart')
      rail=page.locator('.sw98-intelligence-rail')
      assert chart.bounding_box()['y'] < heat.bounding_box()['y']
-     if width>=1200:
+     if width>=1320:
+      # V110b uses CSS display:contents to put real movers and watchlist
+      # alongside the heatmap as independent columns. The wrapper has no box.
+      panels=companion.locator(':scope > .sw-panel')
+      assert panels.count()==2
+      for i in range(2):
+       assert abs(heat.bounding_box()['y']-panels.nth(i).bounding_box()['y'])<6
+     elif width>=1200:
       assert abs(heat.bounding_box()['y']-companion.bounding_box()['y'])<6
-      assert chart.bounding_box()['width']>rail.bounding_box()['width']
-      assert chart.bounding_box()['height']<630
      else:
       assert companion.bounding_box()['y']>=heat.bounding_box()['y']
+     if width>=1200:
+      assert chart.bounding_box()['width']>rail.bounding_box()['width']
+      assert chart.bounding_box()['height']<630
      assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'),width
      assert not errors,errors
      if width in (390,1440,1920) and theme=='dark':
