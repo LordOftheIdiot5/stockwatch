@@ -7,6 +7,8 @@ on:
       - 'tests/browser_check_firstfold_v116.py'
       - 'news-compact-v116.css'
       - 'overview-firstfold-v116.css'
+      - 'overview-density-v116b.css'
+      - 'tests/browser_check_zoom_equivalent_v116b.py'
       - 'news.html'
       - 'index.html'
   workflow_dispatch:
@@ -29,11 +31,15 @@ jobs:
         run: python tests/browser_check_news_320_v116.py
       - name: Source-accurate first fold at 1440, 1672 and 1920
         run: python tests/browser_check_firstfold_v116.py
+      - name: V116b responsive 200%-zoom-equivalent layout, five routes
+        run: python tests/browser_check_zoom_equivalent_v116b.py
       - name: Preserve first-fold screenshots on all outcomes
         if: always()
         uses: actions/upload-artifact@v5
         with:
           name: stockwatch-v116-focused
-          path: workspace-previews/v116-overview-firstfold-*.png
+          path: |
+            workspace-previews/v116-overview-firstfold-*.png
+            workspace-previews/v116b-overview-equivalent-zoom-*.png
           if-no-files-found: ignore
           retention-days: 7
