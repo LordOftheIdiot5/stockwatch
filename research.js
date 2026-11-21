@@ -75,7 +75,13 @@ async function showNews(){
    catch{oldItems=[];$('archivedResults').innerHTML='<div class="notice">Could not load the selected archived month.</div>'}
  });
 }
-function showCalendar(){const events=(state.events?.items||[]).filter(x=>x.date && x.sourceUrl).sort((a,b)=>String(a.date).localeCompare(String(b.date)));const sectors=[...new Set(events.map(x=>x.sector).filter(Boolean))].sort();
+function showCalendar(){
+ const today=new Date().toISOString().slice(0,10);
+ const dateOK=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&
+   !Number.isNaN(Date.parse(d))&&new Date(d).toISOString().slice(0,10)===d;
+ const events=(state.events?.items||[]).filter(x=>x&&dateOK(x.date)&&x.date>=today&&
+   validLink(x.sourceUrl)).sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+ const sectors=[...new Set(events.map(x=>x.sector).filter(Boolean))].sort();
  $('app').innerHTML=`<div class="toolbar"><input id="q" type="search" placeholder="Search company or ticker…"><select id="sector">${selectOptions(sectors,'All categories')}</select><select id="event"><option value="all">All event types</option><option value="earnings">Results / earnings</option><option value="dividend">Dividends</option></select></div><div class="panel"><div class="panelhead"><h2>Upcoming sourced events</h2><span class="count" id="eventCount"></span></div><div class="tablewrap"><table><thead><tr><th>Event date</th><th>Company</th><th>Event</th><th>Evidence</th><th>Source</th></tr></thead><tbody id="eventRows"></tbody></table></div><div class="note">Provisional dates are extracted from an announcement headline and must be confirmed with the issuer. Dividend ex-dates, payment dates and amounts are displayed only when provided by a dated primary source.</div></div>`;
  const verifiedDisclosures=(state.archive?.items||[]).filter(x=>x.type==='disclosure'&&x.match==='issuer_code'&&x.ticker&&x.published&&validLink(x.url)).sort((a,b)=>String(b.published).localeCompare(String(a.published))).slice(0,8);
  const recentPanel=document.createElement('section');
@@ -87,10 +93,10 @@ function showCalendar(){const events=(state.events?.items||[]).filter(x=>x.date 
  const freshness=document.createElement('p');
  freshness.className='sw96-calendar-sync';
  freshness.setAttribute('role','status');
- freshness.textContent=state.events?.generated?'Forward calendar last checked '+state.events.generated+' · '+events.length+' source-dated upcoming entries': 'Upcoming event feed unavailable · no dates inferred';
+ freshness.textContent=state.events?.generated?'Forward calendar last checked '+state.events.generated+' · '+events.length+' sourced future or today entries (UTC date)': 'Upcoming event feed unavailable · no dates inferred';
  $('app').insertBefore(freshness,$('app').firstChild);
  function render(){const q=$('q').value.trim().toLowerCase(),s=$('sector').value,t=$('event').value;const subset=events.filter(x=>(s==='all'||x.sector===s)&&(t==='all'||x.type===t)&&(!q||[x.ticker,x.name].join(' ').toLowerCase().includes(q)));
- $('eventCount').textContent=subset.length+' events';$('eventRows').innerHTML=subset.map(x=>{const link=validLink(x.sourceUrl),v=x.verification==='verified'?'Verified issuer record':'Provisional · check filing';return `<tr><td><b>${date(x.date+'T00:00:00Z')}</b></td><td>${esc(x.name)}<small>${esc(x.ticker)}</small></td><td>${esc(x.label||x.type)}</td><td><span class="pill ${x.verification==='verified'?'good':'warn'}">${v}</span></td><td>${link?`<a class="external" target="_blank" rel="noopener noreferrer" href="${esc(link)}">Original filing ↗</a>`:'Source unavailable'}</td></tr>`}).join('')||'<tr><td colspan="5" class="empty">No source-verified upcoming earnings or dividend dates are currently available. The calendar will populate from qualifying disclosures and verified entries; no dates are guessed.</td></tr>'}
+ $('eventCount').textContent=subset.length+' events';$('eventRows').innerHTML=subset.map(x=>{const link=validLink(x.sourceUrl),v=x.verification==='verified'?'Verified issuer record':'Provisional · check filing';return `<tr><td><b>${date(x.date+'T00:00:00Z')}</b></td><td>${esc(x.name)}<small>${esc(x.ticker)}</small></td><td>${esc(x.label||x.type)}</td><td><span class="pill ${x.verification==='verified'?'good':'warn'}">${v}</span></td><td>${link?`<a class="external" target="_blank" rel="noopener noreferrer" href="${esc(link)}">Original filing ↗</a>`:'Source unavailable'}</td></tr>`}).join('')||'<tr><td colspan="5" class="empty">No qualifying source-backed future events for the current filters. Published issuer disclosures are listed separately below; past dates and undated items are not described as upcoming.</td></tr>'}
  ['q','sector','event'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));render();}
 function compareChoices(){const options=state.watchlist.map(c=>`<option value="${esc(c.ticker)}">${esc(c.name||c.ticker)} (${esc(c.ticker)})</option>`).join('');return Array.from({length:4},(_,i)=>`<label class="muted"><small>STOCK ${i+1}</small><select id="pick${i}"><option value="">${i<2?'Select stock':'Optional'}</option>${options}</select></label>`).join('')}
 function signedNum(x){return `<span class="${x>0?'positive':x<0?'negative':''}">${pct(x)}</span>`}
