@@ -1,7 +1,7 @@
 # Stockwatch — ultimate product vision and operating north star
 
 **Status:** Product direction and staged targets, **not** a statement of implemented capabilities.  
-**Approved:** Product goal requested 2026-11-21; the source-of-truth delivery trackers remain [master execution plan](STOCKWATCH-MASTER-EXECUTION-PLAN-2026-11-21.md), [ROADMAP](../ROADMAP.md), [design issue #165](https://github.com/LordOftheIdiot5/stockwatch/issues/165), [market-data rights #176](https://github.com/LordOftheIdiot5/stockwatch/issues/176), and [data/source quality #185](https://github.com/LordOftheIdiot5/stockwatch/issues/185).
+**Direction:** Proposed in response to the owner's product-goal request of 2026-11-21; the source-of-truth delivery trackers remain [master execution plan](STOCKWATCH-MASTER-EXECUTION-PLAN-2026-11-21.md), [ROADMAP](../ROADMAP.md), [design issue #165](https://github.com/LordOftheIdiot5/stockwatch/issues/165), [market-data rights #176](https://github.com/LordOftheIdiot5/stockwatch/issues/176), and [data/source quality #185](https://github.com/LordOftheIdiot5/stockwatch/issues/185).
 
 ## 1. The mission
 
