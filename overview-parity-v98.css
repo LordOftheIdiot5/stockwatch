@@ -56,3 +56,38 @@ body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expa
  body[data-page=index] .sw98-primary #globalMarketPulse .sw-index-grid{max-width:none}
  body[data-page=index] .sw98-primary .sw92-focus-chart .sw-overview-chart-controls{gap:7px}
 }
+
+/* V100b: do not give operational diagnostics the entire first fold.
+   Keep the truthful session-verified denominator in sight; full detail opens on demand. */
+body[data-page=index] details.sw96-source-status{
+ display:block;min-width:0;margin:9px 0 14px;padding:0;
+ border:1px solid var(--sw-edge);border-radius:10px;
+ background:var(--sw-card);color:var(--sw-text);
+}
+body[data-page=index] .sw96-source-status>summary{
+ display:flex;align-items:center;flex-wrap:wrap;gap:5px 9px;
+ list-style:none;cursor:pointer;min-height:35px;padding:7px 12px;
+ font-size:12px;line-height:1.4;
+}
+body[data-page=index] .sw96-source-status>summary::-webkit-details-marker{display:none}
+body[data-page=index] .sw96-source-summary-label{font-size:12px;font-weight:600;color:var(--sw-muted)}
+body[data-page=index] .sw96-source-status>summary strong{font-size:12px;font-weight:700;color:var(--sw-text)}
+body[data-page=index] .sw96-source-status>summary small{font-size:12px;color:var(--sw-muted)}
+body[data-page=index] .sw96-source-toggle{margin-left:auto;font-size:12px;color:var(--sw-mint)}
+body[data-page=index] .sw96-source-toggle::after{content:" ▾"}
+body[data-page=index] .sw96-source-status[open] .sw96-source-toggle::after{content:" ▴"}
+body[data-page=index] .sw96-source-detail{
+ display:grid;gap:7px;padding:10px 12px;
+ border-top:1px solid var(--sw-edge);font-size:12px;
+}
+body[data-page=index] .sw96-source-detail>p{margin:0;line-height:1.5;color:var(--sw-muted)}
+body[data-page=index] .sw96-source-detail>small{font-size:12px;color:var(--sw-muted)}
+body[data-page=index] .sw96-source-detail>a{font-size:12px;min-height:36px;align-self:start}
+body[data-page=index] .sw96-source-status>summary:focus-visible{
+ outline:3px solid var(--sw-mint);outline-offset:2px;border-radius:8px;
+}
+@media(max-width:700px){
+ body[data-page=index] details.sw96-source-status{display:block;margin:6px 0 10px;padding:0}
+ body[data-page=index] .sw96-source-status>summary{padding:9px 10px;min-height:40px}
+ body[data-page=index] .sw96-source-toggle{margin-left:auto}
+}
