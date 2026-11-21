@@ -14,7 +14,8 @@ class SourceEntitlementsV102Tests(unittest.TestCase):
 
     def test_real_inventory_is_review_only(self):
         self.assertEqual(self.data["schemaVersion"], 1)
-        self.assertEqual(len(self.data["sources"]), 6)
+        self.assertEqual(len(self.data["sources"]), 9)
+        self.assertTrue({"yahoo_finance_chart_reference", "nordnet_external_public_feed_candidate", "dnb_markets_client_quotes_candidate"} <= {s["id"] for s in self.data["sources"]})
         for source in self.data["sources"]:
             self.assertFalse(any(source["permissions"].values()), source["id"])
             self.assertIsNone(source["authorization"])
