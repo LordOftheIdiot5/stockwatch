@@ -1,1 +1,60 @@
 #dataPortal{margin:30px 0 60px}.dp-controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:14px}.dp-controls label{display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px;color:var(--muted);font-size:12px}.dp-controls input{padding:11px;background:var(--surface);border:1px solid var(--edge);border-radius:8px;min-height:44px}.dp-product strong{font-size:18px;color:var(--ink)}.dp-product details{border-top:1px solid var(--edge);padding:10px 0}.dp-product summary{cursor:pointer;color:var(--mint)}.dp-product details p{margin:8px 0;overflow-wrap:anywhere}.dp-product a{color:var(--mint);font-size:13px}#dpStatus{color:var(--muted);font-size:12px;margin:10px 0 18px}@media(max-width:740px){#dataPortal .grid,#dataPortal .metricrow{grid-template-columns:1fr}}
+/* V115 — Rights-first integration workspace, source metadata rather than fictional quotes. */
+#dataPortal .metricrow {gap:12px}
+#dataPortal .metric strong {font-size:clamp(17px,1.5vw,23px);line-height:1.4}
+#dataPortal .dp-path{
+ display:flex;align-items:center;justify-content:space-between;gap:20px;
+ padding:18px 20px;margin:18px 0 20px;border-radius:12px;
+ border:1px solid var(--edge);background:var(--surface);
+}
+#dataPortal .dp-path h2{font-size:clamp(17px,1.6vw,23px);margin:0 0 6px;color:var(--ink)}
+#dataPortal .dp-path p{font-size:13px;line-height:1.65;color:var(--muted);max-width:76ch;margin:0}
+#dataPortal .dp-path-actions{display:grid;gap:10px;flex:0 0 225px}
+#dataPortal .dp-path-actions a,#dataPortal .dp-contact-link{
+ display:inline-flex;justify-content:center;align-items:center;text-align:center;
+ border:1px solid var(--edge);border-radius:9px;padding:9px 11px;
+ min-height:44px;line-height:1.35;font-size:12.5px;font-weight:720;
+ color:var(--ink);text-decoration:none;
+}
+#dataPortal .dp-path-actions .dp-request,#dataPortal .dp-contact-link{
+ border-color:var(--mint);color:var(--mint);
+}
+#dataPortal .dp-path-actions a:is(:hover,:focus-visible),
+#dataPortal .dp-contact-link:is(:hover,:focus-visible){
+ outline:2px solid var(--mint);outline-offset:2px;background:var(--soft);
+}
+#dataPortal .dp-product{display:flex;flex-direction:column;min-width:0;gap:8px}
+#dataPortal .dp-product>h3{margin:2px 0;font-size:clamp(16px,1.4vw,19px)}
+#dataPortal .dp-product>p{margin:3px 0;font-size:12.5px;line-height:1.56}
+#dataPortal .dp-count strong{font-size:clamp(16px,1.4vw,19px)}
+#dataPortal .dp-product-status{color:var(--muted)}
+#dataPortal .dp-product details{margin-top:auto}
+#dataPortal .dp-product details summary{min-height:40px;display:list-item;padding:9px 0;font-size:12.5px}
+#dataPortal .dp-disclaimer{font-size:12px;line-height:1.5}
+#dataPortal .dp-schema{
+ white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;
+ max-height:330px;overflow:auto;padding:12px;background:var(--soft);
+ color:var(--ink);font-size:11.5px;line-height:1.55;border-radius:8px;
+ border:1px solid var(--edge);
+}
+#dataPortal button.dp-schema-export,#dataPortal button#dpExport{
+ border:1px solid var(--edge);background:var(--surface);color:var(--ink);
+ border-radius:9px;padding:8px 12px;min-height:44px;
+ font-size:12.5px;cursor:pointer
+}
+#dataPortal button:is(:hover,:focus-visible){outline:2px solid var(--mint);outline-offset:2px}
+#dataPortal .dp-card-links{display:grid;gap:8px;margin-top:10px}
+#dataPortal .dp-card-links>a:not(.dp-contact-link){font-size:12.5px;line-height:1.45}
+#dataPortal .dp-steps{max-width:none;padding:18px 20px;border:1px solid var(--edge);border-radius:12px;background:var(--surface)}
+#dataPortal .dp-steps h2{margin:0 0 9px;font-size:19px}
+#dataPortal .dp-steps ol{padding-left:21px;line-height:1.7;font-size:13px;color:var(--muted)}
+#dataPortal .dp-steps p{margin:12px 0 0;font-size:13px}
+@media(max-width:800px){
+ #dataPortal .dp-path{flex-direction:column;align-items:stretch}
+ #dataPortal .dp-path-actions{flex:0 1 auto;grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ #dataPortal .dp-path{padding:14px}
+ #dataPortal .dp-path-actions{grid-template-columns:1fr}
+ #dataPortal .dp-steps{padding:14px}
+}
