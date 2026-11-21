@@ -48,7 +48,7 @@
   else {a.classList.remove('sw112-active');a.removeAttribute('aria-current')}
  }
  const brand=header.querySelector('a.brand');
- if(brand)brand.setAttribute('aria-label','Nordl Stockwatch — About');
+ if(brand){brand.setAttribute('aria-label','Nordl Stockwatch — About');if(route==='welcome.html')brand.setAttribute('aria-current','page');}
  // The same research destinations are reachable in desktop and phone menus.
  for(const drawer of body.querySelectorAll('.sw-brand-drawer,.sw-mobile-drawer')){
   const platform=[...drawer.querySelectorAll(':scope > section')].find(s=>
