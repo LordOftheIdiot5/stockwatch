@@ -40,6 +40,7 @@ def main():
         'intelligence.html?ticker=NHY.OL',
         'news.html?q=NHY.OL'}
        assert set(actions.evaluate_all('(els)=>els.map(el=>el.getAttribute("href"))'))==expected
+       page.wait_for_function("document.querySelector('#individualChart')?.textContent?.includes('No licensed dated prices')",timeout=30000)
        assert 'No licensed dated prices' in panel.locator('#individualChart').inner_text()
        assert page.locator('a.sw113-research-action[href="terminal.html?ticker=NHY.OL"]').is_visible()
        assert not requests,(width,requests)
@@ -63,6 +64,7 @@ def main():
        page.wait_for_function("document.querySelector('#pick0')?.value === 'NHY.OL'",timeout=30000)
        assert page.locator('#pick0').input_value()=='NHY.OL'
        page.locator('#compareHistoryStatus').wait_for(timeout=30000)
+       page.wait_for_function("document.querySelector('#compareHistoryStatus')?.textContent?.includes('Licensed dated history is not connected')",timeout=30000)
        assert 'Licensed dated history is not connected' in page.locator('#compareHistoryStatus').inner_text()
        assert page.locator('.sw113-company-link').count()>=2
        assert not requests,(width,requests)
