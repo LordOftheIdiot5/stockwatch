@@ -19,6 +19,16 @@ The register in `scripts/source_entitlements_v102.json` is machine-readable, aud
 | Euronext official-close product | [Euronext market-data offering](https://www.euronext.com/en/products-services/euronext-real-time-data) | Product/delivery and separate official close semantics, historic use, display and export licence still unresolved. |
 | Xetra delayed transparency | [Deutsche Börse delayed service](https://www.mds.deutsche-boerse.com/mds-en/real-time-data/Delayed-data) | 15-minute delayed minute records remain available only until midnight of the following business day. Further commercial reuse and a verified official-close product remain unconfirmed. |
 
+### Retail quote sources investigated (V102b, still not approved)
+
+| Platform | Current official evidence | Operational conclusion |
+|---|---|---|
+| Yahoo Finance | [Yahoo general terms](https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html) and [Yahoo exchange/data-provider attribution](https://uk.help.yahoo.com/kb/SLN2352.html) | Terms include express permission for automated collection, restrictions on competing data archives/commercial reuse, and rights of third-party source vendors. Existing Yahoo observations are reference-quality historical fallbacks, **not approved new licensed public-history input**. |
+| Nordnet | [External API documentation](https://www.nordnet.no/externalapi/docs/getting_started), [public feed](https://www.nordnet.se/externalapi/docs/feeds), [NO customer terms E.10](https://files.nordnet.no/pdf/nb-NO/allm_bestammelser.pdf) | A true market-data feed exists technically. Retail account terms prohibit onward redistribution of third-party quote information. Verify whether a separate commercial API/feed licence is available and obtain source/exchange rights before public use. |
+| DNB Markets | [Markets retail data terms](https://www.dnb.no/en/markets/terms-and-agreements), [DNB general online terms](https://m.dnb.no/en/markets/terms-and-agreements/general-business-terms-online) | Retail Oslo exchange price access is not a B2B market-data display or resale contract. Ask DNB for a suitable commercial EOD data offering rather than extracting its client interface. |
+
+All nine potential source rows in the registry remain **denied for production collection, retention, public display and commercial export**. A source might still be appropriate for manual comparison research under applicable terms. No programme or website price coverage changed.
+
 **Source interpretation is provisional.** Market venues may change terms; check the currently applicable contract/policy before enabling a provider. Public access and a favourable EOD policy provision alone are not enough to certify the exact fields, archive permissions and proposed subscription-free commercial website.
 
 ## V102 gate and use
