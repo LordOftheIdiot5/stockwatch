@@ -63,11 +63,25 @@ def main():
      rail=page.locator('.sw98-intelligence-rail')
      assert chart.bounding_box()['y'] < heat.bounding_box()['y']
      if width>=1320:
-      # V110d: heatmap, honest exchange coverage and watchlist occupy three
-      # first-screen columns. Original movers remain under a reversible disclosure.
-      for panel in (coverage,watch):
-       assert abs(heat.bounding_box()['y']-panel.bounding_box()['y'])<6
+      # V116c: exchange coverage + watchlist directly follow snapshot + news,
+      # using the blank area seen in owner screenshots. Heatmap spans all columns.
+      box=heat.bounding_box()
+      cov=coverage.bounding_box()
+      saved=watch.bounding_box()
+      assert abs(cov['y']-saved['y'])<8,(width,cov,saved)
+      assert box['width']>chart.bounding_box()['width']*1.9,(width,box)
+      assert 0<=box['y']-max(chart.bounding_box()['y']+chart.bounding_box()['height'],
+          cov['y']+cov['height'],saved['y']+saved['height'])<=18
       assert chart.bounding_box()['height']>240
+      # Enlarged map must remain full width and reversible, including the
+      # real selected-company inspector (not a blank right-hand column).
+      toggle=page.locator('#workspaceHeatExpand')
+      toggle.click()
+      assert page.locator('#workspaceHeatmap.sw-heat-expanded').count()==1
+      assert abs(heat.bounding_box()['width']-box['width'])<10
+      assert page.locator('.sw93-heat-inspector').first.bounding_box()['width']>chart.bounding_box()['width']*1.7
+      toggle.click()
+      assert page.locator('#workspaceHeatmap.sw-heat-expanded').count()==0
      elif width>=900:
       assert abs(heat.bounding_box()['y']-coverage.bounding_box()['y'])<6
       assert watch.bounding_box()['y']>=coverage.bounding_box()['y']
