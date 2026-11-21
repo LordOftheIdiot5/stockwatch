@@ -54,6 +54,11 @@ def main():
                             assert root.evaluate("(el)=>el.classList.contains('sw93-heat-comfortable')")
                             toggle.click()
                             assert toggle.get_attribute("aria-pressed")=="false"
+                            if name=="stocks":
+                                page.locator('[data-stk-view="table"]').click()
+                                assert dock.is_hidden()
+                                page.locator('[data-stk-view="heat"]').click()
+                                dock.wait_for(state="visible",timeout=10000)
                             assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+2")
                             assert not errors,errors
                             page.screenshot(path=str(out/f"{name}-{device}-{theme}.png"),

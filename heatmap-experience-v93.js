@@ -61,6 +61,10 @@
   function refresh(root){
     const dock=sourceRecord.get(root);
     if(!dock)return;
+    // The screener initially shows a table. Never expose an orphan inspector
+    // while its associated heatmap container is hidden.
+    dock.hidden=Boolean(root.hidden);
+    dock.style.display=root.hidden?"none":"";
     const tiles=[...root.querySelectorAll("a.sw-heat-cell")];
     const summary=api.countStates(tiles.map(el=>el.className));
     const key=[summary.up,summary.down,summary.flat,summary.unavailable].join("|");

@@ -38,6 +38,8 @@ class HeatmapUXV93Tests(TestCase):
             self.assertIn(expected,self.js)
         self.assertNotIn("preventDefault(",self.js)
         self.assertIn('new URL(href,base)',self.js)
+        self.assertIn('dock.hidden=Boolean(root.hidden)',self.js)
+        self.assertIn('dock.style.display=root.hidden?"none":""',self.js)
     def test_css_scoped_and_mobile(self):
         for css in (self.css,self.category):
             self.assertEqual(css.count("{"),css.count("}"))
