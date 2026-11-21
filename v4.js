@@ -347,6 +347,8 @@ function overview(){
   quick.innerHTML='<strong>Explore research</strong><a href="terminal.html">Research terminal</a><a href="stocks.html">Stocks and sectors</a><a href="compare.html">Compare stocks</a><a href="news.html">News and filings</a><a href="health.html">Data health</a>';
   marketGrid.after(quick);
  }
+ const savedWatchPanel=overview.querySelector('.sw87-market-summary .sw-two-col');
+ window.StockwatchOverviewWatchlist?.mount({parent:savedWatchPanel,rows:directoryRows()});
  document.body.classList.add('sw-workspace-ready');
  const economy=$('overviewEconomy');let economicStarted=false;
  const loadOfficialHistory=()=>{

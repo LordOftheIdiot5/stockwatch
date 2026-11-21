@@ -9,6 +9,7 @@ BASE="https://stocks.nordl.dev/"
 PATHS=("index.html","stocks.html","company.html","calendar.html","price-history.html","health.html",
        "v4.js","research.js","freshness-v96.css","overview-parity-v98.css",
        "global-market-pulse.js","heatmap-experience-v93.js",
+       "overview-watchlist-v99.js","overview-watchlist-v99.css",
        "price-evidence-v97.js","price-evidence-v97.css")
 TITLE=re.compile(rb"<title>(.*?)</title>",re.I|re.S)
 
