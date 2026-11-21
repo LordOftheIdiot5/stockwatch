@@ -17,14 +17,14 @@ A Stockwatch company page should eventually show all the original annual/half-ye
 2. `scripts/issuer_ir_reports_v101.py`: default **offline** inspection; opt-in bounded (max six) HTTPS one-page-per-issuer discovery; explicit bots access check and fail-closed redirects and domain/port; response size cap, no login/session, no PDF fetching; extract link text/closest section, possible report type, potential year/quarter, source URL and deterministic id.
 3. Fallback preserves already discovered candidate links if page is down. Dates/financial values are not invented: `publishedAt:null` and `fiscalYearCandidate` require document review.
 4. `tests/test_issuer_ir_reports_v101.py`: network off, exact host/rights/robots and classification, duplicate handling and prior-snapshot preservation.
-5. `.github/workflows/issuer-ir-discovery.yml`: opt-in manual proof run only, publishes candidate **metadata JSON as a private CI artifact**; no public Pages data commit, no PDF archiving, no database or notification side effect.
+5. `.github/workflows/issuer-ir-discovery.yml`: manual proof run plus a bounded initial source-registry/workflow change probe on `main`; publishes candidate **metadata JSON as a short-lived CI artifact**; no public Pages data commit, no PDF archiving, no database or notification side effect.
 
 Run local no-network schema:
 ```bash
 python scripts/issuer_ir_reports_v101.py
 python -m unittest discover -s tests -p 'test_issuer_ir_reports_v101.py' -v
 ```
-To run a carefully bounded live candidate crawl, manually invoke the GitHub workflow with `execute_live=true`. It honors robots rules and reports failures; a page accessible in a browser may still be unavailable to automation.
+A small first-source check also runs once when the reviewed discovery workflow or curated source registry changes on `main`. Future operator-triggered bounded crawls use the GitHub workflow with `execute_live=true`. The crawler honors robots rules and reports failures; a page accessible in a browser may still be unavailable to automation. This is deliberately not a recurring unrestricted PDF scraper.
 
 ## Next operational stages — DO NOT mark complete from candidate links
 - [ ] Confirm issuer identities and disclosure domains against exact company/ISIN/LEI/MIC and original filing channels. Expand from 4 pilot pages to a reviewed 50 and then all 500 listed securities, grouping share classes by issuer.
