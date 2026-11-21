@@ -81,7 +81,7 @@ A bounded [V101b report-link crawler](V101B-ISSUER-IR-DOCUMENT-PIPELINE.md) now 
 
 ## P1/P2 — design completion, product use and sales
 ### 10. V110 — reach approved full-width UI with actual data
-- [ ] First fold: slim source health status, region-aware index strip, **dominant genuinely licensed market index or equity chart**, dated breadth and original news. Until then retain existing official EUR/NOK economic history clearly labeled as macro (do not mislabel Oslo index).
+- [ ] First fold: slim source health status, region-aware index strip, **add a dominant genuinely licensed market index or equity chart**, dated breadth and original news. **Always preserve** the existing EUR/NOK economic chart and other working macro, sector and market visualizations as separately accessible components (do not mislabel an economic indicator as an Oslo index).
 - [ ] Compact sector heatmap above the deep fold, with venue/sector filters, missing-data legend, fixed stale/price logic and company deep links; proper world markets map when indices are verified.
 - [ ] Right-side rail holds relevant source-linked issuer news, real bookmarked companies, verified upcoming company events; no “target design” goals pane in public UI and no invented watchlist holdings.
 - [ ] Expand native terminal indicators/crosshair/compare/chart ranges, A/B spread alignment and fees, company fundamentals/relationship pages, shipping units and timelines. Keep user-selected research inside app rather than losing sidebar/navigation on company drilldown.
@@ -129,7 +129,7 @@ A bounded [V101b report-link crawler](V101B-ISSUER-IR-DOCUMENT-PIPELINE.md) now 
 2. Finish entitlement preflight #186, then pursue primary EOD product access/rights and real per-venue quote diagnostic samples (#176), NOT another generic stale Yahoo retry.
 3. Run V101 verified issuer-news/calendar expansion, exact matching and data continuity; update news coverage scores.
 4. Prepare V103 freshness and venue identity joins while V102 provider terms are assessed; make real source proof gate for prices.
-5. Complete V104 rightfully archivable price history then promote a genuinely authorized market chart to Overview; develop V107 world index and V108 freight/mineral datasets independently when original sources are confirmed.
+5. Complete V104 rightfully archivable price history then **add** a genuinely authorized market chart to Overview **without removing or downgrading the existing macro charts, heatmap, global-market cards, watchlist, faster quote providers or scanner cadence**; develop V107 world index and V108 freight/mineral datasets independently when original sources are confirmed.
 6. Finalize V110 interface parity and V112 live QA against this scorecard, with V111 commercial entitlements tested separately.
 
 **Status discipline:** Checklists are plans until code, tests, source rights and production verification independently pass. Revision checkpoints every two releases, or immediately after a chart/nav/data-source change.
@@ -146,3 +146,12 @@ A bounded [V101b report-link crawler](V101B-ISSUER-IR-DOCUMENT-PIPELINE.md) now 
 
 **Provider status 21 Nov:** Nov 20 original enquiries already sent to Nasdaq Nordic EOD, Cboe EOD and EODHD; earlier Euronext. Gmail search found Nasdaq case #04325385 acknowledgement, no substantive feed/rights responses. Cboe's MiFID public trade download page explicitly limits commercial use; its section 6 EOD OHLC exemption is a *different product* and not automatically a primary Oslo/Nasdaq official close. [Nasdaq Nordic EOD](https://www.nasdaq.com/products/data/nordic-baltic/nordic-end-of-day-reports) allows contents redistribution under its separate EOD license, subject to obtaining suitable terms/delivery.
 
+
+## V104b — Permanent display and high-frequency-preservation contract (21 November 2026)
+
+**Explicit product requirement:** the daily EOD source for 500 companies is an **additive history and fallback feed**. It must **not** replace more frequently updated sources, hourly/other existing quote polling, previously working company/native and overview charts, sector heatmap, market map, global index cards, watchlist, or analytical visualizations. **Keep existing observations intact and timestamped**; do not downgrade scanner-derived comparable moves, market breadth or A/B alerts to unverified EOD-only signal states.
+
+- Price choice: on an equal/newer valid observation date, an existing frequent-source quote takes precedence; a rights-cleared and identity-matched *newer* daily close may fill a genuine gap, while the legacy source continues collecting and its values are preserved separately.
+- Daily bars are a distinct authorized line-chart layer. History series must use actual observed exchange sessions; no invented OHLC, daily tick interpolation, falsely live quote labels or blended reference-date changes.
+- Regression gating: protect homepage `sw-ws-heatmap`, macro chart and range controls, global-market pulse, watchlist and heatmap inspection controls, the existing scanner job, source freshness visibility and both desktop/mobile layouts. Test an empty/unavailable EOD source, fresher intraday quote, newer EOD fallback, historic backfill and mixed currency/venue.
+- Implementation: [V104b code and visual contract](V104B-PRICE-LAYERS-VISUALIZATION-CONTRACT.md) with pure presentation adapter and tests. **A code helper alone does not make new market prices or chart data live.** Future public UI work still needs provider display rights, verified identities, real bar observations, independent UI proof and real deployment.
