@@ -28,6 +28,10 @@ on:
       - 'company-cockpit-v110c.js'
       - 'company-workflow-v113.js'
       - 'secondary-markets-v114.js'
+      - 'brand/data-portal.js'
+      - 'brand/data-portal.css'
+      - 'tests/browser_check_data_products_v115.py'
+      - 'tests/test_data_portal_v115.mjs'
       - 'secondary-markets-v114.css'
       - 'tests/browser_check_secondary_v114.py'
       - 'core-research-v113.css'
@@ -66,6 +70,8 @@ jobs:
         run: python tests/browser_check_core_research_v113.py
       - name: V114 secondary-market source status and full-page keyboard flows
         run: python tests/browser_check_secondary_v114.py
+      - name: V115 source-safe public Data Products catalog and inquiry acceptance
+        run: python tests/browser_check_data_products_v115.py
       - name: V112 editorial routes, menu, theme, keyboard and screenshot checks
         run: python tests/browser_check_brand_navigation_v112.py
       - name: Capture checkout on desktop and mobile
