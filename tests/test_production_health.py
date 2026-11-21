@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 from production_health import audit,BASE,API
 class HealthTests(unittest.TestCase):
-    def run_fixture(self,drop=False,noindex=False):
+    def run_fixture(self,drop=False,noindex=False,now=None):
         rows=[{"id":str(i),"group":"monitored" if i<139 else "target","priceStatus":"scanner" if i<(151 if drop else 152) and not(drop and i==0) else "missing"} for i in range(500)]
         n=sum(r["priceStatus"]!="missing" for r in rows)
         def get(url):
@@ -16,10 +16,22 @@ class HealthTests(unittest.TestCase):
             if p=="data/signals.json":return json.dumps({"generated":"2026-11-19T21:00:00Z","companies":[{}]*139}),{}
             if p=="data/source-health.json":return json.dumps({"priceFreshness":{"status":"coverage_ok"}}),{}
             return '<html><head><link rel="canonical" href="'+BASE+p.split("?")[0]+'"></head><body>Company research</body></html>',{"x-robots-tag":"noindex"} if noindex else {}
-        return audit(get,datetime(2026,11,19,22,tzinfo=timezone.utc))
+        return audit(get,now or datetime(2026,11,19,22,tzinfo=timezone.utc))
     def test_known_gap_not_incident(self):
         d=self.run_fixture();self.assertEqual(d["status"],"ok");self.assertEqual(d["metrics"]["knownPriceGap"],348)
     def test_loss_of_prices_incident(self):
         d=self.run_fixture(drop=True);self.assertEqual(d["status"],"critical");self.assertIn("monitored_price_missing",[x["code"] for x in d["issues"]])
     def test_http_noindex_detected(self):
         self.assertEqual(self.run_fixture(noindex=True)["status"],"critical")
+
+    def test_overdue_weekday_scan_warns_even_if_pages_load(self):
+        d=self.run_fixture(now=datetime(2026,11,20,11,tzinfo=timezone.utc))
+        self.assertEqual(d["status"],"degraded")
+        self.assertIn("market_scan_overdue",[x["code"] for x in d["issues"]])
+    def test_weekend_refresh_warning_after_coverage_window(self):
+        d=self.run_fixture(now=datetime(2026,11,21,18,tzinfo=timezone.utc))
+        self.assertEqual(d["status"],"degraded")
+        self.assertIn("weekend_scan_overdue",[x["code"] for x in d["issues"]])
+    def test_overnight_snapshot_not_falsely_overdue(self):
+        d=self.run_fixture(now=datetime(2026,11,20,2,tzinfo=timezone.utc))
+        self.assertNotIn("market_scan_overdue",[x["code"] for x in d["issues"]])
