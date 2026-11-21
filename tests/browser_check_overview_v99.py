@@ -1,5 +1,5 @@
 """V99: empty and actual browser-saved selections, real source-dated prices."""
-import functools,http.server,json,threading
+import functools,http.server,json,threading,re
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
@@ -30,7 +30,11 @@ localStorage.setItem('stockwatch-v4-favorites',JSON.stringify(['AFISH.OL']));"""
       assert page.locator('#overviewWatchlist [data-watchlist-row="AUSS.OL"]').count()==1
       assert page.locator('#overviewWatchlist [data-watchlist-row="AFISH.OL"]').count()==1
       assert "No quantity or market value is assumed" in page.locator("#overviewWatchlist").inner_text()
-      assert "Last saved" in page.locator("#overviewWatchlist").inner_text()
+      # A real source observation can be "Reported" instead of retained "Last saved";
+      # either is valid, and unavailable quotes must be honestly identified.
+      for label in page.locator("#overviewWatchlist .sw99-watch-quote small").all_inner_texts():
+       assert (re.fullmatch(r"(?:Last saved|Reported) · \d{4}-\d{2}-\d{2}",label)
+               or label=="No authorized price observation connected"),label
       assert page.locator("#overviewWatchlist a[href='stocks.html']").count()==1
       assert page.locator("#overviewWatchlist a[href='terminal.html']").count()==1
      assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+2")
