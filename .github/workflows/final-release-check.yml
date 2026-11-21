@@ -572,6 +572,13 @@ jobs:
 
       - name: V110c real company research tabs and full report browser acceptance
         run: python tests/browser_check_company_cockpit_v110c.py
+      - name: V113 connected research and licensed-history regression
+        run: |
+          node --check v4.js
+          node --check research.js
+          node --check terminal.js
+          node --check company-workflow-v113.js
+          python tests/browser_check_core_research_v113.py
 
       - name: V110b compact research-page browser regression
         run: python tests/browser_check_density_v110b.py
