@@ -52,6 +52,10 @@ Coordinate cross-site visual standards with [Leivro master plan #172](https://gi
 See [Approved Stockwatch Design Target V1](APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md). The reference image is stored in the user's Library at `/Stockwatch/Design References/stockwatch-approved-full-width-overview-v1.png`. This is the **public UI direction without any right-side internal goals/style/palette panel**. The right column of the public dashboard is genuine research content. Source-aligned numbers only; concept imagery is illustrative. Apply the V90–V96 acceptance gates and preserve currently functioning data/heatmap fallbacks.
 
 
+## V116 integrated design acceptance — active release gate
+
+Read [V116 integrated design acceptance](V116-INTEGRATED-DESIGN-ACCEPTANCE.md) for exact V115 checkout defects, owner reference SHA-256, 19-route × 6-width × 2-theme browser evidence, source-offline and zoom proxy, unclosed issues, and the explicit rule that a green test does not mean final visual sign-off.
+
 ## 2026-11-21 V111–V116 — screenshot-to-reference gap and all underpages
 
 **Owner screenshots:** `image(20261121-161609).png` (top Overview) and `image(20261121-161602).png` (lower Overview) at approximately 1988px wide. Compare with the *approved* 1672×941 full-width reference recorded in [APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md](APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md). That reference is a **concept**, including illustrative prices, maps, events and watchlists, not an approved market data source. Retain all real-price/source/status guards and no internal design checklist in public pages.
