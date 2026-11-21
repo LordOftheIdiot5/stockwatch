@@ -12,7 +12,7 @@ class V110cCockpitTests(unittest.TestCase):
   for k in ('company-cockpit-v110c.css?v=110c','company-cockpit-v110c.js?v=110c'):
    self.assertIn(k,html)
   for k in ('sw110cMode','sw110cTab','Full report','Focused view','MutationObserver',
-            'section.hidden','advanced.length','setMode(false)','focus(\\'chart\\')'):
+            'section.hidden','advanced.length','setMode(false)',"focus('chart')"):
    self.assertIn(k,js)
   for forbidden in ('fetch(', 'XMLHttpRequest','WebSocket','innerHTML=', 'Math.random',
                     'localStorage.setItem', 'fake close','synthetic prices'):
