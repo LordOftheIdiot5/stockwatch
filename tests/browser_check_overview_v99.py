@@ -38,7 +38,11 @@ localStorage.setItem('stockwatch-v4-favorites',JSON.stringify(['AFISH.OL']));"""
      (ROOT/"workspace-previews").mkdir(exist_ok=True)
      filename=f"v99-watchlist-{width}-{preset}.png"
      page.screenshot(path=str(ROOT/"workspace-previews"/filename),animations="disabled")
-     results.append({"width":width,"preset":preset,"rows":page.locator("#overviewWatchlist [data-watchlist-row]").count(),"errors":errors})
+     panel=page.locator("#overviewWatchlist")
+     panel_rect=panel.bounding_box()
+     assert panel_rect and panel_rect["width"]<=width+1,panel_rect
+     panel.screenshot(path=str(ROOT/"workspace-previews"/f"v99-watchlist-panel-{width}-{preset}.png"),animations="disabled")
+     results.append({"width":width,"preset":preset,"rows":panel.locator("[data-watchlist-row]").count(),"panelWidth":round(panel_rect["width"]),"errors":errors})
      page.close()
    b.close()
  finally:
