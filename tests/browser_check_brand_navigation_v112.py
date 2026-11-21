@@ -43,12 +43,12 @@ def main():
          assert page.locator('main#main-content').count()==1
          assert page.locator('a[href="#main-content"]').count()==1
          assert page.locator('link[href*="workspace-navigation-v112.css"]').count()==1
-         assert page.locator('header nav a[href="terminal.html"]').count()==1
-         assert page.locator('header nav a[href="stocks.html"]').count()==1
-         assert page.locator('header nav a[href="search.html"]').count()==1
-         assert page.locator('header nav a[href="data-products.html"]').count()==1
+         assert page.locator('header nav[aria-label="Main navigation"] > a[href="terminal.html"]').count()==1
+         assert page.locator('header nav[aria-label="Main navigation"] > a[href="stocks.html"]').count()==1
+         assert page.locator('header nav[aria-label="Main navigation"] > a[href="search.html"]').count()==1
+         assert page.locator('header nav[aria-label="Main navigation"] > a[href="data-products.html"]').count()==1
          if route!='welcome.html':
-          assert page.locator('header nav a.sw112-active[aria-current="page"]').get_attribute('href')==route
+          assert page.locator('header nav[aria-label="Main navigation"] > a.sw112-active[aria-current="page"]').get_attribute('href')==route
          else:
           assert page.locator('header a.brand[aria-current="page"]').count()==1
          assert page.locator('.sw-mobile-drawer a[href="search.html"]').count()==1
