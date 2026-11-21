@@ -32,6 +32,7 @@ from last_known import load,company_row,context_rows
 import source_telemetry                                            # noqa: E402
 from price_freshness import comparison_date,price_quality,completed_market_baseline
 from price_quality_diagnostics import outcome as price_outcome,summarize as price_diagnostics
+from venue_session_probe import SessionProbe
 source_telemetry.install(sources)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -371,6 +372,7 @@ def main() -> int:
     movement_seeds=load(ROOT / "scripts" / "last-valid-movement-seeds.json")
     stamp=now.isoformat(timespec="seconds")
     price_reasons={}
+    session_probe=SessionProbe(comparison_date(now))
     for entry in watchlist:
         fresh=None
         data=None
@@ -387,6 +389,7 @@ def main() -> int:
         chosen=company_row(entry,fresh,prior.get(entry["ticker"]),now.date().isoformat(),stamp,previous.get("generated"),movement_seeds.get(entry["ticker"]))
         companies.append(chosen)
         price_reasons[entry["ticker"]]=price_outcome(entry,data,measured,prior.get(entry["ticker"]),chosen,price_error)
+        session_probe.add(entry,data,measured,chosen,price_reasons[entry["ticker"]])
 
     # The market baseline is the watchlist's own median move. If everything is
     # up three percent, a stock up four has moved one - and that is what counts.
@@ -624,7 +627,7 @@ def main() -> int:
         "marketPct": round(market, 2) if market is not None else None,
         "marketSampleSize": sample_size,
         "marketComparisonDate": target,
-        "priceDiagnostics": price_diagnostics(companies,price_reasons,target),
+        "priceDiagnostics": {**price_diagnostics(companies,price_reasons,target), "venueSessionProbe": session_probe.result()},
         "languages": sorted({l for _, ls in queries for l in ls}),
         "companies": companies,
         "alerts": sorted(alerts, key=lambda a: (
