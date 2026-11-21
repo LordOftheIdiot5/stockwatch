@@ -31,6 +31,13 @@ def main():
      assert all(x.count()==1 for x in (heat,companion,coverage,movers,watch))
      assert 'NOT market returns' in coverage.inner_text()
      assert ' / ' in coverage.locator('.sw110d-coverage-total strong').inner_text()
+     coverage.locator('.sw110e-world').wait_for(timeout=10000)
+     assert coverage.locator('.sw110e-world img[src$="world-land-ne110.svg"]').count()==1
+     assert coverage.locator('.sw110e-pin').count()==2
+     assert 'market movement' in coverage.locator('.sw110e-pin').first.get_attribute('aria-label')
+     coverage.locator('.sw110e-all-venues summary').click()
+     assert coverage.locator('.sw110d-venue').count()>=6
+     coverage.locator('.sw110e-all-venues summary').click()
      assert page.locator('.sw110d-movers').get_attribute('open') is None
      page.locator('.sw110d-movers summary').click()
      assert movers.is_visible()
