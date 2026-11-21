@@ -25,6 +25,7 @@
  }
  body[data-page=index] .sw98-primary .sw-overview-chart-controls label {
    display:flex;
+   flex-direction:row; /* override legacy stacked labels; one real control row */
    align-items:center;
    gap:5px;
    min-width:0;
