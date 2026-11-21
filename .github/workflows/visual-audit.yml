@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - 'scripts/visual_audit.py'
+      - 'sitewide-polish-v111.css'
+      - 'tests/browser_check_sitewide_v111.py'
+      - '*.html'
       - 'index.html'
       - 'news.html'
       - 'nasdaq-notices-v100.js'
@@ -34,7 +37,7 @@ permissions:
 jobs:
   screenshots:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -44,11 +47,13 @@ jobs:
         run: |
           python -m pip install playwright==1.56.0
           python -m playwright install --with-deps chromium
+      - name: V111 all-route desktop/mobile and expanded heatmap acceptance
+        run: python tests/browser_check_sitewide_v111.py
       - name: Capture checkout on desktop and mobile
         run: python scripts/visual_audit.py --output visual-audit/checkout
       - name: Capture public production pages
         if: always()
-        run: python scripts/visual_audit.py --base-url https://stocks.nordl.dev/ --output visual-audit/live --pages overview stocks company terminal shipping spreads calendar health
+        run: python scripts/visual_audit.py --base-url https://stocks.nordl.dev/ --output visual-audit/live --pages overview stocks company terminal shipping spreads calendar health news compare commodities shorts intelligence directory history research datasets search
         continue-on-error: true
       - name: Save screenshots and diagnostics
         if: always()
