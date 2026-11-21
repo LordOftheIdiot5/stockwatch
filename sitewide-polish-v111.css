@@ -29,6 +29,17 @@
     max-height:none;
   }
 }
+/* Match the SVG's actual 640 x 286 viewBox. Previous fixed 160–195px
+ * height letterboxed this source chart into the middle of a wide card. */
+@media (min-width:900px) {
+  body[data-page=index] .sw98-primary #overviewMacroPlot svg.sw-overview-chart-svg {
+    width:100%;
+    height:auto!important;
+    max-height:none!important;
+    aspect-ratio:640 / 286;
+    display:block;
+  }
+}
 body[data-page=index] .sw-ws-heatmap #workspaceHeatmap.sw-heat-expanded {
   max-height:none;
   overflow:visible;
