@@ -13,6 +13,7 @@ from datetime import datetime, timezone, date
 from pathlib import Path
 
 from price_freshness import comparison_date, price_quality
+from source_entitlements_v102 import validate as validate_entitlements
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -140,13 +141,12 @@ def build(coverage, signals, health, entitlements):
         if counts["monitored"+key.capitalize()] != expected_quality.get(key):
             raise ValueError("Per-company source status disagrees with published daily source health: "+key)
 
-    policies = entitlements.get("sources") or []
-    if not isinstance(policies, list):
-        raise ValueError("Invalid source permission registry")
+    policies = validate_entitlements(entitlements)["sources"]
     approved = 0
     for item in policies:
         flags = item.get("permissions") or {}
-        if all(flags.get(key) is True for key in ("productionCollection", "privateRetention", "publicDisplay")):
+        if (all(flags.get(key) is True for key in ("productionCollection", "privateRetention", "publicDisplay"))
+                and all(item["identity"].values())):
             approved += 1
 
     scorecard = {
@@ -172,7 +172,7 @@ def build(coverage, signals, health, entitlements):
             "identityNeedsReview": counts["identityNeedsReview"],
             "licensedHistory": counts["licensedHistory"],
             "historyMissing": counts["historyMissing"],
-            "rightsClearedCandidateProducts": approved,
+            "registryAuthorizedCandidateProducts": approved,
             "exchangeCertifiedDailyQuotes": None
         },
         "byVenue": [
