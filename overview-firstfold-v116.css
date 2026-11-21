@@ -1,0 +1,122 @@
+/* V116a: first-fold layout acceptance against the owner-approved 1672×941
+ * composition, keeping the full source-backed 640×286 chart viewBox, date, unit,
+ * provenance and all current research controls. Never synthesize an index. */
+@media (min-width:1320px) {
+ body[data-page=index] .sw98-primary {
+   align-items:start;
+   margin-block:7px 8px;
+   gap:11px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-chart>.sw-panel {
+   height:auto;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-chart .sw-panel-hd {
+   padding:9px 12px;
+ }
+ body[data-page=index] .sw98-primary #overviewMacro {
+   min-height:0;
+   padding:10px 12px 9px;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls {
+   display:grid;
+   grid-template-columns:minmax(0,1.55fr) minmax(0,1fr) minmax(0,1.2fr);
+   gap:7px;
+   margin:0 0 6px;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls label {
+   display:flex;
+   align-items:center;
+   gap:5px;
+   min-width:0;
+   margin:0;
+   font-size:11.5px;
+   line-height:1.25;
+   white-space:nowrap;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls select {
+   flex:1 1 auto;
+   min-width:0;
+   width:100%;
+   min-height:35px;
+   height:35px;
+   padding:5px 22px 5px 7px;
+   font-size:11.5px;
+   text-overflow:ellipsis;
+ }
+ body[data-page=index] #overviewMacroPlot {
+   display:grid;
+   grid-template-columns:minmax(0,1fr) auto;
+   align-items:center;
+   column-gap:6px;
+ }
+ body[data-page=index] #overviewMacroPlot .sw-overview-chart-value {
+   grid-column:1;
+   min-width:0;
+   margin:0 0 2px;
+ }
+ body[data-page=index] #overviewMacroPlot #overviewLensDetail {
+   grid-column:2;
+   text-align:right;
+   font-size:11.5px;
+   max-width:18ch;
+ }
+ body[data-page=index] #overviewMacroPlot svg.sw-overview-chart-svg {
+   grid-column:1/-1;
+   width:100%;
+   aspect-ratio:640/286;
+   height:auto!important;
+   max-height:none!important;
+ }
+ body[data-page=index] #overviewMacroPlot>p.sw-meta {
+   grid-column:1/-1;
+   margin:3px 0 0;
+   font-size:11.5px;
+   line-height:1.35;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary {
+   min-height:0;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news {
+   min-height:0;
+   max-height:375px;
+   overflow:auto;
+   scrollbar-width:thin;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news .sw-brief {
+   padding:9px 11px;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news .sw-brief h4 {
+   font-size:12.5px;
+   line-height:1.4;
+ }
+ body[data-page=index] .sw98-market-secondary {
+   margin:7px 0 10px;
+   gap:10px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110d-market-coverage,
+ body[data-page=index] .sw98-market-secondary .sw99-watchlist {
+   align-self:start;
+ }
+}
+@media(min-width:1320px) and (max-width:1530px){
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls label{
+   gap:3px;
+   font-size:11px;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls select{
+   padding-inline:5px 19px;
+   font-size:11px;
+ }
+ body[data-page=index] #overviewMacroPlot #overviewLensDetail{
+   max-width:12ch;
+ }
+}
+/* Do not compromise source-information or taps on smaller layouts. */
+@media(max-width:1319px){
+ body[data-page=index] #overviewMacroPlot svg.sw-overview-chart-svg{
+   max-width:100%;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page=index] .sw98-primary * {scroll-behavior:auto;}
+}
