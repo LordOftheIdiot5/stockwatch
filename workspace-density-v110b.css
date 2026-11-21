@@ -169,3 +169,39 @@ body[data-page=terminal]:not(.sw110b-spacious) .sw52-layout .sw-terminal-scroll{
    font-size:12.5px;line-height:1.35;
  }
 }
+
+
+/* 1440px card fit: the original four-column Movers row otherwise clips the
+   last prices and daily changes inside the narrower 3-column terminal panel. */
+@media(min-width:1320px){
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-listline{
+   grid-template-columns:minmax(0,1fr) minmax(55px,75px) minmax(52px,65px);
+   gap:5px;padding:7px 9px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-listline>:nth-child(2){
+   display:none;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-price,
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-change{
+   min-width:0;text-align:right;font-size:11px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-company{
+   min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;
+ }
+ /* Keep labels in the accessibility tree while getting all functional filter
+    controls into the same compact row, like the approved terminal screenshot. */
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>label{
+   position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+   overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+ }
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>select{
+   min-width:95px;flex:1 1 105px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>#workspaceCoverage{
+   flex:1.4 1 145px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>#workspaceHeatCount,
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>.sw-ws-legend{
+   flex-basis:100%;
+ }
+}
