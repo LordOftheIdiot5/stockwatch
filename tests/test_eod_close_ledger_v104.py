@@ -159,6 +159,20 @@ class TestV104DailyClose(unittest.TestCase):
             self.collect(rows=[dict(bar(), sessionEvidenceUrl="http://example.org/")])
         self.assertFalse(self.db.exists())
 
+    def test_cboe_alternative_eod_keeps_execution_venue_not_primary_exchange_label(self):
+        rights = registry(display=True)
+        rights["sources"][0]["observationKind"] = "alternative_venue_eod_candidate"
+        rights["sources"][0]["venues"] = ["Cboe Europe BXE"]
+        linked = mappings()
+        linked["mappings"][0]["mic"] = "BATE"
+        first = dict(bar("2026-11-19", "275.43"), mic="BATE", quoteKind="alternative_venue_eod")
+        second = dict(bar("2026-11-20", "280.22"), mic="BATE", quoteKind="alternative_venue_eod")
+        r = self.collect([first, second], rights=rights, maps=linked)
+        self.assertEqual(r["records"], 2)
+        rows = chart_rows(self.db, SOURCE, "AAPL", rights)["bars"]
+        self.assertTrue(all(v["mic"] == "BATE" for v in rows))
+        self.assertTrue(all(v["kind"] == "alternative_venue_eod" for v in rows))
+
     def test_alternative_venue_is_not_official_primary_close(self):
         rights = registry()
         rights["sources"][0]["observationKind"] = "alternative_venue_eod_candidate"
