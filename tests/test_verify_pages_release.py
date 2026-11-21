@@ -29,6 +29,7 @@ class Tests(unittest.TestCase):
             finally:m.ROOT=prior
     def test_v98_new_css_and_v97_source_health_assets_are_deploy_verified(self):
         for path in ("index.html","v4.js","overview-parity-v98.css",
+                     "nasdaq-notices-v100.js","nasdaq-notices-v100.css","news.html",
                      "global-market-pulse.js","heatmap-experience-v93.js",
                      "overview-watchlist-v99.js","overview-watchlist-v99.css",
                      "health.html","price-evidence-v97.js","price-evidence-v97.css"):

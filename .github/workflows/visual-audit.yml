@@ -4,6 +4,10 @@ on:
     paths:
       - 'scripts/visual_audit.py'
       - 'index.html'
+      - 'news.html'
+      - 'nasdaq-notices-v100.js'
+      - 'nasdaq-notices-v100.css'
+      - 'tests/browser_check_nasdaq_notices_v100.py'
       - 'v4.js'
       - 'overview-parity-v98.css'
       - 'tests/browser_check_overview_v98.py'

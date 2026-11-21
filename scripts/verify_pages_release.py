@@ -10,7 +10,8 @@ PATHS=("index.html","stocks.html","company.html","calendar.html","price-history.
        "v4.js","research.js","freshness-v96.css","overview-parity-v98.css",
        "global-market-pulse.js","heatmap-experience-v93.js",
        "overview-watchlist-v99.js","overview-watchlist-v99.css",
-       "price-evidence-v97.js","price-evidence-v97.css")
+       "price-evidence-v97.js","price-evidence-v97.css",
+       "news.html","nasdaq-notices-v100.js","nasdaq-notices-v100.css")
 TITLE=re.compile(rb"<title>(.*?)</title>",re.I|re.S)
 
 def matched(local,remote):

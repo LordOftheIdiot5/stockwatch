@@ -99,3 +99,40 @@ TWSE TAIEX retained; add separately licensed daily TPEx and cross-market Formosa
 
 ## V89h phase 1 — existing private R2 infrastructure
 Extend daily observation archive and public research catalog to the three reviewed Taiwan daily index feeds and dated ESMA identity snapshot. Verify exact source and licence, archive content-addressed index histories without volatile retrieval metadata, verify ESMA pointer and hash; preserve old versions. Extend approved BLS public-domain series set. No raw exchange data, SEC ownership/insider evidence, credentials or extra service introduced by this phase. Live R2 write validation required before marking operational. Remaining V89h work: independently reviewed SEC records, durable receipt/index layer and retrieval checks; V90 interface follows.
+
+
+## V100–V112 — price, news and market data expansion (2026-11-21; active backlog)
+
+**Goal:** Give Stockwatch substantially more original information every day: source-dated prices, company news, SEC and Nordic filings, global exchange indices, fundamental statements, commodity/energy series, freight and issuer relationships. Add real coverage and honest gaps, not mockups. The approved responsive UI was deployed in V98–V99, but price coverage remains the largest blocker.
+
+**Audit baseline, not a fresh-price claim:** 139/139 monitored listings have saved last-known prices; **only 2/139 are confirmed for the completed 20 November 2026 session**, 132 unconfirmed, 3 older and 2 no-volume, with 0/12 A/B pairs completed-session comparable. The provider often returned 19 November daily bars despite transport success. News archive: 1,899 saved metadata records, of which 430 are strongly issuer-linked and 1,390 are non-review, non-duplicate. Separate SEC filing metadata covers the 50 US seed company CIKs. These counts will change with scans; use the dated source-health report instead of copying them into static public KPIs.
+
+| Phase | Priority | Deliverable | Acceptance / dependency |
+|---|---|---|---|
+| **V100** | P0 | Additional **official Nasdaq Nordic RSS** company-investor releases and exchange notices on News page. Collect source title, URL and publication time only; do not auto-assign a ticker | Bounded official RSS, safe parser, retained older observations, source-status and browser QA. Preserve original notice timestamp on outage |
+| **V101** | P0 | Expand original company disclosures: Oslo NewsWeb, MFN, Nasdaq, issuer IR, SEC EDGAR; improve 500-listing news completeness, entity matching, multilingual headlines and event dedup | 7/30-day source-verified counts per company and exchange, strong CIK/issuer codes, archival recovery; no headline co-mention promoted to filing |
+| **V102** | P0 | **European price-source rights and access**: Cboe EOD, Euronext/Oslo, Nasdaq Nordic, XETRA and other venues | Confirm per-product collection, retention, web-display and resale rights separately; evaluate cost, endpoint, symbol+ISIN+MIC+currency and trade semantics |
+| **V103** | P0 | Fix true price freshness: exchange-local sessions, provider older-bar diagnostics, approved alternative source and verified comparison | Measurable completed-session eligible/139 and per-exchange/500 coverage, without promoting cached observations, 200 HTTP responses, or stale dates to current signals |
+| **V104** | P0 | Licensed individual equity daily-history ingestion, immutable R2, D1 index, correction/revision replay, chart history | Only rights-cleared OHLCV published; last-known fallback separately dated; 30/90/365-day gaps never interpolated |
+| **V105** | P1 | US coverage: SEC filings/statement facts/insider/13F and licensed US quotes for 50 seed issuer identities | SEC fair-access agent; filings are not presumed earnings, contracts or dividends; no unofficial stock-close labels |
+| **V106** | P1 | EU fundamentals: ESEF, national registries, issuer reports, LEI/ISIN and fiscal-period comparisons | Reported numbers and units/revisions, identical issuer across A/B shares, no inferred quarterly result |
+| **V107** | P1 | World market pulse with rights-cleared Nordic, US, Japan, Asian and EU exchange indices | Real exchange session/source/date and index-level rights; Taiwan current feeds stay labelled Taiwan, not a global substitute |
+| **V108** | P1 | More commodity, FX, rate, industrial and freight history: EIA, USDA, ECB, Norges Bank, Eurostat, World Bank and Korea Customs container-cost data | Source permits reuse; state original units, period, region and rate versus index/proxy; restricted Baltic/Braemar sources remain gated |
+| **V109** | P1 | Verified company supplier/customer/ownership/financing evidence graph linked to real filings and original reports | Exact counterparties, dated relationship, source URL, contract commitments separate from paid cash |
+| **V110** | P2 | Company page research density, historical charts, watchlist tools, quality filters and relevance-first news | Tested at mobile and desktop; no empty undocumented widgets, no invented valuation metrics |
+| **V111** | P2 | Commercial data catalog/API with entitlement controls and acquisition-ready source evidence | Separate private archiving, public displays, resale/export and per-field rights; no new paid contracts without approval |
+| **V112** | P2 | Independent 500-listing identity/price/news/fundamental coverage audit, production and revenue readiness | Check actual deployed assets, scanner runs, data freshness and archived recovery; report unfilled gaps explicitly |
+
+### Source acquisition tracker and rules
+
+**Prices:** Existing Yahoo chart-based scanner is reference-only for rights and heavily older-session-limited. Cboe Europe EOD policy may exempt certain EOD distribution, but venue trade data, entitlement, access and retention must be verified; it is not an Oslo or Nasdaq primary-market official close. Nasdaq Nordic EOD and Euronext/Oslo need source-specific terms. Evaluate direct exchanges and US vendors only if public redistribution and storage are authorized. Add provider identity/quote-age diagnostics before scaling. Never claim all 500 are priced because 139 monitored last-known rows exist.
+
+**News:** Oslo NewsWeb, MFN and Google News outbound headlines are already connected; SEC filing metadata is separately collected for the US seed cohort. V100 adds the official Nasdaq Nordic RSS list as an independent original-source section; official notices are not automatically issuer-matched. Next link issuer codes/CIKs and true regulatory events, preserving article copyright, source attribution and local-language original. No entire article scraping or fabricated headlines.
+
+**Fundamentals:** SEC Company Facts and filing records are implemented for the US seed; add EU ESEF and national filings with fiscal period and revision matching. Identify issuer versus listed share class.
+
+**Macro and freight:** Existing ECB/Norges Bank/FRED/EIA/USDA/Eurostat and Taiwan index series are dated and unit-specific. Add more source-licensed official series, differentiate official Baltic freight rate from freight proxy/index and actual historical customs cost. Avoid made-up indices, prices and shipping rates.
+
+**Execution order:** Inventory → official endpoint/terms evidence → bounded fetch and schema validation → exact instrument/issuer mapping → source-dated append-only archive → retention and redistribution permissions → source-labelled page → visual + regression tests → published-file checksum. For every provider track last attempt, last successful fetch, latest actual observation, total records, target listings, matching status, source URL, permission basis, failures and stale fallback. Count unique issuers separately from listings and A/B securities. Maintain source and baseline data in GitHub; no subscription purchase without user approval.
+
+**Workplan tracking:** Design issue #165 and price-quality issue #176 remain open. Each new phase requires an issue/PR, measurable acceptance, verified deployment and a retrospective with actual source counts; the table above is a backlog, not claims of delivery.
