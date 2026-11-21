@@ -1,5 +1,10 @@
-name: Issuer IR original report discovery (manual pilot)
+name: Issuer IR original report discovery (bounded pilot)
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/issuer-ir-discovery.yml'
+      - 'scripts/issuer_ir_sources_v101.json'
   workflow_dispatch:
     inputs:
       execute_live:
@@ -23,10 +28,10 @@ jobs:
           python -m unittest discover -s tests -p 'test_issuer_ir_reports_v101.py' -v
           python scripts/issuer_ir_reports_v101.py
       - name: Discover original issuer IR links
-        if: ${{ inputs.execute_live == true }}
+        if: ${{ github.event_name == 'push' || inputs.execute_live == true }}
         run: python scripts/issuer_ir_reports_v101.py --network --max-sources 4 --out data/issuer-report-discovery-v101.json
       - name: Save metadata candidates for human source-and-rights review
-        if: ${{ inputs.execute_live == true }}
+        if: ${{ github.event_name == 'push' || inputs.execute_live == true }}
         uses: actions/upload-artifact@v4
         with:
           name: issuer-ir-link-candidates-v101
