@@ -23,7 +23,13 @@ function catalog(data,index,coverage){
 }
 function exportMetadata(rows){return JSON.stringify({
  notice:'Descriptive metadata only. No underlying data, commercial redistribution entitlement, or service-level agreement.',
- products:rows.map(({route,...p})=>p)},null,2)}
+ products:rows.map(p=>({
+  id:p.id,title:p.title,category:p.category,description:p.description,
+  status:p.status,sourceUrl:p.sourceUrl,rights:p.rights,
+  commercialStatus:p.commercialStatus,kind:p.kind,
+  count:p.count,countUnit:p.countUnit,series:p.series,
+  fields:Array.isArray(p.fields)?p.fields.slice():[]
+ }))},null,2)}
 function schemaPreview(row){
  return JSON.stringify({
   notice:'Proposed field-name metadata; not a sample record or active API response.',
