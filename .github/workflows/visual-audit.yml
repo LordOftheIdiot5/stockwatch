@@ -4,6 +4,9 @@ on:
     paths:
       - 'scripts/visual_audit.py'
       - 'sitewide-polish-v111.css'
+      - 'brand/workspace-navigation-v112.css'
+      - 'brand/workspace-navigation-v112.js'
+      - 'tests/browser_check_brand_navigation_v112.py'
       - 'tests/browser_check_sitewide_v111.py'
       - '*.html'
       - 'index.html'
@@ -49,6 +52,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: V111 all-route desktop/mobile and expanded heatmap acceptance
         run: python tests/browser_check_sitewide_v111.py
+      - name: V112 editorial routes, menu, theme, keyboard and screenshot checks
+        run: python tests/browser_check_brand_navigation_v112.py
       - name: Capture checkout on desktop and mobile
         run: python scripts/visual_audit.py --output visual-audit/checkout
       - name: Capture public production pages

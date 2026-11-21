@@ -1,0 +1,95 @@
+/* V112 — connected native navigation for five editorial research pages.
+   Keep data, source state and all market panels untouched. */
+body.sw-brand-v47.sw112-connected{--sw112-accent:var(--mint,#59e5bd)}
+body.sw-brand-v47.sw112-connected>header{
+ max-width:none;min-height:74px;padding:10px clamp(14px,1.7vw,28px);
+ align-items:center;flex-wrap:nowrap;gap:clamp(14px,2vw,28px);
+ border-bottom:1px solid var(--edge)
+}
+body.sw-brand-v47.sw112-connected>header>a.brand{
+ flex:0 0 auto;width:auto;height:auto;min-height:51px;max-width:none;
+ display:inline-flex;align-items:center;gap:9px;margin:0;
+ padding:4px 8px 4px 0;border:0;border-radius:0;
+ background:none!important;box-shadow:none;text-transform:uppercase
+}
+body.sw-brand-v47.sw112-connected>header>a.brand>*{opacity:1;pointer-events:auto}
+body.sw-brand-v47.sw112-connected>header>a.brand img{
+ width:46px;height:46px;object-fit:contain;display:block
+}
+body.sw-brand-v47.sw112-connected>header>a.brand span{
+ font-size:15px;line-height:1.05;letter-spacing:.005em;
+ color:var(--ink);font-weight:800;display:block
+}
+body.sw-brand-v47.sw112-connected>header>a.brand span::before{
+ content:"NORDL";display:block;margin-bottom:3px;
+ font-size:19px;letter-spacing:.07em;color:var(--ink);font-weight:800
+}
+body.sw-brand-v47.sw112-connected>header>nav[aria-label="Main navigation"]{
+ display:flex;align-items:center;justify-content:flex-end;gap:clamp(3px,.55vw,9px);
+ flex-wrap:nowrap;margin-left:auto;min-width:0;font-size:12.5px;line-height:1.4
+}
+body.sw-brand-v47.sw112-connected>header>nav>a{
+ display:inline-flex;align-items:center;justify-content:center;
+ min-height:39px;white-space:nowrap;padding:8px clamp(7px,.7vw,12px);
+ border:1px solid transparent;border-radius:9px;color:var(--muted);font-weight:700
+}
+body.sw-brand-v47.sw112-connected>header>nav>a:is(:hover,:focus-visible),
+body.sw-brand-v47.sw112-connected>header>nav>a.sw112-active{
+ color:var(--sw112-accent);border-color:var(--edge);background:var(--soft)
+}
+body.sw-brand-v47.sw112-connected>header .sw-brand-more>summary{
+ display:flex;align-items:center;min-height:39px;padding:8px 10px;
+ border-radius:9px;white-space:nowrap;color:var(--ink)
+}
+body.sw-brand-v47.sw112-connected>header #brandTheme{
+ min-width:39px;min-height:39px;padding:7px;border-radius:9px
+}
+body.sw-brand-v47.sw112-connected>main{
+ max-width:none;margin-inline:auto;padding-left:clamp(15px,2vw,34px);
+ padding-right:clamp(15px,2vw,34px);min-width:0
+}
+body.sw-brand-v47.sw112-connected>main:focus{outline:none}
+body.sw-brand-v47.sw112-connected>main:focus-visible{
+ outline:2px solid var(--sw112-accent);outline-offset:-3px
+}
+body.sw-brand-v47.sw112-connected>footer{max-width:none}
+.sw112-skip{
+ position:absolute;z-index:1000;top:-120px;left:12px;
+ padding:9px 13px;border:2px solid var(--sw112-accent);
+ border-radius:9px;color:var(--ink);background:var(--surface);font-weight:700
+}
+.sw112-skip:focus{top:8px}
+body.sw-brand-v47.sw112-connected .sw95-skip:focus{top:8px}
+body.sw-brand-v47.sw112-connected .sw112-more-current>summary{
+ color:var(--sw112-accent);background:var(--soft)
+}
+body.sw-brand-v47.sw112-connected :is(.sw-mobile-drawer,.sw-brand-drawer) a.active{
+ color:var(--sw112-accent);background:var(--soft)
+}
+body.sw-brand-v47.sw112-connected :is(a,button,summary,input,select):focus-visible{
+ outline:2px solid var(--sw112-accent);outline-offset:2px
+}
+@media(min-width:1051px) and (max-width:1280px){
+ body.sw-brand-v47.sw112-connected>header>nav>a.sw112-external,
+ body.sw-brand-v47.sw112-connected>header>nav>a[href="research.html"]{display:none}
+}
+@media(max-width:1050px){
+ body.sw-brand-v47.sw112-connected>header{min-height:65px;gap:12px}
+ body.sw-brand-v47.sw112-connected>header>nav>a,
+ body.sw-brand-v47.sw112-connected>header>nav .sw-brand-more{display:none}
+ body.sw-brand-v47.sw112-connected>header>a.brand img{width:40px;height:40px}
+ body.sw-brand-v47.sw112-connected>header>a.brand span{font-size:13px}
+ body.sw-brand-v47.sw112-connected>header>a.brand span::before{font-size:17px}
+ body.sw-brand-v47.sw112-connected>header #brandTheme{min-width:44px;min-height:44px}
+}
+@media(max-width:390px){
+ body.sw-brand-v47.sw112-connected>header{padding:8px 14px}
+ body.sw-brand-v47.sw112-connected>header>a.brand{min-width:0}
+ body.sw-brand-v47.sw112-connected>header>a.brand img{width:36px;height:36px}
+ body.sw-brand-v47.sw112-connected>header>a.brand span::before{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.sw-brand-v47.sw112-connected *,
+ body.sw-brand-v47.sw112-connected *::before,
+ body.sw-brand-v47.sw112-connected *::after{scroll-behavior:auto!important}
+}
