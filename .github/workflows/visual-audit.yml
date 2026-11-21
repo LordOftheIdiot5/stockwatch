@@ -26,6 +26,13 @@ on:
       - 'brand/world-land-ne110.svg'
       - 'company-cockpit-v110c.css'
       - 'company-cockpit-v110c.js'
+      - 'company-workflow-v113.js'
+      - 'core-research-v113.css'
+      - 'tests/browser_check_core_research_v113.py'
+      - 'research.js'
+      - 'terminal.js'
+      - 'compare.html'
+      - 'spreads.html'
       - 'tests/browser_check_company_cockpit_v110c.py'
       - 'tests/browser_check_density_v110b.py'
       - 'company.html'
@@ -52,6 +59,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: V111 all-route desktop/mobile and expanded heatmap acceptance
         run: python tests/browser_check_sitewide_v111.py
+      - name: V113 company navigation and history-source browser checks
+        run: python tests/browser_check_core_research_v113.py
       - name: V112 editorial routes, menu, theme, keyboard and screenshot checks
         run: python tests/browser_check_brand_navigation_v112.py
       - name: Capture checkout on desktop and mobile

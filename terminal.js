@@ -54,7 +54,11 @@ function chart(host,series,onWindow){
 }
 async function render({root,companies,universe,signals,context,licensedPrices}){
  const screener=window.StockwatchScreener,session=screener?.comparisonDate(signals?.generated),comparable=r=>screener?.comparable(r,session)===true;const pref=loadPrefs(),known=new Map(universe.map(r=>[r.ticker,r]));
- let selected=known.has(pref.selected)?pref.selected:companies.find(r=>!r.unavailable)?.ticker||universe[0]?.ticker||'';
+ // A user-directed company link takes priority over an older browser-local
+ // workspace, but only when the ticker is an exact known listing identifier.
+ const linkedTicker=new URLSearchParams(location.search).get('ticker');
+ let selected=linkedTicker&&known.has(linkedTicker)?linkedTicker:
+   known.has(pref.selected)?pref.selected:companies.find(r=>!r.unavailable)?.ticker||universe[0]?.ticker||'';
  let sector=typeof pref.sector==='string'?pref.sector:'all',query='',pinned=new Set(Array.isArray(pref.pinned)?pref.pinned.filter(x=>known.has(x)):[]),watchOnly=pref.watchOnly===true,days=[30,90,365,0].includes(pref.days)?pref.days:365,mode=pref.mode==='raw'?'raw':'normalized';
  const results=await Promise.allSettled([get('data/open-data.json'),get('data/economic-feeds.json')]);
  const series=results.flatMap(r=>r.status==='fulfilled'?r.value.series||[]:[]).filter(s=>s.key&&safeUrl(s.sourceUrl)&&points(s.history).length>=2);
