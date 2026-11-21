@@ -1,0 +1,34 @@
+name: Issuer IR original report discovery (manual pilot)
+on:
+  workflow_dispatch:
+    inputs:
+      execute_live:
+        description: 'Request up to four curated issuer IR landing pages (robots respected); candidate metadata only'
+        required: true
+        default: false
+        type: boolean
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Validate metadata-only issuer discovery
+        run: |
+          python -m unittest discover -s tests -p 'test_issuer_ir_reports_v101.py' -v
+          python scripts/issuer_ir_reports_v101.py
+      - name: Discover original issuer IR links
+        if: ${{ inputs.execute_live == true }}
+        run: python scripts/issuer_ir_reports_v101.py --network --max-sources 4 --out data/issuer-report-discovery-v101.json
+      - name: Save metadata candidates for human source-and-rights review
+        if: ${{ inputs.execute_live == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: issuer-ir-link-candidates-v101
+          path: data/issuer-report-discovery-v101.json
+          retention-days: 7

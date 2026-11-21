@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-21",
+  "notice": "Original issuer-owned IR landing pages. Listing IDs are watchlist matches, not fully verified ISIN/LEI security identities. Discovery metadata only; full document retention, redistribution and commercial fact export are not granted.",
+  "sources": [
+    {
+      "ticker": "SALM.OL",
+      "issuer": "SalMar ASA",
+      "landingPage": "https://www.salmar.no/en/investor/reports-presentations/",
+      "allowedHosts": [
+        "www.salmar.no",
+        "salmar.no",
+        "ml-eu.globenewswire.com"
+      ],
+      "evidenceUrl": "https://www.salmar.no/en/investor/reports-presentations/",
+      "documentRetentionApproved": false,
+      "publicDocumentDisplayApproved": false
+    },
+    {
+      "ticker": "AUSS.OL",
+      "issuer": "Austevoll Seafood ASA",
+      "landingPage": "https://www.auss.no/investor/results-webcast/",
+      "allowedHosts": [
+        "www.auss.no",
+        "auss.no"
+      ],
+      "evidenceUrl": "https://www.auss.no/investor/results-webcast/",
+      "documentRetentionApproved": false,
+      "publicDocumentDisplayApproved": false
+    },
+    {
+      "ticker": "GJF.OL",
+      "issuer": "Gjensidige Forsikring ASA",
+      "landingPage": "https://www.gjensidige.com/investor-relations/reports-and-presentations",
+      "allowedHosts": [
+        "www.gjensidige.com",
+        "gjensidige.com",
+        "mb.cision.com"
+      ],
+      "evidenceUrl": "https://www.gjensidige.com/investor-relations/reports-and-presentations",
+      "documentRetentionApproved": false,
+      "publicDocumentDisplayApproved": false
+    },
+    {
+      "ticker": "ANDF.OL",
+      "issuer": "Andfjord Salmon AS",
+      "landingPage": "https://www.andfjord.no/",
+      "allowedHosts": [
+        "www.andfjord.no",
+        "andfjord.no"
+      ],
+      "evidenceUrl": "https://www.andfjord.no/",
+      "documentRetentionApproved": false,
+      "publicDocumentDisplayApproved": false
+    }
+  ]
+}
