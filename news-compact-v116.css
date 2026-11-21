@@ -31,6 +31,26 @@
    flex:0 0 auto;
    max-width:calc(100vw - 120px);
  }
+ /* The legacy More drawer was laid out relative to the last 5-column tab,
+    which places its right-hand menu links ~5px beyond a 320px phone. The
+    drawer belongs to the viewport, not that narrow grid cell. */
+ body[data-page=news] .sw-mobile-drawer{
+   position:fixed;
+   inset:auto 8px calc(66px + env(safe-area-inset-bottom,0px));
+   width:calc(100vw - 16px);
+   max-width:660px;
+   max-height:min(68dvh,620px);
+   min-width:0;
+   box-sizing:border-box;
+   margin-inline:auto;
+ }
+ body[data-page=news] .sw-mobile-more:not([open])>.sw-mobile-drawer {
+   display:none;
+ }
+ body[data-page=news] .sw-mobile-drawer :is(section,section>div,a,span){
+   min-width:0;
+   max-width:100%;
+ }
  body[data-page=news] .tablewrap,
  body[data-page=news] .sw-tablewrap {
    display:block;
