@@ -24,9 +24,17 @@ def main():
      assert control.input_value()=='observed'
      heat=page.locator('.sw98-market-secondary .sw-ws-heatmap')
      companion=page.locator('.sw98-market-secondary .sw110-heat-companion')
-     movers=companion.locator('.sw-panel').first
+     coverage=page.locator('.sw98-market-secondary .sw110d-market-coverage')
+     coverage.locator('.sw110d-coverage-total strong').wait_for(timeout=10000)
+     movers=page.locator('.sw110d-movers .sw-panel')
      watch=companion.locator('#overviewWatchlist')
-     assert all(x.count()==1 for x in (heat,companion,movers,watch))
+     assert all(x.count()==1 for x in (heat,companion,coverage,movers,watch))
+     assert 'NOT market returns' in coverage.inner_text()
+     assert ' / ' in coverage.locator('.sw110d-coverage-total strong').inner_text()
+     assert page.locator('.sw110d-movers').get_attribute('open') is None
+     page.locator('.sw110d-movers summary').click()
+     assert movers.is_visible()
+     page.locator('.sw110d-movers summary').click()
      assert 'No saved companies yet' in watch.inner_text()
      assert page.locator('.sw98-intelligence-rail .sw-overview-news').count()==1
      assert page.locator('#globalMarketPulse').count()==1
@@ -48,16 +56,16 @@ def main():
      rail=page.locator('.sw98-intelligence-rail')
      assert chart.bounding_box()['y'] < heat.bounding_box()['y']
      if width>=1320:
-      # V110b uses CSS display:contents to put real movers and watchlist
-      # alongside the heatmap as independent columns. The wrapper has no box.
-      panels=companion.locator(':scope > .sw-panel')
-      assert panels.count()==2
-      for i in range(2):
-       assert abs(heat.bounding_box()['y']-panels.nth(i).bounding_box()['y'])<6
-     elif width>=1200:
-      assert abs(heat.bounding_box()['y']-companion.bounding_box()['y'])<6
+      # V110d: heatmap, honest exchange coverage and watchlist occupy three
+      # first-screen columns. Original movers remain under a reversible disclosure.
+      for panel in (coverage,watch):
+       assert abs(heat.bounding_box()['y']-panel.bounding_box()['y'])<6
+      assert chart.bounding_box()['height']>240
+     elif width>=900:
+      assert abs(heat.bounding_box()['y']-coverage.bounding_box()['y'])<6
+      assert watch.bounding_box()['y']>=coverage.bounding_box()['y']
      else:
-      assert companion.bounding_box()['y']>=heat.bounding_box()['y']
+      assert coverage.bounding_box()['y']>=heat.bounding_box()['y']
      if width>=1320:
       breadth=page.locator('.sw98-primary .sw92-focus-summary')
       news=page.locator('.sw98-primary .sw-overview-news')

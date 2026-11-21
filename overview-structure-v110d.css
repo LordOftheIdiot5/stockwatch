@@ -1,0 +1,124 @@
+/* V110d: rebalance by product hierarchy, not by making every label smaller.
+   Data permissions remain authoritative: coverage bars are NOT market returns. */
+body[data-page=index] .sw-side .sw-logo {
+  min-height:58px;max-width:none;margin:14px 11px 20px;padding:4px 5px;
+  border:0;border-radius:0;background:none!important;box-shadow:none;
+}
+body[data-page=index] .sw-side .sw-logo>span {opacity:1;pointer-events:auto}
+body[data-page=index] .sw-side .sw-logo .sw-logo-mark {flex:none;width:38px;height:38px}
+body[data-page=index] .sw-side .sw-logo .sw-logo-text {
+  font-size:20px;line-height:1.08;letter-spacing:-.045em;color:var(--sw-text);
+}
+body[data-page=index] .sw-side .sw-logo .sw-logo-text::before {
+  content:"NORDL";display:block;color:var(--sw-text);
+  font-size:13px;letter-spacing:.09em;line-height:1.1;font-weight:800;
+}
+body[data-page=index] .sw-side .sw-logo .sw-logo-text small {
+  font-size:8.5px;letter-spacing:.07em;margin-top:3px;
+}
+body[data-page=index] .sw110d-market-coverage {min-width:0;margin:0;overflow:hidden}
+body[data-page=index] .sw110d-market-coverage .sw-panel-hd {
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+}
+body[data-page=index] .sw110d-market-coverage .sw-panel-hd h2 {font-size:16px;margin:0}
+body[data-page=index] .sw110d-market-coverage .sw-panel-hd a {font-size:12px}
+body[data-page=index] .sw110d-coverage-body {padding:12px 14px}
+body[data-page=index] .sw110d-coverage-total {
+  display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+}
+body[data-page=index] .sw110d-coverage-total strong {
+  font:800 clamp(21px,1.8vw,28px)/1.1 Manrope,system-ui,sans-serif;
+  color:var(--sw-text);
+}
+body[data-page=index] .sw110d-coverage-total span,
+body[data-page=index] .sw110d-coverage-caption {
+  font-size:12px;line-height:1.4;color:var(--sw-muted);
+}
+body[data-page=index] .sw110d-coverage-caption {margin:5px 0 9px}
+body[data-page=index] .sw110d-venue-list {display:grid;gap:8px}
+body[data-page=index] .sw110d-venue-heading {
+  display:flex;align-items:baseline;justify-content:space-between;gap:7px;
+  font-size:12px;line-height:1.35;
+}
+body[data-page=index] .sw110d-venue-heading strong {font-weight:650;color:var(--sw-text)}
+body[data-page=index] .sw110d-venue-heading span {font-variant-numeric:tabular-nums;color:var(--sw-muted)}
+body[data-page=index] .sw110d-venue-track {
+  position:relative;height:6px;border-radius:20px;overflow:hidden;
+  background:color-mix(in srgb,var(--sw-red) 38%,var(--sw-card));
+}
+body[data-page=index] .sw110d-venue-fill {
+  display:block;height:100%;border-radius:inherit;background:var(--sw-mint);
+}
+body[data-page=index] .sw110d-coverage-foot {margin:10px 0 0;font-size:11px;line-height:1.45}
+body[data-page=index] .sw110d-movers {
+  margin:5px 0 10px;border:1px solid var(--sw-edge);border-radius:10px;
+  background:var(--sw-card);
+}
+body[data-page=index] .sw110d-movers>summary {
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  min-height:38px;padding:8px 12px;font-size:12px;cursor:pointer;
+}
+body[data-page=index] .sw110d-movers>summary span {color:var(--sw-mint)}
+body[data-page=index] .sw110d-movers>.sw-panel {border:0;border-top:1px solid var(--sw-edge);margin:0}
+body[data-page=index] .sw110d-movers>summary:focus-visible {outline:3px solid var(--sw-mint);outline-offset:2px}
+@media(min-width:1320px) {
+  body[data-page=index] .sw98-primary {
+    grid-template-columns:minmax(0,1.67fr) minmax(235px,.73fr) minmax(270px,.94fr);
+    align-items:stretch;
+  }
+  body[data-page=index] .sw98-primary #overviewMacroPlot svg {
+    height:clamp(242px,14vw,285px)!important;max-height:285px!important;
+  }
+  body[data-page=index] .sw98-primary .sw-overview-news {
+    max-height:430px;min-height:318px;
+  }
+  body[data-page=index] .sw98-primary .sw-overview-news .sw-brief h4 {
+    font-size:13.5px;line-height:1.43;
+  }
+  body[data-page=index] .sw98-primary .sw92-focus-summary .sw-ws-metrics {
+    grid-template-columns:1fr;
+  }
+  body[data-page=index] .sw98-primary .sw92-focus-summary .sw-ws-breadth {
+    grid-column:auto;
+  }
+  body[data-page=index] .sw98-primary .sw92-focus-summary .sw-stat {
+    min-height:63px;padding:9px 11px;
+  }
+  body[data-page=index] .sw-index-card {min-height:91px;padding:9px 12px}
+  body[data-page=index] .sw-index-top {font-size:12px}
+  body[data-page=index] .sw-index-main .sw-index-close {font-size:22px}
+  body[data-page=index] .sw-index-spark svg {height:39px}
+  body[data-page=index] .sw-index-foot {font-size:11.5px}
+  body[data-page=index] .sw98-market-secondary {
+    grid-template-columns:minmax(0,1.45fr) minmax(280px,.93fr) minmax(280px,.91fr);
+    align-items:stretch;gap:10px;
+  }
+  body[data-page=index] .sw98-market-secondary .sw110-heat-companion {
+    display:contents;
+  }
+  body[data-page=index] .sw98-market-secondary .sw110d-market-coverage,
+  body[data-page=index] .sw98-market-secondary .sw99-watchlist {
+    min-height:265px;max-height:310px;overflow:auto;
+  }
+  body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expanded) {
+    max-height:262px;
+  }
+  body[data-page=index] .sw98-market-secondary .sw-heat-cell {min-height:54px}
+  body[data-page=index] .sw98-market-secondary .sw-heat-cell strong {font-size:12px}
+}
+@media(min-width:900px) and (max-width:1319px) {
+  body[data-page=index] .sw98-market-secondary {
+    grid-template-columns:minmax(0,1.35fr) minmax(250px,1fr);
+  }
+  body[data-page=index] .sw98-market-secondary .sw110-heat-companion {display:contents}
+  body[data-page=index] .sw98-market-secondary .sw99-watchlist {grid-column:1/-1}
+}
+@media(max-width:899px) {
+  body[data-page=index] .sw98-market-secondary {grid-template-columns:minmax(0,1fr)}
+  body[data-page=index] .sw98-market-secondary .sw110-heat-companion {display:contents}
+}
+@media(max-width:420px) {
+  body[data-page=index] .sw110d-coverage-body {padding:11px}
+  body[data-page=index] .sw110d-coverage-total {gap:5px}
+  body[data-page=index] .sw110d-venue-list {gap:10px}
+}
