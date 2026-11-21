@@ -14,15 +14,10 @@ def main():
     for preset in ("empty","saved"):
      page=b.new_page(viewport={"width":width,"height":900})
      if preset=="saved":
-      page.add_init_script("""() => {
-        localStorage.setItem('stockwatch-terminal-v31',JSON.stringify({pinned:['AUSS.OL','AFISH.OL'],keys:['fred:DGS10'],days:90}));
-        localStorage.setItem('stockwatch-v4-favorites',JSON.stringify(['AFISH.OL']));
-      }""")
+      page.add_init_script("""localStorage.setItem('stockwatch-terminal-v31',JSON.stringify({pinned:['AUSS.OL','AFISH.OL'],keys:['fred:DGS10'],days:90}));
+localStorage.setItem('stockwatch-v4-favorites',JSON.stringify(['AFISH.OL']));""")
      else:
-      page.add_init_script("""() => {
-        localStorage.removeItem('stockwatch-terminal-v31');
-        localStorage.removeItem('stockwatch-v4-favorites');
-      }""")
+      page.add_init_script("""localStorage.removeItem('stockwatch-terminal-v31');localStorage.removeItem('stockwatch-v4-favorites');""")
      errors=[];page.on("pageerror",lambda e:errors.append(str(e)))
      page.goto(f"http://127.0.0.1:{server.server_port}/index.html",wait_until="domcontentloaded",timeout=30000)
      page.locator("#overviewWatchlist").wait_for(timeout=30000)
