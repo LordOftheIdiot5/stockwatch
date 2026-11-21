@@ -1,0 +1,208 @@
+/* V116c: one coherent desktop dashboard instead of two disconnected
+ * three-column rows. Uses ONLY the existing rendered evidence components.
+ * At smaller widths the existing source-tested V116b layout stays intact.
+ */
+body[data-page=index] .sw116c-overview-grid { min-width:0; }
+@media (min-width:1320px) {
+  body[data-page=index] .sw116c-overview-grid {
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) minmax(245px,.90fr) minmax(280px,1.08fr);
+    grid-template-rows:auto auto auto;
+    column-gap:10px;
+    row-gap:9px;
+    margin:3px 0 11px;
+    min-width:0;
+    align-items:start;
+  }
+  /* Keep the original DOM ancestry for evidence and controls. Flatten
+     legacy layout-only wrappers visually, not by cloning or hiding data. */
+  body[data-page=index] .sw116c-overview-grid > .sw98-primary,
+  body[data-page=index] .sw116c-overview-grid > .sw98-market-secondary,
+  body[data-page=index] .sw116c-overview-grid .sw98-intelligence-rail,
+  body[data-page=index] .sw116c-overview-grid .sw110-heat-companion,
+  body[data-page=index] .sw116c-overview-grid .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) > .sw110-heat-companion {
+    display:contents!important;
+  }
+  body[data-page=index] .sw116c-overview-grid :is(
+      .sw92-focus-chart,.sw92-focus-summary,.sw-overview-news,
+      .sw110d-market-coverage,.sw99-watchlist,.sw-ws-heatmap) {
+    min-width:0;
+    margin:0;
+  }
+  /* The left-hand source chart spans two compact right-hand evidence rows. */
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-chart {
+    grid-column:1;
+    grid-row:1/3;
+    align-self:stretch;
+    width:100%;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-chart > .sw-panel {
+    height:100%;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary {
+    grid-column:2;
+    grid-row:1;
+    align-self:start;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw-overview-news {
+    grid-column:3;
+    grid-row:1;
+    align-self:start;
+    min-height:0;
+    max-height:245px;
+    overflow:auto;
+    scrollbar-width:thin;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage {
+    grid-column:2;
+    grid-row:2;
+    align-self:start;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw99-watchlist {
+    grid-column:3;
+    grid-row:2;
+    align-self:start;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
+  }
+  /* The source-safe heatmap and its real selected-company inspector now
+     use all workspace columns. No fake capitalization-weighted geometry. */
+  body[data-page=index] .sw116c-overview-grid .sw-ws-heatmap {
+    grid-column:1/-1;
+    grid-row:3;
+    align-self:start;
+    width:100%;
+    max-width:none;
+  }
+  body[data-page=index] .sw116c-overview-grid #workspaceHeatmap:not(.sw-heat-expanded) {
+    max-height:345px;
+    overflow:auto;
+  }
+  body[data-page=index] .sw116c-overview-grid #workspaceHeatmap.sw-heat-expanded {
+    max-height:none;
+    overflow:visible;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw93-heat-inspector {
+    width:100%;
+    max-width:none;
+    box-sizing:border-box;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw93-heat-picker-row {
+    max-width:100%;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw-ws-heatmap .sw-panel-hd {
+    padding:10px 13px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw-ws-heatmap .sw-panel-pad {
+    padding:12px 14px;
+  }
+}
+/* Native responsive and zoom-equivalent widths preserve the existing reading
+ * order: chart, news/snapshot, heatmap, coverage and saved list. */
+@media (max-width:1319px) {
+  body[data-page=index] .sw116c-overview-grid {
+    display:block;
+    min-width:0;
+  }
+}
+
+/* The legacy single-column metrics made the middle rail roughly 400px tall.
+   Two well-labelled statistics beside each other, with the wide breadth below,
+   recover vertical space WITHOUT hiding a single reported observation. */
+@media (min-width:1320px) {
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary {
+    padding:8px 10px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-section-row {
+    gap:5px;
+    margin:0 0 4px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-metrics {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+    margin-top:5px;
+    align-content:start;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth {
+    grid-column:1/-1;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat {
+    padding:7px 8px;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-num {
+    font-size:clamp(21px,1.5vw,25px);
+    overflow-wrap:anywhere;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-sub {
+    font-size:11px;
+    line-height:1.35;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw-panel-hd {
+    padding:8px 10px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-body {
+    padding:7px 10px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-total {
+    gap:5px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-caption {
+    margin:2px 0 4px;
+    line-height:1.32;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-map-heading {
+    margin:4px 0 3px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-world {
+    height:100px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-map-legend {
+    margin:3px 0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-foot {
+    margin:3px 0 0;
+  }
+}
+
+/* Release acceptance: keep the compact middle stack shorter than the chart
+   without hiding any source values. Legacy default 20px metric bottom margin
+   and generous breadth margins were wasting more than 40px per dashboard. */
+@media (min-width:1320px) {
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary {
+    gap:5px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-metrics {
+    margin:3px 0 0;
+    flex:none;
+    row-gap:5px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat {
+    padding:6px 8px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-label {
+    line-height:1.25;
+    letter-spacing:.065em;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-num {
+    margin:3px 0 2px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth-values {
+    margin:5px 0;
+    gap:7px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth-bar {
+    margin-bottom:4px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth small {
+    line-height:1.25;
+  }
+}

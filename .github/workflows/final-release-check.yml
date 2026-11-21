@@ -597,6 +597,8 @@ jobs:
         run: python tests/browser_check_firstfold_v116.py
       - name: V116b equivalent-zoom responsive layout across five critical routes
         run: python tests/browser_check_zoom_equivalent_v116b.py
+      - name: V116c verified issuer news and acronym collision acceptance
+        run: python tests/browser_check_issuer_news_v116c.py
 
       - name: V110b compact research-page browser regression
         run: python tests/browser_check_density_v110b.py

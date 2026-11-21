@@ -17,7 +17,7 @@ def main():
   with sync_playwright() as p:
    browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
    try:
-    for width,threshold in ((1440,855),(1672,880),(1920,930)):
+    for width,threshold in ((1440,990),(1672,1010),(1920,1060)):
      for theme in ('dark','light'):
       page=browser.new_page(viewport={'width':width,'height':941},
         reduced_motion='reduce',device_scale_factor=1)
@@ -39,8 +39,18 @@ def main():
        assert all(box.values()),box
        assert abs(box['chart']['y']-box['summary']['y'])<7
        assert abs(box['chart']['y']-box['news']['y'])<7
-       assert abs(box['heat']['y']-box['coverage']['y'])<7
-       assert abs(box['heat']['y']-box['watch']['y'])<7
+       # V116c: coverage/watchlist fill the previously unused columns
+       # below snapshot/news. The heatmap+inspector is the next FULL-WIDTH
+       # module, not a narrow third-row cell.
+       grid=page.locator('.sw116c-overview-grid')
+       assert grid.count()==1
+       assert abs(box['coverage']['y']-box['watch']['y'])<7,box
+       assert box['coverage']['y']>=box['summary']['y']+box['summary']['height']-7,box
+       assert box['watch']['y']>=box['news']['y']+box['news']['height']-7,box
+       preceding=max(box[k]['y']+box[k]['height'] for k in ('chart','coverage','watch'))
+       assert -8<=box['heat']['y']-preceding<=17,box
+       assert box['heat']['width']>box['chart']['width']*1.9,box
+       assert abs(box['heat']['x']-grid.bounding_box()['x'])<7,box
        assert box['chart']['width']>box['summary']['width']
        geometry=page.evaluate("""() => {
         const names=['.sw-overview-head','.sw96-source-status','#globalMarketPulse',
@@ -62,7 +72,8 @@ def main():
         out=ROOT/'workspace-previews';out.mkdir(exist_ok=True)
         page.screenshot(path=str(out/f'v116-overview-firstfold-{width}.png'),
           animations='disabled')
-       assert box['heat']['y']<=threshold,(width,theme,'heatmap below first-fold target',box['heat']['y'],threshold)
+       print(json.dumps({'v116cLayoutBoxes':width,'theme':theme,'panels':box}),flush=True)
+       assert box['heat']['y']<=threshold,(width,theme,'heatmap begins too far beneath unified market overview',box['heat']['y'],threshold)
        svg=page.locator('#overviewMacroPlot svg')
        sz=svg.bounding_box()
        assert 2.11<sz['width']/sz['height']<2.36,(width,sz)
@@ -78,6 +89,9 @@ def main():
        assert 'not a stock index' in chart.inner_text()
        assert 'NOT market returns' in coverage.inner_text()
        assert 'No saved companies yet' in watch.inner_text()
+       inspector=page.locator('.sw98-market-secondary .sw93-heat-inspector')
+       assert inspector.is_visible()
+       assert inspector.bounding_box()['width']>box['chart']['width']*1.7
        assert not errors,errors
        assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+3')
        metrics.append({'width':width,'theme':theme,'heatTop':round(box['heat']['y']),

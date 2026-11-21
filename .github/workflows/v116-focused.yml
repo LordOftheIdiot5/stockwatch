@@ -8,6 +8,9 @@ on:
       - 'news-compact-v116.css'
       - 'overview-firstfold-v116.css'
       - 'overview-density-v116b.css'
+      - 'overview-unified-v116c.css'
+      - 'overview-unified-v116c.js'
+      - 'tests/browser_check_issuer_news_v116c.py'
       - 'tests/browser_check_zoom_equivalent_v116b.py'
       - 'news.html'
       - 'index.html'
@@ -33,6 +36,8 @@ jobs:
         run: python tests/browser_check_firstfold_v116.py
       - name: V116b responsive 200%-zoom-equivalent layout, five routes
         run: python tests/browser_check_zoom_equivalent_v116b.py
+      - name: V116c issuer evidence, acronym collision and reviewed news
+        run: python tests/browser_check_issuer_news_v116c.py
       - name: Preserve first-fold screenshots on all outcomes
         if: always()
         uses: actions/upload-artifact@v5
