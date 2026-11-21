@@ -28,7 +28,20 @@ def main():
        return {viewport:w,scrollWidth:document.documentElement.scrollWidth,
          offenders:nodes.sort((a,b)=>b.right-a.right).slice(0,35)};
      }""")
-     print(json.dumps({'theme':theme,'metric':metric}),flush=True)
+     structure=page.evaluate("""() => {
+       const sels=['html','body','.sw-layout','.sw-main','.sw-content','#app',
+        '.sw-tape','.sw-tape-content','.sw110b-jump','.sw110b-jump-links',
+        '.sw-mobile-nav','.sw-mobile-more','.sw-mobile-drawer',
+        '.toolbar','.panelhead','.panel','.news-groups'];
+       return Object.fromEntries(sels.map(s=>{
+         const e=document.querySelector(s),b=e?.getBoundingClientRect();
+         return [s,e&&b?{left:+b.left.toFixed(1),right:+b.right.toFixed(1),
+          width:+b.width.toFixed(1),client:e.clientWidth,
+          scroll:e.scrollWidth,overflow:getComputedStyle(e).overflowX,
+          position:getComputedStyle(e).position}:null];
+       }));
+     }""")
+     print(json.dumps({'theme':theme,'metric':metric,'structure':structure}),flush=True)
      assert metric['scrollWidth']<=320+3,metric
      details=page.locator('.sw-mobile-more')
      details.locator('summary').click()
