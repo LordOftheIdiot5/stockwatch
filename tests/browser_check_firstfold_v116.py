@@ -66,6 +66,14 @@ def main():
        svg=page.locator('#overviewMacroPlot svg')
        sz=svg.bounding_box()
        assert 2.11<sz['width']/sz['height']<2.36,(width,sz)
+       # V116b: the truthful freshness disclosure occupies desktop header
+       # whitespace, rather than a separate 35px high row.
+       page.locator('.sw-overview-head > details.sw96-source-status').wait_for(timeout=10000)
+       assert page.locator('.sw-overview-head > details.sw96-source-status').count()==1
+       if width==1440:
+        directions=page.locator('.sw98-primary .sw-overview-chart-controls label').evaluate_all(
+         '(els)=>els.map(e=>getComputedStyle(e).flexDirection)')
+        assert directions==['column','column','column'],directions
        assert 'Taiwan sources connected' in page.locator('#globalMarketPulse').inner_text()
        assert 'not a stock index' in chart.inner_text()
        assert 'NOT market returns' in coverage.inner_text()
