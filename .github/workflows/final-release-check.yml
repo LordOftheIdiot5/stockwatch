@@ -159,6 +159,7 @@ jobs:
           node --check scripts/audit_listing_coverage.cjs
           node --check scripts/price_source_queue.cjs
           node --check brand/brand.js
+          node --check brand/workspace-navigation-v112.js
           node --check brand/research-coverage.js
       - name: Licensed EOD public-display permission regression
         run: node --test tests/test_licensed_display_rights_v89j8.mjs
@@ -200,6 +201,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: V111 all-route UX and full-width expanded map regression
         run: python tests/browser_check_sitewide_v111.py
+      - name: V112 connected editorial navigation and 60 viewport/theme browser checks
+        run: python tests/browser_check_brand_navigation_v112.py
       - name: V105 all-listing daily source coverage and mobile Data Health browser proof
         if: startsWith(github.head_ref, 'feature/stockwatch-v105-')
         run: python tests/browser_check_daily_price_coverage_v105.py
