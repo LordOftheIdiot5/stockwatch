@@ -1,0 +1,40 @@
+/* V116: 320px News overflow, isolate horizontally scrollable content instead
+ * of clipping the page. The news source items, links and metadata remain intact. */
+@media(max-width:359px){
+ body[data-page=news] :is(.sw-main,.sw-content,#app,.sw110b-jump,
+   .sw110b-jump-links,.panel,.panelhead,.toolbar,.news-groups,.news-item) {
+   min-width:0;
+   max-width:100%;
+ }
+ body[data-page=news] .sw-content {box-sizing:border-box}
+ body[data-page=news] .panelhead,
+ body[data-page=news] .toolbar {
+   flex-wrap:wrap;
+   overflow-wrap:anywhere;
+ }
+ body[data-page=news] .panelhead>*,
+ body[data-page=news] .toolbar>* {
+   min-width:0;
+   max-width:100%;
+ }
+ body[data-page=news] .panelhead :is(a,button,span,h2),
+ body[data-page=news] .news-item :is(a,h3,p,span) {
+   overflow-wrap:anywhere;
+   white-space:normal;
+ }
+ body[data-page=news] .sw110b-jump-links {
+   overflow-x:auto;
+   overflow-y:hidden;
+   overscroll-behavior-x:contain;
+ }
+ body[data-page=news] .sw110b-layout-toggle{
+   flex:0 0 auto;
+   max-width:calc(100vw - 120px);
+ }
+ body[data-page=news] .tablewrap,
+ body[data-page=news] .sw-tablewrap {
+   display:block;
+   max-width:100%;
+   overflow-x:auto;
+ }
+}
