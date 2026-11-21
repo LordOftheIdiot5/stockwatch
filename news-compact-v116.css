@@ -1,0 +1,81 @@
+/* V116: 320px News overflow, isolate horizontally scrollable content instead
+ * of clipping the page. The news source items, links and metadata remain intact. */
+@media(max-width:359px){
+ body[data-page=news] :is(.sw-main,.sw-content,#app,.sw110b-jump,
+   .sw110b-jump-links,.panel,.panelhead,.toolbar,.news-groups,.news-item) {
+   min-width:0;
+   max-width:100%;
+ }
+ body[data-page=news] .sw-content {box-sizing:border-box}
+ body[data-page=news] .panelhead,
+ body[data-page=news] .toolbar {
+   flex-wrap:wrap;
+   overflow-wrap:anywhere;
+ }
+ body[data-page=news] .panelhead>*,
+ body[data-page=news] .toolbar>* {
+   min-width:0;
+   max-width:100%;
+ }
+ body[data-page=news] .panelhead :is(a,button,span,h2),
+ body[data-page=news] .news-item :is(a,h3,p,span) {
+   overflow-wrap:anywhere;
+   white-space:normal;
+ }
+ body[data-page=news] .sw110b-jump-links {
+   overflow-x:auto;
+   overflow-y:hidden;
+   overscroll-behavior-x:contain;
+ }
+ body[data-page=news] .sw110b-layout-toggle{
+   flex:0 0 auto;
+   max-width:calc(100vw - 120px);
+ }
+ /* The legacy More drawer was laid out relative to the last 5-column tab,
+    which places its right-hand menu links ~5px beyond a 320px phone. The
+    drawer belongs to the viewport, not that narrow grid cell. */
+ body[data-page=news] .sw-mobile-drawer{
+   position:fixed;
+   inset:auto 8px calc(66px + env(safe-area-inset-bottom,0px));
+   width:calc(100vw - 16px);
+   max-width:660px;
+   max-height:min(68dvh,620px);
+   min-width:0;
+   box-sizing:border-box;
+   margin-inline:auto;
+ }
+ body[data-page=news] .sw-mobile-more:not([open])>.sw-mobile-drawer {
+   display:none;
+ }
+ body[data-page=news] .sw-mobile-drawer :is(section,section>div,a,span){
+   min-width:0;
+   max-width:100%;
+ }
+ /* The 320px scrollWidth came from the open Nasdaq notices disclosure:
+    312px inner content inside a 294px client area. Wrap original source
+    metadata in its cards; do not hide or truncate original notice links. */
+ body[data-page=news] #nasdaqNordicNotices,
+ body[data-page=news] #nasdaqNordicNotices :is(summary,div,p,span,small,strong,a){
+   min-width:0;
+   max-width:100%;
+   overflow-wrap:anywhere;
+   word-break:break-word;
+   white-space:normal;
+ }
+ body[data-page=news] #nasdaqNoticeItems{
+   display:grid;
+   grid-template-columns:minmax(0,1fr);
+ }
+ body[data-page=news] #nasdaqNordicNotices>summary,
+ body[data-page=news] #nasdaqNordicNotices .sw100-notice,
+ body[data-page=news] #nasdaqNordicNotices .sw100-notice-context{
+   padding-inline:10px;
+   box-sizing:border-box;
+ }
+ body[data-page=news] .tablewrap,
+ body[data-page=news] .sw-tablewrap {
+   display:block;
+   max-width:100%;
+   overflow-x:auto;
+ }
+}

@@ -591,6 +591,10 @@ jobs:
           python tests/browser_check_secondary_v114.py
       - name: V115 public Data Products desktop/mobile browser integration tests
         run: python tests/browser_check_data_products_v115.py
+      - name: V116 identify and prevent mobile News layout overflow
+        run: python tests/browser_check_news_320_v116.py
+      - name: V116 measurable Overview first-fold evidence and 3-width, 2-theme checks
+        run: python tests/browser_check_firstfold_v116.py
 
       - name: V110b compact research-page browser regression
         run: python tests/browser_check_density_v110b.py
