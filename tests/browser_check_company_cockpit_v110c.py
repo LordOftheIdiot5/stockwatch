@@ -32,16 +32,16 @@ def main():
      assert panel.locator('#companyDriverMap').is_visible()
      assert panel.locator('#companyHistorySource').count()==1
      assert not panel.locator('[data-company-section=financials]').is_visible()
-     tabs.locator('[data-company-tab=financials]').click()
+     nav.locator('[data-company-tab=financials]').click()
      assert panel.get_attribute('data-sw110c-tab')=='financials'
      assert panel.locator('[data-company-section=financials]').is_visible()
      assert not panel.locator('[data-company-section=chart]').is_visible()
      assert not panel.locator('#companyDriverMap').is_visible()
-     assert tabs.locator('[data-company-tab=financials]').get_attribute('aria-pressed')=='true'
+     assert nav.locator('[data-company-tab=financials]').get_attribute('aria-pressed')=='true'
      page.evaluate("scrollTo(0,0)")
-     assert tabs.locator('[data-company-tab=financials]').get_attribute('aria-current')=='location'
+     assert nav.locator('[data-company-tab=financials]').get_attribute('aria-current')=='location'
      for key in ('filings','peers','events','drivers','identity'):
-      tabs.locator('[data-company-tab='+key+']').click()
+      nav.locator('[data-company-tab='+key+']').click()
       assert panel.get_attribute('data-sw110c-tab')==key
       assert panel.locator('[data-company-section='+key+']').is_visible()
      full.click()
@@ -57,7 +57,7 @@ def main():
      full.click()
      assert panel.get_attribute('data-sw110c-mode')=='focus'
      assert not panel.locator('[data-company-section=financials]').is_visible()
-     tabs.locator('[data-company-tab=chart]').click()
+     nav.locator('[data-company-tab=chart]').click()
      assert panel.locator('#companyDriverMap').is_visible()
      assert panel.locator('#companyHistorySource').count()==1
      assert not errors,(ticker,width,errors)
