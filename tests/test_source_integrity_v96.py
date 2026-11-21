@@ -15,8 +15,8 @@ class V96IntegrityTests(TestCase):
         cls.production=(ROOT/"scripts/production_health.py").read_text(encoding="utf-8")
     def test_overview_shows_actual_strict_session_coverage(self):
         for key in ("state.health?.priceFreshness","equities","strict?.comparable",
-                    "strict?.unconfirmed","session changes unconfirmed",
-                    "historical moves are not live scanner alerts",
+                    "strict?.unconfirmed","confirmed for completed session",
+                    "Older moves are not live alerts",
                     "sw96-source-status"):
             self.assertIn(key,self.overview)
         self.assertIn("freshness-v96.css?v=1",self.index)
