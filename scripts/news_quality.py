@@ -52,33 +52,66 @@ def topic(title):
     return 'General'
 
 
-def association(item):
-    """'strong', 'mentioned', or 'review': lower tiers are not erased."""
+# Brand names and short acronyms can name a product, a sporting event,
+# a generic term or an entirely different organization. They are never proof
+# of an issuer relationship by themselves. These rules affect attribution,
+# not historical retention or the original source URL.
+ISSUER_CONTEXT = {
+    # Spanish rail manufacturer CAF vs Confederation of African Football.
+    'CAF.MC': (
+        r'\b(?:construcciones y auxiliar(?:es)? de ferrocarriles|caf (?:s\s*a\s*u?|rail(?:way)?s?|railcars?|rolling stock|trains?|tramways?|metros?|shares?|stock|earnings|results|revenue|orders?|contract(?:s)?|awards?))\b',
+        'short-acronym CAF lacks rail/issuer context',
+    ),
+    # Frontline plc vs the everyday adjective/noun "frontline".
+    'FRO.OL': (
+        r'\b(?:frontline (?:plc|ltd|limited|tanker|shipping|shares?|stock|earnings|results|dividend|fleet|vessels?|freight|rates|charter)|fro (?:shares?|stock)|(?:tanker|shipping company) frontline)\b',
+        'common word Frontline lacks shipping/issuer context',
+    ),
+    # Ferrari NV vs a car, race, racing series, or individual.
+    'RACE.MI': (
+        r'\b(?:ferrari (?:n\s*v|shares?|stock|earnings|results|revenue|profit|forecast|guidance|orders?|deliveries|quarterly|annual|company|group|investors?|buyback|dividend|ceo|cfo)|race mi|(?:shares?|stock|earnings|revenue|profits?|guidance) (?:of |for )?ferrari)\b',
+        'Ferrari brand/sport mention lacks issuer-financial context',
+    ),
+    # Airbus SE vs aircraft-type mentions without the manufacturer's action.
+    'AIR.PA': (
+        r'\b(?:airbus (?:s\s*e|shares?|stock|earnings|results|revenue|profit|guidance|orders?|deliver(?:s|ed|ies)?|signs?|signed|wins?|won|builds?|manufactur(?:e|es|ed)|announc(?:es|ed)|company|group|ceo|cfo|investors?|contract(?:s)?)|(?:shares?|stock|earnings|revenue|profits?|guidance) (?:of |for )?airbus)\b',
+        'Airbus aircraft/product mention lacks issuer action',
+    ),
+}
+
+
+def identity_evidence(item):
+    """Return issuer-evidence tier and a reviewable reason; never guess bodies."""
     if item.get('match') == 'issuer_code' and item.get('type') == 'disclosure':
-        return 'strong'
-    title = item.get('headline') or item.get('english') or ''
-    ticker = item.get('ticker') or ''
-    name = item.get('name') or ''
+        return 'strong', 'source-provided issuer code on disclosure'
+    title = (item.get('headline') or '') + ' ' + (item.get('english') or '')
+    ticker = str(item.get('ticker') or '')
+    name = str(item.get('name') or '')
+    normalized = norm(title)
+    # Explicit competitor references are not verified issuer evidence.
     if any(has_phrase(title, v) for v in DISAMBIGUATION.get(ticker, ())):
-        # When Siemens Energy is mentioned alongside Siemens, retain the story
-        # as an explicitly ambiguous association rather than a confident match.
-        return 'review'
-    # Ambiguous common nouns / brand names require issuer-specific context.
-    # Keep raw records for review rather than deleting them.
-    normalized=norm(title)
-    if ticker == 'FRO.OL' and not re.search(r'\b(frontline (?:plc|ltd|limited)|fro (?:stock|shares)|frontline (?:tanker|shipping|shares|stock|earnings|results|dividend|fleet)|(?:tanker|shipping company) frontline)\b',normalized):
-        return 'review'
-    if ticker in ('P911.DE','PAH3.DE'):
-        # distinguish Porsche AG the manufacturer from Porsche SE the holding
-        # company. A car mention is not an issuer reference.
-        exact=r'\bporsche ag\b' if ticker=='P911.DE' else r'\bporsche (?:se|automobil holding)\b'
-        if not re.search(exact,normalized):
-            return 'review'
-    # Avoid matching generic corporate suffixes as issuers.
+        return 'review', 'possible competitor or cross-issuer mention'
+    if ticker in ISSUER_CONTEXT:
+        pattern, reason = ISSUER_CONTEXT[ticker]
+        if not re.search(pattern, normalized):
+            return 'review', reason
+        # An acronym shorter than four characters is intentionally excluded
+        # by has_phrase(); sector/legal context can make it a *named reference*,
+        # never an issuer-confirmed original disclosure.
+        if ticker == 'CAF.MC' and re.search(r'\bcaf\b', normalized):
+            return 'mentioned', 'CAF plus railway/business context only; not issuer-confirmed'
+    if ticker in ('P911.DE', 'PAH3.DE'):
+        legal = r'\bporsche ag\b' if ticker == 'P911.DE' else r'\bporsche (?:se|automobil holding)\b'
+        if not re.search(legal, normalized):
+            return 'review', 'Porsche brand mention lacks correct legal issuer'
     if has_phrase(title, name):
-        return 'mentioned'
-    # Existing scanner matching is a weaker signal than a verifiable phrase.
-    return 'review'
+        return 'mentioned', 'named headline reference only; not issuer-confirmed'
+    return 'review', 'no issuer-specific headline reference'
+
+
+def association(item):
+    """'strong', 'mentioned', or 'review'—retain the review-tier source record."""
+    return identity_evidence(item)[0]
 
 
 def headline_fingerprint(item):
@@ -96,7 +129,9 @@ def annotate(items):
     out = []
     for item in items:
         x = dict(item)
-        x['relevance'] = association(x)
+        x['relevance'], x['identityReviewReason'] = identity_evidence(x)
+        x['identityTier'] = ('issuer_verified' if x['relevance']=='strong' else
+                             'named_reference' if x['relevance']=='mentioned' else 'review_candidate')
         x['category'] = topic(x.get('headline') or x.get('english') or '')
         x['driverVersion'] = VERSION
         x['driverTags'] = classify(x,norm(x.get('headline') or x.get('english') or ''))
@@ -135,6 +170,9 @@ def summary(items):
             'review': sum(x.get('relevance') == 'review' for x in items),
             'duplicates': sum(bool(x.get('duplicateOf')) for x in items),
             'issuerLinked': sum(x.get('relevance') == 'strong' for x in items),
+            'namedReferences':sum(x.get('relevance') == 'mentioned' for x in items),
+            'withheldFromIssuerEvents':sum(x.get('relevance') == 'review' for x in items),
+            'identityTiers': {tier:sum(x.get('identityTier') == tier for x in items) for tier in ('issuer_verified','named_reference','review_candidate')},
             'driverClassification': {'version':VERSION,
                 'classified':sum(bool(x.get('driverTags')) and not x.get('duplicateOf') for x in items),
                 'categories':{k:sum(not x.get('duplicateOf') and any(t['driver']==k for t in x.get('driverTags',[])) for x in items) for k in ('numbers','prices','operations','potential','risk')},
