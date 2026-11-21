@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T01:38:11Z",
+  "generated": "2026-11-21T02:07:38Z",
   "items": [
     {
       "id": "KCR.HE:d8417b6d8ec640809014fb3c20368c0679b4d4e01a7a1d60f1a793618537e1e1",
@@ -208,6 +208,29 @@
       ],
       "sourceDomain": "www.sec.gov",
       "priority": "high"
+    },
+    {
+      "id": "TRMED.OL:e434a327c921ad4d044462f6f19e987cf0d5813ed6cda251274a37ff93c639bb",
+      "ticker": "TRMED.OL",
+      "name": "Thor Medical",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Frykter at en ny kreftmedisin kommer sent til Norge: – Andre land er raskere",
+      "english": null,
+      "publisher": "NRK",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMHkzTFBKSEhJLUZRSFk2MlNvMl94Nllvc3l6TGxYU0ZCYTAyYm1STkwwalkwWFNIUFFNaktkSU1yUXpsTmNTM3dBWmlmX3I2VVVSZ2ViVGhySlhqc0F4Y0E2X0liXzk0ZkJjLWotWUpNRmh2V0QzeV9nb19zU2VhaDJya2hRWm5vd0tIWGgxNTRUZ2M?oc=5",
+      "published": "2026-11-20T21:20:27Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "sec:0000002488:AMD:0000002488-26-000218",
@@ -4673,6 +4696,29 @@
       "sourceDomain": "news.google.com",
       "priority": "normal",
       "duplicateOf": "SAP.DE:f73fee912a1085634d82ab54770662573b191e1b46db164bfd33fa67ad3744bf"
+    },
+    {
+      "id": "SAND.ST:116f32f1ce8ff446a91aee87d337426dd703423f2eb4fa883a210be105f484b4",
+      "ticker": "SAND.ST",
+      "name": "Sandvik",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "Sandvik får stororder",
+      "english": null,
+      "publisher": "INDUSTRInyheter.se",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMndRWGdBLXRua0t6N3ZLVDBteFo5aHVhRE1ORjdRWnptbHlZQ0RCSks4VkNQTWRweXA1aURJSFpxVGVRd2hPd3BSY1lqcmV3Z0h5V1ppRzJjenMtMnV0a3R6Rk0wbHB4cnZtd0lQdWVYVTdGT2JKajJQUnAxOEthTlYtUQ?oc=5",
+      "published": "2026-11-19T22:35:21Z",
+      "lang": "sv",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "FRO.OL:ac1f118393468fcf7a3c812e2b59764fc7603cc56c9d07a3a759f8188b30c173",

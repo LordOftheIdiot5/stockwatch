@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T01:38:11Z",
+  "generated": "2026-11-21T02:07:38Z",
   "items": [
     {
       "id": "KCR.HE:d8417b6d8ec640809014fb3c20368c0679b4d4e01a7a1d60f1a793618537e1e1",
@@ -208,6 +208,29 @@
       ],
       "sourceDomain": "www.sec.gov",
       "priority": "high"
+    },
+    {
+      "id": "TRMED.OL:e434a327c921ad4d044462f6f19e987cf0d5813ed6cda251274a37ff93c639bb",
+      "ticker": "TRMED.OL",
+      "name": "Thor Medical",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Frykter at en ny kreftmedisin kommer sent til Norge: – Andre land er raskere",
+      "english": null,
+      "publisher": "NRK",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMHkzTFBKSEhJLUZRSFk2MlNvMl94Nllvc3l6TGxYU0ZCYTAyYm1STkwwalkwWFNIUFFNaktkSU1yUXpsTmNTM3dBWmlmX3I2VVVSZ2ViVGhySlhqc0F4Y0E2X0liXzk0ZkJjLWotWUpNRmh2V0QzeV9nb19zU2VhaDJya2hRWm5vd0tIWGgxNTRUZ2M?oc=5",
+      "published": "2026-11-20T21:20:27Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "sec:0000002488:AMD:0000002488-26-000218",
@@ -2393,42 +2416,14 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SAAB-B.ST:dbd2186ebb124d18f1d5c121c92b887215da3630f353af1a3f90c2d6fb789889",
-      "ticker": "SAAB-B.ST",
-      "name": "Saab",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Saab Signs License Agreement for Production in Poland",
-      "english": null,
-      "publisher": "marketscreener.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSHVBSkNsWV9ld3h4Zm96VXlYQUM4T3hJOVE1Y2JGelptd3NJM0dfbTF5X0VCZi1tZDd2US1BSDZZVURpUjl3LU9vSzZJUUVxMTRQWUpIQllxWE04cGxWcy1MVmlxMDJCMjVXWGpOeHlHUklYMnQ3R2lyeTlxZGlvQko1dElvNm9ERlpyYndES2tOcjhyT21wa19EeEdQSWNXbU1CX3d6YmJFQQ?oc=5",
-      "published": "2026-11-20T11:01:19Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "Contracts",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: Contracts"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1892,
+  "totalStored": 1894,
   "limit": 100,
   "quality": {
-    "total": 1892,
-    "relevant": 1386,
-    "review": 440,
+    "total": 1894,
+    "relevant": 1387,
+    "review": 441,
     "duplicates": 90,
     "issuerLinked": 430,
     "driverClassification": {
@@ -2451,7 +2446,7 @@
       "Contracts": 139,
       "Capital & ownership": 1,
       "Management": 60,
-      "General": 1277
+      "General": 1279
     }
   }
 }

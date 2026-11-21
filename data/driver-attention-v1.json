@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-21T01:38:11Z",
+  "generated": "2026-11-21T02:07:38Z",
   "windowStart": "2026-11-07",
   "windowEnd": "2026-11-20",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -10756,7 +10756,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 0
+          "media": 1
         },
         {
           "date": "2026-11-20",
@@ -10765,7 +10765,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 5,
+      "observedRecords": 6,
       "latestRecord": "2026-11-20T05:39:27Z",
       "topicCounts": {
         "numbers": 0,
@@ -10780,7 +10780,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       }
     },
     "SAP.DE": {
