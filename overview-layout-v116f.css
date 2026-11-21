@@ -1,0 +1,45 @@
+/* V116f: avoid a false 2-row empty chart card. The source-backed
+ * macro SVG keeps its intrinsic 640:286 ratio and all dates/units. */
+@media (min-width:1320px) {
+ body[data-page=index] .sw116c-overview-grid .sw92-focus-chart {
+   align-self:start;
+ }
+ body[data-page=index] .sw116c-overview-grid .sw92-focus-chart > .sw-panel {
+   height:auto;
+   min-height:0;
+ }
+ /* A visible source legend replaces the redundant map subheading. The full
+  * venue explanation is adjacent to the full venue breakdown, behind details. */
+ body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-world {
+   height:98px;
+ }
+ body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-all-venues {
+   margin:4px 0 0;
+ }
+ body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-all-venues > summary {
+   min-height:30px;
+   font-size:12px;
+ }
+ body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-caption {
+   font-size:12px;
+   line-height:1.35;
+ }
+}
+body[data-page=index] .sw110e-world .sw110e-map-legend {
+  gap:2px 6px;
+  max-width:calc(100% - 10px);
+  box-sizing:border-box;
+  font-size:11px;
+}
+body[data-page=index] .sw110e-all-venues .sw110d-coverage-foot {
+  margin:7px 0;
+  font-size:12px;
+  line-height:1.45;
+}
+/* Long source IDs and map captions wrap instead of expanding page width. */
+body[data-page=index] .sw110d-market-coverage,
+body[data-page=index] .sw110d-coverage-body,
+body[data-page=index] .sw110e-all-venues {
+  min-width:0;
+  overflow-wrap:anywhere;
+}
