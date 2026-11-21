@@ -130,3 +130,11 @@ body[data-page=stocks] #stkHeat.sw93-heat-comfortable .sw-heat-cell{min-height:8
  body[data-page=index] .sw-heat-cell,
  body[data-page=stocks] .sw-heat-cell{transition:none;transform:none}
 }
+
+.sw93-heat-picker-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sw93-heat-picker-label{color:var(--sw-muted);font-size:12px;line-height:1.5;font-weight:650}
+.sw93-heat-picker{flex:1 1 210px;min-width:0;max-width:100%;min-height:40px;padding:8px 12px;
+ border:1px solid var(--sw-edge);border-radius:8px;background:var(--sw-card);
+ color:var(--sw-text);font-size:13px}
+.sw93-heat-picker:focus-visible{outline:3px solid var(--sw-mint);outline-offset:3px}
+@media(max-width:600px){.sw93-heat-picker{min-height:44px;width:100%}}

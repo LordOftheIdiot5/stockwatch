@@ -50,3 +50,15 @@ test('never invent a missing change percentage',()=>{
  const d=describe({title:'Unknown',change:null,classes:'sw-heat-cell flat'});
  assert.equal(d.change,'');assert.equal(d.status,'Flat movement');
 });
+
+test('saved movement is retained even if it is not described as older price',()=>{
+ const d=describe({title:'Example · -3% · 2026-11-19 · saved movement',
+   classes:'sw-heat-cell negative'});
+ assert.equal(d.retained,true);
+ assert.match(d.note,/not a live price/i);
+});
+test('no-data tile does not display its descriptive text as a percentage',()=>{
+ const d=describe({title:'Reference · No volume',change:'No volume',classes:'sw-heat-cell no-data'});
+ assert.equal(d.change,'');
+ assert.equal(d.status,'No verified movement');
+});

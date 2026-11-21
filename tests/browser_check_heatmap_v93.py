@@ -44,6 +44,10 @@ def main():
                             assert dock.locator(".sw93-heat-detail-head").count()==1
                             assert dock.locator(".sw93-heat-link").count()==1
                             assert dock.locator(".sw93-heat-detail").get_attribute("aria-live")=="polite"
+                            picker=dock.locator(".sw93-heat-picker")
+                            assert picker.locator("option").count()==count+1
+                            picker.select_option("0")
+                            assert dock.locator(".sw93-heat-detail-head").count()==1
                             toggle=dock.locator(".sw93-heat-size")
                             toggle.click()
                             assert toggle.get_attribute("aria-pressed")=="true"

@@ -33,7 +33,8 @@ class HeatmapUXV93Tests(TestCase):
     def test_accessibility_and_missing_data_not_hid(self):
         for expected in ("aria-pressed","aria-live","focusin","pointerover",
                          "No verified movement","Dated retained/older data",
-                         "not a live price","visible tiles","sw93-heat-comfortable"):
+                         "not a live price","visible tiles","sw93-heat-comfortable",
+                         "sw93-heat-picker"):
             self.assertIn(expected,self.js)
         self.assertNotIn("preventDefault(",self.js)
         self.assertIn('new URL(href,base)',self.js)

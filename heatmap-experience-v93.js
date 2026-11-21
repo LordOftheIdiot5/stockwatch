@@ -11,6 +11,7 @@
   const ROOTS=["workspaceHeatmap","stkHeat"];
   const mounted=new WeakSet();
   const sourceRecord=new WeakMap();
+  const lastTileSignatures=new WeakMap();
 
   function node(tag,text,cls){
     const item=document.createElement(tag);
@@ -60,8 +61,25 @@
   function refresh(root){
     const dock=sourceRecord.get(root);
     if(!dock)return;
-    const summary=api.countStates([...root.querySelectorAll("a.sw-heat-cell")].map(el=>el.className));
+    const tiles=[...root.querySelectorAll("a.sw-heat-cell")];
+    const summary=api.countStates(tiles.map(el=>el.className));
     const key=[summary.up,summary.down,summary.flat,summary.unavailable].join("|");
+    const picker=dock.querySelector(".sw93-heat-picker");
+    const signature=tiles.map(el=>el.getAttribute("href")+"|"+el.getAttribute("title")).join("||");
+    if(lastTileSignatures.get(root)!==signature){
+      lastTileSignatures.set(root,signature);
+      picker.replaceChildren();
+      const blank=node("option","Choose a tile…");
+      blank.value="";
+      picker.append(blank);
+      tiles.forEach((tile,i)=>{
+        const label=tile.querySelector("strong")?.textContent||"Company";
+        const change=tile.classList.contains("no-data")?"No movement data":tile.querySelector("span")?.textContent||"Movement unavailable";
+        const option=node("option",label+" · "+change);
+        option.value=String(i);
+        picker.append(option);
+      });
+    }
     if(dock.dataset.countKey===key)return;
     dock.dataset.countKey=key;
     const counts=dock.querySelector(".sw93-heat-counts");
@@ -116,6 +134,19 @@
     const bar=node("div","","sw93-heat-balance");
     bar.setAttribute("role","img");
     dock.append(bar);
+    const pickerRow=node("div","","sw93-heat-picker-row");
+    const pickerLabel=node("label","Inspect a company tile","sw93-heat-picker-label");
+    const picker=document.createElement("select");
+    picker.id=root.id+"-inspector-picker";
+    picker.className="sw93-heat-picker";
+    pickerLabel.htmlFor=picker.id;
+    picker.addEventListener("change",()=>{
+      const index=Number(picker.value);
+      const tiles=[...root.querySelectorAll("a.sw-heat-cell")];
+      display(root,picker.value!==""&&Number.isInteger(index)?tiles[index]:null);
+    });
+    pickerRow.append(pickerLabel,picker);
+    dock.append(pickerRow);
     const detail=node("div","","sw93-heat-detail");
     detail.setAttribute("aria-live","polite");
     detail.setAttribute("aria-atomic","true");
@@ -136,7 +167,7 @@
       refresh(root);
       const current=root.querySelector("a.sw-heat-cell:focus");
       if(current)display(root,current);
-      else if(!root.contains(document.activeElement))display(root,null);
+      else if(!root.contains(document.activeElement)&&!dock.querySelector(".sw93-heat-picker")?.value)display(root,null);
     });
     observer.observe(root,{subtree:true,childList:true});
     refresh(root);
@@ -185,11 +216,11 @@
     const css=tags.has("no-data")?"sw93-unavailable":
       tags.has("positive")?"sw93-up":tags.has("negative")?"sw93-down":"sw93-flat";
     const dated=(raw||fallback).match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0]||"";
-    const retained=/last saved|saved observation|refresh unavailable|older|retained/i.test(raw);
+    const retained=/last saved|saved observation|saved movement|refresh unavailable|older|retained/i.test(raw);
     const note=retained ? "Dated retained/older data — not a live price." :
       dated ? "Reported date "+dated+" · verify source and trading session on the company page." :
       "No confirmed observation date in the tile; verify the company source.";
-    return {ticker:t,change:c,status,css,details:raw||fallback||"No details supplied for this tile.",
+    return {ticker:t,change:tags.has("no-data")?"":c,status,css,details:raw||fallback||"No details supplied for this tile.",
       date:dated,note,retained};
   }
   return {countStates,describe};
