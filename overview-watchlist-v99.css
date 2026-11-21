@@ -1,0 +1,30 @@
+/* V99: local-only saved research selections, never a pretend portfolio. */
+body[data-page=index] .sw99-watch-pair{
+ display:grid;grid-template-columns:minmax(0,1.25fr) minmax(290px,1fr);
+ gap:14px;align-items:start;margin:16px 0;
+}
+body[data-page=index] .sw99-watch-pair>section{min-width:0;margin:0}
+body[data-page=index] .sw99-watchlist .sw-panel-hd{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+body[data-page=index] .sw99-watchlist .sw-panel-hd h2{margin:0}
+body[data-page=index] .sw99-watch-rows{max-height:330px;overflow:auto}
+body[data-page=index] .sw99-watch-row{
+ display:flex;justify-content:space-between;gap:10px;align-items:center;
+ min-width:0;padding:11px 14px;border-bottom:1px solid var(--sw-edge);
+ color:var(--sw-text);text-decoration:none;
+}
+body[data-page=index] .sw99-watch-row:hover{background:var(--sw-card-hi)}
+body[data-page=index] .sw99-watch-row:focus-visible{outline:3px solid var(--sw-mint);outline-offset:-3px}
+body[data-page=index] .sw99-watch-identity{min-width:0;flex:1}
+body[data-page=index] .sw99-watch-quote{text-align:right;flex-shrink:0}
+body[data-page=index] .sw99-watch-identity strong,
+body[data-page=index] .sw99-watch-quote strong{display:block;font-size:13px;line-height:1.4}
+body[data-page=index] .sw99-watch-identity small,
+body[data-page=index] .sw99-watch-quote small{display:block;font-size:11px;line-height:1.55;color:var(--sw-muted)}
+body[data-page=index] .sw99-watch-empty{padding:18px 16px;font-size:13px;line-height:1.5}
+body[data-page=index] .sw99-watch-note{margin:10px 14px 6px;font-size:11px;line-height:1.5}
+body[data-page=index] .sw99-watch-actions{display:flex;gap:12px;flex-wrap:wrap;padding:10px 14px 15px}
+@media(max-width:960px){body[data-page=index] .sw99-watch-pair{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){
+ body[data-page=index] .sw99-watch-row{padding:10px;align-items:flex-start}
+ body[data-page=index] .sw99-watch-quote{max-width:48%}
+}

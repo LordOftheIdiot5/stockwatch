@@ -556,6 +556,19 @@ jobs:
             workspace-previews/v98-overview-audit.json
           if-no-files-found: ignore
 
+      - name: V99 personal watchlist browser checks
+        run: python tests/browser_check_overview_v99.py
+
+      - name: Upload V99 saved-list screenshots
+        if: always() && startsWith(github.head_ref, 'v99-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v99-watchlist
+          path: |
+            workspace-previews/v99-watchlist-*.png
+            workspace-previews/v99-watchlist-audit.json
+          if-no-files-found: ignore
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 
