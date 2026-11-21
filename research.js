@@ -115,7 +115,7 @@ async function showCompare(){const all=state.watchlist; if(!all.length){showErro
   const metadata=Array.isArray(state.licensedPrices?.records)?state.licensedPrices.records:[];
   const approved=names.map(t=>metadata.find(p=>p.listingId===t&&p.priceType==='end_of_day'
     &&(p.publicDisplayPermitted===true||(p.publicDisplayPermitted===undefined&&p.redistributionPermitted===true))
-    &&/^data\\/licensed-reference-history\\/[a-f0-9]{32}\\.json$/.test(p.historyPath||'')));
+    &&/^data\/licensed-reference-history\/[a-f0-9]{32}\.json$/.test(p.historyPath||'')));
   let available=0;
   await Promise.all(names.map(async(t,i)=>{
    const entry=approved[i];if(!entry||!window.StockwatchNativeChart?.authorized)return;
@@ -127,7 +127,7 @@ async function showCompare(){const all=state.watchlist; if(!all.length){showErro
     }
     if(!window.StockwatchNativeChart.authorized(entry,hist))return;
     const a=(hist.bars||[]).filter(b=>typeof b.date==='string'
-      &&/^20\\d{2}-\\d{2}-\\d{2}$/.test(b.date)
+      &&/^20\d{2}-\d{2}-\d{2}$/.test(b.date)
       &&Date.parse(b.date)>=since
       &&Number.isFinite(b.close)&&b.close>0)
       .map(b=>({date:b.date,close:b.close}));
