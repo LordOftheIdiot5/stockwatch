@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T09:15:41Z",
-  "latestScan": "2026-11-21T09:14:20+00:00",
+  "generated": "2026-11-21T09:18:04Z",
+  "latestScan": "2026-11-21T09:16:54+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "priceFreshness": {
@@ -817,7 +817,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 119,
+  "storedStories": 121,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -831,45 +831,45 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 67.4,
+      "avgLatencyMs": 183.8,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T09:14:30+00:00",
+      "lastSuccessAt": "2026-11-21T09:17:20+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 433.2,
+      "avgLatencyMs": 559.6,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T09:14:35+00:00",
+      "lastSuccessAt": "2026-11-21T09:17:23+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1438.6,
+      "avgLatencyMs": 1225.7,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T09:14:37+00:00",
+      "lastSuccessAt": "2026-11-21T09:17:24+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 281.9,
+      "avgLatencyMs": 317.8,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T09:14:51+00:00",
+      "lastSuccessAt": "2026-11-21T09:17:40+00:00",
       "lastFailureAt": null
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 4191.6,
+      "avgLatencyMs": 1903.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T09:14:35+00:00",
+      "lastSuccessAt": "2026-11-21T09:17:22+00:00",
       "lastFailureAt": null
     }
   },
