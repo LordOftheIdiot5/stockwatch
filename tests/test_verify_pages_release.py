@@ -27,6 +27,12 @@ class Tests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError,"do not match"):
                     m.check(attempts=1,interval=0,fetch=lambda p,n:b"wrong")
             finally:m.ROOT=prior
+    def test_v98_new_css_and_v97_source_health_assets_are_deploy_verified(self):
+        for path in ("index.html","v4.js","overview-parity-v98.css",
+                     "global-market-pulse.js","heatmap-experience-v93.js",
+                     "health.html","price-evidence-v97.js","price-evidence-v97.css"):
+            self.assertIn(path,m.PATHS)
+        self.assertEqual(len(m.PATHS),len(set(m.PATHS)))
     def test_requires_exact_production_origin(self):
         with self.assertRaises(ValueError):
             m.check(base="https://example.invalid/",attempts=1,interval=0,fetch=lambda p,n:b"fake")
