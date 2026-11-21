@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T15:37:30Z",
+  "generated": "2026-11-21T15:53:27Z",
   "items": [
     {
       "id": "SAP.DE:4030f80d9d2ac66b9a94252b45006e3915ca30b4f94f9e15626f06e9cf1677d1",
@@ -219,6 +219,29 @@
       "publisher": "Autosprint",
       "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQWXk0Nmtsd1g4X21BUjNJTTUtT0xFSTRJVmJGZG5LV2pudjI1czlscDRfOVJ1WmtsazRSVndDN1RfckgzdnRVVnpwUkJQNFppTTVJZnQ5NWZueFRQTExtYTR5UFBKVkhZUWgwdEJaTkhqM0pxVDEzSFBpdF9kUG0xeDBUQ0RtQ0Y1ZWlJMzRWZEJVbDhQdmJFMFVwYmZ3cnFzTUNReE9NU3ZrVHFoT05wa3pSWmgyeWJJOG43UlRUU1FNVjhmQWNHbVFMemxudTFqa01iYXVFNG5GUDc0Z0VNZ2RaNVZKaVpWQzNidHZ4Ty1vWjF1c2c?oc=5",
       "published": "2026-11-21T11:06:00Z",
+      "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "RACE.MI:556d2bd62f43e7f03d9aa5107638ec753c2097e8efd4b8301f60bb6929bf3068",
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Leonardo Maria Del Vecchio, la Procura di Milano verso il processo per l’incidente in Ferrari",
+      "english": "Leonardo Maria Del Vecchio: Milan Public Prosecutor's Office moves toward trial for Ferrari accident",
+      "publisher": "Il Fatto Quotidiano",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPODNyZzRxbzdNczdJR2lvdDZBSGlsZ3ZsamEyQlB1WHF2OGMyWmMtelNVQmpNV01qNlJYNTFodFpFSzhDRXpaODZRS2FZamlhMFZlbzcyYzdYUk8zT1J3d0FQSk9uZTJ3WGRiT2p6OF81SUZEYi1qRHFKaHVVTF85a09mY04yMnRBaC1Eay05R3IzTlJrQWluNUJjZ01tOWJk?oc=5",
+      "published": "2026-11-21T11:04:26Z",
       "lang": "it",
       "regulatory": false,
       "sourceIssuer": null,
@@ -2363,36 +2386,13 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "P911.DE:45612f8e1370ad18fa4a34764542f4400dd8d51ffcd7e3195a55efd1c41f7004",
-      "ticker": "P911.DE",
-      "name": "Porsche",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "\"Sentimental value\": Insolvency plan lets Paddy McKillen Jr keep Porsche and art",
-      "english": null,
-      "publisher": "The Currency",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQS0dFODMybjJXTHRPUlNVQk1SWGJfcV9NYVJyQTVKR0lXV0lObHpLSE5hTnZueVprNjQzS0phYlg5NzN1cGJaNW1xTU9PLVNiOUIyRFptSnd5dmJBRTdwcTEzQzRYSWRSaWlLN29vdmVsQ2Z3VFU3SlNwRm5ES1FzMW5TckRyWDgta3VjRU1ZajRzcldHTHNNM2hNT2RtWmJYeUFISnNXUldBMG51MC1mMFRiRmstUFZUdUhj?oc=5",
-      "published": "2026-11-20T14:51:10Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "review",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1949,
+  "totalStored": 1950,
   "limit": 100,
   "quality": {
-    "total": 1949,
-    "relevant": 1423,
+    "total": 1950,
+    "relevant": 1424,
     "review": 458,
     "duplicates": 92,
     "issuerLinked": 430,
@@ -2416,7 +2416,7 @@
       "Contracts": 144,
       "Capital & ownership": 1,
       "Management": 62,
-      "General": 1321
+      "General": 1322
     }
   }
 }
