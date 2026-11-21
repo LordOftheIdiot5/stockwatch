@@ -13,6 +13,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from news_quality import annotate, summary
 from driver_attention import build as driver_attention
 from build_research_data import extract_events
+from scan import web_story_association
 
 NOW=datetime(2026,11,21,21,tzinfo=timezone.utc)
 
@@ -73,6 +74,22 @@ class IssuerIdentityEvidence(unittest.TestCase):
         self.assertEqual(out['identityTier'],'issuer_verified')
         self.assertEqual(summary([out])['issuerLinked'],1)
         self.assertEqual(len(extract_events([out],NOW)),1)
+
+    def test_scanner_alert_gate_runs_before_archive_annotation(self):
+        from news_quality import identity_evidence
+        for ticker, name, title in (
+            ('CAF.MC','CAF','CAF launches Women Africa Cup of Nations'),
+            ('RACE.MI','Ferrari','Ferrari Challenge racing finals'),
+            ('AIR.PA','Airbus','Airbus A380 plane grounded by airline'),
+            ('FRO.OL','Frontline','Financial fraud frontline on mobile phones'),
+        ):
+            self.assertEqual(web_story_association(ticker,name,title)[0],'review')
+        self.assertEqual(web_story_association('CAF.MC','CAF',
+            'CAF rail wins train contract')[0],'mentioned')
+        self.assertEqual(web_story_association('FRO.OL','Frontline',
+            'Frontline plc announces tanker earnings')[0],'mentioned')
+        self.assertEqual(web_story_association('RACE.MI','Ferrari',
+            'Ferrari NV raises earnings guidance')[0],'mentioned')
 
     def test_review_tier_disclosure_cannot_generate_provisional_calendar_event(self):
         suspected=dict(self.row('CAF.MC','CAF',
