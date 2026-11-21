@@ -79,6 +79,13 @@ jobs:
         run: |
           node --check intelligence-experience-v95.js
           node --test tests/test_intelligence_experience_v95.mjs
+      - name: V96 integrated company and heatmap JavaScript regression
+        if: startsWith(github.head_ref, 'feature/stockwatch-v96-')
+        run: |
+          node --check v4.js
+          node --check research.js
+          node --check intelligence-experience-v95.js
+          node --test tests/test_heatmap_experience_v93.mjs tests/test_company_experience_v94.mjs tests/test_intelligence_experience_v95.mjs
       - name: V25b research universe tests
         run: node --test tests/test_universe_v25b.mjs
       - name: V26 intelligence graph tests
@@ -224,6 +231,26 @@ jobs:
           path: |
             visual-audit/v95-research/
             workspace-previews/v84-network-*.png
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: V96 all-version integrated research and calendar browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v96-')
+        run: |
+          python tests/browser_check_modern_overview.py
+          python tests/browser_check_heatmap_v93.py
+          python tests/browser_check_company_experience_v94.py
+          python tests/browser_check_research_experience_v95.py
+          python tests/browser_check_source_integrity_v96.py
+      - name: Upload V96 integrated browser screenshots
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v96-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v96-release-evidence
+          path: |
+            visual-audit/v93-heatmap/
+            visual-audit/v94-company/
+            visual-audit/v95-research/
+            visual-audit/v96-source-integrity/
           retention-days: 14
           if-no-files-found: ignore
       - name: V84 commercial network unit checks

@@ -1,0 +1,17 @@
+# Stockwatch V96 — Integrated production release and source freshness
+2026-11-21 · Priority: make approved V90–V95 design appear in production and keep sourced data honest.
+
+## Verified problems on 2026-11-21
+Main remains at `5e3e0b2` while V90–V95 design branches are draft PRs #168–#173. Running Playwright tests on a draft branch does not deploy it. Last scanner produced `signals.json` 2026-11-20T23:34:55Z and `source-health.json` 2026-11-20T23:35:56Z. Market prices were retained for 139 monitored instruments, but the **strict completed-session coverage had only 2 comparable, 132 unconfirmed/older**. Broad historical heatmap reported date 2026-11-20 is not proof of current-session scanner price for 134 listings. That date is expected on Saturday 21 November. `data/events.json` had 0 future verified events; the news archive contained 2 recent direct issuer disclosures.
+
+## Changes in integrated candidate
+1. Overview source-integrity strip prominently states scanner UTC time, completed comparison session, strict session-comparable count and unconfirmed movements and explains date-stamped historical map changes are not live scanner signals.
+2. Calendar retains no verified future event dates but adds **recent issuer disclosure evidence** from existing `news-latest.json`, requiring issuer-code match, published date and original HTTPS link. These are expressly not announced future event dates. No fake schedules, dividends, price figures or business numbers.
+3. Weekdays retain hourly scanner during 06:05–17:05 UTC and 22:20 UTC recovery. New bounded weekend scans at **09:05 and 15:05 UTC** retain news/issuer context and health status even though markets are closed. Hourly production health still runs 24/7, with explicit weekday (>3 hours during coverage window) and weekend (>7 hours in expected 17:00–20:00 UTC window) overdue warnings, plus completed-session data freshness metrics.
+4. All pre-existing V90–V95 source-backed design changes are included in this **single integrated candidate**, not deployed as six intermediate partially validated stages. Keep provider rights, chart source licences, network evidence disclaimers and sparse source periods truthful.
+
+## Release gates
+Automated tests: existing Python suite, Node suites, V93–V95 browser smoke tests, V96 browser smoke across index and calendar at 390/1920 dark/light. Verify against 320/390/768/1440/1920, 200% zoom, links/canonicity, no page JS errors or horizontal overflow. Human inspect screenshots.
+Open V96 integration PR to `main`; verify mergeable and all CI green. Merge only that integrated PR (after full review), then watch GitHub Pages deploy job and `scripts/verify_pages_release.py` exact byte comparison and `scripts/production_health.py`. Once live, verify actual live source-health, homepage code and the new calendar directly. A successful CI checkout by itself is NOT a public deployment.
+
+Do not claim scanner continuous per-second or market quotes live. It is scheduled collection with an hourly independent health monitor and bounded weekend checks. Data-provider publication cadence and entitlements still limit freshness; 132 session-unconfirmed observations are a separate upstream coverage issue requiring authorized sources.
