@@ -51,6 +51,8 @@ class V94CompanyUXTests(TestCase):
         self.assertNotIn("!important",self.css)
         self.assertNotIn("@import",self.css)
         self.assertNotIn("display:none",self.css)
+        self.assertIn('body[data-page=company][data-theme=light]',self.css)
+        self.assertIn('--sw94-accent:#006a5e',self.css)
     def test_reference_only_research_keeps_distinct_design(self):
         self.assertIn("sw94-reference-profile",self.js)
         self.assertIn(".sw94-reference-profile .sw-identity-grid",self.css)

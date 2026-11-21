@@ -38,6 +38,10 @@ def main():
                                 wait_until="domcontentloaded",timeout=25000)
                             profile=page.locator("#stockDetail .sw-company-research")
                             profile.wait_for(timeout=30000)
+                            actual_color=profile.locator(".sw-company-heading .sw-ws-eyebrow").evaluate(
+                                "(el)=>getComputedStyle(el).color")
+                            expected_color="rgb(0, 106, 94)" if theme=="light" else "rgb(82, 221, 193)"
+                            assert actual_color==expected_color,(theme,actual_color,expected_color)
                             page.locator(".sw94-research-shortcuts").wait_for(timeout=10000)
                             chart=profile.locator('[data-company-section="chart"]')
                             map_node=profile.locator("#companyDriverMap")

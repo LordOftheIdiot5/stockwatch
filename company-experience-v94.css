@@ -307,3 +307,18 @@ body[data-page=company].sw94-profile-ready .sw-page-head h1{
 body[data-page=company].sw94-profile-ready .sw-page-head .sw-subtitle{
  font-size:11px;line-height:1.4;margin:0;color:var(--sw-dim);
 }
+
+/* AA-oriented light-theme contrast for teal evidence and active navigation. */
+body[data-page=company][data-theme=light]{
+ --sw94-accent:#006a5e;
+ --sw94-border:rgba(57,103,124,.34);
+}
+body[data-page=company][data-theme=light] .sw-company-emblem{
+ border-color:rgba(0,106,94,.45);
+ background:rgba(0,106,94,.08);
+}
+body[data-page=company][data-theme=light] .sw-company-tabs button.sw94-current{
+ color:var(--sw94-accent);
+ border-color:rgba(0,106,94,.59);
+ background:rgba(0,106,94,.09);
+}
