@@ -38,12 +38,23 @@
     pin.style.top=pos.y.toFixed(2)+'%';
     pin.setAttribute('aria-label',label+': '+stats.dated+' of '+stats.listed+' listings with dated prices. This is not a market movement.');
     pin.setAttribute('title',label+': '+stats.dated+'/'+stats.listed+' dated observations, not market returns');
+    pin.setAttribute('aria-pressed', 'false');
     const dot=make('span','sw110e-pin-dot');
     dot.setAttribute('aria-hidden','true');
     const text=make('span','sw110e-pin-tooltip',label+' · '+stats.dated+'/'+stats.listed);
     text.setAttribute('aria-hidden','true');
     pin.append(dot,text);
-    pin.addEventListener('click',()=>{pin.classList.toggle('sw110e-pin-open')});
+    pin.addEventListener('click',()=>{
+      const selected = pin.classList.toggle('sw110e-pin-open');
+      pin.setAttribute('aria-pressed', String(selected));
+    });
+    pin.addEventListener('keydown',event=>{
+      if (event.key === 'Escape') {
+        pin.classList.remove('sw110e-pin-open');
+        pin.setAttribute('aria-pressed','false');
+        event.preventDefault();
+      }
+    });
     area.append(pin);
   }
   function renderCoverageMap(section,data) {
@@ -68,14 +79,21 @@
     addPin(world,'Europe',europe,11,53);
     addPin(world,'Hong Kong',asia,114.17,22.32);
     const legend=make('div','sw110e-map-legend');
-    legend.append(make('span','','● Exchange listing coverage'));
+    legend.append(make('span','','● Listing coverage'));
     legend.append(make('span','','Not index performance'));
     const details=make('details','sw110e-all-venues');
-    const summary=make('summary','', 'All exchange venues ('+all.length+')');
+    const summary=make('summary','', 'Venue breakdown ('+rows.children.length+')');
     details.append(summary,rows);
+    const basemap=make('a','sw-textlink','Basemap: Natural Earth ↗');
+    basemap.href='https://www.naturalearthdata.com/about/terms-of-use/';
+    basemap.rel='noopener noreferrer';
+    details.append(basemap);
+    // The legend belongs to its mapped evidence, not a separate tall row.
+    // Keep it visible by default and inside the map's accessible group.
+    world.append(legend);
     const caption=body.querySelector('.sw110d-coverage-caption');
-    if(caption)caption.after(label,world,legend,details);
-    else body.append(label,world,legend,details);
+    if(caption)caption.after(label,world,details);
+    else body.append(label,world,details);
     if(unmapped.length) {
       details.append(make('p','sw-meta','Unmapped venue identifiers remain in the list; none are placed on the map without identity review.'));
     }
