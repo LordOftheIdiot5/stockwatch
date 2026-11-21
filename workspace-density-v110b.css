@@ -1,0 +1,79 @@
+/* V110b: source-honest compact trading-terminal composition.
+   All information remains present. Full layout is available from page controls. */
+body.sw-shell-v47:not(.sw110b-spacious) .sw-content{padding-top:clamp(10px,1.1vw,17px)}
+body.sw-shell-v47:not(.sw110b-spacious):not([data-page=index]) .sw-page-head{margin-bottom:10px;padding:clamp(10px,1.1vw,17px) clamp(13px,1.4vw,22px);min-height:0}
+body.sw-shell-v47:not(.sw110b-spacious):not([data-page=index]) .sw-page-head h1{font-size:clamp(23px,2vw,30px);line-height:1.2;margin:2px 0 5px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-page-head .sw-subtitle{margin:3px 0 0;font-size:13px;line-height:1.5}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-section-row{margin:10px 0 8px;gap:10px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-grid4,
+body.sw-shell-v47:not(.sw110b-spacious) .sw-grid2{gap:10px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-panel-hd{padding:10px 14px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-panel-pad{padding:clamp(10px,1.05vw,15px)}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-stat{padding:12px 14px;min-height:82px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-stat-num{font-size:clamp(22px,1.8vw,28px)}
+body.sw-shell-v47:not(.sw110b-spacious) :is(.sw-tablewrap,.tablewrap){max-height:min(57vh,510px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+body.sw-shell-v47:not(.sw110b-spacious) :is(.sw-tablewrap,.tablewrap) thead th{position:sticky;top:0;z-index:2;background:var(--sw-card)}
+.sw110b-jump{display:flex;align-items:center;gap:11px;min-height:39px;min-width:0;padding:6px 10px;margin:0 0 10px;border:1px solid var(--sw-edge);border-radius:10px;background:var(--sw-surface);position:sticky;top:0;z-index:10}
+.sw110b-jump-label{flex:none;font-size:12px;font-weight:750;color:var(--sw-muted)}
+.sw110b-jump-links{display:flex;gap:6px;min-width:0;flex:1;overflow-x:auto;scrollbar-width:thin;align-items:center}
+.sw110b-jump-links a{flex:none;display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:7px;border:1px solid var(--sw-edge);font-size:12px;line-height:1.3;color:var(--sw-text);text-decoration:none}
+.sw110b-jump-links a:hover{border-color:var(--sw-mint);color:var(--sw-mint)}
+.sw110b-layout-toggle{flex:none;min-height:30px;padding:5px 11px;border-radius:7px;border:1px solid var(--sw-edge);background:var(--sw-card);color:var(--sw-text);cursor:pointer;font-size:12px}
+.sw110b-layout-toggle:hover{border-color:var(--sw-mint)}
+.sw110b-jump :is(a,button):focus-visible{outline:3px solid var(--sw-mint);outline-offset:2px}
+.sw110b-section-target{scroll-margin-top:52px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-banner{gap:12px;padding:12px 14px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-links{padding:9px 13px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-tabs{gap:5px;padding:8px 12px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-tabs button{padding:7px 10px;min-height:34px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-block{padding:clamp(10px,1vw,15px);margin:8px 0}
+body[data-page=company]:not(.sw110b-spacious) .sw50-coverage>div{padding:9px 12px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-heading h2{font-size:clamp(23px,2vw,31px)}
+body[data-page=terminal]:not(.sw110b-spacious) .sw-content{padding:10px 12px 32px}
+body[data-page=terminal]:not(.sw110b-spacious) .sw-terminal-panel header{padding:8px 11px}
+body[data-page=terminal]:not(.sw110b-spacious) .sw52-layout .sw-terminal-scroll{max-height:min(53vh,510px)}
+@media(min-width:1320px){
+ body[data-page=index] .sw-overview-head{min-height:76px;padding:9px 16px;margin-bottom:5px}
+ body[data-page=index] .sw-overview-head h1{font-size:clamp(27px,2vw,34px)}
+ body[data-page=index] .sw-index-card{min-height:81px;padding:8px 12px}
+ body[data-page=index] .sw-index-main .sw-index-close{font-size:22px}
+ body[data-page=index] .sw-index-spark svg{height:34px}
+ body[data-page=index] .sw-index-foot{margin-top:2px}
+ body[data-page=index] details.sw96-source-status{margin:4px 0 8px}
+ body[data-page=index] .sw98-primary{gap:10px;margin:8px 0 10px;grid-template-columns:minmax(0,1.85fr) minmax(310px,.83fr)}
+ body[data-page=index] .sw98-primary #overviewMacro{min-height:0;padding:10px 12px}
+ body[data-page=index] .sw98-primary #overviewMacroPlot svg{height:clamp(200px,15vw,248px);max-height:248px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls{margin-bottom:6px;gap:6px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls select{min-height:34px;padding:5px 8px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-value strong{font-size:clamp(22px,1.8vw,28px)}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary{padding:8px 10px}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-stat{min-height:48px;padding:6px 9px}
+ body[data-page=index] .sw98-intelligence-rail .sw-overview-news{min-height:150px;max-height:275px}
+ body[data-page=index] .sw98-market-secondary{grid-template-columns:minmax(0,1.55fr) minmax(240px,.75fr) minmax(260px,.8fr);gap:10px;margin:8px 0}
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion{display:contents}
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion>.sw-panel{min-width:0;max-height:254px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expanded){max-height:209px;overflow:auto}
+ body[data-page=index] .sw98-market-secondary .sw-panel-hd{padding:8px 11px}
+ body[data-page=index] .sw98-market-secondary .sw-panel-pad{padding:9px 11px}
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar{gap:5px;margin:0 0 6px}
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar select{min-height:32px}
+ body[data-page=index] .sw98-market-secondary .sw-heat-cell{min-height:48px}
+ body[data-page=index] .sw98-market-secondary .sw-heat-cells{gap:4px}
+ body[data-page=index] .sw92-quick-tools{margin:8px 0 12px;padding:9px 12px;gap:7px}
+ body[data-page=index] .sw92-quick-tools a{min-height:32px;padding:6px 9px}
+}
+@media(min-width:851px) and (max-width:1319px){
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:850px){
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion{display:grid;grid-template-columns:minmax(0,1fr)}
+ .sw110b-jump{position:static;gap:7px;padding:7px}
+ .sw110b-jump-label{display:none}
+ .sw110b-jump-links a{min-height:33px}
+ .sw110b-layout-toggle{min-height:35px}
+}
+@media(max-width:600px){
+ body.sw-shell-v47:not(.sw110b-spacious) .sw-stat{min-height:72px}
+ body.sw-shell-v47:not(.sw110b-spacious) .sw-page-head{padding:11px 12px}
+}
+@media(prefers-reduced-motion:reduce){.sw110b-jump-links{scroll-behavior:auto}}
