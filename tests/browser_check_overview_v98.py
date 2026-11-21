@@ -23,7 +23,11 @@ def main():
      heat=page.locator(".sw98-market-secondary .sw-ws-heatmap")
      assert chart.count()==rail.count()==news.count()==heat.count()==1
      assert chart.bounding_box()["y"]<heat.bounding_box()["y"]
-     assert rail.bounding_box()["y"]<heat.bounding_box()["y"]
+     # V110b's source-backed market/news cards are independent grid items.
+     if width>=1320:
+      assert news.bounding_box()["y"]<heat.bounding_box()["y"]
+     else:
+      assert rail.bounding_box()["y"]<heat.bounding_box()["y"]
      if width>=1320:
       # V110b flattens the old rail into real three-column chart/breadth/news.
       breadth=page.locator(".sw98-primary .sw92-focus-summary")
@@ -59,7 +63,7 @@ def main():
      (ROOT/"workspace-previews").mkdir(exist_ok=True)
      filename=f"v98-overview-{width}-{theme}.png"
      page.screenshot(path=str(ROOT/"workspace-previews"/filename),animations="disabled")
-     evidence.append({"width":width,"theme":theme,"chartWidth":round(chart.bounding_box()["width"]),"railWidth":round(rail.bounding_box()["width"]),"screenshot":filename})
+     evidence.append({"width":width,"theme":theme,"chartWidth":round(chart.bounding_box()["width"]),"railWidth":round((news if width>=1320 else rail).bounding_box()["width"]),"screenshot":filename})
      page.close()
    b.close()
  finally:
