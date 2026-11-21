@@ -1,6 +1,34 @@
 {
-  "generated": "2026-11-21T19:11:12Z",
+  "generated": "2026-11-21T20:01:05Z",
   "items": [
+    {
+      "id": "NOVO-B.CO:22c331b855b8a73647a26e7100cc946972fcb631badfa01de2e95284e481752a",
+      "ticker": "NOVO-B.CO",
+      "name": "Novo Nordisk",
+      "sector": "Pharma & medtech",
+      "type": "news",
+      "headline": "Novo Nordisk’s (NYSE: NVO) Dividend Yield Hits 4.6%, Dwarfing The S&P 500’s 1% Return",
+      "english": null,
+      "publisher": "Foreign Policy Journal",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkFpMzhpYjNtQTBCbi05RDVtZ0J2YjhpOFNKZHR0LVBKWG1uelVxQ3dlWXRITmFtR2xZX1Bfc09LSTZONlhGRVNFbkx3Vkl5aUdDcEt3RnJBVC0wb3RVcnM2RVZXYXA3SldudmQ0a0ticXlGNVJVZGJGRFlKUV9nRi1YczZTZ0wtRnV1c0EzTXNuS1VOTVg0OW81cUYtSGdrTl80QjNiU0E2MjJUR0R1YmhuS0JYUzEwNV9Zeno3MTM3YzQ?oc=5",
+      "published": "2026-11-21T19:28:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Dividends",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Dividends"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "CAF.MC:7cfc2c6f21872cb433e94aa17db865868fd2f9e53fdf375a4fd8b747d1549722",
       "ticker": "CAF.MC",
@@ -1410,6 +1438,34 @@
       "priority": "normal"
     },
     {
+      "id": "RMS.PA:903025badb3f10cc32a9de6c5c92b5a567de9617926abb2f5f95fd696983193d",
+      "ticker": "RMS.PA",
+      "name": "Hermes",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Peter J. Germain Discloses Acquisition and Sale of Federated Hermes Class B Shares in November 2026",
+      "english": null,
+      "publisher": "Kalkine Media",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzRPVURfSjVXNFhJQU5Qbmhva3ZOcW92TGtQNUtwcUhaRk11QW1HS1p5SjZudUYwZVlhQXFWanR1YnhlU0duWmZsWi1hdm5uME5rMFFCOGEyakNEV1l3UDRtaTNjRGNEdGV0TFNIQzFLR0lfVXhZQ1ZLY2Rhc2p3YXo5ZHNrZ3ppOWJJMjUxcVZzanQ1amxxd2ljS1AzOTdDVlppVW04b3pESEd3TlVTZk9oZ2FFcW1BcWlpXzdPWlh2dFdiZVI2QWpxdW94cXQ1ZmdDWmpTNXJzbEh3ZFE?oc=5",
+      "published": "2026-11-20T21:22:44Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "sec:0000354950:HD:0001628280-26-075287",
       "ticker": "HD",
       "name": "Home Depot",
@@ -2250,6 +2306,29 @@
       "priority": "normal"
     },
     {
+      "id": "SIE.DE:94e7a98c8bb602f3b1090ebb446c266809bc33d9e70983bc01f455f5a234beca",
+      "ticker": "SIE.DE",
+      "name": "Siemens",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Siemens launches world’s first heavy duty direct current contactor for up to 1500 V",
+      "english": null,
+      "publisher": "WebWire",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE45Wmgzc0ZlSHU4ZUhwa05nQUVUb04tUHFkM011eVNlbFk1d3RSNFh0NGtjYkQ5QUlpcGZLNnFrc0lESjRQQjJ5Zmo5dmJ2bDhHSnhOTnJFSVFDNy10ZWs0WA?oc=5",
+      "published": "2026-11-20T15:51:43Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "UCG.MI:b19b69876a0e6e7cef71d3010c85289e553aec41d270000fe548934e09f6305d",
       "ticker": "UCG.MI",
       "name": "Unicredit",
@@ -2317,106 +2396,37 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "DOFG.OL:4f61ccd301a7de8922583299a34ec9a50f298472e83bbd6605c080dff8088afe",
-      "ticker": "DOFG.OL",
-      "name": "DOF Group",
-      "sector": "Shipping & offshore",
-      "type": "news",
-      "headline": "Pål Wibe har kjøpt Oda-aksjer for fem millioner",
-      "english": null,
-      "publisher": "E24",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONVdkcS1sZ1JuXy15VEVWdTlaRklxODMtNzJuUzAwMjY0bDFVYU5LVTFXa2JFY1c0dDc3VDRYZGQza3ZtZmxPZzV6cjhMenZtZEU4Z3VsVktuRE1OekVmbmNwOE9DdU16TG5rQlNPaFBacGpVaWVLZ3VPZGhBNU9pVFFYOWpiazlTa2tv?oc=5",
-      "published": "2026-11-20T15:30:48Z",
-      "lang": "no",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "NEX.PA:39c631952d253a7698ea8f744fb166a9188791dc3c91cefafc829480b4087c29",
-      "ticker": "NEX.PA",
-      "name": "Nexans",
-      "sector": "Grid & energy",
-      "type": "news",
-      "headline": "Nexans: The Long Thesis Remains Intact (Rating Downgrade) (OTCMKTS:NXPRF)",
-      "english": null,
-      "publisher": "Seeking Alpha",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQR1RULUc5a3Q1T1Y2MHQxYURuYjlnY1loazdNMHJlZWZ6YXYyaFZZRHFJbVVHWmppQTNFUDhOTUFxTEtKY0Z2bUhWM1JnMHU2NkhZWUZWTlBUWGoxVG9PdzhRdS1ZbUphV3o5UHh0a3dCUV9PYnpMU3VTTm4wRk53QUdpQ3hOTGlQZXktdGZGdzZwSjd1bmpWN092TQ?oc=5",
-      "published": "2026-11-20T15:30:00Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "FCT.MI:1ecb8bf954a40689ee093420d0ae1753c4aa676bcf8074d17bdce807e4d89dab",
-      "ticker": "FCT.MI",
-      "name": "Fincantieri",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Carnival orders two new 130,000 gt LNG-fueled cruise ships at Fincantieri",
-      "english": null,
-      "publisher": "Marine Log",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxORG1PZzZUTlhzeHllTkduVFlUd2U5bkZ0aXhOUUVsdUE2Wm90LUdCRkJ4ZlJMaUtTUHpGSEpFNThFZ2FMeldPZ1VvWmlZTy01cy1MN1VyeEZoZFNraXRjOG1yV1FsbDlEakY0RFRqWFNfX01wR3gtZnJtWGlRazJoRWJyYWQ3ZVVWaXN3c3FfdDFzUjRfQUNyVlFjYzhoZFlEZFVOVkZHY3RiMVc3X05kUGxNYlFGaXJyZ2VROTlaMnMzWnpsWDQ4ME0zUHQtaGVTQ2JVQjRLd1RCZkJVWFZnUU1zY0lWMFR6bmVCd3FVVThveUUyV2s4dVI0eVM4NnpoUG5BNVdnbjVyRmFKNGdGa2JFZTZ4UDdlamNTa3dZV0hYSzV0Q3Q5TEE4emMxclNVX19JZFFSN2E3MXhENFBwSkFn?oc=5",
-      "published": "2026-11-20T15:29:29Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1957,
+  "totalStored": 1960,
   "limit": 100,
   "quality": {
-    "total": 1957,
-    "relevant": 1427,
+    "total": 1960,
+    "relevant": 1429,
     "review": 462,
-    "duplicates": 92,
+    "duplicates": 93,
     "issuerLinked": 430,
     "driverClassification": {
       "version": 1,
-      "classified": 467,
+      "classified": 469,
       "categories": {
-        "numbers": 265,
+        "numbers": 266,
         "prices": 6,
         "operations": 1,
-        "potential": 217,
+        "potential": 218,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
       "Earnings / results": 282,
-      "Dividends": 23,
-      "M&A": 80,
+      "Dividends": 24,
+      "M&A": 81,
       "Guidance": 37,
       "Contracts": 144,
       "Capital & ownership": 1,
       "Management": 62,
-      "General": 1328
+      "General": 1329
     }
   }
 }

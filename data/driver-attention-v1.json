@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-21T19:11:12Z",
+  "generated": "2026-11-21T20:01:05Z",
   "windowStart": "2026-11-07",
   "windowEnd": "2026-11-20",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -8200,8 +8200,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 18,
-      "latestRecord": "2026-11-20T17:02:02Z",
+      "observedRecords": 19,
+      "latestRecord": "2026-11-21T19:28:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -10229,10 +10229,18 @@
         {
           "date": "2026-11-20",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
+        {
+          "id": "RMS.PA:903025badb3f10cc32a9de6c5c92b5a567de9617926abb2f5f95fd696983193d",
+          "published": "2026-11-20T21:22:44Z",
+          "headline": "Peter J. Germain Discloses Acquisition and Sale of Federated Hermes Class B Shares in November 2026",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzRPVURfSjVXNFhJQU5Qbmhva3ZOcW92TGtQNUtwcUhaRk11QW1HS1p5SjZudUYwZVlhQXFWanR1YnhlU0duWmZsWi1hdm5uME5rMFFCOGEyakNEV1l3UDRtaTNjRGNEdGV0TFNIQzFLR0lfVXhZQ1ZLY2Rhc2p3YXo5ZHNrZ3ppOWJJMjUxcVZzanQ1amxxd2ljS1AzOTdDVlppVW04b3pESEd3TlVTZk9oZ2FFcW1BcWlpXzdPWlh2dFdiZVI2QWpxdW94cXQ1ZmdDWmpTNXJzbEh3ZFE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
         {
           "id": "RMS.PA:0945d96736e5b612e49ce780cbd18b3389d01274f20f87a994fca8e1e6808010",
           "published": "2026-11-15T22:00:00Z",
@@ -10242,13 +10250,13 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-20T08:52:34Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-20T21:22:44Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -10257,7 +10265,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 8
+        "media": 9
       }
     },
     "S92.DE": {
@@ -11454,7 +11462,7 @@
         }
       ],
       "observedRecords": 49,
-      "latestRecord": "2026-11-20T12:00:00Z",
+      "latestRecord": "2026-11-20T15:51:43Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
