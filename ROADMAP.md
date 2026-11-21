@@ -1,4 +1,7 @@
 # Nordl Stockwatch — locked product and engineering roadmap
+
+**Integrated full plan (design + expanding data):** [Stockwatch master execution plan — 21 November 2026](https://github.com/LordOftheIdiot5/stockwatch/blob/main/docs/STOCKWATCH-MASTER-EXECUTION-PLAN-2026-11-21.md). Combines the approved homepage design (#165), exchange-price freshness and licensing (#176), V100–V112 datasets (#185), source/archive rights and verified launch gates. **Read this before resuming work**, and update it with measured rollout evidence; it does not supersede source policy or make a pending phase complete.
+
 Approved direction from product discussion, 2026-11-17. Geographic allocation and US seed selection are implementation defaults; revise explicitly when needed. This is the source of truth for targets, not a statement that every feature is shipped.
 
 ## Product
