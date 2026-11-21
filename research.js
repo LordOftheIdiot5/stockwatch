@@ -8,7 +8,7 @@ const num=(x,d=2)=>x==null||!Number.isFinite(Number(x))?'—':Number(x).toLocale
 const date=x=>{const d=new Date(x);return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(d):'Unknown date'};
 const selectOptions=(values,label)=>`<option value="all">${label}</option>`+values.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');
 async function fetchJson(path){const r=await fetch(path+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
-const state={signals:null,context:null,watchlist:[],archive:null,events:null,health:null,history:new Map(),news:[],filtered:[],pageSize:50};
+const state={signals:null,context:null,watchlist:[],archive:null,events:null,health:null,licensedPrices:null,history:new Map(),news:[],filtered:[],pageSize:50};
 function headline(s){return s.headline||s.english||'Company update'};
 function fallbackNews(){const c=state.signals?.companies||[];const out=[];for(const x of c)for(const s of x.stories||[])if(['news','disclosure'].includes(s.kind))out.push({id:s.key||x.ticker+':'+s.url,ticker:x.ticker,name:x.name,sector:x.sector,type:s.kind,headline:headline(s),english:s.english,publisher:s.publisher,url:s.url,published:s.published,match:'unverified',regulatory:s.regulatory});return out}
 function showError(msg){$('app').innerHTML=`<div class="notice">${esc(msg)}</div>`}
@@ -101,11 +101,45 @@ function drawCompareSeries(series){const names=Object.keys(series);if(names.leng
  return `<div class="linelegend">${lines.map(x=>`<span><i style="background:${colors[x.k]}"></i>${esc(x.t)} · ${pct(x.values.at(-1)-100)}</span>`).join('')}</div><svg class="chartsvg" viewBox="0 0 ${w} ${h}" role="img" aria-label="Indexed stock price comparison on shared observed dates"><line x1="${p}" y1="${h-p}" x2="${w-p}" y2="${h-p}" stroke="#50647a"/>${paths}<text x="${p}" y="${h-5}" fill="#95a9c3" font-size="11">${esc(common[0])}</text><text x="${w-p}" y="${h-5}" text-anchor="end" fill="#95a9c3" font-size="11">${esc(common.at(-1))}</text></svg><div class="tagline">All series indexed to 100 on the first shared closing date. Unadjusted closes; dividends, splits and currency conversions are not applied. Different trading currencies can distort comparisons.</div>`}
 async function showCompare(){const all=state.watchlist; if(!all.length){showError('The tracked company list is unavailable.');return}const companies=new Map((state.signals?.companies||[]).map(x=>[x.ticker,x]));
  $('app').innerHTML=`<div class="panel"><div class="panelhead"><h2>Select two to four stocks</h2><span class="count">Watchlist universe · ${all.length} listings</span></div><div class="chartcard"><div class="choicegrid">${compareChoices()}</div></div></div><div id="compareView"></div>`;
- const picks=[all.find(x=>x.ticker==='ASML.AS')?.ticker||all[0]?.ticker,all.find(x=>x.ticker==='SAP.DE')?.ticker||all[1]?.ticker,'',''];picks.forEach((x,i)=>$('pick'+i).value=x||'');
+ const params=new URLSearchParams(location.search),requested=params.get('ticker'),partner=params.get('with');
+ const known=new Set(all.map(x=>x.ticker));
+ const chosen=known.has(requested)?requested:all.find(x=>x.ticker==='ASML.AS')?.ticker||all[0]?.ticker;
+ const second=known.has(partner)&&partner!==chosen?partner:
+   (all.find(x=>x.ticker==='SAP.DE'&&x.ticker!==chosen)?.ticker||all.find(x=>x.ticker!==chosen)?.ticker||'');
+ const picks=[chosen,second,'',''];picks.forEach((x,i)=>$('pick'+i).value=x||'');
  async function render(){const names=[...new Set(Array.from({length:4},(_,i)=>$('pick'+i).value).filter(Boolean))];const selected=names.map(t=>companies.get(t)||all.find(x=>x.ticker===t));if(names.length<2){$('compareView').innerHTML='<div class="empty">Choose at least two different companies.</div>';return}
- const boxes=selected.map(c=>`<div class="comparebox"><span class="pill">${esc(c.sector||'Category unknown')}</span><h3>${esc(c.name)}</h3><p>${esc(c.ticker)} · ${esc(c.exchange||'')}</p><dl><dt>Latest close</dt><dd>${num(c.close,3)} ${esc(c.currency||'')}</dd><dt>Daily change</dt><dd>${signedNum(c.changePct)}</dd><dt>Vs market</dt><dd>${signedNum(c.excessPct)}</dd><dt>Relative volume</dt><dd>${num(c.rvol)}×</dd><dt>Disclosed shorts</dt><dd>${c.short?.percent==null?'—':num(c.short.percent)+'%'}</dd></dl></div>`).join('');
- $('compareView').innerHTML=`<div class="comparegrid">${boxes}</div><div class="panel" style="margin-top:18px"><div class="panelhead"><h2>Historical performance</h2><select id="range" style="background:#122037;color:var(--text);border:1px solid #2a3c54;padding:8px;border-radius:8px"><option value="90">3 months</option><option value="370">1 year</option><option value="1900">5 years</option></select></div><div id="comparisonChart" class="chartcard"><div class="empty">Checking source-dated history files…</div></div><div class="note">Share-price performance is not total return. Fundamentals appear only when verified source data is provided.</div></div>`;
- async function plot(){const period=+$('range').value;const since=Date.now()-period*86400000;const series={};await Promise.all(names.map(async t=>{try{let hist=state.history.get(t);if(!hist){hist=await fetchJson('data/history/'+encodeURIComponent(t)+'.json');state.history.set(t,hist)}if(hist.redistributionPermitted===true && hist.licenseReference && Array.isArray(hist.bars)){const a=hist.bars.filter(b=>new Date(b.date).getTime()>=since&&Number.isFinite(+b.close)&&+b.close>0).map(b=>({date:b.date,close:+b.close}));if(a.length>2)series[t]=a}}catch{}}));$('comparisonChart').innerHTML=drawCompareSeries(series)}
+ const boxes=selected.map(c=>`<div class="comparebox"><span class="pill">${esc(c.sector||'Category unknown')}</span><h3>${esc(c.name)}</h3><p>${esc(c.ticker)} · ${esc(c.exchange||'')}</p><dl><dt>Latest close</dt><dd>${num(c.close,3)} ${esc(c.currency||'')}</dd><dt>Daily change</dt><dd>${signedNum(c.changePct)}</dd><dt>Vs market</dt><dd>${signedNum(c.excessPct)}</dd><dt>Relative volume</dt><dd>${num(c.rvol)}×</dd><dt>Disclosed shorts</dt><dd>${c.short?.percent==null?'—':num(c.short.percent)+'%'}</dd></dl><p class="sw113-observation">Last quote: ${esc(c.date||'date unavailable')} · ${esc(c.currency||'currency unavailable')}. Older changes are not current-session signals.</p><a class="sw113-company-link" href="company.html?ticker=${encodeURIComponent(c.ticker)}">Open company research ↗</a></div>`).join('');
+ $('compareView').innerHTML=`<div class="comparegrid">${boxes}</div><div class="panel" style="margin-top:18px"><div class="panelhead"><h2>Historical performance</h2><select id="range" style="background:#122037;color:var(--text);border:1px solid #2a3c54;padding:8px;border-radius:8px"><option value="90">3 months</option><option value="370">1 year</option><option value="1900">5 years</option></select></div><p id="compareHistoryStatus" class="sw113-history-status" role="status">Checking publicly displayable dated series…</p><div id="comparisonChart" class="chartcard"><div class="empty">Checking licensed history availability…</div></div><div class="note">Share-price performance is not total return. Fundamentals appear only when verified source data is provided.</div></div>`;
+ async function plot(){
+  const period=+$('range').value,since=Date.now()-period*86400000,series={};
+  const metadata=Array.isArray(state.licensedPrices?.records)?state.licensedPrices.records:[];
+  const approved=names.map(t=>metadata.find(p=>p.listingId===t&&p.priceType==='end_of_day'
+    &&(p.publicDisplayPermitted===true||(p.publicDisplayPermitted===undefined&&p.redistributionPermitted===true))
+    &&/^data\\/licensed-reference-history\\/[a-f0-9]{32}\\.json$/.test(p.historyPath||'')));
+  let available=0;
+  await Promise.all(names.map(async(t,i)=>{
+   const entry=approved[i];if(!entry||!window.StockwatchNativeChart?.authorized)return;
+   try{
+    let hist=state.history.get(t);
+    if(!hist){hist=await fetchJson(entry.historyPath);
+     if(!window.StockwatchNativeChart.authorized(entry,hist))return;
+     state.history.set(t,hist);
+    }
+    if(!window.StockwatchNativeChart.authorized(entry,hist))return;
+    const a=(hist.bars||[]).filter(b=>typeof b.date==='string'
+      &&/^20\\d{2}-\\d{2}-\\d{2}$/.test(b.date)
+      &&Date.parse(b.date)>=since
+      &&Number.isFinite(b.close)&&b.close>0)
+      .map(b=>({date:b.date,close:b.close}));
+    if(a.length>2){series[t]=a;available++}
+   }catch{}
+  }));
+  $('compareHistoryStatus').textContent=available>=2?
+   available+' authorized historical series · aligned daily closes only':
+   'Licensed dated history is not connected for at least two selected companies. '
+   +'Saved scanner closes and daily movements are separate from a licensed history chart.';
+  $('comparisonChart').innerHTML=drawCompareSeries(series);
+ }
  $('range').addEventListener('change',plot);await plot()}
  for(let i=0;i<4;i++)$('pick'+i).addEventListener('change',render);await render()}
 function fallbackHealth(){const w=state.watchlist,c=state.signals?.companies||[],map=new Map(c.map(x=>[x.ticker,x]));const ex=new Map();for(const x of w){const k=x.exchange||'Unknown';const v=ex.get(k)||{name:k,total:0,priced:0};v.total++;if(map.has(x.ticker))v.priced++;ex.set(k,v)}return {generated:new Date().toISOString(),latestScan:state.signals?.generated,contextAgeHours:state.context?.generated?(Date.now()-new Date(state.context.generated))/3600000:null,scanAgeHours:state.signals?.generated?(Date.now()-new Date(state.signals.generated))/3600000:null,tracked:w.length,priced:c.length,missing:w.filter(x=>!map.has(x.ticker)),exchanges:[...ex.values()].map(x=>({...x,missing:x.total-x.priced})),sourceStatus:{'Yahoo prices':'not_instrumented','Oslo NewsWeb':'not_instrumented','MFN filings':'not_instrumented','Google News':'not_instrumented','Finanstilsynet shorts':'not_instrumented'},caveat:'Individual source success is not monitored by the current scanner.'}}
@@ -195,8 +229,8 @@ async function loadOfficialSourceHealth(){
  ' · '+((source?.series?.length||0)+(economic?.series?.length||0))+' dated indicator series · issuer matches are candidates until externally verified.'+
  ' <a href="data/open-data.json" target="_blank" rel="noopener noreferrer">Download source-linked observations ↗</a></p>';
 }
-async function main(){const results=await Promise.allSettled([fetchJson('data/signals.json'),fetchJson('data/context.json'),fetchJson('watchlist.json'),fetchJson('data/news-latest.json'),fetchJson('data/events.json'),fetchJson('data/source-health.json')]);const get=i=>results[i].status==='fulfilled'?results[i].value:null;
- state.signals=get(0);state.context=get(1);state.watchlist=get(2)?.tickers||[];state.archive=get(3);if(!state.archive){try{state.archive=await fetchJson('data/news-archive.json')}catch{}}state.events=get(4);state.health=get(5);
+async function main(){const results=await Promise.allSettled([fetchJson('data/signals.json'),fetchJson('data/context.json'),fetchJson('watchlist.json'),fetchJson('data/news-latest.json'),fetchJson('data/events.json'),fetchJson('data/source-health.json'),fetchJson('data/licensed-price-coverage.json')]);const get=i=>results[i].status==='fulfilled'?results[i].value:null;
+ state.signals=get(0);state.context=get(1);state.watchlist=get(2)?.tickers||[];state.archive=get(3);if(!state.archive){try{state.archive=await fetchJson('data/news-archive.json')}catch{}}state.events=get(4);state.health=get(5);state.licensedPrices=get(6);
  if(!state.signals||!state.watchlist.length){showError('The Stockwatch scanner dataset is unavailable. This page does not generate mock figures.');return}
  if(page==='news')showNews();else if(page==='calendar')showCalendar();else if(page==='compare')await showCompare();else if(page==='health'){showHealth();await loadD1Health();await loadOfficialSourceHealth();}else showError('Unknown research page');}
 main().catch(e=>{showError('Could not load this research page: '+e.message);console.error(e)});
