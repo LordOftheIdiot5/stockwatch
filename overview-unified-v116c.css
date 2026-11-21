@@ -1,0 +1,113 @@
+/* V116c: one coherent desktop dashboard instead of two disconnected
+ * three-column rows. Uses ONLY the existing rendered evidence components.
+ * At smaller widths the existing source-tested V116b layout stays intact.
+ */
+body[data-page=index] .sw116c-overview-grid { min-width:0; }
+@media (min-width:1320px) {
+  body[data-page=index] .sw116c-overview-grid {
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) minmax(245px,.90fr) minmax(280px,1.08fr);
+    grid-template-rows:auto auto auto;
+    column-gap:10px;
+    row-gap:9px;
+    margin:3px 0 11px;
+    min-width:0;
+    align-items:start;
+  }
+  /* Keep the original DOM ancestry for evidence and controls. Flatten
+     legacy layout-only wrappers visually, not by cloning or hiding data. */
+  body[data-page=index] .sw116c-overview-grid > .sw98-primary,
+  body[data-page=index] .sw116c-overview-grid > .sw98-market-secondary,
+  body[data-page=index] .sw116c-overview-grid .sw98-intelligence-rail,
+  body[data-page=index] .sw116c-overview-grid .sw110-heat-companion,
+  body[data-page=index] .sw116c-overview-grid .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) > .sw110-heat-companion {
+    display:contents!important;
+  }
+  body[data-page=index] .sw116c-overview-grid :is(
+      .sw92-focus-chart,.sw92-focus-summary,.sw-overview-news,
+      .sw110d-market-coverage,.sw99-watchlist,.sw-ws-heatmap) {
+    min-width:0;
+    margin:0;
+  }
+  /* The left-hand source chart spans two compact right-hand evidence rows. */
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-chart {
+    grid-column:1;
+    grid-row:1/3;
+    align-self:stretch;
+    width:100%;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-chart > .sw-panel {
+    height:100%;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary {
+    grid-column:2;
+    grid-row:1;
+    align-self:start;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw-overview-news {
+    grid-column:3;
+    grid-row:1;
+    align-self:start;
+    min-height:0;
+    max-height:245px;
+    overflow:auto;
+    scrollbar-width:thin;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage {
+    grid-column:2;
+    grid-row:2;
+    align-self:start;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw99-watchlist {
+    grid-column:3;
+    grid-row:2;
+    align-self:start;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
+  }
+  /* The source-safe heatmap and its real selected-company inspector now
+     use all workspace columns. No fake capitalization-weighted geometry. */
+  body[data-page=index] .sw116c-overview-grid .sw-ws-heatmap {
+    grid-column:1/-1;
+    grid-row:3;
+    align-self:start;
+    width:100%;
+    max-width:none;
+  }
+  body[data-page=index] .sw116c-overview-grid #workspaceHeatmap:not(.sw-heat-expanded) {
+    max-height:345px;
+    overflow:auto;
+  }
+  body[data-page=index] .sw116c-overview-grid #workspaceHeatmap.sw-heat-expanded {
+    max-height:none;
+    overflow:visible;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw93-heat-inspector {
+    width:100%;
+    max-width:none;
+    box-sizing:border-box;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw93-heat-picker-row {
+    max-width:100%;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw-ws-heatmap .sw-panel-hd {
+    padding:10px 13px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw-ws-heatmap .sw-panel-pad {
+    padding:12px 14px;
+  }
+}
+/* Native responsive and zoom-equivalent widths preserve the existing reading
+ * order: chart, news/snapshot, heatmap, coverage and saved list. */
+@media (max-width:1319px) {
+  body[data-page=index] .sw116c-overview-grid {
+    display:block;
+    min-width:0;
+  }
+}
