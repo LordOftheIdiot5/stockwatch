@@ -1,6 +1,52 @@
 {
-  "generated": "2026-11-21T03:18:18Z",
+  "generated": "2026-11-21T04:33:09Z",
   "items": [
+    {
+      "id": "SAP.DE:c0b5879bf08e21b652a3d8d9134bb5dfe0b6153f5c82e609e0ed0f610a387afe",
+      "ticker": "SAP.DE",
+      "name": "SAP",
+      "sector": "Original ten",
+      "type": "news",
+      "headline": "SAP SE (SAP) Stock Forecasts",
+      "english": null,
+      "publisher": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORXdTeE81WG5kQ3VHaVoxZGlTdVVCdkV2UkI1M0lYS2RwSnlmZjN3d0FPb3htd2t4cWtWWUZjbWtPYVJZb2VfT2xhRm9YbVNLQl9GdkVJNkwwa1pBTlppbFBUeDFwelVDRVpIWWNlR0l0ajFVd2VwRzFjSlBNb1FTTnBCY0IxX1p4dGRaQw?oc=5",
+      "published": "2026-11-21T04:30:46Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "RACE.MI:f9ebb470363e49b6003e932eba4a7d6bc6e18edeb9b1f2cbb8ef8dc473929946",
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "F1 Academy, Ferrari vince Gara 1 a Las Vegas con Alba Larsen: il VIDEO dell'ultimo giro",
+      "english": "F1 Academy, Ferrari wins Race 1 in Las Vegas with Alba Larsen: the VIDEO of the final lap",
+      "publisher": "Sky Sport",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbk5RS2NkTFBxbmJXcUZOc2ZEOERIQjZ0akhtZ01pUjZTSUVnOUc0eGxzelJ3VzhLNVNqR0FONlY1YnhCeUdPVkFMcXptb0lBX2dsbUV2MXdfSF9VSml4eWw4WjlJTWdOV3pfN1pFRkJReHBwTU5xNm9HZjZhbThCdVBjV3hzd2ZfS2xIdjNacFFLTVND?oc=5",
+      "published": "2026-11-21T03:22:40Z",
+      "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
     {
       "id": "FCT.MI:30d155a2859bdcda3b82fc6f442438d4021cee03b38245f5a2ff55558d35075f",
       "ticker": "FCT.MI",
@@ -1548,6 +1594,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "TKMS.DE:65b6e36e41760fafbc2c4ebb607f5b4ad8335c1566de5c15dd20b51b275565e7",
+      "ticker": "TKMS.DE",
+      "name": "TKMS",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Tkms Ag & Co KGaA Stock | Price | Dividend | News (TKMS00, DE000TKMS001)",
+      "english": null,
+      "publisher": "extraETF",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA2bDZtT2ZmSDJ4N1ZKb1liLWVKT3RrY2VNSG1CRThHd3JtV1pmMUhJOFVPcnl1LWRCMUZnNWpEd3hZTm5QWFJrbDBiT29vb1U0T0VsN3FNbGNra1NQYnJJ?oc=5",
+      "published": "2026-11-20T14:01:04Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "mentioned",
+      "category": "Dividends",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Dividends"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "NOVO-B.CO:8ee0df7af3bb82032aaf68f9111d33118de7d79592b47c275b077d74adad8afe",
