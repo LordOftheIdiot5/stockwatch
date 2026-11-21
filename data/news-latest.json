@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T02:18:28Z",
+  "generated": "2026-11-21T02:50:21Z",
   "items": [
     {
       "id": "KCR.HE:d8417b6d8ec640809014fb3c20368c0679b4d4e01a7a1d60f1a793618537e1e1",
@@ -1277,6 +1277,34 @@
       "priority": "normal"
     },
     {
+      "id": "FRO.OL:47d2438380b69e60568deafe961f01741becb3ad55cd2199460b4a78d57bdd12",
+      "ticker": "FRO.OL",
+      "name": "Frontline",
+      "sector": "Shipping & offshore",
+      "type": "news",
+      "headline": "Frontline plc Approves Third Quarter Dividend for 2026, Payable on or About 18 December 2026",
+      "english": null,
+      "publisher": "marketscreener.com",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPazVKdHA2VC0tOGUza2NiU3ctS1JNZHE1d1JRdkdZTUV1M2JTNEQzSngxYTFkY3Z2b2doSkNfTHdiOF9JbnBuZC0zdXNBS1ZJNHZNY1pPY2NseGtHeW5xWlp4aDFOLVJHUnFJZmNlSUhtZWlpbXBxZ293dlJ2Q2NNVVlEZWRKbU5kMEFfMURDUWpBcXpUOU51NnljTlJLUDZ5Mml1VHFGX3lmd1FjLWZJeXZvLWNjNTJlVDdVcU1kdnRxT2g1aF9xaTZpN2ZDd016b05Kb20zdTFCenph?oc=5",
+      "published": "2026-11-20T14:38:48Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Dividends",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Dividends"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
+    {
       "id": "VNA.DE:9a8e7d3220ace90958398253bb294323f8da0cbf6645c0526cefa7306150bd11",
       "ticker": "VNA.DE",
       "name": "Vonovia",
@@ -2393,44 +2421,21 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SIE.DE:8709d5a38d766c881813b8311cd9103dd8b54553fb5ff390fd093637ad727f46",
-      "ticker": "SIE.DE",
-      "name": "Siemens",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Für MCS-Ladeinfrastruktur, Speicher und PV-Anlagen: Siemens bringt weltweit erstes 1.500-V-Hochleistungs-DC-Schütz auf den Markt",
-      "english": "For MCS charging infrastructure, storage and PV systems: Siemens launches the world's first 1,500 V high-performance DC contactor",
-      "publisher": "busplaner",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPeWd1MGNpbmdzcHhKc0c2MVJxUG54emstT3ltS19DYWJWbXZwVXJUbkZqaGFsSTBSRDFJTWJWdDc3TXhQUVZCTjNSV3lTS1llNTRkb3ZoRnVxOGhFdF9jMlZzNnN5SjlZU0dUbW1vMlFjd3BRS0VtQ0pSWDYzNWx4QnJXTkFoRmJRT3BTTDRLdkRUaDFWbWdCdFh3RkNsNkVaNldEV0JCVWk4R2lhY1hCSDQ5ZmhRWnh3dFBMZlQ2dkREeGxOdkt3emVzR052R0NMZlZMUGNhTUxxWUptS3pWUGNGaUlMV3R4T29mTlE2dmxsaXYzOWRhUnNmMkpHN0xmZFE?oc=5",
-      "published": "2026-11-20T11:09:21Z",
-      "lang": "de",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1894,
+  "totalStored": 1895,
   "limit": 100,
   "quality": {
-    "total": 1894,
-    "relevant": 1387,
+    "total": 1895,
+    "relevant": 1388,
     "review": 441,
     "duplicates": 90,
     "issuerLinked": 430,
     "driverClassification": {
       "version": 1,
-      "classified": 457,
+      "classified": 458,
       "categories": {
-        "numbers": 261,
+        "numbers": 262,
         "prices": 6,
         "operations": 1,
         "potential": 211,
@@ -2440,7 +2445,7 @@
     },
     "categories": {
       "Earnings / results": 280,
-      "Dividends": 21,
+      "Dividends": 22,
       "M&A": 78,
       "Guidance": 36,
       "Contracts": 139,
