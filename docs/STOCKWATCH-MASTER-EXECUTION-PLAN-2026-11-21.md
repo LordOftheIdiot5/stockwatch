@@ -182,3 +182,12 @@ The approved 1672 × 941 PNG is held in the ChatGPT Library at `/Stockwatch/Desi
 ## V110b–V110e — compact product terminal, not longer dashboards
 
 See [the page-by-page commercial product and approved-visual roadmap](V110B-PRODUCT-COMPACT-TERMINAL-MAP.md). The screenshot governs composition and compactness, not market facts. V110b uses reversible density on twelve routes. V110c adds real company research tabs; V110d source-backed global indices, V110e screenshot/production acceptance. V106–109 rights and source identities remain open.
+
+
+## V110c — focused company intelligence cockpit (21 November 2026)
+
+**Implementation candidate, pending CI and Pages:** actual company-page sections use real focused tabs, not seven scrolling jump links. Default view has the source-labelled issuer quote/status, chart/history permissions and existing industry/company driver map. The seven real sections are Chart, Financials, Company updates, Peers, Corporate events, Industry drivers and Identity. Clicking changes the visible panel rather than requiring a multi-thousand-pixel scroll. The reversible **Full report** action restores every original section and expands existing operating-evidence and modelling panels. The prior statement/source/chart/relationship DOM and licensed price gates are kept; no data downloaded or fabricated by the tab layer.
+
+**Acceptance:** NOVO-B.CO, NHY.OL and SALM.OL in mobile/desktop browser tests; verify all seven native-button tabs, aria-pressed/aria-current, source history state, full report restore, keyboard, data quality, zero overflow and accurate source links. Preserve direct issuer search, financial statement and company driver-map tests. Production rollout only after exact assets and visual checks pass.
+
+**Next V110d:** substantiate unique per-company customer/supplier, ownership, industry/energy/freight exposures and financial revisions with original evidence and exact issuer identity, not headline co-mentions or assumed cash flows. V110e must review pixel-level approved screenshot composition plus complete menu-page task workflows. Data V102-V109 remain the primary source and licensing dependencies.

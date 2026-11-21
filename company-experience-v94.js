@@ -55,6 +55,8 @@ function enhance(){
  const refreshSelection=()=>{
    scrollQueued=false;
    if(!panel.isConnected||!mapped.length)return;
+   // V110c has genuine focused tabs; page scroll must not change the chosen tab.
+   if(panel.dataset.sw110cMode==='focus')return;
    const threshold=Math.min(220,window.innerHeight*0.28);
    let current=mapped[0];
    for(const item of mapped){

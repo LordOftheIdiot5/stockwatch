@@ -12,6 +12,7 @@ PATHS=("index.html","stocks.html","company.html","calendar.html","price-history.
        "overview-watchlist-v99.js","overview-watchlist-v99.css",
        "price-evidence-v97.js","price-evidence-v97.css",
        "overview-target-v110.css","workspace-density-v110b.css","workspace-density-v110b.js",
+       "company-cockpit-v110c.css","company-cockpit-v110c.js",
        "terminal.html","shipping.html","commodities.html","spreads.html","intelligence.html","compare.html",
        "news.html","nasdaq-notices-v100.js","nasdaq-notices-v100.css")
 TITLE=re.compile(rb"<title>(.*?)</title>",re.I|re.S)

@@ -1,0 +1,51 @@
+/* V110c company research is a real focused workspace, not seven jump links. */
+body[data-page=company] .sw-company-research[data-sw110c-mode=focus] .sw-company-block[hidden]{display:none!important}
+body[data-page=company] .sw-company-research[data-sw110c-mode=focus]:not([data-sw110c-tab=chart]) #companyDriverMap{
+ display:none;
+}
+body[data-page=company] .sw-company-tabs{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+body[data-page=company] .sw110c-mode{
+ margin-left:auto;min-height:35px;padding:7px 12px;flex:none;
+ border:1px solid var(--sw94-accent,var(--sw-mint));
+ border-radius:8px;background:rgba(82,221,193,.08);
+ color:var(--sw94-accent,var(--sw-mint));font-size:12px;font-weight:750;
+ cursor:pointer;
+}
+body[data-page=company] .sw110c-mode[aria-pressed=true]{background:rgba(82,221,193,.16)}
+body[data-page=company] .sw110c-hint{
+ margin:0;padding:8px 13px 9px;
+ color:var(--sw-muted);font-size:12px;line-height:1.5;
+ border-bottom:1px solid var(--sw-edge);
+}
+body[data-page=company] .sw110c-more{
+ min-width:0;margin:10px 0 2px;
+ padding:0 12px 10px;border:1px solid var(--sw94-border);
+ border-radius:10px;background:var(--sw-surface);
+}
+body[data-page=company] .sw110c-more>summary{
+ cursor:pointer;padding:12px 0;font-size:13px;line-height:1.4;
+ font-weight:750;color:var(--sw-text);
+}
+body[data-page=company] .sw110c-more>p{margin:0 0 10px}
+body[data-page=company] .sw110c-more-inner{display:grid;gap:12px;min-width:0}
+body[data-page=company] .sw110c-more-inner>*{min-width:0}
+body[data-page=company] :is(.sw110c-mode,.sw110c-more>summary):focus-visible{
+ outline:3px solid var(--sw94-accent,var(--sw-mint));outline-offset:3px;
+}
+body[data-page=company][data-theme=light] .sw110c-mode{background:rgba(0,106,94,.06)}
+@media(min-width:1250px){
+ body[data-page=company] .sw-company-research[data-sw110c-mode=focus][data-sw110c-tab=chart]>.sw-panel-pad{
+   display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);
+   align-items:start;column-gap:12px;
+ }
+ body[data-page=company] .sw-company-research[data-sw110c-mode=focus][data-sw110c-tab=chart]
+  [data-company-section=chart]{grid-column:1;min-width:0}
+ body[data-page=company] .sw-company-research[data-sw110c-mode=focus][data-sw110c-tab=chart]
+  #companyDriverMap{grid-column:2;min-width:0;margin:8px 0}
+ body[data-page=company] .sw-company-research[data-sw110c-mode=focus][data-sw110c-tab=chart]
+  .sw110c-more{grid-column:1/-1}
+}
+@media(max-width:720px){
+ body[data-page=company] .sw110c-mode{margin-left:0;min-height:44px}
+ body[data-page=company] .sw110c-more>summary{min-height:44px}
+}
