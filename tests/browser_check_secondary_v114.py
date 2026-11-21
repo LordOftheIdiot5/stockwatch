@@ -55,7 +55,7 @@ def main():
         for selector in anchors:
          node=page.locator(selector)
          assert node.count()==1,(path,selector)
-         assert links.locator('[href="'+selector+'"]').count()==1,(path,selector)
+         assert nav.locator('a.sw114-task-link[href="'+selector+'"]').count()==1,(path,selector)
         assert not errors,(path,width,errors)
         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+3'),(path,width,'overflow')
         assert nav.locator('.sw114-task-note').inner_text()
