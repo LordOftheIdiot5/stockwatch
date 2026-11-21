@@ -1,0 +1,99 @@
+/* V111 — use the whole screen for the heatmap inspector and bring the
+ * research underpages up to a consistent readable terminal scale.
+ * No feed, price, official-index or underlying right is modified. */
+@media (min-width:900px) {
+  /* Expanded map belongs to its own full-width research row, not the
+   * first cell of the three-column summary layout. */
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start;
+  }
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) > .sw-ws-heatmap {
+    grid-column:1/-1;
+    min-width:0;
+  }
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) > .sw110d-market-coverage {
+    grid-column:1;
+    min-height:0;
+    max-height:none;
+  }
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) > .sw110-heat-companion {
+    grid-column:2;
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    align-content:start;
+    min-width:0;
+  }
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) .sw99-watchlist {
+    min-height:0;
+    max-height:none;
+  }
+}
+body[data-page=index] .sw-ws-heatmap #workspaceHeatmap.sw-heat-expanded {
+  max-height:none;
+  overflow:visible;
+}
+body[data-page=index] .sw-ws-heatmap #workspaceHeatmap.sw-heat-expanded + .sw93-heat-inspector {
+  max-width:100%;
+}
+@media (min-width:1320px) {
+  /* The previous compact-only V110 override shrank labels to ~10px and
+   * the main chart to ~195px; give the sourced visual priority again. */
+  body[data-page=index] .sw-index-card {min-height:92px;padding:9px 12px}
+  body[data-page=index] .sw-index-top {font-size:12px}
+  body[data-page=index] .sw-index-main .sw-index-close {font-size:clamp(22px,1.3vw,26px)}
+  body[data-page=index] .sw-index-main small {font-size:11.5px}
+  body[data-page=index] .sw-index-spark svg {height:36px}
+  body[data-page=index] .sw-index-foot,
+  body[data-page=index] .sw-index-sources {font-size:11.5px}
+  body[data-page=index] .sw98-primary #overviewMacroPlot svg {height:clamp(235px,13.5vw,280px)!important;max-height:280px!important}
+  body[data-page=index] .sw98-primary .sw-overview-chart-controls label {font-size:12px}
+  body[data-page=index] .sw98-primary .sw-overview-chart-controls select {min-height:36px;font-size:12px}
+  body[data-page=index] .sw98-primary #overviewMacro .sw-meta {font-size:12px}
+  body[data-page=index] .sw98-primary .sw-overview-news .sw-brief h4 {font-size:13.5px;line-height:1.45}
+  body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expanded) {max-height:330px}
+  body[data-page=index] .sw98-market-secondary .sw-heat-cell {min-height:60px}
+  body[data-page=index] .sw98-market-secondary .sw-panel-hd h2 {font-size:15px}
+  body[data-page=index] .sw92-quick-tools a {min-height:38px;font-size:12.5px}
+}
+@media (max-width:899px) {
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) {
+    grid-template-columns:minmax(0,1fr);
+  }
+  body[data-page=index] .sw98-market-secondary:has(#workspaceHeatmap.sw-heat-expanded) > .sw110-heat-companion {
+    display:grid;grid-template-columns:minmax(0,1fr);
+  }
+}
+@media (min-width:1200px) {
+  body.sw-shell-v47:not([data-page=index]) .sw-content {
+    max-width:none;
+    padding-inline:clamp(20px,2vw,36px);
+  }
+}
+/* Keep inner tools compact, but no harder to read than the Overview.
+ * Legacy brand-only pages retain their established layout until reviewed. */
+body.sw-shell-v47:not([data-page=index]) .sw-page-head h1 {font-size:clamp(27px,2.3vw,38px)}
+body.sw-shell-v47:not([data-page=index]) .sw-subtitle {font-size:14px;line-height:1.55}
+body.sw-shell-v47:not([data-page=index]) .sw-section-row h2 {font-size:18px}
+body.sw-shell-v47:not([data-page=index]) .sw-panel-hd h2,
+body.sw-shell-v47:not([data-page=index]) .sw-panel-hd h3 {font-size:15px}
+body.sw-shell-v47:not([data-page=index]) .sw-stat-num {font-size:clamp(24px,2vw,32px)}
+body.sw-shell-v47:not([data-page=index]) .sw-listline,
+body.sw-shell-v47:not([data-page=index]) .sw-table td {font-size:13px;line-height:1.5}
+body.sw-shell-v47:not([data-page=index]) .sw-meta,
+body.sw-shell-v47:not([data-page=index]) .sw-note,
+body.sw-shell-v47:not([data-page=index]) .sw-empty {font-size:12px;line-height:1.55}
+body.sw-shell-v47:not([data-page=index]) .sw-textlink {font-size:12px}
+body.sw-shell-v47:not([data-page=index]) .sw110b-jump-links a {min-height:35px;font-size:12.5px}
+body.sw-shell-v47:not([data-page=index]) .sw110b-layout-toggle {min-height:35px;font-size:12.5px}
+body.sw-shell-v47:not([data-page=index]) .sw-brief h4 {font-size:13.5px;line-height:1.45}
+body.sw-shell-v47:not([data-page=index]) .sw-controls :is(input,select) {font-size:13px;min-height:39px}
+body.sw-shell-v47:not([data-page=index]) :is(.sw-primary,.sw-soft-btn) {font-size:12.5px;min-height:38px}
+body.sw-shell-v47:not([data-page=index]) .sw-tablewrap {min-width:0}
+body.sw-shell-v47:not([data-page=index]) :is(a,button,select,input):focus-visible {outline:2px solid var(--sw-mint);outline-offset:2px}
+@media (max-width:600px) {
+  body.sw-shell-v47:not([data-page=index]) .sw-content {padding-inline:11px}
+  body.sw-shell-v47:not([data-page=index]) .sw-page-head h1 {font-size:clamp(24px,7vw,31px)}
+  body.sw-shell-v47:not([data-page=index]) .sw110b-jump-links a {min-height:42px}
+  body.sw-shell-v47:not([data-page=index]) .sw110b-layout-toggle {min-height:42px}
+}
