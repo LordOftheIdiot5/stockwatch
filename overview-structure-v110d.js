@@ -55,8 +55,7 @@
         && Number.isInteger(v.listings) && v.listings > 0
         && Number.isInteger(v.datedPrice) && v.datedPrice >= 0
         && v.datedPrice <= v.listings)
-      .sort((a,b) => b.listings - a.listings || a.venue.localeCompare(b.venue))
-      .slice(0, 6);
+      .sort((a,b) => b.listings - a.listings || a.venue.localeCompare(b.venue));
     for (const v of items) {
       const row = el('div', 'sw110d-venue');
       const heading = el('div', 'sw110d-venue-heading');
