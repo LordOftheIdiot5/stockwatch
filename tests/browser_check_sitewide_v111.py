@@ -87,6 +87,10 @@ def main():
                     try:
                         page=ctx.new_page()
                         assert_page(page,"overview",width,base)
+                        page.locator("#overviewMacroPlot svg.sw-overview-chart-svg").wait_for(timeout=15000)
+                        box=page.locator("#overviewMacroPlot svg.sw-overview-chart-svg").bounding_box()
+                        chart_ratio=box["width"]/max(box["height"],1)
+                        assert 2.12<=chart_ratio<=2.36,(width,"Chart is letterboxed by a fixed height",box)
                         page.locator("#workspaceHeatExpand").wait_for(timeout=15000)
                         page.locator("#workspaceHeatmap .sw-heat-cell").first.wait_for(timeout=15000)
                         page.locator("#workspaceHeatExpand").click()
