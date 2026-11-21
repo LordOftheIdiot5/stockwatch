@@ -51,9 +51,9 @@
  if(brand){brand.setAttribute('aria-label','Nordl Stockwatch — About');if(route==='welcome.html')brand.setAttribute('aria-current','page');}
  // The same research destinations are reachable in desktop and phone menus.
  for(const drawer of body.querySelectorAll('.sw-brand-drawer,.sw-mobile-drawer')){
-  const platform=[...drawer.querySelectorAll(':scope > section')].find(s=>
-    /DATA\s*&\s*PLATFORM/i.test(s.querySelector('p')?.textContent||''));
-  const links=platform?.querySelector(':scope > div');
+  const sections=[...drawer.children].filter(s=>s.tagName==='SECTION');
+  const platform=sections.find(s=>/DATA/i.test(s.querySelector('p')?.textContent||''))||sections[2];
+  const links=platform?.querySelector('div');
   if(!links)continue;
   for(const [href,title,glyph] of [
    ['search.html','Global research search','⌕'],
