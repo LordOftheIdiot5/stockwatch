@@ -69,6 +69,12 @@ def validate(registry):
                 for k in ("evidenceRef", "scope", "reviewer", "reviewedOn")
             ):
                 raise EntitlementError("Enabled rights require scoped approval evidence: " + sid)
+            if auth.get("sourceId") != sid or auth.get("product") != source["product"]:
+                raise EntitlementError("Approval must identify the exact source and product: " + sid)
+            granted = {name for name, enabled in rights.items() if enabled}
+            capabilities = auth.get("capabilities")
+            if not isinstance(capabilities, list) or set(capabilities) != granted or len(capabilities) != len(granted):
+                raise EntitlementError("Approval capabilities must exactly match enabled uses: " + sid)
             try:
                 date.fromisoformat(auth["reviewedOn"])
             except (TypeError, ValueError):
