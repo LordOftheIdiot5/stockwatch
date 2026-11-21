@@ -117,6 +117,9 @@ def extract_events(news, now):
     date_pat=r'\b(\d{1,2})[./-](\d{1,2})[./-](20\d{2})\b'
     for s in news:
         if s.get('type')!='disclosure': continue
+        # Archive candidates are not a source of scheduled company events.
+        # Keep them for human review instead of creating false provisional dates.
+        if s.get('relevance') == 'review': continue
         title=s.get('headline') or ''
         low=title.casefold()
         if not re.search(r'\b(results|earnings|financial report|quarterly report|interim report|resultatrapport)\b',low):continue
