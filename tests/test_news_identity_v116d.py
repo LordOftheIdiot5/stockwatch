@@ -65,7 +65,7 @@ class IssuerIdentityEvidence(unittest.TestCase):
 
     def test_real_issuer_code_disclosure_survives_and_is_strong(self):
         official=dict(self.row('CMBTO.OL','CMB.TECH',
-             'CMB.TECH reports quarterly financial results 24/11/2026'),
+             'CMB.TECH announces quarterly financial results on 24/11/2026'),
              type='disclosure',match='issuer_code',sourceIssuer='CMBTO',sourceFeed='newsweb',
              regulatory=True)
         out=annotate([official])[0]
