@@ -24,14 +24,16 @@ MAX_BATCH = 5000
 MAX_FILE_BYTES = 4 * 1024 * 1024
 ALLOWED_KINDS = ("primary_official_close", "alternative_venue_eod", "licensed_eod_observation")
 MICS = {"XOSL", "XSTO", "XCSE", "XHEL", "XICE", "XETR", "XPAR", "XAMS", "XBRU", "XMIL",
-        "XDUB", "XLIS", "XWBO", "XMAD", "XHKG", "XTAI", "XNYS", "XNAS", "XLON"}
+        "XDUB", "XLIS", "XWBO", "XMAD", "XHKG", "XTAI", "XNYS", "XNAS", "XLON", "BATE", "CHIX", "CEUX"}
 PROVIDER_VENUE_MIC = {
     "Oslo": {"XOSL"}, "Stockholm": {"XSTO"}, "Copenhagen": {"XCSE"},
     "Helsinki": {"XHEL"}, "Iceland": {"XICE"}, "XETRA": {"XETR"},
     "Paris": {"XPAR"}, "Amsterdam": {"XAMS"}, "Brussels": {"XBRU"},
     "Milan": {"XMIL"}, "Dublin": {"XDUB"}, "Lisbon": {"XLIS"},
     "NASDAQ US": {"XNAS"}, "NYSE US": {"XNYS"},
-    # Cboe BXE/CXE alternative venue MIC mappings need independent product verification.
+    # Cboe's official execution MICs are alternatives to the primary listing MIC.
+    "Cboe Europe BXE": {"BATE"}, "Cboe Europe CXE": {"CHIX"},
+    "Cboe Europe DXE": {"CEUX"},
 }
 DML = """
 CREATE TABLE IF NOT EXISTS eod_daily_close (
