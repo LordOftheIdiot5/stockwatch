@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T09:18:04Z",
+  "generated": "2026-11-21T09:19:31Z",
   "items": [
     {
       "id": "UCG.MI:ff79e1c0f7117fa7b91f7bdf7b23e971f0410e44877aaddeba3ffc9ef1b61d6c",
@@ -549,6 +549,29 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaXJ5NUtINnVXMzl2UnlrV1BJcElOdmdIQXB4QUs3bmVQYmdKeWo2ME1ncFZZd2lnbF9wVG5jV2JFWDhlajFHOUhZc3N4TDR6blBCLWNTN3U1Q3RuWjBHZXZFWlVJQ0lsbmVZX1REcTJqWDNxVWMza1BwM243UzYtakhQOGtHaWpXaDYxNDAzM1otWE1lX2lDUHVhcUc0dXFSeDVuTTBKY214T2pyb1UxUW94bHY0TWMwRktR?oc=5",
       "published": "2026-11-20T23:10:00Z",
       "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "P911.DE:ae4a490f4151e8bba5cdb9fda67b5589ec4a913883b5fcaeeb557f7d4da51a32",
+      "ticker": "P911.DE",
+      "name": "Porsche",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Bil, Søksmål | Fikk nei til service på Porschen i Tromsø – nå ber ekteparet retten gripe inn",
+      "english": null,
+      "publisher": "Nordlys",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNElFcWU3RDV4Qzl3N0ZwbEg1aFNFOVVnNE5XVkR2TU1sSFNXSG44T0x0NVpJalQxXzhxQ0o3MDNyMTFSV21RU0t0OERjaV9JeTBjS3NJcGE0SVBGRGdfZU1JTjdmZWc1cXVGUjhsMnUxMHV0T2Y1Uk40ZG9oZXJ2Wm5obmNOX0Z0TEhHSXlrZVhUaXVJRTU2bkhLUnd6MlAzNm5jY2RienpVemxQbGVOTGdn?oc=5",
+      "published": "2026-11-20T22:37:41Z",
+      "lang": "no",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -5021,6 +5044,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "MORROW.ST:a098a48953877eeeac84f09e3d00642aeb1b0f2deeeb6875e6babf9702f03022",
+      "ticker": "MORROW.ST",
+      "name": "Morrow bank",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Morrow Bank AB (OSTO:MORROW) (Q3 2026) Earnings Call Highlights: Record Profit, Midmera ... By GuruFocus",
+      "english": null,
+      "publisher": "Investing.com Canada",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQRk5LbW9MVHlwcGVaSDZBR19YbWFxTUd3LVJ2eVlYRk1TU1R2eFdCMWxOTnVSY0ZqZnVNdXJROTNtQ2Z3UGprSXFEVm5CQTlESkhXczNsZjVKSThWWURXSWZZM0oxMy02dHpYN1RTbmViWGNRazdiTVNBUlRiZ05zWm44Z1E0SEc4T2NMMG50cDNmOEx6MTNvQXh1RUlBQnpkMkZPSHdoM0FxM0dMSUJMd3hGMHNIVkhGOUFkMEw1RkxNTEZlampjRnloUno?oc=5",
+      "published": "2026-11-20T01:35:46Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Earnings / results",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "numbers",
+          "basis": "headline category: Earnings / results"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "AIR.PA:e4496046daede930c868ee910c43c949308ecd989e8caf2d6378b674ed180276",

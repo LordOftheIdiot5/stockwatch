@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-21T09:18:04Z",
+  "generated": "2026-11-21T09:19:31Z",
   "windowStart": "2026-11-07",
   "windowEnd": "2026-11-20",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -6788,7 +6788,7 @@
         {
           "date": "2026-11-20",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [
@@ -6801,10 +6801,10 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-16T06:05:19Z",
+      "observedRecords": 6,
+      "latestRecord": "2026-11-20T01:35:46Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -6816,7 +6816,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       }
     },
     "MRL.MC": {

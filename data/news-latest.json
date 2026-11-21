@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T09:18:04Z",
+  "generated": "2026-11-21T09:19:31Z",
   "items": [
     {
       "id": "UCG.MI:ff79e1c0f7117fa7b91f7bdf7b23e971f0410e44877aaddeba3ffc9ef1b61d6c",
@@ -549,6 +549,29 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaXJ5NUtINnVXMzl2UnlrV1BJcElOdmdIQXB4QUs3bmVQYmdKeWo2ME1ncFZZd2lnbF9wVG5jV2JFWDhlajFHOUhZc3N4TDR6blBCLWNTN3U1Q3RuWjBHZXZFWlVJQ0lsbmVZX1REcTJqWDNxVWMza1BwM243UzYtakhQOGtHaWpXaDYxNDAzM1otWE1lX2lDUHVhcUc0dXFSeDVuTTBKY214T2pyb1UxUW94bHY0TWMwRktR?oc=5",
       "published": "2026-11-20T23:10:00Z",
       "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "P911.DE:ae4a490f4151e8bba5cdb9fda67b5589ec4a913883b5fcaeeb557f7d4da51a32",
+      "ticker": "P911.DE",
+      "name": "Porsche",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Bil, Søksmål | Fikk nei til service på Porschen i Tromsø – nå ber ekteparet retten gripe inn",
+      "english": null,
+      "publisher": "Nordlys",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNElFcWU3RDV4Qzl3N0ZwbEg1aFNFOVVnNE5XVkR2TU1sSFNXSG44T0x0NVpJalQxXzhxQ0o3MDNyMTFSV21RU0t0OERjaV9JeTBjS3NJcGE0SVBGRGdfZU1JTjdmZWc1cXVGUjhsMnUxMHV0T2Y1Uk40ZG9oZXJ2Wm5obmNOX0Z0TEhHSXlrZVhUaXVJRTU2bkhLUnd6MlAzNm5jY2RienpVemxQbGVOTGdn?oc=5",
+      "published": "2026-11-20T22:37:41Z",
+      "lang": "no",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -2408,44 +2431,21 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "EL.PA:7e405b4ef5fa59fb29620f8028cabdd8e14dee8ae6b408c7252140001cb7b622",
-      "ticker": "EL.PA",
-      "name": "EssilorLuxottica",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "Luxe : L’Oréal envisage d’acquérir 10% de Giorgio Armani, EssilorLuxottica 5%, LVMH se retire de la course",
-      "english": "Luxury: L’Oréal plans to acquire 10% of Giorgio Armani, EssilorLuxottica 5%, LVMH withdraws from the race",
-      "publisher": "L'Usine Nouvelle",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQMWVNS1FtSnBJQ2xOZWc1TzlnQkt6R0N1VUh3T0lPRzMzWTlBdFN2WDU5QXE5bEE1bHIwREJ0X2Z1dllQdnRMZEFxaVg1c0tiNUwtc05BWTRiUGZyR0t4VWREWWZ2QTJtd1JQN2pnMFRMNUFHWm5paVVOQjU5Y2VteVJNQnoxV3hoMDExcW5kN2FHRVVvaHpTSlZUUjBObmNyRzd4UG85emZ5bVNONEQtc1ZPcTU4SmhTYzBVQ0w5RjZCbUZVREw4TS1JRjNqQmdlNXRnN0xQSFlRNnVXTlZnYmE5UkxBUjEzQi12YkRNU2xUT1hlc05BQw?oc=5",
-      "published": "2026-11-20T13:00:00Z",
-      "lang": "fr",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1921,
+  "totalStored": 1923,
   "limit": 100,
   "quality": {
-    "total": 1921,
-    "relevant": 1404,
-    "review": 450,
+    "total": 1923,
+    "relevant": 1405,
+    "review": 451,
     "duplicates": 91,
     "issuerLinked": 430,
     "driverClassification": {
       "version": 1,
-      "classified": 464,
+      "classified": 465,
       "categories": {
-        "numbers": 263,
+        "numbers": 264,
         "prices": 6,
         "operations": 1,
         "potential": 216,
@@ -2454,14 +2454,14 @@
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 280,
+      "Earnings / results": 281,
       "Dividends": 23,
       "M&A": 80,
       "Guidance": 36,
       "Contracts": 143,
       "Capital & ownership": 1,
       "Management": 61,
-      "General": 1297
+      "General": 1298
     }
   }
 }
