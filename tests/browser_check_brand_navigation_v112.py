@@ -51,7 +51,7 @@ def main():
           assert page.locator('header nav[aria-label="Main navigation"] > a.sw112-active[aria-current="page"]').get_attribute('href')==route
          else:
           assert page.locator('header a.brand[aria-current="page"]').count()==1
-         assert page.locator('.sw-mobile-drawer a[href="search.html"]').count()==1
+         assert page.locator('.sw-mobile-drawer a[href="search.html"]').count()==1, (route,width,'mobile-search-links',page.locator('.sw-mobile-drawer a[href="search.html"]').count(),page.locator('.sw-mobile-drawer').inner_text()[-500:])
          assert page.locator('.sw-mobile-drawer a[href="data-products.html"]').count()==1
          assert page.locator('.sw-mobile-drawer a.active[aria-current="page"]').get_attribute('href')==route
          assert page.evaluate('getComputedStyle(document.querySelector("header>a.brand")).backgroundImage')=='none'
