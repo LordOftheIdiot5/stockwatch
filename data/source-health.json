@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T02:07:38Z",
-  "latestScan": "2026-11-21T02:07:01+00:00",
+  "generated": "2026-11-21T02:18:28Z",
+  "latestScan": "2026-11-21T02:17:53+00:00",
   "scanAgeHours": 0.01,
   "contextAgeHours": 0.01,
   "priceFreshness": {
@@ -428,7 +428,316 @@
       }
     },
     "retainedTargetDateObservedAfterCutoff": 132,
-    "notice": "Diagnostic counts only; retained observations remain excluded from fresh-price alerts. Cutoff is a conservative UTC heuristic, not exchange certification."
+    "notice": "Diagnostic counts only; retained observations remain excluded from fresh-price alerts. Cutoff is a conservative UTC heuristic, not exchange certification.",
+    "venueSessionProbe": {
+      "comparisonDate": "2026-11-20",
+      "tracked": 139,
+      "counts": {
+        "chartUnavailable": 0,
+        "barBeforeTarget": 138,
+        "barOnTarget": 1,
+        "barAfterTarget": 0,
+        "invalidTimestamp": 0,
+        "localDateDiffersUtc": 0,
+        "localDateBeforeTarget": 138,
+        "localDateOnTarget": 1,
+        "localDateAfterTarget": 0,
+        "unknownExchangeTimezone": 0,
+        "barOlderThanRetained": 133,
+        "retainedTargetDateDespiteOlderBar": 133,
+        "sameProviderRecovery": 0,
+        "currencyMismatch": 1
+      },
+      "byExchange": [
+        {
+          "name": "Amsterdam",
+          "tracked": 1,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 1,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 1,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 1,
+            "retainedTargetDateDespiteOlderBar": 1,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Brussels",
+          "tracked": 2,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 2,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 2,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Copenhagen",
+          "tracked": 11,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 11,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 11,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 11,
+            "retainedTargetDateDespiteOlderBar": 11,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Dublin",
+          "tracked": 1,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 1,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 1,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 1,
+            "retainedTargetDateDespiteOlderBar": 1,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "HKSE",
+          "tracked": 1,
+          "providerUtcEarliest": "2026-11-20",
+          "providerUtcLatest": "2026-11-20",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 0,
+            "barOnTarget": 1,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 0,
+            "localDateOnTarget": 1,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 0,
+            "retainedTargetDateDespiteOlderBar": 0,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Helsinki",
+          "tracked": 1,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 1,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 1,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 1,
+            "retainedTargetDateDespiteOlderBar": 1,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "MCE",
+          "tracked": 2,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 2,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 2,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Milan",
+          "tracked": 7,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 7,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 7,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 6,
+            "retainedTargetDateDespiteOlderBar": 6,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Oslo",
+          "tracked": 44,
+          "providerUtcEarliest": "2026-11-05",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 44,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 44,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 43,
+            "retainedTargetDateDespiteOlderBar": 43,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Paris",
+          "tracked": 9,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 9,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 9,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 9,
+            "retainedTargetDateDespiteOlderBar": 9,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "Stockholm",
+          "tracked": 40,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 40,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 40,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 38,
+            "retainedTargetDateDespiteOlderBar": 38,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 1
+          }
+        },
+        {
+          "name": "Vienna",
+          "tracked": 2,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 2,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 2,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "XETRA",
+          "tracked": 18,
+          "providerUtcEarliest": "2026-11-19",
+          "providerUtcLatest": "2026-11-19",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 18,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 18,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 17,
+            "retainedTargetDateDespiteOlderBar": 17,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        }
+      ],
+      "interpretation": "Provider daily-bar timestamps vs the conservative common target date. Venue-local calendar dates are informational, not proof of a completed session. Bars are not re-dated, stored as raw vendor data, or promoted to a price alert. No official venue holiday, auction cutoff, display licence or closing price is established."
+    }
   },
   "tracked": 139,
   "priced": 139,
@@ -513,7 +822,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 132,
+  "storedStories": 134,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -527,45 +836,45 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 68.0,
+      "avgLatencyMs": 70.4,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T02:07:11+00:00",
+      "lastSuccessAt": "2026-11-21T02:18:03+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 600.9,
+      "avgLatencyMs": 419.1,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T02:07:14+00:00",
+      "lastSuccessAt": "2026-11-21T02:18:07+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1019.4,
+      "avgLatencyMs": 1534.8,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T02:07:15+00:00",
+      "lastSuccessAt": "2026-11-21T02:18:08+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
       "succeeded": 598,
       "failed": 0,
-      "avgLatencyMs": 296.8,
+      "avgLatencyMs": 283.3,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T02:07:30+00:00",
+      "lastSuccessAt": "2026-11-21T02:18:23+00:00",
       "lastFailureAt": null
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2259.6,
+      "avgLatencyMs": 3073.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-21T02:07:14+00:00",
+      "lastSuccessAt": "2026-11-21T02:18:06+00:00",
       "lastFailureAt": null
     }
   },
