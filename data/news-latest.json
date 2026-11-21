@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T02:50:21Z",
+  "generated": "2026-11-21T03:04:03Z",
   "items": [
     {
       "id": "KCR.HE:d8417b6d8ec640809014fb3c20368c0679b4d4e01a7a1d60f1a793618537e1e1",
@@ -455,6 +455,29 @@
       "sourceDomain": "news.google.com",
       "priority": "normal",
       "duplicateOf": "AIR.PA:58278bd0c69baf6466af2a322eb716c6dbe7f88040a553b1c655a05bc1ab0a2c"
+    },
+    {
+      "id": "FCT.MI:b9c4d7f6e037b9cef0a273ec3546c5eb4cce3e3eec8045cfe362b0a35321700f",
+      "ticker": "FCT.MI",
+      "name": "Fincantieri",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Carnival, Fincantieri strike shipbuilding deal valued at over €2Bn for LNG-fuelled cruise ships",
+      "english": null,
+      "publisher": "www.rivieramm.com",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNckJxNENGWVdOc2o2REc5c1lQRXA2bmQzUlJ4ZkFJSWs1VVUtTjdwaGlXbnVhS3QwaklZeVFFaFZEcWdhUWFHbW00ZUJBRHVrMktyMTk1eFRBSVByOTVKYml5QkU1Ny1iQmdfdnNDV3hhWkN4Rk5MVmwtUS15czZyQlFGTWQ0eEZFWmZuQlhvYmR2eGNWWjN4OEQ0azY1bnE0amVsNGJiMUttUVVTOGxOMWM1cExGN0RKcl9pYTRQUlk4QXZWWG95OFRHOUFKSWJSUFpCZUd0akpSdw?oc=5",
+      "published": "2026-11-20T19:30:15Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
     },
     {
       "id": "PRY.MI:19df3691287790cec48928f3717bf40168c72f7e949745abc4a069ec60fde30a",
@@ -2398,36 +2421,13 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "TKMS.DE:0a23a7343c1c0d002f71402480848c8146cc7e54d952e88b877f770612618fec",
-      "ticker": "TKMS.DE",
-      "name": "TKMS",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Mecklenburg-Vorpommern: 24-Stunden-Warnstreiks bei Neptun und TKMS",
-      "english": "Mecklenburg-Vorpommern: 24-hour warning strikes at Neptun and TKMS",
-      "publisher": "n-tv.de",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONlB6d25ZTUtBWUlYTjRtWUVfc2dPajQ0QndnTzd5bnBwa2t1WndkSGxZR1F2N2JCcEg0eVNZWmxabkthNFdqT1h2UHBPN0k2aTh5VGJLRUw3NjA2TDZMMFIxSVBHbnVvNkw1dlh0OHZyVzVzdS1CY09XZ3VLLTF5UzZYal83NE9rdWZsbi1pS3B0bGhFUEwzRG9UWjR6bTJITkgtZXNLMGRGYlBvWGEzWjV3?oc=5",
-      "published": "2026-11-20T11:10:00Z",
-      "lang": "de",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1895,
+  "totalStored": 1897,
   "limit": 100,
   "quality": {
-    "total": 1895,
-    "relevant": 1388,
+    "total": 1897,
+    "relevant": 1390,
     "review": 441,
     "duplicates": 90,
     "issuerLinked": 430,
@@ -2451,7 +2451,7 @@
       "Contracts": 139,
       "Capital & ownership": 1,
       "Management": 60,
-      "General": 1279
+      "General": 1281
     }
   }
 }
