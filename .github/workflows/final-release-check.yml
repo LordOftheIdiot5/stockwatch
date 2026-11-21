@@ -139,11 +139,10 @@ jobs:
         run: |
           node --check brand/data-portal.js
           node --test tests/test_data_portal_v58.mjs
-      - name: V115 rights-first Data Products catalog unit and browser acceptance
+      - name: V115 Data Products source-rights and metadata-only export unit tests
         run: |
           node --check brand/data-portal.js
           node --test tests/test_data_portal_v115.mjs
-          python tests/browser_check_data_products_v115.py
       - name: V59 saved workspace settings tests
         run: |
           node --check workspaces-v59.js
@@ -590,6 +589,8 @@ jobs:
           node --check v4.js
           node --check research.js
           python tests/browser_check_secondary_v114.py
+      - name: V115 public Data Products desktop/mobile browser integration tests
+        run: python tests/browser_check_data_products_v115.py
 
       - name: V110b compact research-page browser regression
         run: python tests/browser_check_density_v110b.py
