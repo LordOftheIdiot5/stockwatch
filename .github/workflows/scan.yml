@@ -118,6 +118,12 @@ jobs:
       - name: Build listing coverage inventory
         run: node scripts/audit_listing_coverage.cjs --write
 
+      # Audit all 500 exact UI listing IDs after the inventory updates.
+      # This is evidence/triage only: it cannot add quotes or alter current
+      # scanner, heatmap, market pulse or provider polling cadence.
+      - name: Audit daily price coverage and missing listing recovery queue
+        run: python scripts/daily_price_coverage_v105.py
+
       - name: Refresh GLEIF security-to-issuer identity evidence
         continue-on-error: true
         run: python scripts/gleif_isin_lei.py
