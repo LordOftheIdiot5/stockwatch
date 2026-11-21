@@ -51,6 +51,27 @@
    min-width:0;
    max-width:100%;
  }
+ /* The 320px scrollWidth came from the open Nasdaq notices disclosure:
+    312px inner content inside a 294px client area. Wrap original source
+    metadata in its cards; do not hide or truncate original notice links. */
+ body[data-page=news] #nasdaqNordicNotices,
+ body[data-page=news] #nasdaqNordicNotices :is(summary,div,p,span,small,strong,a){
+   min-width:0;
+   max-width:100%;
+   overflow-wrap:anywhere;
+   word-break:break-word;
+   white-space:normal;
+ }
+ body[data-page=news] #nasdaqNoticeItems{
+   display:grid;
+   grid-template-columns:minmax(0,1fr);
+ }
+ body[data-page=news] #nasdaqNordicNotices>summary,
+ body[data-page=news] #nasdaqNordicNotices .sw100-notice,
+ body[data-page=news] #nasdaqNordicNotices .sw100-notice-context{
+   padding-inline:10px;
+   box-sizing:border-box;
+ }
  body[data-page=news] .tablewrap,
  body[data-page=news] .sw-tablewrap {
    display:block;
