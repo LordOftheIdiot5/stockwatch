@@ -1,0 +1,207 @@
+/* V110b: source-honest compact trading-terminal composition.
+   All information remains present. Full layout is available from page controls. */
+body.sw-shell-v47:not(.sw110b-spacious) .sw-content{padding-top:clamp(10px,1.1vw,17px)}
+body.sw-shell-v47:not(.sw110b-spacious):not([data-page=index]) .sw-page-head{margin-bottom:10px;padding:clamp(10px,1.1vw,17px) clamp(13px,1.4vw,22px);min-height:0}
+body.sw-shell-v47:not(.sw110b-spacious):not([data-page=index]) .sw-page-head h1{font-size:clamp(23px,2vw,30px);line-height:1.2;margin:2px 0 5px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-page-head .sw-subtitle{margin:3px 0 0;font-size:13px;line-height:1.5}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-section-row{margin:10px 0 8px;gap:10px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-grid4,
+body.sw-shell-v47:not(.sw110b-spacious) .sw-grid2{gap:10px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-panel-hd{padding:10px 14px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-panel-pad{padding:clamp(10px,1.05vw,15px)}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-stat{padding:12px 14px;min-height:82px}
+body.sw-shell-v47:not(.sw110b-spacious) .sw-stat-num{font-size:clamp(22px,1.8vw,28px)}
+body.sw-shell-v47:not(.sw110b-spacious) :is(.sw-tablewrap,.tablewrap){max-height:min(57vh,510px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+body.sw-shell-v47:not(.sw110b-spacious) :is(.sw-tablewrap,.tablewrap) thead th{position:sticky;top:0;z-index:2;background:var(--sw-card)}
+.sw110b-jump{display:flex;align-items:center;gap:11px;min-height:39px;min-width:0;padding:6px 10px;margin:0 0 10px;border:1px solid var(--sw-edge);border-radius:10px;background:var(--sw-surface);position:sticky;top:0;z-index:10}
+.sw110b-jump-label{flex:none;font-size:12px;font-weight:750;color:var(--sw-muted)}
+.sw110b-jump-links{display:flex;gap:6px;min-width:0;flex:1;overflow-x:auto;scrollbar-width:thin;align-items:center}
+.sw110b-jump-links a{flex:none;display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:7px;border:1px solid var(--sw-edge);font-size:12px;line-height:1.3;color:var(--sw-text);text-decoration:none}
+.sw110b-jump-links a:hover{border-color:var(--sw-mint);color:var(--sw-mint)}
+.sw110b-layout-toggle{flex:none;min-height:30px;padding:5px 11px;border-radius:7px;border:1px solid var(--sw-edge);background:var(--sw-card);color:var(--sw-text);cursor:pointer;font-size:12px}
+.sw110b-layout-toggle:hover{border-color:var(--sw-mint)}
+.sw110b-jump :is(a,button):focus-visible{outline:3px solid var(--sw-mint);outline-offset:2px}
+.sw110b-section-target{scroll-margin-top:52px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-banner{gap:12px;padding:12px 14px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-links{padding:9px 13px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-tabs{gap:5px;padding:8px 12px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-tabs button{padding:7px 10px;min-height:34px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-block{padding:clamp(10px,1vw,15px);margin:8px 0}
+body[data-page=company]:not(.sw110b-spacious) .sw50-coverage>div{padding:9px 12px}
+body[data-page=company]:not(.sw110b-spacious) .sw-company-heading h2{font-size:clamp(23px,2vw,31px)}
+body[data-page=terminal]:not(.sw110b-spacious) .sw-content{padding:10px 12px 32px}
+body[data-page=terminal]:not(.sw110b-spacious) .sw-terminal-panel header{padding:8px 11px}
+body[data-page=terminal]:not(.sw110b-spacious) .sw52-layout .sw-terminal-scroll{max-height:min(53vh,510px)}
+@media(min-width:1320px){
+ body[data-page=index] .sw-overview-head{min-height:76px;padding:9px 16px;margin-bottom:5px}
+ body[data-page=index] .sw-overview-head h1{font-size:clamp(27px,2vw,34px)}
+ body[data-page=index] .sw-index-card{min-height:81px;padding:8px 12px}
+ body[data-page=index] .sw-index-main .sw-index-close{font-size:22px}
+ body[data-page=index] .sw-index-spark svg{height:34px}
+ body[data-page=index] .sw-index-foot{margin-top:2px}
+ body[data-page=index] details.sw96-source-status{margin:4px 0 8px}
+ body[data-page=index] .sw98-primary{gap:10px;margin:8px 0 10px;grid-template-columns:minmax(0,1.85fr) minmax(310px,.83fr)}
+ body[data-page=index] .sw98-primary #overviewMacro{min-height:0;padding:10px 12px}
+ body[data-page=index] .sw98-primary #overviewMacroPlot svg{height:clamp(200px,15vw,248px);max-height:248px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls{margin-bottom:6px;gap:6px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls select{min-height:34px;padding:5px 8px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-value strong{font-size:clamp(22px,1.8vw,28px)}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary{padding:8px 10px}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-stat{min-height:48px;padding:6px 9px}
+ body[data-page=index] .sw98-intelligence-rail .sw-overview-news{min-height:150px;max-height:275px}
+ body[data-page=index] .sw98-market-secondary{grid-template-columns:minmax(0,1.55fr) minmax(240px,.75fr) minmax(260px,.8fr);gap:10px;margin:8px 0}
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion{display:contents}
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion>.sw-panel{min-width:0;max-height:254px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expanded){max-height:209px;overflow:auto}
+ body[data-page=index] .sw98-market-secondary .sw-panel-hd{padding:8px 11px}
+ body[data-page=index] .sw98-market-secondary .sw-panel-pad{padding:9px 11px}
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar{gap:5px;margin:0 0 6px}
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar select{min-height:32px}
+ body[data-page=index] .sw98-market-secondary .sw-heat-cell{min-height:48px}
+ body[data-page=index] .sw98-market-secondary .sw-heat-cells{gap:4px}
+ body[data-page=index] .sw92-quick-tools{margin:8px 0 12px;padding:9px 12px;gap:7px}
+ body[data-page=index] .sw92-quick-tools a{min-height:32px;padding:6px 9px}
+}
+@media(min-width:851px) and (max-width:1319px){
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:850px){
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion{display:grid;grid-template-columns:minmax(0,1fr)}
+ .sw110b-jump{position:static;gap:7px;padding:7px}
+ .sw110b-jump-label{display:none}
+ .sw110b-jump-links a{min-height:33px}
+ .sw110b-layout-toggle{min-height:35px}
+}
+@media(max-width:600px){
+ body.sw-shell-v47:not(.sw110b-spacious) .sw-stat{min-height:72px}
+ body.sw-shell-v47:not(.sw110b-spacious) .sw-page-head{padding:11px 12px}
+}
+@media(prefers-reduced-motion:reduce){.sw110b-jump-links{scroll-behavior:auto}}
+
+
+/* Visual screenshot QA refinement: do not waste the first viewport on
+   duplicate intro/status or oversized chrome. Source date remains visible. */
+@media(min-width:1320px){
+ body[data-page=index] .sw-tape{height:29px;padding-inline:24px}
+ body[data-page=index] .sw-top{height:43px;padding-inline:24px}
+ body[data-page=index] .sw-content{padding-top:9px}
+ body[data-page=index] .sw-overview-head{min-height:67px;padding:7px 14px;margin-bottom:3px}
+ body[data-page=index] .sw-overview-head h1{font-size:clamp(26px,1.9vw,32px);margin:0}
+ body[data-page=index] .sw-overview-head p{font-size:12px}
+ body[data-page=index] .sw-overview-status{display:none}
+ body[data-page=index] details.sw96-source-status{margin:3px 0 6px}
+ body[data-page=index] .sw96-source-status>summary{min-height:28px;padding:4px 10px}
+ body[data-page=index] .sw-overview-indices{margin:5px 0 7px}
+ body[data-page=index] .sw-index-heading{margin-bottom:3px}
+ body[data-page=index] .sw-index-heading h2{font-size:13px}
+ body[data-page=index] .sw-index-grid{gap:8px}
+ body[data-page=index] .sw-index-card{min-height:74px;padding:5px 10px;border-radius:10px}
+ body[data-page=index] .sw-index-top{font-size:11px}
+ body[data-page=index] .sw-index-main .sw-index-close{font-size:19px}
+ body[data-page=index] .sw-index-main small{font-size:10px}
+ body[data-page=index] .sw-index-spark svg{height:26px}
+ body[data-page=index] .sw-index-foot{gap:7px;margin-top:0;font-size:10px}
+ body[data-page=index] .sw-index-sources{font-size:10px;margin-top:2px}
+ body[data-page=index] .sw-index-sources summary{padding:1px 0}
+ body[data-page=index] .sw98-primary{margin:5px 0 8px}
+ body[data-page=index] .sw98-primary .sw-panel-hd{padding:9px 11px}
+ body[data-page=index] .sw98-primary #overviewMacro{padding:8px 10px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls{gap:5px;margin-bottom:3px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls label{font-size:11px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-controls select{min-height:30px;padding:4px 7px;font-size:11px}
+ body[data-page=index] .sw98-primary .sw-overview-chart-value strong{font-size:23px}
+ body[data-page=index] .sw98-primary #overviewMacroPlot svg{height:clamp(160px,9.5vw,195px);max-height:195px}
+ body[data-page=index] .sw98-primary #overviewMacro .sw-meta{font-size:10.5px;line-height:1.4}
+ body[data-page=index] .sw98-intelligence-rail{gap:7px}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary{padding:7px}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-stat{min-height:42px;padding:5px 8px}
+ body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-ws-metrics{gap:5px}
+ body[data-page=index] .sw98-intelligence-rail .sw-overview-news{max-height:220px;min-height:130px}
+ body[data-page=index] .sw98-intelligence-rail .sw-overview-news .sw-brief{padding:7px 10px}
+ body[data-page=index] .sw98-market-secondary{margin:5px 0}
+}
+/* Clear company identity without repeating a second oversized page hero. */
+@media(min-width:900px){
+ body[data-page=company] .sw-tape{height:29px}
+ body[data-page=company] .sw-top{height:43px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-page-head{padding:7px 12px;margin-bottom:8px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-page-head h1{font-size:24px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-company-banner{padding:9px 12px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-company-last{padding:9px 12px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-company-last strong{font-size:24px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-company-tabs{padding:6px 9px}
+ body[data-page=company]:not(.sw110b-spacious) .sw-company-research>.sw-panel-pad{padding:9px 11px}
+}
+
+
+/* V110b structural parity: chart | market breadth | latest filings, not a
+   vertically stacked rail that forces the heatmap below the first fold. */
+@media(min-width:1320px){
+ body[data-page=index] .sw98-primary{
+   grid-template-columns:minmax(0,1.55fr) minmax(235px,.7fr) minmax(265px,.83fr);
+   gap:10px;align-items:start;
+ }
+ body[data-page=index] .sw98-primary .sw98-intelligence-rail{display:contents}
+ body[data-page=index] .sw98-primary .sw92-focus-summary{
+   min-width:0;margin:0;align-self:start;padding:8px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary>.sw-section-row{gap:4px}
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-section-row h2{font-size:16px}
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-section-row small{font-size:10px}
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-ws-metrics{
+   display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-stat{
+   min-width:0;min-height:53px;padding:8px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-ws-breadth{
+   grid-column:1/-1;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-stat-num{font-size:22px}
+ body[data-page=index] .sw98-primary .sw-overview-news{
+   margin:0;min-width:0;min-height:270px;max-height:375px;
+   overflow:auto;overscroll-behavior:contain;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news .sw-brief{
+   padding:9px 11px;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news .sw-brief h4{
+   font-size:12.5px;line-height:1.35;
+ }
+}
+
+
+/* 1440px card fit: the original four-column Movers row otherwise clips the
+   last prices and daily changes inside the narrower 3-column terminal panel. */
+@media(min-width:1320px){
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-listline{
+   grid-template-columns:minmax(0,1fr) minmax(55px,75px) minmax(52px,65px);
+   gap:5px;padding:7px 9px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-listline>:nth-child(2){
+   display:none;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-price,
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-change{
+   min-width:0;text-align:right;font-size:11px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw110-heat-companion .sw-company{
+   min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;
+ }
+ /* Keep labels in the accessibility tree while getting all functional filter
+    controls into the same compact row, like the approved terminal screenshot. */
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>label{
+   position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+   overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+ }
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>select{
+   min-width:95px;flex:1 1 105px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>#workspaceCoverage{
+   flex:1.4 1 145px;
+ }
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>#workspaceHeatCount,
+ body[data-page=index] .sw98-market-secondary .sw-ws-heat-toolbar>.sw-ws-legend{
+   flex-basis:100%;
+ }
+}
