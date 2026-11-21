@@ -59,7 +59,8 @@
    ['search.html','Global research search','⌕'],
    ['data-products.html','Data products','▤']
   ]){
-    if(links.querySelector('a[href="'+href+'"]'))continue;
+    const existing=drawer.querySelector('a[href="'+href+'"]');
+    if(existing){if(existing.parentElement!==links)links.append(existing);continue;}
     const a=document.createElement('a');a.href=href;a.className='sw-mobile-drawer-link sw112-injected-link';
     const icon=document.createElement('span');icon.className='sw-link-icon';
     icon.textContent=glyph;icon.setAttribute('aria-hidden','true');
