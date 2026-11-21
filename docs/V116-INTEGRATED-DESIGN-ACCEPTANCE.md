@@ -33,6 +33,9 @@
 | P1 reliability | Scanner run success does not equal validated completed-session stock prices | Keep source-comparison counts, status, last-known timestamp and unit visible; monitor #176 |
 | P1 commercial | Proposed APIs and samples are metadata-only, no redistribution entitlements | Keep V115 rights-first catalog; no fictional public API or promised paid feed |
 
+## Reviewed CI evidence and V116b follow-up (2026-11-21)
+The [V116a visual artifact](https://github.com/LordOftheIdiot5/stockwatch/actions/runs/44947769508) records 228/228 normal viewport tests with zero critical errors. At 1440, 1672 and 1920 widths the actual secondary-row top is about **817px, 855px and 926px**, respectively. The reference 1672px concept depicts the row at about 595px; initial-screen composition **still needs owner-reviewed correction**. The matrix's diagnostic CSS 200% zoom proxy **does overflow** (1622px scrollWidth at a 1440px viewport), so native accessibility zoom is **not accepted**. These precise remaining tasks are filed in [V116b issue #205](https://github.com/LordOftheIdiot5/stockwatch/issues/205). Do not hide this failure behind the green 228 normal-width checks.
+
 ## Final certification checklist (do not close before evidence exists)
 
 - [ ] All 19 routes screenshot-reviewed at top/middle/bottom at desktop and phone; 320/768/1024/1920 inspected, dark/light.
