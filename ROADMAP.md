@@ -150,3 +150,7 @@ The approved 1672 × 941 PNG is held in the ChatGPT Library at `/Stockwatch/Desi
 **V110b–V110e backlog (remain open):** source-permitted geographically diverse indices & true equity chart; own source-backed global map (no fabricated map dots); keyboard/mobile nav and chart expansion/resize; hierarchy, readability, compact widgets and news-source quality; compare 320/390/768/1024/1440/1920 dark/light screens against original PNG, verify fallback/grey states, no overflow, WCAG labels, and complete production asset parity. A mockup likeness percentage is not an acceptance metric without screenshot-based evidence.
 
 **V106–V109 data path remains active:** exact ISIN/MIC & source rights for the 348 listings without prices, original EOD feeds, real history and European financial facts. A cleaner default heatmap does not solve the missing-price issue. In reports, keep 500-listing coverage distinct from 139 monitored and from 13 A/B reference rows.
+
+## V110b — compact terminal and differentiated company-research product
+
+Execution plan: [docs/V110B-PRODUCT-COMPACT-TERMINAL-MAP.md](docs/V110B-PRODUCT-COMPACT-TERMINAL-MAP.md). V110b is reversible page density and a tighter source-backed Overview; V110c company-tab cockpit, V110d permitted global market/geographic history and V110e full screenshot acceptance remain open. Keep original quotes, timestamps, rights and modules intact.
