@@ -41,7 +41,17 @@ def main():
           position:getComputedStyle(e).position}:null];
        }));
      }""")
-     print(json.dumps({'theme':theme,'metric':metric,'structure':structure}),flush=True)
+     children=page.evaluate("""() => {
+       const root=document.querySelector('.sw-content');
+       return [...root.children].map(e=>{
+         const b=e.getBoundingClientRect(),s=getComputedStyle(e);
+         return {tag:e.tagName,cls:e.className,id:e.id,
+          left:+b.left.toFixed(2),right:+b.right.toFixed(2),width:+b.width.toFixed(2),
+          client:e.clientWidth,scroll:e.scrollWidth,overflow:s.overflowX,
+          firstText:(e.textContent||'').trim().slice(0,85)}
+       });
+     }""")
+     print(json.dumps({'theme':theme,'metric':metric,'structure':structure,'children':children}),flush=True)
      assert metric['scrollWidth']<=320+3,metric
      details=page.locator('.sw-mobile-more')
      details.locator('summary').click()
