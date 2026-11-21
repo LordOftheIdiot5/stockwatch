@@ -1,7 +1,13 @@
 # Stockwatch — integrated master execution plan
 **Checkpoint:** 2026-11-21. **Canonical design source:** `/Stockwatch/Design References/stockwatch-approved-full-width-overview-v1.png` in ChatGPT Library, plus [design issue #165](https://github.com/LordOftheIdiot5/stockwatch/issues/165). **Engineering backlog:** [ROADMAP.md](../ROADMAP.md), [data plan #185](https://github.com/LordOftheIdiot5/stockwatch/issues/185), [provider-freshness blocker #176](https://github.com/LordOftheIdiot5/stockwatch/issues/176). Historical versions are cumulative and not all numbered projects are delivered.
 
-## Product north star
+## Product north star — permanent product goal
+
+**Canonical ultimate vision:** [Stockwatch — Ultimate Product Vision](STOCKWATCH-ULTIMATE-PRODUCT-VISION.md). Read this before extending the feature roadmap. The end-state is an evidence-first **market → issuer → verified customer/supplier/ownership/contract → shipping/energy/materials/macro** research operating system, with rights-cleared charting, dated source evidence, a useful research agent, saved investigations and eventually an authenticated commercial data layer. The chart terminal is the interface; **the connected original evidence and economic exposure graph is the differentiator**. No fictional transactions, unlicensed histories or implied causal forecasts.
+
+**Current next stages:** V115 = truthful usable Data Products/integration inquiry, metadata/schema/rights/availability; V116 = independently reviewed approved-layout + 19-route production acceptance. After those, follow V117–V129+ phased company, global-market, agent and commercial goals in the vision. Versions are gates, not deadlines.
+
+## Prior north-star formulation
 A fast, genuinely useful global **market and company-intelligence research terminal**. First view: sourced/date-stamped geographic market indices, dominant interactive chart, company news, market breadth, filterable heatmap, saved watchlist and contextual drilldown, in the approved dark Nordl visual system. Deeper routes: securities, A/B classes, company statements, verified customer/supplier and capital relations, freight, power, minerals and macro history. Every published price/event/relationship must carry source, actual observation date, period, units, quality and rights. Do not reproduce the mockup's fictional figures or label delayed observations live.
 
 ## Baseline — published source audit, as of 2026-11-21 04:33 UTC
