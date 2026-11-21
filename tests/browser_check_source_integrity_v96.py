@@ -30,10 +30,16 @@ def main():
                             if name=="index":
                                 status=page.locator(".sw96-source-status")
                                 status.wait_for(timeout=25000)
+                                summary=status.locator("summary")
+                                assert summary.is_visible()
+                                assert "Source freshness" in summary.inner_text()
+                                assert "session-verified" in summary.inner_text() or "Session coverage unavailable" in summary.inner_text()
+                                assert not status.get_attribute("open"), "Diagnostics should be collapsed by default"
+                                summary.click()
+                                assert status.get_attribute("open") is not None
                                 text=status.inner_text()
-                                assert "Source freshness" in text
-                                assert "completed session" in text
-                                assert "session changes unconfirmed" in text or "Current-session coverage unavailable" in text
+                                assert "confirmed for completed session" in text or "Completed-session coverage unavailable" in text
+                                assert "Older moves are not live alerts." in text
                                 assert "Inspect source coverage" in text
                             else:
                                 sync=page.locator(".sw96-calendar-sync")
