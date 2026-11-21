@@ -30,6 +30,13 @@ def main():
      }""")
      print(json.dumps({'theme':theme,'metric':metric}),flush=True)
      assert metric['scrollWidth']<=320+3,metric
+     details=page.locator('.sw-mobile-more')
+     details.locator('summary').click()
+     assert details.get_attribute('open') is not None
+     panel=details.locator('.sw-mobile-drawer').bounding_box()
+     assert panel and panel['x']>=0 and panel['x']+panel['width']<=321,(theme,panel)
+     assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+3')
+     details.locator('summary').press('Escape')
     finally:page.close()
    b.close()
  finally:server.shutdown();server.server_close()
