@@ -31,6 +31,7 @@ from translate import Translator                                  # noqa: E402
 from last_known import load,company_row,context_rows
 import source_telemetry                                            # noqa: E402
 from price_freshness import comparison_date,price_quality,completed_market_baseline
+from news_quality import identity_evidence
 from price_quality_diagnostics import outcome as price_outcome,summarize as price_diagnostics
 from venue_session_probe import SessionProbe
 source_telemetry.install(sources)
@@ -336,6 +337,15 @@ def spark(bars: list[dict], points: int = 30) -> list[float]:
     return [round(b["close"], 4) for b in bars[-points:] if b["close"]]
 
 
+def web_story_association(ticker, company_name, original_title, translated_title=None):
+    """Candidate news identity before alerts; never pretend the source is a filing."""
+    return identity_evidence({
+        'ticker':ticker, 'name':company_name, 'type':'news',
+        'match':'name_mentioned', 'headline':original_title,
+        'english':translated_title
+    })
+
+
 def filing_entry(item, watchlist):
     """Use a source-provided Oslo issuer code; never confuse shared symbols across venues."""
     explicit = str(item.get("issuerCode") or "").strip().upper()
@@ -602,8 +612,14 @@ def main() -> int:
                 "url": item["url"], "published": item.get("published"),
                 "fresh": key not in seen,
             }
+            # The alert/RSS path runs BEFORE build_research_data and must not
+            # bypass the archive's company-identity guard. Keep review-tier
+            # candidates in the source record, without treating them as events.
+            identity, reason = web_story_association(ticker, subject, item["title"], english)
+            story["identityTier"] = "named_reference" if identity == "mentioned" else "review_candidate"
+            story["identityReviewReason"] = reason
             by_ticker[ticker]["stories"].append(story)
-            if item["material"] >= ALERT_MATERIAL:
+            if item["material"] >= ALERT_MATERIAL and identity == "mentioned":
                 alerts.append({**story, "ticker": ticker, "name": subject})
             seen.add(key)
 
