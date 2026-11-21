@@ -12,4 +12,4 @@
 .sw105-table th:first-child,.sw105-table td:first-child{text-align:left}
 .sw105-table th{font-weight:600}
 @media(max-width:760px){.sw105-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:390px){.sw105-summary{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:350px){.sw105-summary{grid-template-columns:minmax(0,1fr)}}
