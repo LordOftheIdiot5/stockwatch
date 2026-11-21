@@ -31,6 +31,12 @@ def main():
      assert "NOK per EUR" in page.locator("#overviewMacroPlot").inner_text()
      assert page.locator("#overviewMacroPlot svg").get_attribute("viewBox")=="0 0 640 286"
      assert "Taiwan sources connected" in page.locator("#globalMarketPulse").inner_text()
+     index=page.locator("#globalMarketPulse")
+     if width<=700:
+      assert chart.bounding_box()["y"]<index.bounding_box()["y"]
+      assert page.locator(".sw96-source-status").bounding_box()["height"]<175
+     else:
+      assert index.bounding_box()["y"]<chart.bounding_box()["y"]
      assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+2")
      if width==1440 and theme=="dark":
       page.locator("#overviewMacroSeries").select_option("eia:RBRTE")

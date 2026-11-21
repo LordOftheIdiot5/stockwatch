@@ -40,3 +40,19 @@ body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expa
  body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-ws-breadth{grid-column:auto}
  body[data-page=index] .sw-index-card{min-height:90px}
 }
+/* V98b: mobile chart-first, compact but still explicit freshness diagnostics. */
+@media(max-width:700px){
+ body[data-page=index] .sw-overview-status{display:none}
+ body[data-page=index] .sw96-source-status{
+  display:grid;grid-template-columns:minmax(0,1fr);gap:6px;
+  margin:8px 0 10px;padding:10px 12px;
+ }
+ body[data-page=index] .sw96-source-status>div{min-width:0;gap:2px}
+ body[data-page=index] .sw96-source-status p{
+  flex:none;min-width:0;max-width:100%;font-size:12px;line-height:1.4;
+ }
+ body[data-page=index] .sw96-source-status a{min-height:30px}
+ body[data-page=index] .sw98-primary #globalMarketPulse{min-width:0;margin:4px 0 10px}
+ body[data-page=index] .sw98-primary #globalMarketPulse .sw-index-grid{max-width:none}
+ body[data-page=index] .sw98-primary .sw92-focus-chart .sw-overview-chart-controls{gap:7px}
+}

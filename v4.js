@@ -370,6 +370,19 @@ function overview(){
    primary.append(rail);
    primary.classList.add('sw98-primary');
    marketGrid.classList.add('sw98-market-secondary');
+   // On phones lead with the verified chart, not three similar Taiwan index cards.
+   // Restore the existing index position on resize; no source data changes.
+   if(globalPulse){
+     const anchor=document.createComment('V98 desktop index position');
+     globalPulse.before(anchor);
+     const narrow=window.matchMedia('(max-width:700px)');
+     const placeIndices=()=>{
+       if(narrow.matches)officialChart.after(globalPulse);
+       else anchor.after(globalPulse);
+     };
+     narrow.addEventListener?.('change',placeIndices);
+     placeIndices();
+   }
  }
 
  const select=$('workspaceSector'),coverage=$('workspaceCoverage'),venue=$('workspaceVenue'),expand=$('workspaceHeatExpand'),map=$('workspaceHeatmap');
