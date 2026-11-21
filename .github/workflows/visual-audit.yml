@@ -4,6 +4,9 @@ on:
     paths:
       - 'scripts/visual_audit.py'
       - 'sitewide-polish-v111.css'
+      - 'overview-firstfold-v116.css'
+      - 'tests/browser_check_firstfold_v116.py'
+      - 'scripts/visual_acceptance_v116.py'
       - 'brand/workspace-navigation-v112.css'
       - 'brand/workspace-navigation-v112.js'
       - 'tests/browser_check_brand_navigation_v112.py'
@@ -72,6 +75,10 @@ jobs:
         run: python tests/browser_check_secondary_v114.py
       - name: V115 source-safe public Data Products catalog and inquiry acceptance
         run: python tests/browser_check_data_products_v115.py
+      - name: V116 first-screen panel geometry
+        run: python tests/browser_check_firstfold_v116.py
+      - name: V116 full 19-route x 6-width x dark/light browser acceptance matrix
+        run: python scripts/visual_acceptance_v116.py
       - name: V112 editorial routes, menu, theme, keyboard and screenshot checks
         run: python tests/browser_check_brand_navigation_v112.py
       - name: Capture checkout on desktop and mobile
