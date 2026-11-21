@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T16:05:41Z",
+  "generated": "2026-11-21T16:14:16Z",
   "items": [
     {
       "id": "SAP.DE:4030f80d9d2ac66b9a94252b45006e3915ca30b4f94f9e15626f06e9cf1677d1",
@@ -289,6 +289,29 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUjBpQV9oS2JCTC1HckdxZG0tNkl4NUQzbXd3WXEwcXZmRkFiMUZDTlZBaXRESWVhakdHRjJkT1BxR0RWV2dNbDdHemR6bzdfZjk5Q2JkVEU0OUZQNXdtTmU3eDF4UzI4XzlPb3NOQ3NSMjBfYjVqelpTNzMzMTZsN2g1YnBsMDdvT0pHdVlNeTFQY0sxcnZVTVZ3QWxKOTVXMXlsTTV0YngtVDVMWHk5ekhNaGY5ZkxmbHMxdnpIZEJhUHJ0LUk1YTcwWWM?oc=5",
       "published": "2026-11-21T11:00:26Z",
       "lang": "de",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "YACHT.MI:f1c6e9750a7f6732124bcb0ad98fd98ad98bd8627d7aa874d05c6060db195cb0",
+      "ticker": "YACHT.MI",
+      "name": "Ferretti",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Simona Bramati, la mostra conquista anche Dante Ferretti e il ministro Carlo Nordio. Prorogata fino al 10 gennaio 2027",
+      "english": "Simona Bramati: The exhibition also wins over Dante Ferretti and Minister Carlo Nordio. Extended until January 10, 2027",
+      "publisher": "CentroPagina",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVFZuakRMN0tTVl92ZEpyMXU4Z1B1dS1vcFN6UFNiNlQ2QVVBYm5kTXMtVktncVFTMXRoZko2MTFFNlVoZ0FZcVBnelVycHlDT3NWT2R5WnF1cXhjR1YweDhXWlRxaVREbFRtNU1CRDBHWGVKTnNrSV9yakNZdno2ZmhrSnpxZ0lrYmd2WGFzNWdoRzBtNjM3aEVaN0VXeHFtSm9aWmJFdkRNVDlJRnlZVw?oc=5",
+      "published": "2026-11-21T10:48:36Z",
+      "lang": "it",
       "regulatory": false,
       "sourceIssuer": null,
       "sourceFeed": null,
@@ -2358,41 +2381,13 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:e41cf8bac7fe9be0605cdd35157c73586b9c82378edba2212c09d58ed27683a5",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Commerzbank CEO raises 2026 profit outlook as UniCredit takeover nears",
-      "english": null,
-      "publisher": "Euronext Markets: Real-time Stock Market Data | live",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEhYRzN6UGhFNGpvbkt3clB5bTFsNzBabHBQMFNldFRBSkRBQVdpZlpKY3U5Y0Fka3BBSjV6OFpCRHRuSEoyY3dPT2FCSWI0R2g2MDNVM05aTUZud0RIa3JPd29uTHdTTDh5NERqbTRObmhqWVhRYTkwYWtWSVVNc1FNd3NXMWlaaFNvdUJCRG5yUGtQRTV3NFZ2ZHhySmU1UXpURlRDWmtWNzNXR04tTA?oc=5",
-      "published": "2026-11-20T14:56:45Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "category": "M&A",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: M&A"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 1951,
+  "totalStored": 1952,
   "limit": 100,
   "quality": {
-    "total": 1951,
-    "relevant": 1424,
+    "total": 1952,
+    "relevant": 1425,
     "review": 459,
     "duplicates": 92,
     "issuerLinked": 430,
@@ -2416,7 +2411,7 @@
       "Contracts": 144,
       "Capital & ownership": 1,
       "Management": 62,
-      "General": 1323
+      "General": 1324
     }
   }
 }
