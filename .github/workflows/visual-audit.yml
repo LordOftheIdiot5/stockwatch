@@ -3,6 +3,10 @@ on:
   pull_request:
     paths:
       - 'scripts/visual_audit.py'
+      - 'index.html'
+      - 'v4.js'
+      - 'overview-parity-v98.css'
+      - 'tests/browser_check_overview_v98.py'
       - '.github/workflows/visual-audit.yml'
   workflow_dispatch:
 permissions:
