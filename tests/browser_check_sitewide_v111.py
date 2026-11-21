@@ -41,7 +41,7 @@ def assert_page(page,route,width,base):
     page.on("pageerror",lambda err:errors.append(str(err)))
     response=page.goto(base+ROUTES[route],wait_until="domcontentloaded",timeout=25000)
     assert response and response.status==200,(route,response.status if response else None)
-    page.locator("link[href*='sitewide-polish-v111.css']").wait_for(timeout=5000)
+    page.locator("link[href*='sitewide-polish-v111.css']").wait_for(state="attached",timeout=5000)
     page.locator("body").wait_for()
     # Some pages are brand-only: their H1s are outside of the JS workspace.
     assert page.locator("h1").count()>=1,(route,"missing page heading")
