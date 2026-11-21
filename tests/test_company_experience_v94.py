@@ -32,6 +32,8 @@ class V94CompanyUXTests(TestCase):
             self.assertIn(marker,self.v4)
         self.assertIn('history.setAttribute("aria-live","polite")',self.js)
         self.assertIn('actualChart.setAttribute("role","region")',self.js)
+        self.assertIn('document.body.classList.add("sw94-profile-ready")',self.js)
+        self.assertIn('requestAnimationFrame(refreshSelection)',self.js)
     def test_accessible_section_navigation(self):
         for marker in ('"navigation"','"aria-controls"','"aria-current"',
                        '"ArrowRight"','"ArrowLeft"','"Home"','"End"',

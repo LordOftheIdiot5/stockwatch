@@ -290,3 +290,20 @@ body[data-page=company] .sw94-reference-profile .sw-identity-grid>div{
 @media(prefers-reduced-motion:reduce){
  body[data-page=company] .sw-company-tabs button{transition:none}
 }
+
+/* Avoid two large company-name banners above the actual research profile. */
+body[data-page=company].sw94-profile-ready .sw-page-head{
+ padding:5px 2px 11px;margin-bottom:10px;
+ border:0;border-radius:0;background:transparent;
+ box-shadow:none;
+}
+body[data-page=company].sw94-profile-ready .sw-page-head .sw-eyebrow{
+ font-size:10px;letter-spacing:.09em;
+}
+body[data-page=company].sw94-profile-ready .sw-page-head h1{
+ font-size:14px;line-height:1.25;letter-spacing:0;
+ margin:3px 0 4px;color:var(--sw-muted);font-weight:700;
+}
+body[data-page=company].sw94-profile-ready .sw-page-head .sw-subtitle{
+ font-size:11px;line-height:1.4;margin:0;color:var(--sw-dim);
+}

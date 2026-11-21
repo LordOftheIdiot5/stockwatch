@@ -61,6 +61,9 @@ def main():
                                 "document.documentElement.scrollWidth<=innerWidth+2")
                             # Restore top fold for screenshot comparison.
                             page.evaluate("window.scrollTo(0,0)")
+                            page.wait_for_function("""() => document.querySelector(
+                                '[data-company-tab="chart"]')?.getAttribute(
+                                'aria-current')==='location'""",timeout=10000)
                             page.screenshot(path=str(
                                 out/f"{ticker.replace('.','-')}-{viewport}-{theme}.png"),
                                 animations="disabled",full_page=False)

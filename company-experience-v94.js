@@ -19,6 +19,7 @@ function enhance(){
  if(panel.dataset.sw94Ready==="true")return;
  panel.dataset.sw94Ready="true";
  APP.classList.add("sw94-company-profile");
+ document.body.classList.add("sw94-profile-ready");
  const nav=panel.querySelector(".sw-company-tabs");
  const chart=panel.querySelector('[data-company-section="chart"]');
  const map=panel.querySelector("#companyDriverMap");
@@ -48,6 +49,24 @@ function enhance(){
  }
  if(mapped.length)activate(mapped[0].button);
  for(const item of mapped)item.button.addEventListener("click",()=>activate(item.button));
+ // Keep the highlighted section aligned with the viewport, including when
+ // users return to the top after jumping to Financials or Corporate events.
+ let scrollQueued=false;
+ const refreshSelection=()=>{
+   scrollQueued=false;
+   if(!panel.isConnected||!mapped.length)return;
+   const threshold=Math.min(220,window.innerHeight*0.28);
+   let current=mapped[0];
+   for(const item of mapped){
+     if(item.section.getBoundingClientRect().top<=threshold)current=item;
+   }
+   activate(current.button);
+ };
+ window.addEventListener("scroll",()=>{
+   if(scrollQueued||!panel.isConnected)return;
+   scrollQueued=true;
+   requestAnimationFrame(refreshSelection);
+ },{passive:true});
  nav.addEventListener("keydown",event=>{
    if(!["ArrowRight","ArrowLeft","Home","End"].includes(event.key))return;
    const i=mapped.findIndex(item=>item.button===document.activeElement);
