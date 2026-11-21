@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T23:36:07Z",
+  "generated": "2026-11-21T01:33:48Z",
   "datasets": [
     {
       "name": "Official macroeconomic and FX observations",
@@ -64,7 +64,7 @@
     {
       "name": "SEC EDGAR filing metadata",
       "path": "data/sec-filings.json",
-      "records": 409,
+      "records": 414,
       "license": "Official public filing metadata and source links only"
     },
     {
@@ -82,13 +82,13 @@
     {
       "name": "Historical article index",
       "path": "data/news-store/index.json",
-      "records": 1882,
+      "records": 1891,
       "license": "Git-backed source-linked metadata; inspect original publisher terms"
     },
     {
       "name": "A/B indicator observations",
       "path": "data/spread-observations.json",
-      "records": 72,
+      "records": 84,
       "license": "Derived research indicators; no raw historical OHLCV"
     },
     {
