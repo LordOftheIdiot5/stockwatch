@@ -27,17 +27,22 @@ def main():
       assert page.locator('#globalMarketPulse').count()==1
       assert page.locator('.sw98-intelligence-rail .sw-overview-news').count()==1
       if width==1440:
-       cols=page.locator('.sw98-market-secondary').evaluate(
+       workspace=page.locator('.sw116c-overview-grid')
+       assert workspace.count()==1
+       cols=workspace.evaluate(
         '(x)=>getComputedStyle(x).gridTemplateColumns').split(' ')
        assert len(cols)==3,cols
+       assert abs(heat.bounding_box()['width']-workspace.bounding_box()['width'])<8
        assert watch.bounding_box()['y'] < heat.bounding_box()['y']+280
        assert page.locator('.sw110-heat-companion').evaluate(
          '(x)=>getComputedStyle(x).display')=='contents'
        assert page.locator('.sw98-intelligence-rail').evaluate(
          '(x)=>getComputedStyle(x).display')=='contents'
        # V111 keeps the plot's true SVG aspect ratio instead of letterboxing it.
-       # The heatmap must still begin within the 900px first viewport.
-       assert heat.bounding_box()['y']<890,heat.bounding_box()
+       # V116c's interactive heatmap occupies the entire workspace after
+       # the stacked source chart, snapshot, disclosures, coverage and watchlist.
+       # Verify no excessive gap, rather than requiring the old narrow map.
+       assert heat.bounding_box()['y']<990,heat.bounding_box()
        # V110d preserves every dated mover, accessible in the reversible panel.
        page.locator('.sw110d-movers summary').click()
        movers=page.locator('.sw110d-movers>.sw-panel')
