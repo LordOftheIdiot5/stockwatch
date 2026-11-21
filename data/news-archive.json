@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T01:31:20Z",
+  "generated": "2026-11-21T01:38:11Z",
   "items": [
     {
       "id": "KCR.HE:d8417b6d8ec640809014fb3c20368c0679b4d4e01a7a1d60f1a793618537e1e1",
@@ -9506,6 +9506,34 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
+    },
+    {
+      "id": "MYCR.ST:302e818e21a0e4725d45ab7aaba57723f8422cd806e3bd95fc26aabf394dd76b",
+      "ticker": "MYCR.ST",
+      "name": "Mycronic",
+      "sector": "Tech & space",
+      "type": "news",
+      "headline": "Mycronic receives order for a photomask repair system (MFN)",
+      "english": null,
+      "publisher": "Aktiellt",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE14YVF4bkJjb0t4WlBKZGZLdF8zdDNfSE9UQkZMSzNKUDJDTVdtRF9WYUt6MUs5QktrMUJLY2oxN01fRGVsZ0RwMXgxSXpMQVp6c0ljQXE4VGJPaWVIcVNJ?oc=5",
+      "published": "2026-11-19T08:00:00Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "category": "Contracts",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: Contracts"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
     },
     {
       "id": "MYCR.ST:255033c9b7c778d2ed804975c691177a7716ebeb32e250a7fc8fc75365c36d47",

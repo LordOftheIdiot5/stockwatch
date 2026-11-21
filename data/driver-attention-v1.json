@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-21T01:31:20Z",
+  "generated": "2026-11-21T01:38:11Z",
   "windowStart": "2026-11-07",
   "windowEnd": "2026-11-20",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -7073,7 +7073,7 @@
         {
           "date": "2026-11-19",
           "issuer": 0,
-          "media": 7
+          "media": 8
         },
         {
           "date": "2026-11-20",
@@ -7095,6 +7095,14 @@
           "published": "2026-11-19T09:24:25Z",
           "headline": "Mycronic Lands Order for Photomask Repair System in Asia",
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSTFmNDY5Q0w1VUtjaC16d2tDYVlvWThiVDZYaFVlRFc2MGM3RXZrTllhY1UxTDFOZnA5S3R1ODhncVZLX04ybTZsTDlDMWJyY2hDVkdINGJlcC15ZXBmTjlLTmVtZ0pTbmMzR3pzS2c1UEVrZk9qWndpbFE5QzdacGFyUzI1UG1jVWRNV3ZyRTB5a1o0UDU0aEJaMGhrNVBfa3dsT1R5RXFuSGJWTEE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
+          "id": "MYCR.ST:302e818e21a0e4725d45ab7aaba57723f8422cd806e3bd95fc26aabf394dd76b",
+          "published": "2026-11-19T08:00:00Z",
+          "headline": "Mycronic receives order for a photomask repair system (MFN)",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE14YVF4bkJjb0t4WlBKZGZLdF8zdDNfSE9UQkZMSzNKUDJDTVdtRF9WYUt6MUs5QktrMUJLY2oxN01fRGVsZ0RwMXgxSXpMQVp6c0ljQXE4VGJPaWVIcVNJ?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
         },
@@ -7179,13 +7187,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 15,
+      "observedRecords": 16,
       "latestRecord": "2026-11-20T13:21:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 11,
+        "potential": 12,
         "risk": 0
       },
       "prior7": {
@@ -7194,7 +7202,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 14
+        "media": 15
       }
     },
     "NANEXA.ST": {
