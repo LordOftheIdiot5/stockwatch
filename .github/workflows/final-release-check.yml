@@ -74,6 +74,11 @@ jobs:
         run: |
           node --check company-experience-v94.js
           node --test tests/test_company_experience_v94.mjs tests/test_company_v50.mjs
+      - name: V95 research graph evidence and accessibility tests
+        if: startsWith(github.head_ref, 'feature/stockwatch-v95-')
+        run: |
+          node --check intelligence-experience-v95.js
+          node --test tests/test_intelligence_experience_v95.mjs
       - name: V25b research universe tests
         run: node --test tests/test_universe_v25b.mjs
       - name: V26 intelligence graph tests
@@ -204,6 +209,21 @@ jobs:
           path: |
             visual-audit/v94-company/
             workspace-previews/v50-*.png
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: V95 directory, methodology and intelligence browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v95-')
+        run: |
+          python tests/browser_check_research_experience_v95.py
+          python tests/browser_check_company_network_v84.py
+      - name: Upload V95 source-backed research screenshots
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v95-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v95-research-screenshots
+          path: |
+            visual-audit/v95-research/
+            workspace-previews/v84-network-*.png
           retention-days: 14
           if-no-files-found: ignore
       - name: V84 commercial network unit checks
