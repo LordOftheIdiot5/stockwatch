@@ -37,7 +37,7 @@ class V95ResearchUXTests(TestCase):
             self.assertIn('href="#'+anchor+'"',self.research)
         for marker in ('id="historyMetrics"','id="targetRows"',
                        'id="targetDetail"','id="targetStatus"',
-                       "Reference records","source-linked"):
+                       "reference records","source-linked"):
             self.assertIn(marker,self.research)
         self.assertNotIn("facilitator listing is not yet confirmed",self.research)
         self.assertIn("does not grant market-price display rights",self.research)
