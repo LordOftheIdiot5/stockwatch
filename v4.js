@@ -395,7 +395,7 @@ function overview(){
  }
 
  const select=$('workspaceSector'),coverage=$('workspaceCoverage'),venue=$('workspaceVenue'),expand=$('workspaceHeatExpand'),map=$('workspaceHeatmap');
- const draw=()=>{const rows=coverageHeatRows(displayUniverse.filter(r=>venue.value==='all'||r.exchange===venue.value),select.value,coverage.value);map.innerHTML=coverageHeatmap(rows,displayDate,['all','priced'].includes(coverage.value));$('workspaceHeatCount').textContent=rows.length+' shown · '+marketHeatData(rows).length+' dated changes · '+(displayUniverse.filter(displayObservation).length-marketHeatData(displayUniverse).length)+' price-only · '+(displayUniverse.length-displayUniverse.filter(displayObservation).length)+' no saved price'};
+ const draw=()=>{const rows=coverageHeatRows(displayUniverse.filter(r=>venue.value==='all'||r.exchange===venue.value),select.value,coverage.value);map.innerHTML=coverageHeatmap(rows,displayDate,['all','priced'].includes(coverage.value));$('workspaceHeatCount').textContent=rows.length+' shown · '+marketHeatData(rows).length+' with changes · dated changes · '+(displayUniverse.filter(displayObservation).length-marketHeatData(displayUniverse).length)+' price-only · '+(displayUniverse.length-displayUniverse.filter(displayObservation).length)+' no saved price'};
  for(const control of [select,coverage,venue])control.addEventListener('change',draw);
  expand.addEventListener('click',()=>{const on=map.classList.toggle('sw-heat-expanded');expand.setAttribute('aria-expanded',String(on));expand.textContent=on?'Collapse map':'Expand map'});draw();
 }
