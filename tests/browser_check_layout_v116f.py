@@ -45,6 +45,8 @@ def main():
                             assert 'NOT market returns' in coverage.inner_text()
                             assert '152 / 500' in coverage.inner_text() or 'research listings have a dated price observation' in coverage.inner_text()
                             details=page.locator('.sw110e-all-venues')
+                            collapsed_coverage_height=coverage.bounding_box()['height']
+                            assert collapsed_coverage_height<310,(width,theme,collapsed_coverage_height)
                             assert not details.evaluate('(e)=>e.open')
                             assert not coverage.locator('.sw110d-coverage-foot').is_visible()
                             details.locator('summary').focus()
@@ -61,7 +63,8 @@ def main():
                                 'heatTop':round(heat['y'],1),
                                 'chartHeight':round(chart['height'],1),
                                 'chartSvgHeight':round(svg['height'],1),
-                                'coverageHeight':round(coverage.bounding_box()['height'],1)})
+                                'collapsedCoverageHeight':round(collapsed_coverage_height,1),
+                                'expandedCoverageHeight':round(coverage.bounding_box()['height'],1)})
                         finally:page.close()
                 # Browser shortcut experiment: report a *measured* layout
                 # viewport change, not an assumed native zoom success.
