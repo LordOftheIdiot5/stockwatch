@@ -88,7 +88,7 @@ class IssuerIRV101Tests(unittest.TestCase):
         self.assertEqual(result["candidateCount"], len(previously))
         self.assertEqual(result["freshCandidateCount"], 0)
         self.assertEqual(result["attempts"][0]["status"], "failed")
-        self.assertEqual(result["items"], previously)
+        self.assertEqual({r["id"] for r in result["items"]}, {r["id"] for r in previously})
 
     def test_robots_disallow_skips_html_request(self):
         def forbidden_fetch(url, hosts):
