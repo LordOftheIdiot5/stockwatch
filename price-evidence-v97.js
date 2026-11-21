@@ -13,6 +13,9 @@
         return;
       }
       const http = health.sourceRequests?.['Yahoo prices'] || {};
+      const venueProbe = health.priceDiagnostics?.venueSessionProbe;
+      const clock = venueProbe?.counts;
+      const tzNote = clock ? '<p class="sw-meta">Latest provider daily-bar dates: '+n(clock.barBeforeTarget)+' before the common comparison date; '+n(clock.barOnTarget)+' on it. '+n(clock.localDateDiffersUtc)+' UTC/local calendar disagreements; '+n(clock.unknownExchangeTimezone)+' unknown provider timezones. None are certified exchange closes.</p>' : '<p class="sw-meta">Provider timestamp diagnostic not yet published in this scan.</p>';
       const lastHttp = http.lastSuccessAt ? esc(http.lastSuccessAt.replace('T',' ').replace(/(\+00:00|Z)$/, ' UTC')) : 'Not recorded';
       const sourceOld = evidence.byExchange.reduce((sum, x) => sum + (Number.isInteger(x.providerOlderSession) ? x.providerOlderSession : 0), 0);
       const hasSourceCounts = evidence.byExchange.some(x => Number.isInteger(x.providerOlderSession));
@@ -24,7 +27,7 @@
         '<div class="sw-v97-summary"><div><span>Comparison date</span><strong>'+esc(evidence.comparisonDate)+'</strong></div>'+
         '<div><span>Provider returned older</span><strong>'+(hasSourceCounts?n(sourceOld):'Unknown')+'</strong></div>'+
         '<div><span>MICs explicitly supplied</span><strong>'+n(evidence.micProvided)+' / '+n(evidence.tracked)+'</strong></div></div>'+
-        '<p class="sw-meta">Last successful price-provider HTTP response: <strong>'+lastHttp+'</strong>. Transport success does not establish a usable or licensed closing price.</p>'+
+        '<p class="sw-meta">Last successful price-provider HTTP response: <strong>'+lastHttp+'</strong>. Transport success does not establish a usable or licensed closing price.</p>'+tzNote+
         '<div class="sw-v97-scroll"><table class="sw-v97-table"><caption>Monitored equities by exchange label, with separate retained-price and provider-response diagnostics</caption>'+
         '<thead><tr><th scope="col">Exchange</th><th scope="col">Priced / monitored</th><th scope="col">Comparable</th><th scope="col">Unconfirmed</th><th scope="col">Older</th><th scope="col">No volume</th><th scope="col">Provider older</th><th scope="col">Retained target date</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
         '<p class="sw-meta">Provider older means the latest upstream observation is older than the stored row; the stored row remains dated and is not treated as a new completed-session signal. '+esc(evidence.method||'')+'</p>';
