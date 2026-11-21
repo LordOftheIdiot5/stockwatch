@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-21T10:19:36Z",
+  "generated": "2026-11-21T14:58:16Z",
   "windowStart": "2026-11-07",
   "windowEnd": "2026-11-20",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -291,8 +291,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-21T09:39:50Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -744,8 +744,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 56,
-      "latestRecord": "2026-11-21T09:00:17Z",
+      "observedRecords": 57,
+      "latestRecord": "2026-11-21T13:30:18Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -5791,10 +5791,18 @@
         {
           "date": "2026-11-20",
           "issuer": 0,
-          "media": 3
+          "media": 4
         }
       ],
       "potential": [
+        {
+          "id": "IFX.DE:06a9a867b13899a8d63aaf9cb489634396b2f989dd72e47f8bff68d7380e3b47",
+          "published": "2026-11-21T10:29:37Z",
+          "headline": "Vertiv signs three-year power semiconductor supply agreement with Infineon",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5BMGRjZ0I3bHdRSXFreGJxcEhXWTJoZXdzZnFReGNjbGx3bHl5cnRVZG5wcF8xN05Ya0Rzc3BTWlozTGF2UGZ5U2ZpWno0SG1CeEJzNkVfZUFScWV5b2MzV3ZhdHFuWGJkM05vX084cHdyWkIxdnh2NVlCS2M?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "IFX.DE:8142f9f0282e55b61cb9f226e2173d7ff51d15da2ae04995a2353c7600eaaafc",
           "published": "2026-11-13T04:46:09Z",
@@ -5804,8 +5812,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 27,
-      "latestRecord": "2026-11-21T09:55:00Z",
+      "observedRecords": 30,
+      "latestRecord": "2026-11-21T11:27:35Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -5819,7 +5827,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 20
+        "media": 21
       }
     },
     "INSTA.OL": {
@@ -6176,8 +6184,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-13T11:16:17Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-21T08:58:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7430,8 +7438,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 24,
-      "latestRecord": "2026-11-19T20:25:21Z",
+      "observedRecords": 25,
+      "latestRecord": "2026-11-21T11:17:55Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9946,8 +9954,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 48,
-      "latestRecord": "2026-11-21T09:29:12Z",
+      "observedRecords": 50,
+      "latestRecord": "2026-11-21T11:57:26Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12779,8 +12787,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-19T17:00:14Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-21T11:00:26Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13617,8 +13625,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 25,
-      "latestRecord": "2026-11-20T18:24:12Z",
+      "observedRecords": 27,
+      "latestRecord": "2026-11-21T12:26:20Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
