@@ -111,3 +111,64 @@ body[data-page=index] .sw116c-overview-grid { min-width:0; }
     min-width:0;
   }
 }
+
+/* The legacy single-column metrics made the middle rail roughly 400px tall.
+   Two well-labelled statistics beside each other, with the wide breadth below,
+   recover vertical space WITHOUT hiding a single reported observation. */
+@media (min-width:1320px) {
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary {
+    padding:8px 10px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-section-row {
+    gap:5px;
+    margin:0 0 4px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-metrics {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+    margin-top:5px;
+    align-content:start;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth {
+    grid-column:1/-1;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat {
+    padding:7px 8px;
+    min-height:0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-num {
+    font-size:clamp(21px,1.5vw,25px);
+    overflow-wrap:anywhere;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-sub {
+    font-size:11px;
+    line-height:1.35;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw-panel-hd {
+    padding:8px 10px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-body {
+    padding:7px 10px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-total {
+    gap:5px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-caption {
+    margin:2px 0 4px;
+    line-height:1.32;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-map-heading {
+    margin:4px 0 3px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-world {
+    height:100px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110e-map-legend {
+    margin:3px 0;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw110d-market-coverage .sw110d-coverage-foot {
+    margin:3px 0 0;
+  }
+}
