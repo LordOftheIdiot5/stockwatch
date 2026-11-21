@@ -30,13 +30,21 @@ PAGES = {
     "datasets": "data-products.html",
     "search": "search.html",
 }
-VIEWPORTS = {"desktop": (1440, 1000), "mobile": (390, 844)}
+VIEWPORTS = {"desktop": (1440, 1000), "mobile": (390, 844),
+             "small-mobile": (320, 740), "tablet": (768, 1000),
+             "wide": (1920, 1080)}
+DEFAULT_VIEWPORTS = ("desktop", "mobile")
 LAYOUT = """() => {
   const el = document.documentElement;
   const label = document.querySelector('h1');
   const root = document.querySelector('#v4app,#app,main');
   const nav = document.querySelector('.sw-mobile-nav');
+  const content = document.querySelector('body[data-page=index] .sw-content');
+  const sidebar = document.querySelector('body[data-page=index] .sw-side');
   const w = el.clientWidth;
+  const box = content?.getBoundingClientRect();
+  const sideBox = sidebar?.getBoundingClientRect();
+  const usable = Math.max(1, w - (sideBox?.width || 0));
   const candidates = Array.from(document.querySelectorAll('main h1,main h2,main h3,main button,main input,main select,main a'));
   const overflow = candidates.filter(n => {
     const b=n.getBoundingClientRect(), s=getComputedStyle(n);
@@ -45,6 +53,9 @@ LAYOUT = """() => {
   }).slice(0,15).map(n=>({tag:n.tagName,text:n.textContent.trim().slice(0,80),right:Math.round(n.getBoundingClientRect().right)}));
   return {title:document.title,heading:label?.textContent.trim()||null,
     viewport:w,documentWidth:el.scrollWidth,height:el.scrollHeight,
+    contentLeftPx:box?Math.round(box.left):null,
+    contentRightGapPx:box?Math.round(Math.max(0,w-box.right)):null,
+    contentUsableWidthRatio:box?Math.round(1000*box.width/usable)/1000:null,
     horizontalOverflow:el.scrollWidth>w+2,overflowCandidates:overflow,
     mobileNavVisible:!!(nav&&nav.getBoundingClientRect().height>0),
     headings:Array.from(document.querySelectorAll('main h2,main h3')).slice(0,25).map(n=>n.textContent.trim()),
@@ -61,7 +72,7 @@ def capture(base, out, selected, devices, chromium_path=None):
         for device in devices:
             width, height = VIEWPORTS[device]
             context = browser.new_context(viewport={"width":width,"height":height},
-                device_scale_factor=1, is_mobile=device=="mobile", has_touch=device=="mobile")
+                device_scale_factor=1, is_mobile=device in ("mobile", "small-mobile"), has_touch=device in ("mobile", "small-mobile"))
             # Prevent analytics and unpredictable third-party content. Permit only
             # the audited origin and the public font files used by the site.
             def route(request):
@@ -140,7 +151,7 @@ def main():
     parser.add_argument("--base-url",help="Optional live public site; otherwise serve this checkout")
     parser.add_argument("--output",default="visual-audit")
     parser.add_argument("--pages",nargs="+",choices=PAGES,default=list(PAGES))
-    parser.add_argument("--devices",nargs="+",choices=VIEWPORTS,default=list(VIEWPORTS))
+    parser.add_argument("--devices",nargs="+",choices=VIEWPORTS,default=list(DEFAULT_VIEWPORTS))
     parser.add_argument("--chromium-path",help="Optional installed Chromium or Chrome executable")
     args=parser.parse_args()
     server=None

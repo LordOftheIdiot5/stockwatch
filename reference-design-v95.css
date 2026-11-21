@@ -1,0 +1,280 @@
+/* Nordl Stockwatch V95 — separate visual designs for reference, methodology and graph.
+   Uses real DOM source records only. No simulated market data or internal goal panel. */
+body[data-page=directory],body[data-page=research]{
+ --sw95-accent:#51e0c8;--sw95-accent-rgb:81,224,200;
+ --sw95-border:rgba(119,164,181,.35);
+}
+body[data-page=research]{--sw95-accent:#8db9ef;--sw95-accent-rgb:141,185,239}
+body[data-page=directory][data-theme=light]{--sw95-accent:#006f5e;--sw95-accent-rgb:0,111,94}
+body[data-page=research][data-theme=light]{--sw95-accent:#225f9d;--sw95-accent-rgb:34,95,157}
+.sw95-skip{position:absolute;left:16px;top:-100px;z-index:1000;background:var(--surface,var(--sw-surface,#101c29));color:var(--ink,var(--sw-text,#eef8ff));border:2px solid currentColor;border-radius:8px;padding:9px 13px}
+.sw95-skip:focus{top:8px}
+body:is([data-page=directory],[data-page=research])>header,
+body:is([data-page=directory],[data-page=research])>main,
+body:is([data-page=directory],[data-page=research])>footer{
+ max-width:1740px;
+}
+body:is([data-page=directory],[data-page=research])>main.directory{padding:clamp(15px,1.5vw,30px) clamp(15px,2vw,36px) 54px;min-width:0}
+body:is([data-page=directory],[data-page=research])>header{max-width:1740px;border-bottom-color:var(--sw95-border)}
+.sw95-brand-hero{
+ isolation:isolate;position:relative;overflow:hidden;
+ border:1px solid rgba(var(--sw95-accent-rgb),.33);
+ border-radius:16px;
+ padding:clamp(22px,2.5vw,42px);
+ margin-bottom:20px;
+ background:linear-gradient(115deg,rgba(var(--sw95-accent-rgb),.17),rgba(var(--sw95-accent-rgb),.025) 65%,transparent),var(--surface);
+}
+.sw95-brand-hero::after{
+ content:"";pointer-events:none;position:absolute;z-index:-1;right:-115px;top:-152px;
+ border:1px solid rgba(var(--sw95-accent-rgb),.22);border-radius:50%;
+ width:330px;height:330px;
+ box-shadow:0 0 0 38px rgba(var(--sw95-accent-rgb),.035),0 0 0 82px rgba(var(--sw95-accent-rgb),.025);
+}
+.sw95-brand-hero .eyebrow{color:var(--sw95-accent);font-size:11px;letter-spacing:.11em}
+.sw95-brand-hero h1{
+ font-size:clamp(30px,3.35vw,52px);line-height:1.13;letter-spacing:-.05em;
+ margin:14px 0 14px;max-width:26ch
+}
+.sw95-brand-hero .lede{max-width:79ch;font-size:clamp(14px,1.1vw,16px);line-height:1.75}
+.sw95-hero-links{
+ display:flex;flex-wrap:wrap;gap:10px;margin-top:23px;
+ font-size:13px;line-height:1.5;
+}
+.sw95-hero-links a{
+ display:inline-flex;align-items:center;min-height:42px;padding:9px 14px;
+ border:1px solid rgba(var(--sw95-accent-rgb),.37);
+ border-radius:10px;
+ background:rgba(var(--sw95-accent-rgb),.075);
+ color:var(--ink);text-decoration:none;
+}
+.sw95-hero-links a:hover{border-color:var(--sw95-accent);color:var(--sw95-accent)}
+.sw95-hero-links a:focus-visible,.sw95-reference-table:focus-visible{
+ outline:3px solid var(--sw95-accent);outline-offset:3px;
+}
+body[data-page=directory] .directory .tools{
+ display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+ padding:16px;margin:16px 0 14px;
+ border:1px solid var(--sw95-border);
+ border-radius:12px;background:var(--surface);
+}
+body[data-page=directory] .directory .tools input{
+ min-height:45px;flex:1 1 300px;font-size:14px;border-color:var(--sw95-border)
+}
+body[data-page=directory] .directory .tools select{
+ min-height:45px;flex:0 1 230px;font-size:14px;border-color:var(--sw95-border)
+}
+body[data-page=directory] .metricrow{
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:14px;margin:15px 0 19px;
+}
+body[data-page=directory] .metric{
+ min-width:0;padding:clamp(17px,1.6vw,24px);
+ border-radius:13px;border-color:var(--sw95-border);
+ background:linear-gradient(130deg,rgba(var(--sw95-accent-rgb),.10),transparent 70%),var(--surface);
+}
+body[data-page=directory] .metric small{font-size:12px;line-height:1.5}
+body[data-page=directory] .metric b{
+ display:block;margin-top:5px;font-size:clamp(24px,2vw,34px);line-height:1.2;
+ letter-spacing:-.035em
+}
+body[data-page=directory] #directoryStatus,
+body[data-page=research] :is(#historyStatus,#targetStatus){
+ padding:11px 14px;border:1px solid var(--sw95-border);border-radius:9px;
+ line-height:1.6;background:rgba(var(--sw95-accent-rgb),.045);
+}
+.sw95-reference-table{
+ border:1px solid var(--sw95-border);
+ border-radius:13px;max-width:100%;overflow-x:auto;
+ overscroll-behavior-x:contain;
+ background:var(--surface);
+}
+.sw95-reference-table table{min-width:690px}
+.sw95-reference-table th{font-size:12px;letter-spacing:.055em;white-space:nowrap}
+.sw95-reference-table td{font-size:13px;line-height:1.6}
+.sw95-reference-table td strong{font-size:14px}
+.sw95-reference-table tbody tr:hover{background:rgba(var(--sw95-accent-rgb),.045)}
+body:is([data-page=directory],[data-page=research]) .pager button{
+ min-height:42px;min-width:96px;font-size:13px;border-color:var(--sw95-border);
+}
+body:is([data-page=directory],[data-page=research]) .pager button:not(:disabled):hover{border-color:var(--sw95-accent)}
+body[data-page=research] main>.section{
+ scroll-margin-top:22px;
+ padding:clamp(25px,3vw,43px) clamp(15px,2vw,30px);
+ margin:14px 0;
+ border:1px solid var(--sw95-border);
+ border-radius:14px;
+ background:var(--surface);
+}
+body[data-page=research] main>.section h2{
+ font-size:clamp(23px,2.25vw,34px);line-height:1.2;
+ letter-spacing:-.04em;margin:10px 0 22px;
+}
+body[data-page=research] .section .grid{gap:14px}
+body[data-page=research] .section .tile{
+ border-color:var(--sw95-border);
+ background:linear-gradient(135deg,rgba(var(--sw95-accent-rgb),.07),transparent 65%),var(--surface);
+}
+body[data-page=research] .section .tile small{color:var(--sw95-accent)}
+body[data-page=research] .section .tile h3{font-size:17px;line-height:1.4}
+body[data-page=research] .section .tile p{font-size:14px;line-height:1.65}
+body[data-page=research] .trust{gap:14px}
+body[data-page=research] .trust>div{
+ min-width:0;padding:17px;border:1px solid var(--sw95-border);
+ border-radius:11px;background:rgba(var(--sw95-accent-rgb),.04);
+}
+body[data-page=research] .trust h3{font-size:16px;line-height:1.45}
+body[data-page=research] .trust p{font-size:13px;line-height:1.75}
+body[data-page=research] .actions .button{min-height:43px;font-size:13px}
+body[data-page=research] .section>.tools{padding:14px;border:1px solid var(--sw95-border);border-radius:11px}
+body[data-page=research] .section>.tools :is(input,select){min-height:44px}
+/* Graph workspace: clear primary node, typed branches, and honest evidence. */
+body[data-page=intelligence]{
+ --sw95-accent:#7caee9;--sw95-accent-rgb:124,174,233;
+}
+body[data-page=intelligence][data-theme=light]{--sw95-accent:#245b99;--sw95-accent-rgb:36,91,153}
+body[data-page=intelligence] .sw-content{
+ max-width:none;min-width:0;
+ padding:clamp(15px,1.5vw,30px) clamp(13px,1.9vw,34px) 50px;
+}
+body[data-page=intelligence] .sw-page-head{
+ margin-bottom:16px;padding:clamp(18px,2vw,30px);
+ border:1px solid rgba(var(--sw95-accent-rgb),.33);
+ border-radius:15px;
+ background:linear-gradient(110deg,rgba(var(--sw95-accent-rgb),.17),transparent 71%),var(--sw-surface);
+}
+body[data-page=intelligence] .sw-page-head h1{
+ font-size:clamp(28px,2.5vw,40px);letter-spacing:-.045em;line-height:1.18
+}
+body[data-page=intelligence] .sw-grid4{gap:14px}
+body[data-page=intelligence] .sw-grid4 .sw-stat{
+ padding:clamp(15px,1.6vw,22px);
+ border-radius:12px;border-color:rgba(var(--sw95-accent-rgb),.25);
+ background:linear-gradient(142deg,rgba(var(--sw95-accent-rgb),.09),transparent 65%),var(--sw-surface);
+}
+body[data-page=intelligence] .sw-intel-panel{
+ margin-top:17px;border-radius:14px;border-color:rgba(var(--sw95-accent-rgb),.33);
+}
+body[data-page=intelligence] .sw-intel-panel .sw-panel-pad{padding:clamp(14px,1.5vw,25px)}
+body[data-page=intelligence] .sw-intel-panel .sw-controls{
+ display:grid;grid-template-columns:minmax(200px,1fr) minmax(240px,1fr);gap:12px;margin:8px 0 17px;
+}
+body[data-page=intelligence] #intelSearch,body[data-page=intelligence] #intelListing{
+ min-width:0;width:100%;font-size:14px;min-height:45px;
+ border-radius:10px;border-color:rgba(var(--sw95-accent-rgb),.38);
+}
+body[data-page=intelligence] .sw95-graph-guide{
+ min-width:0;padding:15px 17px;
+ border:1px solid rgba(var(--sw95-accent-rgb),.33);
+ border-radius:12px;
+ background:linear-gradient(115deg,rgba(var(--sw95-accent-rgb),.13),transparent 68%),var(--sw-surface);
+}
+body[data-page=intelligence] .sw95-graph-guide>strong{display:block;font-size:15px;margin-bottom:10px}
+body[data-page=intelligence] .sw95-graph-kinds{display:flex;flex-wrap:wrap;gap:8px}
+body[data-page=intelligence] .sw95-graph-kind{
+ display:inline-flex;align-items:center;min-height:32px;
+ padding:5px 11px;border:1px solid rgba(var(--sw95-accent-rgb),.4);
+ border-radius:999px;color:var(--sw-text);
+ font-size:12px;line-height:1.4;
+ background:rgba(var(--sw95-accent-rgb),.09);
+}
+body[data-page=intelligence] .sw95-graph-disclaimer{
+ font-size:12px;line-height:1.65;margin:10px 0 0;color:var(--sw-muted);
+}
+body[data-page=intelligence] .sw95-graph-selection{
+ font-size:12px;line-height:1.5;
+ color:var(--sw-muted);margin:12px 0;
+}
+body[data-page=intelligence] .sw-intel-map{
+ margin:15px 0;
+ padding:clamp(16px,2vw,28px);
+ border-radius:14px;
+ border-color:rgba(var(--sw95-accent-rgb),.36);
+ background:radial-gradient(ellipse at 50% 0%,rgba(var(--sw95-accent-rgb),.15),transparent 70%),var(--sw-bg);
+}
+body[data-page=intelligence] .sw-intel-center{
+ max-width:460px;
+ padding:clamp(19px,2vw,28px);
+ border:2px solid var(--sw95-accent);
+ background:var(--sw-surface);
+}
+body[data-page=intelligence] .sw-intel-center strong{
+ font-size:clamp(21px,1.7vw,28px);line-height:1.3;
+}
+body[data-page=intelligence] .sw-intel-branches{
+ grid-template-columns:repeat(auto-fit,minmax(min(205px,100%),1fr));gap:12px;
+}
+body[data-page=intelligence] .sw-intel-node{
+ padding:15px;border-radius:11px;border-color:rgba(var(--sw95-accent-rgb),.28);
+ background:var(--sw-card);
+}
+body[data-page=intelligence] .sw-intel-node strong{font-size:15px;line-height:1.5}
+body[data-page=intelligence] .sw-intel-node span{font-size:12px;line-height:1.65}
+body[data-page=intelligence] .sw-intel-mini .sw-peer{
+ padding:14px;min-width:0;border-radius:11px;
+ border-color:rgba(var(--sw95-accent-rgb),.23);
+}
+body[data-page=intelligence] #sharedEnergyContext{
+ margin-top:18px;border-radius:13px;border-color:rgba(var(--sw95-accent-rgb),.29);
+}
+body[data-page=intelligence] :is(.sw-intel-peer,#intelSearch,#intelListing):focus-visible{
+ outline:3px solid var(--sw95-accent);outline-offset:3px;
+}
+@media(max-width:900px){
+ body[data-page=research] .trust{grid-template-columns:1fr}
+ body[data-page=intelligence] .sw-intel-panel .sw-controls{grid-template-columns:minmax(0,1fr)}
+ body[data-page=intelligence] .sw-grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+ .sw95-brand-hero{padding:18px}
+ .sw95-brand-hero::after{width:180px;height:180px;right:-100px;top:-95px}
+ .sw95-brand-hero h1{font-size:clamp(27px,8vw,38px)}
+ .sw95-hero-links{gap:8px}
+ .sw95-hero-links a{min-height:44px;font-size:12px;padding:8px 11px}
+ body[data-page=directory] .metricrow{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page=directory] .metric:last-child{grid-column:1/-1}
+ body[data-page=directory] .directory .tools select{flex:1 1 100%}
+ body[data-page=research] main>.section{padding:17px}
+ body[data-page=research] .section .grid{grid-template-columns:minmax(0,1fr)}
+ body[data-page=intelligence] .sw-grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page=intelligence] .sw-intel-branches{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:390px){
+ body[data-page=directory] .metricrow{grid-template-columns:minmax(0,1fr)}
+ body[data-page=directory] .metric:last-child{grid-column:auto}
+ body[data-page=intelligence] .sw-grid4{grid-template-columns:minmax(0,1fr)}
+ body[data-page=intelligence] .sw95-graph-kinds{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page=intelligence] .sw95-graph-kind{transition:none}
+}
+
+/* Direct access to the two distinct graph workspaces and sourced hydro context. */
+body[data-page=intelligence] .sw95-intel-jump{
+ display:flex;flex-wrap:wrap;gap:10px;
+ margin:0 0 17px;padding:11px;
+ border:1px solid rgba(var(--sw95-accent-rgb),.31);
+ border-radius:12px;
+ background:var(--sw-surface);
+}
+body[data-page=intelligence] .sw95-intel-jump a{
+ display:inline-flex;align-items:center;min-height:42px;
+ padding:8px 13px;border:1px solid rgba(var(--sw95-accent-rgb),.35);
+ border-radius:9px;color:var(--sw-text);
+ background:rgba(var(--sw95-accent-rgb),.065);
+ font-size:13px;line-height:1.5;text-decoration:none;
+}
+body[data-page=intelligence] .sw95-intel-jump a:hover{
+ border-color:var(--sw95-accent);color:var(--sw95-accent);
+}
+body[data-page=intelligence] .sw95-intel-jump a:focus-visible{
+ outline:3px solid var(--sw95-accent);outline-offset:3px;
+}
+body[data-page=intelligence] #commercialNetwork,
+body[data-page=intelligence] #intelMap,
+body[data-page=intelligence] #sharedEnergyContext{
+ scroll-margin-top:25px;
+}
+@media(max-width:650px){
+ body[data-page=intelligence] .sw95-intel-jump{padding:9px;gap:7px}
+ body[data-page=intelligence] .sw95-intel-jump a{min-height:44px;font-size:12px;padding:8px 11px}
+}

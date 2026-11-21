@@ -76,12 +76,20 @@ def audit(get=fetch,now=None,require_gleif=False,require_sec=False):
         t=datetime.fromisoformat(d["generated"].replace("Z","+00:00"));age=(now-t).total_seconds()/3600
         require(-1<=age,"future snapshot")
         metrics["scanAgeHours"]=round(age,1)
-        if age>96:issue("scan_stale","critical","Scanner older than 96 hours (weekend-safe threshold)")
-        elif age>30 and now.weekday()<5 and now.weekday()!=0:issue("scan_stale","warning","Scanner older than 30 hours on trading weekday")
+        if age>96:issue("scan_stale","critical","Scanner older than 96 hours, including weekend observations")
+        elif now.weekday()<5 and 8<=now.hour<=19 and age>3:
+            issue("market_scan_overdue","warning","No successful scanner snapshot within 3 hours during weekday scan coverage")
+        elif now.weekday()>=5 and 17<=now.hour<=20 and age>7:
+            issue("weekend_scan_overdue","warning","Expected weekend refresh has not published within 7 hours")
+        elif age>30 and now.weekday()<5 and now.weekday()!=0:
+            issue("scan_stale","warning","Scanner older than 30 hours on trading weekday")
         require(len(d["companies"])>=139,"scanner listing count shrank")
     data("signals","data/signals.json",signals)
     def health(d):
         metrics["priceFreshness"]=d["priceFreshness"]["status"]
+        eq=d["priceFreshness"].get("equities") or {}
+        metrics["sessionComparable"]=eq.get("comparable")
+        metrics["sessionUnconfirmed"]=eq.get("unconfirmed")
         if d["priceFreshness"]["status"]!="coverage_ok":issue("session_coverage","warning","Completed-session comparison coverage degraded; dated prices can still be present")
     data("source_health","data/source-health.json",health)
     def sec(d):

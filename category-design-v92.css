@@ -1,0 +1,95 @@
+/* V92 shared Nordl design system, intentionally different treatments by category.
+   Styling only: no fictitious graphs, market points, media, numbers or data requests. */
+body.sw-shell-v47[data-page]:not([data-page=index]){
+ --sw92-accent:var(--sw-mint);--sw92-accent-rgb:76,226,181;
+}
+body.sw-shell-v47[data-page=stocks]{--sw92-accent:#54ddb0;--sw92-accent-rgb:84,221,176}
+body.sw-shell-v47[data-page=terminal]{--sw92-accent:#4ed6c7;--sw92-accent-rgb:78,214,199}
+body.sw-shell-v47[data-page=news]{--sw92-accent:#8eb8f3;--sw92-accent-rgb:142,184,243}
+body.sw-shell-v47[data-page=shipping]{--sw92-accent:#6cc9e8;--sw92-accent-rgb:108,201,232}
+body.sw-shell-v47[data-page=commodities]{--sw92-accent:#e7bf7d;--sw92-accent-rgb:231,191,125}
+body.sw-shell-v47[data-page=spreads]{--sw92-accent:#aea5f3;--sw92-accent-rgb:174,165,243}
+body.sw-shell-v47[data-page=compare]{--sw92-accent:#88d6ca;--sw92-accent-rgb:136,214,202}
+body.sw-shell-v47[data-page=calendar]{--sw92-accent:#dba6e7;--sw92-accent-rgb:219,166,231}
+body.sw-shell-v47[data-page=shorts]{--sw92-accent:#d1b69d;--sw92-accent-rgb:209,182,157}
+body.sw-shell-v47[data-page=health]{--sw92-accent:#82c4f0;--sw92-accent-rgb:130,196,240}
+body.sw-shell-v47[data-page]:not([data-page=index]) .sw-content{
+ min-width:0;padding-inline:clamp(14px,2vw,30px);padding-bottom:44px;
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) .sw-page-head{
+ position:relative;isolation:isolate;overflow:hidden;
+ border:1px solid rgba(var(--sw92-accent-rgb),.32);
+ border-radius:15px;padding:clamp(18px,2vw,28px);margin-bottom:17px;
+ background:linear-gradient(120deg,rgba(var(--sw92-accent-rgb),.16),rgba(var(--sw92-accent-rgb),.04) 60%,transparent),var(--sw-surface);
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) .sw-page-head:after{
+ content:"";position:absolute;z-index:-1;pointer-events:none;
+ width:240px;height:240px;right:-75px;top:-140px;border-radius:50%;
+ border:1px solid rgba(var(--sw92-accent-rgb),.22);
+ box-shadow:0 0 0 28px rgba(var(--sw92-accent-rgb),.035),0 0 0 58px rgba(var(--sw92-accent-rgb),.02);
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) .sw-eyebrow{
+ font-size:11px;letter-spacing:.11em;color:var(--sw92-accent);font-weight:750;
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) .sw-page-head h1{
+ margin:9px 0;font-size:clamp(28px,2.7vw,41px);
+ letter-spacing:-.042em;line-height:1.18;
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) .sw-subtitle{
+ max-width:74ch;color:var(--sw-muted);line-height:1.65;
+ font-size:clamp(13px,1.05vw,15px);
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) :is(.sw-panel,.panel,.sw-card){
+ border-radius:12px;
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) :is(a,button,input,select,summary):focus-visible{
+ outline:3px solid var(--sw92-accent);outline-offset:3px;
+}
+body.sw-shell-v47[data-page]:not([data-page=index]) :is(.sw-stat-num,.sw-quant-value){
+ font-variant-numeric:tabular-nums;
+}
+body.sw-shell-v47[data-page=news] :is(.news-item,.sw-brief){
+ border-left:2px solid transparent;transition:border-color .15s ease,background-color .15s ease;
+}
+body.sw-shell-v47[data-page=news] :is(.news-item,.sw-brief):hover{
+ border-left-color:var(--sw92-accent);background:rgba(142,184,243,.06);
+}
+body.sw-shell-v47[data-page=news] .news-item-title{font-size:clamp(14px,1.1vw,17px);line-height:1.5}
+body.sw-shell-v47[data-page=shipping] .sw-page-head{
+ background:linear-gradient(120deg,rgba(36,129,166,.2),transparent 75%),var(--sw-surface);
+}
+body.sw-shell-v47[data-page=commodities] .sw-page-head{
+ background:linear-gradient(120deg,rgba(169,114,39,.2),transparent 75%),var(--sw-surface);
+}
+body.sw-shell-v47[data-page=spreads] .sw-page-head{
+ background:linear-gradient(120deg,rgba(111,103,179,.2),transparent 75%),var(--sw-surface);
+}
+body.sw-shell-v47[data-page=health] .sw-page-head{
+ background:linear-gradient(120deg,rgba(48,131,177,.19),transparent 75%),var(--sw-surface);
+}
+body.sw-shell-v47[data-page=terminal] .sw-content{
+ padding-inline:clamp(10px,1.4vw,23px);
+}
+body.sw-shell-v47[data-page=terminal] .sw49-workbench{
+ border:1px solid rgba(78,214,199,.27);border-radius:12px;
+}
+body.sw-shell-v47[data-page=spreads] :is(.tablewrap,.sw-tablewrap),
+body.sw-shell-v47[data-page=compare] :is(.tablewrap,.sw-tablewrap){
+ max-width:100%;overflow-x:auto;border-radius:12px;
+}
+body.sw-shell-v47[data-page=health] #marketCoverage{overflow-wrap:anywhere}
+@media(max-width:740px){
+ body.sw-shell-v47[data-page]:not([data-page=index]) .sw-page-head{
+  padding:16px;border-radius:12px;margin-bottom:12px;
+ }
+ body.sw-shell-v47[data-page]:not([data-page=index]) .sw-page-head:after{
+  width:160px;height:160px;right:-70px;top:-70px;
+ }
+ body.sw-shell-v47[data-page]:not([data-page=index]) .sw-content{padding-inline:12px}
+ body.sw-shell-v47[data-page]:not([data-page=index]) .sw-page-head h1{
+  font-size:clamp(25px,6.7vw,33px);
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body.sw-shell-v47[data-page=news] :is(.news-item,.sw-brief){transition:none}
+}

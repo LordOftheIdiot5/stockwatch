@@ -15,13 +15,16 @@ def main():
      page.goto(f"http://127.0.0.1:{server.server_port}/index.html")
      page.locator("#workspaceHeatmap .sw-heat-cell").first.wait_for(timeout=25000)
      assert "Market overview" in page.locator(".sw-overview-head").inner_text()
-     assert page.locator(".sw-ws-heatmap").bounding_box()["y"] < page.locator("#overviewEconomy").bounding_box()["y"]
+     # V92: source-backed history now sits above the heatmap, not in hidden
+     # disclosure content; additional economic context remains expandable.
+     assert page.locator(".sw92-focus-grid").count()==1
+     assert page.locator(".sw92-focus-chart").bounding_box()["y"] < page.locator(".sw-ws-heatmap").bounding_box()["y"]
      assert page.locator("#overviewEconomy").get_attribute("open") is None
-     assert page.locator("#overviewMacroSeries").count()==0
-     page.locator("#overviewEconomy > summary").click()
      page.locator("#overviewMacroSeries").wait_for(timeout=25000)
      assert page.locator("#overviewMacroPlot svg").count()==1
+     page.locator("#overviewEconomy > summary").click()
      assert page.locator(".sw-economic-card").count()>=6
+     assert page.locator(".sw92-quick-tools a").count()==5
      assert page.locator(".sw-overview-status").count()==1
      page.locator("#overviewMacroSeries").select_option("fred:DGS10")
      page.locator("#overviewMacroRange").select_option("365")

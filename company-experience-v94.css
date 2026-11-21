@@ -1,0 +1,324 @@
+/* V94 — source-first company research; approved Nordl design. No new prices. */
+body[data-page=company]{
+ --sw94-accent:#52ddc1;
+ --sw94-border:rgba(107,159,182,.34);
+}
+body[data-page=company] .sw-content{
+ max-width:none;min-width:0;
+ padding:clamp(15px,1.6vw,30px) clamp(12px,1.8vw,34px) 56px;
+}
+body[data-page=company] .sw-page-head{
+ margin-bottom:14px;
+ border:1px solid rgba(82,221,193,.23);
+ border-radius:15px;
+ padding:clamp(17px,1.7vw,27px);
+ background:linear-gradient(112deg,rgba(23,125,131,.13),transparent 69%),var(--sw-surface);
+}
+body[data-page=company] .sw-page-head h1{
+ font-size:clamp(24px,2vw,33px);
+ line-height:1.22;letter-spacing:-.04em;
+}
+body[data-page=company] .sw-page-head .sw-subtitle{
+ font-size:13px;line-height:1.6;max-width:78ch;
+}
+body[data-page=company] .sw-company-research{
+ overflow:visible;
+ border-radius:15px;
+ border-color:var(--sw94-border);
+ background:var(--sw-surface);
+}
+body[data-page=company] .sw-company-banner{
+ display:grid;
+ grid-template-columns:auto minmax(0,1fr) minmax(200px,.43fr);
+ gap:20px;
+ align-items:center;
+ margin:0;
+ padding:clamp(20px,2.3vw,36px);
+ border-bottom:1px solid var(--sw94-border);
+ border-radius:15px 15px 0 0;
+ background:radial-gradient(ellipse at 84% 12%,rgba(49,205,183,.16),transparent 49%),
+ linear-gradient(110deg,rgba(16,80,102,.19),transparent 72%),var(--sw-surface);
+}
+body[data-page=company] .sw-company-emblem{
+ height:76px;width:76px;border-radius:17px;
+ font-size:26px;font-weight:800;
+ border:1px solid rgba(82,221,193,.38);
+ background:rgba(48,185,166,.12);color:var(--sw94-accent);
+}
+body[data-page=company] .sw-company-heading{min-width:0}
+body[data-page=company] .sw-company-heading .sw-ws-eyebrow{
+ font-size:12px;line-height:1.5;color:var(--sw94-accent);letter-spacing:.075em;
+}
+body[data-page=company] .sw-company-heading h2{
+ font-size:clamp(28px,2.6vw,42px);line-height:1.17;letter-spacing:-.04em;
+}
+body[data-page=company] .sw-company-heading p{font-size:14px;line-height:1.5}
+body[data-page=company] .sw-company-last{
+ display:flex;align-items:flex-end;flex-direction:column;gap:6px;
+ min-width:0;margin:0;padding:14px 17px;
+ border:1px solid var(--sw94-border);
+ border-radius:12px;
+ background:rgba(10,27,45,.21);
+ text-align:right;
+}
+body[data-page=company] .sw-company-last strong{
+ font-size:clamp(25px,2vw,34px);line-height:1.2;
+ overflow-wrap:anywhere;
+}
+body[data-page=company] .sw-company-last small{
+ font-size:12px;line-height:1.5;color:var(--sw-muted);
+}
+body[data-page=company] .sw-company-last b{
+ font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;
+}
+body[data-page=company] .sw50-coverage{
+ display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+ gap:1px;border-bottom:1px solid var(--sw94-border);
+ background:var(--sw94-border);
+}
+body[data-page=company] .sw50-coverage>div{
+ min-width:0;padding:15px;
+ background:var(--sw-surface);
+}
+body[data-page=company] .sw50-coverage small,
+body[data-page=company] .sw50-coverage span{font-size:12px;line-height:1.55}
+body[data-page=company] .sw50-coverage strong{font-size:15px;line-height:1.4}
+body[data-page=company] .sw-company-photo{
+ margin:16px 20px 0;max-width:100%;overflow:hidden;
+ border:1px solid var(--sw94-border);border-radius:12px;
+}
+body[data-page=company] .sw-company-photo img{
+ max-height:270px;width:100%;object-fit:contain;
+ background:var(--sw-card);
+}
+body[data-page=company] .sw-company-photo figcaption{padding:10px 14px;font-size:12px;line-height:1.6}
+body[data-page=company] .sw-company-links{
+ display:flex;gap:10px;padding:16px 20px;flex-wrap:wrap;
+ border-bottom-color:var(--sw94-border);
+}
+body[data-page=company] .sw-company-links a{
+ min-height:41px;box-sizing:border-box;
+ display:inline-flex;align-items:center;
+ font-size:13px;line-height:1.4;
+}
+body[data-page=company] .sw-company-tabs{
+ display:flex;flex-wrap:wrap;gap:8px;
+ position:sticky;top:0;z-index:4;
+ padding:12px 17px;
+ background:var(--sw-surface);
+ border-bottom:1px solid var(--sw94-border);
+ box-shadow:0 8px 23px rgba(1,12,25,.11);
+}
+body[data-page=company] .sw-company-tabs button{
+ min-height:41px;padding:9px 13px;
+ font-size:13px;line-height:1.4;
+ border-radius:9px;
+}
+body[data-page=company] .sw-company-tabs button.sw94-current{
+ color:var(--sw94-accent);
+ border-color:rgba(82,221,193,.55);
+ background:rgba(48,185,166,.11);
+}
+body[data-page=company] .sw-company-tabs button:focus-visible,
+body[data-page=company] .sw94-research-shortcuts a:focus-visible{
+ outline:3px solid var(--sw94-accent);outline-offset:3px;
+}
+body[data-page=company] .sw-company-research>.sw-panel-pad{
+ min-width:0;padding:clamp(14px,1.6vw,26px);
+}
+body[data-page=company] .sw-company-block{
+ scroll-margin-top:100px;
+ min-width:0;
+ padding:clamp(13px,1.5vw,21px);
+ margin:0 0 18px;
+ border:1px solid var(--sw94-border);
+ border-radius:13px;
+ background:var(--sw-card);
+}
+body[data-page=company] .sw-company-block[data-company-section=chart]{
+ border-color:rgba(82,221,193,.32);
+ background:linear-gradient(145deg,rgba(21,119,113,.1),transparent 55%),var(--sw-card);
+}
+body[data-page=company] .sw94-research-shortcuts{
+ display:flex;gap:9px;flex-wrap:wrap;
+ margin-bottom:15px;
+}
+body[data-page=company] .sw94-research-shortcuts a{
+ display:inline-flex;align-items:center;min-height:38px;
+ padding:7px 11px;border:1px solid var(--sw-edge);
+ border-radius:8px;font-size:12px;
+ color:var(--sw-text);text-decoration:none;
+ background:var(--sw-surface);
+}
+body[data-page=company] .sw94-research-shortcuts a:hover{
+ border-color:var(--sw94-accent);color:var(--sw94-accent);
+}
+body[data-page=company] .sw-company-block .sw-section-row{
+ margin:9px 0 13px;gap:9px;flex-wrap:wrap;
+}
+body[data-page=company] .sw-company-block .sw-section-row h2{
+ font-size:clamp(18px,1.55vw,23px);
+ line-height:1.3;
+}
+body[data-page=company] .sw-company-block .sw-section-row small{
+ font-size:12px;line-height:1.5;
+}
+body[data-page=company] .sw-history-source{
+ display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;
+ border:1px solid rgba(82,221,193,.23);
+ background:rgba(33,130,128,.06);
+ border-radius:9px;padding:12px 13px;
+ font-size:12px;line-height:1.6;
+}
+body[data-page=company] .sw-history-source strong{
+ font-size:13px;color:var(--sw-text);
+}
+body[data-page=company] #individualChart{
+ min-width:0;margin-top:16px;
+ background:var(--sw-surface);
+ border:1px solid var(--sw94-border);
+ border-radius:12px;padding:clamp(10px,1vw,18px);
+}
+body[data-page=company] #individualChart .sw49-workbench{
+ grid-template-columns:46px minmax(0,1fr);
+ border-radius:10px;min-width:0;overflow:hidden;
+}
+body[data-page=company] #individualChart .sw49-toolbar{
+ gap:8px;font-size:13px;padding:11px 0;
+}
+body[data-page=company] #individualChart .sw49-toolbar strong{
+ flex:1 1 100%;font-size:15px;line-height:1.4;
+}
+body[data-page=company] #individualChart :is(.sw49-toolbar,.sw49-draw,.sw-chart-tools) button{
+ min-height:38px;min-width:38px;
+ border-radius:8px;font-size:13px;font-weight:600;
+ padding:8px 11px;
+}
+body[data-page=company] #individualChart .sw49-draw{gap:6px;padding:5px;align-items:center}
+body[data-page=company] #individualChart .sw49-draw button{width:38px;padding:7px}
+body[data-page=company] #individualChart .sw49-plot svg text{
+ font-size:13px;fill:var(--sw-text);font-variant-numeric:tabular-nums;
+}
+body[data-page=company] #individualChart .sw49-foot{
+ font-size:12px;line-height:1.6;gap:10px;flex-wrap:wrap;
+}
+body[data-page=company] #individualChart :is(button,input,svg):focus-visible{
+ outline:3px solid var(--sw94-accent);outline-offset:3px;
+}
+body[data-page=company] .sw-stat-mini{
+ grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;
+}
+body[data-page=company] .sw-stat-mini>div{
+ border:1px solid var(--sw94-border);border-radius:10px;
+ background:var(--sw-surface);padding:13px;
+}
+body[data-page=company] .sw-stat-mini small{font-size:12px;line-height:1.45}
+body[data-page=company] .sw-stat-mini b{font-size:clamp(17px,1.35vw,22px)}
+body[data-page=company] .sw50-ratios{
+ grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:11px;
+}
+body[data-page=company] .sw50-ratios>div{
+ border:1px solid var(--sw94-border);border-radius:10px;
+ background:var(--sw-surface);padding:14px;
+}
+body[data-page=company] .sw50-ratios small{font-size:12px;line-height:1.5}
+body[data-page=company] .sw50-ratios strong{
+ font-size:clamp(21px,1.8vw,29px);font-variant-numeric:tabular-nums;
+}
+body[data-page=company] .sw50-statement{min-width:390px}
+body[data-page=company] .sw-company-peers{gap:12px}
+body[data-page=company] .sw-company-peers .sw-peer{
+ min-width:0;padding:13px;border:1px solid var(--sw94-border);
+ border-radius:11px;background:var(--sw-surface);
+}
+body[data-page=company] .sw50-filing{
+ padding:15px;border:1px solid var(--sw94-border);
+ border-radius:10px;background:var(--sw-surface);
+}
+body[data-page=company] #companyDriverMap{
+ min-width:0;scroll-margin-top:100px;
+ border:1px solid var(--sw94-border);
+ border-radius:13px;margin:0 0 18px;
+ background:var(--sw-surface);
+ overflow:hidden;
+}
+body[data-page=company] #companyDriverMap .sw88-map{max-width:100%}
+body[data-page=company] .sw94-reference-profile .sw-identity-grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;
+ margin:18px 0;
+}
+body[data-page=company] .sw94-reference-profile .sw-identity-grid>div{
+ border:1px solid var(--sw94-border);border-radius:11px;
+ padding:13px;background:var(--sw-card);
+}
+@media(max-width:1100px){
+ body[data-page=company] .sw-company-banner{
+  grid-template-columns:auto minmax(0,1fr);
+ }
+ body[data-page=company] .sw-company-last{
+  grid-column:1/-1;align-items:flex-start;text-align:left;
+ }
+ body[data-page=company] .sw50-coverage{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:720px){
+ body[data-page=company] .sw-content{padding-inline:12px}
+ body[data-page=company] .sw-page-head{padding:16px}
+ body[data-page=company] .sw-company-banner{grid-template-columns:auto minmax(0,1fr);gap:12px;padding:17px}
+ body[data-page=company] .sw-company-emblem{width:55px;height:55px;font-size:19px}
+ body[data-page=company] .sw-company-heading h2{font-size:clamp(23px,6vw,30px)}
+ body[data-page=company] .sw-company-last{grid-column:1/-1;padding:12px}
+ body[data-page=company] .sw50-coverage{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page=company] .sw-company-tabs{gap:6px;padding:9px;top:0}
+ body[data-page=company] .sw-company-tabs button{min-height:44px;font-size:12px;padding:8px 10px}
+ body[data-page=company] .sw-company-research>.sw-panel-pad{padding:12px}
+ body[data-page=company] .sw-company-block{padding:12px}
+ body[data-page=company] .sw94-research-shortcuts a{min-height:44px}
+ body[data-page=company] .sw-stat-mini{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page=company] #individualChart{padding:10px}
+ body[data-page=company] #individualChart .sw49-workbench{grid-template-columns:48px minmax(0,1fr)}
+ body[data-page=company] #individualChart :is(.sw49-toolbar,.sw49-draw,.sw-chart-tools) button{
+  min-height:44px;min-width:44px;
+ }
+ body[data-page=company] #individualChart .sw49-draw button{width:44px}
+}
+@media(max-width:390px){
+ body[data-page=company] .sw-company-heading{min-width:0}
+ body[data-page=company] .sw-stat-mini{grid-template-columns:minmax(0,1fr)}
+ body[data-page=company] .sw50-coverage{grid-template-columns:minmax(0,1fr)}
+ body[data-page=company] .sw50-statement{min-width:340px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page=company] .sw-company-tabs button{transition:none}
+}
+
+/* Avoid two large company-name banners above the actual research profile. */
+body[data-page=company].sw94-profile-ready .sw-page-head{
+ padding:5px 2px 11px;margin-bottom:10px;
+ border:0;border-radius:0;background:transparent;
+ box-shadow:none;
+}
+body[data-page=company].sw94-profile-ready .sw-page-head .sw-eyebrow{
+ font-size:10px;letter-spacing:.09em;
+}
+body[data-page=company].sw94-profile-ready .sw-page-head h1{
+ font-size:14px;line-height:1.25;letter-spacing:0;
+ margin:3px 0 4px;color:var(--sw-muted);font-weight:700;
+}
+body[data-page=company].sw94-profile-ready .sw-page-head .sw-subtitle{
+ font-size:11px;line-height:1.4;margin:0;color:var(--sw-dim);
+}
+
+/* AA-oriented light-theme contrast for teal evidence and active navigation. */
+body[data-page=company][data-theme=light]{
+ --sw94-accent:#006a5e;
+ --sw94-border:rgba(57,103,124,.34);
+}
+body[data-page=company][data-theme=light] .sw-company-emblem{
+ border-color:rgba(0,106,94,.45);
+ background:rgba(0,106,94,.08);
+}
+body[data-page=company][data-theme=light] .sw-company-tabs button.sw94-current{
+ color:var(--sw94-accent);
+ border-color:rgba(0,106,94,.59);
+ background:rgba(0,106,94,.09);
+}
