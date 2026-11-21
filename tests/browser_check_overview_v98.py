@@ -34,7 +34,8 @@ def main():
      index=page.locator("#globalMarketPulse")
      if width<=700:
       assert chart.bounding_box()["y"]<index.bounding_box()["y"]
-      assert page.locator(".sw96-source-status").bounding_box()["height"]<175
+      status_height=page.locator(".sw96-source-status").bounding_box()["height"]
+      assert status_height<175,{"viewport":width,"statusHeight":status_height}
      else:
       assert index.bounding_box()["y"]<chart.bounding_box()["y"]
      assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+2")
