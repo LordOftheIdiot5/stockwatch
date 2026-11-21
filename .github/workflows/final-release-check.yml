@@ -146,6 +146,7 @@ jobs:
           node --check v4.js
           node --check global-market-pulse.js
           node --check overview-structure-v110d.js
+          node --check overview-geo-v110e.js
           python -m unittest discover -s tests -p "test_overview_v89j.py" -v
           node --check sec-financials-v89g.js
           node --check terminal.js
