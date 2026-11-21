@@ -172,3 +172,37 @@ body[data-page=index] .sw116c-overview-grid { min-width:0; }
     margin:3px 0 0;
   }
 }
+
+/* Release acceptance: keep the compact middle stack shorter than the chart
+   without hiding any source values. Legacy default 20px metric bottom margin
+   and generous breadth margins were wasting more than 40px per dashboard. */
+@media (min-width:1320px) {
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary {
+    gap:5px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-metrics {
+    margin:3px 0 0;
+    flex:none;
+    row-gap:5px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat {
+    padding:6px 8px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-label {
+    line-height:1.25;
+    letter-spacing:.065em;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-stat-num {
+    margin:3px 0 2px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth-values {
+    margin:5px 0;
+    gap:7px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth-bar {
+    margin-bottom:4px;
+  }
+  body[data-page=index] .sw116c-overview-grid .sw92-focus-summary .sw-ws-breadth small {
+    line-height:1.25;
+  }
+}
