@@ -24,7 +24,7 @@ class OverviewUXV90Tests(unittest.TestCase):
         self.assertIn("@media(max-width:390px)",self.css)
         self.assertNotIn("position:absolute",self.css)
     def test_source_modules_not_hidden_by_css(self):
-        for marker in ("#workspaceHeatmap",".sw-index-grid",".sw87-market-grid",".sw-overview-news",
+        for marker in (".sw-heat-cell",".sw-index-grid",".sw87-market-grid",".sw-overview-news",
                        ".sw-nav-label",".sw-link",".sw-index-spark"):
             self.assertIn(marker,self.css)
         self.assertNotIn("display:none",self.css)
