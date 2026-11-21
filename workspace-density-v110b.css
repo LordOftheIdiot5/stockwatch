@@ -132,3 +132,40 @@ body[data-page=terminal]:not(.sw110b-spacious) .sw52-layout .sw-terminal-scroll{
  body[data-page=company]:not(.sw110b-spacious) .sw-company-tabs{padding:6px 9px}
  body[data-page=company]:not(.sw110b-spacious) .sw-company-research>.sw-panel-pad{padding:9px 11px}
 }
+
+
+/* V110b structural parity: chart | market breadth | latest filings, not a
+   vertically stacked rail that forces the heatmap below the first fold. */
+@media(min-width:1320px){
+ body[data-page=index] .sw98-primary{
+   grid-template-columns:minmax(0,1.55fr) minmax(235px,.7fr) minmax(265px,.83fr);
+   gap:10px;align-items:start;
+ }
+ body[data-page=index] .sw98-primary .sw98-intelligence-rail{display:contents}
+ body[data-page=index] .sw98-primary .sw92-focus-summary{
+   min-width:0;margin:0;align-self:start;padding:8px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary>.sw-section-row{gap:4px}
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-section-row h2{font-size:16px}
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-section-row small{font-size:10px}
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-ws-metrics{
+   display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-stat{
+   min-width:0;min-height:53px;padding:8px;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-ws-breadth{
+   grid-column:1/-1;
+ }
+ body[data-page=index] .sw98-primary .sw92-focus-summary .sw-stat-num{font-size:22px}
+ body[data-page=index] .sw98-primary .sw-overview-news{
+   margin:0;min-width:0;min-height:270px;max-height:375px;
+   overflow:auto;overscroll-behavior:contain;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news .sw-brief{
+   padding:9px 11px;
+ }
+ body[data-page=index] .sw98-primary .sw-overview-news .sw-brief h4{
+   font-size:12.5px;line-height:1.35;
+ }
+}

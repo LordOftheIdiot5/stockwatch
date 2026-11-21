@@ -24,7 +24,15 @@ def main():
      assert chart.count()==rail.count()==news.count()==heat.count()==1
      assert chart.bounding_box()["y"]<heat.bounding_box()["y"]
      assert rail.bounding_box()["y"]<heat.bounding_box()["y"]
-     if width>=1150:
+     if width>=1320:
+      # V110b flattens the old rail into real three-column chart/breadth/news.
+      breadth=page.locator(".sw98-primary .sw92-focus-summary")
+      assert abs(chart.bounding_box()["y"]-breadth.bounding_box()["y"])<=6
+      assert abs(chart.bounding_box()["y"]-news.bounding_box()["y"])<=6
+      assert chart.bounding_box()["width"]>breadth.bounding_box()["width"]
+      assert page.locator(".sw98-primary .sw98-intelligence-rail").evaluate(
+       "(x)=>getComputedStyle(x).display")=="contents"
+     elif width>=1150:
       assert abs(chart.bounding_box()["y"]-rail.bounding_box()["y"])<=4
       assert chart.bounding_box()["width"]>rail.bounding_box()["width"]
      assert page.locator("#overviewMacroSeries").input_value()=="fx:EUR/NOK"

@@ -58,8 +58,15 @@ def main():
       assert abs(heat.bounding_box()['y']-companion.bounding_box()['y'])<6
      else:
       assert companion.bounding_box()['y']>=heat.bounding_box()['y']
-     if width>=1200:
+     if width>=1320:
+      breadth=page.locator('.sw98-primary .sw92-focus-summary')
+      news=page.locator('.sw98-primary .sw-overview-news')
+      assert abs(chart.bounding_box()['y']-breadth.bounding_box()['y'])<6
+      assert abs(chart.bounding_box()['y']-news.bounding_box()['y'])<6
+      assert chart.bounding_box()['width']>breadth.bounding_box()['width']
+     elif width>=1200:
       assert chart.bounding_box()['width']>rail.bounding_box()['width']
+     if width>=1200:
       assert chart.bounding_box()['height']<630
      assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'),width
      assert not errors,errors

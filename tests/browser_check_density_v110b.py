@@ -33,6 +33,9 @@ def main():
        assert watch.bounding_box()['y'] < heat.bounding_box()['y']+280
        assert page.locator('.sw110-heat-companion').evaluate(
          '(x)=>getComputedStyle(x).display')=='contents'
+       assert page.locator('.sw98-intelligence-rail').evaluate(
+         '(x)=>getComputedStyle(x).display')=='contents'
+       assert heat.bounding_box()['y']<860,heat.bounding_box()
       else:
        assert watch.bounding_box()['y']>=heat.bounding_box()['y']
      elif route=='company':
