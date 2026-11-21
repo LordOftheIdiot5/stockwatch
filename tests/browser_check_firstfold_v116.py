@@ -72,6 +72,7 @@ def main():
         out=ROOT/'workspace-previews';out.mkdir(exist_ok=True)
         page.screenshot(path=str(out/f'v116-overview-firstfold-{width}.png'),
           animations='disabled')
+       print(json.dumps({'v116cLayoutBoxes':width,'theme':theme,'panels':box}),flush=True)
        assert box['heat']['y']<=threshold,(width,theme,'heatmap begins too far beneath unified market overview',box['heat']['y'],threshold)
        svg=page.locator('#overviewMacroPlot svg')
        sz=svg.bounding_box()
