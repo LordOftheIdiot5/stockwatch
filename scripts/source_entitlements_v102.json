@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-21",
+  "scope": "Candidate European equity EOD and delayed-trade sources; permission is denied unless explicitly approved after provider-specific review.",
+  "sourceNotes": "Public policy findings are not subscriptions, contracts or grant of rights. No raw quotes, contracts, keys or individual observations in this file.",
+  "sources": [
+    {
+      "id": "cboe_europe_eod",
+      "provider": "Cboe Europe",
+      "product": "Europe equities end-of-day OHLC",
+      "venues": [
+        "Cboe Europe BXE",
+        "Cboe Europe CXE"
+      ],
+      "observationKind": "alternative_venue_eod_candidate",
+      "sourceUrl": "https://www.cboe.com/markets/eu/equities/transparency-data/",
+      "policyUrl": "https://cdn.cboe.com/resources/participant_resources/Cboe_Europe_Data_Policy_August_2026.pdf",
+      "policyFinding": "Section 6 exempts distribution of end-of-day data such as daily OHLC from data agreement and fees. The public delayed trade files are a distinct product; exact EOD feed, provenance, retention and semantic fit are not established.",
+      "reviewStatus": "policy_opportunity_not_product_verified",
+      "reviewedAt": "2026-11-21",
+      "identity": {
+        "isinMapped": false,
+        "micMapped": false,
+        "currencyVerified": false,
+        "sessionCloseVerified": false
+      },
+      "permissions": {
+        "productionCollection": false,
+        "privateRetention": false,
+        "publicDisplay": false,
+        "commercialExport": false
+      },
+      "authorization": null
+    },
+    {
+      "id": "cboe_europe_delayed",
+      "provider": "Cboe Europe",
+      "product": "Delayed transparency trades",
+      "venues": [
+        "Cboe Europe BXE",
+        "Cboe Europe CXE"
+      ],
+      "observationKind": "alternative_venue_trade",
+      "sourceUrl": "https://www.cboe.com/markets/eu/equities/transparency-data/",
+      "policyUrl": "https://cdn.cboe.com/resources/participant_resources/Cboe_Europe_Data_Policy_August_2026.pdf",
+      "policyFinding": "External delayed or historical distribution has a separate data-agreement rule. Accessible minute or daily transparency files are not proof of an official primary-venue close or public reuse entitlement.",
+      "reviewStatus": "terms_and_trade_conditions_pending",
+      "reviewedAt": "2026-11-21",
+      "identity": {
+        "isinMapped": false,
+        "micMapped": false,
+        "currencyVerified": false,
+        "sessionCloseVerified": false
+      },
+      "permissions": {
+        "productionCollection": false,
+        "privateRetention": false,
+        "publicDisplay": false,
+        "commercialExport": false
+      },
+      "authorization": null
+    },
+    {
+      "id": "nasdaq_nordic_eod",
+      "provider": "Nasdaq Nordic",
+      "product": "Nordic Equity End of Day reports",
+      "venues": [
+        "Stockholm",
+        "Copenhagen",
+        "Helsinki",
+        "Iceland"
+      ],
+      "observationKind": "primary_venue_eod_candidate",
+      "sourceUrl": "https://www.nasdaq.com/products/data/nordic-baltic/nordic-end-of-day-reports",
+      "policyUrl": "https://www.nasdaq.com/products/data/nordic-baltic/nordic-end-of-day-reports",
+      "policyFinding": "The Nordic End of Day licence describes redistribution of report contents but not complete source files. Product purchase, access, archive, display and export scope have not been confirmed for Nordl.",
+      "reviewStatus": "licence_and_delivery_pending",
+      "reviewedAt": "2026-11-21",
+      "identity": {
+        "isinMapped": false,
+        "micMapped": false,
+        "currencyVerified": false,
+        "sessionCloseVerified": false
+      },
+      "permissions": {
+        "productionCollection": false,
+        "privateRetention": false,
+        "publicDisplay": false,
+        "commercialExport": false
+      },
+      "authorization": null
+    },
+    {
+      "id": "euronext_trades",
+      "provider": "Euronext",
+      "product": "Delayed post-trade equities reports",
+      "venues": [
+        "Oslo",
+        "Paris",
+        "Amsterdam",
+        "Brussels",
+        "Milan",
+        "Dublin",
+        "Lisbon"
+      ],
+      "observationKind": "primary_venue_trade_not_official_close",
+      "sourceUrl": "https://marketdata.euronext.com/data-reporting-service/trades-file",
+      "policyUrl": "https://www.euronext.com/en/data/real-time-data/pricing-specs-agreements/market-data-pricing-policies",
+      "policyFinding": "Delayed trade files can be accessed subject to site terms; distribution for commercial benefit requires an agreement. Trade data must not be promoted to official close without session, correction and auction checks.",
+      "reviewStatus": "commercial_distribution_and_close_pending",
+      "reviewedAt": "2026-11-21",
+      "identity": {
+        "isinMapped": false,
+        "micMapped": false,
+        "currencyVerified": false,
+        "sessionCloseVerified": false
+      },
+      "permissions": {
+        "productionCollection": false,
+        "privateRetention": false,
+        "publicDisplay": false,
+        "commercialExport": false
+      },
+      "authorization": null
+    },
+    {
+      "id": "euronext_official_eod",
+      "provider": "Euronext",
+      "product": "Official cash equity end-of-day close (product to confirm)",
+      "venues": [
+        "Oslo",
+        "Paris",
+        "Amsterdam",
+        "Brussels",
+        "Milan",
+        "Dublin",
+        "Lisbon"
+      ],
+      "observationKind": "primary_venue_eod_candidate",
+      "sourceUrl": "https://www.euronext.com/en/products-services/euronext-real-time-data",
+      "policyUrl": "https://www.euronext.com/en/data/real-time-data/pricing-specs-agreements/market-data-pricing-policies",
+      "policyFinding": "No subscribed official-close delivery or permission for the intended web-display, archive and commercial export use was confirmed in this audit.",
+      "reviewStatus": "product_contract_delivery_pending",
+      "reviewedAt": "2026-11-21",
+      "identity": {
+        "isinMapped": false,
+        "micMapped": false,
+        "currencyVerified": false,
+        "sessionCloseVerified": false
+      },
+      "permissions": {
+        "productionCollection": false,
+        "privateRetention": false,
+        "publicDisplay": false,
+        "commercialExport": false
+      },
+      "authorization": null
+    },
+    {
+      "id": "xetra_delayed",
+      "provider": "Deutsche Börse",
+      "product": "Xetra delayed pre/post-trade transparency",
+      "venues": [
+        "XETRA"
+      ],
+      "observationKind": "primary_venue_trade_not_official_close",
+      "sourceUrl": "https://www.mds.deutsche-boerse.com/mds-en/real-time-data/Delayed-data",
+      "policyUrl": "https://www.mds.deutsche-boerse.com/mds-en/real-time-data/Delayed-data",
+      "policyFinding": "15-minute delayed minute files are published with limited retention. This establishes a discovery route, not a reviewed commercial website archive or daily official closing price.",
+      "reviewStatus": "reuse_and_close_pending",
+      "reviewedAt": "2026-11-21",
+      "identity": {
+        "isinMapped": false,
+        "micMapped": false,
+        "currencyVerified": false,
+        "sessionCloseVerified": false
+      },
+      "permissions": {
+        "productionCollection": false,
+        "privateRetention": false,
+        "publicDisplay": false,
+        "commercialExport": false
+      },
+      "authorization": null
+    }
+  ]
+}
