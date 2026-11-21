@@ -569,6 +569,17 @@ jobs:
             workspace-previews/v99-watchlist-audit.json
           if-no-files-found: ignore
 
+      - name: V100 official Nordic notices browser checks
+        run: python tests/browser_check_nasdaq_notices_v100.py
+
+      - name: Upload V100 original-source screenshots
+        if: always() && startsWith(github.head_ref, 'v100-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v100-official-notices
+          path: workspace-previews/v100-notices-*.png
+          if-no-files-found: ignore
+
       - name: Research lab browser checks
         run: python tests/browser_check_research_lab.py
 

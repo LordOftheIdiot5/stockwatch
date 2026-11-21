@@ -1,0 +1,11 @@
+/* V100 independent original-source notices, separate from linked company news. */
+.sw100-notices{margin:12px 0 18px;border:1px solid var(--sw-edge);border-radius:12px;background:var(--sw-surface)}
+.sw100-notices>summary{cursor:pointer;padding:13px 16px;line-height:1.5;font-size:13px}
+.sw100-notices>summary strong{font-size:16px}
+.sw100-notice-context{padding:1px 16px 10px;margin:0;color:var(--sw-muted);font-size:12px;line-height:1.55}
+.sw100-notice-context a{color:var(--sw-mint)}
+#nasdaqNoticeItems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.sw100-notice{padding:11px 16px;border-top:1px solid var(--sw-edge);min-width:0}
+.sw100-notice a{display:block;overflow-wrap:anywhere;font-size:13px;line-height:1.5}
+.sw100-notice small{display:block;color:var(--sw-muted);margin-top:5px;font-size:11px;line-height:1.4}
+@media(max-width:780px){#nasdaqNoticeItems{grid-template-columns:minmax(0,1fr)}}

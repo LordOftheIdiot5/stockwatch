@@ -73,6 +73,10 @@ jobs:
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: python scripts/scan.py
 
+      - name: Collect original Nasdaq Nordic notices (official bounded RSS)
+        continue-on-error: true
+        run: python scripts/nasdaq_nordic_notices.py
+
       - name: Collect SEC filing metadata (daily bounded refresh)
         continue-on-error: true
         env:
