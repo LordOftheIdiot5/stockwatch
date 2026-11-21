@@ -23,3 +23,5 @@
 5. Display source-linked report list, actual (not guessed) annual and quarterly statements, verified future results dates and corrections in company pages; report **coverage per issuer/500 listing IDs** and distinguish original issuer facts from editorial research.
 
 **Never infer document publication date from a link's filename or a year in the menu heading.** A downloadable report is not an automatic licensed public data product.
+
+**Release regression note:** The unrelated V99 saved-watchlist browser test was corrected on `main` in [PR #191](https://github.com/LordOftheIdiot5/stockwatch/pull/191), after it assumed all quotes must say `Last saved` even when newer genuine quotes say `Reported`. The curated metadata workflow retains full release checks and must still pass before merge.
