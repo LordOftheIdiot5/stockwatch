@@ -9,7 +9,9 @@ class Tests(unittest.TestCase):
             prior=m.ROOT
             try:
                 m.ROOT=Path(d)
-                for p in m.PATHS:(m.ROOT/p).write_bytes(("<html>"+p+"</html>").encode())
+                for p in m.PATHS:
+                    (m.ROOT/p).parent.mkdir(parents=True, exist_ok=True)
+                    (m.ROOT/p).write_bytes(("<html>"+p+"</html>").encode())
                 attempts=[]
                 def fetch(p,n):
                     attempts.append((p,n))
@@ -23,7 +25,9 @@ class Tests(unittest.TestCase):
             prior=m.ROOT
             try:
                 m.ROOT=Path(d)
-                for p in m.PATHS:(m.ROOT/p).write_text(p)
+                for p in m.PATHS:
+                    (m.ROOT/p).parent.mkdir(parents=True, exist_ok=True)
+                    (m.ROOT/p).write_text(p)
                 with self.assertRaisesRegex(RuntimeError,"do not match"):
                     m.check(attempts=1,interval=0,fetch=lambda p,n:b"wrong")
             finally:m.ROOT=prior
