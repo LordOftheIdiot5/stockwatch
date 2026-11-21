@@ -4,7 +4,7 @@
 @media (min-width:1320px) {
  body[data-page=index] .sw98-primary {
    align-items:start;
-   margin-block:4px 6px;
+   margin-block:0 3px;
    gap:11px;
  }
  body[data-page=index] .sw98-primary .sw92-focus-chart>.sw-panel {
