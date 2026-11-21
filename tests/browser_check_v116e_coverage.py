@@ -39,7 +39,6 @@ def main():
                             assert page.locator('script[src^="overview-unified-v116c.js"]').count()==1
                             assert 'NOT market returns' in coverage.inner_text()
                             assert 'comparison' in coverage.inner_text()
-                            assert 'Basemap: Natural Earth' in coverage.inner_text() if False else True
                             group=page.locator('.sw110e-world')
                             assert group.locator('.sw110e-map-legend').count()==1
                             details=page.locator('.sw110e-all-venues')
@@ -52,6 +51,7 @@ def main():
                             summary.focus()
                             page.keyboard.press('Enter')
                             assert details.evaluate('(e)=>e.open'),(width,theme,'venue disclosure did not open from keyboard')
+                            assert 'Basemap: Natural Earth' in details.inner_text()
                             if expected: assert details.locator('.sw110d-venue').first.is_visible()
                             summary.focus()
                             page.keyboard.press('Enter')
