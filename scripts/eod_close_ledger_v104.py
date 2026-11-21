@@ -23,8 +23,16 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_BATCH = 5000
 MAX_FILE_BYTES = 4 * 1024 * 1024
 ALLOWED_KINDS = ("primary_official_close", "alternative_venue_eod", "licensed_eod_observation")
-MICS = {"XOSL", "XSTO", "XCSE", "XHEL", "XETR", "XPAR", "XAMS", "XBRU", "XMIL",
+MICS = {"XOSL", "XSTO", "XCSE", "XHEL", "XICE", "XETR", "XPAR", "XAMS", "XBRU", "XMIL",
         "XDUB", "XLIS", "XWBO", "XMAD", "XHKG", "XTAI", "XNYS", "XNAS", "XLON"}
+PROVIDER_VENUE_MIC = {
+    "Oslo": {"XOSL"}, "Stockholm": {"XSTO"}, "Copenhagen": {"XCSE"},
+    "Helsinki": {"XHEL"}, "Iceland": {"XICE"}, "XETRA": {"XETR"},
+    "Paris": {"XPAR"}, "Amsterdam": {"XAMS"}, "Brussels": {"XBRU"},
+    "Milan": {"XMIL"}, "Dublin": {"XDUB"}, "Lisbon": {"XLIS"},
+    "NASDAQ US": {"XNAS"}, "NYSE US": {"XNYS"},
+    # Cboe BXE/CXE alternative venue MIC mappings need independent product verification.
+}
 DML = """
 CREATE TABLE IF NOT EXISTS eod_daily_close (
     listing_id TEXT NOT NULL,
@@ -123,6 +131,9 @@ def validate_bar(item, source_id, mapped, source, now):
             raise ValueError("Unverified security, venue or currency")
     if source["identity"] != {k: True for k in ("isinMapped", "micMapped", "currencyVerified", "sessionCloseVerified")}:
         raise PermissionError("Source identity and session checks not completed")
+    permitted_mics = set().union(*(PROVIDER_VENUE_MIC.get(v, set()) for v in source["venues"]))
+    if not permitted_mics or item["mic"] not in permitted_mics:
+        raise ValueError("Quote venue outside reviewed provider product scope")
     kind = item.get("quoteKind")
     if kind not in ALLOWED_KINDS:
         raise ValueError("Unknown quote kind")
