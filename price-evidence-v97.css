@@ -1,0 +1,11 @@
+.sw-v97-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.sw-v97-summary>div{border:1px solid var(--line,rgba(180,200,220,.2));border-radius:12px;padding:12px;min-width:0}
+.sw-v97-summary span{display:block;font-size:.78rem;opacity:.75}
+.sw-v97-summary strong{display:block;font-size:1.25rem;margin-top:4px;font-variant-numeric:tabular-nums}
+.sw-v97-scroll{width:100%;max-width:100%;overflow-x:auto;margin:12px 0}
+.sw-v97-table{border-collapse:collapse;width:100%;min-width:730px;font-size:.85rem;font-variant-numeric:tabular-nums}
+.sw-v97-table caption{text-align:left;padding-bottom:10px;opacity:.8;font-size:.78rem}
+.sw-v97-table th,.sw-v97-table td{padding:10px 12px;border-bottom:1px solid var(--line,rgba(180,200,220,.2));text-align:right;white-space:nowrap}
+.sw-v97-table th:first-child{text-align:left}
+.sw-v97-table thead th{font-size:.75rem;opacity:.8}
+@media(max-width:680px){.sw-v97-summary{grid-template-columns:1fr}.sw-v97-summary strong{font-size:1.05rem}}
