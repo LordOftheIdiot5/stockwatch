@@ -63,11 +63,12 @@ def main():
                             assert not errors,errors
                             assert page.evaluate(
                                 "document.documentElement.scrollWidth<=innerWidth+2")
-                            # Restore top fold for screenshot comparison.
+                            # V110c focused research preserves the selected tab during scroll.
                             page.evaluate("window.scrollTo(0,0)")
-                            page.wait_for_function("""() => document.querySelector(
-                                '[data-company-tab="chart"]')?.getAttribute(
-                                'aria-current')==='location'""",timeout=10000)
+                            assert tabs.nth(1).get_attribute("aria-current")=="location"
+                            tabs.first.click()
+                            assert tabs.first.get_attribute("aria-current")=="location"
+                            page.evaluate("window.scrollTo(0,0)")
                             page.screenshot(path=str(
                                 out/f"{ticker.replace('.','-')}-{viewport}-{theme}.png"),
                                 animations="disabled",full_page=False)
