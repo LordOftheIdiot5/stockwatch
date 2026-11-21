@@ -6,7 +6,7 @@ from urllib.request import Request,urlopen
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE="https://stocks.nordl.dev/"
-PATHS=("index.html","stocks.html","price-history.html")
+PATHS=("index.html","stocks.html","company.html","calendar.html","price-history.html","v4.js","research.js","freshness-v96.css")
 TITLE=re.compile(rb"<title>(.*?)</title>",re.I|re.S)
 
 def matched(local,remote):
@@ -32,7 +32,7 @@ def check(base=BASE,attempts=12,interval=10,fetch=None):
             except Exception as e:
                 statuses[path]={"match":False,"error":type(e).__name__}
         if all(v["match"] for v in statuses.values()):
-            print("Stockwatch release verified: all 3 public HTML files exactly match deployed artifact",statuses,flush=True)
+            print(f"Stockwatch release verified: all {len(PATHS)} public HTML and application asset files exactly match deployed artifact",statuses,flush=True)
             return statuses
         print("Public deployment not consistent yet:",n,statuses,flush=True)
         if n<attempts:time.sleep(interval)
