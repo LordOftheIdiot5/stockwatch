@@ -59,7 +59,11 @@
    grid-column:2;
    text-align:right;
    font-size:11.5px;
-   max-width:18ch;
+   max-width:22ch;
+   max-height:2.7em;
+   line-height:1.35;
+   overflow:auto; /* full source-derived readout is still in DOM */
+   scrollbar-width:thin;
  }
  body[data-page=index] #overviewMacroPlot svg.sw-overview-chart-svg {
    grid-column:1/-1;
@@ -109,7 +113,7 @@
    font-size:11px;
  }
  body[data-page=index] #overviewMacroPlot #overviewLensDetail{
-   max-width:12ch;
+   max-width:20ch;
  }
 }
 /* Do not compromise source-information or taps on smaller layouts. */
