@@ -66,7 +66,8 @@
     const europe=mapGroup(all,EUROPE);
     const asia=mapGroup(all,ASIA);
     const unmapped=all.filter(v=>!EUROPE.has(v.venue)&&!ASIA.has(v.venue));
-    const label=make('p','sw110e-map-heading','Mapped research coverage');
+    // The map is already named for assistive technology. Avoid a redundant
+    // visible subheading that pushes genuine exchange coverage below the fold.
     const world=make('div','sw110e-world');
     world.setAttribute('role','group');
     world.setAttribute('aria-label','Geographic listing coverage. Europe and Hong Kong are shown where source venue identity is unambiguous; no financial returns are inferred.');
@@ -80,7 +81,7 @@
     addPin(world,'Hong Kong',asia,114.17,22.32);
     const legend=make('div','sw110e-map-legend');
     legend.append(make('span','','● Listing coverage'));
-    legend.append(make('span','','Not index performance'));
+    legend.append(make('span','','NOT market returns · not index performance'));
     const details=make('details','sw110e-all-venues');
     const summary=make('summary','', 'Venue breakdown ('+rows.children.length+')');
     details.append(summary,rows);
@@ -92,8 +93,12 @@
     // Keep it visible by default and inside the map's accessible group.
     world.append(legend);
     const caption=body.querySelector('.sw110d-coverage-caption');
-    if(caption)caption.after(label,world,details);
-    else body.append(label,world,details);
+    if(caption)caption.after(world,details);
+    else body.append(world,details);
+    // The venue-bar explanation belongs with the venue bars. The summary,
+    // comparison date, no-returns legend and Data Health link remain visible.
+    const venueNote=body.querySelector('.sw110d-coverage-foot');
+    if(venueNote)details.append(venueNote);
     if(unmapped.length) {
       details.append(make('p','sw-meta','Unmapped venue identifiers remain in the list; none are placed on the map without identity review.'));
     }

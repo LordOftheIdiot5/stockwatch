@@ -11,6 +11,8 @@ on:
       - 'overview-unified-v116c.css'
       - 'overview-unified-v116c.js'
       - 'overview-compact-v116e.css'
+      - 'overview-layout-v116f.css'
+      - 'tests/browser_check_layout_v116f.py'
       - 'overview-geo-v110e.js'
       - 'overview-structure-v110d.js'
       - 'tests/browser_check_v116e_coverage.py'
@@ -42,6 +44,8 @@ jobs:
         run: python tests/browser_check_zoom_equivalent_v116b.py
       - name: V116e compact factual coverage, venue disclosure and keyboard map acceptance
         run: python tests/browser_check_v116e_coverage.py
+      - name: V116f source-backed first-fold compact layout and browser-zoom diagnostic
+        run: python tests/browser_check_layout_v116f.py
       - name: V116c issuer evidence, acronym collision and reviewed news
         run: python tests/browser_check_issuer_news_v116c.py
       - name: Preserve first-fold screenshots on all outcomes
