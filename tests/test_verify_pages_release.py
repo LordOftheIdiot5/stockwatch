@@ -16,7 +16,7 @@ class Tests(unittest.TestCase):
                     return b"stale" if n==1 else (m.ROOT/p).read_bytes()
                 result=m.check(attempts=2,interval=0,fetch=fetch)
                 self.assertTrue(all(x["match"] for x in result.values()))
-                self.assertEqual(len(attempts),6)
+                self.assertEqual(len(attempts),2*len(m.PATHS))
             finally:m.ROOT=prior
     def test_rejects_stale_content(self):
         with tempfile.TemporaryDirectory() as d:
