@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T10:07:06Z",
+  "generated": "2026-11-21T10:19:36Z",
   "items": [
     {
       "id": "UCG.MI:d9cb9d1c82ac5d24ff1b1608c341f3d175950ebf92bf20f8c9014098f3b1a3e4",
@@ -64,6 +64,29 @@
       "sourceFeed": null,
       "match": "name_mentioned",
       "relevance": "review",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "RACE.MI:85e30cf53672784d3f5e86b6249b1769fcfc6f6c4bdf0ef10a64ccb8ae77b271",
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Ferrari Challenge | A Barcellona assegnati gli ultimi titoli 2026 a Schömer, Green e Rosser",
+      "english": "Ferrari Challenge | The last 2026 titles were awarded to Schömer, Green and Rosser in Barcelona",
+      "publisher": "Motorsport.com",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQOHF0V3NBeHZDVGRVNGl5YXlNUi14dFhkXzE5ZzRxTTNYZzdIdG9LLV8wUDItT3N2VThhdmhNaFpzbE8wWmx0V2Q2RlNrZ000UFdyakVmVFhCMEl1bllVYWxuS3d1X0ZZS3Y0Rk5uMlVVQ0VpcEJlNEhkVG91bElmY1gtOXFIdUw0dDl1eUU4aklzcUNPellRTW12VHlrZS1LQnZmVDVNMWlEZUQ4eHlRSGxVTGpTUDZJdkplY3VuWEtfNDlFNHhMbGtHYnFZZU5sa0NpeWFNMU5CUl9ncnFMaw?oc=5",
+      "published": "2026-11-21T09:29:12Z",
+      "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
       "category": "General",
       "driverVersion": 1,
       "driverTags": [],
@@ -1241,6 +1264,29 @@
       "priority": "normal"
     },
     {
+      "id": "SBNOR.OL:9830f241378bfe88d9bef3a08c587530f9182322efe691b145b8a7e61b024298",
+      "ticker": "SBNOR.OL",
+      "name": "Sparebanken Norge",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "K7I Forecast — Price Target — Prediction for 2027",
+      "english": null,
+      "publisher": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1acXVSQlBBT1pvU2J5X0FzbmRYSHpydW5hUXpPdXpvem5zNlJNSzVFd2dyTTQzbjdJZTVrcGVhTlVhZGF6b3lUN29xM1FsRURPcTBMNnVWYUVvYXVicW1jRFV4TjN5eDIwNVpYT1VlazRQMGp5?oc=5",
+      "published": "2026-11-20T18:15:37Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "review",
+      "category": "Guidance",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
       "id": "SAP.DE:2b5d4c71daa7009189a3b21b691ecca8547949f516c548ccdab548d1f92b9cf1",
       "ticker": "SAP.DE",
       "name": "SAP",
@@ -2375,65 +2421,14 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "FRO.OL:cef48b0a7cad336ac681677873e03f0be891f1b070cc20b5d289046134a34eb5",
-      "ticker": "FRO.OL",
-      "name": "Frontline",
-      "sector": "Shipping & offshore",
-      "type": "disclosure",
-      "headline": "FRO - Q3 2026 Presentation",
-      "english": null,
-      "publisher": "Oslo NewsWeb",
-      "url": "https://newsweb.oslobors.no/message/687093",
-      "published": "2026-11-20T13:10:11Z",
-      "lang": "no",
-      "regulatory": true,
-      "sourceIssuer": "FRO",
-      "sourceFeed": "newsweb",
-      "match": "issuer_code",
-      "relevance": "strong",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "numbers",
-          "basis": "headline category: Earnings / results"
-        }
-      ],
-      "sourceDomain": "newsweb.oslobors.no",
-      "priority": "high"
-    },
-    {
-      "id": "FRO.OL:165e784b021cc109b7d432440278a6af469789ffd2383bd4e420d44c27e597b1",
-      "ticker": "FRO.OL",
-      "name": "Frontline",
-      "sector": "Shipping & offshore",
-      "type": "news",
-      "headline": "Blodrøde børser tross god Anthropic-debut, Europa-futures stuper, FRO-rapport, Goldman nedgraderer VAR, og Hunter vil kjøpe Jacktel",
-      "english": null,
-      "publisher": "Finansavisen",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPaGFWNXItY2ZZYnppLUtNbnVNZ2NRam1yMERrSkpaQ2lYaU1mWEp0U0xRMTZEOEgyWnVHVjdHT0N6VTBES3A3S1ZTdHAybXJnZlhnNm5MdlBCQVoyTlhDcU9LNEdvYllKeG5ZY0tpZmY5aHVSTER2MVVUZ2swT01ZR05xUERpQ09qUUV5bWRnRFNiT3UyNXFiY2ZuQ3BtLWp1YUctWXdnRmNfZkk1bkZwWkFCWjFWQlJ5eFkwVnhQRGw3SEFCQWRKdXpIMW40cjQ5cnlDZ09hTUd4bjVSeDdSZWhqb1RSQjRoZllJOTBQRUhlYnhGeHp4dG1rbGxkS054d1EtazRhMmVlXzRvYWc?oc=5",
-      "published": "2026-11-20T13:09:05Z",
-      "lang": "no",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "category": "Earnings / results",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 1929,
+  "totalStored": 1931,
   "limit": 100,
   "quality": {
-    "total": 1929,
-    "relevant": 1409,
-    "review": 452,
+    "total": 1931,
+    "relevant": 1410,
+    "review": 453,
     "duplicates": 92,
     "issuerLinked": 430,
     "driverClassification": {
@@ -2452,11 +2447,11 @@
       "Earnings / results": 281,
       "Dividends": 23,
       "M&A": 80,
-      "Guidance": 36,
+      "Guidance": 37,
       "Contracts": 143,
       "Capital & ownership": 1,
       "Management": 61,
-      "General": 1304
+      "General": 1305
     }
   }
 }
