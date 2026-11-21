@@ -317,9 +317,35 @@ function overview(){
  const overview=$('v4app'),marketGrid=overview.querySelector('.sw87-market-grid'),marketSummary=overview.querySelector('.sw87-market-summary');
  if(globalPulse&&marketGrid)marketGrid.before(globalPulse);
  if(marketGrid&&marketSummary){const heading=marketSummary.querySelector('.sw-section-row'),metrics=marketSummary.querySelector('.sw-ws-metrics');if(heading&&metrics){const snapshot=document.createElement('div');snapshot.className='sw87-market-summary sw-overview-priority';snapshot.append(heading,metrics);marketGrid.before(snapshot);}}
+ // V92: promote actual official dated observations to the main chart area.
+ // The approved mockup is visual guidance, not permission to synthesize prices.
+ const officialChart=overview.querySelector('.sw-overview-workbench');
+ const datedSummary=overview.querySelector('.sw-overview-priority');
+ if(marketGrid&&officialChart&&datedSummary){
+  const focus=document.createElement('section');
+  focus.className='sw92-focus-grid';
+  focus.setAttribute('aria-label','Official economic history and market breadth');
+  officialChart.classList.add('sw92-focus-chart');
+  datedSummary.classList.add('sw92-focus-summary');
+  marketGrid.before(focus);
+  focus.append(officialChart,datedSummary);
+  const quick=document.createElement('nav');
+  quick.className='sw92-quick-tools';
+  quick.setAttribute('aria-label','Research shortcuts');
+  quick.innerHTML='<strong>Explore research</strong><a href="terminal.html">Research terminal</a><a href="stocks.html">Stocks and sectors</a><a href="compare.html">Compare stocks</a><a href="news.html">News and filings</a><a href="health.html">Data health</a>';
+  marketGrid.after(quick);
+ }
  document.body.classList.add('sw-workspace-ready');
  const economy=$('overviewEconomy');let economicStarted=false;
- economy.addEventListener('toggle',()=>{if(!economy.open||economicStarted)return;economicStarted=true;overviewResearch().catch(()=>{if($('overviewMacro'))$('overviewMacro').textContent='Official history unavailable.'})});
+ const loadOfficialHistory=()=>{
+  if(economicStarted)return;
+  economicStarted=true;
+  overviewResearch().catch(()=>{
+   if($('overviewMacro'))$('overviewMacro').textContent='Official history unavailable. Check data health for source status.';
+  });
+ };
+ economy.addEventListener('toggle',()=>{if(economy.open)loadOfficialHistory()});
+ if(officialChart)loadOfficialHistory();
  const select=$('workspaceSector'),coverage=$('workspaceCoverage'),venue=$('workspaceVenue'),expand=$('workspaceHeatExpand'),map=$('workspaceHeatmap');
  const draw=()=>{const rows=coverageHeatRows(displayUniverse.filter(r=>venue.value==='all'||r.exchange===venue.value),select.value,coverage.value);map.innerHTML=coverageHeatmap(rows,displayDate,['all','priced'].includes(coverage.value));$('workspaceHeatCount').textContent=rows.length+' listings · '+marketHeatData(rows).length+' with changes'+(['all','priced'].includes(coverage.value)&&rows.some(r=>pairMapMove(r,displayDate))?' · '+rows.filter(r=>pairMapMove(r,displayDate)).length+' A/B display-only':'')};
  for(const control of [select,coverage,venue])control.addEventListener('change',draw);
