@@ -1,0 +1,65 @@
+/* V114 task-oriented second-level navigation for genuine research sections.
+   No decorative charts or substitute market figures. */
+body[data-page=spreads] .sw114-tasknav,
+body[data-page=shipping] .sw114-tasknav,
+body[data-page=commodities] .sw114-tasknav,
+body[data-page=shorts] .sw114-tasknav,
+body[data-page=calendar] .sw114-tasknav{
+ display:grid;gap:8px;margin:0 0 14px;padding:12px 14px;
+ border:1px solid var(--sw-edge,var(--edge,#253749));border-radius:10px;
+ background:var(--sw-card,var(--surface,#101c2a));
+}
+.sw114-task-label{
+ color:var(--sw-text,var(--ink,#e7f1ff));
+ font:750 13px/1.45 Manrope,system-ui,sans-serif;
+}
+.sw114-task-links{display:flex;align-items:center;flex-wrap:wrap;gap:7px}
+.sw114-task-link{
+ display:inline-flex;align-items:center;min-height:38px;padding:7px 11px;
+ color:var(--sw-text,var(--ink,#e7f1ff));
+ border:1px solid var(--sw-edge,var(--edge,#253749));
+ border-radius:8px;text-decoration:none;
+ font-size:12.5px;line-height:1.5;font-weight:680;
+}
+.sw114-task-link:hover,.sw114-task-link:focus-visible{
+ color:var(--sw-mint,var(--mint,#58e3bd));
+ border-color:var(--sw-mint,var(--mint,#58e3bd));
+ background:var(--sw-card-hi,var(--soft,#17273a));
+}
+.sw114-task-link:focus-visible{
+ outline:2px solid var(--sw-mint,var(--mint,#58e3bd));
+ outline-offset:2px;
+}
+.sw114-task-note{
+ margin:0;font-size:12px;line-height:1.5;
+ color:var(--sw-muted,var(--muted,#a5b3c7));
+}
+body[data-page=spreads] :is(#spreadPairs,#abRanking,#spreadDetail),
+body[data-page=shipping] :is(#shippingBenchmarkAnchor,#routeCompare,#voyageEstimator,#freightPPIContent,#worldBankPortTraffic),
+body[data-page=commodities] #commodityTabs,
+body[data-page=shorts] #shortsDisclosurePanel,
+body[data-page=calendar] :is(#calendarUpcoming,#calendarDisclosures){
+ scroll-margin-top:82px;
+}
+body[data-page=shorts] .sw114-company-link{
+ display:inline-grid;gap:2px;color:var(--sw-text);
+ line-height:1.4;text-decoration:none;
+}
+body[data-page=shorts] .sw114-company-link:hover,
+body[data-page=shorts] .sw114-company-link:focus-visible{
+ color:var(--sw-mint);text-decoration:underline;
+}
+body[data-page=commodities] #commodityRows td small{
+ display:block;margin-top:3px;
+ color:var(--sw-muted);
+ font-size:11px;line-height:1.45;
+}
+body[data-page=commodities] #commodityRows .sw-valuebar{
+ min-width:75px;margin-bottom:5px;
+}
+@media(max-width:620px){
+ .sw114-tasknav{padding:11px!important}
+ .sw114-task-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .sw114-task-link{justify-content:center;min-height:44px;text-align:center;padding:8px}
+ .sw114-task-note{font-size:12px}
+}

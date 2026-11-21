@@ -579,6 +579,12 @@ jobs:
           node --check terminal.js
           node --check company-workflow-v113.js
           python tests/browser_check_core_research_v113.py
+      - name: V114 A/B, freight, commodities, short register and issuer event browser checks
+        run: |
+          node --check secondary-markets-v114.js
+          node --check v4.js
+          node --check research.js
+          python tests/browser_check_secondary_v114.py
 
       - name: V110b compact research-page browser regression
         run: python tests/browser_check_density_v110b.py

@@ -28,7 +28,9 @@ class V96IntegrityTests(TestCase):
                     "sw96-calendar-sync","Original issuer disclosure"):
             self.assertIn(key,self.calendar)
         self.assertIn("freshness-v96.css?v=1",self.calendarhtml)
-        self.assertIn("No source-verified upcoming earnings",self.calendar)
+        self.assertIn("No qualifying source-backed future events",self.calendar)
+        self.assertIn("x.date>=today",self.calendar)
+        self.assertIn("dateOK(x.date)",self.calendar)
         self.assertIn("Source unavailable",self.calendar)
         self.assertNotIn("Math.random(",self.calendar)
     def test_scanner_expected_weekday_and_weekend_refresh(self):
