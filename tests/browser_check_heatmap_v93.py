@@ -48,6 +48,12 @@ def main():
                             assert picker.locator("option").count()==count+1
                             picker.select_option("0")
                             assert dock.locator(".sw93-heat-detail-head").count()==1
+                            assert dock.locator(".sw93-heat-ticker").inner_text()==tiles.nth(0).locator("strong").inner_text()
+                            # Focus on another tile: dropdown and detail must stay in sync.
+                            if count>=2:
+                                tiles.nth(1).focus()
+                                assert picker.input_value()=="1"
+                                assert dock.locator(".sw93-heat-ticker").inner_text()==tiles.nth(1).locator("strong").inner_text()
                             toggle=dock.locator(".sw93-heat-size")
                             toggle.click()
                             assert toggle.get_attribute("aria-pressed")=="true"

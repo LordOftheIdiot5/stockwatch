@@ -32,9 +32,17 @@
     const panel=dock.querySelector(".sw93-heat-detail");
     if(!panel)return;
     panel.replaceChildren();
+    const picker=dock.querySelector(".sw93-heat-picker");
     if(!tile || !root.contains(tile)){
+      if(picker)picker.value="";
       panel.append(node("p","Focus or hover over a company tile to inspect its dated observation.","sw93-heat-hint"));
       return;
+    }
+    // Pointer and keyboard focus can override the selector's preview. Keep
+    // the selected option identical to the company displayed in the card.
+    if(picker){
+      const tileIndex=[...root.querySelectorAll("a.sw-heat-cell")].indexOf(tile);
+      if(tileIndex>=0 && picker.value!==String(tileIndex))picker.value=String(tileIndex);
     }
     const info=api.describe({
       title:tile.getAttribute("title"),
