@@ -30,10 +30,15 @@ jobs:
       - name: Discover original issuer IR links
         if: ${{ github.event_name == 'push' || inputs.execute_live == true }}
         run: python scripts/issuer_ir_reports_v101.py --network --max-sources 4 --out data/issuer-report-discovery-v101.json
+      - name: Curate file links and exclude irrelevant pages
+        if: ${{ github.event_name == 'push' || inputs.execute_live == true }}
+        run: python scripts/issuer_ir_curation_v101.py --input data/issuer-report-discovery-v101.json --out data/issuer-report-review-queue-v101.json
       - name: Save metadata candidates for human source-and-rights review
         if: ${{ github.event_name == 'push' || inputs.execute_live == true }}
         uses: actions/upload-artifact@v4
         with:
           name: issuer-ir-link-candidates-v101
-          path: data/issuer-report-discovery-v101.json
+          path: |
+            data/issuer-report-discovery-v101.json
+            data/issuer-report-review-queue-v101.json
           retention-days: 7
