@@ -35,7 +35,7 @@ def main():
          '(x)=>getComputedStyle(x).display')=='contents'
        assert page.locator('.sw98-intelligence-rail').evaluate(
          '(x)=>getComputedStyle(x).display')=='contents'
-       assert heat.bounding_box()['y']<860,heat.bounding_box()
+       # V111 keeps the plot's true SVG aspect ratio instead of letterboxing it.\n       # The heatmap must still begin within the 900px first viewport.\n       assert heat.bounding_box()['y']<890,heat.bounding_box()
        # V110d preserves every dated mover, accessible in the reversible panel.
        page.locator('.sw110d-movers summary').click()
        movers=page.locator('.sw110d-movers>.sw-panel')
