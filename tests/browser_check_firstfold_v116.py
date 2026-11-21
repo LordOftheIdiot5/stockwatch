@@ -42,6 +42,26 @@ def main():
        assert abs(box['heat']['y']-box['coverage']['y'])<7
        assert abs(box['heat']['y']-box['watch']['y'])<7
        assert box['chart']['width']>box['summary']['width']
+       geometry=page.evaluate("""() => {
+        const names=['.sw-overview-head','.sw96-source-status','#globalMarketPulse',
+          '.sw98-primary','.sw98-primary .sw-overview-chart-controls',
+          '.sw98-primary #overviewMacro','.sw98-primary #overviewMacroPlot',
+          '.sw98-primary #overviewMacroPlot svg',
+          '.sw98-primary .sw-overview-news',
+          '.sw98-market-secondary'];
+        return Object.fromEntries(names.map(s=>{
+         const e=document.querySelector(s),b=e?.getBoundingClientRect();
+         return [s,b?{top:Math.round(b.y),height:Math.round(b.height),
+           width:Math.round(b.width),display:getComputedStyle(e).display}:null]
+        }));
+       }""")
+       print(json.dumps({'v116Geometry':width,'theme':theme,
+         'heatY':box['heat']['y'],'targetY':threshold,
+         'components':geometry}),flush=True)
+       if theme=='dark':
+        out=ROOT/'workspace-previews';out.mkdir(exist_ok=True)
+        page.screenshot(path=str(out/f'v116-overview-firstfold-{width}.png'),
+          animations='disabled')
        assert box['heat']['y']<=threshold,(width,theme,'heatmap below first-fold target',box['heat']['y'],threshold)
        svg=page.locator('#overviewMacroPlot svg')
        sz=svg.bounding_box()
