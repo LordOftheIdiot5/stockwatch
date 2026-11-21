@@ -18,6 +18,8 @@ on:
       - 'data/fundamentals.json'
       - 'terminal.html'
       - 'v4.css'
+      - 'sitewide-polish-v111.css'
+      - 'tests/browser_check_sitewide_v111.py'
       - 'index.html'
       - 'welcome.html'
       - 'directory.html'
@@ -196,6 +198,8 @@ jobs:
         run: |
           python -m pip install playwright==1.60.0
           python -m playwright install --with-deps chromium
+      - name: V111 all-route UX and full-width expanded map regression
+        run: python tests/browser_check_sitewide_v111.py
       - name: V105 all-listing daily source coverage and mobile Data Health browser proof
         if: startsWith(github.head_ref, 'feature/stockwatch-v105-')
         run: python tests/browser_check_daily_price_coverage_v105.py

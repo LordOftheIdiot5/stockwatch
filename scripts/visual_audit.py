@@ -123,6 +123,27 @@ def capture(base, out, selected, devices, chromium_path=None):
                             row["screenshots"].append(filename)
                         except Exception as error:
                             row["interactionWarning"]=str(error)[:2000]
+                    if name=="overview" and page.locator("#workspaceHeatExpand").count():
+                        try:
+                            page.locator("#workspaceHeatExpand").scroll_into_view_if_needed()
+                            page.locator("#workspaceHeatExpand").click(timeout=5000)
+                            page.locator("#workspaceHeatmap.sw-heat-expanded").wait_for(timeout=5000)
+                            extent=page.evaluate("""() => {
+                              const outer=document.querySelector('.sw98-market-secondary');
+                              const panel=outer?.querySelector(':scope > .sw-ws-heatmap');
+                              const inspector=panel?.querySelector('.sw93-heat-inspector');
+                              return {grid:outer?.getBoundingClientRect().width||0,
+                                      panel:panel?.getBoundingClientRect().width||0,
+                                      inspector:inspector?.getBoundingClientRect().width||0};
+                            }""")
+                            row["expandedHeatmap"]=extent
+                            if extent["grid"] and (extent["panel"]<extent["grid"]*0.88 or extent["inspector"]<extent["grid"]*0.82):
+                                row["interactionWarning"]="Expanded heatmap leaves excessive unused horizontal space"
+                            filename=f"{name}-{device}-expanded-heatmap.png"
+                            page.screenshot(path=str(out/filename),animations="disabled",timeout=12000)
+                            row["screenshots"].append(filename)
+                        except Exception as error:
+                            row["interactionWarning"]="Heatmap expansion failed: "+str(error)[:1700]
                     if name=="stocks":
                         page.evaluate("window.scrollTo(0,0)")
                         try:
