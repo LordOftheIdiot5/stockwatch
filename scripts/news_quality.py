@@ -59,7 +59,7 @@ def topic(title):
 ISSUER_CONTEXT = {
     # Spanish rail manufacturer CAF vs Confederation of African Football.
     'CAF.MC': (
-        r'\b(?:construcciones y auxiliar(?:es)? de ferrocarriles|caf (?:s\s*a\s*u?|railways?|railcars?|rolling stock|trains?|tramways?|metros?|shares?|stock|earnings|results|revenue|orders?|contract(?:s)?|awards?))\b',
+        r'\b(?:construcciones y auxiliar(?:es)? de ferrocarriles|caf (?:s\s*a\s*u?|rail(?:way)?s?|railcars?|rolling stock|trains?|tramways?|metros?|shares?|stock|earnings|results|revenue|orders?|contract(?:s)?|awards?))\b',
         'short-acronym CAF lacks rail/issuer context',
     ),
     # Frontline plc vs the everyday adjective/noun "frontline".
