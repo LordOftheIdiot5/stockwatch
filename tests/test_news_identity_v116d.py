@@ -18,7 +18,7 @@ NOW=datetime(2026,11,21,21,tzinfo=timezone.utc)
 
 class IssuerIdentityEvidence(unittest.TestCase):
     def row(self,ticker,name,title,**kw):
-        return dict(id=ticker+':'+title[:20],ticker=ticker,name=name,
+        return dict(id=ticker+':'+title[:20],ticker=ticker,name=name,sector='Research',
                     type='news',match='name_mentioned',published='2026-11-21T12:00:00Z',
                     headline=title,url='https://example.com/observed-story',
                     publisher='Source',**kw)
