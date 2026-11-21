@@ -29,7 +29,7 @@ fetch('data/nasdaq-nordic-notices.json?v='+Date.now(),{cache:'no-store'})
      .filter(x=>x&&typeof x.title==='string'&&x.title.length<=280&&
        validLink(x.url)&&Number.isFinite(Date.parse(x.published)))
      .sort((a,b)=>Date.parse(b.published)-Date.parse(a.published)).slice(0,12);
-   count.textContent=(Array.isArray(d.items)?d.items.length:0)+' original notices';
+   count.textContent=rows.length+' source-verified visible notice'+(rows.length===1?'':'s');
    state.textContent=ok?'Source RSS checks succeeded; dates belong to original notices':
      'RSS refresh incomplete or unavailable; earlier source-dated notices may be retained';
    host.replaceChildren();
