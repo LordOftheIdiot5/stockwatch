@@ -69,6 +69,11 @@ jobs:
         run: |
           node --check heatmap-experience-v93.js
           node --test tests/test_heatmap_experience_v93.mjs
+      - name: V94 source-backed company navigation and chart tests
+        if: startsWith(github.head_ref, 'feature/stockwatch-v94-')
+        run: |
+          node --check company-experience-v94.js
+          node --test tests/test_company_experience_v94.mjs tests/test_company_v50.mjs
       - name: V25b research universe tests
         run: node --test tests/test_universe_v25b.mjs
       - name: V26 intelligence graph tests
@@ -184,6 +189,21 @@ jobs:
           path: |
             visual-audit/v93-heatmap/
             workspace-previews/modern-overview-*.png
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: V94 company research and licensed-chart browser checks
+        if: startsWith(github.head_ref, 'feature/stockwatch-v94-')
+        run: |
+          python tests/browser_check_company_experience_v94.py
+          python tests/browser_check_company_v50.py
+      - name: Upload V94 company design browser evidence
+        if: always() && startsWith(github.head_ref, 'feature/stockwatch-v94-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-v94-company-screenshots
+          path: |
+            visual-audit/v94-company/
+            workspace-previews/v50-*.png
           retention-days: 14
           if-no-files-found: ignore
       - name: V84 commercial network unit checks

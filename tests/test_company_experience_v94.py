@@ -30,7 +30,6 @@ class V94CompanyUXTests(TestCase):
                        "publicDisplayPermitted","No licensed dated prices",
                        "Price observation "):
             self.assertIn(marker,self.v4)
-        self.assertIn("role","".join(("role","")))  # documented source state
         self.assertIn('history.setAttribute("aria-live","polite")',self.js)
         self.assertIn('actualChart.setAttribute("role","region")',self.js)
     def test_accessible_section_navigation(self):
