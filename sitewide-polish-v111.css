@@ -40,6 +40,17 @@
     display:block;
   }
 }
+/* At 1440px keep the beginning of the heatmap within the first 900px
+ * viewport while retaining the plot's correct intrinsic aspect ratio. */
+@media (min-width:1320px) and (max-width:1599px) {
+  body[data-page=index] .sw-overview-head {min-height:57px;padding:5px 12px;margin-bottom:2px}
+  body[data-page=index] .sw-overview-head h1 {font-size:27px}
+  body[data-page=index] .sw-overview-indices {margin:3px 0 4px}
+  body[data-page=index] #globalMarketPulse {margin:3px 0 5px}
+  body[data-page=index] .sw-index-card {min-height:78px;padding:6px 10px}
+  body[data-page=index] .sw-index-spark svg {height:32px}
+  body[data-page=index] .sw98-primary {margin:3px 0 4px}
+}
 body[data-page=index] .sw-ws-heatmap #workspaceHeatmap.sw-heat-expanded {
   max-height:none;
   overflow:visible;
