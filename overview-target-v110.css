@@ -1,0 +1,79 @@
+/* V110a — approved full-width Overview, with only source-backed market data.
+ * The concept's invented country closes, news images, portfolio values and world
+ * map markers must NEVER be copied to production. */
+@media(min-width:1200px){
+ body[data-page=index] .sw-layout{grid-template-columns:208px minmax(0,1fr)}
+ body[data-page=index] .sw-side .sw-logo{margin:18px 13px 24px}
+ body[data-page=index] .sw-side .sw-nav{padding-inline:8px}
+ body[data-page=index] .sw-side .sw-link{font-size:12.5px}
+}
+body[data-page=index] .sw-content{max-width:none!important;padding:14px clamp(14px,1.6vw,28px) 50px}
+body[data-page=index] .sw-overview-head{
+ display:flex;align-items:center;justify-content:space-between;
+ gap:12px;padding:13px 20px;margin:0 0 7px;
+ min-height:102px;background:linear-gradient(105deg,rgba(15,119,109,.13),transparent 56%),var(--sw-surface);
+}
+body[data-page=index] .sw-overview-head h1{font-size:clamp(28px,2.2vw,38px);line-height:1.16;margin:2px 0}
+body[data-page=index] .sw-overview-head p{font-size:13px}
+body[data-page=index] .sw-overview-head .sw-ws-actions{display:flex;gap:9px;flex-wrap:wrap}
+body[data-page=index] .sw-overview-status{margin:0;padding:3px 2px;font-size:12px}
+body[data-page=index] details.sw96-source-status{margin:5px 0 11px}
+body[data-page=index] #globalMarketPulse{margin:6px 0 10px}
+body[data-page=index] .sw-index-card{min-height:92px;padding:10px 14px;border-radius:11px}
+body[data-page=index] .sw-index-main .sw-index-close{font-size:clamp(20px,1.7vw,25px)}
+body[data-page=index] .sw-index-top{font-size:12px}
+body[data-page=index] .sw-index-spark svg{height:44px}
+body[data-page=index] .sw98-primary{gap:12px;margin:10px 0 14px;grid-template-columns:minmax(0,1.7fr) minmax(295px,.82fr);align-items:start}
+body[data-page=index] .sw98-primary .sw92-focus-chart>.sw-panel{height:auto}
+body[data-page=index] .sw98-primary #overviewMacro{min-height:0;padding:13px 15px}
+body[data-page=index] .sw98-primary .sw-overview-chart-svg{display:block;width:100%;height:clamp(240px,19vw,315px);max-height:315px}
+body[data-page=index] .sw98-intelligence-rail{gap:9px}
+body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary{padding:10px}
+body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-ws-metrics{gap:6px}
+body[data-page=index] .sw98-intelligence-rail .sw92-focus-summary .sw-stat{padding:8px 10px;min-height:55px}
+body[data-page=index] .sw98-intelligence-rail .sw-overview-news{max-height:330px;min-height:160px}
+body[data-page=index] .sw98-intelligence-rail .sw-overview-news .sw-brief{padding:9px 13px}
+body[data-page=index] .sw98-intelligence-rail .sw-overview-news .sw-brief h4{font-size:13.5px}
+body[data-page=index] .sw98-market-secondary{
+ display:grid;grid-template-columns:minmax(0,1.65fr) minmax(295px,.75fr);
+ gap:12px;align-items:start;margin:12px 0;
+}
+body[data-page=index] .sw98-market-secondary .sw-ws-heatmap{margin:0;min-width:0}
+body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expanded){max-height:360px;overflow:auto}
+body[data-page=index] .sw110-heat-companion{
+ display:grid;grid-template-columns:minmax(0,1fr);
+ gap:11px;align-content:start;margin:0;min-width:0;
+}
+body[data-page=index] .sw110-heat-companion>.sw-panel{margin:0;min-width:0}
+body[data-page=index] .sw110-heat-companion .sw-panel-hd h2{font-size:15px}
+body[data-page=index] .sw110-heat-companion .sw-listline{padding:7px 10px}
+body[data-page=index] .sw110-heat-companion .sw99-watchlist{align-self:start}
+body[data-page=index] .sw98-market-secondary #workspaceHeatCount{color:var(--sw-muted);font-size:12px;line-height:1.5}
+body[data-page=index] .sw98-market-secondary .sw-heat-cell.no-data{
+ border:1px dashed var(--sw-edge);background:color-mix(in srgb,var(--sw-card) 83%,transparent);
+}
+body[data-page=index] .sw98-market-secondary .sw-heat-cell.no-data small{color:var(--sw-muted)}
+body[data-page=index] .sw92-quick-tools{margin:10px 0 16px;padding:11px 14px}
+body[data-page=index] .sw92-quick-tools a{padding:9px 11px}
+body[data-page=index] :is(#workspaceCoverage,#workspaceVenue,#workspaceSector):focus-visible{
+ outline:3px solid var(--sw-mint);outline-offset:2px;
+}
+@media(max-width:1149px){
+ body[data-page=index] .sw98-market-secondary{grid-template-columns:minmax(0,1fr)}
+ body[data-page=index] .sw110-heat-companion{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:899px){
+ body[data-page=index] .sw98-primary{grid-template-columns:minmax(0,1fr)}
+ body[data-page=index] .sw98-primary .sw-overview-chart-svg{height:auto;max-height:315px}
+}
+@media(max-width:700px){
+ body[data-page=index] .sw-content{padding:12px 11px 45px}
+ body[data-page=index] .sw-overview-head{padding:13px 14px}
+ body[data-page=index] .sw98-primary #overviewMacro{padding:11px}
+ body[data-page=index] .sw110-heat-companion{grid-template-columns:minmax(0,1fr)}
+ body[data-page=index] .sw98-market-secondary #workspaceHeatmap:not(.sw-heat-expanded){max-height:380px}
+ body[data-page=index] .sw-index-card{min-height:90px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page=index] :is(.sw-index-card,.sw-heat-cell){transition:none}
+}

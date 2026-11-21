@@ -167,3 +167,14 @@ As of GitHub market scan **2026-11-21 10:06 UTC** for comparison session **Frida
 
 **Next source dependency:** acquire suitable original EOD delivery plus collection/archive/display rights for the missing venues, verify actual ISIN/MIC/currency per listing, collect source-specific daily bars into immutable R2 and normalized D1 records, and then add genuinely authorized company price graphs alongside existing fast feeds. Do not mark 500/500 operational before official per-venue trading calendars, origin proof, source license, and two or more real bars per chart are verified.
 
+
+
+## 2026-11-21 — V110a approved Overview visual recovery, actual source data only
+
+The approved 1672 × 941 PNG is held in the ChatGPT Library at `/Stockwatch/Design References/stockwatch-approved-full-width-overview-v1.png`; exact SHA-256 `df85998bd202dd9e4b3832a85edfaaf9fde78a417af4dcc3c7ced9e076be7b00`. The **image binary is not committed to GitHub**. The descriptive design specification and visual QA checklist are now copied onto `main` in `docs/APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md` and `docs/VISUAL-QUALITY-WORKPLAN-20261121.md`, because older PR #166 is in merge-conflict state. GitHub issue #165 remains the master visual acceptance issue.
+
+**V110a layout change (candidate, not certified until CI/Pages):** save the original source-backed macro/FX chart as the major hero panel; compact the title, index cards and chart height so the first viewport resembles the approved dashboard. Keep market breadth and genuine issuer news in the right rail. Put actual heatmap beside the existing biggest-mover and browser-saved watchlist cards rather than hiding them below market diagnostics. On the Overview heatmap default to **dated changes only**; users can select all dated price/A-B references, or explicitly inspect unavailable movements. This changes presentation only; no new price, synthetic history, geographic index, market cap, portfolio or dated event is invented. Retain existing full heatmap, saved price-only values, link navigation, mobile flows and strict freshness.
+
+**V110b–V110e backlog (remain open):** source-permitted geographically diverse indices & true equity chart; own source-backed global map (no fabricated map dots); keyboard/mobile nav and chart expansion/resize; hierarchy, readability, compact widgets and news-source quality; compare 320/390/768/1024/1440/1920 dark/light screens against original PNG, verify fallback/grey states, no overflow, WCAG labels, and complete production asset parity. A mockup likeness percentage is not an acceptance metric without screenshot-based evidence.
+
+**V106–V109 data path remains active:** exact ISIN/MIC & source rights for the 348 listings without prices, original EOD feeds, real history and European financial facts. A cleaner default heatmap does not solve the missing-price issue. In reports, keep 500-listing coverage distinct from 139 monitored and from 13 A/B reference rows.

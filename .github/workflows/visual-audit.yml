@@ -10,6 +10,8 @@ on:
       - 'tests/browser_check_nasdaq_notices_v100.py'
       - 'v4.js'
       - 'overview-parity-v98.css'
+      - 'overview-target-v110.css'
+      - 'tests/browser_check_overview_v110.py'
       - 'tests/browser_check_overview_v98.py'
       - '.github/workflows/visual-audit.yml'
   workflow_dispatch:
