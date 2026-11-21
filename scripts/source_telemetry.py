@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 GROUPS = ('Yahoo prices', 'Oslo NewsWeb', 'MFN filings', 'Google News', 'Finanstilsynet shorts')
-_STATS = defaultdict(lambda: {'requests': 0, 'succeeded': 0, 'failed': 0, 'totalMs': 0.0, 'errorTypes': {}})
+_STATS = defaultdict(lambda: {'requests': 0, 'succeeded': 0, 'failed': 0, 'totalMs': 0.0, 'errorTypes': {}, 'lastSuccessAt': None, 'lastFailureAt': None})
 _INSTALLED = False
 
 def provider(url: str) -> str:
@@ -38,11 +38,13 @@ def install(source_module) -> None:
             data=original(url)
         except Exception as error:
             item['failed'] += 1
+            item['lastFailureAt'] = datetime.now(timezone.utc).isoformat(timespec='seconds')
             typ=type(error).__name__
             item['errorTypes'][typ]=item['errorTypes'].get(typ, 0)+1
             raise
         else:
             item['succeeded'] += 1
+            item['lastSuccessAt'] = datetime.now(timezone.utc).isoformat(timespec='seconds')
             return data
         finally:
             item['totalMs'] += max(0.0,(time.perf_counter()-start)*1000)
@@ -56,7 +58,9 @@ def report():
                                   succeeded=(_STATS[k]['succeeded'] if k in _STATS else 0),
                                   failed=(_STATS[k]['failed'] if k in _STATS else 0),
                                   avgLatencyMs=round(_STATS[k]['totalMs']/_STATS[k]['requests'], 1) if k in _STATS and _STATS[k]['requests'] else None,
-                                  errorTypes=_STATS[k]['errorTypes'] if k in _STATS else {})
+                                  errorTypes=_STATS[k]['errorTypes'] if k in _STATS else {},
+                                  lastSuccessAt=_STATS[k].get('lastSuccessAt') if k in _STATS else None,
+                                  lastFailureAt=_STATS[k].get('lastFailureAt') if k in _STATS else None)
                            for k in GROUPS}}
 
 def save(path: Path) -> None:

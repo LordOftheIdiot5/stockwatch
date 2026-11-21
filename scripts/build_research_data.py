@@ -16,6 +16,7 @@ from pathlib import Path
 from news_quality import annotate, summary
 from driver_attention import build as build_driver_attention
 from price_freshness import coverage as price_coverage
+from price_evidence import build as build_price_evidence
 from build_spread_observations import build as update_spread_observations
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -159,6 +160,8 @@ def build_health(snapshot,watchlist,context,now, transport=None):
                 scanAgeHours=source_age(snapshot.get('generated')),
                 contextAgeHours=source_age(context.get('generated')),
                 priceFreshness=price_coverage(snapshot,watchlist,context,now),
+                priceEvidence=build_price_evidence(snapshot,watchlist,now),
+                priceDiagnostics=snapshot.get('priceDiagnostics') or {},
                 tracked=len(universe),priced=len(quotes),missing=[dict(ticker=x['ticker'],name=x.get('name',''),exchange=x.get('exchange','')) for x in universe if x['ticker'] not in quotes],
                 exchanges=exchanges,storedStories=sum(len(x.get('stories') or []) for x in snapshot.get('companies',[])),
                 caveat='Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.',
