@@ -47,6 +47,9 @@ class V95ResearchUXTests(TestCase):
                         self.intelligence.index('intelligence-experience-v95.js?v=1'))
         self.assertIn('id="v4app"',self.intelligence)
         self.assertIn('id="sharedEnergyContext"',self.intelligence)
+        self.assertIn('class="sw95-intel-jump"',self.intelligence)
+        for name in ("#commercialNetwork","#intelMap","#sharedEnergyContext"):
+            self.assertIn('href="'+name+'"',self.intelligence)
         for part in ("intelMap","intelSearch","intelListing","sw95-graph-guide",
                      'setAttribute("aria-label"','new MutationObserver(enhance)'):
             self.assertIn(part,self.js)

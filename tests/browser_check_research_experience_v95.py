@@ -64,6 +64,8 @@ def main():
                             else:
                                 page.locator(".sw95-graph-guide").wait_for(timeout=30000)
                                 assert page.locator(".sw95-graph-kind").count()==3
+                                page.locator(".sw95-intel-jump a[href='#intelMap']").click()
+                                assert page.evaluate("location.hash==='#intelMap'")
                                 assert "do not prove" in page.locator(".sw95-graph-disclaimer").inner_text()
                                 page.locator(".sw-intel-center").wait_for(timeout=25000)
                                 select=page.locator("#intelListing")

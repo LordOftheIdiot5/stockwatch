@@ -247,3 +247,34 @@ body[data-page=intelligence] :is(.sw-intel-peer,#intelSearch,#intelListing):focu
 @media(prefers-reduced-motion:reduce){
  body[data-page=intelligence] .sw95-graph-kind{transition:none}
 }
+
+/* Direct access to the two distinct graph workspaces and sourced hydro context. */
+body[data-page=intelligence] .sw95-intel-jump{
+ display:flex;flex-wrap:wrap;gap:10px;
+ margin:0 0 17px;padding:11px;
+ border:1px solid rgba(var(--sw95-accent-rgb),.31);
+ border-radius:12px;
+ background:var(--sw-surface);
+}
+body[data-page=intelligence] .sw95-intel-jump a{
+ display:inline-flex;align-items:center;min-height:42px;
+ padding:8px 13px;border:1px solid rgba(var(--sw95-accent-rgb),.35);
+ border-radius:9px;color:var(--sw-text);
+ background:rgba(var(--sw95-accent-rgb),.065);
+ font-size:13px;line-height:1.5;text-decoration:none;
+}
+body[data-page=intelligence] .sw95-intel-jump a:hover{
+ border-color:var(--sw95-accent);color:var(--sw95-accent);
+}
+body[data-page=intelligence] .sw95-intel-jump a:focus-visible{
+ outline:3px solid var(--sw95-accent);outline-offset:3px;
+}
+body[data-page=intelligence] #commercialNetwork,
+body[data-page=intelligence] #intelMap,
+body[data-page=intelligence] #sharedEnergyContext{
+ scroll-margin-top:25px;
+}
+@media(max-width:650px){
+ body[data-page=intelligence] .sw95-intel-jump{padding:9px;gap:7px}
+ body[data-page=intelligence] .sw95-intel-jump a{min-height:44px;font-size:12px;padding:8px 11px}
+}
