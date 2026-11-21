@@ -5,6 +5,8 @@ on:
       - 'scripts/visual_audit.py'
       - 'sitewide-polish-v111.css'
       - 'overview-firstfold-v116.css'
+      - 'news-compact-v116.css'
+      - 'tests/browser_check_news_320_v116.py'
       - 'tests/browser_check_firstfold_v116.py'
       - 'scripts/visual_acceptance_v116.py'
       - 'brand/workspace-navigation-v112.css'
