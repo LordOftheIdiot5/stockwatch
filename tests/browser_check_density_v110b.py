@@ -36,12 +36,14 @@ def main():
        assert page.locator('.sw98-intelligence-rail').evaluate(
          '(x)=>getComputedStyle(x).display')=='contents'
        assert heat.bounding_box()['y']<860,heat.bounding_box()
-       # Every sourced close/change remains inside the narrower mover card.
-       movers=page.locator('.sw110-heat-companion>.sw-panel').first
+       # V110d preserves every dated mover, accessible in the reversible panel.
+       page.locator('.sw110d-movers summary').click()
+       movers=page.locator('.sw110d-movers>.sw-panel')
        assert movers.locator('.sw-listline').count()>0
        assert movers.evaluate("""el=>Array.from(el.querySelectorAll('.sw-listline'))
          .every(row=>Array.from(row.children).filter(x=>getComputedStyle(x).display!=='none')
          .every(x=>x.getBoundingClientRect().right<=row.getBoundingClientRect().right+2))""")
+       page.locator('.sw110d-movers summary').click()
       else:
        assert watch.bounding_box()['y']>=heat.bounding_box()['y']
      elif route=='company':
