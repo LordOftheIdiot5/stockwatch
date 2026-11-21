@@ -132,14 +132,14 @@ def classify(text, url, context):
     phrase = " ".join((text, context, urlsplit(url).path.rsplit("/", 1)[-1]))
     if re.search(r"\b(esef|xbrl)\b", phrase, re.I):
         return "esef"
+    if re.search(r"\b(sustainability|environmental|esg)\b", phrase, re.I):
+        return "sustainability_report"
     if re.search(r"\b(annual|integrated annual|årsrapport|annual-report)\b", phrase, re.I):
         return "annual_report"
     if re.search(r"\b(quarter|quarterly|interim|half[ -]?year|q[1-4]|kvartal)\b", phrase, re.I):
         return "interim_report"
     if re.search(r"\b(presentation|capital markets|investor day|presentasjon)\b", phrase, re.I):
         return "investor_presentation"
-    if re.search(r"\b(sustainability|environmental|esg)\b", phrase, re.I):
-        return "sustainability_report"
     return "other_financial_report" if re.search(r"\b(financial|report|results?|resultat)\b", phrase, re.I) else None
 
 
@@ -170,17 +170,21 @@ def discover(html, issuer):
                         re.search(r"\b(report|quarter|financial|esef|xbrl)\b", a["text"], re.I))
         if not (ext or specific):
             continue
+        if not ext and re.search(r"\b(financial calendar|reporting calendar|financial-calendar|calendar)\b", phrase, re.I):
+            continue
         if url in seen:
             continue
         seen.add(url)
         year = YEAR_PATTERN.search(phrase)
         quarter = QUARTER_PATTERN.search(phrase)
+        short_year = re.search(r"\bQ[1-4]\s*['’]?(2[0-9])\b", a["text"], re.I)
+        possible_year = int(year.group(0)) if year else (2000 + int(short_year.group(1)) if short_year else None)
         output.append({
             "id": hashlib.sha256((issuer["ticker"] + "|" + url).encode()).hexdigest()[:24],
             "ticker": issuer["ticker"], "issuer": issuer["issuer"],
             "documentUrl": url, "sourcePage": base, "linkText": a["text"],
             "contextHeading": a["context"], "kindCandidate": typ,
-            "fiscalYearCandidate": int(year.group(0)) if year else None,
+            "fiscalYearCandidate": possible_year,
             "quarterCandidate": int(quarter.group(1)) if quarter else None,
             "publishedAt": None, "state": "candidate_requires_review",
             "documentDownloaded": False, "privateRetentionApproved": False,
