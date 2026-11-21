@@ -139,6 +139,11 @@ jobs:
         run: |
           node --check brand/data-portal.js
           node --test tests/test_data_portal_v58.mjs
+      - name: V115 rights-first Data Products catalog unit and browser acceptance
+        run: |
+          node --check brand/data-portal.js
+          node --test tests/test_data_portal_v115.mjs
+          python tests/browser_check_data_products_v115.py
       - name: V59 saved workspace settings tests
         run: |
           node --check workspaces-v59.js
