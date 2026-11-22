@@ -437,3 +437,19 @@ body[data-page=shipping] #shippingWorldMap .sw119-detail-actions a:focus-visible
 @media(prefers-reduced-motion:reduce){
  body[data-page=shipping] #shippingWorldMap *{scroll-behavior:auto;animation:none!important;transition:none!important}
 }
+
+body[data-page=shipping].sw119-inspector-hidden #shippingWorldMap .sw-atlas-inspector{display:none!important}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context{
+ display:grid;gap:4px;padding:13px 12px;border:1px solid #367a6f;
+ border-radius:8px;background:#113d3b;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context small{
+ color:#9bdace;font-size:10px;font-weight:740;line-height:1.4;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context strong{
+ color:#74f2c9;font:800 clamp(21px,2vw,27px)/1.2 Manrope,'DM Sans',sans-serif;
+ font-variant-numeric:tabular-nums;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context p{
+ color:#a5cfc9;font-size:11px;line-height:1.5;margin:0;
+}
