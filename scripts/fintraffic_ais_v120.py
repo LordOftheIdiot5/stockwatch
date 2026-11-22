@@ -162,8 +162,9 @@ def main() -> None:
     mmsi = mmsi_number(args.mmsi)
     if mmsi is None:
         parser.error("MMSI must contain exactly nine digits")
-    if "data" in args.out.parts and "public" in args.out.parts:
-        parser.error("Do not publish pilot snapshots")
+    # Keep real AIS responses outside the web-published GitHub checkout entirely.
+    if args.out.resolve().is_relative_to(Path(__file__).resolve().parents[1]):
+        parser.error("Pilot AIS snapshots must be written outside the Stockwatch repository")
     locations = fetch_json(API + "/locations?mmsi=" + str(mmsi))
     try:
         vessel = fetch_json(API + "/vessels/" + str(mmsi))
