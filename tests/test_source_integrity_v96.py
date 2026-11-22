@@ -13,12 +13,15 @@ class V96IntegrityTests(TestCase):
         cls.css=(ROOT/"freshness-v96.css").read_text(encoding="utf-8")
         cls.scan=(ROOT/".github/workflows/scan.yml").read_text(encoding="utf-8")
         cls.production=(ROOT/"scripts/production_health.py").read_text(encoding="utf-8")
-    def test_overview_shows_actual_strict_session_coverage(self):
+    def test_overview_labels_date_comparability_without_certifying_exchange_closes(self):
         for key in ("state.health?.priceFreshness","equities","strict?.comparable",
-                    "strict?.unconfirmed","confirmed for completed session",
-                    "Older moves are not live alerts",
-                    "sw96-source-status"):
+                    "strict?.unconfirmed","date-comparable",
+                    "date-aligned by scanner heuristics","UTC weekday cutoff",
+                    "not venue-certified daily closes","redistribution licence",
+                    "Older moves are not live alerts","sw96-source-status"):
             self.assertIn(key,self.overview)
+        self.assertNotIn("session-verified",self.overview)
+        self.assertNotIn("confirmed for completed session",self.overview)
         self.assertIn("freshness-v96.css?v=1",self.index)
         self.assertIn("dated observations",self.overview)
     def test_calendar_source_based_releases_separate_from_future_dates(self):

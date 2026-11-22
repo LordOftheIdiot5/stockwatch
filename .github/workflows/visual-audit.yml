@@ -10,6 +10,8 @@ on:
       - 'overview-unified-v116c.js'
       - 'overview-compact-v116e.css'
       - 'overview-layout-v116f.css'
+      - 'source-precision-v116g.css'
+      - 'tests/browser_check_source_precision_v116g.py'
       - 'tests/browser_check_layout_v116f.py'
       - 'overview-geo-v110e.js'
       - 'overview-structure-v110d.js'
@@ -92,6 +94,8 @@ jobs:
         run: python tests/browser_check_v116e_coverage.py
       - name: V116f source-backed compact layout and browser zoom experiment
         run: python tests/browser_check_layout_v116f.py
+      - name: V116g honest source-date labels, 4-width keyboard and theme acceptance
+        run: python tests/browser_check_source_precision_v116g.py
       - name: V116 first-screen panel geometry
         id: v116_firstfold
         continue-on-error: true
