@@ -65,13 +65,19 @@ def main():
        assert 'spot' in details.inner_text().lower()
        assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+3'),(width,theme,page.evaluate('document.documentElement.scrollWidth'))
        assert not errs,(width,theme,errs)
+       # A screenshot scrolled to an opened explanation is NOT a first-fold audit.
+       # Return to actual page top before measuring geometry and capturing evidence.
+       page.evaluate('window.scrollTo(0,0)')
+       page.wait_for_timeout(80)
+       assert page.evaluate('window.scrollY')==0
+       firstfold_top=round(panel.bounding_box()['y'])
        if theme=='dark' and width in (390,1672):
         path=ROOT/'workspace-previews'/f'shipping-s1-firstfold-{width}.png'
         path.parent.mkdir(exist_ok=True)
         page.screenshot(path=str(path),animations='disabled')
        evidence.append({'width':width,'theme':theme,
         'rates':page.locator('#offshoreBody tr').count(),
-        'rateTop':round(panel.bounding_box()['y']),
+        'rateTop':firstfold_top,
         'pageWidth':page.evaluate('document.documentElement.scrollWidth')})
       finally:page.close()
     fail=browser.new_page(viewport={'width':390,'height':840})
