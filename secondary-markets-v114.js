@@ -59,7 +59,7 @@
   }
   nav.append(list);
   const note=make('p','sw114-task-note',
-    page==='shipping'?'Understand the units, reporting period and source before comparing figures. The world map distinguishes ports, cargo and rates from ship positions.':
+    page==='shipping'?'Understand units, reporting periods and sources: port locations, cargo activity, freight prices and ship positions are different measures, not interchangeable.':
     page==='spreads'?'Ratios require matched-session A/B observations. Older ratios are reference only.':
     page==='commodities'?'Dated last-known market references and listed proxies, not executable quotes.':
     page==='shorts'?'Register observations are dated disclosures, not complete live short interest.':
