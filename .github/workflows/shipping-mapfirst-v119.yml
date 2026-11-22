@@ -1,0 +1,41 @@
+name: Shipping V119 map-first production acceptance
+on:
+  pull_request:
+    paths:
+      - 'shipping.html'
+      - 'shipping-mapfirst-v119.css'
+      - 'shipping-mapfirst-v119.js'
+      - 'data/shipping-world-borders-v119.json'
+      - 'tests/test_shipping_mapfirst_v119.mjs'
+      - 'tests/browser_check_shipping_mapfirst_v119.py'
+      - '.github/workflows/shipping-mapfirst-v119.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  map-first:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Verify source rights, map geometry, JS syntax and complete research
+        run: |
+          node --check shipping-mapfirst-v119.js
+          node --test tests/test_shipping_mapfirst_v119.mjs
+      - name: Install Chromium browser
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Validate 7 widths, 2 themes and source-safe full-screen map
+        run: python tests/browser_check_shipping_mapfirst_v119.py
+      - name: Archive desktop and mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: shipping-v119-map-first-screenshots
+          path: workspace-previews/shipping-mapfirst-v119-*.png
+          if-no-files-found: ignore
+          retention-days: 14

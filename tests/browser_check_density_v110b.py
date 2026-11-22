@@ -58,6 +58,20 @@ def main():
       assert page.locator('.sw-company-tabs [data-company-tab]').count()==7
       assert page.locator('#companyDriverMap').count()==1
       assert page.locator('#companyHistorySource').count()==1
+     elif route=='shipping':
+      # V119 deliberately replaces V110b's duplicate Shipping jumpbar
+      # with the full-screen, keyboard-accessible Maritime Atlas navigation.
+      atlas=page.locator('#shippingWorldMap.sw119-mapfirst')
+      atlas.wait_for(timeout=30000)
+      page.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
+      assert page.locator('.sw110b-jump').count()==0
+      assert page.locator('#sw119Topbar').is_visible()
+      assert page.locator('#sw119ResearchMenu').count()==1
+      assert page.locator('#sw119ResearchIntro a[href="#offshoreRates"]').count()==1
+      assert page.locator('#sw119ResearchIntro a[href="#voyageEstimator"]').count()==1
+      assert page.locator('#offshoreRates .sw-offshore-card').count()==4
+      assert page.locator('#usdaRateCards .sw-usda-card').count()==2
+      assert atlas.bounding_box()['y']<85
      else:
       nav=page.locator('.sw110b-jump');nav.wait_for(timeout=30000)
       toggle=nav.locator('.sw110b-layout-toggle')

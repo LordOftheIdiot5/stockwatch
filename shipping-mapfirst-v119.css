@@ -1,0 +1,494 @@
+/* V119 approved maritime terminal — immersive map first, full original data desk preserved.
+ * Inspired by the owner-approved Nov 22 Stockwatch Maritime Atlas prototype.
+ * Invariants: real official source-dated observations; no live vessel simulation. */
+body[data-page=shipping]{--sw119-navy:#061422;--sw119-mint:#61e1bb}
+body[data-page=shipping] .sw-layout{display:block;min-height:100dvh}
+body[data-page=shipping] .sw-side{display:none!important}
+body[data-page=shipping] .sw-content{
+ max-width:none!important;padding:0!important;margin:0!important;width:100%!important;
+}
+body[data-page=shipping] .sw-content>.sw-page-head{display:none!important}
+body[data-page=shipping] .sw-content>.sw-footer{
+ max-width:none;padding:20px clamp(14px,3vw,38px);margin:0;
+}
+body[data-page=shipping] #v4app{width:100%;min-width:0;max-width:none}
+body[data-page=shipping] #v4app>:not(#shippingWorldMap){
+ box-sizing:border-box;max-width:min(1550px,calc(100% - 48px));margin-inline:auto;
+}
+body[data-page=shipping] #v4app>.sw119-research-intro,
+body[data-page=shipping] #v4app>#shippingDataGuide{
+ margin-top:17px;margin-bottom:16px;
+}
+/* Global site controls remain accessible after replacing the old desktop sidebar. */
+body[data-page=shipping] .sw119-topbar{
+ position:sticky;top:0;z-index:95;
+ min-height:66px;display:flex;align-items:center;gap:19px;
+ padding:9px clamp(17px,2vw,31px);
+ color:#eff9fb;background:#071321f7;
+ box-shadow:0 1px 0 #214257,0 8px 28px #020c1659;
+ font-family:'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] .sw119-brand{
+ display:inline-flex;align-items:center;gap:10px;flex-shrink:0;
+ color:#f2fcff;text-decoration:none;font:800 19px/1 Manrope,'DM Sans',sans-serif;
+ letter-spacing:-.045em;
+}
+body[data-page=shipping] .sw119-brand i{
+ width:33px;height:35px;display:grid;place-items:center;
+ background:#0c403e;border:1px solid #2d8b7a;
+ border-radius:7px;color:#80f2d0;font-style:normal;font-size:24px;
+}
+body[data-page=shipping] .sw119-brand strong{color:#64e5c0}
+body[data-page=shipping] .sw119-brand small{
+ display:block;margin-top:5px;color:#96afbe;font:700 8px/1.2 'DM Sans',sans-serif;letter-spacing:1.2px;
+}
+body[data-page=shipping] .sw119-top-divider{height:28px;width:1px;background:#294858}
+body[data-page=shipping] .sw119-section{
+ font:750 14px/1.35 Manrope,'DM Sans',sans-serif;white-space:nowrap;
+}
+body[data-page=shipping] .sw119-status{
+ padding:6px 10px;border:1px solid #387e75;border-radius:5px;
+ color:#86ebd2;background:#174a4269;font-size:10px;font-weight:770;letter-spacing:.07em;
+ white-space:nowrap;
+}
+body[data-page=shipping] .sw119-top-links{
+ margin-left:auto;display:flex;gap:9px;align-items:center;min-width:0;
+}
+body[data-page=shipping] .sw119-top-links>a,
+body[data-page=shipping] .sw119-research-toggle{
+ display:inline-flex;align-items:center;justify-content:center;
+ min-height:39px;min-width:0;padding:9px 12px;
+ border:1px solid #295166;border-radius:8px;
+ background:#0b2331;color:#d9ecf4;text-decoration:none;
+ font-size:12px;font-weight:720;cursor:pointer;
+}
+body[data-page=shipping] .sw119-top-links a:hover,
+body[data-page=shipping] .sw119-research-toggle:hover{
+ background:#124037;border-color:#56cbae;color:#dcfff2;
+}
+body[data-page=shipping] .sw119-research-menu{position:relative}
+body[data-page=shipping] .sw119-research-menu>summary{
+ list-style:none;display:flex;align-items:center;gap:6px;
+}
+body[data-page=shipping] .sw119-research-menu>summary::-webkit-details-marker{display:none}
+body[data-page=shipping] .sw119-research-links{
+ position:absolute;top:calc(100% + 9px);right:0;
+ display:grid;gap:2px;width:min(315px,calc(100vw - 30px));
+ z-index:105;padding:8px;border:1px solid #315970;border-radius:10px;
+ background:#0b1d2d;box-shadow:0 14px 50px #010910cf;
+}
+body[data-page=shipping] .sw119-research-links a{
+ min-height:39px;display:flex;align-items:center;
+ padding:9px 11px;border-radius:6px;color:#dceff5;
+ font-size:12px;font-weight:700;text-decoration:none;
+}
+body[data-page=shipping] .sw119-research-links a:hover{background:#1e4551;color:#90ffe2}
+/* A large map is the whole initial decision surface, not a small dashboard card. */
+body[data-page=shipping] #v4app>#shippingWorldMap{
+ position:relative;display:block;
+ width:100%;max-width:none!important;
+ height:calc(100dvh - 66px);min-height:680px;
+ margin:0!important;padding:0!important;border:0!important;border-radius:0!important;
+ background:#071a2a;overflow:hidden;isolation:isolate;box-shadow:none;
+ color:#e9f8fb;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-layout{
+ position:absolute;inset:0;z-index:0;
+ display:block;min-width:0;margin:0!important;padding:0!important;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-map-area{
+ position:absolute;inset:0;overflow:hidden;
+ border:0;border-radius:0;background:
+ radial-gradient(ellipse at 53% 42%,#154054,#051526 78%);
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-svg{
+ position:absolute;inset:0;width:100%;height:100%;
+ aspect-ratio:unset;min-height:0!important;
+ background:#071a2a;cursor:grab;
+ touch-action:none;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-head{
+ position:absolute;top:24px;left:clamp(20px,2.2vw,36px);
+ z-index:12;display:block;
+ width:calc(100% - 570px);max-width:790px;
+ margin:0!important;padding:0!important;background:none;
+ pointer-events:none;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-head>*{pointer-events:auto}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-head .sw-kicker{
+ color:#64e6c0;font-size:10.5px;font-weight:800;letter-spacing:.095em;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-head h2{
+ margin:10px 0 7px;color:#f3f9ff;font:820 clamp(26px,2.25vw,36px)/1.17 Manrope,'DM Sans',sans-serif;
+ letter-spacing:-.055em;text-shadow:0 3px 18px #031521d9;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-head p{
+ color:#a8c1cf;font-size:13px;max-width:700px;line-height:1.55;
+ text-shadow:0 2px 9px #041724;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-head>a{display:none}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-toolbar{
+ position:absolute;z-index:15;
+ left:clamp(14px,1.7vw,26px);top:clamp(195px,24vh,275px);
+ width:208px;display:flex;flex-direction:column;gap:4px;
+ padding:40px 10px 14px;border:1px solid #2b5064;border-radius:12px;
+ background:#0a2030f5;box-shadow:0 13px 36px #020e1a75;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-toolbar:before{
+ content:'EXPLORE';position:absolute;top:14px;left:15px;
+ color:#93aec0;font-size:10px;letter-spacing:.08em;font-weight:780;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab,
+body[data-page=shipping] #shippingWorldMap .sw119-offshore-tab{
+ display:flex;justify-content:flex-start;min-width:0;width:100%;
+ gap:10px;padding:11px 12px;min-height:40px;
+ color:#c0d5e1;background:transparent;border:1px solid transparent;
+ border-radius:7px;font-size:12.5px;font-weight:700;letter-spacing:0;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab:before{
+ content:'▥';color:#6be2bd;font-size:14px;line-height:1;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[data-layer=ports]:before{content:'⚓'}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[data-layer=containers]:before{content:'▥'}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[data-layer=roro]:before{content:'▤'}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[data-layer=connectivity]:before{content:'⌁'}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[data-layer=lanes]:before{content:'⇄'}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[data-layer=ais]:before{content:'◈'}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab[aria-pressed=true]{
+ color:#e6fff7;background:#1c584f;border-color:#387e6f;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-tab:hover{
+ color:#f0fff9;background:#224d4d;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-offshore-tab{
+ border-top:1px solid #32546a;border-radius:0;text-decoration:none;
+ color:#bce0dc;margin-top:5px;padding-top:14px;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar{
+ position:absolute;top:137px;left:clamp(244px,21vw,325px);
+ z-index:15;width:min(490px,calc(100% - 700px));
+ display:grid;grid-template-columns: minmax(0,1.2fr) minmax(0,.85fr);
+ align-items:end;gap:7px;padding:0;background:transparent;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar label{
+ min-width:0;display:grid;gap:4px;color:#b0d0dc;
+ font-size:10.5px;font-weight:770;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar label:nth-child(2){grid-row:1;grid-column:1}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar label:nth-child(1){grid-row:1;grid-column:2}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar label:nth-child(3){
+ grid-row:2;grid-column:1 / -1;max-width:420px;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar :is(select,input){
+ min-height:39px;border:1px solid #326276;border-radius:7px;
+ background:#081c2cf2;color:#e3f5fb;font-size:12px;
+ box-shadow:0 5px 20px #02121a7d;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector{
+ position:absolute;z-index:15;right:clamp(15px,1.8vw,29px);top:125px;
+ width:clamp(305px,24vw,394px);height:auto;max-height:calc(100% - 173px);
+ min-height:0;margin:0!important;padding:19px 20px;
+ display:flex;flex-direction:column;gap:10px;
+ color:#eaf7fe;background:#091d2df6;
+ border:1px solid #326174;border-radius:14px;
+ box-shadow:0 15px 60px #010d1bd4;overflow-y:auto;
+ scrollbar-width:thin;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector h3{
+ font:800 clamp(22px,2vw,32px)/1.18 Manrope,'DM Sans',sans-serif;
+ letter-spacing:-.035em;color:#f4faff;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector .sw-kicker{
+ font-size:10px;font-weight:800;color:#68dfbf;letter-spacing:.07em;
+ padding-right:25px;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector p{
+ font-size:12.5px;line-height:1.62;color:#a8c1d0;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-factgrid{
+ grid-template-columns:minmax(108px,.9fr) minmax(0,1fr);
+ border-block-color:#305064;padding:12px 0;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector strong{color:#e4fff6}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector a{color:#7be8ca}
+body[data-page=shipping] #shippingWorldMap .sw119-detail-actions{
+ margin-top:3px;padding-top:9px;border-top:1px solid #2e5263;
+ display:grid;gap:7px;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-detail-actions a{
+ display:flex;align-items:center;justify-content:space-between;gap:10px;
+ min-height:40px;padding:10px 12px;text-decoration:none;
+ color:#051e20!important;background:#6ce3bd;border-radius:7px;
+ font-size:12px;font-weight:800;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-detail-actions a+ a{
+ color:#d8f7ed!important;background:#19453e;border:1px solid #397a6b;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-inspector-close{
+ position:absolute;top:12px;right:12px;display:grid;place-items:center;
+ width:33px;height:33px;background:#183c4d;color:#e6f9fe;
+ border:1px solid #3b6777;border-radius:7px;cursor:pointer;font-size:19px;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar{
+ position:absolute;left:clamp(17px,2vw,31px);bottom:62px;z-index:13;
+ display:flex;flex-direction:column-reverse;align-items:flex-start;gap:8px;
+ min-height:0;padding:0;background:transparent;border:0;
+ color:#c8e2ed;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-zoom{
+ display:flex;flex-direction:column;align-items:flex-start;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-zoom button{
+ min-width:42px;min-height:40px;font-size:15px;
+ background:#0d2c3ef0;color:#e6f8fd;border:1px solid #3d697a;
+ box-shadow:0 5px 14px #020d1685;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-caption{
+ position:absolute;left:0;right:0;bottom:0;z-index:12;min-height:34px;
+ padding:9px clamp(15px,2vw,30px);
+ display:flex;justify-content:space-between;align-items:center;
+ color:#c4e1ed;background:#061727ec;border-top:1px solid #284e60;
+ font-size:11px;font-weight:690;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-legend{
+ position:absolute;left:clamp(73px,6vw,98px);bottom:62px;z-index:13;
+ display:flex;align-items:center;gap:8px;width:min(420px,calc(100% - 190px));
+ padding:9px 12px;border:1px solid #3c6975;border-radius:8px;
+ color:#bfe4ed;background:#092638ea;
+ font-size:11px;box-shadow:0 7px 20px #010a149f;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-legend .sw-atlas-legend-key{font-size:11px}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-legend .sw-atlas-asof{display:none}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-legend .sw-atlas-legend-key:before{
+ content:'●';color:#63eac1;margin-right:6px;
+}
+/* Natural Earth boundaries belong under observed pins, with no invented density heat. */
+body[data-page=shipping] #shippingWorldMap #sw119MaritimeGrid{
+ pointer-events:none;stroke:#1f4a63;stroke-width:.6;stroke-dasharray:3 8;opacity:.53;
+}
+body[data-page=shipping] #shippingWorldMap #sw119MaritimeBorders{
+ pointer-events:none;fill:none;stroke:#3e6980;stroke-width:.58;opacity:.7;
+ stroke-linejoin:round;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-point{
+ stroke:#c5ffed;stroke-width:1.6;fill:#5debbd;
+ filter:drop-shadow(0px 0px 3px #45e2b3);
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-point.sw-atlas-activity{
+ fill:#f1c67d;stroke:#fff2c5;filter:drop-shadow(0px 0px 3px #f1bd71);
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-point.sw-atlas-index{
+ fill:#a4b5fa;filter:drop-shadow(0px 0px 3px #aab3ff);
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-point.selected{
+ stroke:#effff6;stroke-width:3;filter:drop-shadow(0 0 6px #e4ffe9);
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-lane{
+ stroke:#74ffca;stroke-width:2.7;opacity:.92;
+}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-map-area:after{
+ content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+ background:radial-gradient(ellipse at center,transparent 40%,#061b2880 100%);
+}
+/* Research library remains complete, but it appears only AFTER the full map. */
+body[data-page=shipping] .sw119-research-intro{
+ padding:18px 19px;border:1px solid var(--sw-edge,#30465a);
+ border-radius:11px;background:var(--sw-card,#112132);display:grid;gap:10px;
+}
+body[data-page=shipping] .sw119-research-intro h2{
+ margin:0;color:var(--sw-text,#f0f6fc);
+ font:800 clamp(19px,2vw,26px)/1.25 Manrope,'DM Sans',sans-serif;
+}
+body[data-page=shipping] .sw119-research-intro p{
+ margin:0;color:var(--sw-muted,#acc6d0);font-size:12.5px;line-height:1.55;
+}
+body[data-page=shipping] .sw119-research-shortcuts{
+ display:flex;flex-wrap:wrap;gap:7px;
+}
+body[data-page=shipping] .sw119-research-shortcuts a{
+ padding:10px 12px;min-height:41px;
+ display:inline-flex;align-items:center;
+ border:1px solid var(--sw-edge,#35546a);border-radius:7px;
+ text-decoration:none;color:var(--sw-text,#eff9fa);
+ font-size:12px;font-weight:740;background:var(--sw-card-hi,#183348);
+}
+body[data-page=shipping] .sw119-research-shortcuts a:hover{
+ color:var(--sw-mint,#61e1bb);border-color:var(--sw-mint,#61e1bb);
+}
+body[data-page=shipping] #v4app>#shippingDataGuide{
+ padding:12px 18px;border:1px solid var(--sw-edge,#30465a);
+ border-radius:10px;background:var(--sw-card,#112132);
+}
+body[data-page=shipping] .sw119-back-map{
+ position:fixed;right:20px;bottom:21px;z-index:90;
+ display:none;padding:11px 15px;min-height:44px;
+ color:#04241e;background:#67e9c0;border:1px solid #abffe2;
+ border-radius:9px;box-shadow:0 8px 30px #061420c2;
+ text-decoration:none;font-size:12px;font-weight:800;
+}
+body[data-page=shipping].sw119-away-from-map .sw119-back-map{display:inline-flex}
+body[data-page=shipping] .sw119-topbar :is(a,summary):focus-visible,
+body[data-page=shipping] .sw119-inspector-close:focus-visible,
+body[data-page=shipping] #shippingWorldMap .sw119-detail-actions a:focus-visible{
+ outline:3px solid #72f4ce;outline-offset:3px;
+}
+@media(max-width:1180px){
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head{width:calc(100% - 470px)}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar{
+  left:241px;width:calc(100% - 630px);
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector{
+  right:12px;width:320px;padding:15px;top:190px;max-height:calc(100% - 240px);
+ }
+}
+@media(max-width:900px){
+ body[data-page=shipping] .sw119-topbar{min-height:58px;padding:8px 13px;gap:11px}
+ body[data-page=shipping] .sw119-top-divider{display:none}
+ body[data-page=shipping] .sw119-section{font-size:12px}
+ body[data-page=shipping] .sw119-status{display:none}
+ body[data-page=shipping] #v4app>#shippingWorldMap{
+  height:calc(100dvh - 58px - 60px);min-height:660px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head{
+  left:16px;top:15px;width:calc(100% - 32px);max-width:none;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head h2{
+  font-size:clamp(23px,4vw,31px);
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head p{font-size:11.5px}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-toolbar{
+  top:152px;left:12px;width:176px;padding:35px 7px 9px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-tab{
+  font-size:11.8px;min-height:37px;padding:8px 10px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar{
+  top:157px;left:200px;width:calc(100% - 215px);
+  grid-template-columns:minmax(0,1fr);gap:5px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar label{
+  grid-column:1!important;grid-row:auto!important;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar :is(input,select){
+  min-height:37px;font-size:11.5px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector{
+  position:fixed;z-index:110;
+  top:auto;right:10px;bottom:calc(64px + env(safe-area-inset-bottom,0px));
+  width:calc(100vw - 20px);max-width:600px;max-height:min(48dvh,480px);
+  margin:0!important;display:none;
+  box-shadow:0 0 0 100vmax #03121a7a,0 13px 50px #000e1b;
+ }
+ body[data-page=shipping].sw119-inspector-open #shippingWorldMap .sw-atlas-inspector{display:flex}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-legend{
+  left:12px;bottom:55px;width:min(370px,calc(100% - 24px));padding:7px 8px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar{
+  right:10px;left:auto;bottom:92px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-zoom{gap:4px}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-zoom button{
+  min-width:37px;min-height:37px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar #shippingMapCount{
+  display:none;
+ }
+ body[data-page=shipping] .sw119-back-map{bottom:76px;right:10px}
+}
+@media(max-width:540px){
+ body[data-page=shipping] .sw119-brand{font-size:15px}
+ body[data-page=shipping] .sw119-brand i{width:29px;height:30px;font-size:19px}
+ body[data-page=shipping] .sw119-brand small{font-size:7px}
+ body[data-page=shipping] .sw119-topbar{gap:7px}
+ body[data-page=shipping] .sw119-section{font-size:11px}
+ body[data-page=shipping] .sw119-top-links{gap:5px}
+ body[data-page=shipping] .sw119-top-links>a{display:none}
+ body[data-page=shipping] .sw119-research-toggle{font-size:11px;padding:8px}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head h2{
+  font-size:clamp(22px,5.6vw,27px);margin:6px 0 4px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head p{font-size:11px;line-height:1.4}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head .sw-kicker{font-size:9px}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-toolbar{
+  top:141px;width:149px;padding-top:34px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar{
+  top:144px;left:170px;width:calc(100% - 181px);
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar label{font-size:10px}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-controlbar :is(input,select){
+  min-height:36px;font-size:11px;padding:6px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-tab{
+  font-size:11px;min-height:35px;padding:7px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-tab:before{font-size:12px}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-legend{
+  font-size:9.5px;bottom:49px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-caption{
+  font-size:9.2px;padding:8px 10px;
+ }
+ body[data-page=shipping] #v4app>:not(#shippingWorldMap){
+  max-width:calc(100% - 22px);
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-inspector{padding:14px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page=shipping] #shippingWorldMap *{scroll-behavior:auto;animation:none!important;transition:none!important}
+}
+
+body[data-page=shipping].sw119-inspector-hidden #shippingWorldMap .sw-atlas-inspector{display:none!important}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context{
+ display:grid;gap:4px;padding:13px 12px;border:1px solid #367a6f;
+ border-radius:8px;background:#113d3b;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context small{
+ color:#9bdace;font-size:10px;font-weight:740;line-height:1.4;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context strong{
+ color:#74f2c9;font:800 clamp(21px,2vw,27px)/1.2 Manrope,'DM Sans',sans-serif;
+ font-variant-numeric:tabular-nums;
+}
+body[data-page=shipping] #shippingWorldMap .sw119-country-context p{
+ color:#a5cfc9;font-size:11px;line-height:1.5;margin:0;
+}
+
+@media(max-width:540px){
+ body[data-page=shipping] .sw119-section{display:none}
+ body[data-page=shipping] .sw119-topbar{min-width:0}
+ body[data-page=shipping] .sw119-top-links{flex-shrink:0}
+}
+
+
+/* The V114 task-navigation component can be prepended after V119 mounts.
+   Ensure the map remains first even when reactive child insertion reorders DOM. */
+body[data-page=shipping] #v4app{display:flex;flex-direction:column;align-items:stretch}
+body[data-page=shipping] #v4app>#shippingWorldMap{order:-3;flex:none;align-self:stretch}
+body[data-page=shipping] #v4app>#shippingDataGuide{order:-2;align-self:center}
+body[data-page=shipping] #v4app>.sw119-research-intro{order:-1;align-self:center}
+body[data-page=shipping] #v4app>:not(#shippingWorldMap){
+ width:min(1550px,calc(100% - 48px));align-self:center;
+}
+@media(max-width:540px){
+ body[data-page=shipping] #v4app>:not(#shippingWorldMap){
+  width:calc(100% - 22px);
+ }
+}
+
+
+/* Hide the original secondary trading tape/header and generated page jumpbar.
+   V119 has its own source-aware global navigation; retaining both added 162px
+   of duplicate chrome above the atlas on mobile. */
+body[data-page=shipping] .sw-main>.sw-tape,
+body[data-page=shipping] .sw-main>.sw-top,
+body[data-page=shipping] .sw-content>.sw110b-jump{display:none!important}
+
+/* Keep source-failure and mapped-count status visible even at phone widths. */
+@media(max-width:900px){
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar #shippingMapCount{
+  display:block!important;max-width:min(230px,64vw);font-size:10px;line-height:1.45;
+  padding:6px 8px;background:#0a2a39e8;color:#dceff7;border:1px solid #356176;border-radius:7px;
+  white-space:normal;overflow-wrap:anywhere;
+ }
+}

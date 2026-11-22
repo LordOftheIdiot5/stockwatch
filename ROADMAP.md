@@ -173,3 +173,7 @@ Execution plan: [docs/V110B-PRODUCT-COMPACT-TERMINAL-MAP.md](docs/V110B-PRODUCT-
 **Acceptance:** NOVO-B.CO, NHY.OL and SALM.OL in mobile/desktop browser tests; verify all seven native-button tabs, aria-pressed/aria-current, source history state, full report restore, keyboard, data quality, zero overflow and accurate source links. Preserve direct issuer search, financial statement and company driver-map tests. Production rollout only after exact assets and visual checks pass.
 
 **Next V110d:** substantiate unique per-company customer/supplier, ownership, industry/energy/freight exposures and financial revisions with original evidence and exact issuer identity, not headline co-mentions or assumed cash flows. V110e must review pixel-level approved screenshot composition plus complete menu-page task workflows. Data V102-V109 remain the primary source and licensing dependencies.
+
+### V119 — Maritime Atlas map-first Shipping redesign
+
+- Approved full-screen map-first UI and persistent contextual research navigation; original offshore dayrates, USDA freight, European/Nordic cargo, trade routes and voyage economics preserved. Reused Energy Nordl public-domain Natural Earth country boundaries. Source-specific metric definitions and honest **0 AIS ship positions** remain central. PR #220 and canonical Shipping/offshore issue #214 track tests and measured production rollout; sitewide data-comprehension issue #219 remains open.
