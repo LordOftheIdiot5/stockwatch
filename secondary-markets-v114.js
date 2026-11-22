@@ -7,7 +7,7 @@
  const cfg={
   spreads:[['spreadPairs','A/B pairs'],['abRanking','Relative-value watchlist'],
     ['spreadDetail','Selected pair']],
-  shipping:[['shippingBenchmarkAnchor','Routes and classes'],
+  shipping:[['offshoreRates','Reported vessel/rig prices'],['usdaRouteRates','Real bulk-grain freight USD/tonne'],['shippingBenchmarkAnchor','Routes and classes'],
     ['routeCompare','Compare routes'],['voyageEstimator','Voyage scenario'],
     ['freightPPIContent','Official cost index'],['worldBankPortTraffic','Port activity']],
   commodities:[['commodityTabs','Market references']],
@@ -40,6 +40,12 @@
    nav=make('nav','sw114-tasknav');
    nav.setAttribute('aria-label','On this research page');
    app.prepend(nav);
+  }
+  // Shipping rate facts are the primary decision task. Keep secondary links
+  // accessible, but position the duplicate 'On this page' block AFTER prices.
+  if(page==='shipping'){
+   const priced=app.querySelector('#usdaRouteRates')||app.querySelector('#offshoreRates');
+   if(priced&&priced.nextElementSibling!==nav)priced.insertAdjacentElement('afterend',nav);
   }
   const signature=available.map(x=>x[0]).join('|');
   if(nav.dataset.sections===signature)return;

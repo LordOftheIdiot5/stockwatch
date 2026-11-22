@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "reportedAt": "2026-11-19",
+  "observationDate": "2026-11-12",
+  "source": "USDA Agricultural Marketing Service",
+  "report": "Grain Transportation Report — 19 November 2026",
+  "sourceUrl": "https://www.ams.usda.gov/sites/default/files/media/GTR11192026.pdf",
+  "sourceLocator": "Page 3, Snapshots by Sector / Ocean",
+  "sourceKind": "official_us_federal_factual_report",
+  "rateType": "published_ocean_grain_freight_indication",
+  "currency": "USD",
+  "unit": "USD/metric_ton",
+  "isBrokerRate": false,
+  "isExecutableQuote": false,
+  "isContainerRate": false,
+  "publicationNotes": "Original government report states both routes are unchanged week-over-week, but the preceding issue lists a different Gulf endpoint; do not infer a same-week percentage movement from potentially inconsistent prose. Preserve actual published date and route-specific USD/metric tonne values.",
+  "rates": [
+    {
+      "id": "us-gulf-japan-grain-2026-11-12",
+      "route": "U.S. Gulf → Japan",
+      "cargo": "Bulk grain",
+      "value": 72.75,
+      "unit": "USD/metric_ton",
+      "observationDate": "2026-11-12"
+    },
+    {
+      "id": "pnw-japan-grain-2026-11-12",
+      "route": "Pacific Northwest → Japan",
+      "cargo": "Bulk grain",
+      "value": 39.5,
+      "unit": "USD/metric_ton",
+      "observationDate": "2026-11-12"
+    }
+  ]
+}
