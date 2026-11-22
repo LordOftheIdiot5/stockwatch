@@ -1,0 +1,43 @@
+name: Shipping Nordic EU and NavProfit integration
+on:
+  pull_request:
+    paths:
+      - 'shipping-regional-v117t.js'
+      - 'shipping-regional-v117t.css'
+      - 'shipping-offshore-econ-v117t.js'
+      - 'shipping.html'
+      - 'secondary-markets-v114.js'
+      - 'tests/test_shipping_region_navprofit_v117t.mjs'
+      - 'tests/browser_check_shipping_region_v117t.py'
+      - '.github/workflows/shipping-nordic-navprofit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Source and model regression / JS syntax
+        run: |
+          node --check shipping-regional-v117t.js
+          node --check shipping-offshore-econ-v117t.js
+          node --test tests/test_shipping_region_navprofit_v117t.mjs
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: 7 widths x 2 themes, model integrity and failure recovery
+        run: python tests/browser_check_shipping_region_v117t.py
+      - name: Capture responsive screenshots
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: shipping-region-navprofit-evidence
+          path: workspace-previews/shipping-region-v117t-firstfold-*.png
+          if-no-files-found: ignore
+          retention-days: 14
