@@ -92,6 +92,7 @@ def main():
        page.locator('#shippingMapPick').select_option('us-gulf-japan-grain-2026-11-12')
        assert '$72.75' in page.locator('#shippingMapFact').inner_text()
        assert '2026-11-12' in page.locator('#shippingMapFact').inner_text()
+       page.locator('#sw119DetailActions a[href="#voyageEstimator"]').wait_for(state='visible',timeout=5000)
        assert page.locator('#sw119DetailActions a[href="#voyageEstimator"]').count()==1
        page.locator('[data-layer="ais"]').click()
        assert '0 verified vessel positions' in page.locator('#shippingMapCount').inner_text()

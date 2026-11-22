@@ -159,7 +159,7 @@ function inspectorUX(atlas){
   if(layer==='ports'&&selected){
    const country=countryIso3[selected.split('-')[0]];
    const rows=await loadPortIndex();
-   if($(atlas,'#shippingMapPick')?.value!==selected)return;
+   if($(atlas,'#shippingMapPick')?.value!==selected||atlas.querySelector('.sw-atlas-tab[aria-pressed="true"]')?.dataset.layer!==layer)return;
    const x=rows.get(country);
    if(x){
     const stat=document.createElement('div');stat.className='sw119-country-context';
