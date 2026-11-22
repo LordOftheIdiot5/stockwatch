@@ -60,3 +60,12 @@ test('map navigation is keyboard accessible, protected on mobile and keeps the r
  assert.match(css,/focus-visible/);
  assert.match(css,/\.sw119-inspector-open/);
 });
+
+test('async research refresh cannot permanently delete the original atlas and its linked data context',()=>{
+ assert.match(atlas,/activeUI=null/);
+ assert.match(atlas,/anchor.insertAdjacentElement\('afterend',activeUI.el\)/);
+ assert.match(ux,/atlasRef=null, guideRef=null, introRef=null/);
+ assert.match(ux,/!app.contains\(atlas\)/);
+ assert.match(ux,/guideRef.parentElement!==app/);
+ assert.match(ux,/introRef.parentElement!==app/);
+});

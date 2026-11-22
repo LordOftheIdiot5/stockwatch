@@ -22,7 +22,7 @@ const research=[
  ['#shippingDataGuide','What shipping data means'],
  ['health.html','Data health and sources']
 ];
-let mounted=false, portIndex=null, bordersLoading=false;
+let mounted=false, portIndex=null, bordersLoading=false, atlasRef=null, guideRef=null, introRef=null;
 const $=(p,id)=>p.querySelector(id);
 function header(){
  const el=document.createElement('div');el.id='sw119Topbar';el.className='sw119-topbar';
@@ -207,19 +207,26 @@ function inspectorUX(atlas){
  schedule();
 }
 function mount(){
- const atlas=app.querySelector('#shippingWorldMap');
+ const atlas=app.querySelector('#shippingWorldMap')||atlasRef;
  if(!atlas)return;
+ // V4 may rebuild #v4app while refreshing sources. Reattach the same
+ // vetted map node and its controls to the new source-backed research DOM.
+ if(!app.contains(atlas)&&!app.querySelector('#usdaRouteRates'))return;
+ atlasRef=atlas;
  if(app.firstElementChild!==atlas)app.prepend(atlas);
  if(!mounted){
   mounted=true;
   document.body.classList.add('sw119-shipping-mapfirst');
   const top=header();app.parentElement.insertBefore(top,app);
-  const guide=$(atlas,'#shippingDataGuide');
-  if(guide)atlas.insertAdjacentElement('afterend',guide);
-  const details=intro();
-  (guide||atlas).insertAdjacentElement('afterend',details);
+  guideRef=$(atlas,'#shippingDataGuide');
+  if(guideRef)atlas.insertAdjacentElement('afterend',guideRef);
+  introRef=intro();
+  (guideRef||atlas).insertAdjacentElement('afterend',introRef);
   footer();
   polishAtlas(atlas);inspectorUX(atlas);
+ }else{
+  if(guideRef&&guideRef.parentElement!==app)atlas.insertAdjacentElement('afterend',guideRef);
+  if(introRef&&introRef.parentElement!==app)(guideRef||atlas).insertAdjacentElement('afterend',introRef);
  }
 }
 let waiting=false;

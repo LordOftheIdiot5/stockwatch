@@ -31,7 +31,7 @@ const regions={
  americas:'Americas',
  africa:'Africa'
 };
-let loaded=null, mounted=false;
+let loaded=null, mounted=false, activeUI=null;
 function get(url){
  return fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()});
 }
@@ -258,9 +258,14 @@ function frame(){
  return {el,setData(d){state.data=d;draw()},state};
 }
 function mount(){
- if(mounted||app.querySelector('#shippingWorldMap'))return;
+ if(app.querySelector('#shippingWorldMap'))return;
  const anchor=app.querySelector('#usdaRouteRates');if(!anchor)return;
- mounted=true;const ui=frame();anchor.insertAdjacentElement('afterend',ui.el);
+ // V4 can refresh the entire research app after initial async ingestion.
+ // Keep the original interactive map node with its fetched real data and
+ // listeners instead of leaving the page without an atlas on refresh.
+ if(mounted&&activeUI){anchor.insertAdjacentElement('afterend',activeUI.el);return;}
+ mounted=true;const ui=frame();activeUI=ui;
+ anchor.insertAdjacentElement('afterend',ui.el);
  sources().then(d=>ui.setData(d)).catch(()=>{ui.el.querySelector('#shippingMapCount').textContent='Map reference data temporarily unavailable.';ui.el.querySelector('#shippingMapExplanation').textContent='Source errors are visible; the original rates and regional indicators remain available elsewhere on Shipping.';ui.el.querySelector('#shippingMapPick').replaceChildren(new Option('No verified map observations available',''))});
 }
 let queued=false;
