@@ -31,6 +31,16 @@ def main():
        assert page.locator('.sw-side').count()==1 and not page.locator('.sw-side').is_visible()
        bbox=map.bounding_box()
        assert bbox and bbox['height'] >=620,(width,theme,bbox)
+       if bbox['y']>75:
+        diagnostics=page.evaluate("""() => ({
+          topbar:document.querySelector('#sw119Topbar')?.getBoundingClientRect().toJSON(),
+          pagehead:{r:document.querySelector('.sw-page-head')?.getBoundingClientRect().toJSON(),display:getComputedStyle(document.querySelector('.sw-page-head')).display},
+          app:document.querySelector('#v4app')?.getBoundingClientRect().toJSON(),
+          children:[...document.querySelector('#v4app').children].slice(0,7).map(x=>({id:x.id,cls:x.className?.toString().slice(0,100),y:x.getBoundingClientRect().y,height:x.getBoundingClientRect().height,order:getComputedStyle(x).order})),
+          topChildren:[...document.querySelector('.sw-content').children].slice(0,5).map(x=>({id:x.id,cls:x.className?.toString().slice(0,50),y:x.getBoundingClientRect().y,height:x.getBoundingClientRect().height})),
+          bodyClass:document.body.className
+        })""")
+        print('MAP_LAYOUT_DIAGNOSTICS '+json.dumps(diagnostics),flush=True)
        assert bbox['y'] <=75,(width,theme,bbox)
        assert bbox['width']>=width-6,(width,theme,bbox)
        assert page.locator('#shippingMapPins .sw-atlas-point').count()==40
