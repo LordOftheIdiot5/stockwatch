@@ -46,7 +46,8 @@ def main():
      assert page.locator('.sw98-intelligence-rail .sw-overview-news').count()==1
      assert page.locator('#globalMarketPulse').count()==1
      assert 'Taiwan sources connected' in page.locator('#globalMarketPulse').inner_text()
-     assert 'session-verified' in page.locator('details.sw96-source-status').inner_text()
+     assert 'date-comparable' in page.locator('details.sw96-source-status').inner_text()
+     assert 'session-verified' not in page.locator('details.sw96-source-status').inner_text()
      first_count=page.locator('#workspaceHeatCount').inner_text()
      assert 'dated changes' in first_count and 'price-only' in first_count
      # The default never quietly hides price-only/missing records: user can see counts
