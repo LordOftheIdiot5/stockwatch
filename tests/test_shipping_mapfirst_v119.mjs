@@ -14,7 +14,7 @@ test('V119 is a full-viewport source-backed atlas, not a discarded shipping libr
  assert.match(html,/shipping-mapfirst-v119\.js\?v=119a/);
  for(const p of ['v4.js','shipping-offshore-s1.js','shipping-usda-s1.js','shipping-regional-v117t.js','shipping-offshore-econ-v117t.js','shipping-atlas-v118.js'])assert.ok(html.includes(p),p);
  assert.match(js,/app\.prepend\(atlas\)/);
- assert.match(js,/insertAdjacentElement\('afterend',details\)/);
+ assert.match(js,/insertAdjacentElement\('afterend',introRef\)/);
  assert.match(js,/sw119-research-intro/);
  for(const s of ['#offshoreRates','#usdaRouteRates','#nordicMaritime','#worldBankPortTraffic','#roroMarketTraffic','#unctadConnectivity','#routeCompare','#shippingBenchmarkAnchor','#navprofitEconomics','#voyageEstimator','#shippingDataGuide'])assert.ok(js.includes(s),s);
  assert.match(css,/#v4app>#shippingWorldMap/);
