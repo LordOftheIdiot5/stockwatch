@@ -79,6 +79,11 @@ def main():
        page.wait_for_timeout(80)
        assert page.evaluate('window.scrollY')==0
        firstfold_top=round(panel.bounding_box()['y'])
+       first_price_top=round(cards.first.bounding_box()['y'])
+       if width in (390,1672):
+        # Price visibility is now a desktop/mobile first-screen acceptance gate.
+        assert firstfold_top<540,(width,theme,firstfold_top)
+        assert first_price_top<930,(width,theme,first_price_top)
        if theme=='dark' and width in (390,1672):
         path=ROOT/'workspace-previews'/f'shipping-s1-firstfold-{width}.png'
         path.parent.mkdir(exist_ok=True)

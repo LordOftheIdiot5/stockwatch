@@ -71,9 +71,10 @@ function render(node,d,src){
 }
 function mount(){
  if(document.getElementById('offshoreRates'))return;
- const top=host.querySelector('.sw-hero + .sw-grid4'),route=host.querySelector('#shippingBenchmarkAnchor');
+ const top=host.querySelector('.sw-hero'),route=host.querySelector('#shippingBenchmarkAnchor');
  if(!top||!route)return;
- const n=create();top.insertAdjacentElement('afterend',n);
+ // Real published rates are the primary market task, before old route catalog widgets.
+ const n=create();top.insertAdjacentElement('beforebegin',n);
  load().then(({d,src})=>{if(document.getElementById('offshoreRates')===n)render(n,d,src)}).catch(()=>{
   if(document.getElementById('offshoreRates')===n){n.querySelector('#offshoreStatus').textContent='Original offshore rate evidence is temporarily unavailable. Existing shipping data and routes remain below.';n.classList.add('sw-offshore-error')}
  });
