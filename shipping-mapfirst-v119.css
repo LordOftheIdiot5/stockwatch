@@ -453,3 +453,9 @@ body[data-page=shipping] #shippingWorldMap .sw119-country-context strong{
 body[data-page=shipping] #shippingWorldMap .sw119-country-context p{
  color:#a5cfc9;font-size:11px;line-height:1.5;margin:0;
 }
+
+@media(max-width:540px){
+ body[data-page=shipping] .sw119-section{display:none}
+ body[data-page=shipping] .sw119-topbar{min-width:0}
+ body[data-page=shipping] .sw119-top-links{flex-shrink:0}
+}
