@@ -25,7 +25,7 @@ def main():
        page.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
        top=page.locator('#sw119Topbar')
        assert top.is_visible()
-       assert 'Maritime Atlas' in top.inner_text()
+       assert ('Maritime Atlas' in top.inner_text() if width>540 else 'MARITIME INTELLIGENCE' in top.inner_text())
        assert page.locator('.sw-content > .sw-page-head').count()==1
        assert not page.locator('.sw-content > .sw-page-head').is_visible()
        assert page.locator('.sw-side').count()==1 and not page.locator('.sw-side').is_visible()
