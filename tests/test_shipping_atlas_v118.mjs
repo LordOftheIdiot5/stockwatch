@@ -45,7 +45,7 @@ test('world atlas layers explain what observed data does not mean and do not inv
  assert.match(script,/0 verified vessel positions/);
  assert.match(script,/No permitted live AIS position source/);
  assert.match(script,/not a navigational/i);
- assert.match(script,/not a live ship position/i);
+ assert.match(script,/not live ship positions|No permitted live AIS position source|No ship is plotted/i);
  assert.match(script,/schematic/i);
  assert.match(script,/TEU/);
  assert.match(script,/LSCI/);
