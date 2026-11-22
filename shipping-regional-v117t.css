@@ -62,3 +62,51 @@ body[data-page=shipping] .sw-osv-econ :is(button,summary,input,select):focus-vis
  body[data-page=shipping] .sw-nordic-card{padding:10px}
  body[data-page=shipping] .sw-nordic-card strong{font-size:20px}
 }
+
+body[data-page=shipping] .sw-osv-econ>p{margin:8px 0 11px}
+body[data-page=shipping] .sw-osv-econ>p a,
+body[data-page=shipping] .sw-osv-citation a{color:var(--sw-mint,#58e4bb)}
+body[data-page=shipping] .sw-osv-controls{
+ display:grid;grid-template-columns:1.6fr 1fr;gap:10px;
+}
+body[data-page=shipping] .sw-osv-fields{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:12px 0;
+}
+body[data-page=shipping] .sw-osv-econ form label{
+ min-width:0;display:grid;gap:6px;font-size:12px;line-height:1.42;
+ color:var(--sw-muted,#adc0d0);
+}
+body[data-page=shipping] .sw-osv-econ form :is(input,select){
+ display:block;min-width:0;width:100%;min-height:42px;box-sizing:border-box;
+ border:1px solid var(--sw-edge,#30465a);border-radius:7px;
+ background:var(--sw-card-hi,#152535);color:var(--sw-text,#eaf8ff);
+ padding:8px;font-size:13px;line-height:1.35;
+}
+body[data-page=shipping] .sw-osv-citation{font-size:12px;line-height:1.5}
+body[data-page=shipping] .sw-osv-econ .sw-osv-run{
+ background:var(--sw-mint,#58e4bb);color:#06211b;
+ font-size:13px;font-weight:750;border:0;border-radius:8px;
+ min-height:44px;padding:11px 15px;cursor:pointer;
+}
+body[data-page=shipping] .sw-osv-results{
+ margin-top:15px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;
+}
+body[data-page=shipping] .sw-osv-results>div{
+ background:var(--sw-card-hi,#152535);border:1px solid var(--sw-edge,#30465a);
+ padding:12px;border-radius:8px;display:grid;gap:5px;
+}
+body[data-page=shipping] .sw-osv-results small{color:var(--sw-muted,#adc0d0);font-size:11px}
+body[data-page=shipping] .sw-osv-results strong{
+ color:var(--sw-text,#edf7ff);font-size:clamp(17px,1.5vw,23px);
+ font-variant-numeric:tabular-nums;overflow-wrap:anywhere;
+}
+body[data-page=shipping] .sw-osv-disclaimer{margin:10px 0 0!important}
+@media(max-width:950px){
+ body[data-page=shipping] .sw-osv-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page=shipping] .sw-osv-results{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:550px){
+ body[data-page=shipping] .sw-osv-controls{grid-template-columns:1fr}
+ body[data-page=shipping] .sw-osv-fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ body[data-page=shipping] .sw-osv-results{grid-template-columns:1fr 1fr}
+}
