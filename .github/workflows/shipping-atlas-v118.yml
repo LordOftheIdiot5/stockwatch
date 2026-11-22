@@ -1,0 +1,44 @@
+name: Shipping V118 maritime map and comprehension
+on:
+  pull_request:
+    paths:
+      - 'shipping-atlas-v118.js'
+      - 'shipping-atlas-v118.css'
+      - 'data/shipping-world-atlas-v118.json'
+      - 'shipping.html'
+      - 'shipping-regional-v117t.js'
+      - 'secondary-markets-v114.js'
+      - 'secondary-markets-v114.css'
+      - 'tests/test_shipping_atlas_v118.mjs'
+      - 'tests/browser_check_shipping_atlas_v118.py'
+      - '.github/workflows/shipping-atlas-v118.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  maritime-atlas:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Source-identity / no fake AIS / geography / explanation tests
+        run: |
+          node --check shipping-atlas-v118.js
+          node --test tests/test_shipping_atlas_v118.mjs
+      - name: Browser installation
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: 14 viewport/theme combos, map layers, controls, absence and fallback
+        run: python tests/browser_check_shipping_atlas_v118.py
+      - name: Save interactive map screenshots
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: shipping-v118-maritime-atlas
+          path: workspace-previews/shipping-world-map-v118-*.png
+          if-no-files-found: ignore
+          retention-days: 14
