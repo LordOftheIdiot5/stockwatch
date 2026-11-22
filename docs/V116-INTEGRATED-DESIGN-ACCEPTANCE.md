@@ -1,5 +1,5 @@
 # V116 — integrated design acceptance and open defects
-**State:** V116a measured first-fold implementation and expanded QA in progress. **Not a final owner-accepted design certificate.**
+**State (2026-11-22):** V116f deployed, with 19-route automated checks passing; V116g is a source-label accuracy candidate. **Not a final owner-accepted design/accessibility certificate.**
 **Approved concept:** [APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md](APPROVED-STOCKWATCH-DESIGN-TARGET-V1.md) / Library `/Stockwatch/Design References/stockwatch-approved-full-width-overview-v1.png`, 1672×941, SHA-256 `df85998bd202dd9e4b3832a85edfaaf9fde78a417af4dcc3c7ced9e076be7b00`.
 
 ## Grounded baseline (V115 checkout capture, 21 November 2026)
@@ -47,3 +47,12 @@ The [V116a visual artifact](https://github.com/LordOftheIdiot5/stockwatch/action
 - [ ] **Owner's explicit visual sign-off** before calling Stockwatch's approved design finished.
 
 **Resumption order:** Review `visual-audit/v116/acceptance-report.json` and screenshot artifact, fix failures and geometry; run full release suite + V116 visual audit; verify production file bytes and independent scanner job, then start V116b remaining structural/visual defects. Never infer design acceptance from a green unit-test suite.
+
+
+## V116f measured progress and V116g source-precision gate (2026-11-22)
+
+- V116f [PR #212](https://github.com/LordOftheIdiot5/stockwatch/pull/212) deployed as `872a75e3`, confirmed by [Pages run #44960176985](https://github.com/LordOftheIdiot5/stockwatch/actions/runs/44960176985). The heatmap now begins near 873px / 871px / 851px at desktop 1440 / 1672 / 1920. This is not parity with the illustrative reference's ~595px heatmap start, and native 200% zoom plus owner visual approval remain open.
+- On 22 November the saved `data/source-health.json` still describes 136/139 monitored prices as comparable to a **conservative UTC weekday session-date heuristic**, with just 1/139 explicit MICs and no 500-listing licensed histories. The source banner must not call these "session-verified" in a way that implies official exchange certification. Distinguish date comparisons from exchange-authorized official closes and from display/redistribution rights.
+- V116g acceptance: the public header shows a concise **date-comparable** metric, the keyboard-expanded explanation says **not venue-certified daily closes nor a redistribution licence**, real comparison dates and failure states are preserved, no overflow from the longer disclosure, and original data/counts remain untouched.
+- Company/issuer review and price-feed legal rights remain tracked in [#208](https://github.com/LordOftheIdiot5/stockwatch/issues/208) and [#176](https://github.com/LordOftheIdiot5/stockwatch/issues/176). Bloomberg's OpenFIGI Facilitators listing acknowledges Nordl's instrument work but is **not** a market-data licence.
+- All 19 route screenshots and full design/zoom signoff still require owner review. Continue first-screen composition without fabricating country-index levels, portfolio holdings, event dates or licensed history.

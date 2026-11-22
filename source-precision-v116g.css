@@ -1,0 +1,35 @@
+/* V116g: keep the date-comparison status legible at all widths.
+   A source-date match is NOT an exchange-certified close or rights grant. */
+body[data-page=index] .sw96-source-status {
+  min-width:0;
+}
+body[data-page=index] .sw96-source-status>summary {
+  min-width:0;
+  flex-wrap:wrap;
+  row-gap:3px;
+}
+body[data-page=index] .sw96-source-status .sw96-source-summary-label,
+body[data-page=index] .sw96-source-status>summary strong,
+body[data-page=index] .sw96-source-status>summary small,
+body[data-page=index] .sw96-source-status .sw96-source-toggle {
+  font-size:12px;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+body[data-page=index] .sw96-source-status .sw96-source-detail {
+  min-width:0;
+}
+body[data-page=index] .sw96-source-status .sw96-source-detail p,
+body[data-page=index] .sw96-source-status .sw96-source-detail small {
+  font-size:12px;
+  line-height:1.55;
+}
+body[data-page=index] .sw96-source-status>summary:focus-visible {
+  outline:3px solid var(--sw-mint);
+  outline-offset:2px;
+}
+@media (min-width:1320px) {
+  body[data-page=index] .sw-overview-head>.sw96-source-status>summary strong {
+    font-size:12px;
+  }
+}

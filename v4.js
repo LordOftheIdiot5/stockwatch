@@ -301,14 +301,16 @@ function overview(){
  const unconfirmed=Number.isInteger(strict?.unconfirmed)?strict.unconfirmed:null;
  const scanTime=state.signals?.generated||'';
  const scanDay=/^20\d{2}-\d{2}-\d{2}T/.test(scanTime)?scanTime.slice(0,16).replace('T',' ')+' UTC':'Timestamp unavailable';
- const sourceStatus='<details class="sw96-source-status" aria-label="Market observation freshness">'+
-   '<summary><span class="sw96-source-summary-label">Source freshness</span><strong>'+ 
-   (compared===null?'Session coverage unavailable':compared+'/'+tracked+' session-verified')+
+ // This compares source observation dates against a conservative UTC weekday
+ // target, NOT official exchange-certified closes or vendor display rights.
+ const sourceStatus='<details class="sw96-source-status" aria-label="Monitored price-date coverage and limitations">'+
+   '<summary><span class="sw96-source-summary-label">Source freshness</span><strong>'+
+   (compared===null?'Date coverage unavailable':compared+'/'+tracked+' date-comparable')+
    '</strong><small>· '+E(freshness?.comparisonDate||target||'date unavailable')+'</small><span class="sw96-source-toggle">Details</span></summary>'+
-   '<div class="sw96-source-detail"><small>Scan '+E(scanDay)+' · session '+E(freshness?.comparisonDate||target||'unavailable')+'</small><p>'+
-   (compared===null?'Completed-session coverage unavailable':compared+'/'+tracked+' confirmed for completed session')+
+   '<div class="sw96-source-detail"><small>Scan '+E(scanDay)+' · comparison date '+E(freshness?.comparisonDate||target||'unavailable')+'</small><p>'+
+   (compared===null?'Comparable source-date observations unavailable':compared+'/'+tracked+' monitored observations date-aligned by scanner heuristics')+
    (unconfirmed===null?'':' · '+unconfirmed+' unconfirmed')+
-   ' · Older moves are not live alerts.</p><a class="sw-textlink" href="health.html">Inspect source coverage ↗</a></div></details>';
+   '. The comparison uses a UTC weekday cutoff, not venue-certified daily closes or a stock-price redistribution licence. Older moves are not live alerts.</p><a class="sw-textlink" href="health.html">Inspect source coverage ↗</a></div></details>';
  const pendingListings=displayUniverse.filter(r=>!r.referenceOnly&&!displayObservation(r));
  const globalPulse=$('globalMarketPulse');if(globalPulse)globalPulse.remove();
  $('v4app').innerHTML=
