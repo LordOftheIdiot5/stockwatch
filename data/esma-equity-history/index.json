@@ -7,75 +7,40 @@
   "currentStateEstablished": false,
   "deltaReplayComplete": false,
   "eligiblePairs": 17,
-  "lastAttempt": "2026-11-21T01:33:13+00:00",
-  "lastSuccess": "2026-11-21T01:33:13+00:00",
+  "lastAttempt": "2026-11-22T17:05:36+00:00",
+  "lastSuccess": "2026-11-22T17:05:36+00:00",
   "matchedPairs": 17,
   "notice": "Selected and normalized ESMA FIRDS reference facts. Original data is available free of charge from ESMA; ESMA does not endorse Nordl. Third-party rights and any stated exceptions remain applicable. Weekly snapshot evidence only; subsequent modifications, cancellations and terminations not applied.",
   "pendingUpdateSets": [
     {
       "complete": true,
-      "date": "2026-11-14",
+      "date": "2026-11-21",
       "expectedParts": 4,
       "foundParts": 4,
       "type": "DLTINS"
     },
     {
       "complete": true,
-      "date": "2026-11-15",
-      "expectedParts": 1,
-      "foundParts": 1,
+      "date": "2026-11-22",
+      "expectedParts": 2,
+      "foundParts": 2,
       "type": "DLTINS"
     },
     {
       "complete": true,
-      "date": "2026-11-16",
-      "expectedParts": 1,
-      "foundParts": 1,
-      "type": "DLTINS"
-    },
-    {
-      "complete": true,
-      "date": "2026-11-17",
-      "expectedParts": 4,
-      "foundParts": 4,
-      "type": "DLTINS"
-    },
-    {
-      "complete": true,
-      "date": "2026-11-18",
-      "expectedParts": 4,
-      "foundParts": 4,
-      "type": "DLTINS"
-    },
-    {
-      "complete": true,
-      "date": "2026-11-19",
-      "expectedParts": 4,
-      "foundParts": 4,
-      "type": "DLTINS"
-    },
-    {
-      "complete": true,
-      "date": "2026-11-20",
-      "expectedParts": 4,
-      "foundParts": 4,
-      "type": "DLTINS"
-    },
-    {
-      "complete": true,
-      "date": "2026-11-14",
+      "date": "2026-11-21",
       "expectedParts": 2,
       "foundParts": 2,
       "type": "FULCAN"
     }
   ],
   "schemaVersion": 1,
-  "snapshot": "data/esma-equity-history/2026-11-14-90698f5b1ad68c2951886063d2e33ae714bf56682b1d33ce1c3b3ba7a76a973d.json",
-  "snapshotSha256": "90698f5b1ad68c2951886063d2e33ae714bf56682b1d33ce1c3b3ba7a76a973d",
+  "snapshot": "data/esma-equity-history/2026-11-21-13e58f75aee2811fafad0b3110cf345d0be66191d13f3aea9d94232deb3df279.json",
+  "snapshotSha256": "13e58f75aee2811fafad0b3110cf345d0be66191d13f3aea9d94232deb3df279",
   "source": "ESMA FIRDS",
-  "sourceDate": "2026-11-14",
+  "sourceDate": "2026-11-21",
   "sourceRights": "https://registers.esma.europa.eu/publication/legalNoticePage",
-  "sourceRows": 748923,
+  "sourceRows": 738264,
   "sourceUrl": "https://www.esma.europa.eu/document/firds-instructions-access-and-download-full-and-delta-reference-data-files",
   "status": "ok",
   "transformation": "Exact ISIN/MIC subset, normalized fields; separate GLEIF comparison",
