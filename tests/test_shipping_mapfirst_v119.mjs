@@ -31,7 +31,7 @@ test('Natural Earth boundary layer is public domain, reused from Energy, and not
  assert.equal(geography.vesselSourceStatus.observations,0);
  assert.equal(geography.ports.length,40);
  assert.ok(js.includes('data/shipping-world-borders-v119.json'));
- assert.ok(js.includes("d.license!=='Public domain'"));
+ assert.ok(js.includes("license!=='Public domain'"));
  assert.match(js,/no live AIS|does not.*vessel|does not.*ship|never/i);
  assert.ok(!js.includes('Math.random('));
  assert.ok(!js.includes('MOCK_SHIPS'));
