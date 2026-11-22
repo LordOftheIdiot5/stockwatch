@@ -7,7 +7,7 @@
  const cfg={
   spreads:[['spreadPairs','A/B pairs'],['abRanking','Relative-value watchlist'],
     ['spreadDetail','Selected pair']],
-  shipping:[['offshoreRates','Reported vessel/rig prices'],['usdaRouteRates','Real bulk-grain freight USD/tonne'],['shippingBenchmarkAnchor','Routes and classes'],
+  shipping:[['offshoreRates','Reported vessel/rig prices'],['usdaRouteRates','Real bulk-grain freight USD/tonne'],['nordicMaritime','Norway & Europe'],['navprofitEconomics','Offshore economics'],['shippingBenchmarkAnchor','Routes and classes'],
     ['routeCompare','Compare routes'],['voyageEstimator','Voyage scenario'],
     ['freightPPIContent','Official cost index'],['worldBankPortTraffic','Port activity']],
   commodities:[['commodityTabs','Market references']],
