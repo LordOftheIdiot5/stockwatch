@@ -44,7 +44,7 @@ def main():
        assert bbox['y'] <=75,(width,theme,bbox)
        assert bbox['width']>=width-6,(width,theme,bbox)
        assert page.locator('#shippingMapPins .sw-atlas-point').count()==40
-       assert page.locator('#sw119MaritimeGrid line').count()==8
+       assert page.locator('#sw119MaritimeGrid line').count()==10
        page.locator('#sw119MaritimeBorders path').first.wait_for(timeout=30000)
        assert page.locator('#sw119MaritimeBorders path').count()>=100
        assert 'One map. Every maritime market.' in page.locator('#shippingAtlasTitle').inner_text()
