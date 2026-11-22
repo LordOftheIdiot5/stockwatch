@@ -137,7 +137,7 @@ function loadPortIndex(){
 }
 function inspectorUX(atlas){
  const panel=$(atlas,'#shippingMapInspector'),title=$(atlas,'#shippingMapDetailTitle');
- if(!panel||!title||$('#sw119InspectorClose'))return;
+ if(!panel||!title||$(atlas,'#sw119InspectorClose'))return;
  const close=document.createElement('button');close.type='button';close.id='sw119InspectorClose';
  close.className='sw119-inspector-close';close.setAttribute('aria-label','Close map details');
  close.textContent='×';panel.insertBefore(close,panel.firstChild);
