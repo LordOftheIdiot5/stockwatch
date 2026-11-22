@@ -161,3 +161,60 @@ body[data-page=shipping] .sw-offshore-scroll:focus-visible{
 @media(max-width:355px){
  body[data-page=shipping] .sw-offshore-highlights{grid-template-columns:1fr}
 }
+/* S1b: USDA public route freight prices, never mixed with offshore USD/day. */
+body[data-page=shipping] .sw-usda-rates{
+ display:block;min-width:0;margin:0 0 18px;padding:17px 20px 16px;
+ border:1px solid var(--sw-edge,#30465a);border-radius:13px;
+ background:var(--sw-card,#101e2c);
+}
+body[data-page=shipping] .sw-usda-rates header{display:block}
+body[data-page=shipping] .sw-usda-rates h2{
+ margin:5px 0 6px;color:var(--sw-text,#edf7ff);
+ font-size:clamp(19px,1.65vw,24px);line-height:1.25;
+}
+body[data-page=shipping] .sw-usda-rates header p{
+ margin:0;color:var(--sw-muted,#afc0d0);font-size:12.5px;line-height:1.58;
+}
+body[data-page=shipping] .sw-usda-status{
+ display:flex;flex-wrap:wrap;gap:5px 14px;
+ padding:10px 0 12px;color:var(--sw-text,#edf7ff);
+ font-size:12px;line-height:1.5;
+}
+body[data-page=shipping] .sw-usda-status span{color:var(--sw-muted,#afc0d0)}
+body[data-page=shipping] .sw-usda-grid{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:10px;min-width:0;
+}
+body[data-page=shipping] .sw-usda-card{
+ min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:6px;
+ padding:15px;border:1px solid var(--sw-edge,#2d4557);border-radius:10px;
+ background:var(--sw-card-hi,#152535);
+}
+body[data-page=shipping] .sw-usda-card small{
+ color:var(--sw-muted,#b5c7d4);font-size:12px;
+}
+body[data-page=shipping] .sw-usda-card h3{
+ margin:0;color:var(--sw-text,#ebf5ff);font-size:14px;line-height:1.4;
+}
+body[data-page=shipping] .sw-usda-card strong{
+ color:var(--sw-mint,#58e4bb);font-size:clamp(20px,2vw,29px);line-height:1.25;
+ font-variant-numeric:tabular-nums;
+}
+body[data-page=shipping] .sw-usda-card strong span{
+ color:var(--sw-muted,#b5c7d4);font-size:12px;font-weight:560;
+}
+body[data-page=shipping] .sw-usda-card a{
+ color:var(--sw-mint,#58e4bb);font-size:12px;text-decoration:underline;
+ min-height:32px;display:inline-flex;align-items:center;
+}
+body[data-page=shipping] .sw-usda-note{
+ margin:11px 0 0;color:var(--sw-muted,#afc0d0);
+ font-size:12px;line-height:1.58;
+}
+body[data-page=shipping] .sw-usda-rates a:focus-visible{
+ outline:3px solid var(--sw-mint,#58e4bb);outline-offset:3px;
+}
+@media(max-width:620px){
+ body[data-page=shipping] .sw-usda-rates{padding:15px 13px}
+ body[data-page=shipping] .sw-usda-grid{grid-template-columns:1fr}
+}
