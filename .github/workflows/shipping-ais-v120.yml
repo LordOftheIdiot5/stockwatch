@@ -1,0 +1,28 @@
+name: V120 AIS source validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/fintraffic_ais_v120.py'
+      - 'tests/test_fintraffic_ais_v120.py'
+      - 'docs/STOCKWATCH-V120-AIS-PROVIDER-INTEGRATION-2026-11-23.md'
+      - '.github/workflows/shipping-ais-v120.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Confirm Python source compiles
+        run: python -m py_compile scripts/fintraffic_ais_v120.py
+      - name: Run offline AIS provenance, privacy and freshness tests
+        run: python -m unittest discover -s tests -p 'test_fintraffic_ais_v120.py' -v
+      - name: Block accidental public pilot AIS export
+        run: |
+          test ! -f data/ais-vessels.json
+          test ! -f data/shipping-ais-live.json
