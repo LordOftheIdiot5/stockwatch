@@ -104,7 +104,7 @@ function polishAtlas(atlas){
   if(btn)btn.textContent=label;
  }
  const toolbar=$(atlas,'.sw-atlas-toolbar');
- if(toolbar&&!$('#sw119OffshoreRateLink')){
+ if(toolbar&&!$(atlas,'#sw119OffshoreRateLink')){
   const a=document.createElement('a');a.id='sw119OffshoreRateLink';
   a.href='#offshoreRates';a.className='sw119-offshore-tab';
   a.textContent='Offshore market ↗';toolbar.append(a);
