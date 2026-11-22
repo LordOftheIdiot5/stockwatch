@@ -475,3 +475,11 @@ body[data-page=shipping] #v4app>:not(#shippingWorldMap){
   width:calc(100% - 22px);
  }
 }
+
+
+/* Hide the original secondary trading tape/header and generated page jumpbar.
+   V119 has its own source-aware global navigation; retaining both added 162px
+   of duplicate chrome above the atlas on mobile. */
+body[data-page=shipping] .sw-main>.sw-tape,
+body[data-page=shipping] .sw-main>.sw-top,
+body[data-page=shipping] .sw-content>.sw110b-jump{display:none!important}
