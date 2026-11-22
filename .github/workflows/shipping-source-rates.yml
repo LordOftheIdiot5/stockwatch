@@ -1,0 +1,41 @@
+name: Shipping S1 original offshore rate acceptance
+on:
+  pull_request:
+    paths:
+      - 'shipping.html'
+      - 'shipping-offshore-s1.js'
+      - 'shipping-offshore-s1.css'
+      - 'data/offshore-rate-evidence-v117s.json'
+      - 'tests/test_shipping_rate_evidence_s1.mjs'
+      - 'tests/browser_check_shipping_rates_s1.py'
+      - '.github/workflows/shipping-source-rates.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offshore-rate-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Validate source-linked operating facts and frontend syntax
+        run: |
+          node --check shipping-offshore-s1.js
+          node --test tests/test_shipping_rate_evidence_s1.mjs
+      - name: Install headless browser
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Check 7 widths x 2 themes, rate filters, fallback and real evidence
+        run: python tests/browser_check_shipping_rates_s1.py
+      - name: Upload first-fold screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: shipping-source-rate-screenshots
+          path: workspace-previews/shipping-s1-firstfold-*.png
+          if-no-files-found: ignore
+          retention-days: 14
