@@ -2,7 +2,7 @@
    No feed requests, quote changes, or guessed source content. */
 (function(){
  'use strict';
- const pages=new Set(['stocks','news','calendar','spreads','shipping',
+ const pages=new Set(['stocks','news','calendar','spreads',
    'commodities','intelligence','compare','health']);
  if(!pages.has(document.body?.dataset.page))return;
  const root=document.getElementById('v4app')||document.getElementById('app');
