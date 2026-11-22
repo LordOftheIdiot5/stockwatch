@@ -38,6 +38,13 @@ def main():
        assert '$403,113' in cards.nth(3).inner_text()
        assert page.locator('#offshoreBody tr').count()==11
        assert page.locator('#offshoreBody a[href^="https://"]').count()==11
+       page.locator('#usdaRateCards .sw-usda-card').first.wait_for(timeout=30000)
+       assert page.locator('#usdaRateCards .sw-usda-card').count()==2
+       assert '$72.75' in page.locator('#usdaRateCards').inner_text()
+       assert '$39.50' in page.locator('#usdaRateCards').inner_text()
+       assert '/ metric tonne' in page.locator('#usdaRateCards').inner_text()
+       assert '2026-11-12' in page.locator('#usdaRateStatus').inner_text()
+       assert page.locator('#usdaRateCards a[href*="ams.usda.gov"]').count()==2
        assert page.locator('#shippingBenchmarkAnchor').count()==1
        assert page.locator('#routeGrid').count()==1
        assert page.locator('#voyageEstimator').count()==1
@@ -61,7 +68,8 @@ def main():
        details.locator('summary').focus()
        page.keyboard.press('Enter')
        assert details.evaluate('(e)=>e.open')
-       assert 'no broker' not in details.inner_text().lower() or True
+       assert 'broker' in details.inner_text().lower()
+       assert 'spot' in details.inner_text().lower()
        assert 'spot' in details.inner_text().lower()
        assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+3'),(width,theme,page.evaluate('document.documentElement.scrollWidth'))
        assert not errs,(width,theme,errs)
@@ -88,7 +96,17 @@ def main():
     assert 'temporarily unavailable' in fail.locator('#offshoreStatus').inner_text()
     assert fail.locator('#shippingBenchmarkAnchor').count()==1
     assert fail.locator('#routeGrid').count()==1
+    fail.locator('#usdaRateCards .sw-usda-card').first.wait_for(timeout=30000)
+    assert fail.locator('#usdaRateCards .sw-usda-card').count()==2
     fail.close()
+    usda_fail=browser.new_page(viewport={'width':390,'height':840})
+    usda_fail.route('**/data/shipping-usda-ocean-rates-s1.json',lambda route:route.abort())
+    usda_fail.goto(f'http://127.0.0.1:{server.server_port}/shipping.html',wait_until='domcontentloaded',timeout=30000)
+    usda_fail.locator('#usdaRouteRates').wait_for(timeout=30000)
+    usda_fail.locator('#usdaRateStatus').get_by_text('snapshot unavailable',exact=False).wait_for(timeout=30000)
+    assert usda_fail.locator('.sw-offshore-card').count()==4
+    assert usda_fail.locator('#routeGrid').count()==1
+    usda_fail.close()
    finally:browser.close()
  finally:server.shutdown();server.server_close()
  assert len(evidence)==14

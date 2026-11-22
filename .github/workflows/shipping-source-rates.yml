@@ -6,6 +6,8 @@ on:
       - 'shipping-offshore-s1.js'
       - 'shipping-offshore-s1.css'
       - 'data/offshore-rate-evidence-v117s.json'
+      - 'data/shipping-usda-ocean-rates-s1.json'
+      - 'shipping-usda-s1.js'
       - 'tests/test_shipping_rate_evidence_s1.mjs'
       - 'tests/browser_check_shipping_rates_s1.py'
       - '.github/workflows/shipping-source-rates.yml'
@@ -24,6 +26,7 @@ jobs:
       - name: Validate source-linked operating facts and frontend syntax
         run: |
           node --check shipping-offshore-s1.js
+          node --check shipping-usda-s1.js
           node --test tests/test_shipping_rate_evidence_s1.mjs
       - name: Install headless browser
         run: |

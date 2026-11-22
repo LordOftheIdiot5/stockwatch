@@ -5,6 +5,8 @@ const evidence=JSON.parse(fs.readFileSync('data/offshore-rate-evidence-v117s.jso
 const site=fs.readFileSync('shipping.html','utf8');
 const module=fs.readFileSync('shipping-offshore-s1.js','utf8');
 const styles=fs.readFileSync('shipping-offshore-s1.css','utf8');
+const usda=JSON.parse(fs.readFileSync('data/shipping-usda-ocean-rates-s1.json','utf8'));
+const usdaModule=fs.readFileSync('shipping-usda-s1.js','utf8');
 
 test('source documents and historical rate facts are explicit',()=>{
  assert.equal(evidence.schemaVersion,1);
@@ -59,4 +61,23 @@ test('same-class quarter comparisons use the same issuer and region, not differe
  assert.equal(comparisons.length,7);
  assert.ok(!comparisons.find(x=>x.sourceId==='smhi2026q3'));
  assert.ok(comparisons.every(x=>byPair.get([x.sourceId,x.vesselClass,x.region,'2026-Q2'].join('|')).unit===x.unit));
+});
+
+test('USDA publishes separate actual bulk-grain USD per tonne route rates, not vessel dayrates',()=>{
+ assert.equal(usda.schemaVersion,1);
+ assert.equal(usda.reportedAt,'2026-11-19');
+ assert.equal(usda.observationDate,'2026-11-12');
+ assert.equal(usda.unit,'USD/metric_ton');
+ assert.equal(usda.rates.length,2);
+ assert.equal(usda.rates[0].value,72.75);
+ assert.equal(usda.rates[1].value,39.50);
+ assert.equal(usda.isExecutableQuote,false);
+ assert.equal(usda.isContainerRate,false);
+ assert.equal(usda.isBrokerRate,false);
+ assert.ok(usda.sourceUrl.startsWith('https://www.ams.usda.gov/'));
+ assert.ok(usda.publicationNotes.includes('do not infer')||usda.publicationNotes.includes('no unsourced'));
+ assert.ok(usdaModule.includes('data/shipping-usda-ocean-rates-s1.json'));
+ assert.ok(usdaModule.includes('USD/metric_ton'));
+ assert.ok(site.includes('shipping-usda-s1.js?v=s1b'));
+ assert.ok(styles.includes('.sw-usda-rates'));
 });
