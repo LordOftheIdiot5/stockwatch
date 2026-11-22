@@ -459,3 +459,19 @@ body[data-page=shipping] #shippingWorldMap .sw119-country-context p{
  body[data-page=shipping] .sw119-topbar{min-width:0}
  body[data-page=shipping] .sw119-top-links{flex-shrink:0}
 }
+
+
+/* The V114 task-navigation component can be prepended after V119 mounts.
+   Ensure the map remains first even when reactive child insertion reorders DOM. */
+body[data-page=shipping] #v4app{display:flex;flex-direction:column;align-items:stretch}
+body[data-page=shipping] #v4app>#shippingWorldMap{order:-3;flex:none;align-self:stretch}
+body[data-page=shipping] #v4app>#shippingDataGuide{order:-2;align-self:center}
+body[data-page=shipping] #v4app>.sw119-research-intro{order:-1;align-self:center}
+body[data-page=shipping] #v4app>:not(#shippingWorldMap){
+ width:min(1550px,calc(100% - 48px));align-self:center;
+}
+@media(max-width:540px){
+ body[data-page=shipping] #v4app>:not(#shippingWorldMap){
+  width:calc(100% - 22px);
+ }
+}
