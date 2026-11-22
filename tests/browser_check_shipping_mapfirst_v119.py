@@ -47,6 +47,16 @@ def main():
        assert page.locator('#sw119MaritimeGrid line').count()==10
        page.locator('#sw119MaritimeBorders path').first.wait_for(timeout=30000)
        assert page.locator('#sw119MaritimeBorders path').count()>=100
+       if page.locator('#shippingAtlasTitle').count()!=1:
+        print('ATLAS_HEADER_DIAG '+json.dumps(page.evaluate("""() => ({
+          atlasPresent:!!document.querySelector('#shippingWorldMap'),
+          atlasInner:document.querySelector('#shippingWorldMap')?.innerHTML.slice(0,1500),
+          pageTitles:[...document.querySelectorAll('#shippingWorldMap h1,#shippingWorldMap h2')].map(x=>({tag:x.tagName,id:x.id,text:x.textContent})),
+          headCount:document.querySelectorAll('#shippingWorldMap .sw-atlas-head').length
+        })""")),flush=True)
+        dbg=ROOT/'workspace-previews'/f'shipping-mapfirst-v119-debug-{width}.png'
+        dbg.parent.mkdir(exist_ok=True)
+        page.screenshot(path=str(dbg),animations='disabled')
        assert 'One map. Every maritime market.' in page.locator('#shippingAtlasTitle').inner_text()
        assert page.locator('.sw119-topbar a[href="index.html"]').count()==2
        assert page.locator('#sw119OffshoreRateLink[href="#offshoreRates"]').count()==1

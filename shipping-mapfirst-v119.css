@@ -483,3 +483,12 @@ body[data-page=shipping] #v4app>:not(#shippingWorldMap){
 body[data-page=shipping] .sw-main>.sw-tape,
 body[data-page=shipping] .sw-main>.sw-top,
 body[data-page=shipping] .sw-content>.sw110b-jump{display:none!important}
+
+/* Keep source-failure and mapped-count status visible even at phone widths. */
+@media(max-width:900px){
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar #shippingMapCount{
+  display:block!important;max-width:min(230px,64vw);font-size:10px;line-height:1.45;
+  padding:6px 8px;background:#0a2a39e8;color:#dceff7;border:1px solid #356176;border-radius:7px;
+  white-space:normal;overflow-wrap:anywhere;
+ }
+}

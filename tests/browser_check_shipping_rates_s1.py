@@ -81,9 +81,15 @@ def main():
        firstfold_top=round(panel.bounding_box()['y'])
        first_price_top=round(cards.first.bounding_box()['y'])
        if width in (390,1672):
-        # Price visibility is now a desktop/mobile first-screen acceptance gate.
-        assert firstfold_top<540,(width,theme,firstfold_top)
-        assert first_price_top<930,(width,theme,first_price_top)
+        # V119 changes the first screen to the source-backed world map. The
+        # historical original-company rate deck remains one click below it.
+        atlas=page.locator('#shippingWorldMap.sw119-mapfirst')
+        assert atlas.is_visible(),(width,theme,'atlas missing')
+        assert atlas.bounding_box()['y']<90,(width,theme,'map not first')
+        assert firstfold_top>=atlas.bounding_box()['y']+atlas.bounding_box()['height']-30,(width,theme,firstfold_top)
+        assert first_price_top>firstfold_top
+        assert page.locator('#sw119ResearchIntro a[href="#offshoreRates"]').count()==1
+        assert page.locator('#sw119ResearchMenu a[href="#offshoreRates"]').count()==1
        if theme=='dark' and width in (390,1672):
         path=ROOT/'workspace-previews'/f'shipping-s1-firstfold-{width}.png'
         path.parent.mkdir(exist_ok=True)
