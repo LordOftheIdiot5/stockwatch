@@ -63,3 +63,5 @@ body[data-page=commodities] #commodityRows .sw-valuebar{
  .sw114-task-link{justify-content:center;min-height:44px;text-align:center;padding:8px}
  .sw114-task-note{font-size:12px}
 }
+
+body[data-page=shipping] :is(#shippingWorldMap,#shippingDataGuide,#nordicMaritime,#navprofitEconomics){scroll-margin-top:82px}

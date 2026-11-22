@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-22",
+  "portPointCount": 40,
+  "regionClasses": [
+    "nordic",
+    "europe",
+    "middle-east",
+    "asia",
+    "americas",
+    "africa"
+  ],
+  "ports": [
+    {
+      "id": "NO-BGO",
+      "name": "Bergen",
+      "lon": 5.31,
+      "lat": 60.4,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "NO-OSL",
+      "name": "Oslo",
+      "lon": 10.74,
+      "lat": 59.91,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "NO-SVG",
+      "name": "Stavanger",
+      "lon": 5.73,
+      "lat": 58.97,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "NO-AES",
+      "name": "Ålesund",
+      "lon": 6.16,
+      "lat": 62.47,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "NO-NVK",
+      "name": "Narvik",
+      "lon": 17.43,
+      "lat": 68.44,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "NO-TOS",
+      "name": "Tromsø",
+      "lon": 18.95,
+      "lat": 69.65,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "SE-GOT",
+      "name": "Gothenburg",
+      "lon": 11.94,
+      "lat": 57.7,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "DK-CPH",
+      "name": "Copenhagen",
+      "lon": 12.6,
+      "lat": 55.68,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "DK-AAR",
+      "name": "Aarhus",
+      "lon": 10.22,
+      "lat": 56.16,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "FI-HEL",
+      "name": "Helsinki",
+      "lon": 24.95,
+      "lat": 60.17,
+      "region": "nordic",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "NL-RTM",
+      "name": "Rotterdam",
+      "lon": 4.48,
+      "lat": 51.95,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "BE-ANR",
+      "name": "Antwerp",
+      "lon": 4.4,
+      "lat": 51.26,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "DE-HAM",
+      "name": "Hamburg",
+      "lon": 9.98,
+      "lat": 53.55,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "DE-BRV",
+      "name": "Bremerhaven",
+      "lon": 8.58,
+      "lat": 53.54,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "GB-FXT",
+      "name": "Felixstowe",
+      "lon": 1.35,
+      "lat": 51.96,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "FR-LEH",
+      "name": "Le Havre",
+      "lon": 0.1,
+      "lat": 49.49,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "ES-VLC",
+      "name": "Valencia",
+      "lon": -0.33,
+      "lat": 39.45,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "ES-ALG",
+      "name": "Algeciras",
+      "lon": -5.45,
+      "lat": 36.13,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "GR-PIR",
+      "name": "Piraeus",
+      "lon": 23.63,
+      "lat": 37.94,
+      "region": "europe",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "EG-SUZ",
+      "name": "Suez",
+      "lon": 32.55,
+      "lat": 29.95,
+      "region": "middle-east",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "EG-PSD",
+      "name": "Port Said",
+      "lon": 32.31,
+      "lat": 31.27,
+      "region": "middle-east",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "AE-JEA",
+      "name": "Jebel Ali",
+      "lon": 55.05,
+      "lat": 24.99,
+      "region": "middle-east",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "IN-NHV",
+      "name": "Nhava Sheva / JNPT",
+      "lon": 72.95,
+      "lat": 18.95,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "LK-CMB",
+      "name": "Colombo",
+      "lon": 79.85,
+      "lat": 6.94,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "SG-SIN",
+      "name": "Singapore",
+      "lon": 103.83,
+      "lat": 1.28,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "CN-SHA",
+      "name": "Shanghai",
+      "lon": 121.5,
+      "lat": 31.2,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "CN-NGB",
+      "name": "Ningbo-Zhoushan",
+      "lon": 121.55,
+      "lat": 29.88,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "CN-SZX",
+      "name": "Shenzhen",
+      "lon": 114.1,
+      "lat": 22.56,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "KR-PUS",
+      "name": "Busan",
+      "lon": 129.07,
+      "lat": 35.1,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "JP-YOK",
+      "name": "Yokohama",
+      "lon": 139.64,
+      "lat": 35.45,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "JP-TYO",
+      "name": "Tokyo",
+      "lon": 139.77,
+      "lat": 35.62,
+      "region": "asia",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "US-LAX",
+      "name": "Los Angeles",
+      "lon": -118.27,
+      "lat": 33.74,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "US-LGB",
+      "name": "Long Beach",
+      "lon": -118.19,
+      "lat": 33.77,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "US-NYC",
+      "name": "New York / New Jersey",
+      "lon": -74,
+      "lat": 40.67,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "US-HOU",
+      "name": "Houston",
+      "lon": -95.28,
+      "lat": 29.73,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "US-SAV",
+      "name": "Savannah",
+      "lon": -81.09,
+      "lat": 32.08,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "CA-VAN",
+      "name": "Vancouver",
+      "lon": -123.1,
+      "lat": 49.28,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "BR-SSZ",
+      "name": "Santos",
+      "lon": -46.33,
+      "lat": -23.95,
+      "region": "americas",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "ZA-DUR",
+      "name": "Durban",
+      "lon": 31.04,
+      "lat": -29.87,
+      "region": "africa",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    },
+    {
+      "id": "ZA-CPT",
+      "name": "Cape Town",
+      "lon": 18.43,
+      "lat": -33.9,
+      "region": "africa",
+      "geometryQuality": "approximate port-area reference point",
+      "sourceKind": "geographic_reference_only"
+    }
+  ],
+  "countryCenters": [
+    {
+      "iso3": "NOR",
+      "iso2": "NO",
+      "lon": 10,
+      "lat": 61,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "SWE",
+      "iso2": "SE",
+      "lon": 15.5,
+      "lat": 62,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "DNK",
+      "iso2": "DK",
+      "lon": 10.2,
+      "lat": 56,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "NLD",
+      "iso2": "NL",
+      "lon": 5.3,
+      "lat": 52.2,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "DEU",
+      "iso2": "DE",
+      "lon": 10.4,
+      "lat": 51,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "GBR",
+      "iso2": "GB",
+      "lon": -2.2,
+      "lat": 53,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "CHN",
+      "iso2": "CN",
+      "lon": 104,
+      "lat": 35,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "SGP",
+      "iso2": "SG",
+      "lon": 103.8,
+      "lat": 1.3,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "USA",
+      "iso2": "US",
+      "lon": -99,
+      "lat": 39,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "JPN",
+      "iso2": "JP",
+      "lon": 137,
+      "lat": 37,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "KOR",
+      "iso2": "KR",
+      "lon": 127.8,
+      "lat": 36,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "IND",
+      "iso2": "IN",
+      "lon": 78,
+      "lat": 22,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "ARE",
+      "iso2": "AE",
+      "lon": 54,
+      "lat": 24,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "VNM",
+      "iso2": "VN",
+      "lon": 107,
+      "lat": 16,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "BEL",
+      "iso2": "BE",
+      "lon": 4.6,
+      "lat": 50.7,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "FIN",
+      "iso2": "FI",
+      "lon": 25,
+      "lat": 64,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "FRA",
+      "iso2": "FR",
+      "lon": 2.6,
+      "lat": 47,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "ESP",
+      "iso2": "ES",
+      "lon": -4,
+      "lat": 40,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "EU27_2020",
+      "iso2": "EU",
+      "lon": 19,
+      "lat": 49,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    },
+    {
+      "iso3": "MYS",
+      "iso2": "MY",
+      "lon": 102.5,
+      "lat": 4,
+      "geometryQuality": "country-level label anchor; not a port or individual shipment"
+    }
+  ],
+  "sourceDescription": "Map anchors curated for general navigation from commonly referenced port locations. Coordinates are approximate port-area or country-label anchors. They are NOT a live ship position, precise berth, navigable route or source-measured throughput.",
+  "referenceUrl": "https://vcps.nga.mil/nauticalpubs-feature/rest/services/WPI/World_Port_Index_Viewer/MapServer",
+  "baseGeography": "Natural Earth public-domain world land (Stockwatch brand/world-land-ne110.svg)",
+  "rights": "Original Stockwatch geographic reference geometry, with source links; underlying observational volumes/rates/indices loaded separately from attributed official data files.",
+  "vesselSourceStatus": {
+    "connected": false,
+    "observations": 0,
+    "message": "No permitted live global AIS feed is connected. No vessel locations are shown. Use the external official AIS services until a licensed, authenticated source is verified.",
+    "officialNorway": "https://www.kystverket.no/en/sea-transport-and-ports/ais/access-to-ais-data/",
+    "officialGlobal": "https://www.globalmaritimetraffic.org/developer-toolkit.html"
+  }
+}

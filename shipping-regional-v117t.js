@@ -53,7 +53,7 @@ function render(node,d){
 }
 function mount(){
  if(root.querySelector('#nordicMaritime'))return;
- const anchor=root.querySelector('#usdaRouteRates');if(!anchor)return;
+ const anchor=root.querySelector('#shippingWorldMap')||root.querySelector('#usdaRouteRates');if(!anchor)return;
  const node=make();anchor.insertAdjacentElement('afterend',node);
  if(!load)load=Promise.all([
   fetch('data/shipping-roro-traffic.json',{cache:'no-store'}).then(x=>{if(!x.ok)throw Error('roro');return x.json()}),

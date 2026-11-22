@@ -7,7 +7,7 @@
  const cfg={
   spreads:[['spreadPairs','A/B pairs'],['abRanking','Relative-value watchlist'],
     ['spreadDetail','Selected pair']],
-  shipping:[['offshoreRates','Reported vessel/rig prices'],['usdaRouteRates','Real bulk-grain freight USD/tonne'],['nordicMaritime','Norway & Europe'],['navprofitEconomics','Offshore economics'],['shippingBenchmarkAnchor','Routes and classes'],
+  shipping:[['offshoreRates','Reported vessel/rig prices'],['usdaRouteRates','Real bulk-grain freight USD/tonne'],['shippingWorldMap','Interactive world map'],['nordicMaritime','Norway & Europe'],['navprofitEconomics','Offshore economics'],['shippingBenchmarkAnchor','Routes and classes'],
     ['routeCompare','Compare routes'],['voyageEstimator','Voyage scenario'],
     ['freightPPIContent','Official cost index'],['worldBankPortTraffic','Port activity']],
   commodities:[['commodityTabs','Market references']],
@@ -59,7 +59,7 @@
   }
   nav.append(list);
   const note=make('p','sw114-task-note',
-    page==='shipping'?'Published benchmark descriptions, listed proxies and public indices are different measurements.':
+    page==='shipping'?'Understand units, reporting periods and sources: port locations, cargo activity, freight prices and ship positions are different measures, not interchangeable.':
     page==='spreads'?'Ratios require matched-session A/B observations. Older ratios are reference only.':
     page==='commodities'?'Dated last-known market references and listed proxies, not executable quotes.':
     page==='shorts'?'Register observations are dated disclosures, not complete live short interest.':
