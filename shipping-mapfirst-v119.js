@@ -187,6 +187,7 @@ function inspectorUX(atlas){
  const render=async()=>{
   const layer=atlas.querySelector('.sw-atlas-tab[aria-pressed="true"]')?.dataset.layer||'ports';
   const selected=$(atlas,'#shippingMapPick')?.value||'';
+  const focusControl=$(atlas,'#sw119bFocusSelection');if(focusControl)focusControl.disabled=!selected;
   let links=[];
   if(layer==='ports'){links=[['#worldBankPortTraffic','Country container activity ↗'],['#nordicMaritime','Regional shipping research ↗']]}
   else if(layer==='containers'){links=[['#worldBankPortTraffic','Container history & charts ↗'],['#nordicMaritime','Norway & Europe indicators ↗']]}
@@ -220,8 +221,8 @@ function inspectorUX(atlas){
  const obs=new MutationObserver(schedule);
  obs.observe(title,{childList:true,characterData:true,subtree:true});
  atlas.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{
-  if(b.dataset.layer==='ais')document.body.classList.add('sw119-inspector-open');
-  else document.body.classList.remove('sw119-inspector-open');
+  if(b.dataset.layer==='ais'){document.body.classList.remove('sw119-inspector-hidden');document.body.classList.add('sw119-inspector-open')}
+  else{document.body.classList.remove('sw119-inspector-open');document.body.classList.add('sw119-inspector-hidden')}
   schedule();
  }));
  const pick=$(atlas,'#shippingMapPick');
