@@ -230,6 +230,23 @@ function frame(){
  area.addEventListener('change',()=>{state.region=area.value;state.selected=null;draw()});
  search.addEventListener('input',()=>{state.q=search.value.trim().toLowerCase();state.selected=null;draw()});
  select.addEventListener('change',()=>selectRow(select.value||null));
+ // V119b: camera focus events update internal viewBox state before pan or zoom.
+ // A port anchor is geographic context only, never an assertion of traffic.
+ map.addEventListener('sw119-map-focus',event=>{
+  const detail=event.detail||{};
+  if(detail.preset==='world'){state.view=[0,0,W,H];showView();return}
+  let longitude=Number(detail.lon),latitude=Number(detail.lat);
+  const selected=state.rows.find(r=>r.id===state.selected);
+  if(detail.selected&&selected){longitude=selected.lon;latitude=selected.lat}
+  if(!Number.isFinite(longitude)||!Number.isFinite(latitude)||
+     longitude < -180||longitude>180||latitude < -90||latitude>90)return;
+  const width=Math.max(130,Math.min(W,Number(detail.width)||200));
+  const height=width*H/W;
+  const center=pos(longitude,latitude);
+  state.view=[Math.max(0,Math.min(W-width,center.x-width/2)),
+   Math.max(0,Math.min(H-height,center.y-height/2)),width,height];
+  showView();
+ });
  el.querySelectorAll('[data-map-zoom]').forEach(b=>b.addEventListener('click',()=>{
   if(b.dataset.mapZoom==='reset'){state.view=[0,0,W,H];showView()}else zoom(b.dataset.mapZoom==='in'?.74:1/.74);
  }));
