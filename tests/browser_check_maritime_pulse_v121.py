@@ -138,11 +138,17 @@ def run():
                         assert page.locator('#sw121SignalCards article').count()==1
                         page.locator('[data-filter="all"]').click()
                         assert page.locator('#sw121SignalCards article').count()==6
+                        # The map shortcut should land below the sticky header.
+                        page.locator('.sw121-map-peek').click()
+                        page.wait_for_timeout(150)
+                        assert page.locator('#sw121MarketPulse').evaluate(
+                            '(x)=>x.getBoundingClientRect().top')>=65,(width,theme,'anchor-hidden-under-header')
+                        assert page.locator('.sw121-inline-back').is_visible()
+                        assert not page.locator('#sw119BackMap').is_visible(),(width,theme,'old-floating-map-link-overlaps-desk')
                         if width in (390,1440) and theme=='dark':
                             screenshot=ROOT/'workspace-previews'/f'maritime-pulse-v121-{width}.png'
                             screenshot.parent.mkdir(parents=True,exist_ok=True)
-                            page.locator('#sw121MarketPulse').screenshot(
-                                path=str(screenshot),animations='disabled',timeout=30000)
+                            page.screenshot(path=str(screenshot),animations='disabled',timeout=30000)
                         camera=page.locator('#shippingMapSvg').get_attribute('viewBox')
                         page.locator('article[data-signal="nordic-roro-yoy"] .sw121-map-context').click()
                         assert page.locator('#shippingMapSvg').get_attribute('viewBox')!=camera
