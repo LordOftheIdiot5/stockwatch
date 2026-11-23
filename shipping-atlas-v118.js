@@ -256,7 +256,54 @@ function frame(){
   const aisCaption=el.querySelector('.sw-atlas-caption span:last-child');
   if(aisCaption)aisCaption.textContent=state.mode==='ais'&&state.aisStatus==='available'?'Fintraffic · last-reported positions · partial coverage':'No individual vessel positions without licensed AIS';
  }
- el.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.layer;state.q='';search.value='';state.selected=null;draw()}));
+ let aisRequested=false;
+ async function loadAis(){
+  if(aisRequested||!state.data)return;
+  aisRequested=true;state.aisStatus='loading';draw();
+  try{
+   const configRes=await fetch('data/shipping-ais-v120-config.json',{cache:'no-store'});
+   if(!configRes.ok)throw Error('AIS configuration absent');
+   const config=await configRes.json();
+   if(config?.schemaVersion!==1||config?.enabled!==true){
+    state.aisStatus='not_enabled';draw();return;
+   }
+   const endpoint=new URL(config.endpoint,location.href);
+   if(endpoint.protocol!=='https:'||endpoint.pathname!=='/api/marine/vessels'||
+     !(endpoint.origin===location.origin||endpoint.hostname.endsWith('.workers.dev')))
+    throw Error('Unapproved AIS endpoint');
+   const response=await fetch(endpoint.href,{cache:'no-store',mode:'cors'});
+   if(!response.ok)throw Error('AIS source unavailable');
+   const payload=await response.json();
+   const now=Date.now();
+   if(payload?.schemaVersion!==1||payload.sourceId!=='fintraffic-ais-v1'||
+    payload.provider!=='Fintraffic Digitraffic'||payload.license!=='CC BY 4.0'||
+    !Array.isArray(payload.positions)||payload.positions.length>2500||
+    !Number.isFinite(Date.parse(payload.retrievedAt))||
+    Date.parse(payload.retrievedAt)>now+120000||
+    now-Date.parse(payload.retrievedAt)>10*60000)throw Error('Invalid AIS snapshot');
+   const seen=new Set();
+   const valid=payload.positions.filter(v=>{
+    if(!v||!Number.isInteger(v.mmsi)||v.mmsi<100000000||v.mmsi>999999999||
+      !Number.isFinite(v.longitude)||!Number.isFinite(v.latitude)||
+      Math.abs(v.longitude)>180||Math.abs(v.latitude)>90||seen.has(v.mmsi))return false;
+    const t=Date.parse(v.positionReportedAt);
+    if(!Number.isFinite(t)||t>now+120000||now-t>30*60000)return false;
+    if(v.name!==null&&typeof v.name!=='string')return false;
+    seen.add(v.mmsi);return true;
+   });
+   if(!valid.length)throw Error('No fresh verified AIS positions');
+   state.data.ais={...payload,positions:valid};
+   state.aisStatus='available';
+  }catch(error){
+   state.aisStatus='unavailable';
+   state.data.ais=null;
+  }
+  if(state.mode==='ais')draw();
+ }
+ el.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{
+  state.mode=b.dataset.layer;state.q='';search.value='';state.selected=null;draw();
+  if(state.mode==='ais')loadAis();
+ }));
  area.addEventListener('change',()=>{state.region=area.value;state.selected=null;draw()});
  search.addEventListener('input',()=>{state.q=search.value.trim().toLowerCase();state.selected=null;draw()});
  select.addEventListener('change',()=>selectRow(select.value||null));
