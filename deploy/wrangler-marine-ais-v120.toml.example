@@ -1,0 +1,18 @@
+# V120b isolated maritime AIS Worker; NOT deployed by repository CI.
+# Provision stockwatch-maritime-ais R2 bucket and configure a separate Worker.
+# Enable flags only after rights, source-health and production verification.
+name = "stockwatch-marine-ais"
+main = "worker/marine-ais-v120.mjs"
+compatibility_date = "2026-11-23"
+workers_dev = true
+
+[vars]
+COLLECTOR_ENABLED = "false"
+PUBLIC_AIS_ENABLED = "false"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[r2_buckets]]
+binding = "AIS_BUCKET"
+bucket_name = "stockwatch-maritime-ais"
