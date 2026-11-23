@@ -492,3 +492,16 @@ body[data-page=shipping] .sw-content>.sw110b-jump{display:none!important}
   white-space:normal;overflow-wrap:anywhere;
  }
 }
+
+/* V120 gated source-dated vessel points: never use this style for synthetic ships. */
+body[data-page=shipping] .sw-atlas-point.sw-atlas-vessel{
+ fill:#5adfc8;stroke:#072d37;stroke-width:1.7;vector-effect:non-scaling-stroke;
+ cursor:pointer;filter:drop-shadow(0 0 3px rgba(20,222,191,.35));
+}
+body[data-page=shipping] .sw-atlas-point.sw-atlas-vessel:is(:hover,:focus-visible,.selected){
+ stroke:#fff;stroke-width:2.6;outline:none;
+}
+body[data-page=shipping] .sw-atlas-point.sw-atlas-vessel.selected{fill:#ffd67b}
+@media (prefers-reduced-motion: reduce){
+ body[data-page=shipping] .sw-atlas-point.sw-atlas-vessel{transition:none;filter:none}
+}
