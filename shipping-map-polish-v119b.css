@@ -219,13 +219,13 @@ body[data-page=shipping] #shippingWorldMap .sw-atlas-caption{
    presets, and keep just one World reset in the existing zoom control. */
 @media(min-width:1181px){
  body[data-page=shipping] #shippingWorldMap .sw119b-presets{
-  left:clamp(265px,16vw,295px);
+  left:clamp(285px,17vw,310px);
   max-width:min(425px,calc(100% - 680px));
  }
 }
 @media(min-width:901px) and (max-width:1180px){
  body[data-page=shipping] #shippingWorldMap .sw119b-presets{
-  left:250px;max-width:calc(100% - 590px);
+  left:285px;max-width:calc(100% - 625px);
  }
 }
 @media(max-width:900px){
