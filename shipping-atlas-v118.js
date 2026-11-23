@@ -145,7 +145,7 @@ function frame(){
  function updatePortClusters(){
   clusters.replaceChildren();
   const geography=pins.querySelectorAll('.sw-atlas-geography');
-  geography.forEach(n=>n.classList.remove('sw119c-overlap-hidden'));
+  geography.forEach(n=>{n.classList.remove('sw119c-overlap-hidden');n.setAttribute('tabindex','0')});
   if(state.mode!=='ports'||state.selected||state.q||state.view[2]<220||!state.rows.length)return;
   const box=map.getBoundingClientRect();
   const scale=Math.max(box.width/state.view[2],box.height/state.view[3]);
@@ -160,7 +160,7 @@ function frame(){
   for(const g of groups){
    if(g.rows.length<2)continue;
    const ids=new Set(g.rows.map(r=>r.id));
-   geography.forEach(node=>{if(ids.has(node.dataset.id))node.classList.add('sw119c-overlap-hidden')});
+   geography.forEach(node=>{if(ids.has(node.dataset.id)){node.classList.add('sw119c-overlap-hidden');node.setAttribute('tabindex','-1')}});
    const item=svgNode('g',{class:'sw119c-port-cluster',role:'button',tabindex:'0',
     'aria-label':g.rows.length+' approximate port-area markers. Zoom in to separate ports.'});
    item.append(svgNode('circle',{cx:g.x,cy:g.y,r:10}));
