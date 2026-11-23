@@ -2,7 +2,7 @@
  * Compact source-dated interpretation below the map. The little first-fold
  * shortcut is not a live ticker, vessel count or forecast. */
 body[data-page=shipping] #v4app>.sw121-market-pulse{
- margin:18px auto 18px;max-width:min(1550px,calc(100% - 48px));
+ margin:18px auto 18px;max-width:min(1550px,calc(100% - 48px));scroll-margin-top:84px;
  padding:26px clamp(17px,2.2vw,34px) 28px;min-width:0;
  border:1px solid #29516a;border-radius:15px;
  background:linear-gradient(135deg,#0b2635,#081b2a 72%);
@@ -97,6 +97,22 @@ body[data-page=shipping] .sw121-measure-delta[data-direction=up]{color:#7cf0c9}
 body[data-page=shipping] .sw121-measure-delta[data-direction=down]{color:#e8c38b}
 body[data-page=shipping] .sw121-caveat{
  margin:1px 0 0;font-size:11px;line-height:1.55;color:#9bbdca;
+}
+
+body[data-page=shipping] .sw121-investigation{
+ min-width:0;border:1px solid #275365;border-radius:7px;
+ background:#0c2936;color:#b6d9e0;
+}
+body[data-page=shipping] .sw121-investigation summary{
+ cursor:pointer;list-style-position:inside;
+ padding:8px 10px;font:760 11px/1.4 'DM Sans',system-ui,sans-serif;
+ color:#9ce8d5;
+}
+body[data-page=shipping] .sw121-investigation[open] summary{
+ border-bottom:1px solid #24495d;
+}
+body[data-page=shipping] .sw121-investigation p{
+ margin:0;padding:9px 10px;font:560 11px/1.55 'DM Sans',system-ui,sans-serif;
 }
 body[data-page=shipping] .sw121-card-footer{
  display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:9px;
