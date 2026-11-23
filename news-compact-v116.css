@@ -79,3 +79,19 @@
    overflow-x:auto;
  }
 }
+
+
+/* V116/V111 desktop regression repair (23 Nov 2026).
+   Published Nasdaq notice links inherited .sw-textlink{white-space:nowrap}
+   and their 662px unbroken text overflowed 541px notice columns, making
+   the 1440px document 1516px wide. Wrap the original source titles/URLs;
+   do NOT hide/truncate the text or change the two-column evidence grid. */
+body[data-page=news] #nasdaqNordicNotices,
+body[data-page=news] #nasdaqNoticeItems,
+body[data-page=news] #nasdaqNoticeItems .sw100-notice{
+ min-width:0;max-width:100%;
+}
+body[data-page=news] #nasdaqNoticeItems .sw100-notice .sw-textlink{
+ display:block;min-width:0;max-width:100%;
+ white-space:normal;overflow-wrap:anywhere;word-break:break-word;
+}

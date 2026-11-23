@@ -54,6 +54,29 @@ def assert_page(page,route,width,base):
     }""")
     assert dims["loaded"],(route,"V111 stylesheet not loaded")
     assert dims["bodyText"]>60,(route,"empty page")
+    if dims["scroll"]>dims["client"]+3:
+        suspects=page.evaluate("""() => [...document.querySelectorAll('body *')]
+          .filter(el=>{const box=el.getBoundingClientRect(), style=getComputedStyle(el);
+            return box.width>8&&box.height>4&&box.right>innerWidth+3&&
+              style.display!=='none'&&style.visibility!=='hidden';})
+          .map(el=>{const r=el.getBoundingClientRect();return {
+            tag:el.tagName,id:el.id,cls:String(el.className).slice(0,90),
+            x:Math.round(r.x),right:Math.round(r.right),width:Math.round(r.width),
+            minWidth:getComputedStyle(el).minWidth,
+            scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};})
+          .sort((a,b)=>b.right-a.right).slice(0,30)""")
+        inner=page.evaluate("""() => ({html:{client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,rect:document.documentElement.getBoundingClientRect().toJSON()},
+          body:{client:document.body.clientWidth,scroll:document.body.scrollWidth,rect:document.body.getBoundingClientRect().toJSON()},
+          items:[...document.querySelectorAll('body *')].filter(el=>{
+            const cs=getComputedStyle(el);return el.scrollWidth>el.clientWidth+6&&
+             el.clientWidth>0&&cs.display!=='none';}).map(el=>{
+             const cs=getComputedStyle(el),r=el.getBoundingClientRect();return {
+              tag:el.tagName,id:el.id,cls:String(el.className).slice(0,90),
+              client:el.clientWidth,scroll:el.scrollWidth,
+              overflowX:cs.overflowX,right:Math.round(r.right),left:Math.round(r.left)};
+          }).sort((a,b)=>(b.scroll-b.client)-(a.scroll-a.client)).slice(0,40)})""")
+        print("WIDTH_OFFENDERS",route,width,suspects,flush=True)
+        print("WIDTH_INTERNAL",route,width,inner,flush=True)
     assert dims["scroll"]<=dims["client"]+3,(route,width,"page-level overflow",dims)
     # A route error is not acceptable because an apparent loading placeholder
     # can otherwise mask a broken data hydration pipeline.
