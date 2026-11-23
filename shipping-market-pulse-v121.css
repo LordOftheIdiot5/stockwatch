@@ -1,0 +1,189 @@
+/* V121 Stockwatch Maritime Market Pulse.
+ * Compact source-dated interpretation below the map. The little first-fold
+ * shortcut is not a live ticker, vessel count or forecast. */
+body[data-page=shipping] #v4app>.sw121-market-pulse{
+ margin:18px auto 18px;max-width:min(1550px,calc(100% - 48px));
+ padding:26px clamp(17px,2.2vw,34px) 28px;min-width:0;
+ border:1px solid #29516a;border-radius:15px;
+ background:linear-gradient(135deg,#0b2635,#081b2a 72%);
+ box-shadow:0 17px 50px #010e1a73;color:#edf9fb;
+}
+body[data-page=shipping] .sw121-title-row{
+ display:flex;gap:25px;align-items:flex-start;justify-content:space-between;min-width:0;
+}
+body[data-page=shipping] .sw121-title-copy{max-width:880px;min-width:0}
+body[data-page=shipping] .sw121-kicker{
+ display:block;margin-bottom:8px;color:#70edd0;letter-spacing:.1em;
+ font:800 10px/1.5 'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] #sw121MarketPulseTitle{
+ margin:0 0 8px;letter-spacing:-.037em;
+ font:800 clamp(23px,2.25vw,33px)/1.2 Manrope,'DM Sans',system-ui,sans-serif;
+ color:#fff;
+}
+body[data-page=shipping] .sw121-intro{
+ max-width:825px;margin:0;font-size:13px;line-height:1.6;color:#b3d3df;
+}
+body[data-page=shipping] .sw121-refresh{
+ flex-shrink:0;margin-top:16px;padding:10px 14px;
+ border:1px solid #3e7280;border-radius:7px;
+ background:#133747;color:#d2f4ec;font:750 12px 'DM Sans',system-ui,sans-serif;
+ cursor:pointer;
+}
+body[data-page=shipping] .sw121-refresh:hover{background:#1f4b52}
+body[data-page=shipping] .sw121-refresh:disabled{opacity:.6;cursor:wait}
+body[data-page=shipping] .sw121-status{
+ margin:14px 0 12px;font:650 11px/1.5 'DM Sans',system-ui,sans-serif;
+ color:#8ed6cc;
+}
+body[data-page=shipping] .sw121-filters{
+ display:flex;gap:7px;margin:0 0 17px;min-width:0;overflow-x:auto;
+ padding:3px 1px 7px;scrollbar-width:thin;
+}
+body[data-page=shipping] .sw121-filter{
+ flex:none;min-height:36px;padding:8px 12px;
+ border:1px solid #2f5c6f;border-radius:7px;background:#102c3b;
+ color:#b9d7e3;white-space:nowrap;cursor:pointer;
+ font:750 11px/1.25 'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] .sw121-filter[aria-pressed=true]{
+ background:#184f4c;color:#b9ffeb;border-color:#57bb9f;
+}
+body[data-page=shipping] .sw121-filter:hover{border-color:#69b9b3}
+body[data-page=shipping] .sw121-card-grid{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;align-items:stretch;min-width:0;
+}
+body[data-page=shipping] .sw121-signal-card{
+ display:flex;flex-direction:column;gap:11px;min-width:0;
+ padding:17px;border:1px solid #29495c;border-radius:10px;
+ background:linear-gradient(175deg,#0b2535,#081b28 85%);
+}
+body[data-page=shipping] .sw121-card-meta{
+ display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+ gap:6px 10px;font:800 9px/1.5 'DM Sans',system-ui,sans-serif;
+ letter-spacing:.06em;text-transform:uppercase;
+}
+body[data-page=shipping] .sw121-card-type{color:#76dfc3}
+body[data-page=shipping] .sw121-card-period{color:#9dc0cf}
+body[data-page=shipping] .sw121-signal-card h3{
+ margin:0;font:800 16px/1.33 Manrope,'DM Sans',system-ui,sans-serif;
+ letter-spacing:-.018em;color:#f4ffff;
+}
+body[data-page=shipping] .sw121-signal-summary{
+ margin:0;color:#bad3dd;font:520 12px/1.52 'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] .sw121-measures{
+ display:grid;gap:6px;margin:3px 0 1px;min-width:0;
+}
+body[data-page=shipping] .sw121-measure{
+ display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 8px;
+ min-width:0;align-items:baseline;padding:8px 9px;
+ border:1px solid #24475b;border-radius:6px;background:#112f3c;
+}
+body[data-page=shipping] .sw121-measure-label{
+ min-width:0;font-size:11px;color:#cde1e9;font-weight:650;
+ overflow-wrap:anywhere;
+}
+body[data-page=shipping] .sw121-measure-value{
+ min-width:0;grid-column:1;grid-row:2;font-size:12px;
+ font-weight:820;color:#f3ffff;overflow-wrap:anywhere;
+}
+body[data-page=shipping] .sw121-measure-delta{
+ grid-column:2;grid-row:1/span 2;align-self:center;justify-self:end;
+ font-size:12px;font-weight:800;white-space:nowrap;color:#83d6d8;
+}
+body[data-page=shipping] .sw121-measure-delta[data-direction=up]{color:#7cf0c9}
+body[data-page=shipping] .sw121-measure-delta[data-direction=down]{color:#e8c38b}
+body[data-page=shipping] .sw121-caveat{
+ margin:1px 0 0;font-size:11px;line-height:1.55;color:#9bbdca;
+}
+body[data-page=shipping] .sw121-card-footer{
+ display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:9px;
+}
+body[data-page=shipping] .sw121-card-footer :is(a,button){
+ padding:8px 10px;min-height:34px;display:inline-flex;
+ align-items:center;justify-content:center;border:1px solid #3b7283;
+ border-radius:6px;background:#123a43;color:#afffe9;
+ text-decoration:none;font:800 11px 'DM Sans',system-ui,sans-serif;
+ cursor:pointer;
+}
+body[data-page=shipping] .sw121-card-footer :is(a,button):hover{
+ background:#1b554d;color:#fff;border-color:#8eebd2;
+}
+body[data-page=shipping] .sw121-source-line{
+ margin:0;padding-top:8px;border-top:1px solid #29465a;
+ color:#81aeba;font:600 10px/1.4 'DM Sans',system-ui,sans-serif;
+ overflow-wrap:anywhere;
+}
+body[data-page=shipping] .sw121-methodology{
+ margin:15px 0 0;color:#a8c9d4;font:550 11px/1.55 'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] .sw121-empty{
+ margin:0;grid-column:1/-1;padding:20px;border:1px dashed #3a6073;
+ border-radius:8px;background:#0c2432;color:#b4d4de;font-size:12px;
+}
+/* Always fit the main screen. Hide the preview when the selected map
+   inspector is open, keeping geographic interaction dominant. */
+body[data-page=shipping] #shippingWorldMap .sw121-map-peek{
+ position:absolute;right:clamp(14px,1.7vw,28px);top:83px;z-index:12;
+ display:flex;flex-direction:column;gap:5px;
+ max-width:255px;min-width:206px;padding:13px 15px;
+ border:1px solid #316e77;border-radius:9px;
+ background:#081e2de9;color:#edfffb;
+ text-decoration:none;box-shadow:0 10px 28px #01141d9a;
+ backdrop-filter:blur(5px);
+ font:750 11px/1.4 'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] #shippingWorldMap .sw121-map-peek strong{
+ font-weight:850;color:#98f2d6;font-size:12px;
+}
+body[data-page=shipping] #shippingWorldMap .sw121-map-peek span{
+ color:#b5cfdb;font-size:10px;
+}
+body[data-page=shipping] #shippingWorldMap .sw121-map-peek:hover{
+ border-color:#95ead4;background:#104139;
+}
+body[data-page=shipping].sw119-inspector-open #shippingWorldMap .sw121-map-peek{
+ display:none;
+}
+body[data-page=shipping] .sw121-market-pulse :is(a,button):focus-visible,
+body[data-page=shipping] #shippingWorldMap .sw121-map-peek:focus-visible{
+ outline:3px solid #82f9df;outline-offset:2px;
+}
+@media(max-width:1160px){
+ body[data-page=shipping] .sw121-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page=shipping] #shippingWorldMap .sw121-map-peek{
+  max-width:195px;min-width:0;right:11px;top:82px;padding:10px 12px;
+ }
+}
+@media(max-width:900px){
+ body[data-page=shipping] #v4app>.sw121-market-pulse{
+  max-width:calc(100% - 24px);margin-top:12px;
+  padding:20px 15px;border-radius:10px;
+ }
+ body[data-page=shipping] .sw121-title-row{flex-direction:column;gap:10px}
+ body[data-page=shipping] .sw121-refresh{margin-top:0}
+ body[data-page=shipping] #shippingWorldMap .sw121-map-peek{
+  top:auto;bottom:146px;right:auto;left:12px;max-width:160px;
+  padding:7px 9px;gap:2px;border-radius:7px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw121-map-peek strong{
+  font-size:11px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw121-map-peek span{
+  display:none;
+ }
+}
+@media(max-width:640px){
+ body[data-page=shipping] .sw121-card-grid{grid-template-columns:minmax(0,1fr)}
+ body[data-page=shipping] .sw121-signal-card{padding:14px}
+ body[data-page=shipping] #shippingWorldMap .sw121-map-peek{bottom:144px;left:9px;max-width:135px}
+ body[data-page=shipping] #sw121MarketPulseTitle{font-size:23px}
+ body[data-page=shipping] .sw121-intro{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page=shipping] .sw121-filter,body[data-page=shipping] .sw121-refresh{
+  transition:none!important;
+ }
+}
