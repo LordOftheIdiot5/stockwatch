@@ -33,8 +33,11 @@ def make_fixture():
     issuer_end=q_end(year,q)
     issuer_previous=q_end(year if q>1 else year-1,q-1 if q>1 else 4)
     def row(key,period,unit,older,newer):
-        return {'key':key,'period':period,'unit':unit,
+        result={'key':key,'period':period,'unit':unit,
           'sourceUrl':SOURCE,'history':[older,newer]}
+        if key.startswith('worldbank:container-port-teu:'):
+            result['countryCode']=key.split(':')[-1]
+        return result
     def oldnew(a,b,periods,field='date'):
         return [{field:periods[0],'value':a},{field:periods[1],'value':b}]
     latest_month=f'{y}-{m:02d}'
