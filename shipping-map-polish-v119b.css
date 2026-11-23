@@ -214,3 +214,42 @@ body[data-page=shipping] #shippingWorldMap .sw-atlas-caption{
 @media(prefers-reduced-motion:reduce){
  body[data-page=shipping] #shippingWorldMap .sw-atlas-point.sw-atlas-geography{transition:none}
 }
+
+/* V119b post-screenshot QA: avoid mixing a source-count label with camera
+   presets, and keep just one World reset in the existing zoom control. */
+@media(min-width:1181px){
+ body[data-page=shipping] #shippingWorldMap .sw119b-presets{
+  left:clamp(265px,16vw,295px);
+  max-width:min(425px,calc(100% - 680px));
+ }
+}
+@media(min-width:901px) and (max-width:1180px){
+ body[data-page=shipping] #shippingWorldMap .sw119b-presets{
+  left:250px;max-width:calc(100% - 590px);
+ }
+}
+@media(max-width:900px){
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar{
+  right:12px;bottom:62px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar #shippingMapCount{
+  position:absolute;bottom:calc(100% + 7px);right:0;
+  width:190px;max-width:min(190px,48vw);
+  text-align:right;padding:5px 7px;
+  background:#092a3ce8;box-shadow:0 5px 16px #01152285;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw119b-presets{
+  left:12px;right:157px;bottom:62px;
+ }
+}
+@media(max-width:540px){
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar{
+  right:9px;bottom:63px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw119b-presets{
+  left:9px;right:147px;bottom:63px;
+ }
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-mapbar #shippingMapCount{
+  max-width:175px;bottom:calc(100% + 9px);
+ }
+}
