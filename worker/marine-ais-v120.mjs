@@ -23,7 +23,7 @@ const mmsi = x => Number.isInteger(x) && x >= 100000000 && x <= 999999999 ? x : 
 const utc = ms => new Date(ms).toISOString();
 const stringField = (x, max) => typeof x === 'string'
   ? x.replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, max) || null : null;
-const className = code => ({52:'Tug',60:'Passenger',70:'Cargo',80:'Tanker',90:'Other commercial/unknown'})[code] || null;
+const className = code => ({52:'Tug',60:'Passenger',70:'Cargo',80:'Tanker',90:'Other AIS type (unverified)'})[code] || null;
 
 export function normalizeFintraffic(locations, metadata, nowMs = Date.now()) {
   if (!locations || locations.type !== 'FeatureCollection' ||
@@ -35,7 +35,7 @@ export function normalizeFintraffic(locations, metadata, nowMs = Date.now()) {
     if (!meta || typeof meta !== 'object') continue;
     const id = mmsi(meta.mmsi), kind = num(meta.shipType);
     const updated = num(meta.timestamp);
-    if (!id || !ALLOWED_CLASSES.has(kind) || updated === null ||
+    if (!id || !ALLOWED_CLASSES.has(kind) || (kind === 90 && !(Number.isInteger(meta.imo) && meta.imo >= 1000000 && meta.imo <= 9999999)) || updated === null ||
         updated < nowMs - MAX_META_AGE || updated > nowMs + MAX_FUTURE_MS) continue;
     const old = lookups.get(id);
     if (!old || updated > old.timestamp) lookups.set(id, meta);
@@ -196,6 +196,6 @@ export default {
     return serve({status:'not_found'},404);
   },
   async scheduled(event,env,ctx) {
-    ctx.waitUntil(collectFintraffic(env));
+    ctx.waitUntil(collectFintraffic(env).then(result => {if(result.status === 'source_error')throw Error('ais_collector_source_error');}));
   },
 };
