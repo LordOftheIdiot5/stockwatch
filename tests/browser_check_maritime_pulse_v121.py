@@ -135,6 +135,11 @@ def run():
                         assert page.locator('#sw121SignalCards article').count()==1
                         page.locator('[data-filter="all"]').click()
                         assert page.locator('#sw121SignalCards article').count()==6
+                        if width in (390,1440) and theme=='dark':
+                            screenshot=ROOT/'workspace-previews'/f'maritime-pulse-v121-{width}.png'
+                            screenshot.parent.mkdir(parents=True,exist_ok=True)
+                            page.locator('#sw121MarketPulse').screenshot(
+                                path=str(screenshot),animations='disabled',timeout=30000)
                         camera=page.locator('#shippingMapSvg').get_attribute('viewBox')
                         page.locator('article[data-signal="nordic-roro-yoy"] .sw121-map-context').click()
                         assert page.locator('#shippingMapSvg').get_attribute('viewBox')!=camera
