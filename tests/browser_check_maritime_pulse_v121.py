@@ -126,6 +126,9 @@ def run():
                         assert page.locator('#sw121SourceStatus').inner_text().startswith('6 source-dated')
                         assert len(requests)==6,(width,theme,requests)
                         assert page.locator('.sw121-map-peek').is_visible()
+                        assert 'Market pulse' in page.locator('.sw121-map-peek').inner_text()
+                        assert '-0.3%' in page.locator('.sw121-map-peek').inner_text(),(width,theme,'missing-real-source-map-movement')
+                        assert page.locator('.sw121-map-peek span').is_visible(),(width,theme,'movement-not-visible')
                         assert page.locator('#shippingMapPins .sw-atlas-point').count()==40
                         assert page.locator('#sw121SignalCards article[data-signal="global-container-history"]').count()==1
                         assert 'Historical' in page.locator('article[data-signal="global-container-history"]').inner_text()
