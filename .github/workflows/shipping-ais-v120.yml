@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - 'scripts/fintraffic_ais_v120.py'
+      - 'worker/marine-ais-v120.mjs'
+      - 'tests/test_marine_ais_worker_v120.mjs'
+      - 'deploy/wrangler-marine-ais-v120.toml.example'
       - 'tests/test_fintraffic_ais_v120.py'
       - 'docs/STOCKWATCH-V120-AIS-PROVIDER-INTEGRATION-2026-11-23.md'
       - '.github/workflows/shipping-ais-v120.yml'
@@ -22,6 +25,10 @@ jobs:
         run: python -m py_compile scripts/fintraffic_ais_v120.py
       - name: Run offline AIS provenance, privacy and freshness tests
         run: python -m unittest discover -s tests -p 'test_fintraffic_ais_v120.py' -v
+      - name: Validate isolated maritime Worker and source fixture
+        run: |
+          node --check worker/marine-ais-v120.mjs
+          node --test tests/test_marine_ais_worker_v120.mjs
       - name: Block accidental public pilot AIS export
         run: |
           test ! -f data/ais-vessels.json
