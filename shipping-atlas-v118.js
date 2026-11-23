@@ -294,6 +294,17 @@ function frame(){
    if(!valid.length)throw Error('No fresh verified AIS positions');
    state.data.ais={...payload,positions:valid};
    state.aisStatus='available';
+   // AIS is a Finnish-receiver feed: zoom to the actual observed footprint
+   // rather than imply these vessels cover the rest of the world.
+   const xs=valid.map(v=>pos(v.longitude,v.latitude).x);
+   const ys=valid.map(v=>pos(v.longitude,v.latitude).y);
+   const left=Math.min(...xs),right=Math.max(...xs);
+   const top=Math.min(...ys),bottom=Math.max(...ys);
+   const width=Math.max(150,Math.min(W,Math.max(right-left+32,(bottom-top+20)*W/H)));
+   const height=width*H/W;
+   const cx=(left+right)/2,cy=(top+bottom)/2;
+   state.view=[Math.max(0,Math.min(W-width,cx-width/2)),Math.max(0,Math.min(H-height,cy-height/2)),width,height];
+   showView();
   }catch(error){
    state.aisStatus='unavailable';
    state.data.ais=null;
