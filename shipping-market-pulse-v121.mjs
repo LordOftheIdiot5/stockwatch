@@ -155,7 +155,11 @@ if(document.body.dataset.page==='shipping'){
   if(peek){
    peek.textContent='';
    peek.append(el('strong','',count?'Market pulse · '+count+' observations':'Market pulse · Sources unavailable'));
-   peek.append(el('span','',count?'Compare freight, cargo and connectivity ↘':'Read the data status ↘'));
+   const current=data.signals.find(s=>s.type==='ocean_cost'&&s.kind==='observed_comparison')
+    ||data.signals.find(s=>s.kind==='observed_comparison'&&!s.historical);
+   const figure=current?.figures?.find(f=>typeof f.changePct==='number');
+   const observed=figure?(figure.label+' · '+percent(figure.changePct)+' · '+current.period):null;
+   peek.append(el('span','',observed|| (count?'Read source-dated changes ↘':'Read the data status ↘')));
   }
  }
  async function fetchSource(path){
