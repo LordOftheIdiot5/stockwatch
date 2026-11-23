@@ -141,7 +141,7 @@ if(document.body.dataset.page==='shipping'){
   }
  }
  async function fetchSource(path){
-  const response=await fetch(path,{cache:'no-store'});
+  const response=await fetch(path+'?pulse=v121',{cache:'no-store'});
   if(!response.ok)throw Error('source_http_'+response.status);
   const json=await response.json();
   if(!json||typeof json!=='object'||Array.isArray(json))throw Error('invalid_source_payload');
