@@ -60,6 +60,19 @@ function augmentGeography(atlas){
  for(let lon=-120;lon<=120;lon+=60){const x=pt(lon,0)[0];grid.append(SVG('line',{x1:x,y1:0,x2:x,y2:388}))}
  for(let lat=-60;lat<=60;lat+=30){const y=pt(0,lat)[1];grid.append(SVG('line',{x1:0,y1:y,x2:900,y2:y}))}
  const borders=SVG('g',{id:'sw119MaritimeBorders','aria-hidden':'true'});
+ // Keep the original 110m image and 110m boundaries as proven fallbacks.
+ // Optimized 50m SVGs use the identical 900×388 projection and are rendered
+ // as image resources, avoiding runtime high-density polygon reprojection.
+ const addDetail=(id,src,flag)=>{
+  const img=SVG('image',{id,x:0,y:0,width:900,height:388,href:src,
+   preserveAspectRatio:'none','aria-hidden':'true'});
+  img.style.pointerEvents='none';
+  img.addEventListener('load',()=>atlas.classList.add(flag),{once:true});
+  img.addEventListener('error',()=>{img.remove();atlas.classList.remove(flag)},{once:true});
+  root.insertBefore(img,lineLayer);
+ };
+ addDetail('sw119cLandDetail','brand/world-land-ne50-v119c.svg','sw119c-land-ready');
+ addDetail('sw119cBorderDetail','brand/world-borders-ne50-v119c.svg','sw119c-borders-ready');
  root.insertBefore(grid,lineLayer);root.insertBefore(borders,lineLayer);
  if(bordersLoading)return;
  bordersLoading=true;
