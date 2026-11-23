@@ -69,6 +69,13 @@ function observationCurrentEnough(period,frequency,now){
  return Number.isFinite(age)&&age>=-2&&age<=limit;
 }
 function valuePercent(x){return x===null?null:(x>0?'+':'')+x.toFixed(1)+'%'}
+const describeMovement=(label,current,previous)=>{
+ const pct=asPercent(current,previous);
+ if(pct===null)return label+' comparison unavailable';
+ if(pct===0)return label+' was unchanged';
+ return label+' '+(pct>0?'rose':'fell')+' by '+Math.abs(pct).toFixed(1)+'%';
+};
+const summarizePairs=(pairs,period)=>pairs.map(x=>describeMovement(x.label,x.p.a.value,x.p.b.value)).join('; ')+'. '+period;
 const item=(label,pair,period,unit,frequency,description) => ({
  label,period,unit,frequency,description,
  value:pair.a.value,previous:pair.b.value,changePct:asPercent(pair.a.value,pair.b.value)
@@ -93,8 +100,10 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
  const pf=seriesBy(freight,'usda:pnw-japan-index');
  const ga=lastTwo(gf,'weekly',now),pa=lastTwo(pf,'weekly',now);
  add(ga&&pa&&observationCurrentEnough(ga.a.date,'weekly',now)&&ga.a.date===pa.a.date&&gf.period===ga.a.date&&pf.period===pa.a.date&&
-  baseSignal('usda-grain-week','ocean_cost','Ocean grain costs: Gulf eased, Pacific Northwest steady',
-   ga.a.date,'Two USDA ocean freight cost indices, compared with the preceding week.',
+  baseSignal('usda-grain-week','ocean_cost','Ocean grain cost indices: weekly comparison',
+   ga.a.date,
+   describeMovement('U.S. Gulf → Japan',ga.a.value,ga.b.value)+'; '+
+   describeMovement('Pacific Northwest → Japan',pa.a.value,pa.b.value)+'. Compared with the preceding week.',
    '2017=100 indices, not USD/tonne prices or Baltic Exchange freight assessments.',
    'USDA Agricultural Marketing Service',gf?.sourceUrl,'U.S. Gulf and Pacific Northwest routes to Japan',
    [item('U.S. Gulf → Japan',ga,ga.a.date,gf.unit,'weekly','Index'),
@@ -108,9 +117,9 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
  const pairs=markets.map(x=>({...x,p: lastTwo(x.s,'monthly',now)}));
  add(pairs.every(x=>x.p&&x.s.period===x.p.a.date.slice(0,7)&&observationCurrentEnough(x.s.period,'monthly',now))&&
      pairs.every(x=>x.s.period===pairs[0].s.period)&&
-  baseSignal('nordic-liner-network','liner_connectivity','Nordic liner networks diverged',
+  baseSignal('nordic-liner-network','liner_connectivity','Nordic liner networks: monthly changes',
    pairs[0]?.s?.period||'',
-   'Denmark and Sweden weakened month over month, while Norway improved.',
+   summarizePairs(pairs,'Compared with the previous month.'),
    'Country-level scheduled-service network connectivity. Not a vessel position, cargo count, freight price or bookings measure.',
    'UN Trade and Development (UNCTAD)',conn?.source?.sourceUrl,'Denmark, Sweden and Norway',
    pairs.map(x=>item(x.label,x.p,x.s.period,x.s.unit,'monthly','Connectivity index')),
@@ -122,9 +131,9 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
  ].map(([code,label])=>({label,s:ro?.series?.find(x=>x?.countryCode===code)}));
  const q=qs.map(x=>({...x,p:yearOnYearQuarter(x.s,now)}));
  add(q.every(x=>x.p&&x.s.period===q[0].s.period&&observationCurrentEnough(x.s.period,'quarterly',now))&&
-  baseSignal('nordic-roro-yoy','roro_cargo','Ro-Ro volumes rose in Norway, Sweden and the Netherlands',
+  baseSignal('nordic-roro-yoy','roro_cargo','Ro-Ro cargo: same-quarter country changes',
    q[0]?.s?.period||'',
-   'Published main-port Ro-Ro gross cargo weight increased versus the same quarter a year earlier.',
+   summarizePairs(q,'Gross cargo weight compared with the same quarter a year earlier.'),
    'Country totals in thousand tonnes, not vessel utilization, vehicle exports or freight rates. EU aggregate overlaps country totals and is not added.',
    'Eurostat',ro?.sourceUrl,'Norway, Sweden and Netherlands',
    q.map(x=>item(x.label,x.p,x.s.period,x.s.unit,'quarterly','Same quarter last year')),
@@ -136,9 +145,9 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
  ].map(([code,label])=>({label,s:ports?.series?.find(x=>x?.countryCode===code)}));
  const g=goods.map(x=>({...x,p:lastTwo(x.s,'annual',now)}));
  add(g.every(x=>x.p&&x.s.period===g[0].s.period&&observationCurrentEnough(x.s.period,'annual',now))&&
-  baseSignal('global-container-history','container_handling','Global container handling expanded in 2024',
+  baseSignal('global-container-history','container_handling','Container handling: historical annual comparison',
    g[0]?.s?.period||'',
-   'World and selected country annual container throughput changed differently.',
+   summarizePairs(g,'Source reporting year '+g[0].s.period+' versus '+String(Number(g[0].s.period)-1)+'.'),
    'Historical country/global totals, not current-day throughput, individual port totals or demand forecasts. Country totals are included in the world total.',
    'World Bank WDI (UNCTAD-origin)',ports?.source?.sourceUrl,'World, Viet Nam and Norway',
    g.map(x=>item(x.label,x.p,x.s.period,'TEU','annual','Container handling')),
@@ -156,9 +165,9 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
  const companyRoot=Array.isArray(metrics?.companies)?metrics.companies.find(x=>x.ticker==='WAWI.OL'):null;
  const source=m[0]?.p?.a?.sourceUrl;
  add(m.every(x=>x.p&&x.period===m[0].period&&x.p.a.periodEnd===m[0].p.a.periodEnd&&observationCurrentEnough(x.p.a.periodEnd,'issuer',now))&&
-  baseSignal('wallenius-operations','issuer_operating','Wallenius Wilhelmsen reported mixed operating changes',
+  baseSignal('wallenius-operations','issuer_operating','Wallenius Wilhelmsen: quarterly operating comparisons',
    m[0]?.p?.a?.periodEnd||'',
-   'Q3 realized net freight rose, while transported volume and contract backlog declined versus Q2.',
+   summarizePairs(m,'Issuer figures versus the preceding quarter.'),
    'Issuer-specific realized figures; not broker spot rates, verified cash flows or a forecast of next-quarter earnings.',
    'Wallenius Wilhelmsen ASA',source,'Wallenius Wilhelmsen (WAWI.OL)',
    m.map(x=>item(x.label,x.p,x.p.a.periodEnd,x.metric.unit,'quarterly','Company filing')),
@@ -171,9 +180,9 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
  if(gulf&&pnw&&gulf.observationDate===pnw.observationDate&&rates.isBrokerRate===false&&
    validSource(rates.sourceUrl)&&yesterdayOrBefore(gulf.observationDate,now)&&observationCurrentEnough(gulf.observationDate,'weekly',now)){
   signals.push({schemaVersion:1,id:'usda-grain-indications',kind:'observed_levels',type:'freight_indications',
-   title:'USDA reported grain freight indications for two routes',
+   title:'USDA grain ocean freight: original route indications',
    period:gulf.observationDate,scope:'U.S. Gulf / Pacific Northwest → Japan',
-   headline:'Two original government-published route observations; not a trend or an executable quotation.',
+   headline:'Two government-published route levels observed '+gulf.observationDate+'; not an executable quotation or a time-series trend.',
    caveat:'Routes have different origins and distances. Do not treat their price gap as a trading arbitrage, ship earnings, or a time-series change.',
    source:'USDA Agricultural Marketing Service',sourceUrl:rates.sourceUrl,
    snapshotAt:rates.reportedAt,figures:[{label:'U.S. Gulf → Japan',value:gulf.value,unit:'USD/metric tonne',period:gulf.observationDate},
