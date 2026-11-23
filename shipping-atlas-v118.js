@@ -170,10 +170,10 @@ function frame(){
   const r=state.rows.find(x=>x.id===id);
   const info=definitions[state.mode];
   if(!r){
-   title.textContent=state.mode==='ais'?'No live AIS feed connected':'Choose a '+info.kind.toLowerCase()+' point';
+   title.textContent=state.mode==='ais'?(state.aisStatus==='available'?'Select an AIS-reported vessel':'No live AIS feed connected'):'Choose a '+info.kind.toLowerCase()+' point';
    explain.textContent=info.help;
    fact.replaceChildren();
-   sourceState.textContent=state.mode==='ais'?'Ship positions available: 0. Official feeds require verifiable credentials/permissions and timestamps.':'Select a marker or use the observation list. Historical measurements are not live market quotes.';
+   sourceState.textContent=state.mode==='ais'?(state.aisStatus==='loading'?'Checking source-dated AIS observations…':state.aisStatus==='available'?'Fintraffic / digitraffic.fi · CC BY 4.0 · partial coverage.':state.aisStatus==='unavailable'?'AIS source temporarily unavailable or stale; no positions displayed.':'Ship positions available: 0. Official feeds require verifiable credentials/permissions and timestamps.'):'Select a marker or use the observation list. Historical measurements are not live market quotes.';
    pins.querySelectorAll('.sw-atlas-point').forEach(p=>p.classList.remove('selected'));
    return;
   }
@@ -181,12 +181,24 @@ function frame(){
   fact.replaceChildren();
   const details=document.createElement('div');details.className='sw-atlas-factgrid';
   const add=(a,b)=>{const k=document.createElement('span'),v=document.createElement('strong');k.textContent=a;v.textContent=b;details.append(k,v)};
-  if(r.value!==null)add('Reported figure',r.kind==='freight'?U.format(r.value):r.kind==='index'?F.format(r.value):I.format(r.value));
-  add('Unit / scale',r.unit);add('Observed period',r.period);add('Category',r.kind==='geography'?'Reference location':r.kind==='freight'?'Published route freight':r.kind==='index'?'Network connectivity':'Regional cargo activity');
+  if(r.kind==='vessel'){
+   const v=r.vessel;
+   add('Vessel identity','MMSI '+v.mmsi+(v.imo?' · IMO '+v.imo:''));
+   add('Ship class',v.vesselClass||'Unclassified');
+   add('AIS position reported',v.positionReportedAt);
+   add('Coordinates',v.latitude.toFixed(4)+'°, '+v.longitude.toFixed(4)+'°');
+   add('Speed over ground',v.speedKnots===null?'Not reported':v.speedKnots+' kn');
+   add('Course over ground',v.courseDegrees===null?'Not reported':v.courseDegrees+'°');
+   add('AIS-reported destination',v.destinationAisReported||'Not reported / unverified');
+   add('Identity metadata reported',v.metadataReportedAt||'Timestamp unavailable');
+  }else{
+   if(r.value!==null)add('Reported figure',r.kind==='freight'?U.format(r.value):r.kind==='index'?F.format(r.value):I.format(r.value));
+   add('Unit / scale',r.unit);add('Observed period',r.period);add('Category',r.kind==='geography'?'Reference location':r.kind==='freight'?'Published route freight':r.kind==='index'?'Network connectivity':'Regional cargo activity');
+  }
   fact.append(details);
   const description=document.createElement('p');description.textContent=r.note;fact.append(description);
   const link=document.createElement('a');const url=legalUrl(r.sourceUrl);if(url){link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open original source ↗';fact.append(link)}
-  sourceState.textContent=r.source+'. Source and observation date shown above. Geographic anchor location may be approximate.';
+  sourceState.textContent=r.kind==='vessel'?'Source: Fintraffic Digitraffic (CC BY 4.0). Reported AIS position, not continuously live or a verified itinerary.':r.source+'. Source and observation date shown above. Geographic anchor location may be approximate.';
   pins.querySelectorAll('.sw-atlas-point').forEach(p=>p.classList.toggle('selected',p.dataset.id===id));
  }
  function laneDraw(r){
