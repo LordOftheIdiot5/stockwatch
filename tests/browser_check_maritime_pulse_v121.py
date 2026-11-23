@@ -113,7 +113,7 @@ def run():
                                   'company':'company-operating-metrics',
                                   'rates':'shipping-usda-ocean-rates-s1'}[name]
                             page.route('**/data/'+path+'.json?pulse=v121',
-                              lambda route,value=payload,key=name:(
+                              lambda route,request,value=payload,key=name:(
                                 requests.append(key),
                                 route.fulfill(status=200,content_type='application/json',body=json.dumps(value))
                               ))
@@ -168,10 +168,10 @@ def run():
                           'rates':'shipping-usda-ocean-rates-s1'}[name]
                     if name=='freight':
                         page.route('**/data/'+path+'.json?pulse=v121',
-                            lambda route:route.fulfill(status=503,body='Unavailable'))
+                            lambda route,request:route.fulfill(status=503,body='Unavailable'))
                     else:
                         page.route('**/data/'+path+'.json?pulse=v121',
-                            lambda route,value=payload:route.fulfill(status=200,
+                            lambda route,request,value=payload:route.fulfill(status=200,
                                 content_type='application/json',body=json.dumps(value)))
                 page.goto(f'http://127.0.0.1:{server.server_port}/shipping.html',
                     wait_until='domcontentloaded',timeout=30000)
