@@ -1,0 +1,45 @@
+name: V121 source-dated Maritime Market Pulse
+on:
+  pull_request:
+    paths:
+      - 'scripts/maritime-pulse-v121.mjs'
+      - 'shipping-market-pulse-v121.mjs'
+      - 'shipping-market-pulse-v121.css'
+      - 'shipping.html'
+      - 'tests/test_maritime_pulse_v121.mjs'
+      - 'tests/browser_check_maritime_pulse_v121.py'
+      - '.github/workflows/shipping-market-pulse-v121.yml'
+      - 'docs/NORDL-MARKET-INTELLIGENCE-V121.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  market-pulse:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Confirm pure signal engine and browser module syntax
+        run: |
+          node --check scripts/maritime-pulse-v121.mjs
+          node --check shipping-market-pulse-v121.mjs
+          python -m py_compile tests/browser_check_maritime_pulse_v121.py
+      - name: Reject invented trends and mismatched reporting periods
+        run: node --test tests/test_maritime_pulse_v121.mjs
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Verify responsive browser and partial-source outages
+        run: python tests/browser_check_maritime_pulse_v121.py
+      - name: Upload source-backed pulse screenshots
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: maritime-pulse-v121-visuals
+          path: workspace-previews/maritime-pulse-v121-*.png
+          if-no-files-found: ignore
+          retention-days: 14
