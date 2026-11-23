@@ -32,6 +32,11 @@ def run():
                             assert not page.locator('#shippingMapInspector').is_visible(),(width,theme,'panel initially open')
                             assert page.locator('#shippingMapPick').input_value()==''
                             assert page.locator('#shippingWorldMap').is_visible()
+                            page.locator('#shippingWorldMap.sw119c-land-ready').wait_for(timeout=15000)
+                            page.locator('#shippingWorldMap.sw119c-borders-ready').wait_for(timeout=15000)
+                            assert page.locator('#sw119cLandDetail').count()==1
+                            assert page.locator('#sw119cBorderDetail').count()==1
+                            assert page.locator('#shippingMapSvg image[href="brand/world-land-ne110.svg"]').count()==1
                             assert page.locator('#shippingMapCount').is_visible()
                             assert page.locator('.sw-atlas-legend').count()==1
                             assert not page.locator('.sw-atlas-legend').is_visible()
@@ -91,6 +96,18 @@ def run():
                                             'unobstructed':True,'synced_focus':True})
                         finally:
                             page.close()
+                # High-detail file failures must not remove the original
+                # 1:110m land silhouette or the 40 selectable port anchors.
+                fallback=browser.new_page(viewport={'width':390,'height':860})
+                fallback.route('**/brand/world-land-ne50-v119c.svg',lambda route:route.abort())
+                fallback.route('**/brand/world-borders-ne50-v119c.svg',lambda route:route.abort())
+                fallback.goto(f'http://127.0.0.1:{server.server_port}/shipping.html',wait_until='domcontentloaded')
+                fallback.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
+                assert fallback.locator('#shippingMapPins .sw-atlas-point').count()==40
+                assert fallback.locator('#shippingMapSvg image[href="brand/world-land-ne110.svg"]').count()==1
+                fallback.wait_for_timeout(300)
+                assert not fallback.locator('#shippingWorldMap').evaluate("(e)=>e.classList.contains('sw119c-land-ready')")
+                fallback.close()
             finally:browser.close()
     finally:server.shutdown();server.server_close()
     assert len(summary)==14
