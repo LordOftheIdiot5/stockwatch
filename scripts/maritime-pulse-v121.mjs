@@ -100,6 +100,7 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    [item('U.S. Gulf → Japan',ga,ga.a.date,gf.unit,'weekly','Index'),
     item('Pacific Northwest → Japan',pa,pa.a.date,pf.unit,'weekly','Index')],
    {snapshotAt:freight?.generated,comparison:'previous_week',
+    investigation:'Review the next dated USDA report and whether both route indices move together. This is not evidence of daily charter earnings.',
     focus:{layer:'lanes'}}),'usda_weekly_unavailable_or_period_mismatch');
  const conn=data?.connectivity;const markets=[
   ['denmark','Denmark'],['sweden','Sweden'],['norway','Norway']
@@ -114,7 +115,8 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    'UN Trade and Development (UNCTAD)',conn?.source?.sourceUrl,'Denmark, Sweden and Norway',
    pairs.map(x=>item(x.label,x.p,x.s.period,x.s.unit,'monthly','Connectivity index')),
    {snapshotAt:conn?.generated,comparison:'previous_month',
-    focus:{lon:12,lat:57,width:185}}),'unctad_monthly_unavailable_or_period_mismatch');
+    investigation:'Compare future port-level service connectivity or verified port calls before proposing a cause or a change in cargo demand.',
+     focus:{lon:12,lat:57,width:185}}),'unctad_monthly_unavailable_or_period_mismatch');
  const ro=data?.roro;const qs=[
   ['NO','Norway'],['SE','Sweden'],['NL','Netherlands']
  ].map(([code,label])=>({label,s:ro?.series?.find(x=>x?.countryCode===code)}));
@@ -127,7 +129,8 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    'Eurostat',ro?.sourceUrl,'Norway, Sweden and Netherlands',
    q.map(x=>item(x.label,x.p,x.s.period,x.s.unit,'quarterly','Same quarter last year')),
    {snapshotAt:ro?.observedOn,comparison:'same_quarter_prior_year',
-    focus:{lon:10,lat:58,width:170}}),'eurostat_roro_yoy_unavailable');
+    investigation:'Check later same-quarter cargo reports and issuer-specific volume disclosures. The country aggregate does not reveal which carrier benefited.',
+     focus:{lon:10,lat:58,width:170}}),'eurostat_roro_yoy_unavailable');
  const ports=data?.ports;const goods=[
   ['WLD','World'],['VNM','Viet Nam'],['NOR','Norway']
  ].map(([code,label])=>({label,s:ports?.series?.find(x=>x?.countryCode===code)}));
@@ -140,7 +143,8 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    'World Bank WDI (UNCTAD-origin)',ports?.source?.sourceUrl,'World, Viet Nam and Norway',
    g.map(x=>item(x.label,x.p,x.s.period,'TEU','annual','Container handling')),
    {snapshotAt:ports?.generated,comparison:'prior_year',historical:true,
-    focus:{preset:'world'}}),'worldbank_annual_comparison_unavailable');
+    investigation:'Use this long-run baseline alongside newer port statistics when available; 2024 data cannot describe current vessel demand.',
+     focus:{preset:'world'}}),'worldbank_annual_comparison_unavailable');
  const metrics=data?.company;
  const issued=[
   ['net_freight','Realized net freight'],
@@ -159,7 +163,8 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    'Wallenius Wilhelmsen ASA',source,'Wallenius Wilhelmsen (WAWI.OL)',
    m.map(x=>item(x.label,x.p,x.p.a.periodEnd,x.metric.unit,'quarterly','Company filing')),
    {snapshotAt:metrics?.compiledOn,comparison:'prior_quarter',
-    companyUrl:'company.html?ticker=WAWI.OL'}),'issuer_comparable_operating_metrics_unavailable');
+    investigation:'Follow subsequent company releases for backlog, transported volumes and realized freight; the disclosed mix does not determine the next stock move.',
+     companyUrl:'company.html?ticker=WAWI.OL'}),'issuer_comparable_operating_metrics_unavailable');
  const rates=data?.rates;const quotes=rates?.rates||[];
  const gulf=quotes.find(x=>x.id?.startsWith('us-gulf-japan')&&finite(x.value));
  const pnw=quotes.find(x=>x.id?.startsWith('pnw-japan')&&finite(x.value));
@@ -174,6 +179,7 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    snapshotAt:rates.reportedAt,figures:[{label:'U.S. Gulf → Japan',value:gulf.value,unit:'USD/metric tonne',period:gulf.observationDate},
     {label:'Pacific Northwest → Japan',value:pnw.value,unit:'USD/metric tonne',period:pnw.observationDate}],
    review:'Source-dated levels only; no equivalent previous rates provided',
+   investigation:'Compare the next original USDA route report before inferring any directional change; route distances and conditions differ.',
    focus:{layer:'lanes'}});
  }else diagnostics.push('usda_source_dated_route_indications_unavailable');
  const cadence={weekly:'weekly',monthly:'monthly',quarterly:'quarterly',annual:'annual'};
