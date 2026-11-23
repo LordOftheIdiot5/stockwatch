@@ -7,8 +7,8 @@
   "currentStateEstablished": false,
   "deltaReplayComplete": false,
   "eligiblePairs": 17,
-  "lastAttempt": "2026-11-22T17:05:36+00:00",
-  "lastSuccess": "2026-11-22T17:05:36+00:00",
+  "lastAttempt": "2026-11-23T06:09:40+00:00",
+  "lastSuccess": "2026-11-23T06:09:40+00:00",
   "matchedPairs": 17,
   "notice": "Selected and normalized ESMA FIRDS reference facts. Original data is available free of charge from ESMA; ESMA does not endorse Nordl. Third-party rights and any stated exceptions remain applicable. Weekly snapshot evidence only; subsequent modifications, cancellations and terminations not applied.",
   "pendingUpdateSets": [
@@ -24,6 +24,13 @@
       "date": "2026-11-22",
       "expectedParts": 2,
       "foundParts": 2,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
+      "date": "2026-11-23",
+      "expectedParts": 1,
+      "foundParts": 1,
       "type": "DLTINS"
     },
     {

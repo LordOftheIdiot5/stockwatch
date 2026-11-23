@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22T17:06:24Z",
+  "generated": "2026-11-23T06:10:22Z",
   "datasets": [
     {
       "name": "Official macroeconomic and FX observations",
@@ -82,13 +82,13 @@
     {
       "name": "Historical article index",
       "path": "data/news-store/index.json",
-      "records": 1979,
+      "records": 2001,
       "license": "Git-backed source-linked metadata; inspect original publisher terms"
     },
     {
       "name": "A/B indicator observations",
       "path": "data/spread-observations.json",
-      "records": 96,
+      "records": 108,
       "license": "Derived research indicators; no raw historical OHLCV"
     },
     {

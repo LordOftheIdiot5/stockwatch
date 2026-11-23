@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-22T17:00:47+00:00",
+  "generated": "2026-11-23T06:05:40+00:00",
   "comparisonDate": "2026-11-20",
   "totalListings": 500,
   "candidates": [
@@ -6289,6 +6289,24 @@
       ]
     },
     {
+      "id": "1913.HK",
+      "name": "Prada",
+      "venue": "HKSE",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "TISG.MI",
       "name": "The Italian Sea Group",
       "venue": "Milan",
@@ -6782,23 +6800,6 @@
       "id": "ZEAL.CO",
       "name": "Zealand Pharma",
       "venue": "Copenhagen",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "1913.HK",
-      "name": "Prada",
-      "venue": "HKSE",
       "group": "monitored",
       "lastSavedDate": "2026-11-20",
       "lastSavedKind": "scanner",
