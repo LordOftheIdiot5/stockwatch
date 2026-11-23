@@ -136,7 +136,7 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
   baseSignal('global-container-history','container_handling','Global container handling expanded in 2024',
    g[0]?.s?.period||'',
    'World and selected country annual container throughput changed differently.',
-   'Historical country/global totals, not today's throughput, individual port totals or demand forecasts. Country totals are included in the world total.',
+   'Historical country/global totals, not current-day throughput, individual port totals or demand forecasts. Country totals are included in the world total.',
    'World Bank WDI (UNCTAD-origin)',ports?.source?.sourceUrl,'World, Viet Nam and Norway',
    g.map(x=>item(x.label,x.p,x.s.period,'TEU','annual','Container handling')),
    {snapshotAt:ports?.generated,comparison:'prior_year',historical:true,
