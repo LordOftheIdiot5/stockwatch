@@ -40,6 +40,8 @@ const data={
   {id:'pnw-japan-grain-2026-11-12',value:39.5,observationDate:'2026-11-12'}
  ]}
 };
+// World Bank snapshots always include a countryCode in addition to the series key.
+for(const s of data.ports.series)s.countryCode=s.key.split(':').at(-1);
 const clone=x=>JSON.parse(JSON.stringify(x));
 test('six source-dated indicators from compatible real-report-shaped data',()=>{
  const r=buildMaritimePulse(data,{now:NOW});
