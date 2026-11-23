@@ -81,7 +81,7 @@ def run():
                             assert page.locator('#navprofitEconomics').count()==1
                             assert not errors,(width,theme,errors)
                             if theme=='dark' and width in (390,1672):
-                                page.locator('.sw119b-presets button[data-preset="world"]').click()
+                                page.locator('[data-map-zoom="reset"]').click()
                                 page.evaluate("document.body.classList.add('sw119-inspector-hidden')")
                                 page.evaluate('window.scrollTo(0,0)')
                                 out=ROOT/'workspace-previews'/f'shipping-polish-v119b-{width}.png'
