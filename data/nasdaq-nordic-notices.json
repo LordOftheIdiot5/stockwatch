@@ -1,27 +1,38 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T11:07:49Z",
+  "generated": "2026-11-23T12:07:00Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-23T11:07:49Z",
-      "lastSuccess": "2026-11-23T11:07:49Z",
+      "lastAttempt": "2026-11-23T12:07:00Z",
+      "lastSuccess": "2026-11-23T12:07:00Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-23T11:07:49Z",
-      "lastSuccess": "2026-11-23T11:07:49Z",
+      "lastAttempt": "2026-11-23T12:07:00Z",
+      "lastSuccess": "2026-11-23T12:07:00Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:f233f335ce1b4fd9ddd4c71e89c6710ac735af4a89a6c54b2ae799ac594abffd",
+      "title": "Listing of bond issued by Smart Eye Aktiebolag (publ) on STO Corporate Bonds and delisting from STO FN Transfer Market.",
+      "published": "2026-11-23T11:50:44Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b3e46948a9eb7313a6e368c9e72ea4419&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:5faa43ea2021589f30f55ba2eee5cd3ffd9632998e8903dd9cc9fbdf27009e7e",
       "title": "Lift of Suspension in Great Dane INDEX+ at XCSE",
