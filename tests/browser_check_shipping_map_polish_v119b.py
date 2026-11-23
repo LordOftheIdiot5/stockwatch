@@ -27,6 +27,20 @@ def run():
                             assert resp and resp.status==200
                             page.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
                             assert page.locator('#shippingMapPins .sw-atlas-point').count()==40
+                            # Clusters are groups of reference markers, never fake ships
+                            # and never replacements for the original 40 selectable points.
+                            assert page.locator('#shippingMapPick option').count()==41
+                            assert page.locator('#sw119cPortClusters').count()==1
+                            if width in (390,1672):
+                                page.locator('.sw119c-port-cluster').first.wait_for(timeout=10000)
+                                n=page.locator('.sw119c-port-cluster').count()
+                                assert n>0,(width,'expected crowd-group')
+                                page.locator('.sw119c-port-cluster').first.focus()
+                                page.keyboard.press('Enter')
+                                assert page.locator('#shippingMapSvg').get_attribute('viewBox')!='0 0 900 388'
+                                assert page.locator('#shippingMapPins .sw-atlas-point').count()==40
+                                page.locator('[data-map-zoom="reset"]').click()
+
                             assert page.locator('#sw119bFocusSelection').count()==1
                             assert page.locator('.sw119b-presets button').count()==3
                             assert not page.locator('#shippingMapInspector').is_visible(),(width,theme,'panel initially open')
