@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T12:07:03.112369+00:00",
-  "newsRecordsScanned": 2090,
+  "generated": "2026-11-23T13:07:13.555372+00:00",
+  "newsRecordsScanned": 2097,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3007,6 +3007,20 @@
       "candidateType": "headline_event",
       "published": "2026-11-23T11:21:04Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMGNBcklFWUQyM2xDVnBPWjdGaGNmMzA2UUI0VEV1d1VHZWlxcHNzYXNhZW1MWUVJVHBOUUtyT2cyUXJOUnZqT2N1RXpvSGRUSGFMY3Nqbk9YWDVQSU5malhaSDVpR3dCSmlFTkxlWkZHc0JqTHh4Zk5jWDBuaXNOZ3p3?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "57359c4c7119e193793ea172709223f0b65631a49a7d6c078d386af710f7beb3",
+      "newsId": "SIE.DE:ff4884e77c653c0fc923be2f91a2261c971f244914dc2b7c45ac2df657b0e3c3",
+      "entityIds": [
+        "siemens"
+      ],
+      "issuerTicker": "SIE.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-23T12:11:15Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkaW4yOWdVV1FJR0tFVjZIQzV0bGNZVDZPUEY0QUZYeDRDclNpend5cUhVZEhqYmVac2ZiSXBtVUl1RFVIcTVPd2F6Y0ZHQzhFOVFQbG9EYUNCNi1a?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
