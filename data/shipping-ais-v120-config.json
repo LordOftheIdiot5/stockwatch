@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "endpoint": null,
+  "sourceId": "fintraffic-ais-v1",
+  "status": "not_enabled",
+  "note": "V120 map AIS integration is feature-gated until a verified Cloudflare Worker collector is deployed, source health is stable, and production rights/QA are accepted. No ship locations are published by this file."
+}
