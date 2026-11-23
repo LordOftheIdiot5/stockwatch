@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T13:35:19Z",
+  "generated": "2026-11-23T15:21:17Z",
   "notice": "OpenFIGI matches are instrument candidates, not verified issuer identities. ENTSO-E raw rates not published.",
   "sources": {
     "openfigi": {
@@ -10,15 +10,8 @@
       "sourceUrl": "https://www.openfigi.com/api/documentation"
     },
     "entsoe": {
-      "status": "probe_ok",
-      "seriesAvailable": true,
-      "pointsChecked": 191,
-      "area": "NO2",
-      "periodStart": "2026-11-19T00:00:00+00:00",
-      "periodEnd": "2026-11-20T00:00:00+00:00",
-      "dataStored": false,
-      "publicDisplay": false,
-      "license": "Pending verification of applicable ENTSO-E data item and primary-owner rights",
+      "status": "error",
+      "errorType": "TimeoutError",
       "sourceUrl": "https://transparency.entsoe.eu/"
     }
   },
@@ -33,7 +26,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AFISH.OL",
@@ -45,7 +38,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AUSS.OL",
@@ -57,7 +50,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "KLDVK.OL",
@@ -69,7 +62,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "NOHAL.OL",
@@ -81,7 +74,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "PLCAN.OL",
@@ -93,7 +86,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "PROXI.OL",
@@ -105,7 +98,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SALM.OL",
@@ -117,7 +110,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SALME.OL",
@@ -129,7 +122,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AZA.ST",
@@ -141,7 +134,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AVARDA.ST",
@@ -153,7 +146,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "GJF.OL",
@@ -165,7 +158,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "HOFI.ST",
@@ -177,7 +170,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "INSTA.OL",
@@ -189,7 +182,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "MORROW.ST",
@@ -201,7 +194,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "NOBA.ST",
@@ -213,7 +206,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "PROT.OL",
@@ -225,7 +218,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "QLIRO.ST",
@@ -237,7 +230,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SBNOR.OL",
@@ -249,7 +242,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "STB.OL",
@@ -261,7 +254,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "TRYG.CO",
@@ -273,7 +266,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "BONHR.OL",
@@ -285,7 +278,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "CLOUD.OL",
@@ -297,7 +290,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "4DS.DE",
@@ -309,7 +302,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ELI.BR",
@@ -321,7 +314,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ALPER.PA",
@@ -333,7 +326,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "NKT.CO",
@@ -345,7 +338,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "NEX.PA",
@@ -357,7 +350,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "NDX1.DE",
@@ -369,7 +362,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "S92.DE",
@@ -381,7 +374,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SCATC.OL",
@@ -393,7 +386,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "VWS.CO",
@@ -405,7 +398,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ZAP.OL",
@@ -417,7 +410,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ORSTED.CO",
@@ -429,7 +422,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ALO.PA",
@@ -441,7 +434,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "BOL.ST",
@@ -453,7 +446,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AM.PA",
@@ -465,7 +458,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "KCR.HE",
@@ -477,7 +470,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SIE.DE",
@@ -489,7 +482,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "TKMS.DE",
@@ -501,7 +494,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "VOS.DE",
@@ -513,7 +506,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "MTRS.ST",
@@ -525,7 +518,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "EL.PA",
@@ -537,7 +530,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "RMS.PA",
@@ -549,7 +542,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "P911.DE",
@@ -561,7 +554,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ASML.AS",
@@ -573,7 +566,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AIR.PA",
@@ -585,7 +578,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "AKRBP.OL",
@@ -597,7 +590,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "IFX.DE",
@@ -609,7 +602,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SAP.DE",
@@ -621,7 +614,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SAND.ST",
@@ -633,7 +626,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SUBC.OL",
@@ -645,7 +638,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "YAR.OL",
@@ -657,7 +650,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "BONEX.ST",
@@ -669,7 +662,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "CAMX.ST",
@@ -681,7 +674,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "EUZ.DE",
@@ -693,7 +686,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "FYB.DE",
@@ -705,7 +698,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "GMAB.CO",
@@ -717,7 +710,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "GUBRA.CO",
@@ -729,7 +722,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "OBCK.DE",
@@ -741,7 +734,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SOBI.ST",
@@ -753,7 +746,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "TRMED.OL",
@@ -765,7 +758,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "VICO.ST",
@@ -777,7 +770,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ZEAL.CO",
@@ -789,7 +782,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "HNSA.ST",
@@ -801,7 +794,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "EIOF.OL",
@@ -813,7 +806,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "FABG.ST",
@@ -825,7 +818,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "GFC.PA",
@@ -837,7 +830,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "VNA.DE",
@@ -849,7 +842,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "BMAX.ST",
@@ -861,7 +854,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ELLOS.ST",
@@ -873,7 +866,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "NELLY.ST",
@@ -885,7 +878,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "BOHUS.OL",
@@ -897,7 +890,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "CMBTO.OL",
@@ -909,7 +902,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "CADLR.OL",
@@ -921,7 +914,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "DOFG.OL",
@@ -933,7 +926,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "DSV.CO",
@@ -945,7 +938,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "FRO.OL",
@@ -957,7 +950,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "HAUTO.OL",
@@ -969,7 +962,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "IWS.OL",
@@ -981,7 +974,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "ODF.OL",
@@ -993,7 +986,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "REACH.OL",
@@ -1005,7 +998,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "SOFF.OL",
@@ -1017,7 +1010,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "WAWI.OL",
@@ -1029,7 +1022,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "WWI.OL",
@@ -1041,7 +1034,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "DNORD.CO",
@@ -1053,7 +1046,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:34:59Z"
+      "checkedAt": "2026-11-23T15:20:56Z"
     },
     {
       "ticker": "KCC.OL",
@@ -1065,7 +1058,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "AUTO.OL",
@@ -1077,7 +1070,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "IVU.DE",
@@ -1089,7 +1082,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "MYCR.ST",
@@ -1101,7 +1094,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "OVZON.ST",
@@ -1113,7 +1106,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "TPE.DE",
@@ -1125,7 +1118,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "ALRIB.PA",
@@ -1137,7 +1130,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "SMOP.OL",
@@ -1149,7 +1142,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "SMHN.DE",
@@ -1161,7 +1154,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "ISLAX.OL",
@@ -1173,7 +1166,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "IBAB.BR",
@@ -1185,7 +1178,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "AFG.OL",
@@ -1197,7 +1190,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "NRC.OL",
@@ -1209,7 +1202,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "RAIL.ST",
@@ -1221,7 +1214,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "SBO.OL",
@@ -1233,7 +1226,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "VEI.OL",
@@ -1245,7 +1238,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     },
     {
       "ticker": "NHY.OL",
@@ -1257,7 +1250,7 @@
       "match": "single_instrument_same_mic_candidate",
       "verified": false,
       "sourceUrl": "https://www.openfigi.com/",
-      "checkedAt": "2026-11-20T13:35:00Z"
+      "checkedAt": "2026-11-23T15:20:57Z"
     }
   ]
 }
