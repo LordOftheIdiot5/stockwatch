@@ -40,6 +40,16 @@ class Tests(unittest.TestCase):
                      "health.html","price-evidence-v97.js","price-evidence-v97.css"):
             self.assertIn(path,m.PATHS)
         self.assertEqual(len(m.PATHS),len(set(m.PATHS)))
+    def test_v119c_high_detail_shipping_assets_are_part_of_production_parity(self):
+        for path in ("shipping.html","shipping-atlas-v118.js",
+                     "shipping-mapfirst-v119.js","shipping-mapfirst-v119.css",
+                     "shipping-map-polish-v119b.css",
+                     "brand/world-land-ne50-v119c.svg",
+                     "brand/world-borders-ne50-v119c.svg",
+                     "data/shipping-world-borders-v119.json"):
+            self.assertIn(path,m.PATHS)
+            self.assertTrue((ROOT/path).is_file(),path)
+        self.assertEqual(len(m.PATHS),len(set(m.PATHS)))
     def test_requires_exact_production_origin(self):
         with self.assertRaises(ValueError):
             m.check(base="https://example.invalid/",attempts=1,interval=0,fetch=lambda p,n:b"fake")
