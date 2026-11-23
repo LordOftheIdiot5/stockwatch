@@ -1,27 +1,71 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T10:07:32Z",
+  "generated": "2026-11-23T11:07:49Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-23T10:07:32Z",
-      "lastSuccess": "2026-11-23T10:07:32Z",
+      "lastAttempt": "2026-11-23T11:07:49Z",
+      "lastSuccess": "2026-11-23T11:07:49Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-23T10:07:32Z",
-      "lastSuccess": "2026-11-23T10:07:32Z",
+      "lastAttempt": "2026-11-23T11:07:49Z",
+      "lastSuccess": "2026-11-23T11:07:49Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:5faa43ea2021589f30f55ba2eee5cd3ffd9632998e8903dd9cc9fbdf27009e7e",
+      "title": "Lift of Suspension in Great Dane INDEX+ at XCSE",
+      "published": "2026-11-23T10:44:04Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b0e935bf56735f65235ab1ec8514cc546&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:646f030783d4e35296c15a62d9632072cf067583f196df450fff7f09cee4029e",
+      "title": "Lift of Suspension in Sparinvest Mix Aktier KL A at XCSE",
+      "published": "2026-11-23T10:27:04Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b41fde997ca33c47a6592e581c0912a3d&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:6424381177727716b855ff9abf3e1086355acc5952dc188332f828dee4a58ecf",
+      "title": "CHANGE IN THE AMOUNT OF INSTRUMENT ISSUED BY KUNTARAHOITUS OYJ",
+      "published": "2026-11-23T10:21:00Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b9e15e86973abd18707cb2d1786036edb&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:5783ed2b912f83911f43638f59821e12dccb760260e4ca86430fb7f296a68b9e",
+      "title": "Lift of Suspension in Jyske Invest Korte Obligationer at XCSE",
+      "published": "2026-11-23T10:16:04Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bf89da77fcda9ea7dcfc5f180af4693b3&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:83f0b68b9e2298d8366f3719d58ff5f1c79b37669b631295787369735f29b915",
       "title": "Suspension of Trading in Sparinvest Mix Aktier KL A at XCSE",
