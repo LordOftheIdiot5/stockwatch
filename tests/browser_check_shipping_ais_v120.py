@@ -58,7 +58,7 @@ def main():
                     errors=[]
                     p.on('pageerror',lambda e:errors.append(str(e)))
                     p.route('**/data/shipping-ais-v120-config.json',mock_config)
-                    p.route(ENDPOINT,lambda route:route.fulfill(status=200,content_type='application/json',body=json.dumps(snapshot())))
+                    p.route(ENDPOINT,lambda route:route.fulfill(status=200,content_type='application/json',headers={'access-control-allow-origin':'*'},body=json.dumps(snapshot())))
                     p.goto(base,wait_until='domcontentloaded')
                     p.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
                     p.locator('[data-layer="ais"]').click()
@@ -79,7 +79,7 @@ def main():
                 # An old source point is not drawn even when the mock endpoint returns 200.
                 p=browser.new_page(viewport={'width':390,'height':860})
                 p.route('**/data/shipping-ais-v120-config.json',mock_config)
-                p.route(ENDPOINT,lambda route:route.fulfill(status=200,content_type='application/json',body=json.dumps(snapshot(stale=True))))
+                p.route(ENDPOINT,lambda route:route.fulfill(status=200,content_type='application/json',headers={'access-control-allow-origin':'*'},body=json.dumps(snapshot(stale=True))))
                 p.goto(base,wait_until='domcontentloaded')
                 p.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
                 p.locator('[data-layer="ais"]').click()
