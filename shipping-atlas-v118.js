@@ -259,7 +259,7 @@ function frame(){
  let aisRequested=false;
  async function loadAis(){
   if(aisRequested||!state.data)return;
-  aisRequested=true;state.aisStatus='loading';draw();
+  aisRequested=true; // No loading-state flash when the public feature gate is disabled.
   try{
    const configRes=await fetch('data/shipping-ais-v120-config.json',{cache:'no-store'});
    if(!configRes.ok)throw Error('AIS configuration absent');
@@ -267,6 +267,7 @@ function frame(){
    if(config?.schemaVersion!==1||config?.enabled!==true){
     state.aisStatus='not_enabled';draw();return;
    }
+   state.aisStatus='loading';draw();
    const endpoint=new URL(config.endpoint,location.href);
    if(endpoint.protocol!=='https:'||endpoint.pathname!=='/api/marine/vessels'||
      !(endpoint.origin===location.origin||endpoint.hostname.endsWith('.workers.dev')))
