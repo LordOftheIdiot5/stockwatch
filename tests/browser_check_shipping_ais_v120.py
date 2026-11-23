@@ -65,7 +65,7 @@ def main():
                     p.locator('#shippingMapPins .sw-atlas-vessel').first.wait_for(timeout=12000)
                     assert p.locator('#shippingMapPins .sw-atlas-vessel').count()==1
                     assert '1 timestamped vessel positions' in p.locator('#shippingMapCount').inner_text()
-                    assert 'Fintraffic' in p.locator('#shippingMapLegend').inner_text()
+                    assert 'Fintraffic' in p.locator('#shippingMapLegend').text_content()
                     p.locator('#shippingMapPick').select_option('vessel:230949000')
                     assert 'HELGA' in p.locator('#shippingMapDetailTitle').inner_text()
                     facts=p.locator('#shippingMapFact').inner_text()
