@@ -104,6 +104,12 @@ if(document.body.dataset.page==='shipping'){
   article.append(table);
   const caveat=el('p','sw121-caveat',signal.caveat);
   article.append(caveat);
+  if(typeof signal.investigation==='string'&&signal.investigation){
+   const details=el('details','sw121-investigation');
+   details.append(el('summary','', 'What to investigate next'),
+                  el('p','',signal.investigation));
+   article.append(details);
+  }
   const footer=el('div','sw121-card-footer');
   const url=signal.sourceUrl;
   try{
@@ -121,7 +127,9 @@ if(document.body.dataset.page==='shipping'){
   }
   const map=context(signal);if(map)footer.append(map);
   article.append(footer);
-  article.append(el('p','sw121-source-line','Source: '+signal.source+' · Period '+signal.period));
+  const snapshot=typeof signal.snapshotAt==='string'?signal.snapshotAt.slice(0,10):null;
+  article.append(el('p','sw121-source-line','Source: '+signal.source+' · Period '+signal.period+
+   (snapshot?' · Snapshot archived '+snapshot:'')));
   return article;
  }
  function render(data){
