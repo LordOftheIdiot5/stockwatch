@@ -50,6 +50,13 @@ class Tests(unittest.TestCase):
             self.assertIn(path,m.PATHS)
             self.assertTrue((ROOT/path).is_file(),path)
         self.assertEqual(len(m.PATHS),len(set(m.PATHS)))
+    def test_v121_pulse_code_and_1_50m_geography_are_deployment_verified(self):
+        for path in ("shipping.html","shipping-market-pulse-v121.mjs",
+                     "shipping-market-pulse-v121.css","scripts/maritime-pulse-v121.mjs",
+                     "brand/world-land-ne50-v119c.svg",
+                     "brand/world-borders-ne50-v119c.svg"):
+            self.assertIn(path,m.PATHS)
+            self.assertTrue((ROOT/path).is_file(),path)
     def test_requires_exact_production_origin(self):
         with self.assertRaises(ValueError):
             m.check(base="https://example.invalid/",attempts=1,interval=0,fetch=lambda p,n:b"fake")
