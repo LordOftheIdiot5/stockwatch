@@ -79,7 +79,21 @@ function html(){
 function makeRows(data,mode){
  const rows=[];
  if(mode==='ports')return data.geo.ports.map(p=>({id:p.id,lon:p.lon,lat:p.lat,title:p.name,metric:'Port reference location',value:null,period:'No market observation',unit:'approximate port-area point',kind:'geography',region:p.region,sourceUrl:data.geo.referenceUrl,source:'World Port Index geographical reference',note:'Location only, not an AIS ship, port-throughput report or verified navigational berth.'}));
- if(mode==='ais')return rows;
+ if(mode==='ais'){
+  if(!data.ais||!Array.isArray(data.ais.positions))return rows;
+  for(const v of data.ais.positions){
+   if(!Number.isInteger(v.mmsi)||!Number.isFinite(v.longitude)||!Number.isFinite(v.latitude))continue;
+   const title=v.name||('MMSI '+v.mmsi);
+   rows.push({id:'vessel:'+v.mmsi,lon:v.longitude,lat:v.latitude,title,
+    metric:'AIS reported vessel position · '+v.mmsi+' · '+(v.destinationAisReported||'destination unknown'),
+    value:null,period:v.positionReportedAt,unit:'latitude / longitude',kind:'vessel',
+    region:v.latitude>=53&&v.latitude<=72&&v.longitude>=4&&v.longitude<=33?'nordic':'europe',
+    sourceUrl:data.ais.sourceUrl,source:'Fintraffic Digitraffic · CC BY 4.0',
+    note:'Last reported AIS point, not a navigable route, ship owner, cargo, verified destination or guaranteed current location.',
+    vessel:v});
+  }
+  return rows;
+ }
  const c=data.centers;
  if(mode==='containers'){
   const d=data.containers;
@@ -133,7 +147,7 @@ function filterRow(r,region){
  return r.region===region;
 }
 function frame(){
- const state={mode:'ports',region:'global',q:'',selected:null,view:[0,0,W,H],rows:[],data:null};
+ const state={mode:'ports',region:'global',q:'',selected:null,view:[0,0,W,H],rows:[],data:null,aisStatus:'not_enabled'};
  const el=html();
  const select=el.querySelector('#shippingMapPick'),search=el.querySelector('#shippingMapSearch'),area=el.querySelector('#shippingMapRegion');
  const map=el.querySelector('#shippingMapSvg'),pins=el.querySelector('#shippingMapPins'),lines=el.querySelector('#shippingMapLines');
