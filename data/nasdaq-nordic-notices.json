@@ -1,27 +1,49 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T08:07:09Z",
+  "generated": "2026-11-23T09:07:20Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-23T08:07:09Z",
-      "lastSuccess": "2026-11-23T08:07:09Z",
+      "lastAttempt": "2026-11-23T09:07:20Z",
+      "lastSuccess": "2026-11-23T09:07:20Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-23T08:07:09Z",
-      "lastSuccess": "2026-11-23T08:07:09Z",
+      "lastAttempt": "2026-11-23T09:07:20Z",
+      "lastSuccess": "2026-11-23T09:07:20Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:a3e1b7b4b22a3e6b610dfe1e6ee46b4d4ac200e56fc130a6ea3a2a63495f204a",
+      "title": "Suspension of Trading in Great Dane INDEX+ at XCSE",
+      "published": "2026-11-23T08:45:04Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bb50ada5a23dd31e251893fdda76395d1&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:308202706aaf6c6a134d945d1e609116c4f5e0e97c06529a172c102b5c60c16f",
+      "title": "Suspension of Trading in Jyske Invest Korte Obligationer at XCSE",
+      "published": "2026-11-23T08:25:05Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b2607356c8ca5654b187e9ee7c601146b&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:186dca1aea4adcdcb1c98e2b018a49ee164b5ea1fb4ad5a0e67a76ee22dfa775",
       "title": "Standard Exercise - Swedish Stock",

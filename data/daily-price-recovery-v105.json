@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T08:06:18+00:00",
+  "generated": "2026-11-23T09:05:40+00:00",
   "comparisonDate": "2026-11-20",
   "totalListings": 500,
   "candidates": [
@@ -6253,6 +6253,77 @@
       ]
     },
     {
+      "id": "NHY.OL",
+      "name": "Norsk Hydro",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": true,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ASML.AS",
+      "name": "ASML",
+      "venue": "Amsterdam",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ELI.BR",
+      "name": "Elia Group",
+      "venue": "Brussels",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "IBAB.BR",
+      "name": "Ion Beam Applications",
+      "venue": "Brussels",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "DNORD.CO",
       "name": "D/S Norden",
       "venue": "Copenhagen",
@@ -6523,6 +6594,132 @@
       ]
     },
     {
+      "id": "GVR.IR",
+      "name": "Glenveagh Properties",
+      "venue": "Irish",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "CAF.MC",
+      "name": "CAF",
+      "venue": "MCE",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "MRL.MC",
+      "name": "Merlin Properties",
+      "venue": "MCE",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "FCT.MI",
+      "name": "Fincantieri",
+      "venue": "Milan",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "PRY.MI",
+      "name": "Prysmian",
+      "venue": "Milan",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "RACE.MI",
+      "name": "Ferrari",
+      "venue": "Milan",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SL.MI",
+      "name": "Sanlorenzo",
+      "venue": "Milan",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "TISG.MI",
       "name": "The Italian Sea Group",
       "venue": "Milan",
@@ -6536,6 +6733,186 @@
       "needsDailyVerification": true,
       "reasons": [
         "monitored_source_quality_no_volume",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "UCG.MI",
+      "name": "Unicredit",
+      "venue": "Milan",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "YACHT.MI",
+      "name": "Ferretti",
+      "venue": "Milan",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AFG.OL",
+      "name": "AF Gruppen",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AFISH.OL",
+      "name": "Arctic Fish",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AKRBP.OL",
+      "name": "Aker BP",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ANDF.OL",
+      "name": "Andfjord Salmon",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AUSS.OL",
+      "name": "Austevoll Seafood",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AUTO.OL",
+      "name": "Autostore",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "BOHUS.OL",
+      "name": "Bohus",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "BONHR.OL",
+      "name": "Bonheur",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
@@ -6555,6 +6932,762 @@
       "reasons": [
         "older_than_comparison_date",
         "monitored_source_quality_no_volume",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "CLOUD.OL",
+      "name": "Cloudberry",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "CMBTO.OL",
+      "name": "CMB.TECH",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "DOFG.OL",
+      "name": "DOF Group",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "EIOF.OL",
+      "name": "Eiendomsspar",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "FRO.OL",
+      "name": "Frontline",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "GJF.OL",
+      "name": "Gjensidige",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "HAUTO.OL",
+      "name": "Höegh Autoliners",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "INSTA.OL",
+      "name": "Instabank",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "IWS.OL",
+      "name": "IWS",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "KCC.OL",
+      "name": "Klaveness Combination Carriers",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "KLDVK.OL",
+      "name": "Kaldvik",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "NOHAL.OL",
+      "name": "Nordic Halibut",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "NRC.OL",
+      "name": "NRC Group",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ODF.OL",
+      "name": "Odfjell",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "PLCAN.OL",
+      "name": "Pelican Aqua",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "PROT.OL",
+      "name": "Protector forsikring",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "PROXI.OL",
+      "name": "Proximar Seafood",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "REACH.OL",
+      "name": "Reach Subsea",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SALM.OL",
+      "name": "Salmar",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SALME.OL",
+      "name": "Salmon Evolution",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SBNOR.OL",
+      "name": "Sparebanken Norge",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SBO.OL",
+      "name": "Selvaag Bolig",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SCATC.OL",
+      "name": "Scatec",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SMOP.OL",
+      "name": "Smartoptics",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SOFF.OL",
+      "name": "Solstad Offshore",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "STB.OL",
+      "name": "Storebrand",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "SUBC.OL",
+      "name": "Subsea 7",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "TRMED.OL",
+      "name": "Thor Medical",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "VEI.OL",
+      "name": "Veidekke",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "WAWI.OL",
+      "name": "Wallenius Wilhelmsen",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "WWI.OL",
+      "name": "Wilh. Wilhelmsen",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "YAR.OL",
+      "name": "Yara",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ZAP.OL",
+      "name": "Zaptec",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AIR.PA",
+      "name": "Airbus",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ALO.PA",
+      "name": "Alstom",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ALPER.PA",
+      "name": "Gerard Perrier Industrie",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "ALRIB.PA",
+      "name": "Riber",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "AM.PA",
+      "name": "Dassault Aviation",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "EL.PA",
+      "name": "EssilorLuxottica",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "GFC.PA",
+      "name": "Gecina",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "NEX.PA",
+      "name": "Nexans",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
+      "id": "RMS.PA",
+      "name": "Hermes",
+      "venue": "Paris",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
@@ -7442,493 +8575,343 @@
       ]
     },
     {
-      "id": "NHY.OL",
-      "name": "Norsk Hydro",
-      "venue": "Oslo",
+      "id": "PAL.VI",
+      "name": "Palfinger",
+      "venue": "Vienna",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": true,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "ASML.AS",
-      "name": "ASML",
-      "venue": "Amsterdam",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "ELI.BR",
-      "name": "Elia Group",
-      "venue": "Brussels",
+      "id": "VIG.VI",
+      "name": "Vienna Insurance Group",
+      "venue": "Vienna",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "IBAB.BR",
-      "name": "Ion Beam Applications",
-      "venue": "Brussels",
+      "id": "1AST.DE",
+      "name": "ASTA Energy Solutions",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "GVR.IR",
-      "name": "Glenveagh Properties",
-      "venue": "Irish",
+      "id": "4DS.DE",
+      "name": "Daldrup & Söhne",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "CAF.MC",
-      "name": "CAF",
-      "venue": "MCE",
+      "id": "EUZ.DE",
+      "name": "Eckert & Ziegler",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "MRL.MC",
-      "name": "Merlin Properties",
-      "venue": "MCE",
+      "id": "FYB.DE",
+      "name": "Formycon",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "FCT.MI",
-      "name": "Fincantieri",
-      "venue": "Milan",
+      "id": "IFX.DE",
+      "name": "Infineon",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "PRY.MI",
-      "name": "Prysmian",
-      "venue": "Milan",
+      "id": "IVU.DE",
+      "name": "IVU Traffic Technologies",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "RACE.MI",
-      "name": "Ferrari",
-      "venue": "Milan",
+      "id": "NDX1.DE",
+      "name": "Nordex",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "SL.MI",
-      "name": "Sanlorenzo",
-      "venue": "Milan",
+      "id": "OBCK.DE",
+      "name": "Ottobock",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "UCG.MI",
-      "name": "Unicredit",
-      "venue": "Milan",
+      "id": "P911.DE",
+      "name": "Porsche",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "YACHT.MI",
-      "name": "Ferretti",
-      "venue": "Milan",
+      "id": "S92.DE",
+      "name": "SMA Solar",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "AFG.OL",
-      "name": "AF Gruppen",
-      "venue": "Oslo",
+      "id": "SAP.DE",
+      "name": "SAP",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "AFISH.OL",
-      "name": "Arctic Fish",
-      "venue": "Oslo",
+      "id": "SIE.DE",
+      "name": "Siemens",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "AKRBP.OL",
-      "name": "Aker BP",
-      "venue": "Oslo",
+      "id": "SMHN.DE",
+      "name": "Suss Microtec",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "ANDF.OL",
-      "name": "Andfjord Salmon",
-      "venue": "Oslo",
+      "id": "TKMS.DE",
+      "name": "TKMS",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "AUSS.OL",
-      "name": "Austevoll Seafood",
-      "venue": "Oslo",
+      "id": "TPE.DE",
+      "name": "PVA Tepla",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "AUTO.OL",
-      "name": "Autostore",
-      "venue": "Oslo",
+      "id": "VNA.DE",
+      "name": "Vonovia",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
     },
     {
-      "id": "BOHUS.OL",
-      "name": "Bohus",
-      "venue": "Oslo",
+      "id": "VOS.DE",
+      "name": "Vossloh",
+      "venue": "XETRA",
       "group": "monitored",
-      "lastSavedDate": "2026-11-20",
+      "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
-      "quality": "comparable",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
-      "needsDailyVerification": false,
+      "needsDailyVerification": true,
       "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "BONHR.OL",
-      "name": "Bonheur",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "CLOUD.OL",
-      "name": "Cloudberry",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "CMBTO.OL",
-      "name": "CMB.TECH",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "DOFG.OL",
-      "name": "DOF Group",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "EIOF.OL",
-      "name": "Eiendomsspar",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "FRO.OL",
-      "name": "Frontline",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "GJF.OL",
-      "name": "Gjensidige",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "HAUTO.OL",
-      "name": "Höegh Autoliners",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "INSTA.OL",
-      "name": "Instabank",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
@@ -7937,584 +8920,6 @@
       "id": "ISLAX.OL",
       "name": "Icelandic Salmon",
       "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "IWS.OL",
-      "name": "IWS",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "KCC.OL",
-      "name": "Klaveness Combination Carriers",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "KLDVK.OL",
-      "name": "Kaldvik",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "NOHAL.OL",
-      "name": "Nordic Halibut",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "NRC.OL",
-      "name": "NRC Group",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "ODF.OL",
-      "name": "Odfjell",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "PLCAN.OL",
-      "name": "Pelican Aqua",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "PROT.OL",
-      "name": "Protector forsikring",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "PROXI.OL",
-      "name": "Proximar Seafood",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "REACH.OL",
-      "name": "Reach Subsea",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SALM.OL",
-      "name": "Salmar",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SALME.OL",
-      "name": "Salmon Evolution",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SBNOR.OL",
-      "name": "Sparebanken Norge",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SBO.OL",
-      "name": "Selvaag Bolig",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SCATC.OL",
-      "name": "Scatec",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SMOP.OL",
-      "name": "Smartoptics",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SOFF.OL",
-      "name": "Solstad Offshore",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "STB.OL",
-      "name": "Storebrand",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SUBC.OL",
-      "name": "Subsea 7",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "TRMED.OL",
-      "name": "Thor Medical",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "VEI.OL",
-      "name": "Veidekke",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "WAWI.OL",
-      "name": "Wallenius Wilhelmsen",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "WWI.OL",
-      "name": "Wilh. Wilhelmsen",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "YAR.OL",
-      "name": "Yara",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "ZAP.OL",
-      "name": "Zaptec",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "AIR.PA",
-      "name": "Airbus",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "ALO.PA",
-      "name": "Alstom",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "ALPER.PA",
-      "name": "Gerard Perrier Industrie",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "ALRIB.PA",
-      "name": "Riber",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "AM.PA",
-      "name": "Dassault Aviation",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "EL.PA",
-      "name": "EssilorLuxottica",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "GFC.PA",
-      "name": "Gecina",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "NEX.PA",
-      "name": "Nexans",
-      "venue": "Paris",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "RMS.PA",
-      "name": "Hermes",
-      "venue": "Paris",
       "group": "monitored",
       "lastSavedDate": "2026-11-20",
       "lastSavedKind": "scanner",
@@ -8563,331 +8968,8 @@
       ]
     },
     {
-      "id": "PAL.VI",
-      "name": "Palfinger",
-      "venue": "Vienna",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "VIG.VI",
-      "name": "Vienna Insurance Group",
-      "venue": "Vienna",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "1AST.DE",
-      "name": "ASTA Energy Solutions",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "4DS.DE",
-      "name": "Daldrup & Söhne",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "EUZ.DE",
-      "name": "Eckert & Ziegler",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "FYB.DE",
-      "name": "Formycon",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "IFX.DE",
-      "name": "Infineon",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "IVU.DE",
-      "name": "IVU Traffic Technologies",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "NDX1.DE",
-      "name": "Nordex",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "OBCK.DE",
-      "name": "Ottobock",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "P911.DE",
-      "name": "Porsche",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
       "id": "PFSE.DE",
       "name": "Pfisterer",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "S92.DE",
-      "name": "SMA Solar",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SAP.DE",
-      "name": "SAP",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SIE.DE",
-      "name": "Siemens",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SMHN.DE",
-      "name": "Suss Microtec",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "TKMS.DE",
-      "name": "TKMS",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "TPE.DE",
-      "name": "PVA Tepla",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "VNA.DE",
-      "name": "Vonovia",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "VOS.DE",
-      "name": "Vossloh",
       "venue": "XETRA",
       "group": "monitored",
       "lastSavedDate": "2026-11-20",

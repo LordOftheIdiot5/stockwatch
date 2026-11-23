@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T08:07:10Z",
+  "generated": "2026-11-23T09:07:22Z",
   "windowStart": "2026-11-09",
   "windowEnd": "2026-11-22",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -857,9 +857,26 @@
           "media": 1
         }
       ],
-      "potential": [],
-      "observedRecords": 19,
-      "latestRecord": "2026-11-23T07:47:00Z",
+      "potential": [
+        {
+          "id": "ALO.PA:babdd70ad8ee4a05b8143074c98e22612a414aa55a2ad903d7f80f90f7f5c1f6",
+          "published": "2026-11-23T07:46:49Z",
+          "headline": "Alstom Secures €1.2 Billion Transport Modernisation Order in Europe",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZEg4cjFmQXdIa0U4RXo0WXZCMjhwSW8wZGNjRUpHSXNzQl80bmROZnIwVUZobkRPS3FWNVVRQTRLRFJKbGlqQ1NjY2tGYmJMT05TSUVFXzVvc3p4Z2pkYmhvRmFvLTU4RDBRX2IxUHBUQ1BjcG1HOUlzMzZxTkVSbXlmLTlrX3JqelpBdEhxY3RHQQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
+          "id": "ALO.PA:c2de7adc6bfa2786ffecd8ba8643ffb8122167fb35f4d8150f089531bd12dd22",
+          "published": "2026-11-23T07:39:16Z",
+          "headline": "Alstom wins €1.2bn contract",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNaWx4UDJoRmQ5cU4xVkFBc0tCTXEtTWdxeVFKei00ajRGSDVjbTdFaF82MDg1Ykt0a2stRXRxSkM3Wk50N0czeWQ4S1AyU2pRbXpUUnVmdnhTQUZVeWE0SmNSaWM4MFlfMTZuRVlWV0FhT0JTb0dTUmwtQ1ZLNnhkM2RjMS1ja25qY2NV?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 22,
+      "latestRecord": "2026-11-23T08:37:27Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -2616,8 +2633,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-23T07:58:58Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-23T08:33:27Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8606,8 +8623,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-23T06:39:19Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-23T08:19:20Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 1,
@@ -9933,9 +9950,26 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "RAIL.ST:cdeb4e509eca9c4a0690d5b75de998f11ed5d35709de40378dc4ddd5bfd4f4c8",
+          "published": "2026-11-23T08:34:21Z",
+          "headline": "Railcare wins transport contract with Viscaria worth SEK54m per year",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWDlaY0RWOU5JSDduYjRTbnktS3VsOXBCdFdJUkk3T1RFRmtlelhfcHNWVV9vQ2NSSlR1eFRaRkEzVjVMOHJIZ01LREgybDU3UWItcnhINHRnTjB4bkRqbzVBLTk1MlpramtRSkNLVEtUbFdpVU4zZGVUTTRpeWYtOWhabTVpZWpva21CY0RRakc0TjNPb0FlZzFDS3h1ZHp3Nl9PN2RQRVVsMmt6SnI4di1fWm5WOW5XQV8xRGdR?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
+          "id": "RAIL.ST:dfd508c5d263d543d6f9894e8054e92b4cb11c7ce03bdfcc8ef1bc4adbddb868",
+          "published": "2026-11-23T08:30:00Z",
+          "headline": "Viscaria secures long-term rail capacity through agreement with Railcare",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPR29TSXczLWxZTk56MVI3eHNkNXJMemJoTkJBaGdOb1NjRUNWamgxUWJtWTVYVGFaeGVBcjJiU1loLTQzeXFSQThKdVRDZDRTdjcwekRzTkFOR3hVLWZteWZ2al8xMjhQMHZkYVlXSkVwMTVFQU1adDFRYmJ4LXNRYTFyeC1LbzVPNnhES3VOOUI2UTV4N21vT2hrXzZOcHo0RVBHVVprcV85TVJYTEZJZjhlQklId0Qya2tYU1Q0VlpNcmMyNTd1Nl83SHlkUHdwODVqTQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 2,
+      "latestRecord": "2026-11-23T08:34:21Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10429,8 +10463,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-22T21:09:45Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-23T08:19:35Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
