@@ -39,7 +39,11 @@ if(document.body.dataset.page==='shipping'){
  const refresh=el('button','sw121-refresh','Recheck published data');
  refresh.type='button';
  refresh.addEventListener('click',()=>load(true));
- top.append(heading,refresh);
+ const actions=el('div','sw121-title-actions');
+ const backToMap=el('a','sw121-inline-back','↑ Back to world map');
+ backToMap.href='#shippingWorldMap';
+ actions.append(backToMap,refresh);
+ top.append(heading,actions);
  const controls=el('div','sw121-filters');
  controls.setAttribute('role','group');
  controls.setAttribute('aria-label','Filter market observations');
@@ -56,6 +60,12 @@ if(document.body.dataset.page==='shipping'){
  }
  const notes=el('p','sw121-methodology','Only source-compatible comparisons are shown. Quarterly Ro-Ro is compared with the same quarter last year; historical throughput is clearly dated. No daily Baltic quotations, continuous AIS or verified forward earnings are connected.');
  section.append(top,sourceStatus,controls,cards,notes);
+ if('IntersectionObserver' in window){
+  const visibility=new IntersectionObserver(entries=>{
+   document.body.classList.toggle('sw121-pulse-visible',entries.some(entry=>entry.isIntersecting));
+  },{threshold:.03});
+  visibility.observe(section);
+ }
  function context(s){
   const focus=s.focus;
   if(!focus)return null;
