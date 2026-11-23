@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T07:08:03Z",
+  "generated": "2026-11-23T08:07:10Z",
   "windowStart": "2026-11-09",
   "windowEnd": "2026-11-22",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -858,8 +858,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 17,
-      "latestRecord": "2026-11-22T06:00:41Z",
+      "observedRecords": 19,
+      "latestRecord": "2026-11-23T07:47:00Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -2600,6 +2600,14 @@
       ],
       "potential": [
         {
+          "id": "CADLR.OL:6d9577b13967b28f71b87fe6ab60d80b211c4f9409311bcd157113812977c67b",
+          "published": "2026-11-23T07:10:20Z",
+          "headline": "Blodrødt på Wall Street, Nvidia falt 14%, futures indikerer rekyl, VAR gjør oppkjøp og Cadeler-tall",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPLWd2TThyNk9STnZZalNUeW5BTzNrZG9TNVRvWm5NRXlDcmJHWTJIOFlKSmdObkg4Q1djWFZnT2FJNy1XeXVZQVdvN054UDR5dHRNalhQWUZoTUstSERiNkZqaFluLUl6QXViN0tscEFiSTFBZ0w5ZmM2dXE3N1VWaXVyaTU1eXU0eFV4UnNlNkgzdDNHZ1hlM05Ob0VZV3dhVWlUdDRtSURfTWJIN0FpTkYzWm54UmpDZEFNcHRLX3liNFFndXlZUXltQngySnI1S2dMRUJCb3Y1R3l2bVpNWll0VQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "CADLR.OL:6bc0ed0378d7c81416cc735f92b5374bb9e24d7a87b917dfc96d9e19ecccf93b",
           "published": "2026-11-12T14:49:34Z",
           "headline": "Cadeler secures exclusive agreement for full-scope OWP",
@@ -2608,8 +2616,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-23T07:00:00Z",
+      "observedRecords": 6,
+      "latestRecord": "2026-11-23T07:58:58Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -5764,8 +5772,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 34,
-      "latestRecord": "2026-11-23T06:07:49Z",
+      "observedRecords": 35,
+      "latestRecord": "2026-11-23T07:56:07Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -5857,8 +5865,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-16T17:22:05Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-23T07:43:14Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -6761,8 +6769,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-20T01:35:46Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-23T07:44:45Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7059,6 +7067,14 @@
       ],
       "potential": [
         {
+          "id": "MYCR.ST:10111593084bbbc90f3234d8bc1ab463cbd21fbb8ec281e8b921f554a6883d57",
+          "published": "2026-11-23T07:07:50Z",
+          "headline": "Mycronic tar order på reparationssystem för fotomasker",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPYktJMEVRb2V2Nm1fZkV5LWdmYll2cy15OS0wLXhlTVU5U25kVEZBb3BzY0kxeVpJMHJnT3JLZld0RDIxRWx2NWRNRFphSU5MZXRWNGswQ25TTVNrT0NxRk1pcmpVcVY2SHFsLWRLNk5PeWdZOXIxSjQzUW1Ed2lQQ1VhVFd1d1Nmb1pLY1p0U3ZEVUpnN3pyUkhTbE8?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "MYCR.ST:496f3c009f4f9f7da71e820bdb451b6dbcc224c4bb45642cb731434ceb8202d6",
           "published": "2026-11-20T13:21:00Z",
           "headline": "Mycronic Wins Order for Display Photomask Repair System in Asia",
@@ -7163,8 +7179,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 16,
-      "latestRecord": "2026-11-20T13:21:00Z",
+      "observedRecords": 17,
+      "latestRecord": "2026-11-23T07:07:50Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -11348,7 +11364,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 55,
+      "observedRecords": 56,
       "latestRecord": "2026-11-23T07:00:00Z",
       "topicCounts": {
         "numbers": 1,
@@ -13215,8 +13231,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-16T14:30:48Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-23T07:23:07Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,

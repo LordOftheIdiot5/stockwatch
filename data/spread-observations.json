@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T07:06:32+00:00",
+  "generated": "2026-11-23T08:06:18+00:00",
   "method": "Dated snapshots of Stockwatch calculated A/B ratios; NOT reconstructed historical share prices.",
   "frequency": "one UTC observation per day",
   "source": "Stockwatch scanner context",
@@ -40,7 +40,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 1.1089
+        "value": 1.0953
       }
     ],
     "WWI.OL/WWIB.OL": [
@@ -116,7 +116,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 0.9857
+        "value": 0.9861
       }
     ],
     "ODF.OL/ODFB.OL": [
@@ -192,7 +192,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 1.1447
+        "value": 1.1428
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
@@ -230,7 +230,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 0.9827
+        "value": 0.9836
       }
     ],
     "ERIC-A.ST/ERIC-B.ST": [
@@ -268,7 +268,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 1.0049
+        "value": 1.0108
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
@@ -306,7 +306,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 1.0179
+        "value": 1.0006
       }
     ],
     "INVE-A.ST/INVE-B.ST": [
@@ -344,7 +344,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 0.9832
+        "value": 0.983
       }
     ],
     "SKF-A.ST/SKF-B.ST": [
@@ -382,7 +382,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 1.0184
+        "value": 1.0157
       }
     ],
     "SCA-A.ST/SCA-B.ST": [
@@ -458,7 +458,7 @@
       },
       {
         "date": "2026-11-23",
-        "value": 1.001
+        "value": 1.0025
       }
     ]
   },
@@ -483,6 +483,11 @@
         "date": "2026-11-20",
         "value": 1.1089,
         "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 1.0953,
+        "scanDate": "2026-11-23"
       }
     ],
     "MAERSK-A.CO/MAERSK-B.CO": [
@@ -504,6 +509,11 @@
       {
         "date": "2026-11-20",
         "value": 0.9857,
+        "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 0.9861,
         "scanDate": "2026-11-23"
       }
     ],
@@ -527,6 +537,11 @@
         "date": "2026-11-20",
         "value": 1.1447,
         "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 1.1428,
+        "scanDate": "2026-11-23"
       }
     ],
     "SSAB-A.ST/SSAB-B.ST": [
@@ -548,6 +563,11 @@
       {
         "date": "2026-11-20",
         "value": 0.9827,
+        "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 0.9836,
         "scanDate": "2026-11-23"
       }
     ],
@@ -571,6 +591,11 @@
         "date": "2026-11-20",
         "value": 1.0049,
         "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 1.0108,
+        "scanDate": "2026-11-23"
       }
     ],
     "HUSQ-A.ST/HUSQ-B.ST": [
@@ -592,6 +617,11 @@
       {
         "date": "2026-11-20",
         "value": 1.0179,
+        "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 1.0006,
         "scanDate": "2026-11-23"
       }
     ],
@@ -615,6 +645,11 @@
         "date": "2026-11-20",
         "value": 0.9832,
         "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 0.983,
+        "scanDate": "2026-11-23"
       }
     ],
     "SKF-A.ST/SKF-B.ST": [
@@ -636,6 +671,11 @@
       {
         "date": "2026-11-20",
         "value": 1.0184,
+        "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 1.0157,
         "scanDate": "2026-11-23"
       }
     ],
@@ -680,6 +720,11 @@
       {
         "date": "2026-11-20",
         "value": 1.001,
+        "scanDate": "2026-11-23"
+      },
+      {
+        "date": "2026-11-23",
+        "value": 1.0025,
         "scanDate": "2026-11-23"
       }
     ],
