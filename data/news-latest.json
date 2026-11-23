@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T22:58:47Z",
+  "generated": "2026-11-23T23:38:09Z",
   "items": [
     {
       "id": "UCG.MI:17a88c268760a399d88b2385b9b7a670d19284ae4461cc040fabde7ba9e7f71c",
@@ -326,6 +326,31 @@
       "identityReviewReason": "no issuer-specific headline reference",
       "identityTier": "review_candidate",
       "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "VIG.VI:ffaa03f63f1aceab6adf593b78bfe5d571b1273e9d54a1bd0070b5fdfb8ba978",
+      "ticker": "VIG.VI",
+      "name": "Vienna Insurance Group",
+      "sector": "Banks & insurance",
+      "type": "news",
+      "headline": "Futures Contracts for VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe Futures",
+      "english": null,
+      "publisher": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPa2dKSGN6YldmdEpqUFNkcVE5R1J5TjVUVklqQ21kZm03N09vcjZVWndBSFpvaE9TbkdMYmFJOHlmV082NWh6aEpaNENrLW1rY21WdzV6ZFFqWFdrcUdHV2o1MFFvNHZvaUhRUXJYOFpIVG5ROXNWcmlBSnBOQjRNRk9acDA?oc=5",
+      "published": "2026-11-23T17:33:45Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "mentioned",
+      "identityReviewReason": "named headline reference only; not issuer-confirmed",
+      "identityTier": "named_reference",
+      "category": "General",
       "driverVersion": 1,
       "driverTags": [],
       "sourceDomain": "news.google.com",
@@ -2574,53 +2599,28 @@
       ],
       "sourceDomain": "news.google.com",
       "priority": "high"
-    },
-    {
-      "id": "UCG.MI:08d7e1ef1676959e97011c9189f6716a4c2cce021222204296c9ec7b6cdd96c1",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Prezzi Azionario FtseMIB: Contesto Delicato Per Unicredit, Lunedì La Cedola Di € 3",
-      "english": "FTSE MIB Share Prices: A Delicate Situation for UniCredit, €3 Dividend on Monday",
-      "publisher": "FXEmpire",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYnVoLTl5TThzR0d3ZzQ2cE52ajBrUjJjcTd2bG52WXhxWC1zV2twZFhLb2tLRGsyaHVibml4aHl6c0F2QXJkYi1Sa1FhOHVvdmxsVXl5Wk82Sl9xVC1fMUpaN2Q3X0JxUzNKdUVJdEFSRGpHREVsbmVEbTMzeFlMN091cWJKZVBWSUtfXzdpZHBQdnFEZnRXZ3BWY3djdDJFam1hN205M1NuakxEbDBzZDlUdFJveEFJOHMwR01IX1A4N1dwSk1HSA?oc=5",
-      "published": "2026-11-23T09:15:16Z",
-      "lang": "it",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "identityReviewReason": "named headline reference only; not issuer-confirmed",
-      "identityTier": "named_reference",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 2161,
+  "totalStored": 2165,
   "limit": 100,
   "quality": {
-    "total": 2161,
-    "relevant": 1447,
-    "review": 642,
+    "total": 2165,
+    "relevant": 1450,
+    "review": 643,
     "duplicates": 103,
     "issuerLinked": 427,
-    "namedReferences": 1092,
-    "withheldFromIssuerEvents": 642,
+    "namedReferences": 1095,
+    "withheldFromIssuerEvents": 643,
     "identityTiers": {
       "issuer_verified": 427,
-      "named_reference": 1092,
-      "review_candidate": 642
+      "named_reference": 1095,
+      "review_candidate": 643
     },
     "driverClassification": {
       "version": 1,
-      "classified": 487,
+      "classified": 488,
       "categories": {
-        "numbers": 277,
+        "numbers": 278,
         "prices": 6,
         "operations": 1,
         "potential": 225,
@@ -2634,9 +2634,9 @@
       "M&A": 94,
       "Guidance": 42,
       "Contracts": 163,
-      "Capital & ownership": 2,
+      "Capital & ownership": 3,
       "Management": 69,
-      "General": 1470
+      "General": 1473
     }
   }
 }
