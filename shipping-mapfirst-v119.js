@@ -60,6 +60,19 @@ function augmentGeography(atlas){
  for(let lon=-120;lon<=120;lon+=60){const x=pt(lon,0)[0];grid.append(SVG('line',{x1:x,y1:0,x2:x,y2:388}))}
  for(let lat=-60;lat<=60;lat+=30){const y=pt(0,lat)[1];grid.append(SVG('line',{x1:0,y1:y,x2:900,y2:y}))}
  const borders=SVG('g',{id:'sw119MaritimeBorders','aria-hidden':'true'});
+ // Keep the original 110m image and 110m boundaries as proven fallbacks.
+ // Optimized 50m SVGs use the identical 900×388 projection and are rendered
+ // as image resources, avoiding runtime high-density polygon reprojection.
+ const addDetail=(id,src,flag)=>{
+  const img=SVG('image',{id,x:0,y:0,width:900,height:388,href:src,
+   preserveAspectRatio:'none','aria-hidden':'true'});
+  img.style.pointerEvents='none';
+  img.addEventListener('load',()=>atlas.classList.add(flag),{once:true});
+  img.addEventListener('error',()=>{img.remove();atlas.classList.remove(flag)},{once:true});
+  root.insertBefore(img,lineLayer);
+ };
+ addDetail('sw119cLandDetail','brand/world-land-ne50-v119c.svg','sw119c-land-ready');
+ addDetail('sw119cBorderDetail','brand/world-borders-ne50-v119c.svg','sw119c-borders-ready');
  root.insertBefore(grid,lineLayer);root.insertBefore(borders,lineLayer);
  if(bordersLoading)return;
  bordersLoading=true;
@@ -145,9 +158,50 @@ function inspectorUX(atlas){
  const actions=document.createElement('nav');actions.id='sw119DetailActions';actions.className='sw119-detail-actions';
  actions.setAttribute('aria-label','Related maritime research');
  panel.append(actions);
+ const map=$(atlas,'#shippingMapSvg');
+ const fact=$(atlas,'#shippingMapFact');
+ if(map&&fact){
+  const focus=document.createElement('button');
+  focus.type='button';focus.id='sw119bFocusSelection';focus.className='sw119b-focus-selection';
+  focus.textContent='⌖ Zoom to selected location';
+  focus.setAttribute('aria-label','Zoom map to selected source-dated location');
+  panel.insertBefore(focus,fact);
+  focus.addEventListener('click',()=>{
+   if(!$(atlas,'#shippingMapPick')?.value)return;
+   map.dispatchEvent(new CustomEvent('sw119-map-focus',{detail:{selected:true,width:155}}));
+   if(innerWidth<=900){
+    document.body.classList.remove('sw119-inspector-open');
+    document.body.classList.add('sw119-inspector-hidden');
+   }
+  });
+  const presets=document.createElement('nav');
+  presets.className='sw119b-presets';
+  presets.setAttribute('aria-label','Quick geographic map views');
+  const choices=[
+   {name:'North Sea',lon:5,lat:56,width:175},
+   {name:'Suez',lon:32,lat:28,width:166},
+   {name:'Singapore',lon:107,lat:13,width:175}
+  ];
+  for(const choice of choices){
+   const button=document.createElement('button');button.type='button';
+   button.textContent=choice.name;
+   button.dataset.preset=choice.preset||choice.name.toLowerCase();
+   button.setAttribute('aria-label','Focus map on '+choice.name);
+   button.addEventListener('click',()=>{
+    map.dispatchEvent(new CustomEvent('sw119-map-focus',{detail:choice}));
+    presets.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===button)));
+   });
+   button.setAttribute('aria-pressed','false');
+   presets.append(button);
+  }
+  atlas.append(presets);
+  const reset=atlas.querySelector('[data-map-zoom="reset"]');
+  if(reset)reset.addEventListener('click',()=>presets.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false')));
+ }
  const render=async()=>{
   const layer=atlas.querySelector('.sw-atlas-tab[aria-pressed="true"]')?.dataset.layer||'ports';
   const selected=$(atlas,'#shippingMapPick')?.value||'';
+  const focusControl=$(atlas,'#sw119bFocusSelection');if(focusControl)focusControl.disabled=!selected;
   let links=[];
   if(layer==='ports'){links=[['#worldBankPortTraffic','Country container activity ↗'],['#nordicMaritime','Regional shipping research ↗']]}
   else if(layer==='containers'){links=[['#worldBankPortTraffic','Container history & charts ↗'],['#nordicMaritime','Norway & Europe indicators ↗']]}
@@ -181,29 +235,22 @@ function inspectorUX(atlas){
  const obs=new MutationObserver(schedule);
  obs.observe(title,{childList:true,characterData:true,subtree:true});
  atlas.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{
-  if(b.dataset.layer==='ais')document.body.classList.add('sw119-inspector-open');
-  else document.body.classList.remove('sw119-inspector-open');
+  if(b.dataset.layer==='ais'){document.body.classList.remove('sw119-inspector-hidden');document.body.classList.add('sw119-inspector-open')}
+  else{document.body.classList.remove('sw119-inspector-open');document.body.classList.add('sw119-inspector-hidden')}
   schedule();
  }));
  const pick=$(atlas,'#shippingMapPick');
- if(pick)pick.addEventListener('change',()=>{if(pick.value){document.body.classList.add('sw119-inspector-open');document.body.classList.remove('sw119-inspector-hidden')}schedule()});
+ if(pick)pick.addEventListener('change',()=>{if(pick.value){document.body.classList.add('sw119-inspector-open');document.body.classList.remove('sw119-inspector-hidden')}else{document.body.classList.remove('sw119-inspector-open');document.body.classList.add('sw119-inspector-hidden')}schedule()});
  const pins=$(atlas,'#shippingMapPins');
  if(pins)pins.addEventListener('click',e=>{if(e.target.closest('.sw-atlas-point')){document.body.classList.add('sw119-inspector-open');document.body.classList.remove('sw119-inspector-hidden');schedule()}});
+ if(pins)pins.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('.sw-atlas-point')){document.body.classList.add('sw119-inspector-open');document.body.classList.remove('sw119-inspector-hidden');schedule()}});
  const lines=$(atlas,'#shippingMapLines');
  if(lines)lines.addEventListener('click',e=>{if(e.target.closest('.sw-atlas-lane')){document.body.classList.add('sw119-inspector-open');document.body.classList.remove('sw119-inspector-hidden');schedule()}});
  panel.addEventListener('click',e=>{if(e.target.closest('#sw119DetailActions a'))document.body.classList.remove('sw119-inspector-open')});
- if(innerWidth>900){
-  let didSelect=false;
-  const starter=new MutationObserver(()=>{
-   if(didSelect)return;
-   const target=$(atlas,'#shippingMapPick');
-   if(target&&target.querySelector('option[value="NL-RTM"]')){
-    didSelect=true;target.value='NL-RTM';target.dispatchEvent(new Event('change',{bubbles:true}));starter.disconnect();
-   }
-  });
-  if(pick)starter.observe(pick,{childList:true});
-  if(pick?.querySelector('option[value="NL-RTM"]')){didSelect=true;pick.value='NL-RTM';pick.dispatchEvent(new Event('change',{bubbles:true}));starter.disconnect()}
- }
+ // The map opens as a true explorer. Selecting a port deliberately opens
+ // the inspector; no preselected Rotterdam card should obscure Asia.
+ document.body.classList.remove('sw119-inspector-open');
+ document.body.classList.add('sw119-inspector-hidden');
  schedule();
 }
 function mount(){

@@ -138,9 +138,49 @@ function frame(){
  const select=el.querySelector('#shippingMapPick'),search=el.querySelector('#shippingMapSearch'),area=el.querySelector('#shippingMapRegion');
  const map=el.querySelector('#shippingMapSvg'),pins=el.querySelector('#shippingMapPins'),lines=el.querySelector('#shippingMapLines');
  const count=el.querySelector('#shippingMapCount'),title=el.querySelector('#shippingMapDetailTitle'),explain=el.querySelector('#shippingMapExplanation'),fact=el.querySelector('#shippingMapFact'),sourceState=el.querySelector('#shippingMapSourceStatus');
+ // V119c groups only approximate port reference markers, never market rates
+ // or AIS observations. All originals remain selectable in the port index.
+ const clusters=svgNode('g',{id:'sw119cPortClusters','aria-label':'Grouped port-area reference markers'});
+ map.append(clusters);
+ function updatePortClusters(){
+  clusters.replaceChildren();
+  const geography=pins.querySelectorAll('.sw-atlas-geography');
+  geography.forEach(n=>{n.classList.remove('sw119c-overlap-hidden');n.setAttribute('tabindex','0')});
+  if(state.mode!=='ports'||state.selected||state.q||state.view[2]<220||!state.rows.length)return;
+  const box=map.getBoundingClientRect();
+  const scale=Math.max(box.width/state.view[2],box.height/state.view[3]);
+  if(!Number.isFinite(scale)||scale<=0)return;
+  const groups=[];
+  for(const row of state.rows){
+   const p=pos(row.lon,row.lat);
+   let group=groups.find(g=>Math.hypot((p.x-g.x)*scale,(p.y-g.y)*scale)<=29);
+   if(group){const n=group.rows.length;group.x=(group.x*n+p.x)/(n+1);group.y=(group.y*n+p.y)/(n+1);group.rows.push(row)}
+   else groups.push({x:p.x,y:p.y,rows:[row]});
+  }
+  for(const g of groups){
+   if(g.rows.length<2)continue;
+   const ids=new Set(g.rows.map(r=>r.id));
+   geography.forEach(node=>{if(ids.has(node.dataset.id)){node.classList.add('sw119c-overlap-hidden');node.setAttribute('tabindex','-1')}});
+   const item=svgNode('g',{class:'sw119c-port-cluster',role:'button',tabindex:'0',
+    'aria-label':g.rows.length+' approximate port-area markers. Zoom in to separate ports.'});
+   item.append(svgNode('circle',{cx:g.x,cy:g.y,r:10}));
+   item.append(svgNode('text',{x:g.x,y:g.y+3.2,'text-anchor':'middle'},g.rows.length));
+   item.append(svgNode('title',{},g.rows.map(r=>r.title).join(', ')));
+   const focus=()=>{
+    const longitude=g.x*360/W-180,latitude=90-g.y*180/H;
+    map.dispatchEvent(new CustomEvent('sw119-map-focus',{detail:{
+     lon:longitude,lat:latitude,width:Math.max(150,state.view[2]*.53)}}));
+   };
+   item.addEventListener('click',focus);
+   item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focus()}});
+   clusters.append(item);
+  }
+ }
+
  function showView(){
   const [x,y,w,h]=state.view;
   map.setAttribute('viewBox',[x,y,w,h].map(n=>Number(n.toFixed(2))).join(' '));
+  updatePortClusters();
  }
  function zoom(f){
   const [x,y,w,h]=state.view,newW=Math.max(150,Math.min(W,w*f)),newH=newW*H/W,cx=x+w/2,cy=y+h/2;
@@ -161,6 +201,7 @@ function frame(){
    fact.replaceChildren();
    sourceState.textContent=state.mode==='ais'?'Ship positions available: 0. Official feeds require verifiable credentials/permissions and timestamps.':'Select a marker or use the observation list. Historical measurements are not live market quotes.';
    pins.querySelectorAll('.sw-atlas-point').forEach(p=>p.classList.remove('selected'));
+   updatePortClusters();
    return;
   }
   title.textContent=r.title;explain.textContent=r.metric;
@@ -174,6 +215,7 @@ function frame(){
   const link=document.createElement('a');const url=legalUrl(r.sourceUrl);if(url){link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open original source ↗';fact.append(link)}
   sourceState.textContent=r.source+'. Source and observation date shown above. Geographic anchor location may be approximate.';
   pins.querySelectorAll('.sw-atlas-point').forEach(p=>p.classList.toggle('selected',p.dataset.id===id));
+  updatePortClusters();
  }
  function laneDraw(r){
   const a=pos(r.from[0],r.from[1]),b=pos(r.to[0],r.to[1]);
@@ -224,12 +266,30 @@ function frame(){
    state.mode==='roro'?'Quarterly country / EU Ro-Ro cargo weights':
    state.mode==='connectivity'?'Monthly liner network index, not vessel demand':
    'Two USDA grain freight observations, dated and unit-labelled';
+  updatePortClusters();
   el.querySelectorAll('[data-layer]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.layer===state.mode)));
  }
  el.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.layer;state.q='';search.value='';state.selected=null;draw()}));
  area.addEventListener('change',()=>{state.region=area.value;state.selected=null;draw()});
  search.addEventListener('input',()=>{state.q=search.value.trim().toLowerCase();state.selected=null;draw()});
  select.addEventListener('change',()=>selectRow(select.value||null));
+ // V119b: camera focus events update internal viewBox state before pan or zoom.
+ // A port anchor is geographic context only, never an assertion of traffic.
+ map.addEventListener('sw119-map-focus',event=>{
+  const detail=event.detail||{};
+  if(detail.preset==='world'){state.view=[0,0,W,H];showView();return}
+  let longitude=Number(detail.lon),latitude=Number(detail.lat);
+  const selected=state.rows.find(r=>r.id===state.selected);
+  if(detail.selected&&selected){longitude=selected.lon;latitude=selected.lat}
+  if(!Number.isFinite(longitude)||!Number.isFinite(latitude)||
+     longitude < -180||longitude>180||latitude < -90||latitude>90)return;
+  const width=Math.max(130,Math.min(W,Number(detail.width)||200));
+  const height=width*H/W;
+  const center=pos(longitude,latitude);
+  state.view=[Math.max(0,Math.min(W-width,center.x-width/2)),
+   Math.max(0,Math.min(H-height,center.y-height/2)),width,height];
+  showView();
+ });
  el.querySelectorAll('[data-map-zoom]').forEach(b=>b.addEventListener('click',()=>{
   if(b.dataset.mapZoom==='reset'){state.view=[0,0,W,H];showView()}else zoom(b.dataset.mapZoom==='in'?.74:1/.74);
  }));

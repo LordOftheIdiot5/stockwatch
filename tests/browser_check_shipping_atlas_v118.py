@@ -87,6 +87,10 @@ def main():
        assert 'No live AIS feed connected' in page.locator('#shippingMapDetailTitle').inner_text()
        assert '0' in page.locator('#shippingMapSourceStatus').inner_text()
        assert page.locator('#shippingWorldMap a[href*="kystverket.no"]').count()==1
+       # Close the responsive AIS sheet before the underlying camera buttons;
+       # the sheet correctly intercepts map input until dismissed.
+       page.locator('#sw119InspectorClose').click()
+       assert not page.locator('#shippingMapInspector').is_visible()
        # Keyboard map zoom and Home reset.
        map_svg=page.locator('#shippingMapSvg')
        map_svg.focus();page.keyboard.press('+')
