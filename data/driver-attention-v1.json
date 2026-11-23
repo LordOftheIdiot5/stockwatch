@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T17:53:37Z",
+  "generated": "2026-11-23T22:58:47Z",
   "windowStart": "2026-11-09",
   "windowEnd": "2026-11-22",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -80,8 +80,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-19T08:42:57Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-23T19:02:01Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -1399,6 +1399,14 @@
       ],
       "potential": [
         {
+          "id": "ASML.AS:7b353a248ea9487f4deab1fc48cbb0ddb268cd73acd47647383ad8144357e3d3",
+          "published": "2026-11-23T21:25:00Z",
+          "headline": "ASML Stock’s Sell-Off Looks Excessive Against Its Growth Outlook",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdm52d3d6elJwRHkxakZPOHRXOUE0UXlON29sVF9SUTBvT2dHc2t4NHZWVkRWa1dMNklCWWZkS0JnNTZiOHJSb2FrUXo0NlF4Z3FOWVA3N0dBbmk5djRnNWRFVnY1cnBQTU9VQnlIX2pDQUtxZ1RNWlIyR0xseTFzQlFreGZpaGNiV0dOeWtnRVdreTBM?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "ASML.AS:4937abf38f026080374214402671aa0df4a1dae28fe55043b1a17a0d79c1df8c",
           "published": "2026-11-23T14:26:13Z",
           "headline": "ASML Stock Fell 25% In The AI Selloff, But Its Outlook Hasn’t Budged (NASDAQ:ASML)",
@@ -1431,8 +1439,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-23T14:26:13Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-23T21:25:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7658,7 +7666,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 6,
+      "observedRecords": 7,
       "latestRecord": "2026-11-23T14:49:24Z",
       "topicCounts": {
         "numbers": 0,
@@ -8234,8 +8242,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 21,
-      "latestRecord": "2026-11-23T13:01:40Z",
+      "observedRecords": 22,
+      "latestRecord": "2026-11-23T18:11:55Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -9797,9 +9805,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-11T06:41:18Z",
+      "potential": [
+        {
+          "id": "QLIRO.ST:fc393cb69e7a9645849ffb5e7a200d4e3140325a855a910a469a41c04b7f64fd",
+          "published": "2026-11-23T16:30:00Z",
+          "headline": "Svea Bank has acquired additional shares in Qliro",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5xME85Y2FFekNoWTM1NkpjZUd1VEZWODY0Q25aQ0FqQlN0U0hOUjNiV3I4b3VJV2p1Um1XYlljbjlRUGFIYlBGeENycVJGbW00RU1PU1lGQkdGVmhrbWZYeWhxRVNSUmU4VGc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        }
+      ],
+      "observedRecords": 2,
+      "latestRecord": "2026-11-23T16:30:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11471,8 +11488,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 69,
-      "latestRecord": "2026-11-23T17:26:37Z",
+      "observedRecords": 71,
+      "latestRecord": "2026-11-23T20:15:51Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -12348,6 +12365,14 @@
       ],
       "potential": [
         {
+          "id": "SUBC.OL:b685a1c448ac5ab109b5c3bee2635a6366f8a9d2e3aaf136456c2602c8d013d0",
+          "published": "2026-11-23T10:55:37Z",
+          "headline": "Subsea 7 Forced to Sell Pipelaying Vessel as $4.9 Billion Saipem Merger Faces Regulatory Hurdles",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPTTN0NUxpa0NmMDFqM29FallESzViTzlxQ2FYRGw0Rm5TVi1keDRJWGJhUnVQUzJTekNoSGJrMEs1WFY4Y0RhY2Z4ck1sQWpBQUV4ZGphdnJvY1gxM1FUS2lfNWZKaUp4cGY2TjNTd3pkRnVaQk9OYk9UbG5MNldqbVdybGZ3NHhhZ3cydnFhZzVvOVh4YW5fYV9tZVJfb3UzSnFSVVRMaUNrdVRsNjUwLTBoS3ljaGJEMmRN?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "SUBC.OL:3be8cc8d25f7f5d04ddf629f76194a1518f1a30d54e8c223fe090bdc257b9422",
           "published": "2026-11-23T09:15:12Z",
           "headline": "Siem-backed Subsea 7 finding buyer for offshore ship ahead of Saipem merger",
@@ -12452,8 +12477,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 27,
-      "latestRecord": "2026-11-23T09:15:12Z",
+      "observedRecords": 28,
+      "latestRecord": "2026-11-23T10:55:37Z",
       "topicCounts": {
         "numbers": 10,
         "prices": 0,
@@ -12562,8 +12587,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 15,
-      "latestRecord": "2026-11-19T11:24:39Z",
+      "observedRecords": 17,
+      "latestRecord": "2026-11-23T20:58:43Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13253,8 +13278,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 137,
-      "latestRecord": "2026-11-23T12:58:49Z",
+      "observedRecords": 138,
+      "latestRecord": "2026-11-23T22:31:04Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -14918,7 +14943,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 11,
+      "observedRecords": 10,
       "latestRecord": "2026-10-22T13:50:45Z",
       "topicCounts": {
         "numbers": 0,
@@ -17243,7 +17268,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 15,
+      "observedRecords": 14,
       "latestRecord": "2026-11-17T13:00:28Z",
       "topicCounts": {
         "numbers": 0,
@@ -17801,7 +17826,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 15,
+      "observedRecords": 14,
       "latestRecord": "2026-11-05T21:58:54Z",
       "topicCounts": {
         "numbers": 0,
