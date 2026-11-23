@@ -222,14 +222,14 @@ function frame(){
   const all=makeRows(state.data,state.mode);
   state.rows=all.filter(r=>filterRow(r,state.region)&&(!state.q||(r.title+' '+r.metric+' '+r.unit).toLowerCase().includes(state.q)));
   const hasData=all.length>0;
-  count.textContent=state.mode==='ais'?'0 verified vessel positions · AIS connection required':state.rows.length+' map '+(state.rows.length===1?'observation':'observations')+' · '+definitions[state.mode].kind+' · original reporting dates';
+  count.textContent=state.mode==='ais'?(state.aisStatus==='available'?state.rows.length+' timestamped vessel positions · Fintraffic partial coverage':state.aisStatus==='loading'?'Checking AIS source…':state.aisStatus==='unavailable'?'AIS feed unavailable or stale · 0 positions':'0 verified vessel positions · AIS connection required'):state.rows.length+' map '+(state.rows.length===1?'observation':'observations')+' · '+definitions[state.mode].kind+' · original reporting dates';
   select.replaceChildren();
   const blank=document.createElement('option');blank.value='';blank.textContent=state.rows.length?'Select a mapped item…':hasData?'No matches in this area':'No measured observations connected';select.append(blank);
   for(const r of state.rows){
    const o=document.createElement('option');o.value=r.id;o.textContent=r.title+(r.value===null?' · port anchor':' · '+r.period);select.append(o);
    if(state.mode==='lanes')laneDraw(r);
    const p=pos(r.lon,r.lat),c=svgNode('circle',{
-    cx:p.x,cy:p.y,r:r.kind==='geography'?4.3:6.2,
+    cx:p.x,cy:p.y,r:r.kind==='geography'?4.3:r.kind==='vessel'?5.1:6.2,
     class:'sw-atlas-point sw-atlas-'+r.kind,'data-id':r.id,
     role:'button',tabindex:'0','aria-label':r.title+'. '+r.metric+'. '+r.period
    });
@@ -245,12 +245,16 @@ function frame(){
   selectRow(state.selected);
   const stat=el.querySelector('#shippingMapLegend .sw-atlas-asof');
   stat.textContent=state.mode==='ports'?'40 approximate reference ports · no local throughput assigned':
-   state.mode==='ais'?'No AIS feed — ship positions are not simulated':
+   state.mode==='ais'?(state.aisStatus==='available'?'Fintraffic CC BY 4.0 · timestamped positions, not simulated tracks':state.aisStatus==='unavailable'?'Fintraffic source unavailable · no stale vessel pins':'No AIS feed — ship positions are not simulated'):
    state.mode==='containers'?'Annual country container totals — last known published years':
    state.mode==='roro'?'Quarterly country / EU Ro-Ro cargo weights':
    state.mode==='connectivity'?'Monthly liner network index, not vessel demand':
    'Two USDA grain freight observations, dated and unit-labelled';
   el.querySelectorAll('[data-layer]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.layer===state.mode)));
+  const aisTab=el.querySelector('.sw-atlas-tab[data-layer="ais"]');
+  if(aisTab)aisTab.textContent='Ships (AIS) · '+(state.aisStatus==='available'?state.rows.length:0);
+  const aisCaption=el.querySelector('.sw-atlas-caption span:last-child');
+  if(aisCaption)aisCaption.textContent=state.mode==='ais'&&state.aisStatus==='available'?'Fintraffic · last-reported positions · partial coverage':'No individual vessel positions without licensed AIS';
  }
  el.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.layer;state.q='';search.value='';state.selected=null;draw()}));
  area.addEventListener('change',()=>{state.region=area.value;state.selected=null;draw()});
