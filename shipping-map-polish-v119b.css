@@ -253,3 +253,26 @@ body[data-page=shipping] #shippingWorldMap .sw-atlas-caption{
   max-width:175px;bottom:calc(100% + 9px);
  }
 }
+
+
+/* V119c 1:50m detailed Natural Earth map.
+   The 1:110m SVG remains in the DOM as an offline/asset-error fallback;
+   it is fully covered by the 50m land image only after that image loads. */
+body[data-page=shipping] #shippingWorldMap #sw119cLandDetail,
+body[data-page=shipping] #shippingWorldMap #sw119cBorderDetail{
+ pointer-events:none;shape-rendering:geometricPrecision;
+}
+body[data-page=shipping] #shippingWorldMap.sw119c-borders-ready #sw119MaritimeBorders{
+ opacity:0!important;
+}
+body[data-page=shipping] #shippingWorldMap #sw119cBorderDetail{opacity:.82}
+body[data-page=shipping] #shippingWorldMap #sw119MaritimeGrid{opacity:.34}
+body[data-page=shipping] #shippingWorldMap .sw-atlas-point.sw-atlas-geography{
+ stroke-width:1.2;filter:drop-shadow(0 0 1.6px #61e9bf80);
+}
+/* At intermediate widths the map can remain fully visible without an
+   oversized research panel or headline competing with the coastal detail. */
+@media(min-width:901px) and (max-width:1370px){
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head h2{font-size:clamp(25px,2.3vw,32px)}
+ body[data-page=shipping] #shippingWorldMap .sw-atlas-head p{max-width:475px}
+}
