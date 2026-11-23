@@ -24,6 +24,21 @@ body[data-page=shipping] #sw121MarketPulseTitle{
 body[data-page=shipping] .sw121-intro{
  max-width:825px;margin:0;font-size:13px;line-height:1.6;color:#b3d3df;
 }
+body[data-page=shipping] .sw121-title-actions{
+ display:flex;gap:9px;align-items:center;flex-wrap:wrap;justify-content:flex-end;
+}
+body[data-page=shipping] .sw121-inline-back{
+ display:inline-flex;align-items:center;justify-content:center;min-height:37px;
+ padding:8px 11px;border:1px solid #326375;border-radius:7px;
+ background:#0c303f;color:#a9e9da;
+ text-decoration:none;font:750 11px 'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] .sw121-inline-back:hover{
+ background:#155345;color:#f2fffa;border-color:#85dbcb;
+}
+body[data-page=shipping].sw121-pulse-visible #sw119BackMap{
+ display:none!important;
+}
 body[data-page=shipping] .sw121-refresh{
  flex-shrink:0;margin-top:16px;padding:10px 14px;
  border:1px solid #3e7280;border-radius:7px;
@@ -179,6 +194,7 @@ body[data-page=shipping] #shippingWorldMap .sw121-map-peek:focus-visible{
   padding:20px 15px;border-radius:10px;
  }
  body[data-page=shipping] .sw121-title-row{flex-direction:column;gap:10px}
+ body[data-page=shipping] .sw121-title-actions{justify-content:flex-start}
  body[data-page=shipping] .sw121-refresh{margin-top:0}
  body[data-page=shipping] #shippingWorldMap .sw121-map-peek{
   top:auto;bottom:146px;right:auto;left:12px;max-width:160px;
