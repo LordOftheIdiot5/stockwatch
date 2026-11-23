@@ -276,3 +276,28 @@ body[data-page=shipping] #shippingWorldMap .sw-atlas-point.sw-atlas-geography{
  body[data-page=shipping] #shippingWorldMap .sw-atlas-head h2{font-size:clamp(25px,2.3vw,32px)}
  body[data-page=shipping] #shippingWorldMap .sw-atlas-head p{max-width:475px}
 }
+
+
+/* V119c: group overlapping port REFERENCE POINTS at world zoom.
+   Numerals are counts of underlying geographical anchors only, not
+   vessel movements, calls, cargo volume, or unobserved traffic. */
+body[data-page=shipping] #shippingWorldMap .sw-atlas-point.sw119c-overlap-hidden{
+ opacity:0!important;pointer-events:none!important;
+}
+body[data-page=shipping] #shippingWorldMap .sw119c-port-cluster{
+ cursor:zoom-in;outline:none;
+}
+body[data-page=shipping] #shippingWorldMap .sw119c-port-cluster circle{
+ fill:#0c534b;stroke:#87eed3;stroke-width:1.15;
+ filter:drop-shadow(0 0 3px #45cfa8a8);
+}
+body[data-page=shipping] #shippingWorldMap .sw119c-port-cluster text{
+ pointer-events:none;fill:#effffb;font-size:9.6px;font-weight:800;
+ font-family:Manrope,'DM Sans',system-ui,sans-serif;
+}
+body[data-page=shipping] #shippingWorldMap .sw119c-port-cluster:is(:hover,:focus-visible) circle{
+ fill:#1f7968;stroke:#fff;stroke-width:2.4;
+}
+body[data-page=shipping] #shippingWorldMap .sw119c-port-cluster:focus-visible circle{
+ filter:drop-shadow(0 0 5px #83f8d5);
+}
