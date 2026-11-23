@@ -28,7 +28,7 @@ def run():
                             page.locator('#shippingMapPins .sw-atlas-point').first.wait_for(timeout=30000)
                             assert page.locator('#shippingMapPins .sw-atlas-point').count()==40
                             assert page.locator('#sw119bFocusSelection').count()==1
-                            assert page.locator('.sw119b-presets button').count()==4
+                            assert page.locator('.sw119b-presets button').count()==3
                             assert not page.locator('#shippingMapInspector').is_visible(),(width,theme,'panel initially open')
                             assert page.locator('#shippingMapPick').input_value()==''
                             assert page.locator('#shippingWorldMap').is_visible()
@@ -44,10 +44,16 @@ def run():
                                 form:r('#shippingWorldMap .sw-atlas-controlbar'),
                                 rail:r('#shippingWorldMap .sw-atlas-toolbar'),
                                 presets:r('.sw119b-presets'),
-                                zoom:r('.sw-atlas-zoom')}
+                                zoom:r('.sw-atlas-zoom'),
+                                count:r('#shippingMapCount')}
                             }""")
                             assert coords['title']['bottom'] <= coords['form']['y']+3,(width,theme,'title-overlaps-form',coords)
                             assert coords['form']['bottom'] <= coords['rail']['y']+3,(width,theme,'form-overlaps-rail',coords)
+                            def overlapping(a,b):
+                                return min(a['right'],b['right'])-max(a['x'],b['x'])>3 and min(a['bottom'],b['bottom'])-max(a['y'],b['y'])>3
+                            assert not overlapping(coords['presets'],coords['zoom']),(width,theme,'preset-overlaps-zoom',coords)
+                            assert not overlapping(coords['presets'],coords['count']),(width,theme,'preset-overlaps-count',coords)
+                            assert not overlapping(coords['zoom'],coords['count']),(width,theme,'zoom-overlaps-count',coords)
                             # Open a source-backed port, focus it, verify pan/zoom camera stays synchronized.
                             page.locator('#shippingMapPick').select_option('NL-RTM')
                             assert page.locator('#shippingMapInspector').is_visible()
@@ -61,7 +67,7 @@ def run():
                             assert focused!=initial
                             # On phone focus button closes bottom sheet so user actually sees map.
                             if width<=900: assert not page.locator('#shippingMapInspector').is_visible()
-                            page.locator('.sw119b-presets button[data-preset="world"]').click()
+                            page.locator('[data-map-zoom="reset"]').click()
                             assert page.locator('#shippingMapSvg').get_attribute('viewBox')=='0 0 900 388'
                             page.locator('.sw119b-presets button[data-preset="north sea"]').click()
                             assert page.locator('#shippingMapSvg').get_attribute('viewBox')!='0 0 900 388'
