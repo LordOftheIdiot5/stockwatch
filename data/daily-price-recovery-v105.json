@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T09:05:40+00:00",
+  "generated": "2026-11-23T10:05:53+00:00",
   "comparisonDate": "2026-11-20",
   "totalListings": 500,
   "candidates": [
@@ -8233,6 +8233,24 @@
       ]
     },
     {
+      "id": "QBEN.ST",
+      "name": "Qben Infra",
+      "venue": "Stockholm",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "QLIRO.ST",
       "name": "Qliro",
       "venue": "Stockholm",
@@ -8920,23 +8938,6 @@
       "id": "ISLAX.OL",
       "name": "Icelandic Salmon",
       "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-20",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "QBEN.ST",
-      "name": "Qben Infra",
-      "venue": "Stockholm",
       "group": "monitored",
       "lastSavedDate": "2026-11-20",
       "lastSavedKind": "scanner",

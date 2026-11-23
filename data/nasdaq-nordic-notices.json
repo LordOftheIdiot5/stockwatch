@@ -1,27 +1,60 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T09:07:20Z",
+  "generated": "2026-11-23T10:07:32Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-23T09:07:20Z",
-      "lastSuccess": "2026-11-23T09:07:20Z",
+      "lastAttempt": "2026-11-23T10:07:32Z",
+      "lastSuccess": "2026-11-23T10:07:32Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-23T09:07:20Z",
-      "lastSuccess": "2026-11-23T09:07:20Z",
+      "lastAttempt": "2026-11-23T10:07:32Z",
+      "lastSuccess": "2026-11-23T10:07:32Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:83f0b68b9e2298d8366f3719d58ff5f1c79b37669b631295787369735f29b915",
+      "title": "Suspension of Trading in Sparinvest Mix Aktier KL A at XCSE",
+      "published": "2026-11-23T09:37:04Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b487916ecfa44dce359e34cfdd6d77c03&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:b39eacb0a76c24a123005f57c79cea4f83fefa2f0bedb9e98582997b56da8a52",
+      "title": "Commercial Paper(s) issued by Heba Fastighets AB will be admitted to trading on Nasdaq STO Sustainable Commercial Paper (Record Id 373204)",
+      "published": "2026-11-23T09:30:01Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b70212dafdca9af9e72bab7a994602e0b&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:8cbfc6ec1fd573c7dfef2c2f621cd82662948c3b22a4563fd3c41e35aade5835",
+      "title": "Commercial Paper(s) issued by Heba Fastighets AB will be admitted to trading on Nasdaq STO Sustainable Commercial Paper (Record Id 373037)",
+      "published": "2026-11-23T09:29:11Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b1dfc1d758093ad0ae854cc4509cb32b5&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:a3e1b7b4b22a3e6b610dfe1e6ee46b4d4ac200e56fc130a6ea3a2a63495f204a",
       "title": "Suspension of Trading in Great Dane INDEX+ at XCSE",

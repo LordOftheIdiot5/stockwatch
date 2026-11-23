@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T09:07:22Z",
+  "generated": "2026-11-23T10:07:34Z",
   "windowStart": "2026-11-09",
   "windowEnd": "2026-11-22",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -477,8 +477,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 9,
-      "latestRecord": "2026-11-13T14:34:30Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-23T09:30:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -859,6 +859,14 @@
       ],
       "potential": [
         {
+          "id": "ALO.PA:25442dcd7b3871fffa9418e3d9ba5807d2a448d2a5d9907e8590627cf84e1b0b",
+          "published": "2026-11-23T08:52:31Z",
+          "headline": "Alstom wins a 1.2 billion contract in Western Europe",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdE1fM0pHV2ZkdUFLcWNBUHNaTEIyZkpEQ2JpNnQtRndwdndKaWotX0VYLUhHYnBfU19sNjJWQ09zdUJET1B1YW51TFBTM05QTHFzdk96TVhsQjlsb2pSZFN6WF9nMDQwMXdvTHNKZ3N6R1lvdHp1TVhJd0VPd05KcEFLTGwxNWJpMElWUDU1bXo5UmPSAZgBQVVfeXFMT3htYWJyLWl6Ukw1Mlc4LTNtajg2aFJNZkhiSm5TeWMwZUZvenpIWHFZUlA2Y1FfajB4UUpzbmkzc1R1djI3eHBxeXlKVkJfVnMtcnJDZ2xMbU5ya0RZVzlGSDUtVkJ4eG9RNGUxcTJCbDNpOFVZandNVjBpSlh5NUNEVl9OZ1ljNVpuZWNBRDFuSW9PREdTSGs?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "ALO.PA:babdd70ad8ee4a05b8143074c98e22612a414aa55a2ad903d7f80f90f7f5c1f6",
           "published": "2026-11-23T07:46:49Z",
           "headline": "Alstom Secures €1.2 Billion Transport Modernisation Order in Europe",
@@ -875,8 +883,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 22,
-      "latestRecord": "2026-11-23T08:37:27Z",
+      "observedRecords": 23,
+      "latestRecord": "2026-11-23T08:52:31Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -4396,8 +4404,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 61,
-      "latestRecord": "2026-11-23T07:02:24Z",
+      "observedRecords": 62,
+      "latestRecord": "2026-11-23T08:24:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4870,8 +4878,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-19T11:50:23Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-23T09:35:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -9952,6 +9960,22 @@
       ],
       "potential": [
         {
+          "id": "RAIL.ST:b5535e9f72af6aba6566babfdfc8fd2471aab05a991641517b125c7045e0fe6e",
+          "published": "2026-11-23T09:17:32Z",
+          "headline": "Railcare tar order på 429 miljoner – aktien lyfter",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9iNFpZT1h0UEVqcVh0RGNSU0xrc1FVMU5tdm1VZF9fM3dsWjM2bkRNYU9fb3g5ajkyZERYNmVRQ01JQ2NIcHFmbFZVZ3FaTi1CeWg1R3FHelFkQ2YyZlpMZUpfaE9pRGd4Qm0tNzF5c0k?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
+          "id": "RAIL.ST:5916ff7f03606080b4dd3f9b2784691dcc8ae07f5def37882a976a336e1cefab",
+          "published": "2026-11-23T09:00:55Z",
+          "headline": "Railcare Signs Eight-Year Rail Transport Agreement With Viscaria",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNc0ozM2NBU2ppMURQRlczbUVLMldWQVNuc29WRkZyM3d4RDVMQ194M1JJb1FKaEVWZm9VbzBNT1d4QzhYM3E4eThybVBURXlpY3dDQ0ladDhDS0hHN3FLRWc1SjlQbXZvaU9hMk9Zcm5FWldCcHM4Y3FhNlZTOURtc1hkZ2pGYUJ2VWc3OWg0VWk2UFlFc3dqZ2VWU2RYeGd1aTdQX3Y5cDJRQXJHb3dYOXk5WU44U2c?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "RAIL.ST:cdeb4e509eca9c4a0690d5b75de998f11ed5d35709de40378dc4ddd5bfd4f4c8",
           "published": "2026-11-23T08:34:21Z",
           "headline": "Railcare wins transport contract with Viscaria worth SEK54m per year",
@@ -9968,8 +9992,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-23T08:34:21Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-23T09:17:32Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10171,8 +10195,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 11,
-      "latestRecord": "2026-11-20T21:22:44Z",
+      "observedRecords": 12,
+      "latestRecord": "2026-11-23T09:14:17Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12275,6 +12299,14 @@
       ],
       "potential": [
         {
+          "id": "SUBC.OL:3be8cc8d25f7f5d04ddf629f76194a1518f1a30d54e8c223fe090bdc257b9422",
+          "published": "2026-11-23T09:15:12Z",
+          "headline": "Siem-backed Subsea 7 finding buyer for offshore ship ahead of Saipem merger",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbGdURTFOTF9ERFhEbVNnamdIcUZLdTRVdkdyOGhuOHhpYmhsWl9CTURPa21CYm1yVG1QbjN6bkhBV0M0MC1zVjFNeWRMdDdWVzNEWFFxM19oaFV3aWc5NDVtaXdqXzZ3RkpEMk9DQUdkcDQ2T3R1Rlp4Z0VjMUwwejhIRjhQZ2cyM0pFWEQ3cU1sbWdIWGExeE9PdGJCeXRDemlvT2xEZzF5VnFvU1FxRlVDTS11cjk1QkZ6cjVQcTZ5TElVX2c?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "SUBC.OL:c4a827a076d9607d64b10fffd6107c6c497ca31a97a6050c11f1a415e213d063",
           "published": "2026-11-20T12:01:38Z",
           "headline": "Subsea 7 seeks buyer for pipelay vessel ahead of Saipem merger",
@@ -12371,8 +12403,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 26,
-      "latestRecord": "2026-11-20T20:55:45Z",
+      "observedRecords": 27,
+      "latestRecord": "2026-11-23T09:15:12Z",
       "topicCounts": {
         "numbers": 10,
         "prices": 0,
@@ -13172,8 +13204,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 132,
-      "latestRecord": "2026-11-23T05:19:15Z",
+      "observedRecords": 133,
+      "latestRecord": "2026-11-23T09:15:16Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -13265,8 +13297,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-23T07:23:07Z",
+      "observedRecords": 9,
+      "latestRecord": "2026-11-23T09:30:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13557,7 +13589,7 @@
         {
           "date": "2026-11-22",
           "issuer": 0,
-          "media": 2
+          "media": 3
         }
       ],
       "potential": [
@@ -13570,10 +13602,10 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 30,
-      "latestRecord": "2026-11-23T06:30:59Z",
+      "observedRecords": 32,
+      "latestRecord": "2026-11-23T10:03:36Z",
       "topicCounts": {
-        "numbers": 1,
+        "numbers": 2,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -13585,7 +13617,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 18
+        "media": 19
       }
     },
     "VOLV-B.ST": {
