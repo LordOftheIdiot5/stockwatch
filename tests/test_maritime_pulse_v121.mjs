@@ -112,6 +112,23 @@ test('pure output, same snapshot produces same evidence without altering input',
  assert.deepEqual(a,b);assert.equal(JSON.stringify(data),original);
  assert.equal(valuePercent(0),'0.0%');assert.equal(valuePercent(-4.89),'-4.9%');
 });
+test('changing new source reports never preserves stale direction narratives',()=>{
+ const d=clone(data);
+ d.freight.series[0].history.at(-1).value=197.1;
+ d.connectivity.series[0].history.at(-1).value=92.0;
+ d.roro.series[0].history.at(-1).value=900;
+ d.ports.series[0].history.at(-1).value=800000000;
+ d.company.companies[0].series[0].observations.at(-1).value=52.0;
+ const signals=buildMaritimePulse(d,{now:NOW}).signals;
+ const find=id=>signals.find(x=>x.id===id);
+ assert.match(find('usda-grain-week').headline,/U.S. Gulf → Japan rose by/);
+ assert.match(find('nordic-liner-network').headline,/Denmark rose by/);
+ assert.match(find('nordic-roro-yoy').headline,/Norway fell by/);
+ assert.match(find('global-container-history').headline,/World fell by/);
+ assert.match(find('wallenius-operations').headline,/Realized net freight fell by/);
+ assert.doesNotMatch(find('usda-grain-week').title,/eased/);
+ assert.doesNotMatch(find('global-container-history').title,/2024/);
+});
 test('invalid time and non-numeric values are rejected',()=>{
  assert.throws(()=>buildMaritimePulse(data,{now:new Date('invalid')}),/invalid_pulse_clock/);
  const d=clone(data);d.freight.series[0].history.at(-1).value='184.97';
