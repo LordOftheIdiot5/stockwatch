@@ -43,7 +43,7 @@ const data={
 const clone=x=>JSON.parse(JSON.stringify(x));
 test('six source-dated indicators from compatible real-report-shaped data',()=>{
  const r=buildMaritimePulse(data,{now:NOW});
- assert.equal(r.status,'source_backed');assert.equal(r.signalCount,6);
+ assert.equal(r.status,'source_backed');assert.equal(r.signalCount,6,JSON.stringify({ids:r.signals.map(x=>x.id),missing:r.missing}));
  assert.deepEqual(r.signals.map(x=>x.id),[
   'usda-grain-week','nordic-liner-network','nordic-roro-yoy',
   'global-container-history','wallenius-operations','usda-grain-indications'
