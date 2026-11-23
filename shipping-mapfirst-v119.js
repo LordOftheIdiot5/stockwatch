@@ -165,7 +165,6 @@ function inspectorUX(atlas){
   presets.className='sw119b-presets';
   presets.setAttribute('aria-label','Quick geographic map views');
   const choices=[
-   {name:'World',preset:'world'},
    {name:'North Sea',lon:5,lat:56,width:175},
    {name:'Suez',lon:32,lat:28,width:166},
    {name:'Singapore',lon:107,lat:13,width:175}
@@ -179,10 +178,12 @@ function inspectorUX(atlas){
     map.dispatchEvent(new CustomEvent('sw119-map-focus',{detail:choice}));
     presets.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===button)));
    });
-   button.setAttribute('aria-pressed',String(choice.preset==='world'));
+   button.setAttribute('aria-pressed','false');
    presets.append(button);
   }
   atlas.append(presets);
+  const reset=atlas.querySelector('[data-map-zoom="reset"]');
+  if(reset)reset.addEventListener('click',()=>presets.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false')));
  }
  const render=async()=>{
   const layer=atlas.querySelector('.sw-atlas-tab[aria-pressed="true"]')?.dataset.layer||'ports';
