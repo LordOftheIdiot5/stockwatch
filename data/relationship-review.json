@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T14:13:15.553851+00:00",
-  "newsRecordsScanned": 2289,
+  "generated": "2026-11-24T15:08:23.114574+00:00",
+  "newsRecordsScanned": 2322,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3064,6 +3064,18 @@
       "amount": null
     },
     {
+      "id": "57616481a9a439b805859d23390202a2150c60a8747a1162fdfc32e7cd2cd48a",
+      "newsId": "TPE.DE:77477a3f1c396cca5ac43da0d9c79882b99d8cf23be2d62e880dedf6ee0d9347",
+      "entityIds": [],
+      "issuerTicker": "TPE.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-23T16:16:36Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQck5sRC1aRUxYTTFoX1l3d0oxUUY3YlhTM09mOVpxcS1UQ2NudEliNGhNRWFSaUczYXVwSVlRTkxlVzdGRWFDTlFKSHRZYU5qQlBkcVRYX3RjOG11bU5sbzg2RDhGZ3BZYTBhVFFyOTJFTlNDWU15SllXZzN0YTlVUVlTMUxYdHlEdktBX1RWMnA0UTk0SHVHSnBXcjgzV3hrR0RPSjJyaFl3UEwzYkRYY0ctaDNRdHItZzB1VjFIRGlpNUdvQmpZNno2RnJLV3Z0R1dReFJsa1JISlhENXBn?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "d8914bb82913b6ac971af32cfa581f12f701829865b96548ea452297ca8651e2",
       "newsId": "FCT.MI:f247b0e9f85e97098ded9d9b3e221d2f0c50f21cfcb9da478626945e560b352b",
       "entityIds": [],
@@ -3248,6 +3260,20 @@
       "amount": null
     },
     {
+      "id": "26b15578085914d9faae28020044f76863c27615aef446b0a589342cb9e4d24a",
+      "newsId": "NDX1.DE:ff3f912829747df0be72b1d0217eee1b2b3aedca5591d30c56cda0051916a2b1",
+      "entityIds": [
+        "nordex"
+      ],
+      "issuerTicker": "NDX1.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-24T10:22:28Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNenl3STFuNUR5dk8ybVRrOGRyOTZNM1NPR1diVVJTWGExX1NMbkVqY1pJUFBMNXRaUUVqU2drb1BTLUxqY0dvOVlQdmRnY3ZqWG8ySzFvUmtjUFY3UkdJeFBIQ3lsamxaYllJTzFVSVBjcW5DS3RDMWNIbGpDQ2RKd3lHM0ZISDVVVTVpVWRzd1hEOUYwN2h1MnFDYkNLcEtOM3E5dlpFSFUxdw?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "839223864b7885c5f5967026511c95bc2914d39c4b787c54f3fc50f36e6e483d",
       "newsId": "BMAX.ST:6b6eb4de1cd5ee9c0721075ada8b85dde0503912b2c10f8511c1489582179d4b",
       "entityIds": [],
@@ -3269,6 +3295,30 @@
       "candidateType": "headline_event",
       "published": "2026-11-24T12:31:35Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZjBVOTQ2bm1rUHRsdms3cDZTSTZkQzlIODU5Q0xDdFVUempBN1VjdWNMeVY0OGhZRzhBQTdCc1FkZi1wNW5pUFFUVFBzTm1kRUhvNEp3eFpWV1JUQW5yclRsRklNaUt4UGpXVVNQcVBIeWViVkdoMG9yVU5XMl8yNXhzRHB3clFpQ3VtcWJDMWt6NW1JZS0tQQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "254151a38c01c0d483ae680f894a8468883f629d2e56be1d83a0e43a8806cfcc",
+      "newsId": "FCT.MI:0dd3ba4e4223c6a4745780e0c3aa76cf84fd4b4923ef09b2762c61d0689b8c88",
+      "entityIds": [],
+      "issuerTicker": "FCT.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-24T13:38:21Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTXM0cldJalNrMnYxUlpia0gwUzEwdFloMHNzU0NPamk4c0dhZktsRHNRd096aUNvN09YQlZsMklMZ3drY084T0t2bk55QlNEa0lXalRVV1IwTGlNOGUyZUNaNElBS0l4WFA5TURidXM2OVRDTjlIenQ4dm5qSTVIN1A0cGJnOXJ4VlJGM1BKSjZ6OTJ1eUN4Um8tX0pvbHN0TGNkMnl4NzdOQQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "4d106133c79a3b7866250fac1a3179ac2cdb0b81f7b00e2e20a94c956fad07b8",
+      "newsId": "SKA-B.ST:ae1f9d2bedb67bf6c65059c683b6ff3ee289e541806f5afb63e446665b2fd5f8",
+      "entityIds": [],
+      "issuerTicker": "SKA-B.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-24T14:35:55Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZWhyalNuNF8xY3NaUFV3ZDdHZUsyUDVTSUxhNUktN3ZmSFVYOXFNS0gzYzgxMGJ5WFBpZFc2Q0JmOTVUQ0taRWYybWNlYnFDckZfcG54QXViM19iRzM2X0dTNnRCU2wtSVRwN0M2MkstamFlaUZPNFBEbDBmeGx5VkFFNmxfSzd5eHlHN0hoTHpVeXM?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T14:13:14Z",
+  "generated": "2026-11-24T15:08:22Z",
   "windowStart": "2026-11-10",
   "windowEnd": "2026-11-23",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -477,8 +477,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-23T09:30:55Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-24T14:30:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -752,7 +752,7 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [
@@ -765,7 +765,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 4,
+      "observedRecords": 5,
       "latestRecord": "2026-11-24T07:19:42Z",
       "topicCounts": {
         "numbers": 0,
@@ -780,7 +780,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       }
     },
     "ALO.PA": {
@@ -3190,8 +3190,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 19,
-      "latestRecord": "2026-11-24T12:17:56Z",
+      "observedRecords": 22,
+      "latestRecord": "2026-11-24T14:12:18Z",
       "topicCounts": {
         "numbers": 5,
         "prices": 0,
@@ -4478,8 +4478,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 66,
-      "latestRecord": "2026-11-24T07:11:00Z",
+      "observedRecords": 67,
+      "latestRecord": "2026-11-24T13:38:21Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4753,12 +4753,12 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-23T23:14:13Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4772,7 +4772,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     },
     "GJF.OL": {
@@ -5871,8 +5871,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 39,
-      "latestRecord": "2026-11-24T12:48:21Z",
+      "observedRecords": 40,
+      "latestRecord": "2026-11-24T13:15:02Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7465,6 +7465,14 @@
       ],
       "potential": [
         {
+          "id": "NDX1.DE:ff3f912829747df0be72b1d0217eee1b2b3aedca5591d30c56cda0051916a2b1",
+          "published": "2026-11-24T10:22:28Z",
+          "headline": "Nordex Group has secured a 133 MW order from Electrica for a wind farm in Romania",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNenl3STFuNUR5dk8ybVRrOGRyOTZNM1NPR1diVVJTWGExX1NMbkVqY1pJUFBMNXRaUUVqU2drb1BTLUxqY0dvOVlQdmRnY3ZqWG8ySzFvUmtjUFY3UkdJeFBIQ3lsamxaYllJTzFVSVBjcW5DS3RDMWNIbGpDQ2RKd3lHM0ZISDVVVTVpVWRzd1hEOUYwN2h1MnFDYkNLcEtOM3E5dlpFSFUxdw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "NDX1.DE:8ebb20226376759b3d8c5aacf8995302b99467b90377da95db592acbcd127168",
           "published": "2026-11-24T09:55:43Z",
           "headline": "Nordex Group receives 133 MW order from Electrica for wind farm in Romania",
@@ -7561,8 +7569,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 38,
-      "latestRecord": "2026-11-24T09:55:43Z",
+      "observedRecords": 39,
+      "latestRecord": "2026-11-24T10:22:28Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8129,6 +8137,14 @@
       ],
       "potential": [
         {
+          "id": "NOBA.ST:25e7ea9c0eeb0c26b8192c396be4ab41e08aa8c01eed2d63085e780142d13f06",
+          "published": "2026-11-24T10:32:35Z",
+          "headline": "NOBA Bank Group’s Rating Raised to BBB+, Stable Outlook",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQY3pHaEJXNXVBbnFjSmQzWlNjRG14QXN3ekhTNXFyVFdTWW9VZllKLVBSNXBkUVhYZFlQcUpkY0E1RFcxNVFBYmNGUzdrQVB2eElsdTEyYmJSenVvaGQtYnR5dzU1ZGpJeGJwMGZaYUdSVWV4NHdFTFY0aFNJRVl5Q3RDdEV1aXBuVmZJRWVMbk5VUnd3NHViQ3g3UU5qNmdTY2RMNjQ2bw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "NOBA.ST:4fea4e4f3fa6d12ed800ce0de916987c86a256b986f8a2ec6afe5d5a7b665c7c",
           "published": "2026-11-24T10:08:37Z",
           "headline": "NOBA Bank Group Receives Raised Investment Grade Rating From Nordic Credit Rating (BBB+, Stable Outlook)",
@@ -8145,8 +8161,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-24T10:08:37Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-24T10:32:35Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10314,7 +10330,7 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
@@ -10335,8 +10351,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-23T09:14:17Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-23T13:18:15Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10350,7 +10366,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 7
+        "media": 8
       }
     },
     "S92.DE": {
@@ -10555,6 +10571,14 @@
       ],
       "potential": [
         {
+          "id": "SAAB-B.ST:12d5e60cfd138775c8568a271c9f34b26991215a61dbdad1a25ac51eff8dca06",
+          "published": "2026-11-24T14:15:00Z",
+          "headline": "Saab completes acquisition of Mythos AI in the U.S.",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQblVNS3MtSUNHWWw0R2ZmdGxRZFU3Z1VSTlptSVFsVWJuQUpYcllDU3ZEZGlBRjYwTTQxTXZjeC13R09wNm9vS2lHdUMwNDZKZE5qQ1ZyeTlHVWJLaWdrc1UxcThPRTlPRm41d04yY3IxY3o3SFA2WmllMkRfRWxrQ2g1dWUtS0NEa3ZGM3JDaGJ2dXM3QWc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "SAAB-B.ST:7262c974f3c577fdb91c49ac3b9c5eaed47126d36679043e6dbaabb528635409",
           "published": "2026-11-23T11:00:32Z",
           "headline": "U.S. Army orders $60.3 million anti-tank system from Saab under five-year contract",
@@ -10635,8 +10659,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 15,
-      "latestRecord": "2026-11-23T11:00:32Z",
+      "observedRecords": 16,
+      "latestRecord": "2026-11-24T14:15:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -11594,8 +11618,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 76,
-      "latestRecord": "2026-11-24T12:31:35Z",
+      "observedRecords": 78,
+      "latestRecord": "2026-11-24T14:34:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -11784,8 +11808,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 18,
-      "latestRecord": "2026-11-21T08:01:00Z",
+      "observedRecords": 21,
+      "latestRecord": "2026-11-24T14:37:49Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12940,11 +12964,11 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 10,
+      "observedRecords": 11,
       "latestRecord": "2026-11-24T06:00:36Z",
       "topicCounts": {
         "numbers": 0,
@@ -12959,7 +12983,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 5
       }
     },
     "TRMED.OL": {
@@ -16630,7 +16654,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 6,
+      "observedRecords": 5,
       "latestRecord": "2026-11-02T11:00:34Z",
       "topicCounts": {
         "numbers": 0,

@@ -1,27 +1,38 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T14:13:13Z",
+  "generated": "2026-11-24T15:08:20Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-24T14:13:13Z",
-      "lastSuccess": "2026-11-24T14:13:13Z",
+      "lastAttempt": "2026-11-24T15:08:20Z",
+      "lastSuccess": "2026-11-24T15:08:20Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-24T14:13:13Z",
-      "lastSuccess": "2026-11-24T14:13:13Z",
+      "lastAttempt": "2026-11-24T15:08:20Z",
+      "lastSuccess": "2026-11-24T15:08:20Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:76c15274ea0d7e04a6524f658da9f52e14bcedbc6995083b7fd37f46de96eb71",
+      "title": "Structured bond(s) issued by Morgan Stanley & Co. International Plc will be admitted to trading on STO Structured Products NOK (Record Id 373414)",
+      "published": "2026-11-24T14:58:39Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bd05a2b5a9d147e352ea7fb09ff06d73c&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:c065448e90de744dd75cac05ebd16032bb3e7afe80f8624f09853d44c84d25f5",
       "title": "CORRECTION: Structured bond(s) issued by J.P Morgan Structured Products B.V will be admitted to trading on STO Structured Products",
