@@ -34,7 +34,7 @@ class PublicPagesTest(unittest.TestCase):
                     self.assertIn("python tests/test_public_pages_v122.py",workflow)
                     self.assertIn("python scripts/verify_pages_release.py",workflow)
                 uploads.append(path.name)
-        self.assertEqual(sorted(uploads),["pages.yml","scan.yml"])
+        self.assertEqual(sorted(uploads),["open-data.yml","pages.yml","scan.yml"])
     def test_unknown_paths_not_published_and_symlink_rejected(self):
         with tempfile.TemporaryDirectory() as d:
             base=Path(d);root=base/"repo";root.mkdir()
