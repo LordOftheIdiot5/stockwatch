@@ -18,3 +18,10 @@ Read this log and master plan, check active PR and latest CI, continue highest u
 
 ## 2026-11-24 — Unified execution policy
 Owner confirmed all specialist queues must be actively progressed from the master plan, without separate conversations. Revision 4 establishes parallel workstreams and rotation. Next session recheck live specialist PRs/checkpoints and N04b/c CI; select highest unblocked work in each relevant domain. No specialist implementation or new deployment claimed by this documentation update.
+
+## 2026-11-24 — Master audit program and specialist triage
+- Master revision 5 and [audit runbook](NORDL-AUDIT-RUNBOOK.md) committed on main. Runbook commit c67f733b0e0bbc5e0039be2d965baa784fd79141; master commit c494ef244f465e157f3a40afe8e636aa70045ee2. Defines audit cadence, commands, severity, evidence, usefulness and release gates.
+- Stockwatch #229 head 99cba86e39a2b7334645df08454c55da72967494: focused N04b policy CI passed (45300265222), full regression running (45300265266); SQL migration still needs executable integrity tests. Shipping AIS #221 remains draft and rights-gated. Existing visual audit covers 19 routes, six widths, both themes; review actual captures at feature milestones.
+- Energy: existing atlas stress/render budget/live visitor/production map tests available; older visual-validation workflow branch-specific. Next specialist task per WORKPLAN: source/rights review, archive and map performance, review older #68/#69 without blind merge.
+- Leivro: #173 V152 QA candidate and #174–178 product coverage/specs/price/search/compare drafts, #171 V151 integrated candidate. model2-checks manual-only per quota note; Cloudflare build checks not equivalent to full browser coverage. Review candidate dependencies and actual deployment before new overlapping work. Prioritize QA and authorized product data.
+- No full rendered website audit performed in this session; only repository/workflow inventory and policy update. Next: targeted N04c SQL test, actual source replay, specialist release triage and browser audits at appropriate gates. No new weekly/monthly automation configured.
