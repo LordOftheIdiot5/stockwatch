@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from build_public_pages_v122 import build,MANIFEST
-from verify_pages_release import PATHS
+from verify_pages_release import PATHS,EXCLUDED_PATHS
 
 class PublicPagesTest(unittest.TestCase):
     def test_actual_manifest_and_release_parity(self):
@@ -16,6 +16,8 @@ class PublicPagesTest(unittest.TestCase):
             for p in PATHS:
                 self.assertEqual((out/p).read_bytes(),(ROOT/p).read_bytes(),p)
             for p in ("docs","tests","database","deploy","worker",".github","scripts/nordl-private-storage-v122.mjs","data/seen.json"):
+                self.assertFalse((out/p).exists(),p)
+            for p in EXCLUDED_PATHS:
                 self.assertFalse((out/p).exists(),p)
             self.assertEqual([p.name for p in (out/"scripts").iterdir()],["maritime-pulse-v121.mjs"])
     def test_unknown_paths_not_published_and_symlink_rejected(self):
