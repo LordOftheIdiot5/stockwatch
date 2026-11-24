@@ -29,7 +29,7 @@ class ArchiveTests(unittest.TestCase):
             (root/"data").mkdir()
             (root/"data/shipping-roro-traffic.json").write_text(json.dumps({"schemaVersion":1,"provider":"Eurostat","datasetCode":"mar_go_qmc","licenseUrl":"https://ec.europa.eu/eurostat/help/copyright-notice","series":[{"key":"example"}]}))
             now=dt.datetime(2026,11,18,tzinfo=dt.timezone.utc)
-            with patch.object(archive,"immutable_put",return_value="created") as put:
+            with patch.object(archive,"verified_put",return_value="created") as put:
                 status=archive.collect(object(),{},root=root,now=now)
                 self.assertEqual(status[-1]["storageStatus"],"permission_pending")
                 self.assertEqual(put.call_count,1)
@@ -54,7 +54,7 @@ class ArchiveTests(unittest.TestCase):
             row={"date":"2026-11-19","close":100.0,"changePoints":1.0,"changePct":1.01}
             d={"key":ident,"endpoint":endpoint,"sourceUrl":source,"license":"Taiwan Open Government Data License 1.0; attribution required","licenseUrl":"https://data.gov.tw/en/license","name":"TAIEX","market":"Taiwan","provider":"TWSE","notice":"Dated observations","history":[row],"latest":row,"lastAttempt":"first"}
             p=root/"data"/fn;p.write_text(json.dumps(d))
-            with patch.object(archive,"immutable_put",return_value="created") as put:
+            with patch.object(archive,"verified_put",return_value="created") as put:
                 result=archive.archive_reviewed_snapshots(object(),root,"2026-11-20")
                 self.assertEqual(result[0]["observations"],1)
                 first=put.call_args.args[2]
@@ -77,5 +77,30 @@ class ArchiveTests(unittest.TestCase):
                 self.assertNotIn("identityCandidates",result)
                 self.assertNotIn("publicShorts",result)
                 self.assertNotIn("sources",result)
+    def test_verified_remote_readback(self):
+        import io
+        from unittest.mock import Mock
+        client=Mock()
+        raw=b"retained observation"
+        for status in ("created","already_present"):
+            with patch.object(archive,"immutable_put",return_value=status):
+                stream=io.BytesIO(raw)
+                client.get_object.return_value={"Body":stream}
+                self.assertEqual(archive.verified_put(client,raw,"test",{},"application/json"),status)
+                self.assertTrue(stream.closed)
+                client.get_object.assert_called_with(Bucket=archive.BUCKET,Key="test")
+        for bad in (b"",b"x"*len(raw),raw+b"x"):
+            with patch.object(archive,"immutable_put",return_value="already_present"):
+                stream=io.BytesIO(bad)
+                client.get_object.return_value={"Body":stream}
+                with self.assertRaises(ValueError):
+                    archive.verified_put(client,raw,"test",{},"application/json")
+                self.assertTrue(stream.closed)
+        with patch.object(archive,"immutable_put",side_effect=RuntimeError("write failed")):
+            client.reset_mock()
+            with self.assertRaises(RuntimeError):
+                archive.verified_put(client,raw,"test",{},"application/json")
+            client.get_object.assert_not_called()
+
 if __name__=="__main__":
     unittest.main()
