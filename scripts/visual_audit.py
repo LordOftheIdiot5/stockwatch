@@ -171,6 +171,8 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--base-url",help="Optional live public site; otherwise serve this checkout")
     parser.add_argument("--output",default="visual-audit")
+    parser.add_argument("--site-root",type=Path,default=ROOT,help="Serve isolated public artifact instead of checkout")
+    parser.add_argument("--strict-http",action="store_true",help="Fail on same-origin request errors")
     parser.add_argument("--pages",nargs="+",choices=PAGES,default=list(PAGES))
     parser.add_argument("--devices",nargs="+",choices=VIEWPORTS,default=list(DEFAULT_VIEWPORTS))
     parser.add_argument("--chromium-path",help="Optional installed Chromium or Chrome executable")
@@ -180,11 +182,11 @@ def main():
         if args.base_url:
             base=args.base_url.rstrip("/")+"/"
         else:
-            server=http.server.ThreadingHTTPServer(("127.0.0.1",0),functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(ROOT)))
+            server=http.server.ThreadingHTTPServer(("127.0.0.1",0),functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(args.site_root.resolve())))
             threading.Thread(target=server.serve_forever,daemon=True).start()
             base=f"http://127.0.0.1:{server.server_port}/"
         records=capture(base,Path(args.output),args.pages,args.devices,args.chromium_path)
-        failures=sum(bool(r.get("error") or r.get("status",0)>=400 or r["pageErrors"] or r.get("interactionWarning")) for r in records)
+        failures=sum(bool(r.get("error") or r.get("status",0)>=400 or r["pageErrors"] or r.get("interactionWarning") or (args.strict_http and (r["httpErrors"] or r["failedRequests"] or r.get("images")))) for r in records)
         print(json.dumps({"captures":len(records),"errors":failures,"output":args.output}),flush=True)
         return int(failures>0)
     finally:
