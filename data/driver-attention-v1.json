@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T10:08:17Z",
+  "generated": "2026-11-24T11:06:50Z",
   "windowStart": "2026-11-10",
   "windowEnd": "2026-11-23",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -2182,9 +2182,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "BMAX.ST:6b6eb4de1cd5ee9c0721075ada8b85dde0503912b2c10f8511c1489582179d4b",
+          "published": "2026-11-24T10:48:59Z",
+          "headline": "Brenderup Group inngår strategisk avtale med BYGGMAX i Sverige",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdHgtTEZwUndNYndvckpvd29tOGptQnlIaXV6U0VOX1cwcDFKMm5DVTFZbGZWY2IzN0k5WTVCakEtTzFMT2hIYmttaHZzWEdTTTdxN25rTklWZnJjSFVBTzkweGQxcTgwMEhQZ3VSTE5xTjJ0cEdIRHRxS0RFa1g2dk56SzhBNFpGelpuMlEzU3ZfWDhxZTNUMnZHV0R5cXRlTERyQkthN1dRaDJuSWVtR2xsYWpZOHM?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 1,
+      "latestRecord": "2026-11-24T10:48:59Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -2682,8 +2691,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 16,
-      "latestRecord": "2026-11-23T17:09:15Z",
+      "observedRecords": 17,
+      "latestRecord": "2026-11-24T10:01:23Z",
       "topicCounts": {
         "numbers": 9,
         "prices": 0,
@@ -7722,8 +7731,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-23T14:49:24Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-24T10:36:04Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8102,9 +8111,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-16T06:26:53Z",
+      "potential": [
+        {
+          "id": "NOBA.ST:17b1430a4ef11403c464f6d093de54d8f0cdba7d041db299e0116e54a3dd7253",
+          "published": "2026-11-24T10:07:00Z",
+          "headline": "NOBA Bank Group AB (publ) receives raised investment grade rating from Nordic Credit Rating (BBB+, stable outlook)",
+          "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOMTZVMXJmd0pXbmF2TFBpNGlhR2JGbnA4S2ZYQi1Sdl8wRF84cnl1bHp2T19qekhlQ1E3d2xwMmVTUThUeTFxbGJoQk5qS2xuUVlUZzRQUFRseUh6ZXFJMnRKRnJ6XzFzYkVtYTNMcG1VSVo5cWNteG5wN005clBXdkZIaVVSdFl1d2tkVFhwODg1MXFCMHNPd2UxSk9UTzdxblByUlo0ZDVIVzZSb29XLTRTNnhqMXhucjFkNnVCRVF6SlpFenBUUmxqUUt2QXJndFhjVV9wYWpIeEo5NWRRRmxUbERwS2p2XzdzU3FnNWZyVUVkUkk0NnFZMlhWMlZrNWd1LQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        }
+      ],
+      "observedRecords": 2,
+      "latestRecord": "2026-11-24T10:07:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8517,8 +8535,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-23T17:13:22Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-24T08:34:40Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -11544,8 +11562,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 74,
-      "latestRecord": "2026-11-24T09:47:13Z",
+      "observedRecords": 75,
+      "latestRecord": "2026-11-24T10:43:23Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -13334,8 +13352,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 142,
-      "latestRecord": "2026-11-24T09:10:45Z",
+      "observedRecords": 144,
+      "latestRecord": "2026-11-24T10:34:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
