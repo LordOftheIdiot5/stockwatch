@@ -50,6 +50,40 @@ def validate(graph):
         ids.add(e["id"])
     return entities
 
+def lead_key(url,ticker):
+    # Stable across alias additions, classifier changes and candidate promotion.
+    return hashlib.sha256(json.dumps([url,ticker],separators=(",",":")).encode()).hexdigest()
+
+def merge_review(previous,current,graph,now):
+    """Reconcile metadata across refreshes; preserve previously discovered leads."""
+    stored={}
+    known=set(validate(graph))
+    for rows,is_new in ((previous,False),(current,True)):
+        for row in rows:
+            if not isinstance(row,dict) or not safe_url(row.get("sourceUrl")) or not isinstance(row.get("newsId"),str):continue
+            ticker=row.get("issuerTicker")
+            if ticker is not None and not isinstance(ticker,str):continue
+            key=lead_key(row["sourceUrl"],ticker)
+            old=stored.get(key)
+            ids=sorted(set([row["newsId"]]+[x for x in row.get("newsIds",[]) if isinstance(x,str)]+(old["newsIds"] if old else [])))
+            aliases=sorted(set(x for x in row.get("entityIds",[])+(old["entityIds"] if old else []) if x in known))
+            first=old["firstSeenAt"] if old else row.get("firstSeenAt")
+            item={"id":key,"newsId":ids[0],"newsIds":ids,"entityIds":aliases,"issuerTicker":ticker,
+                  "candidateType":row.get("candidateType","headline_event"),"published":min(row["published"],old["published"]) if old else row["published"],
+                  "sourceUrl":row["sourceUrl"],"status":"review_required","relationshipVerified":False,"amount":None,
+                  "firstSeenAt":first or now,"lastSeenAt":now if is_new else row.get("lastSeenAt") or now,
+                  "currentlyDetected":is_new}
+            stored[key]=item
+    reviewed={}
+    for e in graph["relationships"]:
+        if e.get("discoveryNewsId"):reviewed.setdefault(e["discoveryNewsId"],set()).add(e["id"])
+    for row in stored.values():
+        linked=set().union(*(reviewed.get(n,set()) for n in row["newsIds"]))
+        if linked:
+            row["status"]="related_evidence_recorded"
+            row["relatedRelationshipIds"]=sorted(linked)
+    return sorted(stored.values(),key=lambda r:(r["published"],r["id"]))
+
 def discover(graph,items):
     entities=validate(graph)
     aliases={}
@@ -76,9 +110,16 @@ def discover(graph,items):
         if len(matched)<2 and not official and not associated:continue
         mode="co_mention" if len(matched)>=2 else "issuer_event" if official else "headline_event"
         ticker=s["ticker"] if official or associated else None
-        key=hashlib.sha256((s["url"]+"|"+mode+"|"+"|".join(matched)+"|"+str(ticker)).encode()).hexdigest()
+        key=lead_key(s["url"],ticker)
         row={"id":key,"newsId":s["id"],"entityIds":matched,"issuerTicker":ticker,"candidateType":mode,"published":s["published"],"sourceUrl":s["url"],"status":"review_required","relationshipVerified":False,"amount":None}
-        if key not in candidates or row["newsId"]<candidates[key]["newsId"]:candidates[key]=row
+        prior=candidates.get(key)
+        if prior:
+            row["entityIds"]=sorted(set(prior["entityIds"]+row["entityIds"]))
+            row["newsIds"]=sorted(set(prior["newsIds"]+[row["newsId"]]))
+            if prior["published"]<row["published"]:row["published"]=prior["published"]
+            row["newsId"]=row["newsIds"][0]
+        else:row["newsIds"]=[row["newsId"]]
+        candidates[key]=row
     return sorted(candidates.values(),key=lambda x:(x["published"],x["id"]))
 
 def archived_items(root):
@@ -100,19 +141,16 @@ def archived_items(root):
 def run(root=ROOT):
     graph=json.loads((root/REL).read_text(encoding="utf8"))
     items=list(archived_items(root))
-    candidates=discover(graph,items)
-    # A reviewed disclosure can establish a related, narrower fact than the
-    # headline. Link the fact, but do not mark the headline as verified.
-    reviewed={}
-    for e in graph["relationships"]:
-        if e.get("discoveryNewsId"):
-            reviewed.setdefault(e["discoveryNewsId"],[]).append(e["id"])
-    for row in candidates:
-        linked=reviewed.get(row["newsId"],[])
-        if linked:
-            row["status"]="related_evidence_recorded"
-            row["relatedRelationshipIds"]=sorted(linked)
-    out={"schemaVersion":1,"generated":datetime.now(timezone.utc).isoformat(),"newsRecordsScanned":len(items),"notice":"Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.","candidates":candidates,"relatedEvidenceLeadCount":sum(r["status"]=="related_evidence_recorded" for r in candidates)}
+    now=datetime.now(timezone.utc).isoformat()
+    p=root/OUT
+    previous=json.loads(p.read_text(encoding="utf8")) if p.exists() else {}
+    # Legacy rows had no observation timestamps; use the previous file's
+    # generation time as the earliest locally documented discovery.
+    old=[{**r,"firstSeenAt":r.get("firstSeenAt") or previous.get("generated"),"lastSeenAt":r.get("lastSeenAt") or previous.get("generated")} for r in previous.get("candidates",[])]
+    candidates=merge_review(old,discover(graph,items),graph,now)
+    out={"schemaVersion":1,"generated":now,"newsRecordsScanned":len(items),"notice":"Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.","candidates":candidates,
+         "relatedEvidenceLeadCount":sum(r["status"]=="related_evidence_recorded" for r in candidates),
+         "currentlyDetectedCount":sum(r["currentlyDetected"] for r in candidates)}
     p=root/OUT;tmp=p.with_suffix(".tmp");tmp.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf8");tmp.replace(p)
     print(json.dumps({"newsRecordsScanned":len(items),"verifiedSeedRelationships":len(graph["relationships"]),"reviewCandidates":len(candidates)}))
     return out
