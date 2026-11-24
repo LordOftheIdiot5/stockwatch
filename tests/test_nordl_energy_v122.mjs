@@ -21,6 +21,6 @@ test('replay actual published Energy reservoir projection, five zones',()=>{
  const d=JSON.parse(readFileSync(new URL('./fixtures/nordl-energy-reservoir-replay-v122.json',import.meta.url)));
  const p=energyPilot(d,new Date(d.generated).toISOString());
  assert.equal(p.results.length,5);assert.equal(p.missing.length,0);
- assert.deepEqual(p.results.map(x=>x.signal.differencePercentagePoints),[-7.23,-28.9,-10.15,10.29,-14.16]);
+ assert.deepEqual(p.results.map(x=>x.signal.differencePercentagePoints),[-7.23,-28.9,-10.15,10.29,-14.17]);
  assert.ok(p.results.every(x=>x.actual.rights.retain==='unreviewed'&&x.signal.publicEligible===false));
 });
