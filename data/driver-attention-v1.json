@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T07:07:01Z",
+  "generated": "2026-11-24T08:07:52Z",
   "windowStart": "2026-11-10",
   "windowEnd": "2026-11-23",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -765,8 +765,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-20T06:35:11Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-24T07:19:42Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -1203,8 +1203,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-17T23:03:00Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-24T07:30:23Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -2653,10 +2653,18 @@
         {
           "date": "2026-11-23",
           "issuer": 1,
-          "media": 11
+          "media": 12
         }
       ],
       "potential": [
+        {
+          "id": "CADLR.OL:658459a9f004d6ab6ba22dfe3deed34d66ecc590f80977e7fe15815f93c609f3",
+          "published": "2026-11-23T07:50:33Z",
+          "headline": "Cadeler plc Maintains Earnings Guidance for the Full-Year 2026",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPeEt2SG5MajZ3bkpZaFJ1WDl0VGVHVDJDdjY3Q19HOWJEbjRDWEhSMzkzMlhINENwZllId0c4VVJ4XzRiQnNacmVmZS00c1dWTUZDYm81UFFxaVFGdmZhRTRzUjFnYkdUcFRra2VpTUt6MHNFSXZyVFdxRVBfXzN1cjVmaVVmeVFVMlUtUTA4bTJKM3hlMlZSeEhWTWpHWkZKbXNuc0JlaGhkRjF2Zy1LTzZnd3pydw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
         {
           "id": "CADLR.OL:6d9577b13967b28f71b87fe6ab60d80b211c4f9409311bcd157113812977c67b",
           "published": "2026-11-23T07:10:20Z",
@@ -2674,13 +2682,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 15,
+      "observedRecords": 16,
       "latestRecord": "2026-11-23T17:09:15Z",
       "topicCounts": {
-        "numbers": 8,
+        "numbers": 9,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -2689,7 +2697,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 12
+        "media": 13
       }
     },
     "CAF.MC": {
@@ -3157,6 +3165,14 @@
       ],
       "potential": [
         {
+          "id": "CMBTO.OL:3e26ec3355568f3246f5803fe239bd1cf03efffffd59ba8d297e46265cc30419",
+          "published": "2026-11-24T07:15:26Z",
+          "headline": "CMB.Tech doubles order for new type of offshore wind vessel",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPXzQ0Z0k3N0kxUndhT0g1end4OUpJN1NTejlRUmJhVzdGcUNtYnlqOE1aRkl5QXNrLUtRdzRNS3c4alhjTXp2UVpBN21TZ25Ya0tFUmpUdXdpZE5KVXU1bVZ0RFdFd2dQZUs5VFpxc3I0YWZmTk5uM3FldTRHei1SclZQbzROUy1RRHlXclU5SGlyTGUzUEhFN1IyRHFqMEoyaWM2WXB1VkNaTzdSeFd0Nzd3?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "CMBTO.OL:236fee618926ce433125dc4896049fa6e3c7fd00c8d20b7a1217f5a0031565d9",
           "published": "2026-11-17T07:08:47Z",
           "headline": "CMB.Tech upgraded to buy as DNB sees strong outlook for tankers and bulkers",
@@ -3165,8 +3181,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 11,
-      "latestRecord": "2026-11-24T07:03:51Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-24T07:32:22Z",
       "topicCounts": {
         "numbers": 5,
         "prices": 0,
@@ -5830,8 +5846,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 36,
-      "latestRecord": "2026-11-24T05:52:11Z",
+      "observedRecords": 37,
+      "latestRecord": "2026-11-24T07:26:32Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7496,8 +7512,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 32,
-      "latestRecord": "2026-11-24T06:56:15Z",
+      "observedRecords": 34,
+      "latestRecord": "2026-11-24T07:09:37Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7775,8 +7791,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-24T05:08:17Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-24T07:27:12Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10646,8 +10662,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-19T11:02:35Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-24T07:14:04Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12854,7 +12870,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 9,
+      "observedRecords": 10,
       "latestRecord": "2026-11-24T06:00:36Z",
       "topicCounts": {
         "numbers": 0,
@@ -13294,8 +13310,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 139,
-      "latestRecord": "2026-11-23T22:45:33Z",
+      "observedRecords": 140,
+      "latestRecord": "2026-11-24T03:00:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
