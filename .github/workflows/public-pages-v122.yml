@@ -10,6 +10,8 @@ on:
       - 'tests/test_verify_pages_release.py'
       - '.github/workflows/public-pages-v122.yml'
       - '.github/workflows/pages.yml'
+      - '.github/workflows/scan.yml'
+      - '.github/workflows/open-data.yml'
   workflow_dispatch:
 permissions:
   contents: read
