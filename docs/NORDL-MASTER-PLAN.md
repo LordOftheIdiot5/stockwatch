@@ -10,7 +10,7 @@ These are normative detailed queues, not superseded. Local version namespaces re
 ## Master delivery sequence
 | ID | Work | Dependencies / local mapping | Status |
 |---|---|---|---|
-| N01 | Governance, baseline audit, unified handoff | All repos; V121 deployed via PR 226, Pages run 45290356084 | Documentation candidate |
+| N01 | Governance, baseline audit, unified handoff | All repos; V121 deployed via PR 226, Pages run 45290356084 | Complete: three roadmap PRs merged |
 | N02 | Reliability, source rights, freshness, recovery, visual quality | Stockwatch V102–104/V116; Energy V90.6/V91; Leivro V137–150 | Ongoing parallel P0 |
 | N03 | Shared observation and source registry, versioned identities | Stockwatch V122; Energy vintage ledger V90.6g3; Leivro V139/V144/V149 | Next |
 | N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | Planned |
@@ -40,4 +40,4 @@ Wallenius pilot: higher net freight +4.9%, volume -2.9%, backlog -10.8% are mixe
 ## Execution rules
 Every session: read this file and relevant specialist plan; verify actual branch/PR/CI/production state; select highest unblocked milestone and preserve local P0 priorities. Each PR references N-ID and local version; tests for source dates/units/rights/missingness, actual browser layouts where relevant, deployment parity and fallback. Do not equate merge with live. Update specialist checkpoint and master status when verified; log evidence links, measured coverage, remaining blockers, next action. No purchasing, new paid source or permission expansion without approval. Never silently remove features or replace dated facts with invented completeness. Keep one authoritative master file; specialist plans link to it rather than fork its text. Cross-repo changes use reviewed PRs; no automatic production deployment for documentation alone.
 ## Immediate handoff
-N01: establish canonical document and backlinks in three repos. N02 continues in parallel. N03/V122: inspect existing archive and identity contracts, implement shared versioned schema and source registry with tests, pilot approved shipping observations, then energy and Leivro adapters. No new predictive feature deployed by this documentation change.
+N01 complete: Stockwatch #228, Energy #114 and Leivro #179 merged. N03 private USDA pilot draft PR #229 committed; CI pending. N02 continues in parallel. N03/V122: inspect existing archive and identity contracts, implement shared versioned schema and source registry with tests, pilot approved shipping observations, then energy and Leivro adapters. No new predictive feature deployed by this documentation change.
