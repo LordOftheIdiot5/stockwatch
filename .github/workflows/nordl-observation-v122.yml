@@ -8,6 +8,7 @@ on:
       - 'tests/test_nordl_leivro_v122.mjs'
       - 'tests/test_nordl_archive_v122.mjs'
       - 'tests/test_nordl_policy_v122.mjs'
+      - 'tests/test_nordl_storage_v122.mjs'
       - 'docs/nordl-schema/**'
       - 'tests/test_nordl_schema_v122.py'
       - '.github/workflows/nordl-observation-v122.yml'
@@ -25,5 +26,6 @@ jobs:
       - run: node --test tests/test_nordl_leivro_v122.mjs
       - run: node --test tests/test_nordl_archive_v122.mjs
       - run: node --test tests/test_nordl_policy_v122.mjs
+      - run: node --test tests/test_nordl_storage_v122.mjs
       - run: python tests/test_nordl_schema_v122.py
       - run: node --test tests/test_maritime_pulse_v121.mjs
