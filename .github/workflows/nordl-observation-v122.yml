@@ -4,6 +4,7 @@ on:
     paths:
       - 'scripts/nordl-*-v122.mjs'
       - 'tests/test_nordl_observation_v122.mjs'
+      - 'tests/test_nordl_energy_v122.mjs'
       - '.github/workflows/nordl-observation-v122.yml'
       - 'data/shipping-open.json'
   workflow_dispatch:
@@ -15,4 +16,5 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: node --test tests/test_nordl_observation_v122.mjs
+      - run: node --test tests/test_nordl_energy_v122.mjs
       - run: node --test tests/test_maritime_pulse_v121.mjs
