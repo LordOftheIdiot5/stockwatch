@@ -48,3 +48,6 @@ The master plan is the single operational entry point for all specialist develop
 Follow the [Nordl audit runbook](NORDL-AUDIT-RUNBOOK.md): targeted tests per change, affected-route visual/function/data audit per milestone, full-route audit before major release or every five substantial local versions, live smoke after deployment. Reuse existing tools and record findings, severity, evidence and retests in the execution log. Include usefulness and all subpages; no fake audit scores or claims of unrun checks.
 ## Immediate handoff
 See [execution log](NORDL-EXECUTION-LOG.md) for the latest exact checkpoint, PR, tests and next action. Append a checkpoint after each development session. No new predictive feature or shared production archive is deployed.
+
+### N19 — Traffic measurement checkpoint
+Maintain dated aggregate growth observations with source, reporting interval, host coverage and metric definition. Separate Cloudflare unique visitor estimates from Search Console clicks/impressions and human visits; never infer zero visits from an uninstrumented host. Compare equivalent periods only. Record screenshot-derived baseline in execution log. Review DNS/proxy coverage and privacy settings before changing analytics or enabling scripts.
