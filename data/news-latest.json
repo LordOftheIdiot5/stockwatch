@@ -1,6 +1,31 @@
 {
-  "generated": "2026-11-24T08:07:52Z",
+  "generated": "2026-11-24T09:12:11Z",
   "items": [
+    {
+      "id": "DOFG.OL:7a4a25d9c6ba9ac3a2324239f524ad23b00d11b1437c0995a8f624f816d6782e",
+      "ticker": "DOFG.OL",
+      "name": "DOF Group",
+      "sector": "Shipping & offshore",
+      "type": "disclosure",
+      "headline": "DOF Group ASA - Sale of vessel",
+      "english": "DOF Group ASA – Sale of vessel",
+      "publisher": "Oslo NewsWeb",
+      "url": "https://newsweb.oslobors.no/message/687265",
+      "published": "2026-11-24T08:44:33Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": "DOFG",
+      "sourceFeed": "newsweb",
+      "match": "issuer_code",
+      "relevance": "strong",
+      "identityReviewReason": "source-provided issuer code on disclosure",
+      "identityTier": "issuer_verified",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "newsweb.oslobors.no",
+      "priority": "normal"
+    },
     {
       "id": "CMBTO.OL:1781cff15210e632216262b91a8e2d40a9c415f1226b91a8594b1cc8074aff48",
       "ticker": "CMBTO.OL",
@@ -2577,45 +2602,20 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "UCG.MI:175cf1736bab4b8dbbeeee5df6fe23b96013b26b732fe73292a626d9f4abc2c5",
-      "ticker": "UCG.MI",
-      "name": "Unicredit",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Azioni, stacco cedole per nove titoli del FTSE MIB: UniCredit, Intesa, Eni e Poste (23 novembre 2026)",
-      "english": "Shares, ex-dividend dates for nine FTSE MIB stocks: UniCredit, Intesa, Eni and Poste (November 23, 2026)",
-      "publisher": "Finanza Report",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTGloc21aM05XZVBpSlRjYjhsdGlTc1FqRjlDV0VsYnZkYUVXdkZCWVFHbGZzc2llRHpJdVZFMy1fRmxFSUQySW9uOXBlTlJDMnpVQ3RMSkU4aGlMSzNZdVN2QUR6UnY4YmdmUGFKWThzVldYTHlMRnNjT05DUS1TRjIxZHZNUUc3ZmVrd2ZZMzFOTUlDWVpRU2p5SW94VjZr?oc=5",
-      "published": "2026-11-23T12:58:49Z",
-      "lang": "it",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "mentioned",
-      "identityReviewReason": "named headline reference only; not issuer-confirmed",
-      "identityTier": "named_reference",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 2217,
+  "totalStored": 2218,
   "limit": 100,
   "quality": {
-    "total": 2217,
-    "relevant": 1487,
+    "total": 2218,
+    "relevant": 1488,
     "review": 657,
     "duplicates": 104,
-    "issuerLinked": 433,
+    "issuerLinked": 434,
     "namedReferences": 1127,
     "withheldFromIssuerEvents": 657,
     "identityTiers": {
-      "issuer_verified": 433,
+      "issuer_verified": 434,
       "named_reference": 1127,
       "review_candidate": 657
     },
@@ -2639,7 +2639,7 @@
       "Contracts": 169,
       "Capital & ownership": 3,
       "Management": 71,
-      "General": 1509
+      "General": 1510
     }
   }
 }

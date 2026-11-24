@@ -1,27 +1,38 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T08:07:51Z",
+  "generated": "2026-11-24T09:12:10Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-24T08:07:51Z",
-      "lastSuccess": "2026-11-24T08:07:51Z",
+      "lastAttempt": "2026-11-24T09:12:10Z",
+      "lastSuccess": "2026-11-24T09:12:10Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-24T08:07:51Z",
-      "lastSuccess": "2026-11-24T08:07:51Z",
+      "lastAttempt": "2026-11-24T09:12:10Z",
+      "lastSuccess": "2026-11-24T09:12:10Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:cdd2cfb943a431b4c02b3c5e8de71309aa87f3896f4a06f022d5d153daa6d43a",
+      "title": "Lift of Suspension in Danske Inv Nye Markeder Indeks, kl DKK d at XCSE",
+      "published": "2026-11-24T08:25:03Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bc8f45f9183268cab9b7286ba4f65443a&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:dbe0a789480c3fde9c729a7d3a1740cca35a347ed9c7f4fa3bfe37cc7efdfe26",
       "title": "Nasdaq announces Semi-annual changes to OMX Stockholm Benchmark™ Index",
