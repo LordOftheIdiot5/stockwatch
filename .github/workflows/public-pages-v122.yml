@@ -6,6 +6,8 @@ on:
       - 'scripts/build_public_pages_v122.py'
       - 'scripts/visual_audit.py'
       - 'tests/test_public_pages_v122.py'
+      - 'scripts/verify_pages_release.py'
+      - 'tests/test_verify_pages_release.py'
       - '.github/workflows/public-pages-v122.yml'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -20,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - run: python tests/test_public_pages_v122.py
+      - run: python tests/test_public_pages_v122.py && python tests/test_verify_pages_release.py
       - run: python scripts/build_public_pages_v122.py --out "$RUNNER_TEMP/stockwatch-public"
       - run: python -m pip install playwright==1.56.0
       - run: python -m playwright install --with-deps chromium

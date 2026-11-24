@@ -27,6 +27,7 @@ jobs:
       - name: Validate and build isolated public artifact
         run: |
           python tests/test_public_pages_v122.py
+          python tests/test_verify_pages_release.py
           python scripts/build_public_pages_v122.py --out "$RUNNER_TEMP/stockwatch-public"
       - uses: actions/upload-pages-artifact@v5
         with:
