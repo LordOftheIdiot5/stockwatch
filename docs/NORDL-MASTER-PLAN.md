@@ -14,7 +14,7 @@ These are normative detailed queues, not superseded. Local version namespaces re
 | N01 | Governance, baseline audit, unified handoff | All repos; V121 deployed via PR 226, Pages run 45290356084 | Complete: three roadmap PRs merged |
 | N02 | Reliability, source rights, freshness, recovery, visual quality | Stockwatch V102–104/V116; Energy V90.6/V91; Leivro V137–150 | Ongoing parallel P0 |
 | N03 | Shared observation and source registry, versioned identities | Stockwatch V122; Energy vintage ledger V90.6g3; Leivro V139/V144/V149 | Merged/deployed V122 #229; USDA and Energy real replay passed; Leivro real replay pending |
-| N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | N04a–e merged and locally validated; N04f remote readback candidate #230; unified production indexing pending |
+| N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | N04a–e merged and locally validated; N04f remote readback verified (45309594500, 11 objects); N04g unified production D1 indexing pending |
 | N05 | Deterministic change computation, dated public signal contract | N03–04; V121 shipping pilot already deployed | Pilot live |
 | N06 | Company operating outlook and equity change desk | N05; Stockwatch V123; issuer fundamentals, events, A/B | Planned |
 | N07 | Energy zone change desk, hydro and weather pressure | N05; Energy V90.3b/V90.5/V90.7 | Planned |
@@ -62,7 +62,7 @@ The master plan is the single operational entry point for all specialist develop
 ## Permanent audit gates (N02/N19)
 Follow the [Nordl audit runbook](NORDL-AUDIT-RUNBOOK.md): targeted tests per change, affected-route visual/function/data audit per milestone, full-route audit before major release or every five substantial local versions, live smoke after deployment. Reuse existing tools and record findings, severity, evidence and retests in the execution log. Include usefulness and all subpages; no fake audit scores or claims of unrun checks.
 ## Immediate handoff
-See [execution log](NORDL-EXECUTION-LOG.md) for the latest exact checkpoint, PR, tests and next action. Append a checkpoint after each development session. No new predictive feature or shared production archive is deployed.
+See [execution log](NORDL-EXECUTION-LOG.md) for the latest exact checkpoint, PR, tests and next action. Append a checkpoint after each development session. No new predictive feature or unified production D1 index is deployed. Existing Stockwatch private R2 archive readback verified; see execution log.
 
 ### N19 — Traffic measurement checkpoint
 Maintain dated aggregate growth observations with source, reporting interval, host coverage and metric definition. Separate Cloudflare unique visitor estimates from Search Console clicks/impressions and human visits; never infer zero visits from an uninstrumented host. Compare equivalent periods only. Record screenshot-derived baseline in execution log. Review DNS/proxy coverage and privacy settings before changing analytics or enabling scripts.
