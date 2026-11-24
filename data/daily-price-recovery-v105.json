@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T12:05:32+00:00",
+  "generated": "2026-11-24T13:05:47+00:00",
   "comparisonDate": "2026-11-23",
   "totalListings": 500,
   "candidates": [
@@ -6991,6 +6991,24 @@
       ]
     },
     {
+      "id": "EIOF.OL",
+      "name": "Eiendomsspar",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-24",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "FRO.OL",
       "name": "Frontline",
       "venue": "Oslo",
@@ -8930,23 +8948,6 @@
       "needsDailyVerification": true,
       "reasons": [
         "monitored_source_quality_unconfirmed",
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "EIOF.OL",
-      "name": "Eiendomsspar",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-23",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
