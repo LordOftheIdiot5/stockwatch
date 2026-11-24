@@ -1,4 +1,8 @@
 # Stockwatch — integrated master execution plan
+
+## Nordl master program — N01–N20
+The [canonical Nordl master plan](https://github.com/LordOftheIdiot5/stockwatch/blob/main/docs/NORDL-MASTER-PLAN.md) coordinates this specialist roadmap with the other platforms (initial review: [PR #228](https://github.com/LordOftheIdiot5/stockwatch/pull/228)). Read it at every handoff. Preserve all local priorities, numbering, source rights and release gates. Map work to master N IDs; report measured progress and blockers back to the master plan after verified release. N03 maps to V122 shared observations; N06 maps to V123 equity research; N10–N13 cover verified exposures, outcomes and tested equity forecasts.
+
 **Checkpoint:** 2026-11-21. **Canonical design source:** `/Stockwatch/Design References/stockwatch-approved-full-width-overview-v1.png` in ChatGPT Library, plus [design issue #165](https://github.com/LordOftheIdiot5/stockwatch/issues/165). **Engineering backlog:** [ROADMAP.md](../ROADMAP.md), [data plan #185](https://github.com/LordOftheIdiot5/stockwatch/issues/185), [provider-freshness blocker #176](https://github.com/LordOftheIdiot5/stockwatch/issues/176). Historical versions are cumulative and not all numbered projects are delivered.
 
 ## Product north star — permanent product goal
