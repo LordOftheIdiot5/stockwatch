@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-24T17:27:20Z",
-  "latestScan": "2026-11-24T17:26:09+00:00",
-  "scanAgeHours": 0.02,
-  "contextAgeHours": 0.02,
+  "generated": "2026-11-24T20:07:34Z",
+  "latestScan": "2026-11-24T20:01:12+00:00",
+  "scanAgeHours": 0.11,
+  "contextAgeHours": 0.11,
   "priceFreshness": {
     "comparisonDate": "2026-11-23",
     "equities": {
@@ -818,13 +818,13 @@
       "missing": 0
     }
   ],
-  "storedStories": 136,
+  "storedStories": 7,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "requests_ok",
+    "Google News": "requests_failed",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -832,45 +832,47 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 151.7,
+      "avgLatencyMs": 91.2,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T17:26:31+00:00",
+      "lastSuccessAt": "2026-11-24T20:01:25+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 684.6,
+      "avgLatencyMs": 341.3,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T17:26:34+00:00",
+      "lastSuccessAt": "2026-11-24T20:01:27+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1225.6,
+      "avgLatencyMs": 832.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T17:26:35+00:00",
+      "lastSuccessAt": "2026-11-24T20:01:28+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 598,
-      "failed": 0,
-      "avgLatencyMs": 379.0,
-      "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T17:26:54+00:00",
-      "lastFailureAt": null
+      "succeeded": 0,
+      "failed": 598,
+      "avgLatencyMs": 7110.2,
+      "errorTypes": {
+        "HTTPError": 598
+      },
+      "lastSuccessAt": null,
+      "lastFailureAt": "2026-11-24T20:07:27+00:00"
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2416.4,
+      "avgLatencyMs": 1567.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T17:26:33+00:00",
+      "lastSuccessAt": "2026-11-24T20:01:27+00:00",
       "lastFailureAt": null
     }
   },
