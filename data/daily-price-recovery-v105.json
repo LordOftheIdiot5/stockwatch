@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-23T23:37:23+00:00",
+  "generated": "2026-11-24T01:30:33+00:00",
   "comparisonDate": "2026-11-23",
   "totalListings": 500,
   "candidates": [
@@ -6576,6 +6576,24 @@
       ]
     },
     {
+      "id": "GVR.IR",
+      "name": "Glenveagh Properties",
+      "venue": "Irish",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "CAF.MC",
       "name": "CAF",
       "venue": "MCE",
@@ -8957,23 +8975,6 @@
       "id": "1913.HK",
       "name": "Prada",
       "venue": "HKSE",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-23",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "GVR.IR",
-      "name": "Glenveagh Properties",
-      "venue": "Irish",
       "group": "monitored",
       "lastSavedDate": "2026-11-23",
       "lastSavedKind": "scanner",
