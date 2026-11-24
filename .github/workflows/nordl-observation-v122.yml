@@ -10,6 +10,7 @@ on:
       - 'tests/test_nordl_policy_v122.mjs'
       - 'tests/test_nordl_storage_v122.mjs'
       - 'tests/test_nordl_d1_v122.mjs'
+      - 'tests/test_nordl_runtime_v122.mjs'
       - 'docs/nordl-schema/**'
       - 'tests/test_nordl_schema_v122.py'
       - '.github/workflows/nordl-observation-v122.yml'
@@ -31,3 +32,8 @@ jobs:
       - run: node --test tests/test_nordl_d1_v122.mjs
       - run: python tests/test_nordl_schema_v122.py
       - run: node --test tests/test_maritime_pulse_v121.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock wrangler@4.164.0
+      - run: CLOUDFLARE_CF_FETCH_ENABLED=false timeout 120s node --test tests/test_nordl_runtime_v122.mjs
