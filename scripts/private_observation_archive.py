@@ -115,14 +115,34 @@ def official_snapshot(kind,data):
         raise ValueError("No eligible observations")
     return {**meta,"archiveDataset":kind,"series":rows}
 
+def verified_put(client,raw,key,metadata,content_type):
+    """Verify actual remote bytes, not merely an upload response or metadata."""
+    status=immutable_put(client,raw,key,metadata,content_type)
+    response=client.get_object(Bucket=BUCKET,Key=key)
+    body=response["Body"]
+    try:
+        digest=hashlib.sha256()
+        size=0
+        while True:
+            chunk=body.read(1024*1024)
+            if not chunk:break
+            size+=len(chunk)
+            if size>len(raw):raise ValueError("Archive readback exceeds expected length")
+            digest.update(chunk)
+        if size!=len(raw) or digest.hexdigest()!=hashlib.sha256(raw).hexdigest():
+            raise ValueError("Archive readback checksum mismatch")
+    finally:
+        body.close()
+    return status
+
 def archive_dataset(client,kind,obj,day):
     if not dated(day) or kind not in {"eurostat-roro","scanner-observations",*OFFICIAL_FILES}:
         raise ValueError("Invalid archive partition")
     raw=payload(obj)
     digest=hashlib.sha256(raw).hexdigest()
     key=f"observations/{kind}/{day}/{digest}.json"
-    status=immutable_put(client,raw,key,{"type":kind,"publicpublication":"false"},"application/json")
-    return {"dataset":kind,"day":day,"storageStatus":status,"publicPublication":False}
+    status=verified_put(client,raw,key,{"type":kind,"publicpublication":"false"},"application/json")
+    return {"dataset":kind,"day":day,"storageStatus":status,"readbackVerified":True,"bytes":len(raw),"publicPublication":False}
 
 # Only the already published, individually reviewed official index feeds.
 INDEX_FILES={
@@ -167,13 +187,13 @@ def archive_reviewed_snapshots(client,root,today):
     for ident,obj in index_objects(root,today):
         raw=payload(obj);digest=hashlib.sha256(raw).hexdigest()
         key="official-index/v1/"+ident+"/objects/"+digest+".json"
-        state=immutable_put(client,raw,key,{"dataset":ident,"publicpublication":"false"},"application/json")
-        result.append({"dataset":ident,"storageStatus":state,"observations":len(obj["observations"]),"throughDate":obj["throughDate"],"publicPublication":False})
+        state=verified_put(client,raw,key,{"dataset":ident,"publicpublication":"false"},"application/json")
+        result.append({"dataset":ident,"storageStatus":state,"readbackVerified":True,"bytes":len(raw),"observations":len(obj["observations"]),"throughDate":obj["throughDate"],"publicPublication":False})
     e=esma_object(root,today)
     if e:
         raw,day=e;digest=hashlib.sha256(raw).hexdigest()
-        state=immutable_put(client,raw,"esma-identity/v1/"+day+"/"+digest+".json",{"dataset":"esma-identity","publicpublication":"false"},"application/json")
-        result.append({"dataset":"esma-identity","storageStatus":state,"sourceDate":day,"publicPublication":False})
+        state=verified_put(client,raw,"esma-identity/v1/"+day+"/"+digest+".json",{"dataset":"esma-identity","publicpublication":"false"},"application/json")
+        result.append({"dataset":"esma-identity","storageStatus":state,"readbackVerified":True,"bytes":len(raw),"sourceDate":day,"publicPublication":False})
     return result
 
 def collect(client,env,root=ROOT,now=None):
