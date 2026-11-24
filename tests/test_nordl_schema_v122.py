@@ -8,8 +8,9 @@ SQL = Path(__file__).resolve().parents[1] / "docs/nordl-schema/0001_private_obse
 class SchemaTest(unittest.TestCase):
     def setUp(self):
         self.db = sqlite3.connect(":memory:")
-        self.db.executescript(SQL.read_text())
-        self.db.executescript(SQL.read_text())
+        for migration in sorted(SQL.parent.glob("*.sql")):
+            self.db.executescript(migration.read_text())
+            self.db.executescript(migration.read_text())
 
     def tearDown(self):
         self.db.close()
@@ -43,6 +44,14 @@ class SchemaTest(unittest.TestCase):
             self.revision("b"*64, 11, "d"*64)
         with self.assertRaises(sqlite3.IntegrityError):
             self.revision("e"*64, 11, "c"*64)
+
+    def test_raw_lineage_foreign_key(self):
+        with self.assertRaises(sqlite3.IntegrityError):
+            self.db.execute("INSERT INTO nordl_receipt_raw_lineage VALUES (?,?,?,?)", ("f"*64,"source-receipt","a"*64,"raw/object"))
+        self.revision("b"*64, 10, "c"*64)
+        self.receipt("f"*64, "b"*64, "2026-11-02T00:00:00Z")
+        self.db.execute("INSERT INTO nordl_receipt_raw_lineage VALUES (?,?,?,?)", ("f"*64,"source-receipt","a"*64,"raw/object"))
+        self.assertEqual(self.db.execute("PRAGMA foreign_key_check").fetchall(), [])
 
 if __name__ == "__main__":
     unittest.main()
