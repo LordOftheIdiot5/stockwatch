@@ -20,6 +20,21 @@ class PublicPagesTest(unittest.TestCase):
             for p in EXCLUDED_PATHS:
                 self.assertFalse((out/p).exists(),p)
             self.assertEqual([p.name for p in (out/"scripts").iterdir()],["maritime-pulse-v121.mjs"])
+    def test_every_pages_upload_uses_isolated_artifact(self):
+        # Scan-generated data commits have a separate deploy job. Never let
+        # another workflow bypass the publication manifest.
+        uploads=[]
+        for path in sorted((ROOT/".github/workflows").glob("*.y*ml")):
+            workflow=path.read_text(encoding="utf-8")
+            for chunk in workflow.split("uses: actions/upload-pages-artifact@")[1:]:
+                with self.subTest(workflow=path.name):
+                    step=chunk.split("\n      - ",1)[0]
+                    self.assertIn("path: ${{ runner.temp }}/stockwatch-public",step)
+                    self.assertIn('python scripts/build_public_pages_v122.py --out "$RUNNER_TEMP/stockwatch-public"',workflow)
+                    self.assertIn("python tests/test_public_pages_v122.py",workflow)
+                    self.assertIn("python scripts/verify_pages_release.py",workflow)
+                uploads.append(path.name)
+        self.assertEqual(sorted(uploads),["pages.yml","scan.yml"])
     def test_unknown_paths_not_published_and_symlink_rejected(self):
         with tempfile.TemporaryDirectory() as d:
             base=Path(d);root=base/"repo";root.mkdir()
