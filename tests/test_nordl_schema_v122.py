@@ -53,5 +53,16 @@ class SchemaTest(unittest.TestCase):
         self.db.execute("INSERT INTO nordl_receipt_raw_lineage VALUES (?,?,?,?)", ("f"*64,"source-receipt","a"*64,"raw/object"))
         self.assertEqual(self.db.execute("PRAGMA foreign_key_check").fetchall(), [])
 
+    def test_conflicting_replay_rejected(self):
+        self.revision("b"*64, 10, "c"*64)
+        row = self.db.execute("SELECT * FROM nordl_observation_revisions").fetchone()
+        sql = "INSERT INTO nordl_observation_revisions VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(revision_id) DO NOTHING"
+        self.db.execute(sql, row)
+        changed = list(row)
+        changed[8] = 99
+        with self.assertRaises(sqlite3.IntegrityError):
+            self.db.execute(sql, changed)
+        self.assertEqual(self.db.execute("SELECT value FROM nordl_observation_revisions").fetchone()[0], 10)
+
 if __name__ == "__main__":
     unittest.main()
