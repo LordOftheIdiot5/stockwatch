@@ -46,6 +46,7 @@ on:
       - tests/test_publish_data.py
       - .github/workflows/open-data.yml
 permissions:
+  actions: read
   contents: write
   pages: write
   id-token: write
@@ -180,6 +181,24 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ${{ runner.temp }}/stockwatch-public
+      - name: Confirm Pages artifact is visible before deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 18); do
+            count=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length' 2>/dev/null || true)
+            if [[ "$count" =~ ^[0-9]+$ ]] && (( count >= 1 )); then
+              echo "Pages artifact metadata available ($count candidate(s))."
+              # GitHub's deploy-pages artifact lookup can lag the Actions API.
+              # Briefly allow independent Pages indexing before deployment.
+              sleep 20
+              exit 0
+            fi
+            echo "Artifact metadata not ready (attempt $attempt/18)"
+            sleep 5
+          done
+          echo "::error::Pages artifact not visible after bounded retries"
+          exit 1
       - id: deployment
         uses: actions/deploy-pages@v5
 
