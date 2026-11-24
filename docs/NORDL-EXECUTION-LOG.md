@@ -10,3 +10,8 @@ Canonical master plan: [NORDL-MASTER-PLAN.md](NORDL-MASTER-PLAN.md). This log is
 - Existing archives must continue independently. Do not infer remote storage is operational from local tests. Keep all eligible historical source vintages and revisions; no restricted data publication.
 ## Resume instruction
 Read this log and master plan, check active PR and latest CI, continue highest unblocked task, append a dated checkpoint with commit, tests, production status, blockers and next exact action. Preserve local workplans.
+
+## 2026-11-24 — N04b/c candidate checkpoint
+- Master plan revision 3 and canonical execution log committed on main. Explicit domain links added.
+- Active draft PR #229, head 99cba86e39a2b7334645df08454c55da72967494: trusted in-memory source policy registry, policy-boundary tests, initial private SQLite/D1 migration docs/nordl-schema/0001_private_observations.sql. Latest CI pending; no remote migration or storage writes.
+- Resume: verify latest CI, add executable SQLite migration/foreign-key/replay tests, enforce trusted raw provenance, then connect private R2 and D1 with read-back and restore checks. Actual Energy/Leivro source replay and N09 coverage/rights review remain open.
