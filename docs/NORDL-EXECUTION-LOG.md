@@ -15,3 +15,6 @@ Read this log and master plan, check active PR and latest CI, continue highest u
 - Master plan revision 3 and canonical execution log committed on main. Explicit domain links added.
 - Active draft PR #229, head 99cba86e39a2b7334645df08454c55da72967494: trusted in-memory source policy registry, policy-boundary tests, initial private SQLite/D1 migration docs/nordl-schema/0001_private_observations.sql. Latest CI pending; no remote migration or storage writes.
 - Resume: verify latest CI, add executable SQLite migration/foreign-key/replay tests, enforce trusted raw provenance, then connect private R2 and D1 with read-back and restore checks. Actual Energy/Leivro source replay and N09 coverage/rights review remain open.
+
+## 2026-11-24 — Unified execution policy
+Owner confirmed all specialist queues must be actively progressed from the master plan, without separate conversations. Revision 4 establishes parallel workstreams and rotation. Next session recheck live specialist PRs/checkpoints and N04b/c CI; select highest unblocked work in each relevant domain. No specialist implementation or new deployment claimed by this documentation update.
