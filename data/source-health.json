@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-24T16:06:35Z",
-  "latestScan": "2026-11-24T16:05:36+00:00",
+  "generated": "2026-11-24T17:07:10Z",
+  "latestScan": "2026-11-24T17:05:48+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "priceFreshness": {
@@ -818,7 +818,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 128,
+  "storedStories": 142,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -832,84 +832,84 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 69.0,
+      "avgLatencyMs": 123.3,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T16:05:46+00:00",
+      "lastSuccessAt": "2026-11-24T17:06:06+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 677.6,
+      "avgLatencyMs": 662.8,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T16:05:51+00:00",
+      "lastSuccessAt": "2026-11-24T17:06:08+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1344.2,
+      "avgLatencyMs": 1171.8,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T16:05:52+00:00",
+      "lastSuccessAt": "2026-11-24T17:06:09+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 573,
-      "failed": 25,
-      "avgLatencyMs": 379.9,
+      "succeeded": 577,
+      "failed": 21,
+      "avgLatencyMs": 418.8,
       "errorTypes": {
-        "HTTPError": 25
+        "HTTPError": 21
       },
-      "lastSuccessAt": "2026-11-24T16:06:11+00:00",
-      "lastFailureAt": "2026-11-24T16:06:11+00:00"
+      "lastSuccessAt": "2026-11-24T17:06:31+00:00",
+      "lastFailureAt": "2026-11-24T17:06:23+00:00"
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 3723.5,
+      "avgLatencyMs": 1802.1,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T16:05:50+00:00",
+      "lastSuccessAt": "2026-11-24T17:06:08+00:00",
       "lastFailureAt": null
     }
   },
   "newsQuality": {
-    "total": 2335,
-    "relevant": 1553,
-    "review": 703,
-    "duplicates": 112,
-    "issuerLinked": 435,
-    "namedReferences": 1197,
-    "withheldFromIssuerEvents": 703,
+    "total": 2350,
+    "relevant": 1558,
+    "review": 713,
+    "duplicates": 114,
+    "issuerLinked": 436,
+    "namedReferences": 1201,
+    "withheldFromIssuerEvents": 713,
     "identityTiers": {
-      "issuer_verified": 435,
-      "named_reference": 1197,
-      "review_candidate": 703
+      "issuer_verified": 436,
+      "named_reference": 1201,
+      "review_candidate": 713
     },
     "driverClassification": {
       "version": 1,
-      "classified": 522,
+      "classified": 523,
       "categories": {
         "numbers": 293,
         "prices": 6,
         "operations": 1,
-        "potential": 245,
+        "potential": 246,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 312,
+      "Earnings / results": 313,
       "Dividends": 28,
       "M&A": 98,
       "Guidance": 45,
-      "Contracts": 187,
+      "Contracts": 190,
       "Capital & ownership": 3,
-      "Management": 77,
-      "General": 1585
+      "Management": 79,
+      "General": 1594
     }
   },
   "secFilings": {
