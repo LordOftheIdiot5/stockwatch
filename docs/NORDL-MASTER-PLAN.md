@@ -1,5 +1,5 @@
 # Nordl master development plan
-Revision 5 | 2026-11-24 | Canonical program across Stockwatch, Energy Nordl and Leivro.
+Revision 6 | 2026-11-24 | Canonical program across Stockwatch, Energy Nordl and Leivro.
 **Resume every session from [the execution log](NORDL-EXECUTION-LOG.md).** Platforms: [Stockwatch](https://stocks.nordl.dev/), [Energy](https://energy.nordl.dev/), [Leivro](https://leivro.com/), [Nordl hub](https://nordl.dev/).
 ## Mission
 Understand what happened, why it matters, and what could happen next, using real dated evidence, verified economic relationships and tested forecasts. Three specialized interfaces, one interoperable intelligence architecture. Maintain separate provider-specific collectors and rights boundaries where required; no duplicate collection without justification.
@@ -13,8 +13,8 @@ These are normative detailed queues, not superseded. Local version namespaces re
 |---|---|---|---|
 | N01 | Governance, baseline audit, unified handoff | All repos; V121 deployed via PR 226, Pages run 45290356084 | Complete: three roadmap PRs merged |
 | N02 | Reliability, source rights, freshness, recovery, visual quality | Stockwatch V102–104/V116; Energy V90.6/V91; Leivro V137–150 | Ongoing parallel P0 |
-| N03 | Shared observation and source registry, versioned identities | Stockwatch V122; Energy vintage ledger V90.6g3; Leivro V139/V144/V149 | In progress: three adapters passed focused CI in draft #229; Energy/Leivro real replay pending |
-| N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | N04a envelope tests passed; N04b/c next |
+| N03 | Shared observation and source registry, versioned identities | Stockwatch V122; Energy vintage ledger V90.6g3; Leivro V139/V144/V149 | Merged/deployed V122 #229; USDA and Energy real replay passed; Leivro real replay pending |
+| N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | N04a–e merged and locally validated; N04f remote readback candidate #230; unified production indexing pending |
 | N05 | Deterministic change computation, dated public signal contract | N03–04; V121 shipping pilot already deployed | Pilot live |
 | N06 | Company operating outlook and equity change desk | N05; Stockwatch V123; issuer fundamentals, events, A/B | Planned |
 | N07 | Energy zone change desk, hydro and weather pressure | N05; Energy V90.3b/V90.5/V90.7 | Planned |
@@ -32,7 +32,7 @@ These are normative detailed queues, not superseded. Local version namespaces re
 | N19 | Growth, useful SEO, conversion and visual acceptance | Parallel ongoing; all local design and accessibility plans retained | Ongoing |
 | N20 | Data catalogue, authenticated commercial APIs, dataset products | Rights, demand, security, costs, tested uptime; Energy V90.9, Leivro V140/V146, Stockwatch data products | Planned/gated |
 ## Specialist priorities
-Stockwatch: preserve chart-first terminal, global indices, news/filings/calendars, issuer identification and fundamentals, A/B shares, verified capital/supplier/customer relationships, shipping map/offshore S0–S6, commodities and macro, authorized prices/history, accessibility and design parity. V121 is deployed; V122/N03 next shared implementation. No licensed Baltic daily quotes or complete AIS assumed.
+Stockwatch: preserve chart-first terminal, global indices, news/filings/calendars, issuer identification and fundamentals, A/B shares, verified capital/supplier/customer relationships, shipping map/offshore S0–S6, commodities and macro, authorized prices/history, accessibility and design parity. V121 and V122 deployed; N04f archive integration and V123/N06 next. No licensed Baltic daily quotes or complete AIS assumed.
 Energy: continue current WORKPLAN priority order: latest LNG/gas source review, private vintage archive, atlas performance/continuity, verified asset-owner joins, global infrastructure expansion, forecast lab, Stockwatch connections, public Data Hub and integrated V91 audit. Retain NO1–NO5 and other zones, hydro/weather/snow, flows, charts, watchdog, responsive maps and fallback. Nameplate capacity is not production. Day-ahead rights remain source-specific.
 Leivro: work from leivro-release for commercial production, main for staging; preserve EN/NO/SV/DE, search-first design, exact product identity, approved merchant prices/history, hardware benchmarks and builders, smart-home evidence, commercial kitchen operating costs, ENERGY STAR/EPREL, privacy/affiliate/SEO and assistant integrity. Private Icecat facts cannot automatically become public. V150 release acceptance is not presumed complete. Add Energy tariff scenarios, verified Stockwatch/company references and purchasing intelligence under N08/N15.
 ## Technical and forecasting contract
