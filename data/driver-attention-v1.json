@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T09:12:11Z",
+  "generated": "2026-11-24T10:08:17Z",
   "windowStart": "2026-11-10",
   "windowEnd": "2026-11-23",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -1203,8 +1203,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-24T07:30:23Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-24T09:53:27Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -3181,8 +3181,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-24T07:32:22Z",
+      "observedRecords": 16,
+      "latestRecord": "2026-11-24T08:58:16Z",
       "topicCounts": {
         "numbers": 5,
         "prices": 0,
@@ -4352,10 +4352,18 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 4
+          "media": 5
         }
       ],
       "potential": [
+        {
+          "id": "FCT.MI:f247b0e9f85e97098ded9d9b3e221d2f0c50f21cfcb9da478626945e560b352b",
+          "published": "2026-11-23T17:43:41Z",
+          "headline": "Fincantieri signs agreement for underwater defense in India",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNM2hyclZsUlpYY2NWNzF4T2hKTTlHVVA1VFZkTFprcjNYT1F6bU9ScWJvNWVESTdJNW9CVmRkZWJ1a3owd09kUi1mRU94VU5KT29CZTR1SGk4T3JNZzFfSlRrVndyRkVwOXNPTnVQcnZrQXNrbnA4elJoNzNYOGlyZ0tIcEJDVzVXdzZFTUpwRzZ5VEN0eFF1bkkxMmh4UEQtNEE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "FCT.MI:c5edcf4de2966d9c51443ce1b85c4c16521074c0418ba9176a770eb7fa059ca9",
           "published": "2026-11-23T05:35:36Z",
@@ -4453,13 +4461,13 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 63,
-      "latestRecord": "2026-11-24T01:50:27Z",
+      "observedRecords": 65,
+      "latestRecord": "2026-11-24T07:11:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 6,
+        "potential": 7,
         "risk": 0
       },
       "prior7": {
@@ -4468,7 +4476,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 36
+        "media": 37
       }
     },
     "FRO.OL": {
@@ -5846,8 +5854,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 37,
-      "latestRecord": "2026-11-24T07:26:32Z",
+      "observedRecords": 38,
+      "latestRecord": "2026-11-24T09:30:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7440,6 +7448,22 @@
       ],
       "potential": [
         {
+          "id": "NDX1.DE:8ebb20226376759b3d8c5aacf8995302b99467b90377da95db592acbcd127168",
+          "published": "2026-11-24T09:55:43Z",
+          "headline": "Nordex Group receives 133 MW order from Electrica for wind farm in Romania",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbkswZGk2UXZDM0VYSWZjTDFpQTNqdmlSdjdPV1dLcjdKalZCbDZ0N1UtN2p0TldMR0QtRUdsMXNCSExtYTFkdzBOQTZIYTRzanY5TS1MMlNpUzJTZjYxSmJQTGphcWFUQmVVZFVwS0Rkb0Q1cHFFUTBtRlhybC1sVmVVam9LV0s0aTBDRzdMOEtNWTFVZTZORmROaW5MdWJRVEVuaVA5a1pyaGdXTEJlVjJEa3NzYW9IWU9LSzhTZU1vTGNjR09GbzRYUTRMRzFIb0JoSVRYZ0ZIUjJH?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
+          "id": "NDX1.DE:aee086301c45f86463dbe27d9f4c39445db861e8f956a4b1cd3213339f01af14",
+          "published": "2026-11-24T09:07:37Z",
+          "headline": "Nordex secures 133MW Romanian turbine order",
+          "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNUjNQNEFIeHFMeVNpTWJvcHJZclVTZk55THNCY2dOOThsTE4tR0RWeUdmeTZrYmZ6aHRpaVBVb3Z0UjhGN0xiUENHYXo4R3gzd1paOGRjRjVGckNGS3hLNHpEbXdxZG1ZbUVPQ253UHlOY295MVRTcEVXLTM0SXprZEJGMlUwNzJjRUl2WTNpMHMzY1ZGaEdLNTR6ZlR6Z3ZJd0lCUmpLWlN5bUVkbS12Vng0QmlYc1NJc21MckFYUm1qZ25XdTRJUUhlQnJDc1Y1TndQbzMtSHl4cXI3Sk5lQWdYb3Vxa0pRVWgybDhTRFRwdEVFUFgxQ1JQTDNYWGM5Tk5DV2EwdE1OTi13WnBvVmpkWEpfaV95VzNrMGMwZ00?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "NDX1.DE:07e5d0bd141b5e97c78c12e2eb2ac1d7a8a064a839e6c22faef39cfb0ba9ca16",
           "published": "2026-11-24T06:56:15Z",
           "headline": "Nordex receives 133 MW turbine order for Romanian wind farm",
@@ -7512,8 +7536,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 34,
-      "latestRecord": "2026-11-24T07:09:37Z",
+      "observedRecords": 36,
+      "latestRecord": "2026-11-24T09:55:43Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7791,8 +7815,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-24T07:27:12Z",
+      "observedRecords": 3,
+      "latestRecord": "2026-11-24T09:45:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11520,8 +11544,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 72,
-      "latestRecord": "2026-11-24T02:20:23Z",
+      "observedRecords": 74,
+      "latestRecord": "2026-11-24T09:47:13Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -12509,8 +12533,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 28,
-      "latestRecord": "2026-11-23T10:55:37Z",
+      "observedRecords": 29,
+      "latestRecord": "2026-11-24T05:49:09Z",
       "topicCounts": {
         "numbers": 10,
         "prices": 0,
@@ -12777,8 +12801,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 36,
-      "latestRecord": "2026-11-23T11:07:35Z",
+      "observedRecords": 37,
+      "latestRecord": "2026-11-24T08:50:24Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -13150,6 +13174,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:5800520a6c1af00d94e1a4c5a444671606ba2fe543da90f375a38a054254822d",
+          "published": "2026-11-24T09:10:45Z",
+          "headline": "Commerzbank holds shareholders meeting as it fights UniCredit takeover bid, in Wiesbaden",
+          "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOanZMMzVRNmZ0N1lPb2tKbVlmeFBYeDZUc19ZMU5ad0JnX0sydkxzem5RTlBXMzl5bmVmdnZHMC01eWVqbVAyRkVsNS1ROGRmQnI2X0w3QjU0UzVrZFZkcFFDcHBJeF9lVDNDYzd4OTBwR2pyWkUyajhjczEtZUw5WGwtN0tnWWJNVTMySjFYYlg4clo3SHpXZFRkZWU5VlZHWkF0bHY1QXN5Y1kzc09JYlpuSVhNSEpyTXRmd01ZMzROY1M4bEhmY2pORm1YQUltVVNqalJUTXFKNGlxY3dqS3J0bHRxdlhRQjZSeEEtQTZOUUg4Ymw2VkxlQU1POWVsMTNmMUQtZTNqQ2hRV2JF?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "UCG.MI:cfa1f34e0fb9ae45d36d7c305ebfcfa26dae839b556472e33c33127a85d3ac04",
           "published": "2026-11-23T10:47:17Z",
           "headline": "Focus on the banking sector amid the Intesa-MPS takeover bid and the Unicredit-Commerz merger",
@@ -13300,18 +13332,10 @@
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOVdCTjlROGk1ajJuRnZnd05rWGh4ZzRMemVsT1Q1VG5UNThPRzJScmVmUjBlLU1rbktkR1YtcFo4WE0zSjJwSEJlWlhhcHYzbjgzcDIwNmN3ZmhncWlHVk9fU0ZqR3hBR0pIRTY4OGNzR2E4YUZ5NWZ1bWlFXzd5aHFOQnl3Sk5jZEpGUFpYTFNBemt6QlAxLUR0X3ZoNmRYMlZHSHhvLXV2ZmJiajNhU0RR?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:cc54bd93781b16bb340166b24e56a52f2b0371ca7fbda6e52285eedf71e63c2e",
-          "published": "2026-11-19T08:29:30Z",
-          "headline": "UniCredit and Commerzbank agree path towards takeover",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWDBUc0hSM0JIYU1sM2V5eXNNVXNvSndtX0FFYm5kSlEwYTU3TEpTWnFrUUVCamVQVk9yaGNqV0o2dkU4TU0xUWZIQVVqU25jOEs5RW1WR2xYQUVuX0tXbF9jZXdETU92OVo1QjJhQ0ZUTlpKUXROMTJad2FiUnI2alpzeFU5aWxBU0Y0SFk0WGJheFRLYmE5RG5tanM?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 140,
-      "latestRecord": "2026-11-24T03:00:00Z",
+      "observedRecords": 142,
+      "latestRecord": "2026-11-24T09:10:45Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -19262,8 +19286,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-13T15:00:20Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-24T08:31:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,

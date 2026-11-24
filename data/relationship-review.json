@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T09:12:12.466788+00:00",
-  "newsRecordsScanned": 2225,
+  "generated": "2026-11-24T10:08:18.424271+00:00",
+  "newsRecordsScanned": 2249,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3064,6 +3064,18 @@
       "amount": null
     },
     {
+      "id": "d8914bb82913b6ac971af32cfa581f12f701829865b96548ea452297ca8651e2",
+      "newsId": "FCT.MI:f247b0e9f85e97098ded9d9b3e221d2f0c50f21cfcb9da478626945e560b352b",
+      "entityIds": [],
+      "issuerTicker": "FCT.MI",
+      "candidateType": "headline_event",
+      "published": "2026-11-23T17:43:41Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNM2hyclZsUlpYY2NWNzF4T2hKTTlHVVA1VFZkTFprcjNYT1F6bU9ScWJvNWVESTdJNW9CVmRkZWJ1a3owd09kUi1mRU94VU5KT29CZTR1SGk4T3JNZzFfSlRrVndyRkVwOXNPTnVQcnZrQXNrbnA4elJoNzNYOGlyZ0tIcEJDVzVXdzZFTUpwRzZ5VEN0eFF1bkkxMmh4UEQtNEE?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
       "id": "b37638ba4a7a28584fdd8d801e8d41f1ab906c66d92fbec39e01d97d810e4d72",
       "newsId": "TISG.MI:7490c112406716026fd32eb968845277769c1cf5324f5c75cdc90558ce69b438",
       "entityIds": [],
@@ -3163,6 +3175,34 @@
       "candidateType": "headline_event",
       "published": "2026-11-24T07:15:26Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPXzQ0Z0k3N0kxUndhT0g1end4OUpJN1NTejlRUmJhVzdGcUNtYnlqOE1aRkl5QXNrLUtRdzRNS3c4alhjTXp2UVpBN21TZ25Ya0tFUmpUdXdpZE5KVXU1bVZ0RFdFd2dQZUs5VFpxc3I0YWZmTk5uM3FldTRHei1SclZQbzROUy1RRHlXclU5SGlyTGUzUEhFN1IyRHFqMEoyaWM2WXB1VkNaTzdSeFd0Nzd3?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "3e69688613d7b5cea60271193fab71c629777a5c3911e52f3bf0f1ec481767eb",
+      "newsId": "NDX1.DE:aee086301c45f86463dbe27d9f4c39445db861e8f956a4b1cd3213339f01af14",
+      "entityIds": [
+        "nordex"
+      ],
+      "issuerTicker": "NDX1.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-24T09:07:37Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNUjNQNEFIeHFMeVNpTWJvcHJZclVTZk55THNCY2dOOThsTE4tR0RWeUdmeTZrYmZ6aHRpaVBVb3Z0UjhGN0xiUENHYXo4R3gzd1paOGRjRjVGckNGS3hLNHpEbXdxZG1ZbUVPQ253UHlOY295MVRTcEVXLTM0SXprZEJGMlUwNzJjRUl2WTNpMHMzY1ZGaEdLNTR6ZlR6Z3ZJd0lCUmpLWlN5bUVkbS12Vng0QmlYc1NJc21MckFYUm1qZ25XdTRJUUhlQnJDc1Y1TndQbzMtSHl4cXI3Sk5lQWdYb3Vxa0pRVWgybDhTRFRwdEVFUFgxQ1JQTDNYWGM5Tk5DV2EwdE1OTi13WnBvVmpkWEpfaV95VzNrMGMwZ00?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "e6147e19852d0fcd1ce49a2f6fc40f176ecaae54e3778e7e893a3f2b90313125",
+      "newsId": "NDX1.DE:8ebb20226376759b3d8c5aacf8995302b99467b90377da95db592acbcd127168",
+      "entityIds": [
+        "nordex"
+      ],
+      "issuerTicker": "NDX1.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-24T09:55:43Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbkswZGk2UXZDM0VYSWZjTDFpQTNqdmlSdjdPV1dLcjdKalZCbDZ0N1UtN2p0TldMR0QtRUdsMXNCSExtYTFkdzBOQTZIYTRzanY5TS1MMlNpUzJTZjYxSmJQTGphcWFUQmVVZFVwS0Rkb0Q1cHFFUTBtRlhybC1sVmVVam9LV0s0aTBDRzdMOEtNWTFVZTZORmROaW5MdWJRVEVuaVA5a1pyaGdXTEJlVjJEa3NzYW9IWU9LSzhTZU1vTGNjR09GbzRYUTRMRzFIb0JoSVRYZ0ZIUjJH?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
