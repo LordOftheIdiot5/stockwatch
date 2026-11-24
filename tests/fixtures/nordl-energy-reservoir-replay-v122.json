@@ -1,0 +1,61 @@
+{
+  "sourceRepository": "LordOftheIdiot5/energy",
+  "sourcePath": "data/energy.json",
+  "sourceBlobSha": "889314c1d7b488a37718dea4abba2877c413c7e7",
+  "generated": "2026-11-24T00:28:10+00:00",
+  "reservoirs": {
+    "year": 2026,
+    "week": 46,
+    "zones": {
+      "NO1": {
+        "fill": 0.7621,
+        "twh": 4.57,
+        "capacityTwh": 6,
+        "change": -0.0323,
+        "normal": 0.8344,
+        "vsNormal": -0.0723,
+        "years": 31
+      },
+      "NO2": {
+        "fill": 0.5284,
+        "twh": 17.99,
+        "capacityTwh": 34.04,
+        "change": -0.01907,
+        "normal": 0.8174,
+        "vsNormal": -0.289,
+        "years": 31
+      },
+      "NO3": {
+        "fill": 0.6973,
+        "twh": 6.22,
+        "capacityTwh": 8.92,
+        "change": -0.02143,
+        "normal": 0.7988,
+        "vsNormal": -0.1015,
+        "years": 31
+      },
+      "NO4": {
+        "fill": 0.9191,
+        "twh": 19.37,
+        "capacityTwh": 21.08,
+        "change": -0.00161,
+        "normal": 0.8162,
+        "vsNormal": 0.1029,
+        "years": 31
+      },
+      "NO5": {
+        "fill": 0.6832,
+        "twh": 11.88,
+        "capacityTwh": 17.39,
+        "change": -0.02743,
+        "normal": 0.8249,
+        "vsNormal": -0.1416,
+        "years": 31
+      }
+    },
+    "national": {
+      "fill": 0.6845,
+      "twh": 59.85
+    }
+  }
+}
