@@ -1,5 +1,6 @@
 # Nordl master development plan
-Revision 2 | 2026-11-24 | Canonical program across Stockwatch, Energy Nordl and Leivro.
+Revision 3 | 2026-11-24 | Canonical program across Stockwatch, Energy Nordl and Leivro.
+**Resume every session from [the execution log](NORDL-EXECUTION-LOG.md).** Platforms: [Stockwatch](https://stocks.nordl.dev/), [Energy](https://energy.nordl.dev/), [Leivro](https://leivro.com/), [Nordl hub](https://nordl.dev/).
 ## Mission
 Understand what happened, why it matters, and what could happen next, using real dated evidence, verified economic relationships and tested forecasts. Three specialized interfaces, one interoperable intelligence architecture. Maintain separate provider-specific collectors and rights boundaries where required; no duplicate collection without justification.
 ## Canonical specialist execution plans (retain all unfinished tasks)
@@ -12,8 +13,8 @@ These are normative detailed queues, not superseded. Local version namespaces re
 |---|---|---|---|
 | N01 | Governance, baseline audit, unified handoff | All repos; V121 deployed via PR 226, Pages run 45290356084 | Complete: three roadmap PRs merged |
 | N02 | Reliability, source rights, freshness, recovery, visual quality | Stockwatch V102–104/V116; Energy V90.6/V91; Leivro V137–150 | Ongoing parallel P0 |
-| N03 | Shared observation and source registry, versioned identities | Stockwatch V122; Energy vintage ledger V90.6g3; Leivro V139/V144/V149 | In progress: Shipping + Energy adapters passed CI in draft #229 |
-| N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | Planned |
+| N03 | Shared observation and source registry, versioned identities | Stockwatch V122; Energy vintage ledger V90.6g3; Leivro V139/V144/V149 | In progress: three adapters passed focused CI in draft #229; Energy/Leivro real replay pending |
+| N04 | Historical archive, D1/R2 indexing, replay and revisions | N03; reuse existing private archives | N04a envelope tests passed; N04b/c next |
 | N05 | Deterministic change computation, dated public signal contract | N03–04; V121 shipping pilot already deployed | Pilot live |
 | N06 | Company operating outlook and equity change desk | N05; Stockwatch V123; issuer fundamentals, events, A/B | Planned |
 | N07 | Energy zone change desk, hydro and weather pressure | N05; Energy V90.3b/V90.5/V90.7 | Planned |
@@ -42,4 +43,4 @@ N02/N04/N09 are continuous operating obligations, not one-off completed tasks. E
 ## Execution rules
 Every session: read this file and relevant specialist plan; verify actual branch/PR/CI/production state; select highest unblocked milestone and preserve local P0 priorities. Each PR references N-ID and local version; tests for source dates/units/rights/missingness, actual browser layouts where relevant, deployment parity and fallback. Do not equate merge with live. Update specialist checkpoint and master status when verified; log evidence links, measured coverage, remaining blockers, next action. No purchasing, new paid source or permission expansion without approval. Never silently remove features or replace dated facts with invented completeness. Keep one authoritative master file; specialist plans link to it rather than fork its text. Cross-repo changes use reviewed PRs; no automatic production deployment for documentation alone.
 ## Immediate handoff
-N01 complete: Stockwatch #228, Energy #114 and Leivro #179 merged. N03 USDA and NVE reservoir pilot adapters in draft PR #229; latest focused and full research regression passed (runs 45298734171 and 45298734242). Actual Energy snapshot replay and Leivro adapter pending. N02 continues in parallel. N03/V122: inspect existing archive and identity contracts, implement shared versioned schema and source registry with tests, pilot approved shipping observations, then energy and Leivro adapters. No new predictive feature deployed by this documentation change.
+See [execution log](NORDL-EXECUTION-LOG.md) for the latest exact checkpoint, PR, tests and next action. Append a checkpoint after each development session. No new predictive feature or shared production archive is deployed.
