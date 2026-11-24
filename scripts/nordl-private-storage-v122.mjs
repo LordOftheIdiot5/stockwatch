@@ -13,7 +13,7 @@ export async function persistObservation({input,policyId,asOf,sourceReceiptId}, 
  if(policy.rights.retain!=='allowed')return {status:'blocked_retention'};
  // Trusted collector-side lookup, never a source-supplied rights claim.
  const lineage=await provenance.resolve(sourceReceiptId);
- if(!lineage||lineage.sourceId!==input.sourceId||lineage.sourceUrl!==input.sourceUrl||lineage.retrievedAt!==input.retrievedAt||lineage.policyId!==policyId||lineage.retentionApproved!==true||!/^\x5b0-9a-f\x5d{64}$/.test(lineage.sha256)||typeof lineage.objectKey!=='string'||!lineage.objectKey)throw Error('unverified_raw_lineage');
+ if(!lineage||lineage.sourceId!==input.sourceId||lineage.sourceUrl!==input.sourceUrl||lineage.retrievedAt!==input.retrievedAt||lineage.policyId!==policyId||lineage.retentionApproved!==true||!/^[0-9a-f]{64}$/.test(lineage.sha256)||typeof lineage.objectKey!=='string'||!lineage.objectKey)throw Error('unverified_raw_lineage');
  const raw=await store.get(lineage.objectKey);
  if(!raw||hash(raw)!==lineage.sha256)throw Error('raw_readback_mismatch');
  // Collector adapter must attest the normalized observation was derived from these exact bytes.
