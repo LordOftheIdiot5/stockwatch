@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-24",
+  "notice": "Discovery only; no collection, retention, display or export grant. Check existing coverage before adding collectors.",
+  "sources": [
+    {
+      "id": "eurostat-comext",
+      "provider": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-getting-started/comext-database",
+      "scope": "Monthly trade by commodity and geography; bounded queries",
+      "priority": "high",
+      "status": "candidate_or_existing_coverage_audit",
+      "rights": "review_required"
+    },
+    {
+      "id": "usgs-mcs-2026",
+      "provider": "USGS",
+      "url": "https://data.usgs.gov/datacatalog/data/USGS%3A69837e43b66b01367d7ec7c7",
+      "scope": "Annual mineral production, reserves and commodity statistics; not spot prices",
+      "priority": "high",
+      "status": "candidate_or_existing_coverage_audit",
+      "rights": "review_required"
+    },
+    {
+      "id": "eprel",
+      "provider": "European Commission",
+      "url": "https://energy-efficient-products.ec.europa.eu/eprel_en",
+      "scope": "Public energy-labelled product models; reuse existing Leivro client; API terms required",
+      "priority": "high",
+      "status": "existing_connector_coverage_and_rights_audit",
+      "rights": "review_required"
+    }
+  ]
+}
