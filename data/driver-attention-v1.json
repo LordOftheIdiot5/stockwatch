@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T04:58:32Z",
+  "generated": "2026-11-25T06:06:34Z",
   "windowStart": "2026-11-11",
   "windowEnd": "2026-11-24",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -2382,7 +2382,7 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
@@ -2395,10 +2395,10 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-24T05:14:18Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-24T12:25:15Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 1,
@@ -2410,7 +2410,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       }
     },
     "BONEX.ST": {
@@ -2675,6 +2675,14 @@
       ],
       "potential": [
         {
+          "id": "CADLR.OL:0df465be62a87af7b1cc85df0c713ef16caed8805df2835e8552c7125aea3844",
+          "published": "2026-11-25T05:45:00Z",
+          "headline": "Cadeler is developing its latest acquisition: “We want to prepare Menck for the future”",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1NSGVUeUQ1Y0JHWWI1NzV2RXdqMl9ZYzNvUkljVUR6dEVQNl9zbUZ5cHJyYTBjZDBGYkpYX09tdDJlei1GckVDNFk1ZnJfOU1GNnh5anF1QzhKNUtfUk5JbkdhUC1vZVZfUmZN?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "CADLR.OL:658459a9f004d6ab6ba22dfe3deed34d66ecc590f80977e7fe15815f93c609f3",
           "published": "2026-11-23T07:50:33Z",
           "headline": "Cadeler plc Maintains Earnings Guidance for the Full-Year 2026",
@@ -2699,8 +2707,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 18,
-      "latestRecord": "2026-11-24T15:32:00Z",
+      "observedRecords": 19,
+      "latestRecord": "2026-11-25T05:45:00Z",
       "topicCounts": {
         "numbers": 10,
         "prices": 0,
@@ -4283,7 +4291,7 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [
@@ -4296,8 +4304,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-23T13:40:40Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-24T12:32:39Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4311,7 +4319,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       }
     },
     "FCT.MI": {
@@ -4976,8 +4984,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-24T17:36:00Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-25T05:56:40Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -5895,8 +5903,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 40,
-      "latestRecord": "2026-11-24T13:15:02Z",
+      "observedRecords": 41,
+      "latestRecord": "2026-11-25T06:00:21Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -6360,8 +6368,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-20T06:05:00Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-25T06:05:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7489,6 +7497,14 @@
       ],
       "potential": [
         {
+          "id": "NDX1.DE:d6be00ec77bc4c88c5d041d59176255dd2811e54547983814a319b6fe42de14f",
+          "published": "2026-11-24T22:44:54Z",
+          "headline": "Nordex Group Receives 133 MW Order From Electrica for Wind Farm in Romania",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOUd3MjZVV19PWE9meG5kVFdGQ05WNU5SQ2ZlQk5TTGVxMjZZODBHRF9pa2UyUzFkQkEyTV95VFpCRGx1YURDWEFGSThpOHhGbHlNamo3NWFkQzEteDVMZmhyRG9GMG9mcWgyZzZZMXBWblR4UzJzaVVNb1VvTzBMNXFfSkpEa29fOFdzOGpB?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "NDX1.DE:54d821e2c31cf3dd1f91d2a2c7fce0c4d47157d8cb890b670e438b06201d267a",
           "published": "2026-11-24T22:21:16Z",
           "headline": "Nordex wins 133 MW wind turbine order from Electrica in Romania",
@@ -7501,14 +7517,6 @@
           "published": "2026-11-24T10:22:28Z",
           "headline": "Nordex Group has secured a 133 MW order from Electrica for a wind farm in Romania",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNenl3STFuNUR5dk8ybVRrOGRyOTZNM1NPR1diVVJTWGExX1NMbkVqY1pJUFBMNXRaUUVqU2drb1BTLUxqY0dvOVlQdmRnY3ZqWG8ySzFvUmtjUFY3UkdJeFBIQ3lsamxaYllJTzFVSVBjcW5DS3RDMWNIbGpDQ2RKd3lHM0ZISDVVVTVpVWRzd1hEOUYwN2h1MnFDYkNLcEtOM3E5dlpFSFUxdw?oc=5",
-          "evidence": "named_reference",
-          "topic": "Contracts / agreements"
-        },
-        {
-          "id": "NDX1.DE:8ebb20226376759b3d8c5aacf8995302b99467b90377da95db592acbcd127168",
-          "published": "2026-11-24T09:55:43Z",
-          "headline": "Nordex Group receives 133 MW order from Electrica for wind farm in Romania",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbkswZGk2UXZDM0VYSWZjTDFpQTNqdmlSdjdPV1dLcjdKalZCbDZ0N1UtN2p0TldMR0QtRUdsMXNCSExtYTFkdzBOQTZIYTRzanY5TS1MMlNpUzJTZjYxSmJQTGphcWFUQmVVZFVwS0Rkb0Q1cHFFUTBtRlhybC1sVmVVam9LV0s0aTBDRzdMOEtNWTFVZTZORmROaW5MdWJRVEVuaVA5a1pyaGdXTEJlVjJEa3NzYW9IWU9LSzhTZU1vTGNjR09GbzRYUTRMRzFIb0JoSVRYZ0ZIUjJH?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
         },
@@ -7602,7 +7610,7 @@
         }
       ],
       "observedRecords": 40,
-      "latestRecord": "2026-11-24T22:21:16Z",
+      "latestRecord": "2026-11-24T22:44:54Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7880,8 +7888,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-24T09:45:00Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-25T06:01:03Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -8477,14 +8485,14 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-24T09:02:47Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -8496,7 +8504,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     },
     "OBCK.DE": {
@@ -13064,8 +13072,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 11,
-      "latestRecord": "2026-11-24T06:00:36Z",
+      "observedRecords": 12,
+      "latestRecord": "2026-11-25T04:57:23Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13339,7 +13347,7 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 8
+          "media": 9
         }
       ],
       "potential": [
@@ -13504,7 +13512,7 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 147,
+      "observedRecords": 148,
       "latestRecord": "2026-11-24T17:48:14Z",
       "topicCounts": {
         "numbers": 2,
@@ -13519,7 +13527,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 86
+        "media": 87
       }
     },
     "VEI.OL": {
@@ -13588,7 +13596,7 @@
         {
           "date": "2026-11-23",
           "issuer": 1,
-          "media": 1
+          "media": 2
         },
         {
           "date": "2026-11-24",
@@ -13596,14 +13604,23 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 9,
+      "potential": [
+        {
+          "id": "VEI.OL:a97fb130549daf543f1c93cb3694bb32e24fa1535a6c3dec6d30cab40721d812",
+          "published": "2026-11-23T07:42:07Z",
+          "headline": "Veidekke får kontrakt på Løvdahlsparken for Øgreid Eiendom i Stavanger",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRXRJV2NnajRySVhnWnpPVkFBS2FFc25kejRPN2ZUdnMzU0tpYy1NTG1hR1RXRzVHM3BobDl4Y1lfdEVicWtkWGZqS3VZTU1uRGRQcTdlODhlVmNsLXdfcjd2b2ZoRE9XS0xzQXNGSUtXa0ZjMEtsUF9zcWw2dVp4LUtNUml0d29Kd0V1cDVROHA3MHdjeDU1RFozaWlUeXJE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 10,
       "latestRecord": "2026-11-23T09:30:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
@@ -13612,7 +13629,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 1
+        "media": 2
       }
     },
     "VICO.ST": {
@@ -19350,14 +19367,14 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-24T16:59:35Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -19369,7 +19386,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     },
     "ZEAL.CO": {
