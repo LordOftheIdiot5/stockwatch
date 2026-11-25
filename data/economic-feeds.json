@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T20:15:23Z",
+  "generated": "2026-11-25T15:01:32Z",
   "notice": "Official dated observations, not tradable quotes; per-series reuse rights apply.",
   "series": [
     {
@@ -1495,7 +1495,7 @@
       ],
       "sourceUrl": "https://www.eia.gov/opendata/",
       "license": "Source: U.S. Energy Information Administration (EIA); attribution required",
-      "observedAt": "2026-11-24T20:15:22Z"
+      "observedAt": "2026-11-25T15:00:57Z"
     },
     {
       "key": "eia:RWTC",
@@ -2990,7 +2990,7 @@
       ],
       "sourceUrl": "https://www.eia.gov/opendata/",
       "license": "Source: U.S. Energy Information Administration (EIA); attribution required",
-      "observedAt": "2026-11-24T20:15:23Z"
+      "observedAt": "2026-11-25T15:01:32Z"
     },
     {
       "key": "fred:CPIAUCSL",
@@ -4289,7 +4289,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCSL",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-24T20:15:19Z"
+      "observedAt": "2026-11-25T15:00:18Z"
     },
     {
       "key": "fred:DFF",
@@ -4298,21 +4298,9 @@
       "unit": "percent",
       "country": "US",
       "frequency": "official_series",
-      "period": "2026-11-20",
+      "period": "2026-11-23",
       "value": 3.88,
       "history": [
-        {
-          "date": "2025-11-16",
-          "value": 3.88
-        },
-        {
-          "date": "2025-11-17",
-          "value": 3.88
-        },
-        {
-          "date": "2025-11-18",
-          "value": 3.88
-        },
         {
           "date": "2025-11-19",
           "value": 3.88
@@ -5780,11 +5768,23 @@
         {
           "date": "2026-11-20",
           "value": 3.88
+        },
+        {
+          "date": "2026-11-21",
+          "value": 3.88
+        },
+        {
+          "date": "2026-11-22",
+          "value": 3.88
+        },
+        {
+          "date": "2026-11-23",
+          "value": 3.88
         }
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DFF",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-24T20:15:18Z"
+      "observedAt": "2026-11-25T15:00:06Z"
     },
     {
       "key": "fred:DGS10",
@@ -7228,13 +7228,9 @@
       "unit": "percent",
       "country": "US",
       "frequency": "official_series",
-      "period": "2026-11-20",
+      "period": "2026-11-23",
       "value": 4.63,
       "history": [
-        {
-          "date": "2025-06-23",
-          "value": 3.84
-        },
         {
           "date": "2025-06-24",
           "value": 3.75
@@ -8650,11 +8646,15 @@
         {
           "date": "2026-11-20",
           "value": 4.63
+        },
+        {
+          "date": "2026-11-23",
+          "value": 4.63
         }
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS2",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-24T20:15:18Z"
+      "observedAt": "2026-11-25T15:00:00Z"
     },
     {
       "key": "fred:INDPRO",
@@ -9957,7 +9957,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/INDPRO",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-24T20:15:20Z"
+      "observedAt": "2026-11-25T15:00:27Z"
     },
     {
       "key": "fred:M2SL",
@@ -11260,7 +11260,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/M2SL",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-24T20:15:20Z"
+      "observedAt": "2026-11-25T15:00:35Z"
     },
     {
       "key": "fred:PCU483111483111",
@@ -12563,7 +12563,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/PCU483111483111",
       "license": "U.S. Bureau of Labor Statistics via FRED; public domain, citation requested",
-      "observedAt": "2026-11-24T20:15:17Z"
+      "observedAt": "2026-11-25T14:59:59Z"
     },
     {
       "key": "fred:UNRATE",
@@ -13862,7 +13862,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/UNRATE",
       "license": "FRED: source US Treasury/Federal Reserve/BLS; attribute and verify per-series use rights",
-      "observedAt": "2026-11-24T20:15:19Z"
+      "observedAt": "2026-11-25T15:00:10Z"
     },
     {
       "key": "fred:WPU0652",
@@ -15165,7 +15165,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/WPU0652",
       "license": "U.S. Bureau of Labor Statistics via FRED; public domain, citation requested",
-      "observedAt": "2026-11-24T20:15:22Z"
+      "observedAt": "2026-11-25T15:00:46Z"
     },
     {
       "key": "fred:WPU1017",
@@ -16468,7 +16468,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/WPU1017",
       "license": "U.S. Bureau of Labor Statistics via FRED; public domain, citation requested",
-      "observedAt": "2026-11-24T20:15:21Z"
+      "observedAt": "2026-11-25T15:00:46Z"
     },
     {
       "key": "fred:WPU301301",
@@ -17343,7 +17343,7 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/WPU301301",
       "license": "U.S. Bureau of Labor Statistics via FRED; public domain, citation requested",
-      "observedAt": "2026-11-24T20:15:21Z"
+      "observedAt": "2026-11-25T15:00:36Z"
     },
     {
       "key": "fred:WPU301302",
@@ -18218,17 +18218,23 @@
       ],
       "sourceUrl": "https://fred.stlouisfed.org/series/WPU301302",
       "license": "U.S. Bureau of Labor Statistics via FRED; public domain, citation requested",
-      "observedAt": "2026-11-24T20:15:21Z"
+      "observedAt": "2026-11-25T15:00:38Z"
     }
   ],
   "sources": {
     "fred": {
-      "status": "ok",
-      "records": 12,
+      "status": "partial_error",
+      "records": 11,
       "expected": 12,
-      "errors": [],
+      "errors": [
+        {
+          "series": "DGS10",
+          "errorType": "HTTPError",
+          "httpStatus": 500
+        }
+      ],
       "sourceUrl": "https://fred.stlouisfed.org/",
-      "lastSuccessAt": "2026-11-24T20:15:22Z"
+      "lastSuccessAt": "2026-11-25T15:00:46Z"
     },
     "eia": {
       "status": "ok",
@@ -18236,7 +18242,7 @@
       "expected": 2,
       "errors": [],
       "sourceUrl": "https://www.eia.gov/opendata/",
-      "lastSuccessAt": "2026-11-24T20:15:23Z"
+      "lastSuccessAt": "2026-11-25T15:01:32Z"
     }
   }
 }
