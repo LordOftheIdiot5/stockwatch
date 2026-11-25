@@ -17,7 +17,8 @@ PATHS=("index.html","stocks.html","company.html","calendar.html","price-history.
        "terminal.html","shipping.html","shipping-atlas-v118.js","shipping-mapfirst-v119.js","shipping-mapfirst-v119.css","shipping-map-polish-v119b.css","shipping-market-pulse-v121.mjs","shipping-market-pulse-v121.css","scripts/maritime-pulse-v121.mjs",
        "brand/world-land-ne50-v119c.svg","brand/world-borders-ne50-v119c.svg","data/shipping-world-borders-v119.json",
        "commodities.html","spreads.html","intelligence.html","compare.html",
-       "news.html","nasdaq-notices-v100.js","nasdaq-notices-v100.css")
+       "news.html","nasdaq-notices-v100.js","nasdaq-notices-v100.css",
+       "unlisted.html","unlisted-n41.css","unlisted-n41.js","shell-v47.js")
 EXCLUDED_PATHS=("docs/NORDL-N04-ARCHIVE-CONTRACT.md","scripts/nordl-private-storage-v122.mjs","tests/test_nordl_runtime_v122.mjs","database/0001_core.sql","data/seen.json")
 TITLE=re.compile(rb"<title>(.*?)</title>",re.I|re.S)
 
