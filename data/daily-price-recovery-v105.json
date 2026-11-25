@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T14:05:51+00:00",
+  "generated": "2026-11-25T15:06:37+00:00",
   "comparisonDate": "2026-11-24",
   "totalListings": 500,
   "candidates": [
@@ -7117,6 +7117,24 @@
       ]
     },
     {
+      "id": "KLDVK.OL",
+      "name": "Kaldvik",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-25",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "NOHAL.OL",
       "name": "Nordic Halibut",
       "venue": "Oslo",
@@ -8919,23 +8937,6 @@
     {
       "id": "AFISH.OL",
       "name": "Arctic Fish",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-24",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "KLDVK.OL",
-      "name": "Kaldvik",
       "venue": "Oslo",
       "group": "monitored",
       "lastSavedDate": "2026-11-24",

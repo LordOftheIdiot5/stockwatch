@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-25T14:07:13Z",
-  "latestScan": "2026-11-25T14:05:51+00:00",
+  "generated": "2026-11-25T15:07:42Z",
+  "latestScan": "2026-11-25T15:06:37+00:00",
   "scanAgeHours": 0.02,
   "contextAgeHours": 0.02,
   "priceFreshness": {
     "comparisonDate": "2026-11-24",
     "equities": {
-      "comparable": 4,
+      "comparable": 3,
       "older": 1,
       "no_volume": 2,
-      "unconfirmed": 132,
+      "unconfirmed": 133,
       "unavailable": 0
     },
     "total": 139,
@@ -25,12 +25,12 @@
     "micProvided": 1,
     "micMissing": 138,
     "ageCalendarDays": {
-      "targetDate": 5,
+      "targetDate": 4,
       "oneDay": 0,
       "twoToThreeDays": 0,
       "fourToSevenDays": 1,
       "eightPlusDays": 1,
-      "unknownOrFuture": 132
+      "unknownOrFuture": 133
     },
     "byExchange": [
       {
@@ -250,19 +250,19 @@
         "retainedTargetDate": 0,
         "micProvided": 1,
         "quality": {
-          "comparable": 2,
-          "unconfirmed": 41,
+          "comparable": 1,
+          "unconfirmed": 42,
           "older": 0,
           "no_volume": 1,
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 2,
+          "targetDate": 1,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 1,
-          "unknownOrFuture": 41
+          "unknownOrFuture": 42
         },
         "providerOlderSession": 0,
         "providerCurrencyMismatch": 0
@@ -430,13 +430,13 @@
       "counts": {
         "chartUnavailable": 0,
         "barBeforeTarget": 1,
-        "barOnTarget": 6,
-        "barAfterTarget": 132,
+        "barOnTarget": 5,
+        "barAfterTarget": 133,
         "invalidTimestamp": 0,
         "localDateDiffersUtc": 0,
         "localDateBeforeTarget": 1,
-        "localDateOnTarget": 6,
-        "localDateAfterTarget": 132,
+        "localDateOnTarget": 5,
+        "localDateAfterTarget": 133,
         "unknownExchangeTimezone": 0,
         "barOlderThanRetained": 0,
         "retainedTargetDateDespiteOlderBar": 0,
@@ -628,13 +628,13 @@
           "counts": {
             "chartUnavailable": 0,
             "barBeforeTarget": 1,
-            "barOnTarget": 2,
-            "barAfterTarget": 41,
+            "barOnTarget": 1,
+            "barAfterTarget": 42,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
             "localDateBeforeTarget": 1,
-            "localDateOnTarget": 2,
-            "localDateAfterTarget": 41,
+            "localDateOnTarget": 1,
+            "localDateAfterTarget": 42,
             "unknownExchangeTimezone": 0,
             "barOlderThanRetained": 0,
             "retainedTargetDateDespiteOlderBar": 0,
@@ -831,68 +831,68 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 92.8,
+      "avgLatencyMs": 94.7,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T14:06:04+00:00",
+      "lastSuccessAt": "2026-11-25T15:06:50+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 533.2,
+      "avgLatencyMs": 359.4,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T14:06:06+00:00",
+      "lastSuccessAt": "2026-11-25T15:06:52+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 862.7,
+      "avgLatencyMs": 458.3,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T14:06:07+00:00",
+      "lastSuccessAt": "2026-11-25T15:06:53+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 554,
-      "failed": 44,
-      "avgLatencyMs": 381.4,
+      "succeeded": 565,
+      "failed": 33,
+      "avgLatencyMs": 405.8,
       "errorTypes": {
-        "HTTPError": 44
+        "HTTPError": 33
       },
-      "lastSuccessAt": "2026-11-25T14:06:27+00:00",
-      "lastFailureAt": "2026-11-25T14:06:26+00:00"
+      "lastSuccessAt": "2026-11-25T15:07:13+00:00",
+      "lastFailureAt": "2026-11-25T15:07:20+00:00"
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1620.4,
+      "avgLatencyMs": 1698.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T14:06:06+00:00",
+      "lastSuccessAt": "2026-11-25T15:06:52+00:00",
       "lastFailureAt": null
     }
   },
   "newsQuality": {
-    "total": 2532,
-    "relevant": 1655,
-    "review": 786,
+    "total": 2545,
+    "relevant": 1663,
+    "review": 791,
     "duplicates": 130,
-    "issuerLinked": 438,
-    "namedReferences": 1308,
-    "withheldFromIssuerEvents": 786,
+    "issuerLinked": 437,
+    "namedReferences": 1317,
+    "withheldFromIssuerEvents": 791,
     "identityTiers": {
-      "issuer_verified": 438,
-      "named_reference": 1308,
-      "review_candidate": 786
+      "issuer_verified": 437,
+      "named_reference": 1317,
+      "review_candidate": 791
     },
     "driverClassification": {
       "version": 1,
-      "classified": 564,
+      "classified": 566,
       "categories": {
-        "numbers": 309,
+        "numbers": 311,
         "prices": 9,
         "operations": 1,
         "potential": 270,
@@ -901,14 +901,14 @@
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 329,
+      "Earnings / results": 331,
       "Dividends": 31,
       "M&A": 111,
       "Guidance": 47,
-      "Contracts": 212,
+      "Contracts": 213,
       "Capital & ownership": 3,
-      "Management": 86,
-      "General": 1713
+      "Management": 87,
+      "General": 1722
     }
   },
   "secFilings": {

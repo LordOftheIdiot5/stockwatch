@@ -1,27 +1,60 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T14:07:12Z",
+  "generated": "2026-11-25T15:07:41Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-25T14:07:12Z",
-      "lastSuccess": "2026-11-25T14:07:12Z",
+      "lastAttempt": "2026-11-25T15:07:41Z",
+      "lastSuccess": "2026-11-25T15:07:41Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-25T14:07:12Z",
-      "lastSuccess": "2026-11-25T14:07:12Z",
+      "lastAttempt": "2026-11-25T15:07:41Z",
+      "lastSuccess": "2026-11-25T15:07:41Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:ce44738bb289480f6b639087b577071750b2b19ead8cf85e57d612733df7d25f",
+      "title": "Correction: Bond loan(s) issued by Castellum AB will be admitted to trading on Nasdaq STO Sustainable Bonds (Record Id 373752)",
+      "published": "2026-11-25T14:39:57Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bca39011f5fda1b4eeb99fa15846f3678&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:9a207e5d207efb06062d6564aa7b375074ac0511b6fe4818c4cadfcc882a6b63",
+      "title": "TORM plc - admittance to trading of new shares due to exercise of Restricted Share Units (RSU)",
+      "published": "2026-11-25T14:32:05Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b29b64c65d4abc1873007748c2ad85da5&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:d565fa24506edcb872c8145331f76d68ad795289b316779348574af28d999739",
+      "title": "Bond loan(s) issued by Castellum AB will be admitted to trading on Nasdaq STO Sustainable Bonds (Record Id 373756)",
+      "published": "2026-11-25T14:13:00Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b9d5d00e67d696f57627a42ecc468a166&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:140232bc39ed44e88da28afb5031f064ae367accb15db671107006b7e7f9570d",
       "title": "Nasdaq Clearing Launches Platform Modernization Program: Building the Next Generation of Clearing Infrastructure",
