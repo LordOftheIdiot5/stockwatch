@@ -1,13 +1,13 @@
 {
-  "generated": "2026-11-24T20:07:34Z",
-  "latestScan": "2026-11-24T20:01:12+00:00",
-  "scanAgeHours": 0.11,
-  "contextAgeHours": 0.11,
+  "generated": "2026-11-25T04:58:32Z",
+  "latestScan": "2026-11-25T04:56:26+00:00",
+  "scanAgeHours": 0.04,
+  "contextAgeHours": 0.04,
   "priceFreshness": {
-    "comparisonDate": "2026-11-23",
+    "comparisonDate": "2026-11-24",
     "equities": {
-      "comparable": 2,
-      "older": 1,
+      "comparable": 0,
+      "older": 3,
       "no_volume": 3,
       "unconfirmed": 133,
       "unavailable": 0
@@ -19,27 +19,27 @@
     "method": "Conservative 22:00 UTC weekday cutoff; no exchange-specific holidays; not a live-quote guarantee."
   },
   "priceEvidence": {
-    "comparisonDate": "2026-11-23",
+    "comparisonDate": "2026-11-24",
     "tracked": 139,
     "priced": 139,
     "micProvided": 1,
     "micMissing": 138,
     "ageCalendarDays": {
-      "targetDate": 4,
-      "oneDay": 0,
+      "targetDate": 132,
+      "oneDay": 4,
       "twoToThreeDays": 0,
       "fourToSevenDays": 1,
       "eightPlusDays": 1,
-      "unknownOrFuture": 133
+      "unknownOrFuture": 1
     },
     "byExchange": [
       {
         "name": "Amsterdam",
         "tracked": 1,
         "priced": 1,
-        "reported": 1,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 1,
+        "retainedTargetDate": 1,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -49,23 +49,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 1,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 1
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 1,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Brussels",
         "tracked": 2,
         "priced": 2,
-        "reported": 2,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 2,
+        "retainedTargetDate": 2,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -75,23 +75,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 2,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 2
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 2,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Copenhagen",
         "tracked": 11,
         "priced": 11,
-        "reported": 11,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 11,
+        "retainedTargetDate": 11,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -101,22 +101,22 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 11,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 11
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 11,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "HKSE",
         "tracked": 1,
         "priced": 1,
-        "reported": 0,
-        "retained": 1,
+        "reported": 1,
+        "retained": 0,
         "retainedTargetDate": 0,
         "micProvided": 0,
         "quality": {
@@ -134,16 +134,16 @@
           "eightPlusDays": 0,
           "unknownOrFuture": 1
         },
-        "providerOlderSession": 1,
+        "providerOlderSession": 0,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Helsinki",
         "tracked": 1,
         "priced": 1,
-        "reported": 1,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 1,
+        "retainedTargetDate": 1,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -153,23 +153,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 1,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 1
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 1,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Irish",
         "tracked": 1,
         "priced": 1,
-        "reported": 1,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 1,
+        "retainedTargetDate": 1,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -179,23 +179,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 1,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 1
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 1,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "MCE",
         "tracked": 2,
         "priced": 2,
-        "reported": 2,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 2,
+        "retainedTargetDate": 2,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -205,23 +205,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 2,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 2
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 2,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Milan",
         "tracked": 7,
         "priced": 7,
-        "reported": 7,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 1,
+        "retained": 6,
+        "retainedTargetDate": 6,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -231,23 +231,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 1,
-          "oneDay": 0,
+          "targetDate": 6,
+          "oneDay": 1,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 6
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 6,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Oslo",
         "tracked": 44,
         "priced": 44,
-        "reported": 44,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 2,
+        "retained": 42,
+        "retainedTargetDate": 42,
         "micProvided": 1,
         "quality": {
           "comparable": 0,
@@ -257,23 +257,23 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 1,
-          "oneDay": 0,
+          "targetDate": 42,
+          "oneDay": 1,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 1,
-          "unknownOrFuture": 42
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 42,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Paris",
         "tracked": 9,
         "priced": 9,
-        "reported": 9,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 9,
+        "retainedTargetDate": 9,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -283,49 +283,49 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 9,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 9
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 9,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "Stockholm",
         "tracked": 40,
         "priced": 40,
-        "reported": 39,
-        "retained": 1,
-        "retainedTargetDate": 0,
+        "reported": 1,
+        "retained": 39,
+        "retainedTargetDate": 38,
         "micProvided": 0,
         "quality": {
-          "comparable": 1,
+          "comparable": 0,
           "unconfirmed": 38,
-          "older": 1,
+          "older": 2,
           "no_volume": 0,
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 1,
-          "oneDay": 0,
+          "targetDate": 38,
+          "oneDay": 1,
           "twoToThreeDays": 0,
           "fourToSevenDays": 1,
           "eightPlusDays": 0,
-          "unknownOrFuture": 38
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 38,
         "providerCurrencyMismatch": 1
       },
       {
         "name": "Vienna",
         "tracked": 2,
         "priced": 2,
-        "reported": 2,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 0,
+        "retained": 2,
+        "retainedTargetDate": 2,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -335,112 +335,116 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 0,
+          "targetDate": 2,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 2
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 2,
         "providerCurrencyMismatch": 0
       },
       {
         "name": "XETRA",
         "tracked": 18,
         "priced": 18,
-        "reported": 18,
-        "retained": 0,
-        "retainedTargetDate": 0,
+        "reported": 1,
+        "retained": 17,
+        "retainedTargetDate": 17,
         "micProvided": 0,
         "quality": {
-          "comparable": 1,
+          "comparable": 0,
           "unconfirmed": 17,
-          "older": 0,
+          "older": 1,
           "no_volume": 0,
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 1,
-          "oneDay": 0,
+          "targetDate": 17,
+          "oneDay": 1,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 17
+          "unknownOrFuture": 0
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 17,
         "providerCurrencyMismatch": 0
       }
     ],
     "method": "Conservative common 22:00 UTC weekday comparison date; not a venue-specific exchange close or holiday calendar. Calendar-day ages refer to retained quote dates, not the age of provider HTTP responses. MICs are counted only when explicitly supplied; no implied venue certification. Source outcomes describe the current provider response versus retained data."
   },
   "priceDiagnostics": {
-    "comparisonDate": "2026-11-23",
+    "comparisonDate": "2026-11-24",
     "outcomes": {
-      "reported": 137,
-      "provider_older_session": 1,
+      "provider_older_session": 132,
+      "reported": 6,
       "currency_mismatch": 1
     },
     "byExchange": {
       "Amsterdam": {
-        "reported": 1
-      },
-      "Brussels": {
-        "reported": 2
-      },
-      "Copenhagen": {
-        "reported": 11
-      },
-      "HKSE": {
         "provider_older_session": 1
       },
-      "Helsinki": {
+      "Brussels": {
+        "provider_older_session": 2
+      },
+      "Copenhagen": {
+        "provider_older_session": 11
+      },
+      "HKSE": {
         "reported": 1
+      },
+      "Helsinki": {
+        "provider_older_session": 1
       },
       "Irish": {
-        "reported": 1
+        "provider_older_session": 1
       },
       "MCE": {
-        "reported": 2
+        "provider_older_session": 2
       },
       "Milan": {
-        "reported": 7
+        "provider_older_session": 6,
+        "reported": 1
       },
       "Oslo": {
-        "reported": 44
-      },
-      "Paris": {
-        "reported": 9
-      },
-      "Stockholm": {
-        "reported": 39,
-        "currency_mismatch": 1
-      },
-      "Vienna": {
+        "provider_older_session": 42,
         "reported": 2
       },
+      "Paris": {
+        "provider_older_session": 9
+      },
+      "Stockholm": {
+        "provider_older_session": 38,
+        "currency_mismatch": 1,
+        "reported": 1
+      },
+      "Vienna": {
+        "provider_older_session": 2
+      },
       "XETRA": {
-        "reported": 18
+        "provider_older_session": 17,
+        "reported": 1
       }
     },
     "retainedTargetDateObservedAfterCutoff": 0,
     "notice": "Diagnostic counts only; retained observations remain excluded from fresh-price alerts. Cutoff is a conservative UTC heuristic, not exchange certification.",
     "venueSessionProbe": {
-      "comparisonDate": "2026-11-23",
+      "comparisonDate": "2026-11-24",
       "tracked": 139,
       "counts": {
         "chartUnavailable": 0,
-        "barBeforeTarget": 1,
-        "barOnTarget": 6,
-        "barAfterTarget": 132,
+        "barBeforeTarget": 138,
+        "barOnTarget": 0,
+        "barAfterTarget": 1,
         "invalidTimestamp": 0,
         "localDateDiffersUtc": 0,
-        "localDateBeforeTarget": 1,
-        "localDateOnTarget": 6,
-        "localDateAfterTarget": 132,
+        "localDateBeforeTarget": 138,
+        "localDateOnTarget": 0,
+        "localDateAfterTarget": 1,
         "unknownExchangeTimezone": 0,
-        "barOlderThanRetained": 1,
-        "retainedTargetDateDespiteOlderBar": 0,
+        "barOlderThanRetained": 132,
+        "retainedTargetDateDespiteOlderBar": 132,
         "sameProviderRecovery": 0,
         "currencyMismatch": 1
       },
@@ -448,21 +452,21 @@
         {
           "name": "Amsterdam",
           "tracked": 1,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 1,
             "barOnTarget": 0,
-            "barAfterTarget": 1,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 1,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 1,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 1,
+            "retainedTargetDateDespiteOlderBar": 1,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -470,21 +474,21 @@
         {
           "name": "Brussels",
           "tracked": 2,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 2,
             "barOnTarget": 0,
-            "barAfterTarget": 2,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 2,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 2,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -492,21 +496,21 @@
         {
           "name": "Copenhagen",
           "tracked": 11,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 11,
             "barOnTarget": 0,
-            "barAfterTarget": 11,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 11,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 11,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 11,
+            "retainedTargetDateDespiteOlderBar": 11,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -514,8 +518,30 @@
         {
           "name": "Dublin",
           "tracked": 1,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
+          "counts": {
+            "chartUnavailable": 0,
+            "barBeforeTarget": 1,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
+            "invalidTimestamp": 0,
+            "localDateDiffersUtc": 0,
+            "localDateBeforeTarget": 1,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
+            "unknownExchangeTimezone": 0,
+            "barOlderThanRetained": 1,
+            "retainedTargetDateDespiteOlderBar": 1,
+            "sameProviderRecovery": 0,
+            "currencyMismatch": 0
+          }
+        },
+        {
+          "name": "HKSE",
+          "tracked": 1,
+          "providerUtcEarliest": "2026-11-25",
+          "providerUtcLatest": "2026-11-25",
           "counts": {
             "chartUnavailable": 0,
             "barBeforeTarget": 0,
@@ -528,28 +554,6 @@
             "localDateAfterTarget": 1,
             "unknownExchangeTimezone": 0,
             "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
-            "sameProviderRecovery": 0,
-            "currencyMismatch": 0
-          }
-        },
-        {
-          "name": "HKSE",
-          "tracked": 1,
-          "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-23",
-          "counts": {
-            "chartUnavailable": 0,
-            "barBeforeTarget": 0,
-            "barOnTarget": 1,
-            "barAfterTarget": 0,
-            "invalidTimestamp": 0,
-            "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
-            "localDateOnTarget": 1,
-            "localDateAfterTarget": 0,
-            "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 1,
             "retainedTargetDateDespiteOlderBar": 0,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
@@ -558,21 +562,21 @@
         {
           "name": "Helsinki",
           "tracked": 1,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 1,
             "barOnTarget": 0,
-            "barAfterTarget": 1,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 1,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 1,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 1,
+            "retainedTargetDateDespiteOlderBar": 1,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -580,21 +584,21 @@
         {
           "name": "MCE",
           "tracked": 2,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 2,
             "barOnTarget": 0,
-            "barAfterTarget": 2,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 2,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 2,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -603,20 +607,20 @@
           "name": "Milan",
           "tracked": 7,
           "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
-            "barOnTarget": 1,
-            "barAfterTarget": 6,
+            "barBeforeTarget": 7,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
-            "localDateOnTarget": 1,
-            "localDateAfterTarget": 6,
+            "localDateBeforeTarget": 7,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 6,
+            "retainedTargetDateDespiteOlderBar": 6,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -625,20 +629,20 @@
           "name": "Oslo",
           "tracked": 44,
           "providerUtcEarliest": "2026-11-05",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 1,
-            "barOnTarget": 1,
-            "barAfterTarget": 42,
+            "barBeforeTarget": 44,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 1,
-            "localDateOnTarget": 1,
-            "localDateAfterTarget": 42,
+            "localDateBeforeTarget": 44,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 42,
+            "retainedTargetDateDespiteOlderBar": 42,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -646,21 +650,21 @@
         {
           "name": "Paris",
           "tracked": 9,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 9,
             "barOnTarget": 0,
-            "barAfterTarget": 9,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 9,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 9,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 9,
+            "retainedTargetDateDespiteOlderBar": 9,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -669,20 +673,20 @@
           "name": "Stockholm",
           "tracked": 40,
           "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
-            "barOnTarget": 2,
-            "barAfterTarget": 38,
+            "barBeforeTarget": 40,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
-            "localDateOnTarget": 2,
-            "localDateAfterTarget": 38,
+            "localDateBeforeTarget": 40,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 38,
+            "retainedTargetDateDespiteOlderBar": 38,
             "sameProviderRecovery": 0,
             "currencyMismatch": 1
           }
@@ -690,21 +694,21 @@
         {
           "name": "Vienna",
           "tracked": 2,
-          "providerUtcEarliest": "2026-11-24",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcEarliest": "2026-11-23",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
+            "barBeforeTarget": 2,
             "barOnTarget": 0,
-            "barAfterTarget": 2,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
+            "localDateBeforeTarget": 2,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 2,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -713,20 +717,20 @@
           "name": "XETRA",
           "tracked": 18,
           "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-24",
+          "providerUtcLatest": "2026-11-23",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 0,
-            "barOnTarget": 1,
-            "barAfterTarget": 17,
+            "barBeforeTarget": 18,
+            "barOnTarget": 0,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 0,
-            "localDateOnTarget": 1,
-            "localDateAfterTarget": 17,
+            "localDateBeforeTarget": 18,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
-            "retainedTargetDateDespiteOlderBar": 0,
+            "barOlderThanRetained": 17,
+            "retainedTargetDateDespiteOlderBar": 17,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -818,13 +822,13 @@
       "missing": 0
     }
   ],
-  "storedStories": 7,
+  "storedStories": 132,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "requests_failed",
+    "Google News": "requests_ok",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -832,441 +836,439 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 91.2,
+      "avgLatencyMs": 70.0,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T20:01:25+00:00",
+      "lastSuccessAt": "2026-11-25T04:56:37+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 341.3,
+      "avgLatencyMs": 354.6,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T20:01:27+00:00",
+      "lastSuccessAt": "2026-11-25T04:56:38+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 832.5,
+      "avgLatencyMs": 792.0,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T20:01:28+00:00",
+      "lastSuccessAt": "2026-11-25T04:56:39+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 0,
-      "failed": 598,
-      "avgLatencyMs": 7110.2,
-      "errorTypes": {
-        "HTTPError": 598
-      },
-      "lastSuccessAt": null,
-      "lastFailureAt": "2026-11-24T20:07:27+00:00"
+      "succeeded": 598,
+      "failed": 0,
+      "avgLatencyMs": 314.6,
+      "errorTypes": {},
+      "lastSuccessAt": "2026-11-25T04:56:55+00:00",
+      "lastFailureAt": null
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1567.5,
+      "avgLatencyMs": 1103.2,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-24T20:01:27+00:00",
+      "lastSuccessAt": "2026-11-25T04:56:38+00:00",
       "lastFailureAt": null
     }
   },
   "newsQuality": {
-    "total": 2357,
-    "relevant": 1563,
-    "review": 714,
-    "duplicates": 115,
+    "total": 2389,
+    "relevant": 1577,
+    "review": 729,
+    "duplicates": 120,
     "issuerLinked": 436,
-    "namedReferences": 1207,
-    "withheldFromIssuerEvents": 714,
+    "namedReferences": 1224,
+    "withheldFromIssuerEvents": 729,
     "identityTiers": {
       "issuer_verified": 436,
-      "named_reference": 1207,
-      "review_candidate": 714
+      "named_reference": 1224,
+      "review_candidate": 729
     },
     "driverClassification": {
       "version": 1,
-      "classified": 526,
+      "classified": 534,
       "categories": {
-        "numbers": 294,
+        "numbers": 297,
         "prices": 6,
         "operations": 1,
-        "potential": 248,
+        "potential": 254,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 314,
+      "Earnings / results": 318,
       "Dividends": 28,
-      "M&A": 98,
+      "M&A": 100,
       "Guidance": 45,
-      "Contracts": 192,
+      "Contracts": 198,
       "Capital & ownership": 3,
       "Management": 79,
-      "General": 1598
+      "General": 1618
     }
   },
   "secFilings": {
-    "records": 417,
+    "records": 419,
     "issuers": {
       "0001045810": {
         "ticker": "NVDA",
         "records": 10,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000002488": {
         "ticker": "AMD",
         "records": 10,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001730168": {
         "ticker": "AVGO",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000789019": {
         "ticker": "MSFT",
         "records": 9,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000320193": {
         "ticker": "AAPL",
         "records": 6,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001652044": {
         "ticker": "GOOGL",
-        "records": 10,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "records": 11,
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001018724": {
         "ticker": "AMZN",
         "records": 9,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001326801": {
         "ticker": "META",
         "records": 9,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001341439": {
         "ticker": "ORCL",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000723125": {
         "ticker": "MU",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000050863": {
         "ticker": "INTC",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001596532": {
         "ticker": "ANET",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001571996": {
         "ticker": "DELL",
-        "records": 13,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "records": 14,
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001375365": {
         "ticker": "SMCI",
         "records": 12,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001321655": {
         "ticker": "PLTR",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0002115436": {
         "ticker": "XOM",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000093410": {
         "ticker": "CVX",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001163165": {
         "ticker": "COP",
         "records": 6,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000087347": {
         "ticker": "SLB",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000003570": {
         "ticker": "LNG",
         "records": 12,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001692819": {
         "ticker": "VST",
         "records": 12,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001868275": {
         "ticker": "CEG",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000753308": {
         "ticker": "NEE",
         "records": 16,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000018230": {
         "ticker": "CAT",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000315189": {
         "ticker": "DE",
         "records": 6,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000040545": {
         "ticker": "GE",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001996810": {
         "ticker": "GEV",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000773840": {
         "ticker": "HON",
         "records": 11,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000936468": {
         "ticker": "LMT",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000101829": {
         "ticker": "RTX",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001133421": {
         "ticker": "NOC",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000100885": {
         "ticker": "UNP",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001090727": {
         "ticker": "UPS",
         "records": 9,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001048911": {
         "ticker": "FDX",
         "records": 15,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000019617": {
         "ticker": "JPM",
         "records": 15,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000070858": {
         "ticker": "BAC",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000886982": {
         "ticker": "GS",
         "records": 11,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000895421": {
         "ticker": "MS",
         "records": 6,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0002012383": {
         "ticker": "BLK",
         "records": 5,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001403161": {
         "ticker": "V",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001141391": {
         "ticker": "MA",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000104169": {
         "ticker": "WMT",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000909832": {
         "ticker": "COST",
         "records": 8,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000354950": {
         "ticker": "HD",
         "records": 9,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000080424": {
         "ticker": "PG",
         "records": 13,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001318605": {
         "ticker": "TSLA",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000200406": {
         "ticker": "JNJ",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000059478": {
         "ticker": "LLY",
         "records": 4,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0000731766": {
         "ticker": "UNH",
         "records": 7,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       },
       "0001551152": {
         "ticker": "ABBV",
         "records": 12,
-        "lastAttempt": "2026-11-24T01:31:21Z",
+        "lastAttempt": "2026-11-25T04:57:42Z",
         "status": "ok",
-        "lastSuccess": "2026-11-24T01:31:21Z"
+        "lastSuccess": "2026-11-25T04:57:42Z"
       }
     },
-    "lastAttempt": "2026-11-24T01:31:21Z"
+    "lastAttempt": "2026-11-25T04:57:42Z"
   },
   "freightRoutes": {
     "cataloged": 30,

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T20:01:12+00:00",
-  "comparisonDate": "2026-11-23",
+  "generated": "2026-11-25T04:56:26+00:00",
+  "comparisonDate": "2026-11-24",
   "totalListings": 500,
   "candidates": [
     {
@@ -6562,7 +6562,7 @@
       "name": "Prada",
       "venue": "HKSE",
       "group": "monitored",
-      "lastSavedDate": "2026-11-24",
+      "lastSavedDate": "2026-11-25",
       "lastSavedKind": "scanner",
       "quality": "unconfirmed",
       "reviewedIdentity": false,
@@ -6732,6 +6732,7 @@
       "needsSourcePrice": false,
       "needsDailyVerification": true,
       "reasons": [
+        "older_than_comparison_date",
         "monitored_source_quality_no_volume",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
@@ -7093,6 +7094,7 @@
       "needsSourcePrice": false,
       "needsDailyVerification": true,
       "reasons": [
+        "older_than_comparison_date",
         "monitored_source_quality_no_volume",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
@@ -8341,6 +8343,24 @@
       ]
     },
     {
+      "id": "SHT-B.ST",
+      "name": "Smart High Tech",
+      "venue": "Stockholm",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "older",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "older_than_comparison_date",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "SKA-B.ST",
       "name": "Skanska",
       "venue": "Stockholm",
@@ -8809,6 +8829,24 @@
       ]
     },
     {
+      "id": "PFSE.DE",
+      "name": "Pfisterer",
+      "venue": "XETRA",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-23",
+      "lastSavedKind": "scanner",
+      "quality": "older",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "older_than_comparison_date",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "S92.DE",
       "name": "SMA Solar",
       "venue": "XETRA",
@@ -8948,40 +8986,6 @@
       "needsDailyVerification": true,
       "reasons": [
         "monitored_source_quality_unconfirmed",
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "SHT-B.ST",
-      "name": "Smart High Tech",
-      "venue": "Stockholm",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-23",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "PFSE.DE",
-      "name": "Pfisterer",
-      "venue": "XETRA",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-23",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]

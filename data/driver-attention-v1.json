@@ -1,18 +1,13 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-24T20:07:34Z",
-  "windowStart": "2026-11-10",
-  "windowEnd": "2026-11-23",
+  "generated": "2026-11-25T04:58:32Z",
+  "windowStart": "2026-11-11",
+  "windowEnd": "2026-11-24",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
   "listings": {
     "1913.HK": {
       "listingId": "1913.HK",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -77,6 +72,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -101,11 +101,6 @@
     "1AST.DE": {
       "listingId": "1AST.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -170,6 +165,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -201,29 +201,24 @@
       "observedRecords": 10,
       "latestRecord": "2026-11-17T21:41:09Z",
       "topicCounts": {
-        "numbers": 6,
+        "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 3,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 10
       },
       "recent7": {
         "issuer": 0,
-        "media": 8
+        "media": 0
       }
     },
     "4DS.DE": {
       "listingId": "4DS.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -288,6 +283,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -312,11 +312,6 @@
     "AAC.ST": {
       "listingId": "AAC.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -381,6 +376,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -405,11 +405,6 @@
     "AFG.OL": {
       "listingId": "AFG.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -474,6 +469,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 1,
+          "media": 0
         }
       ],
       "potential": [],
@@ -491,18 +491,13 @@
         "media": 9
       },
       "recent7": {
-        "issuer": 0,
+        "issuer": 1,
         "media": 1
       }
     },
     "AFISH.OL": {
       "listingId": "AFISH.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -565,6 +560,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -592,11 +592,6 @@
       "listingId": "AIR.PA",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -658,6 +653,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -674,21 +674,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 1
       }
     },
     "AKRBP.OL": {
       "listingId": "AKRBP.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -751,6 +746,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 1
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 1
         }
@@ -771,12 +771,12 @@
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       },
       "recent7": {
         "issuer": 0,
@@ -786,11 +786,6 @@
     "ALO.PA": {
       "listingId": "ALO.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -854,7 +849,12 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 11
+          "media": 12
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -891,10 +891,10 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 28,
+      "observedRecords": 29,
       "latestRecord": "2026-11-23T14:44:15Z",
       "topicCounts": {
-        "numbers": 3,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 4,
@@ -902,21 +902,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 0
+        "media": 4
       },
       "recent7": {
         "issuer": 0,
-        "media": 28
+        "media": 25
       }
     },
     "ALPER.PA": {
       "listingId": "ALPER.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -981,6 +976,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -1005,11 +1005,6 @@
     "ALRIB.PA": {
       "listingId": "ALRIB.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -1074,6 +1069,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -1131,11 +1131,6 @@
     "AM.PA": {
       "listingId": "AM.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -1200,6 +1195,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 3
         }
       ],
       "potential": [],
@@ -1214,21 +1214,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 3
+        "media": 5
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       }
     },
     "ANDF.OL": {
       "listingId": "ANDF.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -1293,6 +1288,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -1308,29 +1308,24 @@
       "observedRecords": 11,
       "latestRecord": "2026-11-18T16:37:12Z",
       "topicCounts": {
-        "numbers": 5,
+        "numbers": 2,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 6
       },
       "recent7": {
         "issuer": 0,
-        "media": 9
+        "media": 5
       }
     },
     "ASML.AS": {
       "listingId": "ASML.AS",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -1395,6 +1390,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 3
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -1450,7 +1450,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 4
+        "media": 5
       },
       "recent7": {
         "issuer": 0,
@@ -1460,11 +1460,6 @@
     "AUSS.OL": {
       "listingId": "AUSS.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -1527,6 +1522,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -1554,11 +1554,6 @@
       "listingId": "AUTO.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -1620,6 +1615,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -1647,11 +1647,6 @@
       "listingId": "AVARDA.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -1713,6 +1708,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -1740,11 +1740,6 @@
       "listingId": "AZA.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -1806,6 +1801,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -1833,11 +1833,6 @@
       "listingId": "BALD-B.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -1899,6 +1894,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -1926,11 +1926,6 @@
       "listingId": "BEAMMW-B.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 2
@@ -1992,6 +1987,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -2019,11 +2019,6 @@
       "listingId": "BLUE.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 1
@@ -2085,6 +2080,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -2112,11 +2112,6 @@
       "listingId": "BMAX.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -2180,6 +2175,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 2
         }
       ],
       "potential": [
@@ -2190,15 +2190,23 @@
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdHgtTEZwUndNYndvckpvd29tOGptQnlIaXV6U0VOX1cwcDFKMm5DVTFZbGZWY2IzN0k5WTVCakEtTzFMT2hIYmttaHZzWEdTTTdxN25rTklWZnJjSFVBTzkweGQxcTgwMEhQZ3VSTE5xTjJ0cEdIRHRxS0RFa1g2dk56SzhBNFpGelpuMlEzU3ZfWDhxZTNUMnZHV0R5cXRlTERyQkthN1dRaDJuSWVtR2xsYWpZOHM?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
+        },
+        {
+          "id": "BMAX.ST:8bb37cab32f233deda8ebfbb935c5c41c4e8854521c9c2f0bc4a7338bdb9093a",
+          "published": "2026-11-24T07:39:14Z",
+          "headline": "Brenderup Group signs strategic agreement with BYGGMAX in Sweden",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeUZlTXNQc09CR3FRVVM1VTFhNXRrMnlnMXhteGJycDluZHFtTGFJLTc5dVk1aTN0NlY4RTR1bHFqZFFrZ2hUcmFtRlh3SjhVd054WkpRUk5CQ00tTWtzcUN0cUZQNDM0VmlPd0xqUm04bi1jbUVsNm85SmdQRVBvbnEzaGg2aGNKUEVaeVJhNlhMR1FNZ0pDM3NCX0pyR1V1b2dFQWkya0hCT0JwYTdEOFhISE1IZw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 1,
+      "observedRecords": 2,
       "latestRecord": "2026-11-24T10:48:59Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -2207,17 +2215,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 2
       }
     },
     "BOHUS.OL": {
       "listingId": "BOHUS.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2280,6 +2283,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -2307,11 +2315,6 @@
       "listingId": "BOL.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -2375,6 +2378,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -2402,17 +2410,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       }
     },
     "BONEX.ST": {
       "listingId": "BONEX.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2477,6 +2480,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -2501,11 +2509,6 @@
     "BONHR.OL": {
       "listingId": "BONHR.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2570,6 +2573,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -2594,11 +2602,6 @@
     "CADLR.OL": {
       "listingId": "CADLR.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2663,6 +2666,11 @@
           "date": "2026-11-23",
           "issuer": 1,
           "media": 12
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 2
         }
       ],
       "potential": [
@@ -2694,7 +2702,7 @@
       "observedRecords": 18,
       "latestRecord": "2026-11-24T15:32:00Z",
       "topicCounts": {
-        "numbers": 9,
+        "numbers": 10,
         "prices": 0,
         "operations": 0,
         "potential": 2,
@@ -2702,21 +2710,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       },
       "recent7": {
         "issuer": 1,
-        "media": 13
+        "media": 14
       }
     },
     "CAF.MC": {
       "listingId": "CAF.MC",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2779,6 +2782,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -2807,26 +2815,21 @@
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 1
       }
     },
     "CAMX.ST": {
       "listingId": "CAMX.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2891,6 +2894,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -2915,11 +2923,6 @@
     "CHEF.ST": {
       "listingId": "CHEF.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -2982,6 +2985,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -3009,11 +3017,6 @@
       "listingId": "CLOUD.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -3077,6 +3080,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -3101,11 +3109,6 @@
     "CMBTO.OL": {
       "listingId": "CMBTO.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3170,6 +3173,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 2,
+          "media": 13
         }
       ],
       "potential": [
@@ -3190,10 +3198,10 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-24T16:16:28Z",
+      "observedRecords": 24,
+      "latestRecord": "2026-11-25T04:01:05Z",
       "topicCounts": {
-        "numbers": 5,
+        "numbers": 11,
         "prices": 0,
         "operations": 0,
         "potential": 1,
@@ -3201,21 +3209,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 6
       },
       "recent7": {
-        "issuer": 0,
-        "media": 6
+        "issuer": 2,
+        "media": 15
       }
     },
     "DNORD.CO": {
       "listingId": "DNORD.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3280,6 +3283,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -3304,11 +3312,6 @@
     "DOFG.OL": {
       "listingId": "DOFG.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3373,6 +3376,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 1,
+          "media": 1
         }
       ],
       "potential": [
@@ -3431,26 +3439,21 @@
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 3,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 5
+        "media": 7
       },
       "recent7": {
-        "issuer": 1,
-        "media": 4
+        "issuer": 2,
+        "media": 3
       }
     },
     "DSV.CO": {
       "listingId": "DSV.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3513,6 +3516,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -3540,11 +3548,6 @@
       "listingId": "EIOF.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -3608,6 +3611,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -3632,11 +3640,6 @@
     "EKTA-B.ST": {
       "listingId": "EKTA-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3701,6 +3704,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -3725,11 +3733,6 @@
     "EL.PA": {
       "listingId": "EL.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3794,6 +3797,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -3808,21 +3816,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 6
       },
       "recent7": {
         "issuer": 0,
-        "media": 10
+        "media": 5
       }
     },
     "ELI.BR": {
       "listingId": "ELI.BR",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -3885,6 +3888,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -3912,11 +3920,6 @@
       "listingId": "ELLOS.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 1
@@ -3978,6 +3981,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -4005,11 +4013,6 @@
       "listingId": "EMBRAC-B.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 1
@@ -4073,6 +4076,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -4097,11 +4105,6 @@
     "EUZ.DE": {
       "listingId": "EUZ.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4166,9 +4169,22 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
+        {
+          "id": "EUZ.DE:b8723693e477759c9d1015ce80a0dd540e3697903fdd93763e7c2bb2123a9ef6",
+          "published": "2026-11-24T19:13:31Z",
+          "headline": "How Investors May Respond To Eckert & Ziegler (XTRA:EUZ) Strong Earnings And Guidance Confirmed",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMGJ0Y1JwSjB4MnM5VjV4enZXT3o3Z043aEprajVTT00xRk5xczVWNjM0cnJZeXJ0cGc5WlpwY2xHbE9UQXctVnFHRVFBVTNjajd0QkpZMS1Nb0hYTGllalo3eVJWSURzdWZfTE9NSFUzLXdHSkEzanl2enloNzlHU0x4dWh6SHhDR2N4Tm8yODI4R1pJOVgyaTh1ZE5GTGRuYXlv?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
         {
           "id": "EUZ.DE:63dd2fbf7c3298737b83efa22c1315afe14d56d108b1dc85a4198b2098f2f0b6",
           "published": "2026-11-12T07:18:00Z",
@@ -4178,18 +4194,18 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-17T14:29:05Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-24T19:13:31Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 9
+        "media": 10
       },
       "recent7": {
         "issuer": 0,
@@ -4199,11 +4215,6 @@
     "FABG.ST": {
       "listingId": "FABG.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4268,6 +4279,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -4301,11 +4317,6 @@
     "FCT.MI": {
       "listingId": "FCT.MI",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4368,6 +4379,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 5
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 5
         }
@@ -4489,29 +4505,24 @@
       "observedRecords": 68,
       "latestRecord": "2026-11-24T17:13:00Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 7,
+        "potential": 8,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 26
+        "media": 33
       },
       "recent7": {
         "issuer": 0,
-        "media": 37
+        "media": 35
       }
     },
     "FRO.OL": {
       "listingId": "FRO.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4576,6 +4587,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -4600,11 +4616,6 @@
     "FYB.DE": {
       "listingId": "FYB.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4669,6 +4680,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -4693,11 +4709,6 @@
     "GFC.PA": {
       "listingId": "GFC.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4762,6 +4773,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -4786,11 +4802,6 @@
     "GJF.OL": {
       "listingId": "GJF.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4855,6 +4866,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -4879,11 +4895,6 @@
     "GMAB.CO": {
       "listingId": "GMAB.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -4948,6 +4959,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 2
         }
       ],
       "potential": [
@@ -4960,10 +4976,10 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-23T09:35:55Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-24T17:36:00Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 1,
@@ -4975,17 +4991,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 6
       }
     },
     "GOMX.ST": {
       "listingId": "GOMX.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5048,6 +5059,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -5140,11 +5156,6 @@
       "listingId": "GUBRA.CO",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 1
@@ -5208,6 +5219,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5232,11 +5248,6 @@
     "GVR.IR": {
       "listingId": "GVR.IR",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5301,6 +5312,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5325,11 +5341,6 @@
     "HAUTO.OL": {
       "listingId": "HAUTO.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5394,6 +5405,11 @@
           "date": "2026-11-23",
           "issuer": 1,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5418,11 +5434,6 @@
     "HEBA-B.ST": {
       "listingId": "HEBA-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5487,6 +5498,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5511,11 +5527,6 @@
     "HNSA.ST": {
       "listingId": "HNSA.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5580,6 +5591,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5604,11 +5620,6 @@
     "HOFI.ST": {
       "listingId": "HOFI.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5671,6 +5682,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -5698,11 +5714,6 @@
       "listingId": "IBAB.BR",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -5766,6 +5777,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5790,11 +5806,6 @@
     "IFX.DE": {
       "listingId": "IFX.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5859,6 +5870,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 3
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 5
         }
       ],
       "potential": [
@@ -5890,7 +5906,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 10
+        "media": 15
       },
       "recent7": {
         "issuer": 0,
@@ -5900,11 +5916,6 @@
     "INSTA.OL": {
       "listingId": "INSTA.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -5969,6 +5980,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -5993,11 +6009,6 @@
     "INVE-B.ST": {
       "listingId": "INVE-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6060,6 +6071,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -6087,11 +6103,6 @@
       "listingId": "ISLAX.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -6153,6 +6164,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -6180,11 +6196,6 @@
       "listingId": "IVU.DE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -6248,6 +6259,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -6272,11 +6288,6 @@
     "IWS.OL": {
       "listingId": "IWS.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6341,6 +6352,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -6365,11 +6381,6 @@
     "KCC.OL": {
       "listingId": "KCC.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6434,6 +6445,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -6458,11 +6474,6 @@
     "KCR.HE": {
       "listingId": "KCR.HE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6527,6 +6538,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -6593,11 +6609,6 @@
       "listingId": "KLDVK.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -6661,6 +6672,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -6685,11 +6701,6 @@
     "LOGI-B.ST": {
       "listingId": "LOGI-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6754,6 +6765,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -6795,11 +6811,6 @@
     "MORROW.ST": {
       "listingId": "MORROW.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6864,6 +6875,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -6897,11 +6913,6 @@
     "MRL.MC": {
       "listingId": "MRL.MC",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -6966,6 +6977,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -6999,11 +7015,6 @@
     "MTRS.ST": {
       "listingId": "MTRS.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7068,6 +7079,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -7101,11 +7117,6 @@
     "MYCR.ST": {
       "listingId": "MYCR.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7170,6 +7181,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -7308,11 +7324,6 @@
       "listingId": "NANEXA.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -7376,6 +7387,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -7400,11 +7416,6 @@
     "NDX1.DE": {
       "listingId": "NDX1.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7469,9 +7480,22 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 12
         }
       ],
       "potential": [
+        {
+          "id": "NDX1.DE:54d821e2c31cf3dd1f91d2a2c7fce0c4d47157d8cb890b670e438b06201d267a",
+          "published": "2026-11-24T22:21:16Z",
+          "headline": "Nordex wins 133 MW wind turbine order from Electrica in Romania",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNa1VLZG93alQ2bHRhVjVpY2tOaEtVOE5fSjNBNnYwR1V4ZnUyTFZJUE5CLXJRTnBLTEJsSklORERfd0dCdl95NzhBdk1kWEUtRDhoTWYtcUZtN0NhaU5kSGZJbnFiSTNCNklIZWhKbVJRTEFoT0U0bEYzcjR0UDF4YzJNSmlqaV9jZnB3MG9zLTNaT0tGemxRVmJyRkZ2QnhuaE5zWUJB?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "NDX1.DE:ff3f912829747df0be72b1d0217eee1b2b3aedca5591d30c56cda0051916a2b1",
           "published": "2026-11-24T10:22:28Z",
@@ -7577,32 +7601,27 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 39,
-      "latestRecord": "2026-11-24T10:22:28Z",
+      "observedRecords": 40,
+      "latestRecord": "2026-11-24T22:21:16Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 3,
+        "potential": 10,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 11
+        "media": 14
       },
       "recent7": {
         "issuer": 0,
-        "media": 17
+        "media": 26
       }
     },
     "NELLY.ST": {
       "listingId": "NELLY.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7667,6 +7686,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -7691,11 +7715,6 @@
     "NEX.PA": {
       "listingId": "NEX.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7760,6 +7779,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 2
         }
       ],
       "potential": [],
@@ -7778,17 +7802,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 6
+        "media": 8
       }
     },
     "NHY.OL": {
       "listingId": "NHY.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7853,13 +7872,18 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 3
         }
       ],
       "potential": [],
       "observedRecords": 3,
       "latestRecord": "2026-11-24T09:45:00Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -7871,17 +7895,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 3
       }
     },
     "NIBE-B.ST": {
       "listingId": "NIBE-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -7944,6 +7963,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -7970,11 +7994,6 @@
     "NKT.CO": {
       "listingId": "NKT.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8039,6 +8058,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -8072,11 +8096,6 @@
     "NOBA.ST": {
       "listingId": "NOBA.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8141,6 +8160,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 3
         }
       ],
       "potential": [
@@ -8175,7 +8199,7 @@
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 3,
         "risk": 0
       },
       "prior7": {
@@ -8184,17 +8208,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 3
       }
     },
     "NOHAL.OL": {
       "listingId": "NOHAL.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8259,6 +8278,11 @@
           "date": "2026-11-23",
           "issuer": 1,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -8284,11 +8308,6 @@
       "listingId": "NOVO-B.CO",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -8352,6 +8371,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 3
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -8375,21 +8399,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 13
+        "media": 14
       },
       "recent7": {
         "issuer": 0,
-        "media": 9
+        "media": 8
       }
     },
     "NRC.OL": {
       "listingId": "NRC.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8452,6 +8471,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -8479,11 +8503,6 @@
       "listingId": "OBCK.DE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -8547,6 +8566,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -8589,26 +8613,21 @@
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 2,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 5
+        "media": 8
       },
       "recent7": {
         "issuer": 0,
-        "media": 7
+        "media": 5
       }
     },
     "ODF.OL": {
       "listingId": "ODF.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8673,6 +8692,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -8697,11 +8721,6 @@
     "ORSTED.CO": {
       "listingId": "ORSTED.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8766,6 +8785,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 3
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -8789,29 +8813,24 @@
       "observedRecords": 12,
       "latestRecord": "2026-11-23T13:36:48Z",
       "topicCounts": {
-        "numbers": 1,
-        "prices": 1,
+        "numbers": 0,
+        "prices": 0,
         "operations": 0,
         "potential": 2,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 0
+        "media": 2
       },
       "recent7": {
         "issuer": 0,
-        "media": 12
+        "media": 10
       }
     },
     "OVZON.ST": {
       "listingId": "OVZON.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -8874,6 +8893,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -8901,11 +8925,6 @@
       "listingId": "P911.DE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -8969,6 +8988,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [],
@@ -8983,7 +9007,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       },
       "recent7": {
         "issuer": 0,
@@ -8993,11 +9017,6 @@
     "PAAL-B.CO": {
       "listingId": "PAAL-B.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -9060,6 +9079,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -9087,11 +9111,6 @@
       "listingId": "PAL.VI",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -9155,6 +9174,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -9179,11 +9203,6 @@
     "PFSE.DE": {
       "listingId": "PFSE.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -9248,6 +9267,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -9290,11 +9314,6 @@
       "listingId": "PILA.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -9356,6 +9375,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -9383,11 +9407,6 @@
       "listingId": "PLCAN.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -9449,6 +9468,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -9476,11 +9500,6 @@
       "listingId": "PROT.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -9544,6 +9563,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -9568,11 +9592,6 @@
     "PROXI.OL": {
       "listingId": "PROXI.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -9637,6 +9656,11 @@
           "date": "2026-11-23",
           "issuer": 1,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 1,
+          "media": 0
         }
       ],
       "potential": [],
@@ -9654,18 +9678,13 @@
         "media": 1
       },
       "recent7": {
-        "issuer": 1,
+        "issuer": 2,
         "media": 0
       }
     },
     "PRY.MI": {
       "listingId": "PRY.MI",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -9730,6 +9749,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -9754,11 +9778,6 @@
     "QBEN.ST": {
       "listingId": "QBEN.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -9821,6 +9840,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -9857,11 +9881,6 @@
       "listingId": "QLIRO.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 1
@@ -9925,6 +9944,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -9959,11 +9983,6 @@
       "listingId": "RACE.MI",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -10025,6 +10044,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -10052,11 +10076,6 @@
       "listingId": "RAIL.ST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -10119,7 +10138,12 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
-          "media": 4
+          "media": 5
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -10148,6 +10172,14 @@
           "topic": "Contracts / agreements"
         },
         {
+          "id": "RAIL.ST:79d1bafff8d7a060a8d496dafdacaf133b0466fd0ac8942eb3d1c4d668e0d153",
+          "published": "2026-11-23T08:49:31Z",
+          "headline": "Railcare tar order från gruvbolag värd halv miljard",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPX0RkQmdQVVlEc081d0hhRkVzcFczMTYwa1gwMmV5WEttUHFNX3plTDIyRElLaGZ5QmhoVWppdGpmOHd6OE1QUWRtSkxZVG5HbEZ1MnRFNDF1UGRNVFpzU0VvNmRnbjFoQVhWbUtGcno2RktxNnFtdmlYMHZyQVBhZQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "RAIL.ST:cdeb4e509eca9c4a0690d5b75de998f11ed5d35709de40378dc4ddd5bfd4f4c8",
           "published": "2026-11-23T08:34:21Z",
           "headline": "Railcare wins transport contract with Viscaria worth SEK54m per year",
@@ -10164,13 +10196,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 5,
+      "observedRecords": 6,
       "latestRecord": "2026-11-24T10:00:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 4,
+        "potential": 6,
         "risk": 0
       },
       "prior7": {
@@ -10179,17 +10211,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 6
       }
     },
     "REACH.OL": {
       "listingId": "REACH.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -10253,14 +10280,19 @@
         {
           "date": "2026-11-23",
           "issuer": 0,
+          "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
           "media": 0
         }
       ],
       "potential": [],
-      "observedRecords": 9,
-      "latestRecord": "2026-11-18T03:17:22Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-23T08:33:54Z",
       "topicCounts": {
-        "numbers": 4,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -10268,21 +10300,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 8
       },
       "recent7": {
         "issuer": 0,
-        "media": 8
+        "media": 2
       }
     },
     "RMS.PA": {
       "listingId": "RMS.PA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -10347,6 +10374,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -10367,8 +10399,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-23T13:18:15Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-24T18:48:24Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10378,7 +10410,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 5
+        "media": 6
       },
       "recent7": {
         "issuer": 0,
@@ -10388,11 +10420,6 @@
     "S92.DE": {
       "listingId": "S92.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -10457,6 +10484,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -10514,11 +10546,6 @@
     "SAAB-B.ST": {
       "listingId": "SAAB-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -10583,9 +10610,22 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 3
         }
       ],
       "potential": [
+        {
+          "id": "SAAB-B.ST:c87715306537e7e6a3580af4ebed54c59d7aacf01542adfa66041dc3b6447eb7",
+          "published": "2026-11-24T15:37:41Z",
+          "headline": "Saab acquires U.S. maritime autonomy developer Mythos AI",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbTRWWXlJYmhncjdRbmdKeWszdjFtRUNTUjlvV3FmZ0pHcEVlZ3lLV0NYaE4xUXZIQS1RQ2NzdFAtTUxEZWxOamJVUjFMRGpIaGthN0NpRVYzbDNaQlJRUEtLUWE4WGY2OUZ3VE1WeV8ycGJmQ2ItcUxsTmg2WXloS3dscW00MEFtVUJVREpLQTg?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
         {
           "id": "SAAB-B.ST:0077e6fcac735b86788b8c8207979294c09fdb9c1178dac7dbe94b6c4e391867",
           "published": "2026-11-24T15:12:40Z",
@@ -10683,32 +10723,27 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 17,
-      "latestRecord": "2026-11-24T15:12:40Z",
+      "observedRecords": 18,
+      "latestRecord": "2026-11-24T15:37:41Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 9,
+        "potential": 12,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 3
+        "media": 5
       },
       "recent7": {
         "issuer": 0,
-        "media": 12
+        "media": 13
       }
     },
     "SALM.OL": {
       "listingId": "SALM.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -10773,13 +10808,18 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [],
       "observedRecords": 4,
       "latestRecord": "2026-11-24T07:14:04Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -10787,7 +10827,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       },
       "recent7": {
         "issuer": 0,
@@ -10798,11 +10838,6 @@
       "listingId": "SALME.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -10864,6 +10899,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -10890,11 +10930,6 @@
     "SAND.ST": {
       "listingId": "SAND.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -10959,11 +10994,16 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 4
         }
       ],
       "potential": [],
-      "observedRecords": 9,
-      "latestRecord": "2026-11-24T15:15:57Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-24T21:44:59Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10973,21 +11013,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       },
       "recent7": {
         "issuer": 0,
-        "media": 3
+        "media": 6
       }
     },
     "SAP.DE": {
       "listingId": "SAP.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11052,6 +11087,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -11076,11 +11116,6 @@
     "SBNOR.OL": {
       "listingId": "SBNOR.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11145,6 +11180,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -11169,11 +11209,6 @@
     "SBO.OL": {
       "listingId": "SBO.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11236,6 +11271,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -11263,11 +11303,6 @@
       "listingId": "SCATC.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -11331,6 +11366,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 1,
+          "media": 1
         }
       ],
       "potential": [
@@ -11346,29 +11386,24 @@
       "observedRecords": 6,
       "latestRecord": "2026-11-24T15:36:15Z",
       "topicCounts": {
-        "numbers": 1,
+        "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       },
       "recent7": {
-        "issuer": 0,
+        "issuer": 1,
         "media": 4
       }
     },
     "SHT-B.ST": {
       "listingId": "SHT-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11433,6 +11468,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -11457,11 +11497,6 @@
     "SIE.DE": {
       "listingId": "SIE.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11526,6 +11561,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 21
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 7
         }
       ],
       "potential": [
@@ -11653,21 +11693,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 18
+        "media": 26
       },
       "recent7": {
         "issuer": 0,
-        "media": 53
+        "media": 52
       }
     },
     "SKA-B.ST": {
       "listingId": "SKA-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11732,9 +11767,22 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 7
         }
       ],
       "potential": [
+        {
+          "id": "SKA-B.ST:4960a4720b100c20a637f41ece99f1b8198018021c1764b37269e5ebe48561a3",
+          "published": "2026-11-24T22:15:31Z",
+          "headline": "Skanska bygger ubåtsbas i Norge – kontrakt värt 2,9 miljarder kronor",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOT1lseVBWeHlRamhvSHZUNUpnWWhubXJvVUZFUjRLVFo1WlFPM0dKR2hLWkVIVXpOdzJuNU5KNzV2aEI0RkV0TmVrNGgyaG0tVk1ZcWVaUUQ2YjRUMUdJNlMxMGxfYnFQZG1QQ2ZiM2h4TE9GYWozWVJBSXlMWV81Qkk5b2tOOGpGbmJkQ0FGUjU2SU53UWxQZlJ1aWozbmM?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "SKA-B.ST:7e987e9910783255920ca09136f4fdc1fc6a3f871a67c371bdb84d57a0bb4447",
           "published": "2026-11-24T16:03:44Z",
@@ -11856,13 +11904,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 24,
-      "latestRecord": "2026-11-24T16:03:44Z",
+      "observedRecords": 25,
+      "latestRecord": "2026-11-24T22:15:31Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 9,
+        "potential": 13,
         "risk": 0
       },
       "prior7": {
@@ -11871,17 +11919,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 12
+        "media": 19
       }
     },
     "SL.MI": {
       "listingId": "SL.MI",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -11946,6 +11989,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -11961,7 +12009,7 @@
       "observedRecords": 9,
       "latestRecord": "2026-11-24T04:29:00Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -11969,7 +12017,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 7
+        "media": 8
       },
       "recent7": {
         "issuer": 0,
@@ -11979,11 +12027,6 @@
     "SMHN.DE": {
       "listingId": "SMHN.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12048,6 +12091,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -12066,26 +12114,21 @@
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 1
       }
     },
     "SMOP.OL": {
       "listingId": "SMOP.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12150,6 +12193,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -12191,11 +12239,6 @@
     "SOBI.ST": {
       "listingId": "SOBI.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12260,6 +12303,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -12274,21 +12322,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 3
+        "media": 8
       },
       "recent7": {
         "issuer": 0,
-        "media": 5
+        "media": 0
       }
     },
     "SOFF.OL": {
       "listingId": "SOFF.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12353,6 +12396,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -12377,11 +12425,6 @@
     "STB.OL": {
       "listingId": "STB.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12446,6 +12489,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -12456,25 +12504,20 @@
         "prices": 0,
         "operations": 0,
         "potential": 0,
-        "risk": 2
+        "risk": 1
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 3
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 2
       }
     },
     "SUBC.OL": {
       "listingId": "SUBC.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12539,6 +12582,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -12670,17 +12718,12 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 23
+        "media": 24
       }
     },
     "TISG.MI": {
       "listingId": "TISG.MI",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12745,6 +12788,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -12771,26 +12819,21 @@
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 2,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 7
+        "media": 13
       },
       "recent7": {
         "issuer": 0,
-        "media": 10
+        "media": 4
       }
     },
     "TKMS.DE": {
       "listingId": "TKMS.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -12853,6 +12896,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 2
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 2
         }
@@ -12929,26 +12977,21 @@
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 8,
+        "potential": 4,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 17
       },
       "recent7": {
         "issuer": 0,
-        "media": 34
+        "media": 21
       }
     },
     "TPE.DE": {
       "listingId": "TPE.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13013,6 +13056,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 2
         }
       ],
       "potential": [],
@@ -13031,17 +13079,12 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 5
+        "media": 7
       }
     },
     "TRMED.OL": {
       "listingId": "TRMED.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13104,6 +13147,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -13131,11 +13179,6 @@
       "listingId": "TRYG.CO",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -13199,6 +13242,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -13223,11 +13271,6 @@
     "UCG.MI": {
       "listingId": "UCG.MI",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13292,6 +13335,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 9
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 8
         }
       ],
       "potential": [
@@ -13456,32 +13504,27 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 146,
-      "latestRecord": "2026-11-24T16:46:55Z",
+      "observedRecords": 147,
+      "latestRecord": "2026-11-24T17:48:14Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
         "operations": 0,
-        "potential": 36,
-        "risk": 1
+        "potential": 30,
+        "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 39
+        "media": 61
       },
       "recent7": {
         "issuer": 0,
-        "media": 100
+        "media": 86
       }
     },
     "VEI.OL": {
       "listingId": "VEI.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13546,6 +13589,11 @@
           "date": "2026-11-23",
           "issuer": 1,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -13570,11 +13618,6 @@
     "VICO.ST": {
       "listingId": "VICO.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13637,6 +13680,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -13664,11 +13712,6 @@
       "listingId": "VIG.VI",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -13732,6 +13775,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -13758,26 +13806,21 @@
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 1
       }
     },
     "VNA.DE": {
       "listingId": "VNA.DE",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13842,6 +13885,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 3
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -13857,7 +13905,7 @@
       "observedRecords": 34,
       "latestRecord": "2026-11-24T02:50:38Z",
       "topicCounts": {
-        "numbers": 2,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -13865,21 +13913,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 14
+        "media": 17
       },
       "recent7": {
         "issuer": 0,
-        "media": 19
+        "media": 17
       }
     },
     "VOLV-B.ST": {
       "listingId": "VOLV-B.ST",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -13942,6 +13985,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -13969,11 +14017,6 @@
       "listingId": "VOS.DE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14035,6 +14078,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14078,11 +14126,6 @@
     "VWS.CO": {
       "listingId": "VWS.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -14147,6 +14190,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 1
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [
@@ -14194,29 +14242,24 @@
       "observedRecords": 22,
       "latestRecord": "2026-11-23T13:39:05Z",
       "topicCounts": {
-        "numbers": 1,
+        "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 2,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
         "issuer": 0,
-        "media": 9
+        "media": 14
       },
       "recent7": {
         "issuer": 0,
-        "media": 13
+        "media": 8
       }
     },
     "WAWI.OL": {
       "listingId": "WAWI.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -14279,6 +14322,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14306,11 +14354,6 @@
       "listingId": "WWI.OL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14374,6 +14417,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -14388,21 +14436,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       },
       "recent7": {
         "issuer": 0,
-        "media": 1
+        "media": 0
       }
     },
     "XNAS:AAPL": {
       "listingId": "XNAS:AAPL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -14465,6 +14508,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14492,11 +14540,6 @@
       "listingId": "XNAS:AMD",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14558,6 +14601,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14585,11 +14633,6 @@
       "listingId": "XNAS:AMZN",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14651,6 +14694,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14678,11 +14726,6 @@
       "listingId": "XNAS:AVGO",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14744,6 +14787,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14771,11 +14819,6 @@
       "listingId": "XNAS:CEG",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14837,6 +14880,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -14864,11 +14912,6 @@
       "listingId": "XNAS:COST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 1,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -14932,10 +14975,15 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
-      "observedRecords": 8,
+      "observedRecords": 7,
       "latestRecord": "2026-11-10T21:16:20Z",
       "topicCounts": {
         "numbers": 0,
@@ -14945,7 +14993,7 @@
         "risk": 0
       },
       "prior7": {
-        "issuer": 1,
+        "issuer": 0,
         "media": 0
       },
       "recent7": {
@@ -14957,11 +15005,6 @@
       "listingId": "XNAS:GOOGL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15025,11 +15068,16 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 1,
+          "media": 0
         }
       ],
       "potential": [],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-05T21:10:44Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-24T21:49:44Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -15042,18 +15090,13 @@
         "media": 0
       },
       "recent7": {
-        "issuer": 0,
+        "issuer": 1,
         "media": 0
       }
     },
     "XNAS:HON": {
       "listingId": "XNAS:HON",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -15116,6 +15159,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15143,11 +15191,6 @@
       "listingId": "XNAS:INTC",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15209,6 +15252,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15236,11 +15284,6 @@
       "listingId": "XNAS:META",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15303,6 +15346,11 @@
         {
           "date": "2026-11-23",
           "issuer": 1,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
           "media": 0
         }
       ],
@@ -15329,11 +15377,6 @@
       "listingId": "XNAS:MSFT",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15395,6 +15438,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15422,11 +15470,6 @@
       "listingId": "XNAS:MU",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15488,6 +15531,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15515,11 +15563,6 @@
       "listingId": "XNAS:NVDA",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15582,6 +15625,11 @@
         {
           "date": "2026-11-23",
           "issuer": 1,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
           "media": 0
         }
       ],
@@ -15596,22 +15644,17 @@
         "risk": 0
       },
       "prior7": {
-        "issuer": 1,
+        "issuer": 2,
         "media": 0
       },
       "recent7": {
-        "issuer": 2,
+        "issuer": 1,
         "media": 0
       }
     },
     "XNAS:PLTR": {
       "listingId": "XNAS:PLTR",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -15674,6 +15717,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15701,11 +15749,6 @@
       "listingId": "XNAS:SMCI",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15767,6 +15810,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15794,11 +15842,6 @@
       "listingId": "XNAS:TSLA",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15860,6 +15903,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15887,11 +15935,6 @@
       "listingId": "XNAS:WMT",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -15953,6 +15996,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -15980,11 +16028,6 @@
       "listingId": "XNYS:ABBV",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16046,6 +16089,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16073,11 +16121,6 @@
       "listingId": "XNYS:ANET",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16139,6 +16182,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16166,11 +16214,6 @@
       "listingId": "XNYS:BAC",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16232,6 +16275,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16259,11 +16307,6 @@
       "listingId": "XNYS:BLK",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16325,6 +16368,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16352,11 +16400,6 @@
       "listingId": "XNYS:CAT",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16418,6 +16461,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16445,11 +16493,6 @@
       "listingId": "XNYS:COP",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16511,6 +16554,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16538,11 +16586,6 @@
       "listingId": "XNYS:CVX",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16604,6 +16647,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16631,11 +16679,6 @@
       "listingId": "XNYS:DE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16697,6 +16740,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16724,11 +16772,6 @@
       "listingId": "XNYS:DELL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16792,11 +16835,16 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 1,
+          "media": 0
         }
       ],
       "potential": [],
       "observedRecords": 13,
-      "latestRecord": "2026-10-21T20:37:17Z",
+      "latestRecord": "2026-11-24T21:09:13Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -16809,18 +16857,13 @@
         "media": 0
       },
       "recent7": {
-        "issuer": 0,
+        "issuer": 1,
         "media": 0
       }
     },
     "XNYS:FDX": {
       "listingId": "XNYS:FDX",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -16883,6 +16926,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -16910,11 +16958,6 @@
       "listingId": "XNYS:GE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -16976,6 +17019,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17003,11 +17051,6 @@
       "listingId": "XNYS:GEV",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -17071,6 +17114,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -17095,11 +17143,6 @@
     "XNYS:GS": {
       "listingId": "XNYS:GS",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -17164,6 +17207,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -17188,11 +17236,6 @@
     "XNYS:HD": {
       "listingId": "XNYS:HD",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -17257,6 +17300,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -17270,22 +17318,17 @@
         "risk": 0
       },
       "prior7": {
-        "issuer": 0,
+        "issuer": 2,
         "media": 0
       },
       "recent7": {
-        "issuer": 3,
+        "issuer": 1,
         "media": 0
       }
     },
     "XNYS:JNJ": {
       "listingId": "XNYS:JNJ",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -17348,6 +17391,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17375,11 +17423,6 @@
       "listingId": "XNYS:JPM",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -17443,6 +17486,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -17456,22 +17504,17 @@
         "risk": 0
       },
       "prior7": {
-        "issuer": 0,
+        "issuer": 1,
         "media": 0
       },
       "recent7": {
-        "issuer": 1,
+        "issuer": 0,
         "media": 0
       }
     },
     "XNYS:LLY": {
       "listingId": "XNYS:LLY",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -17534,6 +17577,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17561,11 +17609,6 @@
       "listingId": "XNYS:LMT",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -17627,6 +17670,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17654,11 +17702,6 @@
       "listingId": "XNYS:LNG",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -17720,6 +17763,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17735,22 +17783,17 @@
         "risk": 0
       },
       "prior7": {
-        "issuer": 1,
+        "issuer": 2,
         "media": 0
       },
       "recent7": {
-        "issuer": 1,
+        "issuer": 0,
         "media": 0
       }
     },
     "XNYS:MA": {
       "listingId": "XNYS:MA",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -17813,6 +17856,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17840,11 +17888,6 @@
       "listingId": "XNYS:MS",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -17906,6 +17949,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -17933,11 +17981,6 @@
       "listingId": "XNYS:NEE",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -17999,6 +18042,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18026,11 +18074,6 @@
       "listingId": "XNYS:NOC",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18092,6 +18135,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18119,11 +18167,6 @@
       "listingId": "XNYS:ORCL",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18185,6 +18228,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18212,11 +18260,6 @@
       "listingId": "XNYS:PG",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18278,6 +18321,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18305,11 +18353,6 @@
       "listingId": "XNYS:RTX",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18371,6 +18414,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18398,11 +18446,6 @@
       "listingId": "XNYS:SLB",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18464,6 +18507,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18491,11 +18539,6 @@
       "listingId": "XNYS:UNH",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18557,6 +18600,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18584,11 +18632,6 @@
       "listingId": "XNYS:UNP",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18650,6 +18693,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18677,11 +18725,6 @@
       "listingId": "XNYS:UPS",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18743,6 +18786,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18770,11 +18818,6 @@
       "listingId": "XNYS:V",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18837,6 +18880,11 @@
         {
           "date": "2026-11-23",
           "issuer": 1,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
           "media": 0
         }
       ],
@@ -18863,11 +18911,6 @@
       "listingId": "XNYS:VST",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -18929,6 +18972,11 @@
         },
         {
           "date": "2026-11-23",
+          "issuer": 0,
+          "media": 0
+        },
+        {
+          "date": "2026-11-24",
           "issuer": 0,
           "media": 0
         }
@@ -18956,11 +19004,6 @@
       "listingId": "XNYS:XOM",
       "daily": [
         {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
-        {
           "date": "2026-11-11",
           "issuer": 0,
           "media": 0
@@ -19024,6 +19067,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -19048,11 +19096,6 @@
     "YACHT.MI": {
       "listingId": "YACHT.MI",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -19117,6 +19160,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 2
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [],
@@ -19131,7 +19179,7 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       },
       "recent7": {
         "issuer": 0,
@@ -19141,11 +19189,6 @@
     "YAR.OL": {
       "listingId": "YAR.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -19210,6 +19253,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -19224,21 +19272,16 @@
       },
       "prior7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 3
       }
     },
     "ZAP.OL": {
       "listingId": "ZAP.OL",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -19303,6 +19346,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 0
         }
       ],
       "potential": [],
@@ -19327,11 +19375,6 @@
     "ZEAL.CO": {
       "listingId": "ZEAL.CO",
       "daily": [
-        {
-          "date": "2026-11-10",
-          "issuer": 0,
-          "media": 0
-        },
         {
           "date": "2026-11-11",
           "issuer": 0,
@@ -19396,6 +19439,11 @@
           "date": "2026-11-23",
           "issuer": 0,
           "media": 0
+        },
+        {
+          "date": "2026-11-24",
+          "issuer": 0,
+          "media": 1
         }
       ],
       "potential": [
@@ -19423,7 +19471,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     }
   }
