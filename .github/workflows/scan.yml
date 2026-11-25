@@ -73,6 +73,10 @@ jobs:
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: python scripts/scan.py
 
+      - name: Collect unlisted company named news references (bounded existing provider)
+        continue-on-error: true
+        run: python scripts/unlisted_news_n41.py
+
       - name: Collect original Nasdaq Nordic notices (official bounded RSS)
         continue-on-error: true
         run: python scripts/nasdaq_nordic_notices.py
