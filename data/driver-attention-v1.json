@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T06:06:34Z",
+  "generated": "2026-11-25T07:07:16Z",
   "windowStart": "2026-11-11",
   "windowEnd": "2026-11-24",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -1625,8 +1625,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-13T06:32:26Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-25T06:50:30Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -3719,9 +3719,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-23T14:08:43Z",
+      "potential": [
+        {
+          "id": "EKTA-B.ST:a4e992e2f10b50c8c8a5bcba1998a55a873db8a069dadf090092064680701a83",
+          "published": "2026-11-25T06:34:43Z",
+          "headline": "Elekta Outlook Remains Unchanged",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQnk1bHV6WDR2Tng1cTFObEJXY0taaVpKTl9WeUdTUjZMY3g4eUpnVXM5NVAtcjZRNFFMcW1xXzNERVRQdmtIN2t2NWd3YWlNYVRNUV9GRnN6MjdPSzBKN0YyZl9qOFdJeGV2S002ZUM0cmtaVWlYMlZVWlYwUVBJVjhVYTk2UEhjeFYyQUNQRHRucXJJeWpMT2dwclRfV0EyRGxVeg?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        }
+      ],
+      "observedRecords": 6,
+      "latestRecord": "2026-11-25T07:03:59Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4984,8 +4993,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-25T05:56:40Z",
+      "observedRecords": 9,
+      "latestRecord": "2026-11-25T06:56:49Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -5903,8 +5912,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 41,
-      "latestRecord": "2026-11-25T06:00:21Z",
+      "observedRecords": 42,
+      "latestRecord": "2026-11-25T06:12:16Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -11690,8 +11699,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 78,
-      "latestRecord": "2026-11-24T14:34:00Z",
+      "observedRecords": 79,
+      "latestRecord": "2026-11-25T06:03:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -19274,12 +19283,12 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-19T09:55:50Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-24T13:42:16Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -19293,7 +19302,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       }
     },
     "ZAP.OL": {

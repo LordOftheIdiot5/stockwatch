@@ -1,37 +1,37 @@
 {
-  "generated": "2026-11-25T06:06:34Z",
-  "total": 2412,
-  "relevant": 1589,
-  "review": 738,
+  "generated": "2026-11-25T07:07:16Z",
+  "total": 2426,
+  "relevant": 1597,
+  "review": 744,
   "duplicates": 122,
   "issuerLinked": 438,
-  "namedReferences": 1236,
-  "withheldFromIssuerEvents": 738,
+  "namedReferences": 1244,
+  "withheldFromIssuerEvents": 744,
   "identityTiers": {
     "issuer_verified": 438,
-    "named_reference": 1236,
-    "review_candidate": 738
+    "named_reference": 1244,
+    "review_candidate": 744
   },
   "driverClassification": {
     "version": 1,
-    "classified": 541,
+    "classified": 544,
     "categories": {
-      "numbers": 301,
+      "numbers": 303,
       "prices": 7,
       "operations": 1,
-      "potential": 256,
+      "potential": 257,
       "risk": 3
     },
     "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
   },
   "categories": {
-    "Earnings / results": 320,
+    "Earnings / results": 322,
     "Dividends": 30,
     "M&A": 102,
-    "Guidance": 45,
-    "Contracts": 201,
+    "Guidance": 46,
+    "Contracts": 202,
     "Capital & ownership": 3,
     "Management": 79,
-    "General": 1632
+    "General": 1642
   }
 }
