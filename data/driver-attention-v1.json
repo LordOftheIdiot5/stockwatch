@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T17:07:17Z",
+  "generated": "2026-11-25T17:27:21Z",
   "windowStart": "2026-11-11",
   "windowEnd": "2026-11-24",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -6925,7 +6925,7 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 8,
+      "observedRecords": 9,
       "latestRecord": "2026-11-25T15:15:41Z",
       "topicCounts": {
         "numbers": 1,
@@ -7223,6 +7223,14 @@
       ],
       "potential": [
         {
+          "id": "MYCR.ST:123f60d882396bdbcf4c302b4d5ebf2915ae846ab4462cd016379fd4a8fee5f4",
+          "published": "2026-11-25T12:20:59Z",
+          "headline": "Mycronic får order värd 5-7 miljoner dollar",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5nR0p1NUt2Zlg5QUphbnVqRzJuM3Nod0pUQ0N4bWlRUHNobVBfQ0l5MXRCUWhJVlhyZ0pDYW5MVDNFV1ZOeTdSOVRfZ1lCQ3hGWUF1cA?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "MYCR.ST:b3a9828909cfe5320b482f0e7fcf627e2c0fbc9210018ade473ce7d021890f8b",
           "published": "2026-11-25T07:44:00Z",
           "headline": "Mycronic Receives USD 5–7 Million SLX Mask Writer Order",
@@ -7375,8 +7383,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-25T07:44:00Z",
+      "observedRecords": 24,
+      "latestRecord": "2026-11-25T12:20:59Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9838,8 +9846,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-25T16:43:49Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-25T17:14:18Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11504,8 +11512,8 @@
           "topic": "Other potential-related topic"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-24T15:36:15Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-25T11:52:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
