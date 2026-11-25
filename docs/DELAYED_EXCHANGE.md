@@ -15,9 +15,10 @@ a persistent private disk outside the repository:
 
 Available market codes: OSL, PAR, AMS, BRU, DUB, LIS, MIL. The download URL
 pattern is based on the public exchange download service; validate live.
-Nasdaq report discovery does not download trade files. Contact
-dataeurope@nasdaq.com for permission; Euronext contact:
-databyeuronext@euronext.com.
+Nasdaq scheduled report discovery does not download trade files. Nasdaq European
+Data confirmed private non-commercial use of downloadable files on 2026-11-25.
+Public value-added display, polling cadence and long-term retention remain
+separate review gates. Euronext contact: databyeuronext@euronext.com.
 
 The scheduled workflow probes endpoints and validates the Euronext archive
 header without publishing or persisting records. It is not a historical
@@ -40,3 +41,25 @@ rejected. A successful join remains a candidate for human review, not verified
 active-listing status or permission to publish. Segment MICs are not silently
 mapped to operating MICs. CI reports a whole-universe count and validation
 status, not the exchange-derived records. Do not publish the private output.
+
+## N09a Nasdaq private CSV pilot (25 November 2026)
+
+Official report pages: https://tradereports.nasdaq.com/shares/trade-reports/post-trade
+and https://tradereports.nasdaq.com/baltic-trade-reports/equity/post-trade . Files
+are delayed 15 minutes, generated every minute in market hours and available
+online for 48 hours. The portal currently returned no file links in our
+external inspection. When an actual CSV is available, download one via the
+official report page to a private location outside the repository and run:
+
+    python scripts/nasdaq_private_csv_probe.py --csv /private/sample.csv --private-noncommercial
+
+The local probe is bounded to 8 MiB and 100,000 rows; UTF-8 CSV only. It reports
+candidate column roles and counts, not raw header values, trade rows, prices,
+identities or source file paths. Unknown schemas fail closed. Candidate field
+aliases are not an assertion about the actual Nasdaq CSV format. No network
+polling or archive is added; delete temporary sample after the review unless
+retention is authorized. Do not upload CSVs or include them in CI artifacts.
+Run fixture tests with python -m unittest discover -s tests -p test_nasdaq_private_csv_probe.py -v .
+Next validate actual provider format, timestamp semantics, correction flags,
+units and exact MIC/ISIN joins before any price normalization or publication.
+Any future authorized public display must say "Data Delayed 15 minutes".
