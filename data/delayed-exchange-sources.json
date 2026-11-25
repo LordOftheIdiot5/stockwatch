@@ -26,12 +26,18 @@
         "Stockholm",
         "Copenhagen",
         "Helsinki",
-        "Iceland"
+        "Iceland",
+        "Tallinn",
+        "Riga",
+        "Vilnius"
       ],
       "delayMinutes": 15,
-      "collection": "Official report discovery only; commercial trade collection pending permission",
-      "publicDisplay": "Commercial usage terms to confirm",
-      "contact": "dataeurope@nasdaq.com"
+      "collection": "Private non-commercial analysis of official downloadable regulatory CSV confirmed by Nasdaq European Data, 2026-11-25; operator-selected local schema probe only, automated cadence unconfirmed",
+      "publicDisplay": "Free end-user display supported in principle; Stockwatch value-added/advertising scope and applicable agreement not yet resolved; public quote publication disabled",
+      "contact": "dataeurope@nasdaq.com",
+      "onlineAvailabilityHours": 48,
+      "balticUrl": "https://tradereports.nasdaq.com/baltic-trade-reports/equity/post-trade",
+      "retention": "Long-term archive approval not established"
     }
   ]
 }
