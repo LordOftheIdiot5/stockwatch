@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T17:03:04Z",
+  "generated": "2026-11-25T17:07:17Z",
   "windowStart": "2026-11-11",
   "windowEnd": "2026-11-24",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -984,7 +984,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 2,
+      "observedRecords": 3,
       "latestRecord": "2026-11-25T12:28:36Z",
       "topicCounts": {
         "numbers": 0,
@@ -3193,7 +3193,7 @@
         {
           "date": "2026-11-24",
           "issuer": 2,
-          "media": 14
+          "media": 15
         }
       ],
       "potential": [
@@ -3214,11 +3214,11 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 26,
+      "observedRecords": 27,
       "latestRecord": "2026-11-25T13:27:40Z",
       "topicCounts": {
         "numbers": 11,
-        "prices": 0,
+        "prices": 1,
         "operations": 0,
         "potential": 1,
         "risk": 0
@@ -3229,7 +3229,7 @@
       },
       "recent7": {
         "issuer": 2,
-        "media": 16
+        "media": 17
       }
     },
     "DNORD.CO": {
@@ -10700,6 +10700,14 @@
       ],
       "potential": [
         {
+          "id": "SAAB-B.ST:25b14df5bdc44b6cef48314948f434e6e17c8c17f2d8177394fe66aa3cdaab4a",
+          "published": "2026-11-25T16:47:21Z",
+          "headline": "Saab completes acquisition of maritime autonomy developer Mythos AI",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUDF5T0JVd3ZZbS0zNzIxREVhOHBNbmU2b0tBUXVPU25GTEJQa2cyTlJ6SHh3VXd6R081N1NuRnNFb3UtTnozMks1ZGZwZ0JzYTVJZG5LTFkxMFFiX3dEWTdNOTE5R3ZtRkg5WmFQcTk0dk1NRDFBSGtZOHpOSDdyOTRvZmdSWnpfV3YtNXRuV2pOWUswTksw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "SAAB-B.ST:f3456290527930fa17f0ff654cbf399ddf4468c52f14b2e0cc2bfafc49d8bcd9",
           "published": "2026-11-25T13:51:31Z",
           "headline": "Saab Acquires U.S.-Based Mythos AI to Expand Maritime Autonomy",
@@ -10836,8 +10844,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 22,
-      "latestRecord": "2026-11-25T13:51:31Z",
+      "observedRecords": 23,
+      "latestRecord": "2026-11-25T16:47:21Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,

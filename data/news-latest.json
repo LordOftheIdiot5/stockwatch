@@ -1,6 +1,61 @@
 {
-  "generated": "2026-11-25T17:03:04Z",
+  "generated": "2026-11-25T17:07:17Z",
   "items": [
+    {
+      "id": "RACE.MI:ab32dfb2e1bedfbfd9ffde8af20593bd11814c0bbbfc519d63e7d8424ea03076",
+      "ticker": "RACE.MI",
+      "name": "Ferrari",
+      "sector": "Luxury",
+      "type": "news",
+      "headline": "Ferrari, doppia vittoria a Topgear.Com Awards con 12Cilindri Manuale e 296Speciale",
+      "english": "Ferrari wins twice at the TopGear.Com Awards with the 12Cilindri Manual and the 296Speciale",
+      "publisher": "La Provincia di Cremona",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQT2xKM0xrWEJ5RWVRWm0wYkZWYmpLamFBbTUyYjhmSGFrMFNnVGVBY3gwVUx1M3FVOVluUnJocGp5ZnFqUUVxT3pDdjBjcGhMek9ZSEdueTRzS21EYjJQaHlYR1h6ZEtWek9XWmJEaEZLbnY3RDJHbTV5d0JkYnBQZmVWSjR2U2s3QmZFbWFBdUdwWjZSZDBrWElfVUZkRzE3bUZNaVJyWmg5Z1BHYW1WUlozRWhUVmdYczRSakxzeU13SU5FUjRuTmtMWERkNkJqc0RxbTZiNnZCQQ?oc=5",
+      "published": "2026-11-25T16:53:04Z",
+      "lang": "it",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "name_mentioned",
+      "relevance": "review",
+      "identityReviewReason": "Ferrari brand/sport mention lacks issuer-financial context",
+      "identityTier": "review_candidate",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "news.google.com",
+      "priority": "normal"
+    },
+    {
+      "id": "SAAB-B.ST:25b14df5bdc44b6cef48314948f434e6e17c8c17f2d8177394fe66aa3cdaab4a",
+      "ticker": "SAAB-B.ST",
+      "name": "Saab",
+      "sector": "Industry & defence",
+      "type": "news",
+      "headline": "Saab completes acquisition of maritime autonomy developer Mythos AI",
+      "english": null,
+      "publisher": "WorkBoat",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUDF5T0JVd3ZZbS0zNzIxREVhOHBNbmU2b0tBUXVPU25GTEJQa2cyTlJ6SHh3VXd6R081N1NuRnNFb3UtTnozMks1ZGZwZ0JzYTVJZG5LTFkxMFFiX3dEWTdNOTE5R3ZtRkg5WmFQcTk0dk1NRDFBSGtZOHpOSDdyOTRvZmdSWnpfV3YtNXRuV2pOWUswTksw?oc=5",
+      "published": "2026-11-25T16:47:21Z",
+      "lang": "en",
+      "regulatory": false,
+      "sourceIssuer": null,
+      "sourceFeed": null,
+      "match": "unverified",
+      "relevance": "mentioned",
+      "identityReviewReason": "named headline reference only; not issuer-confirmed",
+      "identityTier": "named_reference",
+      "category": "M&A",
+      "driverVersion": 1,
+      "driverTags": [
+        {
+          "driver": "potential",
+          "basis": "headline category: M&A"
+        }
+      ],
+      "sourceDomain": "news.google.com",
+      "priority": "high"
+    },
     {
       "id": "PRY.MI:06851beb873259ab28c98f5fa785c75397751219c26f23d3022184b90ab38098",
       "ticker": "PRY.MI",
@@ -2527,81 +2582,31 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "AZA.ST:1777b5da76f488abbff6b49cd214e12b8fdfb6242efa5496bd9ad2127e2257df",
-      "ticker": "AZA.ST",
-      "name": "Avanza",
-      "sector": "Banks & insurance",
-      "type": "news",
-      "headline": "Volvo får rekordorder på drygt tusen lastbilar i Storbritannien",
-      "english": null,
-      "publisher": "Placera.se",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbW5oNjZSU19QMFA5emtYaDlOTGY1NDBpZmtlcWg0WTd3UWV0VXF5WG82d25pM3VXSnIxek4zZWxOazQ5UjhOVjFpczZJLTMya3A2M1VNSDR6dkVUVFFvNGtFX1l3NnBPSHJoY3hoeTAzWlBFZGFPaTFMcDFIeVZBS0NUQ1Vva0ZnSkRkOFhRNHAwYWlNMXpzbFNrZGo2c3BIdWlUanYtQ0Q?oc=5",
-      "published": "2026-11-25T08:08:26Z",
-      "lang": "sv",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "review",
-      "identityReviewReason": "no issuer-specific headline reference",
-      "identityTier": "review_candidate",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
-    },
-    {
-      "id": "P911.DE:666f5c2ec4a1e407b268974aa77db179e391041d42c9496d0a416f420813912f",
-      "ticker": "P911.DE",
-      "name": "Porsche",
-      "sector": "Luxury",
-      "type": "news",
-      "headline": "Porsche 911 GT3 R wins championships and races worldwide in 2026",
-      "english": null,
-      "publisher": "Porsche Newsroom",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUlF4WTM0akhPaVY1VjBHVVU3VzR0bzU5UmViZUJWV09QRWVmcF91bm15WkV3TEcweHQ5NXJRWWUteFRWX2w5eXlyNVdPNV9neDhTWW5MMjRDazZSLVFuYzlhbTQzUUxCWXRkZERfRWtxSHh1c0Zkd0YycWhLcE43U0ZUMTBkMk9iNU03OU1xNGYxQTM1anY2NXhsaw?oc=5",
-      "published": "2026-11-25T08:03:25Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "name_mentioned",
-      "relevance": "review",
-      "identityReviewReason": "Porsche brand mention lacks correct legal issuer",
-      "identityTier": "review_candidate",
-      "category": "General",
-      "driverVersion": 1,
-      "driverTags": [],
-      "sourceDomain": "news.google.com",
-      "priority": "normal"
     }
   ],
-  "totalStored": 2563,
+  "totalStored": 2567,
   "limit": 100,
   "quality": {
-    "total": 2563,
-    "relevant": 1670,
-    "review": 801,
+    "total": 2567,
+    "relevant": 1673,
+    "review": 802,
     "duplicates": 131,
     "issuerLinked": 437,
-    "namedReferences": 1325,
-    "withheldFromIssuerEvents": 801,
+    "namedReferences": 1328,
+    "withheldFromIssuerEvents": 802,
     "identityTiers": {
       "issuer_verified": 437,
-      "named_reference": 1325,
-      "review_candidate": 801
+      "named_reference": 1328,
+      "review_candidate": 802
     },
     "driverClassification": {
       "version": 1,
-      "classified": 567,
+      "classified": 569,
       "categories": {
         "numbers": 312,
-        "prices": 9,
+        "prices": 10,
         "operations": 1,
-        "potential": 270,
+        "potential": 271,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
@@ -2609,12 +2614,12 @@
     "categories": {
       "Earnings / results": 333,
       "Dividends": 31,
-      "M&A": 111,
+      "M&A": 112,
       "Guidance": 47,
       "Contracts": 215,
       "Capital & ownership": 3,
       "Management": 89,
-      "General": 1734
+      "General": 1737
     }
   }
 }
