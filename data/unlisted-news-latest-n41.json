@@ -1,7 +1,48 @@
 {
   "schema": 1,
-  "attemptedAt": null,
+  "attemptedAt": "2026-11-25T22:33:07.730155+00:00",
   "items": [],
-  "coverage": {},
-  "notice": "Awaiting first scanner attempt; reviewed source announcements separate."
+  "coverage": {
+    "neura": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "agile": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "sitegeist": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "sit": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "anybotics": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "exotec": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "saga": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    },
+    "wandercraft": {
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
+      "retainedReferences": 0
+    }
+  },
+  "notice": "Open-web headline references only; no verified issuer event, IPO or trading status inferred."
 }

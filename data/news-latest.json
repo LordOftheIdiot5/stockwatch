@@ -1,6 +1,31 @@
 {
-  "generated": "2026-11-25T17:27:21Z",
+  "generated": "2026-11-25T22:34:09Z",
   "items": [
+    {
+      "id": "PROXI.OL:31d9d6417e212b905c9ea595a3947e60808eb0e5ff7703032391dd3f24631cb9",
+      "ticker": "PROXI.OL",
+      "name": "Proximar Seafood",
+      "sector": "Aquaculture",
+      "type": "disclosure",
+      "headline": "Proximar Seafood AS: Loan extensions received as part of ongoing recapitalization process",
+      "english": null,
+      "publisher": "Oslo NewsWeb",
+      "url": "https://newsweb.oslobors.no/message/687444",
+      "published": "2026-11-25T20:56:29Z",
+      "lang": "no",
+      "regulatory": false,
+      "sourceIssuer": "PROXI",
+      "sourceFeed": "newsweb",
+      "match": "issuer_code",
+      "relevance": "strong",
+      "identityReviewReason": "source-provided issuer code on disclosure",
+      "identityTier": "issuer_verified",
+      "category": "General",
+      "driverVersion": 1,
+      "driverTags": [],
+      "sourceDomain": "newsweb.oslobors.no",
+      "priority": "normal"
+    },
     {
       "id": "PRY.MI:725962557c88a71977fa559c1408f82fd7a962038b25942472a87ee424b2bc19",
       "ticker": "PRY.MI",
@@ -2557,58 +2582,28 @@
       "driverTags": [],
       "sourceDomain": "news.google.com",
       "priority": "normal"
-    },
-    {
-      "id": "SAAB-B.ST:3318f267785addd05d91393b648cc39b97eb7ff4d1485c87b752c6fdecbf3825",
-      "ticker": "SAAB-B.ST",
-      "name": "Saab",
-      "sector": "Industry & defence",
-      "type": "news",
-      "headline": "Saab acquires Mythos AI",
-      "english": null,
-      "publisher": "Calibre Defence",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE42Q0xFOW05SGdqZ19lRk5wT3kwaHBoMHBXdzhsMmk0X3VUbk55b3pqYWl2cUpSNmp6RmFOcFIzYTJhN2dkckxnLWxEemhfYjJoTmxNcFdqN1BBZ0J0Uloxd0hqZzFjU0k0Ynh0RFBlZFRqT3ZBU19WbWh3?oc=5",
-      "published": "2026-11-25T08:43:17Z",
-      "lang": "en",
-      "regulatory": false,
-      "sourceIssuer": null,
-      "sourceFeed": null,
-      "match": "unverified",
-      "relevance": "mentioned",
-      "identityReviewReason": "named headline reference only; not issuer-confirmed",
-      "identityTier": "named_reference",
-      "category": "M&A",
-      "driverVersion": 1,
-      "driverTags": [
-        {
-          "driver": "potential",
-          "basis": "headline category: M&A"
-        }
-      ],
-      "sourceDomain": "news.google.com",
-      "priority": "high"
     }
   ],
-  "totalStored": 2572,
+  "totalStored": 2571,
   "limit": 100,
   "quality": {
-    "total": 2572,
-    "relevant": 1677,
+    "total": 2571,
+    "relevant": 1676,
     "review": 803,
     "duplicates": 131,
-    "issuerLinked": 437,
+    "issuerLinked": 436,
     "namedReferences": 1332,
     "withheldFromIssuerEvents": 803,
     "identityTiers": {
-      "issuer_verified": 437,
+      "issuer_verified": 436,
       "named_reference": 1332,
       "review_candidate": 803
     },
     "driverClassification": {
       "version": 1,
-      "classified": 570,
+      "classified": 569,
       "categories": {
-        "numbers": 312,
+        "numbers": 311,
         "prices": 10,
         "operations": 1,
         "potential": 272,
@@ -2617,7 +2612,7 @@
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 333,
+      "Earnings / results": 332,
       "Dividends": 31,
       "M&A": 112,
       "Guidance": 47,

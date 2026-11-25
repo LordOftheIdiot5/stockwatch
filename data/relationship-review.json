@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T17:27:22.754141+00:00",
-  "newsRecordsScanned": 2584,
+  "generated": "2026-11-25T22:34:10.374517+00:00",
+  "newsRecordsScanned": 2585,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3693,6 +3693,18 @@
       "candidateType": "headline_event",
       "published": "2026-11-25T16:38:41Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSU04ZTRNT0U3OFpzMzNWTnZiRlVDN2RKNXIyRlNPbXlpRHpfZ2UtZ2RRZm12dmVXdUhWLUxPazJUbjZPcDBNQzlYYmV4XzlGd3lLcS1DNWozRElOZDdteklJRUxDMDZfVXRwVFBiSVRIQk00TDhObVFFeXV3SXJDeG1sQmswU0ZhYnRVeVM4NVlEMUZjRTBBZEp4Zk5SWFh4OW94NkRiN0tadw?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "0e9e82c570266d1dbc653f5fe3379f18631d369b5b4dde854ca9a918b54763cc",
+      "newsId": "PROXI.OL:31d9d6417e212b905c9ea595a3947e60808eb0e5ff7703032391dd3f24631cb9",
+      "entityIds": [],
+      "issuerTicker": "PROXI.OL",
+      "candidateType": "issuer_event",
+      "published": "2026-11-25T20:56:29Z",
+      "sourceUrl": "https://newsweb.oslobors.no/message/687444",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
