@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T10:08:03Z",
+  "generated": "2026-11-25T11:07:24Z",
   "windowStart": "2026-11-11",
   "windowEnd": "2026-11-24",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -3185,7 +3185,7 @@
         {
           "date": "2026-11-24",
           "issuer": 2,
-          "media": 13
+          "media": 14
         }
       ],
       "potential": [
@@ -3206,7 +3206,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 24,
+      "observedRecords": 25,
       "latestRecord": "2026-11-25T04:01:05Z",
       "topicCounts": {
         "numbers": 11,
@@ -3221,7 +3221,7 @@
       },
       "recent7": {
         "issuer": 2,
-        "media": 15
+        "media": 16
       }
     },
     "DNORD.CO": {
@@ -3729,8 +3729,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-25T09:47:19Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-25T10:35:57Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4519,8 +4519,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 69,
-      "latestRecord": "2026-11-25T09:48:27Z",
+      "observedRecords": 70,
+      "latestRecord": "2026-11-25T10:55:26Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -5896,6 +5896,14 @@
       ],
       "potential": [
         {
+          "id": "IFX.DE:f57cc54395382becefd759081d2932263051bf8e4e7e8c311243027b6ee35395",
+          "published": "2026-11-25T10:28:22Z",
+          "headline": "Kinzey Capital Management Announces Analysis of Infineon FY27 AI Sales Outlook",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZkFneDZZT0pfMXRCRndMbE15Y1RsdGNhdFZrNXBzazFFaFdmS0lqYmwybmstRFVzcE9ka1d4eUU1c0FraUU0QXZBZlY4SXZES3JfcFNhY3dBSzR1eDJBcndYMk55Qy1sbm5HYURPQzl5cU1yejBXbE9QWWNjdy1DM3M3UG1vY3dmRjAwaWNaLXFydHBkdjM2UjVqMzk4R05sYXpxckRHTHVGN1VBZnlDbjg0NHplNDFi?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "IFX.DE:06a9a867b13899a8d63aaf9cb489634396b2f989dd72e47f8bff68d7380e3b47",
           "published": "2026-11-21T10:29:37Z",
           "headline": "Vertiv signs three-year power semiconductor supply agreement with Infineon",
@@ -5912,8 +5920,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 43,
-      "latestRecord": "2026-11-25T08:38:11Z",
+      "observedRecords": 45,
+      "latestRecord": "2026-11-25T10:47:27Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7207,6 +7215,14 @@
       ],
       "potential": [
         {
+          "id": "MYCR.ST:b3a9828909cfe5320b482f0e7fcf627e2c0fbc9210018ade473ce7d021890f8b",
+          "published": "2026-11-25T07:44:00Z",
+          "headline": "Mycronic Receives USD 5–7 Million SLX Mask Writer Order",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPYXFDNFktbzgwQldiQnJuTHJEdUJkNmtONkd6U2MwWks1bFI4T2VmNzJXZXpmY0dpRlZaeXV4THlRdkNEd3VDRjZlRloweUFJTWs2OGdxWmgzeWphVzFZXzJycmhiOVZ4YUJZR1ZBUVpidU9GTVlBV01icnc4N0loNjJBZFRGVU5Jc20tNkJNUVM4elRRZjJIUEdCTmFxNGExa0pNLTQ0WXNOelE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "MYCR.ST:2a58672deccb9f2362fbc21cd35baa82d72bd0204de613df1dfe454894ef1d42",
           "published": "2026-11-25T07:33:08Z",
           "headline": "Mycronic får Asien-order",
@@ -7343,8 +7359,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 21,
-      "latestRecord": "2026-11-25T07:33:08Z",
+      "observedRecords": 22,
+      "latestRecord": "2026-11-25T07:44:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7525,23 +7541,23 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 12
+          "media": 11
         }
       ],
       "potential": [
+        {
+          "id": "NDX1.DE:70b536a01be9872aebf9dc41389921ff21321b22c2865933e6f16b49264c5a5e",
+          "published": "2026-11-25T10:21:55Z",
+          "headline": "Nordex Group receives 133 MW order from Electrica for wind farm in Romania",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWVV3Z1hNN0hSb3JNdzhDVXJVcDVWaWhJaTZfcUpuR2ExbzNFazVZelE4OUJFblVXVUZXUHFBcGF4TGgwM2N0RGIxZnBiMnJ0Vk9Ia055TkJWenZockNDN0M4RHpuVmlaS1YxNkttQnJPTmpoeXFiTzZGM1NTRk5QNkFnZUtuZ3pfdjhGRm03NWozU0Zoc3hkQ19ZczliSFgwa29MNmlxeHdwVGRpWkhDZDBuQXktVmZxU1E?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "NDX1.DE:60eb56b073c4fd84c942900531c03c9b8e6ffddcd3eb92f1cb8dbb90e5a885c1",
           "published": "2026-11-25T08:57:42Z",
           "headline": "Nordex Group receives 133 MW wind turbine order from Electrica",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdURqVDFkaUFWV2d2aTNMYnVzVHRkTzdqckpkTV9xYjdZLWlCRk91YlQ1NFVoSUg3cUNNMHRZOUlWWmRfdVpqNWluRU9rc0JSQ2o0eHJZczJabWNGRjFzWEtBVXN4YU56dkhFR0JhTXRSa2FkdHpQdU9uLUJybkhwNDVzVm05dVdpR2FTOVZ4VEZlVnNWTkZqcE9ydVo3NTVxNXc5NQ?oc=5",
-          "evidence": "named_reference",
-          "topic": "Contracts / agreements"
-        },
-        {
-          "id": "NDX1.DE:d6be00ec77bc4c88c5d041d59176255dd2811e54547983814a319b6fe42de14f",
-          "published": "2026-11-24T22:44:54Z",
-          "headline": "Nordex Group Receives 133 MW Order From Electrica for Wind Farm in Romania",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOUd3MjZVV19PWE9meG5kVFdGQ05WNU5SQ2ZlQk5TTGVxMjZZODBHRF9pa2UyUzFkQkEyTV95VFpCRGx1YURDWEFGSThpOHhGbHlNamo3NWFkQzEteDVMZmhyRG9GMG9mcWgyZzZZMXBWblR4UzJzaVVNb1VvTzBMNXFfSkpEa29fOFdzOGpB?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
         },
@@ -7651,12 +7667,12 @@
         }
       ],
       "observedRecords": 43,
-      "latestRecord": "2026-11-25T09:43:16Z",
+      "latestRecord": "2026-11-25T10:21:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 10,
+        "potential": 9,
         "risk": 0
       },
       "prior7": {
@@ -7665,7 +7681,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 26
+        "media": 25
       }
     },
     "NELLY.ST": {
@@ -10103,8 +10119,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-25T10:52:03Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10448,8 +10464,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 14,
-      "latestRecord": "2026-11-24T18:48:24Z",
+      "observedRecords": 15,
+      "latestRecord": "2026-11-25T10:05:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13585,8 +13601,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 148,
-      "latestRecord": "2026-11-24T17:48:14Z",
+      "observedRecords": 149,
+      "latestRecord": "2026-11-25T10:18:15Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,

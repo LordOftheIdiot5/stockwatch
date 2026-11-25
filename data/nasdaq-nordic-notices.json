@@ -1,27 +1,82 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T10:08:02Z",
+  "generated": "2026-11-25T11:07:23Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-25T10:08:02Z",
-      "lastSuccess": "2026-11-25T10:08:02Z",
+      "lastAttempt": "2026-11-25T11:07:23Z",
+      "lastSuccess": "2026-11-25T11:07:23Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-25T10:08:02Z",
-      "lastSuccess": "2026-11-25T10:08:02Z",
+      "lastAttempt": "2026-11-25T11:07:23Z",
+      "lastSuccess": "2026-11-25T11:07:23Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:8e365f41d593f52cfe46d0593d7664fbf5ba49ca043fdc936123790a6f2cb347",
+      "title": "Commercial Paper(s) issued by Humlegården Fastigheter AB (publ) will be admitted to trading on Nasdaq STO Sustainable Commercial Paper (Record Id 373539)",
+      "published": "2026-11-25T10:56:47Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b05ae296e4eb4c8c403afa418215ff18b&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:33a3ef125d9f6ee8d75e8a47cca87ff5ff7cde75a999f0661aef8e1a7dfa745c",
+      "title": "Structured bond(s) issued by Nordea Bank Abp will be admitted to trading on STO Structured Products NOK (Record Id 373645)",
+      "published": "2026-11-25T10:41:33Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bba374c6b66e1864e08d2082af0b4768e&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:1095e498de7c9c40e15f74a542d574a8f0cf938ab6ad1aef33ddf06118054aa9",
+      "title": "Structured bond(s) issued by Nordea Bank Abp will be admitted to trading on STO Structured Products NOK (Record Id 373644)",
+      "published": "2026-11-25T10:41:06Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b52d0689457c1902d500fb6ac0851e4da&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:cf339742777ddcf701deda9b77c735ddb126b25114b24b4c6d4f61300d6588f0",
+      "title": "Anticipated adjustment due to share distribution in Stora Enso (246/26)",
+      "published": "2026-11-25T10:17:35Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b0b51ca67255ae7a60484f5ae9546e1fa&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:99af64a77e4b82c72957ccb5361657b665064e148001a8fbddc4a6d7e4934caf",
+      "title": "Reminder - Trading ban for SKF Derivatives 245/26",
+      "published": "2026-11-25T10:13:43Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bd8fdb7c75e110eacf32c8b1bb144094b&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:8010ff8e44fefdf8b84d8d23d72c305ff24956c60485fcb37fbfaa97873b0764",
       "title": "Bond loan(s) issued by Länsförsäkringar Bank AB will be admitted to trading on Nasdaq STO Sustainable Bonds (Record Id 373757)",

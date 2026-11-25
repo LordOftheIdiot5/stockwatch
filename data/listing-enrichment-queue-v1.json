@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T10:06:26+00:00",
+  "generated": "2026-11-25T11:06:09+00:00",
   "listings": 500,
   "totals": {
     "identity": {
@@ -17,8 +17,8 @@
       "review_retention_and_collect": 17
     },
     "news": {
-      "archive_matches_present": 107,
-      "match_issuer_and_collect": 393
+      "archive_matches_present": 108,
+      "match_issuer_and_collect": 392
     },
     "financials": {
       "resolve_issuer_then_collect_filings": 497,
@@ -1185,7 +1185,7 @@
         "identity": "resolve_identity",
         "price": "dated_observation_present",
         "historical_prices": "await_identity",
-        "news": "match_issuer_and_collect",
+        "news": "archive_matches_present",
         "financials": "resolve_issuer_then_collect_filings",
         "sector": "classification_present",
         "description": "build_source_linked_profile",
@@ -1852,7 +1852,7 @@
       "isin": null,
       "figi": null,
       "priceRoute": "euronext",
-      "priceDate": "2026-11-24",
+      "priceDate": "2026-11-25",
       "tasks": {
         "identity": "resolve_identity",
         "price": "dated_observation_present",
