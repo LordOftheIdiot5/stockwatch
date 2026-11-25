@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T09:06:43+00:00",
+  "generated": "2026-11-25T10:06:26+00:00",
   "comparisonDate": "2026-11-24",
   "totalListings": 500,
   "candidates": [
@@ -8179,6 +8179,24 @@
       ]
     },
     {
+      "id": "PILA.ST",
+      "name": "Pila Pharma",
+      "venue": "Stockholm",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-25",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "QBEN.ST",
       "name": "Qben Infra",
       "venue": "Stockholm",
@@ -8918,23 +8936,6 @@
       "id": "KLDVK.OL",
       "name": "Kaldvik",
       "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-24",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "PILA.ST",
-      "name": "Pila Pharma",
-      "venue": "Stockholm",
       "group": "monitored",
       "lastSavedDate": "2026-11-24",
       "lastSavedKind": "scanner",

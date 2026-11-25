@@ -1,27 +1,60 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T09:09:44Z",
+  "generated": "2026-11-25T10:08:02Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-25T09:09:44Z",
-      "lastSuccess": "2026-11-25T09:09:44Z",
+      "lastAttempt": "2026-11-25T10:08:02Z",
+      "lastSuccess": "2026-11-25T10:08:02Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-25T09:09:44Z",
-      "lastSuccess": "2026-11-25T09:09:44Z",
+      "lastAttempt": "2026-11-25T10:08:02Z",
+      "lastSuccess": "2026-11-25T10:08:02Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:8010ff8e44fefdf8b84d8d23d72c305ff24956c60485fcb37fbfaa97873b0764",
+      "title": "Bond loan(s) issued by Länsförsäkringar Bank AB will be admitted to trading on Nasdaq STO Sustainable Bonds (Record Id 373757)",
+      "published": "2026-11-25T09:50:29Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bc53e1a68cec219f3ef888d7f53970b2b&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:d513302f728d8fb6e84b209f25f4f77e04357b2e1159a7057dd407ebf318d90b",
+      "title": "Bond loan(s) issued by Castellum AB will be admitted to trading on Nasdaq STO Corporate Bonds (Record Id 373752)",
+      "published": "2026-11-25T09:35:08Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bd8519bea1cc79b2750cdc84b51996b71&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:36349465fef689f1bba676471af539ecf0e66fb18acf6ba3b1ea29a5cd0d7a06",
+      "title": "Structured bond(s) issued by BNP Paribas Issuance B.V. will be admitted to trading on STO Structured Products NOK (Record Id 372832)",
+      "published": "2026-11-25T09:16:19Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=beae08a68fb6b7a3e46fc108389e21eff&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:04883169f0ab9a85ca9e649a4022fdf3e3509d0f5aa866bb270f09fc8653263c",
       "title": "Bond loan(s) issued by Huddinge Kommun will be admitted to trading on Nasdaq STO Corporate Bonds (Record Id 373313)",
