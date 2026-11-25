@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-25T07:07:16Z",
-  "latestScan": "2026-11-25T07:06:40+00:00",
-  "scanAgeHours": 0.01,
-  "contextAgeHours": 0.01,
+  "generated": "2026-11-25T08:08:00Z",
+  "latestScan": "2026-11-25T08:06:52+00:00",
+  "scanAgeHours": 0.02,
+  "contextAgeHours": 0.02,
   "priceFreshness": {
     "comparisonDate": "2026-11-24",
     "equities": {
@@ -25,12 +25,12 @@
     "micProvided": 1,
     "micMissing": 138,
     "ageCalendarDays": {
-      "targetDate": 132,
+      "targetDate": 84,
       "oneDay": 4,
       "twoToThreeDays": 0,
       "fourToSevenDays": 1,
       "eightPlusDays": 1,
-      "unknownOrFuture": 1
+      "unknownOrFuture": 49
     },
     "byExchange": [
       {
@@ -89,9 +89,9 @@
         "name": "Copenhagen",
         "tracked": 11,
         "priced": 11,
-        "reported": 0,
-        "retained": 11,
-        "retainedTargetDate": 11,
+        "reported": 11,
+        "retained": 0,
+        "retainedTargetDate": 0,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -101,14 +101,14 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 11,
+          "targetDate": 0,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 0
+          "unknownOrFuture": 11
         },
-        "providerOlderSession": 11,
+        "providerOlderSession": 0,
         "providerCurrencyMismatch": 0
       },
       {
@@ -141,9 +141,9 @@
         "name": "Helsinki",
         "tracked": 1,
         "priced": 1,
-        "reported": 0,
-        "retained": 1,
-        "retainedTargetDate": 1,
+        "reported": 1,
+        "retained": 0,
+        "retainedTargetDate": 0,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -153,14 +153,14 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 1,
+          "targetDate": 0,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 0
+          "unknownOrFuture": 1
         },
-        "providerOlderSession": 1,
+        "providerOlderSession": 0,
         "providerCurrencyMismatch": 0
       },
       {
@@ -297,9 +297,9 @@
         "name": "Stockholm",
         "tracked": 40,
         "priced": 40,
-        "reported": 1,
-        "retained": 39,
-        "retainedTargetDate": 38,
+        "reported": 37,
+        "retained": 3,
+        "retainedTargetDate": 2,
         "micProvided": 0,
         "quality": {
           "comparable": 0,
@@ -309,14 +309,14 @@
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 38,
+          "targetDate": 2,
           "oneDay": 1,
           "twoToThreeDays": 0,
           "fourToSevenDays": 1,
           "eightPlusDays": 0,
-          "unknownOrFuture": 0
+          "unknownOrFuture": 36
         },
-        "providerOlderSession": 38,
+        "providerOlderSession": 2,
         "providerCurrencyMismatch": 1
       },
       {
@@ -377,8 +377,8 @@
   "priceDiagnostics": {
     "comparisonDate": "2026-11-24",
     "outcomes": {
-      "provider_older_session": 132,
-      "reported": 6,
+      "provider_older_session": 84,
+      "reported": 54,
       "currency_mismatch": 1
     },
     "byExchange": {
@@ -389,13 +389,13 @@
         "provider_older_session": 2
       },
       "Copenhagen": {
-        "provider_older_session": 11
+        "reported": 11
       },
       "HKSE": {
         "reported": 1
       },
       "Helsinki": {
-        "provider_older_session": 1
+        "reported": 1
       },
       "Irish": {
         "provider_older_session": 1
@@ -415,9 +415,9 @@
         "provider_older_session": 9
       },
       "Stockholm": {
-        "provider_older_session": 38,
-        "currency_mismatch": 1,
-        "reported": 1
+        "reported": 37,
+        "provider_older_session": 2,
+        "currency_mismatch": 1
       },
       "Vienna": {
         "provider_older_session": 2
@@ -434,17 +434,17 @@
       "tracked": 139,
       "counts": {
         "chartUnavailable": 0,
-        "barBeforeTarget": 138,
+        "barBeforeTarget": 90,
         "barOnTarget": 0,
-        "barAfterTarget": 1,
+        "barAfterTarget": 49,
         "invalidTimestamp": 0,
         "localDateDiffersUtc": 0,
-        "localDateBeforeTarget": 138,
+        "localDateBeforeTarget": 90,
         "localDateOnTarget": 0,
-        "localDateAfterTarget": 1,
+        "localDateAfterTarget": 49,
         "unknownExchangeTimezone": 0,
-        "barOlderThanRetained": 132,
-        "retainedTargetDateDespiteOlderBar": 132,
+        "barOlderThanRetained": 84,
+        "retainedTargetDateDespiteOlderBar": 84,
         "sameProviderRecovery": 0,
         "currencyMismatch": 1
       },
@@ -496,21 +496,21 @@
         {
           "name": "Copenhagen",
           "tracked": 11,
-          "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-23",
+          "providerUtcEarliest": "2026-11-25",
+          "providerUtcLatest": "2026-11-25",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 11,
+            "barBeforeTarget": 0,
             "barOnTarget": 0,
-            "barAfterTarget": 0,
+            "barAfterTarget": 11,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 11,
+            "localDateBeforeTarget": 0,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 0,
+            "localDateAfterTarget": 11,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 11,
-            "retainedTargetDateDespiteOlderBar": 11,
+            "barOlderThanRetained": 0,
+            "retainedTargetDateDespiteOlderBar": 0,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -562,21 +562,21 @@
         {
           "name": "Helsinki",
           "tracked": 1,
-          "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-23",
+          "providerUtcEarliest": "2026-11-25",
+          "providerUtcLatest": "2026-11-25",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 1,
+            "barBeforeTarget": 0,
             "barOnTarget": 0,
-            "barAfterTarget": 0,
+            "barAfterTarget": 1,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 1,
+            "localDateBeforeTarget": 0,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 0,
+            "localDateAfterTarget": 1,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 1,
-            "retainedTargetDateDespiteOlderBar": 1,
+            "barOlderThanRetained": 0,
+            "retainedTargetDateDespiteOlderBar": 0,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
           }
@@ -673,20 +673,20 @@
           "name": "Stockholm",
           "tracked": 40,
           "providerUtcEarliest": "2026-11-23",
-          "providerUtcLatest": "2026-11-23",
+          "providerUtcLatest": "2026-11-25",
           "counts": {
             "chartUnavailable": 0,
-            "barBeforeTarget": 40,
+            "barBeforeTarget": 4,
             "barOnTarget": 0,
-            "barAfterTarget": 0,
+            "barAfterTarget": 36,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
-            "localDateBeforeTarget": 40,
+            "localDateBeforeTarget": 4,
             "localDateOnTarget": 0,
-            "localDateAfterTarget": 0,
+            "localDateAfterTarget": 36,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 38,
-            "retainedTargetDateDespiteOlderBar": 38,
+            "barOlderThanRetained": 2,
+            "retainedTargetDateDespiteOlderBar": 2,
             "sameProviderRecovery": 0,
             "currencyMismatch": 1
           }
@@ -822,98 +822,100 @@
       "missing": 0
     }
   ],
-  "storedStories": 138,
+  "storedStories": 133,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
     "Google News": "request_errors",
-    "Finanstilsynet shorts": "requests_ok"
+    "Finanstilsynet shorts": "requests_failed"
   },
   "sourceRequests": {
     "Yahoo prices": {
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 67.0,
+      "avgLatencyMs": 67.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T07:06:49+00:00",
+      "lastSuccessAt": "2026-11-25T08:07:02+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 260.0,
+      "avgLatencyMs": 295.1,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T07:06:51+00:00",
+      "lastSuccessAt": "2026-11-25T08:07:36+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 1356.0,
+      "avgLatencyMs": 976.2,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T07:06:53+00:00",
+      "lastSuccessAt": "2026-11-25T08:07:37+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 584,
-      "failed": 14,
-      "avgLatencyMs": 313.8,
+      "succeeded": 582,
+      "failed": 16,
+      "avgLatencyMs": 309.2,
       "errorTypes": {
-        "HTTPError": 14
+        "HTTPError": 16
       },
-      "lastSuccessAt": "2026-11-25T07:07:09+00:00",
-      "lastFailureAt": "2026-11-25T07:07:08+00:00"
+      "lastSuccessAt": "2026-11-25T08:07:53+00:00",
+      "lastFailureAt": "2026-11-25T08:07:53+00:00"
     },
     "Finanstilsynet shorts": {
       "requests": 1,
-      "succeeded": 1,
-      "failed": 0,
-      "avgLatencyMs": 1600.7,
-      "errorTypes": {},
-      "lastSuccessAt": "2026-11-25T07:06:51+00:00",
-      "lastFailureAt": null
+      "succeeded": 0,
+      "failed": 1,
+      "avgLatencyMs": 33898.4,
+      "errorTypes": {
+        "TimeoutError": 1
+      },
+      "lastSuccessAt": null,
+      "lastFailureAt": "2026-11-25T08:07:36+00:00"
     }
   },
   "newsQuality": {
-    "total": 2426,
-    "relevant": 1597,
-    "review": 744,
-    "duplicates": 122,
+    "total": 2445,
+    "relevant": 1605,
+    "review": 752,
+    "duplicates": 126,
     "issuerLinked": 438,
-    "namedReferences": 1244,
-    "withheldFromIssuerEvents": 744,
+    "namedReferences": 1255,
+    "withheldFromIssuerEvents": 752,
     "identityTiers": {
       "issuer_verified": 438,
-      "named_reference": 1244,
-      "review_candidate": 744
+      "named_reference": 1255,
+      "review_candidate": 752
     },
     "driverClassification": {
       "version": 1,
-      "classified": 544,
+      "classified": 549,
       "categories": {
-        "numbers": 303,
+        "numbers": 304,
         "prices": 7,
         "operations": 1,
-        "potential": 257,
+        "potential": 261,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
     },
     "categories": {
-      "Earnings / results": 322,
+      "Earnings / results": 325,
       "Dividends": 30,
-      "M&A": 102,
+      "M&A": 105,
       "Guidance": 46,
-      "Contracts": 202,
+      "Contracts": 204,
       "Capital & ownership": 3,
       "Management": 79,
-      "General": 1642
+      "General": 1653
     }
   },
   "secFilings": {

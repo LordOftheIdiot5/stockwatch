@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T07:07:16.928670+00:00",
-  "newsRecordsScanned": 2436,
+  "generated": "2026-11-25T08:08:01.272108+00:00",
+  "newsRecordsScanned": 2455,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3010,13 +3010,13 @@
       "amount": null
     },
     {
-      "id": "640661a9cc1b10e563fca5037a2246fbe5c6322cfdde2fbe59c026e1c8848f5b",
-      "newsId": "ALO.PA:198388f4ac0d016ebb213cf2bc449239b2743992260cb00a238f4742795275b5",
+      "id": "64cbe4e77cc2cd2f2d986d81a54ddbf7abeaa5b22bc6a85e1a27e31c75e57c67",
+      "newsId": "ALO.PA:f51733de70a34c1fa9f5b378752333497bd6e4bf8b09a044fc88c63884277c5e",
       "entityIds": [],
       "issuerTicker": "ALO.PA",
       "candidateType": "headline_event",
-      "published": "2026-11-23T10:00:55Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOU2M5bzRKWkt2NGxIbWZ4NHhpV2JUQU1aZGhPcXhWV2tIWDlZV0g5YU5kLXlFRjY1M2RKbzZUT2lZa1N2SjA4ZWxDYjBOWmNlYXc5YnZsX3h4MV9fOWN0b1ZCV3I5dXRJXzFXQUtOQTZtbEN3ZXh3Ni1LLUpxVWc5ZkxkNU9oSHQySjdNZjM0aWtFd1o4aTd2LU1sckZrdkJZS0U2Z05ELXNNY3c0YnpiQXBPNFo5ODBESzNvMVU0aGN1NU1oeW1LbDI3NGp3WWxh?oc=5",
+      "published": "2026-11-23T10:03:14Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQmpVNDdHXzFMWWtydWFyT1VkYmlaYlJYN3RjUGxZNEJYRm9LV0VTRmctWm1tSi1rcnAzdXRiWTFuRkRoVmtLeWFxaFhNRmg0bnFnYndKbnp3aUt3dXZha3JVSGlLbmtwd0xKUjl5ZTFIbk5BTHI0d3ZLMzdPTkx2VVBiUDk4Nlh3Q3JrUktBVlo5MXZ1eUExSHVfaVhYckhRTml6VGZ1MEk0djBTeTVIZ05CaFkxNTV5Y2thQmlWZkNmNGxvNHc?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
@@ -3479,6 +3479,30 @@
       "candidateType": "headline_event",
       "published": "2026-11-25T05:45:00Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1NSGVUeUQ1Y0JHWWI1NzV2RXdqMl9ZYzNvUkljVUR6dEVQNl9zbUZ5cHJyYTBjZDBGYkpYX09tdDJlei1GckVDNFk1ZnJfOU1GNnh5anF1QzhKNUtfUk5JbkdhUC1vZVZfUmZN?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "355edb2f3888bdc56ae8c509e92e5ac09659d024628e63a85b9b90fdbc58641a",
+      "newsId": "MYCR.ST:bc4f73303838e20eda7bcade25cbc8852c5801716733a4ceb89116150ae9a65a",
+      "entityIds": [],
+      "issuerTicker": "MYCR.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-25T07:00:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQkxWVGJkQU5Ua0xEbkhscUNQWUdpWkhJSEYyUVNkX2tFV3lqZTVDUTJxRVNpZUUtN1I2SFZfZ0NqUlZtX2ZJeUliczU5Y1J2Ym9GRkZRMjU5UHl0dEozODlrQl8wVjlySWtHSUpEQ0o2ajltVUl1Snhkc0IyYmFSUkI1Q1FNLU5xUUpMLUFfLUh2YkUyam52RF9nMHlMZVJIdFpLckgzSWZLcGpMbThSVmpSdGNGQQ?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "89f7393d8df6fedc5de2687d5f63d19967238facd8877fefc16d751f9867b11b",
+      "newsId": "MYCR.ST:3e316fe79032a44d53e9048c18442ed6fd7381c21f07e7c12a9fa9ff5c271e8a",
+      "entityIds": [],
+      "issuerTicker": "MYCR.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-25T07:00:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVVp5YmwtT2FkbkhxZURaa29EbnNWaTF6SzNPVVhYcVc5QVJhZHAxbVdmbVcwWG85NVdPWnhXTktPa3pjV2M4STEyV21KeUdRRzZoSVZiQVV5QURxOFVCb1FoVzdUU1BTSzR0VzNwWUVzaFRPWEF5Y0JyZVRCMFVoUnpBREhXU0MzQzNCcTZtbVlxSWhGRnlGb3RoR0tjaHVOQUZHS0laQVBjblVzYnhqU3BR?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null

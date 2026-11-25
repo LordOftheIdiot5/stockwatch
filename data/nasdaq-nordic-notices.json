@@ -1,27 +1,38 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-25T07:07:15Z",
+  "generated": "2026-11-25T08:07:59Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-25T07:07:15Z",
-      "lastSuccess": "2026-11-25T07:07:15Z",
+      "lastAttempt": "2026-11-25T08:07:59Z",
+      "lastSuccess": "2026-11-25T08:07:59Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-25T07:07:15Z",
-      "lastSuccess": "2026-11-25T07:07:15Z",
+      "lastAttempt": "2026-11-25T08:07:59Z",
+      "lastSuccess": "2026-11-25T08:07:59Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:dfd316606f3c85a8fedc269b9a0b215dbfcaa591d49e4658acad512c126d33ca",
+      "title": "Nasdaq Stockholm welcomes Hasko Invest AB to the Main Market",
+      "published": "2026-11-25T07:30:00Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b1f9196830e113eb5db32af128cbd7ab9&lang=en&src=rss",
+      "feed": "nordicInvestorNews",
+      "category": "Nordic investor & press releases",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:fbdbce5cc025c78740612ef33bb6ba5d63bcaba255223f7cd83dd5c1852cd4b5",
       "title": "Derivatives - New Strikes Stock Products 230/26",
