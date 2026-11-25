@@ -207,6 +207,16 @@ jobs:
         run: python tests/browser_check_sitewide_v111.py
       - name: V112 connected editorial navigation and 60 viewport/theme browser checks
         run: python tests/browser_check_brand_navigation_v112.py
+      - name: N41 company news and listing watch browser acceptance
+        run: python tests/browser_check_unlisted_n41.py
+      - name: Preserve N41 browser evidence
+        if: always() && startsWith(github.head_ref, 'feature/n41-')
+        uses: actions/upload-artifact@v5
+        with:
+          name: stockwatch-n41-news
+          path: workspace-previews/n41-news-*.png
+          retention-days: 14
+          if-no-files-found: ignore
       - name: V105 all-listing daily source coverage and mobile Data Health browser proof
         if: startsWith(github.head_ref, 'feature/stockwatch-v105-')
         run: python tests/browser_check_daily_price_coverage_v105.py
