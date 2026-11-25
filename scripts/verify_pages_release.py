@@ -18,7 +18,8 @@ PATHS=("index.html","stocks.html","company.html","calendar.html","price-history.
        "brand/world-land-ne50-v119c.svg","brand/world-borders-ne50-v119c.svg","data/shipping-world-borders-v119.json",
        "commodities.html","spreads.html","intelligence.html","compare.html",
        "news.html","nasdaq-notices-v100.js","nasdaq-notices-v100.css",
-       "unlisted.html","unlisted-n41.css","unlisted-n41.js","shell-v47.js")
+       "unlisted.html","unlisted-n41.css","unlisted-n41.js","shell-v47.js",
+       "data/unlisted-news-reviewed-n41.json")
 EXCLUDED_PATHS=("docs/NORDL-N04-ARCHIVE-CONTRACT.md","scripts/nordl-private-storage-v122.mjs","tests/test_nordl_runtime_v122.mjs","database/0001_core.sql","data/seen.json")
 TITLE=re.compile(rb"<title>(.*?)</title>",re.I|re.S)
 
