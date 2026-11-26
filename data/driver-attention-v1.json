@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T17:06:52Z",
+  "generated": "2026-11-26T19:54:47Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -3749,10 +3749,18 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 9
+          "media": 10
         }
       ],
       "potential": [
+        {
+          "id": "EKTA-B.ST:623b682c1e848c654ca2e4f7d58bf2644b6bffce25a0678ffda9ae22841bef1b",
+          "published": "2026-11-25T15:40:18Z",
+          "headline": "Elekta: Q2 beat; guidance kept, back on track",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRHZyVlFGb2tEQXhlZk5maUgyaFJIeVFfd19xVGxMdGhfMTQxaTFyM3lrRkZGTXYwQ0pxWHo5S29HUGhnNmpicEVLX1pVOHZlbmNBTlMwNjhsTVNwZ3JxLWJ6OXA1LUZfV05IaWxpUlZnRXA1bzV2ZWlTaWo1NVo2VWhNNjlYbDMzQlVRX1lUTEM1b3pUSHVic0wxdw?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
         {
           "id": "EKTA-B.ST:a4e992e2f10b50c8c8a5bcba1998a55a873db8a069dadf090092064680701a83",
           "published": "2026-11-25T06:34:43Z",
@@ -3762,13 +3770,13 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 14,
+      "observedRecords": 15,
       "latestRecord": "2026-11-26T07:41:20Z",
       "topicCounts": {
-        "numbers": 4,
+        "numbers": 5,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -3777,7 +3785,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 11
+        "media": 12
       }
     },
     "EL.PA": {
@@ -4569,8 +4577,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 81,
-      "latestRecord": "2026-11-26T16:39:56Z",
+      "observedRecords": 82,
+      "latestRecord": "2026-11-26T19:37:56Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -6703,8 +6711,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-26T08:08:37Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-26T19:00:54Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -8153,8 +8161,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-19T23:18:33Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-26T16:56:57Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -10825,6 +10833,14 @@
           "topic": "Contracts / agreements"
         },
         {
+          "id": "SAAB-B.ST:995f6791c718bb5f38527a562cab28cb0fc4d7a898d395a96c2e70356a0acb42",
+          "published": "2026-11-26T07:59:53Z",
+          "headline": "Saab acquires American company Mythos AI",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9OdEVybUNlUnpMRXpQeGVacG16Nmp5SGFIU3l1b1h0NzUxejRtS0lRZXJ6THZTbWNTekhhZW91LW1FX2ZmOU5iOHp4a2VOQjlzb2NXT0plVFdmcUZYajQzT1ZIVVQ1LXZ5TXJIUUxDazF6bFJaellN?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "SAAB-B.ST:25b14df5bdc44b6cef48314948f434e6e17c8c17f2d8177394fe66aa3cdaab4a",
           "published": "2026-11-25T16:47:21Z",
           "headline": "Saab completes acquisition of maritime autonomy developer Mythos AI",
@@ -10969,7 +10985,7 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 26,
+      "observedRecords": 27,
       "latestRecord": "2026-11-26T15:45:19Z",
       "topicCounts": {
         "numbers": 0,
@@ -12047,6 +12063,14 @@
       ],
       "potential": [
         {
+          "id": "SKA-B.ST:aa98aa28032082afded2a8b1870ff2598d46e2cd4185e80e3e95d04356585c6e",
+          "published": "2026-11-26T13:53:35Z",
+          "headline": "Skanska wins $275 mln data center contract in Georgia, USA By Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNR0RSS3MzMVhXWEVtTkJmM2Zfb2Z1dEsxWl9iTFVoaE5ZR0pmbkFNQlBjYlNFZUtidGJpSXlLWVJSVFIwMjVlWDlIbXBrRGkzeTRZYmRwU2JQNzU5VW50NVoySUdmMExoQnhhNzNWYldiRnlnRUVHWkUyLTdnMjZ5TG95WEVhYnBUbGpfd2tSMFo2dkRJTHZmNWZkelI2NmdrYXdQcmd0Z0tWVGVUcmRSaHRyVDZnOTNM?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "SKA-B.ST:b0ce7906876d4fee31943fa7f3005de3ef2e33658376d8edcaa14c07ae0a22af",
           "published": "2026-11-26T12:48:46Z",
           "headline": "Skanska bygger AI-datacenter i USA – ny order på 2,8 miljarder",
@@ -12191,8 +12215,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 37,
-      "latestRecord": "2026-11-26T13:37:12Z",
+      "observedRecords": 38,
+      "latestRecord": "2026-11-26T13:53:35Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13680,6 +13704,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:6223192cd694a457d0dc330abea818e139fb9dd3b5062db6d4476f1f51219a90",
+          "published": "2026-11-26T18:18:33Z",
+          "headline": "UniCredit Bank Romania rating affirmed at BBB+ as country risk keeps negative outlook",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS1E0M1J3Rkk4RlhwaFdDMkh1azl4b0tFQ0lNb19oeUNSRWZyVkVPWkdqQnpVMUJlYU41V0JyTDJROFNZUXFyaE1NUW1xbmpBOGZBR1NFMk9mZU8xcjBUWEk4VXZPZkJaM3RfZUx3UmtxZFluOXA1RVh0ZF9CRVFabTlPelpweTY3RXpENlI2RHYyMmc2R0dycFVB?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "UCG.MI:dae393d122e8d9bb7af8daea92f36bf30bb242ff5aa16ab122df38f28be5719d",
           "published": "2026-11-26T10:07:13Z",
           "headline": "UniCredit Eyes Naming CEO Orcel as Commerzbank Chairman After Takeover Clearances Secured",
@@ -13830,18 +13862,10 @@
           "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdkg3dS1XdnBqWlp4TE5XOVJ5cVRpREpVdkM5R010LUdfTDJrTDFsRzBERi1vX2JBLWR5MlJqQjg5Q0hpc3dyWDFsNWZFUGZvb0NrZnlvR2pkLUR1SXFoNEdCWEtmX0tUanJlWFRMMklrV1p4aXE1V1MyQjVmYV9HVElNTzdrQ0w2UjFDd01tcExlTGIwTXVrbVA3VEI0N2xVNnBV?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
-        },
-        {
-          "id": "UCG.MI:4c5fd0590476ff8d44d07de7c3e7f74515f87a4d74fb773bbc2fad0bf93f3b24",
-          "published": "2026-11-19T10:14:28Z",
-          "headline": "UniCredit-Germany, Commerz agreement; Orcel thanks ministers",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQS0thNThXLUhoUndwbDh2ZEExS2g4bW81NkZod0NoMWZJelh2ZHM0ZkFfTVhmY0VaQmxmWnE4VHhPZUllNnpnRk52LVJZQmRHbVBINXI3Nzl4NlY2dVB0elNYbnZEOHg3VDJsR2tkNG1VamMtRWZiMEtvVVVxRlhLTEdQQk9ZbkNTSTBQRjEzdmtYU01vblVlNURrNVN1UXpIRDhNVWl2Nk9yQjVnbk5yZg?oc=5",
-          "evidence": "named_reference",
-          "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 175,
-      "latestRecord": "2026-11-26T15:10:25Z",
+      "observedRecords": 177,
+      "latestRecord": "2026-11-26T19:00:04Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
