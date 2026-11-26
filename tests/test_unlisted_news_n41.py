@@ -52,8 +52,8 @@ class UnlistedNewsTests(unittest.TestCase):
     def test_reviewed_seed_covers_all_companies_and_assets(self):
         d=json.loads(n.SEED.read_text(encoding="utf-8"))
         self.assertEqual({x["id"] for x in d["companies"]},{x["company"] for x in d["items"]})
-        self.assertEqual(len(d["items"]),27)
-        self.assertEqual(len({x["id"] for x in d["items"]}),27)
+        self.assertEqual(len(d["items"]),29)
+        self.assertEqual(len({x["id"] for x in d["items"]}),29)
         self.assertTrue(all(x["url"].startswith("https://") and x["date"]<=d["reviewed"] for x in d["items"]))
         manifest=json.loads((ROOT/"scripts/public-pages-manifest-v122.json").read_text())
         for path in (n.SEED,n.OUTPUT):self.assertIn(path.relative_to(ROOT).as_posix(),manifest["files"])
