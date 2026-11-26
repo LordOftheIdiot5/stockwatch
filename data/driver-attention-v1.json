@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T12:07:51Z",
+  "generated": "2026-11-26T13:08:44Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -473,10 +473,18 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [
+        {
+          "id": "AFG.OL:5d7a26d4064b882b351a5bf6f2682bb5a53789326f3ad369e6fe40da4bd8eca1",
+          "published": "2026-11-25T04:34:11Z",
+          "headline": "AF Gruppen Unit Bags NOK673 Million Contract for BK2 Spinneriet Project in Norway",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQY2VpeWVmcmUzdkh4Q0Q4UU1BZm1Td29WYXdZeUZaRVR6QnZMNnJRZGFZYkhSZE1Sci1WMTZoVThXdEkwSVlPV2xwekxCVzVqOXVSTXhHbUZKdUV4ZGJtR0xBODR4cXdLTXJ4bnl0VUgxaDBtV1ZrbEpnc1BBNjlYUS1tZ1pEWjFqUjNhc1RTRDVxRmtsM0lwVklHQTR5WXVFVFlLNzlVckgyUmZYVDhYaE01OUNfUG9adnpJbE9qUDZxNzJxaHA5bDB4RWNNNGM?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "AFG.OL:58c2f7b50eac98608077156e15a48bbe7bab3bdd88c8700161bfc0bff72e291f",
           "published": "2026-11-24T14:32:48Z",
@@ -486,13 +494,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-24T14:32:48Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-25T04:34:11Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -501,7 +509,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 2
+        "media": 3
       }
     },
     "AFISH.OL": {
@@ -1464,8 +1472,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 25,
-      "latestRecord": "2026-11-26T12:02:07Z",
+      "observedRecords": 26,
+      "latestRecord": "2026-11-26T12:23:12Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -5987,8 +5995,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 49,
-      "latestRecord": "2026-11-26T05:59:01Z",
+      "observedRecords": 50,
+      "latestRecord": "2026-11-26T12:46:35Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -7850,8 +7858,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-26T10:02:20Z",
+      "observedRecords": 9,
+      "latestRecord": "2026-11-26T12:07:15Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 0,
@@ -8349,8 +8357,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 4,
-      "latestRecord": "2026-11-24T10:32:35Z",
+      "observedRecords": 6,
+      "latestRecord": "2026-11-26T12:51:39Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -9338,8 +9346,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-26T08:08:52Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-26T12:56:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11912,8 +11920,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 83,
-      "latestRecord": "2026-11-25T17:33:51Z",
+      "observedRecords": 84,
+      "latestRecord": "2026-11-26T12:52:16Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -12005,6 +12013,14 @@
         }
       ],
       "potential": [
+        {
+          "id": "SKA-B.ST:b0ce7906876d4fee31943fa7f3005de3ef2e33658376d8edcaa14c07ae0a22af",
+          "published": "2026-11-26T12:48:46Z",
+          "headline": "Skanska bygger AI-datacenter i USA – ny order på 2,8 miljarder",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBMQjBZZEFFNU8tUUM3MG1zM1VENEwxb014dVNEd0lUMl9FRXF3Sk9NdXJpZDFfems4eHlkNGRHdm1maDZPMXlRaDBQX2N1QW5fa1UzMFA4WmRHLVgzeUpnYUFDNFVuWjRud1B5TjVMZlMzWHE5Vk5heWdIVQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "SKA-B.ST:5b783654b921f6e85fb98b9c66f4f3f759fa1762954dbebf976a386e657aad82",
           "published": "2026-11-26T07:14:03Z",
@@ -12142,8 +12158,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 34,
-      "latestRecord": "2026-11-26T10:39:13Z",
+      "observedRecords": 36,
+      "latestRecord": "2026-11-26T12:48:46Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13767,8 +13783,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 168,
-      "latestRecord": "2026-11-26T11:28:14Z",
+      "observedRecords": 170,
+      "latestRecord": "2026-11-26T12:25:35Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -14471,6 +14487,14 @@
       ],
       "potential": [
         {
+          "id": "VWS.CO:ea33b668e8640e2342584f7b61c35be945847781ba58249c96c172d94dd437c3",
+          "published": "2026-11-26T12:51:40Z",
+          "headline": "Vestas wins 293 MW order in Romania from Rezolv Energy",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSmg1TlNoRVg5VEtQWjh1bFp6Vk92ai1ISklBXzJMYmJVNm4teXl3Tjdxd0NEQlBpalRxTUtpbHU5Q2dHUE41S0lzVHo5ZkZhU2ZDNjhXcHk1Zi1hN3lmeVVTa0lZS1dXNlM0cF9NaHh1V29GUGgtUU1GM1UxVGN4Si1zTDRBbEtIVmRMN21uWXVXaUE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "VWS.CO:14c2a4a5f5171b566360bc12065641b40f56670003230d7c6c17734353b9354e",
           "published": "2026-11-26T11:33:21Z",
           "headline": "Vestas receives 293-megawatt order in Romania",
@@ -14519,8 +14543,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 24,
-      "latestRecord": "2026-11-26T11:33:21Z",
+      "observedRecords": 25,
+      "latestRecord": "2026-11-26T12:51:40Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
