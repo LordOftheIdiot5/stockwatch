@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T08:07:33Z",
+  "generated": "2026-11-26T09:08:43Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -1456,8 +1456,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 21,
-      "latestRecord": "2026-11-25T18:53:38Z",
+      "observedRecords": 22,
+      "latestRecord": "2026-11-26T08:46:41Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -3223,8 +3223,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 27,
-      "latestRecord": "2026-11-25T13:27:40Z",
+      "observedRecords": 28,
+      "latestRecord": "2026-11-26T08:13:26Z",
       "topicCounts": {
         "numbers": 12,
         "prices": 1,
@@ -7725,8 +7725,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 47,
-      "latestRecord": "2026-11-26T07:13:50Z",
+      "observedRecords": 48,
+      "latestRecord": "2026-11-26T08:40:22Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -8512,8 +8512,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 27,
-      "latestRecord": "2026-11-25T17:20:00Z",
+      "observedRecords": 28,
+      "latestRecord": "2026-11-26T08:27:47Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -9306,8 +9306,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-26T08:08:52Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10896,8 +10896,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 23,
-      "latestRecord": "2026-11-25T16:47:21Z",
+      "observedRecords": 24,
+      "latestRecord": "2026-11-26T09:02:19Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11573,8 +11573,8 @@
           "topic": "Other potential-related topic"
         }
       ],
-      "observedRecords": 7,
-      "latestRecord": "2026-11-25T18:18:37Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-26T08:53:04Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12102,8 +12102,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 32,
-      "latestRecord": "2026-11-26T07:14:31Z",
+      "observedRecords": 33,
+      "latestRecord": "2026-11-26T07:30:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13567,6 +13567,14 @@
       ],
       "potential": [
         {
+          "id": "UCG.MI:541f40c4b93788f2c3af733e81eed9901353d78e3189a4e8bd27d9571ab383be",
+          "published": "2026-11-26T07:55:42Z",
+          "headline": "Poland approves Italian bank UniCredit’s takeover of Commerzbank — Euronews",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPS0w0U0hudDFHVjAzcmZ4cU1GcW5VUjBqblhMZDNybHNCMXJRR3YxSTZWUFRMODd1SThqcV9yNmZVSlFpTjdkVFFSY29pemlRc04xSEFIR0xkNGhSWm16Szk4SXNlVm95cWVieVNOS2h0V2E5R0tnQkE1T3gzSThlZEs5eGRDRVR6YTd2YUs5UUVZMnNWSUNSQncyVElCNmRKVERwSHhtVkt5dE42VnFGV2NzUnMyWTBwbWc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "UCG.MI:5800520a6c1af00d94e1a4c5a444671606ba2fe543da90f375a38a054254822d",
           "published": "2026-11-24T09:10:45Z",
           "headline": "Commerzbank holds shareholders meeting as it fights UniCredit takeover bid, in Wiesbaden",
@@ -13717,18 +13725,10 @@
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQczlJRWFtWEpMOTdfcmRDMUhITkpJWE51SGlybTRsSG84T2ZOMThkMUtFYnNvakJudDIwMm5XdHlDVlZSZ0NUTnZlWVRxSVA4YXE3S1ZTMXB1alRPdk9wYTdPX0p5MTVLU1NUT1c3blJhclExYjQyWThHM0pxN1J2NGFIbklNTzdNdS1DRXRVaUxaRDZocU1NOHFRbmZzUHM?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:18e5869eb9656e6f6d959a9d68a9c6b13402d82619af2254e6d61a5daf3a4b18",
-          "published": "2026-11-19T09:31:00Z",
-          "headline": "UniCredit Strikes Deal With Germany to Clear Path for Commerzbank Takeover",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOVdCTjlROGk1ajJuRnZnd05rWGh4ZzRMemVsT1Q1VG5UNThPRzJScmVmUjBlLU1rbktkR1YtcFo4WE0zSjJwSEJlWlhhcHYzbjgzcDIwNmN3ZmhncWlHVk9fU0ZqR3hBR0pIRTY4OGNzR2E4YUZ5NWZ1bWlFXzd5aHFOQnl3Sk5jZEpGUFpYTFNBemt6QlAxLUR0X3ZoNmRYMlZHSHhvLXV2ZmJiajNhU0RR?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 159,
-      "latestRecord": "2026-11-26T07:56:00Z",
+      "observedRecords": 161,
+      "latestRecord": "2026-11-26T09:00:29Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -14134,8 +14134,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 35,
-      "latestRecord": "2026-11-25T12:44:09Z",
+      "observedRecords": 36,
+      "latestRecord": "2026-11-26T08:53:06Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
