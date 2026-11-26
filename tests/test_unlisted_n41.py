@@ -27,16 +27,23 @@ class UnlistedTests(unittest.TestCase):
         self.page.feed(self.html)
     def test_initial_company_identity_and_sources(self):
         self.assertEqual({x["id"] for x in self.page.companies},
-                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing","monumental"})
+                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing","monumental","iceye","quantum-systems","alice-bob","rocsys","lely"})
         self.assertEqual(len(self.page.ids),len(set(self.page.ids)))
-        self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),9)
+        self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),14)
         for link in self.page.urls:
             self.assertFalse(link.lower().startswith(("javascript:","data:")))
     def test_monumental_owner_selected(self):
         card=next(x for x in self.page.companies if x["id"]=="monumental")
         self.assertEqual(card["data-kind"],"Company watch")
-        self.assertIn("14 company records",self.html)
+        self.assertIn("19 company records",self.html)
         self.assertIn("https://www.monumental.nl/blog/we-raised-32-million-to-put-more/",self.page.urls)
+    def test_listed_expansion_separate_from_monitored_inventory(self):
+        stock=(ROOT/"stocks.html").read_text(encoding="utf-8")
+        self.assertEqual(stock.count('class="n41-listed-candidate"'),7)
+        self.assertIn("separate from the existing 500 listing inventory",stock)
+        for name in ("Exail Technologies","MilDef","KION Group","Jungheinrich","Teradyne","Symbotic","Einride"):
+            self.assertIn(name,stock)
+        self.assertNotIn('id="einride"',self.html)
     def test_listing_types_separated(self):
         self.assertEqual({x["data-kind"] for x in self.page.events},
                          {"Initial public offering","Spin-off admission","IPO / listing application","Additional listing","Reported IPO intent"})

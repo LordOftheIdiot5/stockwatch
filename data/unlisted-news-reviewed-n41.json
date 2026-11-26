@@ -90,6 +90,40 @@
         "Monumental bricklaying",
         "Monumental's robots"
       ]
+    },
+    {
+      "id": "iceye",
+      "aliases": [
+        "ICEYE"
+      ]
+    },
+    {
+      "id": "quantum-systems",
+      "aliases": [
+        "Quantum Systems",
+        "Quantum-Systems"
+      ]
+    },
+    {
+      "id": "alice-bob",
+      "aliases": [
+        "Alice & Bob",
+        "Alice and Bob"
+      ]
+    },
+    {
+      "id": "rocsys",
+      "aliases": [
+        "Rocsys"
+      ]
+    },
+    {
+      "id": "lely",
+      "aliases": [
+        "Lely robotics",
+        "Lely milking",
+        "Lely reports"
+      ]
     }
   ],
   "items": [
@@ -312,6 +346,56 @@
       "url": "https://www.monumental.nl/blog/i-quit-my-job-and-moved-country-to/",
       "tier": "issuer publication",
       "dateType": "publication date"
+    },
+    {
+      "id": "review-23",
+      "company": "iceye",
+      "date": "2026-06-09",
+      "category": "Funding",
+      "title": "ICEYE announces €450m primary Series F financing at over €10bn valuation",
+      "url": "https://www.iceye.com/newsroom/press-releases/iceye-leads-a-new-era-of-sovereign-intelligence-from-space-with-1b-funding-round",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-24",
+      "company": "quantum-systems",
+      "date": "2026-07-02",
+      "category": "Funding",
+      "title": "Quantum Systems announces signing of $1.2bn Series D financing",
+      "url": "https://quantum-systems.com/us/news/quantum-systems-raises-1-2bn-series-d-to-accelerate-growth-and-scale-software-defined-autonomous-systems-across-air-land-and-sea/",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-25",
+      "company": "alice-bob",
+      "date": "2026-11-18",
+      "category": "Products",
+      "title": "Alice & Bob announces updated modular quantum computing roadmap and reports €180m total funding",
+      "url": "https://alice-bob.com/newsroom/alice-bob-accelerates-roadmap/",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-26",
+      "company": "rocsys",
+      "date": "2026-04-29",
+      "category": "Funding",
+      "title": "Rocsys announces $13m Series A extension and multi-bay hands-free charging system",
+      "url": "https://www.rocsys.com/rocsys-unveils-worlds-first-multi-bay-hands-free-charging-solution-to-help-robotaxi-fleets-scale-and-raises-13m-series-a-extension/",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-27",
+      "company": "lely",
+      "date": "2026-02-05",
+      "category": "Financial results",
+      "title": "Family-owned Lely reports €1,014m turnover for 2025",
+      "url": "https://www.lely.com/gb/about-lely/news/lely-reports-2025-financial-results-a-formidable-year/",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
     }
   ]
 }
