@@ -27,15 +27,15 @@ class UnlistedTests(unittest.TestCase):
         self.page.feed(self.html)
     def test_initial_company_identity_and_sources(self):
         self.assertEqual({x["id"] for x in self.page.companies},
-                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing","monumental","iceye","quantum-systems","alice-bob","rocsys","lely"})
+                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing","monumental","iceye","quantum-systems","alice-bob","rocsys","lely","reetec","lkab"})
         self.assertEqual(len(self.page.ids),len(set(self.page.ids)))
-        self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),14)
+        self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),16)
         for link in self.page.urls:
             self.assertFalse(link.lower().startswith(("javascript:","data:")))
     def test_monumental_owner_selected(self):
         card=next(x for x in self.page.companies if x["id"]=="monumental")
         self.assertEqual(card["data-kind"],"Company watch")
-        self.assertIn("19 company records",self.html)
+        self.assertIn("21 company records",self.html)
         self.assertIn("https://www.monumental.nl/blog/we-raised-32-million-to-put-more/",self.page.urls)
     def test_listed_expansion_separate_from_monitored_inventory(self):
         stock=(ROOT/"stocks.html").read_text(encoding="utf-8")
@@ -44,6 +44,15 @@ class UnlistedTests(unittest.TestCase):
         for name in ("Exail Technologies","MilDef","KION Group","Jungheinrich","Teradyne","Symbotic","Einride"):
             self.assertIn(name,stock)
         self.assertNotIn('id="einride"',self.html)
+    def test_materials_exposure_is_not_supplier_confirmation(self):
+        stock=(ROOT/"stocks.html").read_text(encoding="utf-8")
+        self.assertEqual(stock.count('class="n41-resource-group"'),4)
+        self.assertIn("No Monumental supply contract verified",stock)
+        self.assertIn("copper concentrate offtake MoU",stock)
+        self.assertIn("Current delivery and commissioning status not confirmed",self.html)
+        self.assertIn("Resource estimate, not reserves or annual production",self.html)
+        self.assertIn("Swedish state-owned",self.html)
+        self.assertIn('href="unlisted.html#reetec"',stock)
     def test_listing_types_separated(self):
         self.assertEqual({x["data-kind"] for x in self.page.events},
                          {"Initial public offering","Spin-off admission","IPO / listing application","Additional listing","Reported IPO intent"})
