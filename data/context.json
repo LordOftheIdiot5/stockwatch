@@ -1,50 +1,50 @@
 {
- "generated": "2026-11-26T15:06:48+00:00",
+ "generated": "2026-11-26T16:05:49+00:00",
  "commodities": [
   {
    "ticker": "GC=F",
    "name": "Gold",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 3608.3999,
+   "last": 3597.1001,
    "date": "2026-11-26",
-   "changePct": 2.05,
-   "monthPct": -10.94,
+   "changePct": 1.73,
+   "monthPct": -11.22,
    "yearPosition": 5,
    "yearLow": 3515.3999,
    "yearHigh": 5318.3999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "SI=F",
    "name": "Silver",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 41.98,
+   "last": 41.795,
    "date": "2026-11-26",
-   "changePct": 4.81,
-   "monthPct": -21.47,
-   "yearPosition": 3,
+   "changePct": 4.35,
+   "monthPct": -21.82,
+   "yearPosition": 2,
    "yearLow": 40.052,
    "yearHigh": 115.08,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "HG=F",
    "name": "Copper",
    "group": "metals",
    "unit": "USD/lb",
-   "last": 5.4675,
+   "last": 5.451,
    "date": "2026-11-26",
-   "changePct": 2.53,
-   "monthPct": -17.68,
-   "yearPosition": 21,
+   "changePct": 2.22,
+   "monthPct": -17.93,
+   "yearPosition": 20,
    "yearLow": 5.1045,
    "yearHigh": 6.8035,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "ZNC=F",
@@ -59,7 +59,7 @@
    "yearLow": 2297.0,
    "yearHigh": 4193.5,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "ALI=F",
@@ -74,37 +74,37 @@
    "yearLow": 2763.5,
    "yearHigh": 4195.0,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "PL=F",
    "name": "Platinum",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 1286.6,
+   "last": 1285.5,
    "date": "2026-11-26",
-   "changePct": 3.64,
-   "monthPct": -16.88,
+   "changePct": 3.55,
+   "monthPct": -16.95,
    "yearPosition": 3,
    "yearLow": 1241.4,
    "yearHigh": 2852.3999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "PA=F",
    "name": "Palladium",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 879.5,
+   "last": 879.0,
    "date": "2026-11-26",
-   "changePct": 5.82,
-   "monthPct": -12.87,
+   "changePct": 5.76,
+   "monthPct": -12.92,
    "yearPosition": 4,
    "yearLow": 831.1,
    "yearHigh": 2169.8999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "NIKL",
@@ -120,7 +120,7 @@
    "yearHigh": 20.59,
    "proxy": true,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "TIO=F",
@@ -135,52 +135,52 @@
    "yearLow": 90.57,
    "yearHigh": 111.42,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "BZ=F",
    "name": "Brent crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 91.36,
+   "last": 91.65,
    "date": "2026-11-26",
-   "changePct": -3.44,
-   "monthPct": -20.78,
+   "changePct": -3.13,
+   "monthPct": -20.53,
    "yearPosition": 55,
    "yearLow": 58.92,
    "yearHigh": 118.35,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "CL=F",
    "name": "WTI crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 84.6,
+   "last": 85.09,
    "date": "2026-11-26",
-   "changePct": 1.1,
-   "monthPct": -17.69,
-   "yearPosition": 51,
+   "changePct": 1.68,
+   "monthPct": -17.21,
+   "yearPosition": 52,
    "yearLow": 55.27,
    "yearHigh": 112.95,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "NG=F",
    "name": "Natural gas",
    "group": "energy",
    "unit": "USD/MMBtu",
-   "last": 3.622,
+   "last": 3.625,
    "date": "2026-11-26",
-   "changePct": 10.8,
-   "monthPct": 28.58,
+   "changePct": 10.89,
+   "monthPct": 28.68,
    "yearPosition": 22,
    "yearLow": 2.523,
    "yearHigh": 7.46,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "URA",
@@ -195,7 +195,7 @@
    "yearLow": 26.79,
    "yearHigh": 61.81,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   }
  ],
  "freight": [
@@ -213,7 +213,7 @@
    "yearLow": 8.42,
    "yearHigh": 16.58,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "BWET",
@@ -229,7 +229,7 @@
    "yearLow": 18.73,
    "yearHigh": 1012.75,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "ticker": "BOAT",
@@ -245,7 +245,7 @@
    "yearLow": 31.416,
    "yearHigh": 55.2,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   }
  ],
  "shareClasses": [
@@ -253,18 +253,18 @@
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.086513,
-     "z": -1.032
+     "mean": 1.086177,
+     "z": -1.628
     },
     "90": {
      "observations": 90,
-     "mean": 1.118343,
-     "z": -1.235
+     "mean": 1.118231,
+     "z": -1.489
     },
     "240": {
      "observations": 240,
-     "mean": 1.137908,
-     "z": -0.939
+     "mean": 1.137866,
+     "z": -1.079
     }
    },
    "aMedianVolume": 6115,
@@ -276,12 +276,12 @@
    "bLatestDate": "2026-11-26",
    "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 3.22,
+   "driftPct": 3.21,
    "name": "Kinnevik",
    "a": "KINV-A.ST",
    "b": "KINV-B.ST",
    "aPrice": 76.7,
-   "bPrice": 71.62,
+   "bPrice": 72.3,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
@@ -291,35 +291,35 @@
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 3.407451,
+    "changePct": 4.389259,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.0709,
+   "ratio": 1.0609,
    "meanRatio": 1.1327,
-   "sd": 0.0738,
-   "z": -0.84,
+   "sd": 0.0739,
+   "z": -0.97,
    "days": 251,
    "tradableRange": true,
-   "rangePct": 13.03,
+   "rangePct": 13.04,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.061038,
-     "z": -1.551
+     "mean": 1.061272,
+     "z": -1.275
     },
     "90": {
      "observations": 90,
-     "mean": 1.072228,
-     "z": -2.71
+     "mean": 1.072306,
+     "z": -2.335
     },
     "240": {
      "observations": 240,
-     "mean": 1.102747,
-     "z": -2.481
+     "mean": 1.102776,
+     "z": -2.262
     }
    },
    "aMedianVolume": 14544,
@@ -335,46 +335,46 @@
    "name": "Wilh. Wilhelmsen",
    "a": "WWI.OL",
    "b": "WWIB.OL",
-   "aPrice": 890.0,
-   "bPrice": 868.0,
+   "aPrice": 893.0,
+   "bPrice": 865.0,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 0.225225,
+    "changePct": 0.563063,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 1.04773,
+    "changePct": 0.698487,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.0253,
+   "ratio": 1.0324,
    "meanRatio": 1.1022,
    "sd": 0.0306,
-   "z": -2.51,
+   "z": -2.28,
    "days": 251,
    "tradableRange": true,
-   "rangePct": 5.56,
+   "rangePct": 5.55,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.015532,
-     "z": 0.803
+     "mean": 1.015132,
+     "z": -1.085
     },
     "90": {
      "observations": 90,
-     "mean": 1.016723,
-     "z": 0.501
+     "mean": 1.016589,
+     "z": -1.094
     },
     "240": {
      "observations": 240,
-     "mean": 1.026382,
-     "z": -0.392
+     "mean": 1.026332,
+     "z": -1.179
     }
    },
    "aMedianVolume": 39160,
@@ -386,50 +386,50 @@
    "bLatestDate": "2026-11-26",
    "latestPairEligible": true,
    "currency": "NOK",
-   "driftPct": -1.89,
+   "driftPct": -1.9,
    "name": "Odfjell",
    "a": "ODF.OL",
    "b": "ODFB.OL",
-   "aPrice": 119.8,
-   "bPrice": 117.4,
+   "aPrice": 119.6,
+   "bPrice": 118.6,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 0.672271,
+    "changePct": 0.5042,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 0.0,
+    "changePct": 1.022144,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.0204,
+   "ratio": 1.0084,
    "meanRatio": 1.0268,
-   "sd": 0.015,
-   "z": -0.42,
+   "sd": 0.0151,
+   "z": -1.22,
    "days": 251,
    "tradableRange": true,
-   "rangePct": 2.92,
+   "rangePct": 2.93,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.978608,
-     "z": 0.36
+     "mean": 0.978658,
+     "z": 0.538
     },
     "90": {
      "observations": 90,
-     "mean": 0.968529,
-     "z": 1.424
+     "mean": 0.968546,
+     "z": 1.581
     },
     "240": {
      "observations": 240,
-     "mean": 0.979476,
-     "z": 0.152
+     "mean": 0.979483,
+     "z": 0.264
     }
    },
    "aMedianVolume": 3710,
@@ -445,46 +445,46 @@
    "name": "Maersk",
    "a": "MAERSK-A.CO",
    "b": "MAERSK-B.CO",
-   "aPrice": 18820.0,
-   "bPrice": 19175.0,
+   "aPrice": 18760.0,
+   "bPrice": 19085.0,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 1.128426,
+    "changePct": 0.806018,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 0.947618,
+    "changePct": 0.473809,
     "method": "individual_daily_closes"
    },
-   "ratio": 0.9815,
+   "ratio": 0.983,
    "meanRatio": 0.9804,
    "sd": 0.0138,
-   "z": 0.08,
+   "z": 0.19,
    "days": 249,
    "tradableRange": true,
    "rangePct": 2.81,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.144588,
-     "z": -0.724
+     "mean": 1.144578,
+     "z": -0.77
     },
     "90": {
      "observations": 90,
-     "mean": 1.147301,
-     "z": -1.031
+     "mean": 1.147297,
+     "z": -1.074
     },
     "240": {
      "observations": 240,
-     "mean": 1.139571,
-     "z": 0.031
+     "mean": 1.13957,
+     "z": 0.004
     }
    },
    "aMedianVolume": 4269442,
@@ -500,12 +500,12 @@
    "name": "Atlas Copco",
    "a": "ATCO-A.ST",
    "b": "ATCO-B.ST",
-   "aPrice": 183.7,
+   "aPrice": 183.65,
    "bPrice": 161.15,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 2.539773,
+    "changePct": 2.511862,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
@@ -514,32 +514,32 @@
     "changePct": 2.187696,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.1399,
+   "ratio": 1.1396,
    "meanRatio": 1.1383,
    "sd": 0.0128,
-   "z": 0.13,
+   "z": 0.1,
    "days": 251,
    "tradableRange": true,
    "rangePct": 2.24,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.988028,
-     "z": -1.051
+     "mean": 0.987977,
+     "z": -1.486
     },
     "90": {
      "observations": 90,
-     "mean": 0.993422,
-     "z": -1.798
+     "mean": 0.993405,
+     "z": -2.097
     },
     "240": {
      "observations": 240,
-     "mean": 1.001595,
-     "z": -2.186
+     "mean": 1.001588,
+     "z": -2.38
     }
    },
    "aMedianVolume": 720357,
@@ -555,46 +555,46 @@
    "name": "SSAB",
    "a": "SSAB-A.ST",
    "b": "SSAB-B.ST",
-   "aPrice": 87.28,
-   "bPrice": 88.64,
+   "aPrice": 87.32,
+   "bPrice": 88.82,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 3.046047,
+    "changePct": 3.093274,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 2.950059,
+    "changePct": 3.159119,
     "method": "individual_daily_closes"
    },
-   "ratio": 0.9847,
+   "ratio": 0.9831,
    "meanRatio": 1.0024,
    "sd": 0.0085,
-   "z": -2.09,
+   "z": -2.26,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.7,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.011641,
-     "z": -1.31
+     "mean": 1.011593,
+     "z": -1.482
     },
     "90": {
      "observations": 90,
-     "mean": 1.009359,
-     "z": -1.024
+     "mean": 1.009343,
+     "z": -1.214
     },
     "240": {
      "observations": 240,
-     "mean": 1.004865,
-     "z": -0.423
+     "mean": 1.004859,
+     "z": -0.625
     }
    },
    "aMedianVolume": 22856,
@@ -611,7 +611,7 @@
    "a": "ERIC-A.ST",
    "b": "ERIC-B.ST",
    "aPrice": 105.6,
-   "bPrice": 105.4,
+   "bPrice": 105.55,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
@@ -621,35 +621,35 @@
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 2.230847,
+    "changePct": 2.376338,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.0019,
+   "ratio": 1.0005,
    "meanRatio": 1.0047,
    "sd": 0.0069,
-   "z": -0.4,
+   "z": -0.61,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.38,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.000661,
-     "z": -0.394
+     "mean": 1.000651,
+     "z": -0.436
     },
     "90": {
      "observations": 90,
-     "mean": 1.001423,
-     "z": -0.559
+     "mean": 1.00142,
+     "z": -0.607
     },
     "240": {
      "observations": 240,
-     "mean": 1.001464,
-     "z": -0.549
+     "mean": 1.001462,
+     "z": -0.596
     }
    },
    "aMedianVolume": 16007,
@@ -665,46 +665,46 @@
    "name": "Husqvarna",
    "a": "HUSQ-A.ST",
    "b": "HUSQ-B.ST",
-   "aPrice": 32.3,
-   "bPrice": 32.37,
+   "aPrice": 32.25,
+   "bPrice": 32.33,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 1.095457,
+    "changePct": 0.938965,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 1.537013,
+    "changePct": 1.411552,
     "method": "individual_daily_closes"
    },
-   "ratio": 0.9978,
+   "ratio": 0.9975,
    "meanRatio": 1.0014,
    "sd": 0.0065,
-   "z": -0.55,
+   "z": -0.59,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.29,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.981614,
-     "z": -0.413
+     "mean": 0.981623,
+     "z": -0.272
     },
     "90": {
      "observations": 90,
-     "mean": 0.983895,
-     "z": -0.777
+     "mean": 0.983898,
+     "z": -0.71
     },
     "240": {
      "observations": 240,
-     "mean": 0.987423,
-     "z": -1.336
+     "mean": 0.987424,
+     "z": -1.282
     }
    },
    "aMedianVolume": 335598,
@@ -720,46 +720,46 @@
    "name": "Investor",
    "a": "INVE-A.ST",
    "b": "INVE-B.ST",
-   "aPrice": 410.0,
-   "bPrice": 418.0,
+   "aPrice": 410.7,
+   "bPrice": 418.6,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 1.284588,
+    "changePct": 1.457516,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 1.456311,
+    "changePct": 1.601943,
     "method": "individual_daily_closes"
    },
-   "ratio": 0.9809,
+   "ratio": 0.9811,
    "meanRatio": 0.9878,
    "sd": 0.0051,
-   "z": -1.35,
+   "z": -1.3,
    "days": 251,
    "tradableRange": true,
    "rangePct": 1.04,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.004284,
-     "z": -0.245
+     "mean": 1.004347,
+     "z": -0.02
     },
     "90": {
      "observations": 90,
-     "mean": 1.002999,
-     "z": -0.12
+     "mean": 1.00302,
+     "z": 0.199
     },
     "240": {
      "observations": 240,
-     "mean": 1.001504,
-     "z": 0.159
+     "mean": 1.001512,
+     "z": 0.536
     }
    },
    "aMedianVolume": 5593,
@@ -771,50 +771,50 @@
    "bLatestDate": "2026-11-26",
    "latestPairEligible": true,
    "currency": "SEK",
-   "driftPct": 0.15,
+   "driftPct": 0.16,
    "name": "SKF",
    "a": "SKF-A.ST",
    "b": "SKF-B.ST",
-   "aPrice": 262.0,
-   "bPrice": 261.4,
+   "aPrice": 264.0,
+   "bPrice": 262.9,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": -0.94518,
+    "changePct": -0.189036,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": -0.759301,
+    "changePct": -0.189825,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.0023,
+   "ratio": 1.0042,
    "meanRatio": 1.0014,
    "sd": 0.005,
-   "z": 0.18,
+   "z": 0.55,
    "days": 251,
    "tradableRange": true,
    "rangePct": 0.99,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 0.998833,
-     "z": 0.231
+     "mean": 0.998718,
+     "z": -0.818
     },
     "90": {
      "observations": 90,
-     "mean": 0.999443,
-     "z": 0.033
+     "mean": 0.999405,
+     "z": -0.878
     },
     "240": {
      "observations": 240,
-     "mean": 0.999439,
-     "z": 0.036
+     "mean": 0.999425,
+     "z": -0.935
     }
    },
    "aMedianVolume": 14297,
@@ -831,7 +831,7 @@
    "a": "SCA-A.ST",
    "b": "SCA-B.ST",
    "aPrice": 115.0,
-   "bPrice": 115.05,
+   "bPrice": 115.45,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
@@ -841,35 +841,35 @@
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 0.788438,
+    "changePct": 1.138848,
     "method": "individual_daily_closes"
    },
-   "ratio": 0.9996,
-   "meanRatio": 0.9995,
+   "ratio": 0.9961,
+   "meanRatio": 0.9994,
    "sd": 0.0035,
-   "z": 0.03,
+   "z": -0.95,
    "days": 251,
    "tradableRange": true,
    "rangePct": 0.7,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   },
   {
    "rolling": {
     "30": {
      "observations": 30,
-     "mean": 1.002306,
-     "z": -0.417
+     "mean": 1.002316,
+     "z": -0.258
     },
     "90": {
      "observations": 90,
-     "mean": 1.001374,
-     "z": 0.096
+     "mean": 1.001378,
+     "z": 0.275
     },
     "240": {
      "observations": 240,
-     "mean": 1.000549,
-     "z": 0.57
+     "mean": 1.00055,
+     "z": 0.744
     }
    },
    "aMedianVolume": 90014,
@@ -885,29 +885,29 @@
    "name": "Volvo",
    "a": "VOLV-A.ST",
    "b": "VOLV-B.ST",
-   "aPrice": 326.0,
-   "bPrice": 325.5,
+   "aPrice": 326.6,
+   "bPrice": 326.0,
    "aDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 3.164557,
+    "changePct": 3.354432,
     "method": "individual_daily_closes"
    },
    "bDailyMove": {
     "date": "2026-11-26",
     "previousDate": "2026-11-25",
-    "changePct": 3.13688,
+    "changePct": 3.295309,
     "method": "individual_daily_closes"
    },
-   "ratio": 1.0015,
+   "ratio": 1.0018,
    "meanRatio": 1.0006,
    "sd": 0.0017,
-   "z": 0.56,
+   "z": 0.74,
    "days": 251,
    "tradableRange": false,
    "rangePct": 0.34,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T15:06:48+00:00"
+   "observedAt": "2026-11-26T16:05:49+00:00"
   }
  ],
  "shareClassCandidateChecks": [

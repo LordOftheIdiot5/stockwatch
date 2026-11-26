@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T15:07:53.907317+00:00",
-  "newsRecordsScanned": 2778,
+  "generated": "2026-11-26T16:06:35.789252+00:00",
+  "newsRecordsScanned": 2788,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -4007,6 +4007,20 @@
       "candidateType": "issuer_event",
       "published": "2026-11-26T14:08:38Z",
       "sourceUrl": "https://newsweb.oslobors.no/message/687578",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "f4dca89d8e3e564fa7ea778ff2e45f14eed1a97eeac3776ec48553e7733c767c",
+      "newsId": "SUBC.OL:6c0d34bf7b815f05a48f43630728a6372b145fc82d73cdf8a90b52aec0ec1568",
+      "entityIds": [
+        "subsea7"
+      ],
+      "issuerTicker": "SUBC.OL",
+      "candidateType": "headline_event",
+      "published": "2026-11-26T14:09:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbGEwZ2NOc25hSExTUm1xY25pNlktajR5WTFKbTNrbmZ0UGxVTXZCOUVkMXZrb21yVTg3T3ZMQ0VQSW1Ha0hXeFl2N18zWE1JU1N6ZlFSYVp6MWI2TkNDclJ1VUF6cV93S2N4cjdzS1dLdTJJa19pMEg3M3Iyb05wY0pyQV8tUlVTQzdYZFl5ODd4WjBHZ2hHbkNRMDNfX3JSUTh5LUw4c1FfaWZoSnpHUGdpR012OXNYR0lqR2c3RzZjb3FsdUtWUA?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
