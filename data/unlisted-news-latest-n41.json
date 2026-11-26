@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-26T07:07:46.501747+00:00",
+  "attemptedAt": "2026-11-26T08:07:26.353706+00:00",
   "items": [
     {
       "id": "web-44b6182c22940dc88034f1d0e4bc775df05592747966f5e0acc84483f3894816",
@@ -102,6 +102,17 @@
       "dateType": "reported publication time"
     },
     {
+      "id": "web-43754d6a5fc4a812d53f4a2405141485374ee5a25ffa4fc524c74c72db6ad701",
+      "company": "agile",
+      "date": "2026-11-12T08:00:00+00:00",
+      "category": "General",
+      "title": "Germany’s Agile Robots Raises $500 Million From Softbank, Nvidia At $8.5 Billion Valuation",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQN2taQlMzeE15Nl8xM1F3c3JHbDNyNks4UEI3YVFCNERUX0NVeTh5akdMMm9GN21JcFk5bk1DT0hlbGs2QmFoVlRtT2N4NDZqRDM5SWtMQi1IeXZwTXBPek5NbnRxTE0yLUlsZFJoa2RoMWhCbkt0Q0ZjY3J0ZFV0UkllcHBKSWhxYUxNeTIxYW8xb3hBRXdlZnBWQjdsaHpfNEprcFdJQWFZeG9KOEs1WkxwVXR2MFRLd0JJRlpvZjlTV2Qtb3BmNzZJX3Uxb3hLUms4MkFn?oc=5",
+      "publisher": "Forbes",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
+    {
       "id": "web-8e6b542706e9b4e3ca426981e5f3190e79c2835d3150a2811f1ffe8d1c478d32",
       "company": "agile",
       "date": "2026-11-12T08:00:00+00:00",
@@ -142,17 +153,6 @@
       "title": "Agile Robots Raises $500 Million From SoftBank and Nvidia",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1pcHI4ZEpOTlNCZWhtdk4wcjU0S1JRUkFGVG5hYkJKUldvdWM3MXVZZ1ZWSjVsVjFYWmRrclRDNXM5dGhqa0w1c1NpdnRrTHI3UEVvZ2VMUFcwUW5oWHlCVDNud0ZVcUNuUlR6clBYYURrVnN5TFMwWnNoYw?oc=5",
       "publisher": "trendingtopics.eu",
-      "tier": "named reference",
-      "dateType": "reported publication time"
-    },
-    {
-      "id": "web-43754d6a5fc4a812d53f4a2405141485374ee5a25ffa4fc524c74c72db6ad701",
-      "company": "agile",
-      "date": "2026-11-12T08:00:00+00:00",
-      "category": "General",
-      "title": "Germany’s Agile Robots Raises $500 Million From Softbank, Nvidia At $8.5 Billion Valuation",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQN2taQlMzeE15Nl8xM1F3c3JHbDNyNks4UEI3YVFCNERUX0NVeTh5akdMMm9GN21JcFk5bk1DT0hlbGs2QmFoVlRtT2N4NDZqRDM5SWtMQi1IeXZwTXBPek5NbnRxTE0yLUlsZFJoa2RoMWhCbkt0Q0ZjY3J0ZFV0UkllcHBKSWhxYUxNeTIxYW8xb3hBRXdlZnBWQjdsaHpfNEprcFdJQWFZeG9KOEs1WkxwVXR2MFRLd0JJRlpvZjlTV2Qtb3BmNzZJX3Uxb3hLUms4MkFn?oc=5",
-      "publisher": "Forbes",
       "tier": "named reference",
       "dateType": "reported publication time"
     },
@@ -480,8 +480,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 1,
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
       "retainedReferences": 1
     },
     "1x": {
@@ -496,7 +496,7 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 4
     },
     "mistral": {

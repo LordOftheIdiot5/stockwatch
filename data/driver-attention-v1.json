@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T07:07:52Z",
+  "generated": "2026-11-26T08:07:33Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -3746,8 +3746,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-25T16:30:52Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-26T07:41:20Z",
       "topicCounts": {
         "numbers": 4,
         "prices": 0,
@@ -3923,7 +3923,7 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 0
+          "media": 1
         },
         {
           "date": "2026-11-25",
@@ -3931,14 +3931,23 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "ELI.BR:d05ddccc8283fafc013a533d7f646fae7726f7e275d21de3f3925e5df015585c",
+          "published": "2026-11-24T11:47:14Z",
+          "headline": "Morgan Stanley Expects Elia Group to Raise FY26 Net Income Guidance",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZUhPVm82S2JIWGJzWWNPMXM3MTBVQWx1b0xxbUVQZTZNZlVOcW85ekFOcTFET0dfRm5acU5wLUY4bHRrNXI5SjVGbXo5QUpjclZfYXI0eGYxeFZBVzBBdUd6MFVmeFVNQ1FPdldnR0ZzaXFaZDBGaFhPd2NUQlV1THNScjg2ZFdxVnZDbktfS3lveTVCWjZZb1QtZkpYdldOYjJYSzBFS2hOT21UTGVMNGhVZ1NUMmttTDF3bA?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        }
+      ],
+      "observedRecords": 1,
+      "latestRecord": "2026-11-24T11:47:14Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
@@ -3947,7 +3956,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 0
+        "media": 1
       }
     },
     "ELLOS.ST": {
@@ -7588,6 +7597,14 @@
       ],
       "potential": [
         {
+          "id": "NDX1.DE:46d57675f6ee5febb8eed0c408551b732cbc699f86bbcc32c781f6d585227d51",
+          "published": "2026-11-26T07:13:50Z",
+          "headline": "Nordex stock: EUR 35.51, up 5.37% before Xetra after 133 MW order",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2M5UjRDM0oxNTZISTFkMm5Lb2tpR0tCOG1Ecnp2UnVKUjlLQjB0LVdOZ2lxOUJvNWE4SWNPTTY2eEMxenR1UDYzRFpvdWxGbEZreFE0RzFfZmJnUmVINHlmaEEyYTJVU0RnQjFMVkFNVTY2YWdFcHpvNzQ5MENkMG5sLTNtRDZ2M25ZYUI5cFYya3VJUjJJY0tqTGplNUpoZXBLUllJWmJUMFZ3SGhMZWJmMDI3RlgtNjlmQQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "NDX1.DE:70b536a01be9872aebf9dc41389921ff21321b22c2865933e6f16b49264c5a5e",
           "published": "2026-11-25T10:21:55Z",
           "headline": "Nordex Group receives 133 MW order from Electrica for wind farm in Romania",
@@ -7708,8 +7725,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 46,
-      "latestRecord": "2026-11-25T18:25:07Z",
+      "observedRecords": 47,
+      "latestRecord": "2026-11-26T07:13:50Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -8714,8 +8731,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-24T08:34:40Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-26T04:31:07Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9399,8 +9416,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 16,
-      "latestRecord": "2026-11-25T11:13:00Z",
+      "observedRecords": 17,
+      "latestRecord": "2026-11-26T04:52:10Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -10170,8 +10187,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-25T10:52:03Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-26T07:58:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11949,6 +11966,14 @@
       ],
       "potential": [
         {
+          "id": "SKA-B.ST:5b783654b921f6e85fb98b9c66f4f3f759fa1762954dbebf976a386e657aad82",
+          "published": "2026-11-26T07:14:03Z",
+          "headline": "Skanska får ytterligere kontrakt for nytt datasenter i Georgia",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPaGhpMDBvVndMaERmUFZWQUJFWkFHQUtVM0RreTU1eUxBOFZOdzVYQWZQUklGSl9TOUpUZlV0M3pzSm9FSHZzVzNtY0V6VlVhUEFuS0llci11bHhUai1wakRweVZYc29oV09XYVJxWExXdXJmRWl6M0pCUEdTVFpfcXI1YkR1aENGclE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "SKA-B.ST:4960a4720b100c20a637f41ece99f1b8198018021c1764b37269e5ebe48561a3",
           "published": "2026-11-24T22:15:31Z",
           "headline": "Skanska bygger ubåtsbas i Norge – kontrakt värt 2,9 miljarder kronor",
@@ -12077,8 +12102,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 29,
-      "latestRecord": "2026-11-26T07:00:51Z",
+      "observedRecords": 32,
+      "latestRecord": "2026-11-26T07:14:31Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13345,9 +13370,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-26T06:00:23Z",
+      "potential": [
+        {
+          "id": "TRMED.OL:893a0c03a68e91a2e27ad6b0b8b7016f900cfe40a247adf1fc4c8c8cd9ede2f7",
+          "published": "2026-11-26T07:37:03Z",
+          "headline": "Thor Medical stanser opptrappingen – StrongPoint inngår strategisk avtale",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTFBjWUZCTzhnMldsZ0x3M1dnNFNFdzlhMk9fWTFLN0JjQWMtUWp0a2tJaXRJZkRlVjdZUWhfeEptcnVCaFlCYnhKdlJkLTRnQmxFV3JKdnIzdVZmQnVTYWtHTWZLbmxXcFRkSkpYM0RvT2VNdUx1UjNIeHlScElXYWVFdFVpa21RdUxQd2tsc21NNzVwcjdsaVREV1pTS0NGTDl3TWQtR0RYSFZKWFExU282ank?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 2,
+      "latestRecord": "2026-11-26T07:37:03Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13693,8 +13727,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 157,
-      "latestRecord": "2026-11-26T06:55:00Z",
+      "observedRecords": 159,
+      "latestRecord": "2026-11-26T07:56:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -19357,7 +19391,7 @@
         {
           "date": "2026-11-24",
           "issuer": 0,
-          "media": 1
+          "media": 2
         },
         {
           "date": "2026-11-25",
@@ -19366,7 +19400,7 @@
         }
       ],
       "potential": [],
-      "observedRecords": 14,
+      "observedRecords": 15,
       "latestRecord": "2026-11-25T13:26:12Z",
       "topicCounts": {
         "numbers": 0,
@@ -19381,7 +19415,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 9
+        "media": 10
       }
     },
     "YAR.OL": {
