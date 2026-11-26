@@ -44,11 +44,16 @@ class UnlistedNewsTests(unittest.TestCase):
     def test_empty_is_not_verified_no_news(self):
         d=n.collect({"companies":[COMP]}, {}, lambda *a,**k:[],NOW)
         self.assertEqual(d["coverage"]["sit"]["status"],"no_usable_results_or_unconfirmed")
+    def test_monumental_requires_robotics_context(self):
+        company=next(c for c in json.loads(n.SEED.read_text(encoding="utf-8"))["companies"] if c["id"]=="monumental")
+        self.assertIsNotNone(n.candidate(company,raw("Monumental Robotics expands fleet"),NOW))
+        self.assertIsNone(n.candidate(company,raw("A monumental achievement for construction"),NOW))
+        self.assertIsNone(n.candidate(company,raw("Monumental Sports announces new deal"),NOW))
     def test_reviewed_seed_covers_all_companies_and_assets(self):
         d=json.loads(n.SEED.read_text(encoding="utf-8"))
         self.assertEqual({x["id"] for x in d["companies"]},{x["company"] for x in d["items"]})
-        self.assertEqual(len(d["items"]),20)
-        self.assertEqual(len({x["id"] for x in d["items"]}),20)
+        self.assertEqual(len(d["items"]),22)
+        self.assertEqual(len({x["id"] for x in d["items"]}),22)
         self.assertTrue(all(x["url"].startswith("https://") and x["date"]<=d["reviewed"] for x in d["items"]))
         manifest=json.loads((ROOT/"scripts/public-pages-manifest-v122.json").read_text())
         for path in (n.SEED,n.OUTPUT):self.assertIn(path.relative_to(ROOT).as_posix(),manifest["files"])

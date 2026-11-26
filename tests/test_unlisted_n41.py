@@ -27,11 +27,16 @@ class UnlistedTests(unittest.TestCase):
         self.page.feed(self.html)
     def test_initial_company_identity_and_sources(self):
         self.assertEqual({x["id"] for x in self.page.companies},
-                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing"})
+                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing","monumental"})
         self.assertEqual(len(self.page.ids),len(set(self.page.ids)))
         self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),9)
         for link in self.page.urls:
             self.assertFalse(link.lower().startswith(("javascript:","data:")))
+    def test_monumental_owner_selected(self):
+        card=next(x for x in self.page.companies if x["id"]=="monumental")
+        self.assertEqual(card["data-kind"],"Company watch")
+        self.assertIn("14 company records",self.html)
+        self.assertIn("https://www.monumental.nl/blog/we-raised-32-million-to-put-more/",self.page.urls)
     def test_listing_types_separated(self):
         self.assertEqual({x["data-kind"] for x in self.page.events},
                          {"Initial public offering","Spin-off admission","IPO / listing application","Additional listing","Reported IPO intent"})
