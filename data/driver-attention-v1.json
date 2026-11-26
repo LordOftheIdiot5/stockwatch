@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T14:07:23Z",
+  "generated": "2026-11-26T14:40:35Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -10236,8 +10236,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-26T07:58:00Z",
+      "observedRecords": 3,
+      "latestRecord": "2026-11-26T14:31:28Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12854,6 +12854,14 @@
       ],
       "potential": [
         {
+          "id": "SUBC.OL:8db454f851b8b35b1cfe87499b627090bf82ea5848c43300ae8b704940d7a03e",
+          "published": "2026-11-26T14:08:38Z",
+          "headline": "Subsea7 awarded contract extension offshore Norway",
+          "url": "https://newsweb.oslobors.no/message/687578",
+          "evidence": "issuer",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "SUBC.OL:b685a1c448ac5ab109b5c3bee2635a6366f8a9d2e3aaf136456c2602c8d013d0",
           "published": "2026-11-23T10:55:37Z",
           "headline": "Subsea 7 Forced to Sell Pipelaying Vessel as $4.9 Billion Saipem Merger Faces Regulatory Hurdles",
@@ -12966,8 +12974,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 29,
-      "latestRecord": "2026-11-24T05:49:09Z",
+      "observedRecords": 30,
+      "latestRecord": "2026-11-26T14:08:38Z",
       "topicCounts": {
         "numbers": 10,
         "prices": 0,
@@ -13792,7 +13800,7 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 172,
+      "observedRecords": 173,
       "latestRecord": "2026-11-26T14:00:00Z",
       "topicCounts": {
         "numbers": 2,

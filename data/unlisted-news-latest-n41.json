@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-26T14:07:16.291249+00:00",
+  "attemptedAt": "2026-11-26T14:40:28.669396+00:00",
   "items": [
     {
       "id": "web-44b6182c22940dc88034f1d0e4bc775df05592747966f5e0acc84483f3894816",
@@ -500,8 +500,8 @@
   ],
   "coverage": {
     "neura": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
       "retainedReferences": 3
     },
     "agile": {
@@ -535,8 +535,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 1,
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
       "retainedReferences": 1
     },
     "1x": {
@@ -551,7 +551,7 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 4
     },
     "mistral": {
@@ -560,10 +560,9 @@
       "retainedReferences": 9
     },
     "helsing": {
-      "status": "provider_http_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 2,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 2,
+      "retainedReferences": 2
     }
   },
   "notice": "Open-web headline references only; no verified issuer event, IPO or trading status inferred."
