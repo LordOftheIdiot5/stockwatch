@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T03:47:53Z",
+  "generated": "2026-11-26T04:13:48Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -11127,10 +11127,18 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 3
+          "media": 4
         }
       ],
       "potential": [
+        {
+          "id": "SAND.ST:a908b0530f85ee69ca0a09caaf06148be8fbe06f36d62d8b5f098e2c6f1876e7",
+          "published": "2026-11-25T19:47:20Z",
+          "headline": "Sandvik to acquire Brazilian mining parts manufacturer Del Rey Minerals",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdUx1c09mRVBCT0RKQmlocTQ5SDRFZUJ6YWgtcllNanNMTG1XVU5pVW1mMGM1ZUlTU2p3V1JKWmM3cTRRQXdsd3FDU3FNN1Q5VHIyeDJxbjdVQkR5MjNqcGhWMW45bU16cW1YTUxOck5aTnRSQ3JITm9IUnFMVy1NVUdrUHRjWmxObUlURnZUWTNxRUFIMGZCQmdXVm50amg3QkdXSnJrUzhTVlFld2hsYg?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
         {
           "id": "SAND.ST:5ee01a489075d6b375f896ad97ee227e5d5e5d1cad7350b1b0d9076136ca5c83",
           "published": "2026-11-25T12:03:22Z",
@@ -11140,13 +11148,13 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-25T12:03:22Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-25T19:47:20Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -11155,7 +11163,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 9
+        "media": 10
       }
     },
     "SAP.DE": {
