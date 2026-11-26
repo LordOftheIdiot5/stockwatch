@@ -2,7 +2,7 @@
  * Reads already-published Stockwatch source snapshots, not live broker/AIS
  * feeds. No simulated records, causal claims, trading signals or forecasts.
  */
-import {buildMaritimePulse,valuePercent} from './scripts/maritime-pulse-v121.mjs';
+import {buildMaritimePulse,valuePercent} from './scripts/maritime-pulse-v121.mjs?v=n42';
 if(document.body.dataset.page==='shipping'){
  const dataPaths={
   freight:'data/shipping-open.json',
@@ -106,6 +106,7 @@ if(document.body.dataset.page==='shipping'){
     delta.setAttribute('aria-label',percent(f.changePct)+' versus '+(
      signal.comparison==='same_quarter_prior_year'?'same quarter last year':
      signal.comparison==='prior_quarter'?'preceding quarter':
+     signal.comparison==='prior_52_weeks'?'52 weeks earlier':
      signal.comparison==='prior_year'?'previous year':
      signal.comparison==='previous_month'?'previous month':'previous week'));
    }
