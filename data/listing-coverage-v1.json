@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T03:04:33+00:00",
+  "generated": "2026-11-26T03:06:49+00:00",
   "notice": "Coverage of exact UI listing IDs, not unique issuers or verified security deduplication. Candidate FIGIs are not verified. Prices are dated observations, not proof of display or storage entitlements. News counts use exact non-SEC archive ticker IDs only; missing matches do not mean no news. Fundamentals and descriptions count only explicit fields in the inspected files. No provider requests or fabricated data.",
   "summary": {
     "listings": 500,
@@ -1487,7 +1487,7 @@
       "licensedHistory": false,
       "sector": "Luxury",
       "descriptionAvailable": false,
-      "newsRecords": 6,
+      "newsRecords": 5,
       "newsAssociation": "exact_archive_ticker_only",
       "fundamentalsAvailable": false,
       "operatingMetricsAvailable": false,
@@ -2999,7 +2999,7 @@
       "licensedHistory": false,
       "sector": "Construction",
       "descriptionAvailable": false,
-      "newsRecords": 12,
+      "newsRecords": 11,
       "newsAssociation": "exact_archive_ticker_only",
       "fundamentalsAvailable": false,
       "operatingMetricsAvailable": false,

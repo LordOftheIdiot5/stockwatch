@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T03:05:24Z",
+  "generated": "2026-11-26T03:13:27Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -76,12 +76,12 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 1
+          "media": 0
         }
       ],
       "potential": [],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-25T18:19:47Z",
+      "observedRecords": 5,
+      "latestRecord": "2026-11-23T19:02:01Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -95,7 +95,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 4
+        "media": 3
       }
     },
     "1AST.DE": {
@@ -468,7 +468,7 @@
         {
           "date": "2026-11-24",
           "issuer": 1,
-          "media": 1
+          "media": 0
         },
         {
           "date": "2026-11-25",
@@ -476,23 +476,14 @@
           "media": 0
         }
       ],
-      "potential": [
-        {
-          "id": "AFG.OL:58c2f7b50eac98608077156e15a48bbe7bab3bdd88c8700161bfc0bff72e291f",
-          "published": "2026-11-24T14:32:48Z",
-          "headline": "AF GRUPPEN: DATTERSELSKAP TILDELT AVTALE AV DRAMMEN HELSEPARK AS, VERDI 673M",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVDl3T3Z3b2FURG1lenlZQzEtc09sWTJSRkVYNUJBVkE4SDdEaFg3b2FjUU9XZHl4eGxwZEVZOHdBaU9WbDNaNjFzRi11WHNhb2FWVzJ4UXQ2Wl9PUExIT1VmS3lORUFOeUxrMHBrd1NpZ2dSVXYtd3pFVXlTOXFvREFHRkQxbkZNa2NFVEpFRDhRSk83M1ZmNHlRbW96Ny1SemdvOW50OGhOMmZRNWZnQVdlRE80RS1EVmM5b3hCMDd3cnRi?oc=5",
-          "evidence": "named_reference",
-          "topic": "Contracts / agreements"
-        }
-      ],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-24T14:32:48Z",
+      "potential": [],
+      "observedRecords": 11,
+      "latestRecord": "2026-11-24T14:30:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 0,
         "risk": 0
       },
       "prior7": {
@@ -501,7 +492,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 2
+        "media": 1
       }
     },
     "AFISH.OL": {
