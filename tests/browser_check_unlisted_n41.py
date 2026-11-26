@@ -29,6 +29,17 @@ def main():
                             page.wait_for_function("document.querySelectorAll('.n41-news-row').length>=20")
                             page.locator("#n41-news-tier").select_option("reviewed")
                             assert page.locator(".n41-news-row").count()==20
+                            assert "22 matching records" in page.locator("#n41-news-status").inner_text()
+                            page.locator("#n41-news-more").click()
+                            assert page.locator(".n41-news-row").count()==22
+                            page.locator("#n41-news-company").select_option("monumental")
+                            assert page.locator(".n41-news-row").count()==2
+                            page.locator("#n41-query").fill("Monumental")
+                            assert page.locator(".n41-company:visible").count()==1
+                            page.locator("#monumental").get_by_text("Read company news",exact=True).click()
+                            assert page.locator("#n41-news-company").input_value()=="monumental"
+                            assert page.locator(".n41-news-row").count()==2
+                            page.locator("#n41-query").fill("")
                             page.locator("#n41-news-company").select_option("mistral")
                             assert page.locator(".n41-news-row").count()==2
                             page.locator("#n41-news-company").select_option("neura")
