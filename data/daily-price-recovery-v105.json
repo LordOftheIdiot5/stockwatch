@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T00:54:59+00:00",
+  "generated": "2026-11-26T03:04:33+00:00",
   "comparisonDate": "2026-11-25",
   "totalListings": 500,
   "candidates": [
@@ -6558,6 +6558,24 @@
       ]
     },
     {
+      "id": "1913.HK",
+      "name": "Prada",
+      "venue": "HKSE",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-26",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "KCR.HE",
       "name": "Konecranes",
       "venue": "Helsinki",
@@ -8967,23 +8985,6 @@
       "needsDailyVerification": true,
       "reasons": [
         "monitored_source_quality_unconfirmed",
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "1913.HK",
-      "name": "Prada",
-      "venue": "HKSE",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-25",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
