@@ -1,0 +1,363 @@
+{
+  "ambiguousPairs": 0,
+  "comparisonCounts": {
+    "agree": 16,
+    "not_comparable": 1
+  },
+  "currentStateEstablished": false,
+  "eligiblePairs": 17,
+  "gleif": {
+    "snapshot": "data/gleif-isin-lei/2026-11-25-e4a58c375759daa1.json",
+    "sourceDate": "2026-11-25",
+    "status": "ok"
+  },
+  "matchedPairs": 17,
+  "notice": "Selected and normalized ESMA FIRDS reference facts. Original data is available free of charge from ESMA; ESMA does not endorse Nordl. Third-party rights and any stated exceptions remain applicable. Weekly snapshot evidence only; subsequent modifications, cancellations and terminations not applied.",
+  "parts": [
+    {
+      "bytes": 8326776,
+      "name": "FULINS_E_20261121_01of02.zip",
+      "rows": 500000,
+      "sha256": "3f7928b0d9cb4a0815d51d08fb0ca76172e55348e55b442fb2d742c3257c3880",
+      "sourceUrl": "https://firds.esma.europa.eu/firds/FULINS_E_20261121_01of02.zip"
+    },
+    {
+      "bytes": 3728405,
+      "name": "FULINS_E_20261121_02of02.zip",
+      "rows": 238264,
+      "sha256": "f1b154f3fa032d08eef933c4b2607e16eba772a49f5cadeef16b66845310519b",
+      "sourceUrl": "https://firds.esma.europa.eu/firds/FULINS_E_20261121_02of02.zip"
+    }
+  ],
+  "records": [
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300W1OGQF5LZIH349"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300W1OGQF5LZIH349"
+      ],
+      "isin": "NO0003054108",
+      "listingIds": [
+        "ref:XOSL:MOWI"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "5967007LIEEXZXJGFK95"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "5967007LIEEXZXJGFK95"
+      ],
+      "isin": "NO0003055501",
+      "listingIds": [
+        "ref:XOSL:NOD"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300NUPLAXPB0WYH90"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300NUPLAXPB0WYH90"
+      ],
+      "isin": "NO0003078800",
+      "listingIds": [
+        "ref:XOSL:TGS"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300PZS8G8RG6RVZ52"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300PZS8G8RG6RVZ52"
+      ],
+      "isin": "NO0003733800",
+      "listingIds": [
+        "ref:XOSL:ORK"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVTFR",
+          "currency": "NOK",
+          "lei": "549300N1SDN71ZZ8BO45"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300N1SDN71ZZ8BO45"
+      ],
+      "isin": "NO0005052605",
+      "listingIds": [
+        "NHY.OL"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300IM1QSBY4SLPM26"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300IM1QSBY4SLPM26"
+      ],
+      "isin": "NO0010063308",
+      "listingIds": [
+        "ref:XOSL:TEL"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "OW6OFBNCKXC4US5C7523"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "OW6OFBNCKXC4US5C7523"
+      ],
+      "isin": "NO0010096985",
+      "listingIds": [
+        "ref:XOSL:EQNR"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300GKFG0RYRRQ1414"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300GKFG0RYRRQ1414"
+      ],
+      "isin": "NO0010161896",
+      "listingIds": [
+        "ref:XOSL:DNB"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300IEUH2FEM2Y6B51"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300IEUH2FEM2Y6B51"
+      ],
+      "isin": "NO0010196140",
+      "listingIds": [
+        "ref:XOSL:NAS"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "5967007LIEEXZXJ10071"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "5967007LIEEXZXJ10071"
+      ],
+      "isin": "NO0010234552",
+      "listingIds": [
+        "ref:XOSL:AKER"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "5967007LIEEXZXGE3C16"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "5967007LIEEXZXGE3C16"
+      ],
+      "isin": "NO0010379266",
+      "listingIds": [
+        "ref:XOSL:BNOR"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVTFR",
+          "currency": "NOK",
+          "lei": "5967007LIEEXZXHT0O36"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "5967007LIEEXZXHT0O36"
+      ],
+      "isin": "NO0010736879",
+      "listingIds": [
+        "ref:XOSL:VEND"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300LIVN3FFOJN2K47"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300LIVN3FFOJN2K47"
+      ],
+      "isin": "NO0011202772",
+      "listingIds": [
+        "ref:XOSL:VAR"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "549300J726JCFJU3VT89"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "549300J726JCFJU3VT89"
+      ],
+      "isin": "NO0012470089",
+      "listingIds": [
+        "ref:XOSL:TOM"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "5967007LIEEXZXJ9HK73"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "5967007LIEEXZXJ9HK73"
+      ],
+      "isin": "NO0013536151",
+      "listingIds": [
+        "ref:XOSL:KOG"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "NOK",
+          "lei": "6367007UE6J5YSBTWN87"
+        }
+      ],
+      "gleifComparison": "agree",
+      "gleifLEIs": [
+        "6367007UE6J5YSBTWN87"
+      ],
+      "isin": "NO0013697029",
+      "listingIds": [
+        "ref:XOSL:KMAR"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    },
+    {
+      "esmaObservations": [
+        {
+          "cfi": "ESVUFR",
+          "currency": "USD",
+          "lei": "5493006WBEME88YFDW23"
+        }
+      ],
+      "gleifComparison": "not_comparable",
+      "gleifLEIs": [],
+      "isin": "SGXZ69436764",
+      "listingIds": [
+        "ref:XOSL:BWLPG"
+      ],
+      "mic": "XOSL",
+      "status": "matched"
+    }
+  ],
+  "schemaVersion": 1,
+  "source": "ESMA FIRDS",
+  "sourceDate": "2026-11-21",
+  "sourceRights": "https://registers.esma.europa.eu/publication/legalNoticePage",
+  "sourceRows": 738264,
+  "sourceUrl": "https://www.esma.europa.eu/document/firds-instructions-access-and-download-full-and-delta-reference-data-files",
+  "transformation": "Exact ISIN/MIC subset, normalized fields; separate GLEIF comparison",
+  "unmatchedPairs": 0
+}

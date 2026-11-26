@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "source": "ANNA/GLEIF",
+  "sourceDate": "2026-11-25",
+  "sourceUrl": "https://isinmapping.gleif.org/api/v2/isin-lei/2026-11-25/download",
+  "retrievedAt": "2026-11-26T00:57:17+00:00",
+  "sha256": "e4a58c375759daa1898667d05f3b431c00beb28e997b5b72f81523b9088f9fb7",
+  "inventoryGenerated": "2026-11-26T00:54:59+00:00",
+  "sourceRows": 9584427,
+  "invalidSourceRows": 0,
+  "matchedISINs": 17,
+  "ambiguousISINs": 0,
+  "eligibleISINs": 18,
+  "records": [
+    {
+      "isin": "FR0000061459",
+      "listingIds": [
+        "ALPER.PA"
+      ],
+      "leis": [
+        "969500IJO9LS9EG0DV72"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0003054108",
+      "listingIds": [
+        "ref:XOSL:MOWI"
+      ],
+      "leis": [
+        "549300W1OGQF5LZIH349"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0003055501",
+      "listingIds": [
+        "ref:XOSL:NOD"
+      ],
+      "leis": [
+        "5967007LIEEXZXJGFK95"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0003078800",
+      "listingIds": [
+        "ref:XOSL:TGS"
+      ],
+      "leis": [
+        "549300NUPLAXPB0WYH90"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0003733800",
+      "listingIds": [
+        "ref:XOSL:ORK"
+      ],
+      "leis": [
+        "549300PZS8G8RG6RVZ52"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0005052605",
+      "listingIds": [
+        "NHY.OL"
+      ],
+      "leis": [
+        "549300N1SDN71ZZ8BO45"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010063308",
+      "listingIds": [
+        "ref:XOSL:TEL"
+      ],
+      "leis": [
+        "549300IM1QSBY4SLPM26"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010096985",
+      "listingIds": [
+        "ref:XOSL:EQNR"
+      ],
+      "leis": [
+        "OW6OFBNCKXC4US5C7523"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010161896",
+      "listingIds": [
+        "ref:XOSL:DNB"
+      ],
+      "leis": [
+        "549300GKFG0RYRRQ1414"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010196140",
+      "listingIds": [
+        "ref:XOSL:NAS"
+      ],
+      "leis": [
+        "549300IEUH2FEM2Y6B51"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010234552",
+      "listingIds": [
+        "ref:XOSL:AKER"
+      ],
+      "leis": [
+        "5967007LIEEXZXJ10071"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010379266",
+      "listingIds": [
+        "ref:XOSL:BNOR"
+      ],
+      "leis": [
+        "5967007LIEEXZXGE3C16"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0010736879",
+      "listingIds": [
+        "ref:XOSL:VEND"
+      ],
+      "leis": [
+        "5967007LIEEXZXHT0O36"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0011202772",
+      "listingIds": [
+        "ref:XOSL:VAR"
+      ],
+      "leis": [
+        "549300LIVN3FFOJN2K47"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0012470089",
+      "listingIds": [
+        "ref:XOSL:TOM"
+      ],
+      "leis": [
+        "549300J726JCFJU3VT89"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0013536151",
+      "listingIds": [
+        "ref:XOSL:KOG"
+      ],
+      "leis": [
+        "5967007LIEEXZXJ9HK73"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "NO0013697029",
+      "listingIds": [
+        "ref:XOSL:KMAR"
+      ],
+      "leis": [
+        "6367007UE6J5YSBTWN87"
+      ],
+      "status": "matched"
+    },
+    {
+      "isin": "SGXZ69436764",
+      "listingIds": [
+        "ref:XOSL:BWLPG"
+      ],
+      "leis": [],
+      "status": "unmatched"
+    }
+  ],
+  "notice": "Source mapping evidence for exact input ISINs, not a reviewed issuer merger or ownership record. Missing pairs do not prove absence of an issuer. Raw archive not retained."
+}

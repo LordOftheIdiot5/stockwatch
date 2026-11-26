@@ -7,8 +7,8 @@
   "currentStateEstablished": false,
   "deltaReplayComplete": false,
   "eligiblePairs": 17,
-  "lastAttempt": "2026-11-25T05:01:26+00:00",
-  "lastSuccess": "2026-11-25T05:01:26+00:00",
+  "lastAttempt": "2026-11-26T00:59:10+00:00",
+  "lastSuccess": "2026-11-26T00:59:10+00:00",
   "matchedPairs": 17,
   "notice": "Selected and normalized ESMA FIRDS reference facts. Original data is available free of charge from ESMA; ESMA does not endorse Nordl. Third-party rights and any stated exceptions remain applicable. Weekly snapshot evidence only; subsequent modifications, cancellations and terminations not applied.",
   "pendingUpdateSets": [
@@ -42,6 +42,13 @@
     },
     {
       "complete": true,
+      "date": "2026-11-25",
+      "expectedParts": 6,
+      "foundParts": 6,
+      "type": "DLTINS"
+    },
+    {
+      "complete": true,
       "date": "2026-11-21",
       "expectedParts": 2,
       "foundParts": 2,
@@ -49,8 +56,8 @@
     }
   ],
   "schemaVersion": 1,
-  "snapshot": "data/esma-equity-history/2026-11-21-3500a142a85bb2e5a54cf78ed98c597ab8304a320300cd64b12a4ca94667d78a.json",
-  "snapshotSha256": "3500a142a85bb2e5a54cf78ed98c597ab8304a320300cd64b12a4ca94667d78a",
+  "snapshot": "data/esma-equity-history/2026-11-21-a681bcf15b592fc32a069ca20e4bac69ac87e9707f82dedcea2d86c3a05b5888.json",
+  "snapshotSha256": "a681bcf15b592fc32a069ca20e4bac69ac87e9707f82dedcea2d86c3a05b5888",
   "source": "ESMA FIRDS",
   "sourceDate": "2026-11-21",
   "sourceRights": "https://registers.esma.europa.eu/publication/legalNoticePage",
