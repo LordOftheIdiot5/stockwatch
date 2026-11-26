@@ -135,3 +135,18 @@ test('invalid time and non-numeric values are rejected',()=>{
  const r=buildMaritimePulse(d,{now:NOW});
  assert.ok(!r.signals.some(x=>x.id==='usda-grain-week'));
 });
+
+test('exact 52-week grain indices retain period and reject ambiguous or missing baseline',()=>{
+ const d=clone(data);
+ for(const [i,s] of d.freight.series.entries())s.history.unshift({date:'2025-11-19',value:i?140:145});
+ const signal=buildMaritimePulse(d,{now:NOW}).signals.find(x=>x.id==='usda-grain-52-week');
+ assert.ok(signal);
+ assert.equal(signal.comparison,'prior_52_weeks');
+ assert.equal(signal.period,'2026-11-18');
+ assert.match(signal.headline,/2025-11-19/);
+ assert.deepEqual(signal.figures.map(f=>f.changePct),[27.6,34]);
+ const near=clone(d);near.freight.series[0].history[0].date='2025-11-18';
+ assert.ok(!buildMaritimePulse(near,{now:NOW}).signals.some(x=>x.id==='usda-grain-52-week'));
+ const duplicate=clone(d);duplicate.freight.series[0].history.unshift({...duplicate.freight.series[0].history[0]});
+ assert.ok(!buildMaritimePulse(duplicate,{now:NOW}).signals.some(x=>x.id==='usda-grain-52-week'));
+});
