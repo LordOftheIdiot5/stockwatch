@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 from xml.etree import ElementTree as ET
 BASE="https://stocks.nordl.dev/"
 API="https://stockwatch-research-api.gauchovidar.workers.dev/api/health"
-PAGES=["","stocks.html","news.html","health.html","company.html?ticker=NHY.OL","company.html?ticker=XNAS%3ANVDA","directory.html","terminal.html","shipping.html","spreads.html"]
+PAGES=["","stocks.html","news.html","health.html","unlisted.html","company.html?ticker=NHY.OL","company.html?ticker=XNAS%3ANVDA","directory.html","terminal.html","shipping.html","spreads.html"]
 LIMIT=12*1024*1024
 class Head(HTMLParser):
     def __init__(self):super().__init__();self.canonical=[];self.robots=[]
@@ -28,7 +28,34 @@ def fetch(url):
         except Exception:
             if attempt:raise
             time.sleep(3)
-def audit(get=fetch,now=None,require_gleif=False,require_sec=False):
+ROOT=Path(__file__).resolve().parents[1]
+
+def internal_gleif(root,now):
+    """Validate retained repository mapping, not a public Pages endpoint."""
+    folder=Path(root)/"data/gleif-isin-lei"
+    idx=json.loads((folder/"index.json").read_text(encoding="utf-8"))
+    match=re.fullmatch(r"data/gleif-isin-lei/([0-9]{4}-[0-9]{2}-[0-9]{2})-([a-f0-9]{16})(?:-[a-f0-9]{12})?\.json",idx["snapshot"])
+    if not match:raise ValueError("invalid internal snapshot path")
+    target=folder/Path(idx["snapshot"]).name
+    if folder.is_symlink() or target.is_symlink() or (folder/"index.json").is_symlink():raise ValueError("unsafe internal mapping path")
+    snap=json.loads(target.read_text(encoding="utf-8"))
+    if idx.get("schemaVersion")!=1 or snap.get("schemaVersion")!=1 or snap.get("source")!="ANNA/GLEIF":
+        raise ValueError("invalid mapping schema")
+    if idx["sourceDate"]!=match[1] or snap["sourceDate"]!=match[1] or not re.fullmatch(r"[a-f0-9]{64}",snap["sha256"]) or not snap["sha256"].startswith(match[2]):
+        raise ValueError("mapping provenance mismatch")
+    records=snap["records"]
+    counts={k:sum(r["status"]==k for r in records) for k in ("matched","ambiguous","unmatched")}
+    if sum(counts.values())!=len(records) or len({r["isin"] for r in records})!=len(records):
+        raise ValueError("invalid mapping records")
+    for key,value in (("matchedISINs",counts["matched"]),("ambiguousISINs",counts["ambiguous"]),("eligibleISINs",len(records))):
+        if idx[key]!=value or snap[key]!=value:raise ValueError("mapping count mismatch")
+    if counts["matched"]<17:raise ValueError("GLEIF mapping baseline regression")
+    last=datetime.fromisoformat(idx["lastSuccess"].replace("Z","+00:00"))
+    age=(now-last).total_seconds()/3600
+    if age < -1:raise ValueError("future GLEIF success")
+    return {"matched":counts["matched"],"ageHours":round(age,1),"status":idx["status"]}
+
+def audit(get=fetch,now=None,require_gleif=False,require_sec=False,local_root=ROOT):
     now=now or datetime.now(timezone.utc);issues=[];metrics={};checks=[]
     def issue(code,level,message):issues.append({"code":code,"severity":level,"message":message})
     def check(code,url,fn):
@@ -103,12 +130,17 @@ def audit(get=fetch,now=None,require_gleif=False,require_sec=False):
             data("sec_file:"+cik,r["path"],detail)
         if any(x["status"]!="ok" for x in rows.values()):issue("sec_refresh","warning","One or more SEC refreshes degraded")
     if require_sec:data("sec_index","data/sec-companyfacts/index.json",sec)
-    def gleif(d):
-        require(d["snapshot"].startswith("data/gleif-isin-lei/") and d["snapshot"].endswith(".json") and ".." not in d["snapshot"],"invalid snapshot path")
-        metrics["gleifMatched"]=d["matchedISINs"];require(d["matchedISINs"]>=17,"GLEIF mapping baseline regression")
-        if d["status"]!="ok":issue("gleif_refresh","warning","GLEIF refresh degraded; retained snapshot")
-        data("gleif_snapshot",d["snapshot"],lambda s:require(s["matchedISINs"]==d["matchedISINs"],"snapshot count mismatch"))
-    if require_gleif:data("gleif_index","data/gleif-isin-lei/index.json",gleif)
+    if require_gleif:
+        try:
+            state=internal_gleif(local_root,now)
+            metrics["gleifMatched"]=state["matched"]
+            metrics["gleifAgeHours"]=state["ageHours"]
+            checks.append({"id":"gleif_internal_snapshot","ok":True})
+            if state["status"]!="ok" or state["ageHours"]>72:
+                issue("gleif_refresh","warning","Internal GLEIF mapping retained or older than 72 hours")
+        except Exception as e:
+            checks.append({"id":"gleif_internal_snapshot","ok":False})
+            issue("gleif_internal_snapshot","critical",type(e).__name__+": "+str(e)[:200])
     def archive(body,h):
         d=json.loads(body);require(d.get("status")=="ok" and d.get("storage")=="d1","D1 unhealthy")
         require(d.get("articles",0)>=1640,"D1 record count below baseline");metrics["d1Articles"]=d["articles"]
