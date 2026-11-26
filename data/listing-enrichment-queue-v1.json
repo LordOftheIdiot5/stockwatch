@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T04:13:03+00:00",
+  "generated": "2026-11-26T06:06:08+00:00",
   "listings": 500,
   "totals": {
     "identity": {
@@ -17,8 +17,8 @@
       "review_retention_and_collect": 17
     },
     "news": {
-      "archive_matches_present": 110,
-      "match_issuer_and_collect": 390
+      "archive_matches_present": 112,
+      "match_issuer_and_collect": 388
     },
     "financials": {
       "resolve_issuer_then_collect_filings": 497,
@@ -156,7 +156,7 @@
         "identity": "resolve_identity",
         "price": "dated_observation_present",
         "historical_prices": "await_identity",
-        "news": "match_issuer_and_collect",
+        "news": "archive_matches_present",
         "financials": "resolve_issuer_then_collect_filings",
         "sector": "classification_present",
         "description": "build_source_linked_profile",
@@ -1752,7 +1752,7 @@
         "identity": "resolve_identity",
         "price": "dated_observation_present",
         "historical_prices": "await_identity",
-        "news": "match_issuer_and_collect",
+        "news": "archive_matches_present",
         "financials": "resolve_issuer_then_collect_filings",
         "sector": "classification_present",
         "description": "build_source_linked_profile",

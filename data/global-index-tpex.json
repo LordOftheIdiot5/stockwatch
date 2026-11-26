@@ -10,8 +10,8 @@
   "licenseUrl": "https://data.gov.tw/en/license",
   "notice": "Dated official closing observations. Formosa changes are calculated from adjacent retained source observations when the date gap is at most four calendar days; not live quotes.",
   "status": "ok",
-  "lastAttempt": "2026-11-25T06:06:37.211254+00:00",
-  "lastSuccessAt": "2026-11-25T06:06:37.211254+00:00",
+  "lastAttempt": "2026-11-26T06:06:50.405789+00:00",
+  "lastSuccessAt": "2026-11-26T06:06:50.405789+00:00",
   "history": [
     {
       "date": "2026-11-02",
@@ -120,12 +120,18 @@
       "close": 275.97,
       "changePoints": -17.26,
       "changePct": -5.886164
+    },
+    {
+      "date": "2026-11-26",
+      "close": 289.84,
+      "changePoints": 13.87,
+      "changePct": 5.025909
     }
   ],
   "latest": {
-    "date": "2026-11-25",
-    "close": 275.97,
-    "changePoints": -17.26,
-    "changePct": -5.886164
+    "date": "2026-11-26",
+    "close": 289.84,
+    "changePoints": 13.87,
+    "changePct": 5.025909
   }
 }

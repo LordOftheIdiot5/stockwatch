@@ -1,50 +1,50 @@
 {
- "generated": "2026-11-26T04:13:03+00:00",
+ "generated": "2026-11-26T06:06:08+00:00",
  "commodities": [
   {
    "ticker": "GC=F",
    "name": "Gold",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 3604.5,
+   "last": 3605.7,
    "date": "2026-11-26",
-   "changePct": 1.94,
-   "monthPct": -11.04,
+   "changePct": 1.98,
+   "monthPct": -11.01,
    "yearPosition": 5,
    "yearLow": 3515.3999,
    "yearHigh": 5318.3999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "SI=F",
    "name": "Silver",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 41.965,
+   "last": 41.96,
    "date": "2026-11-26",
-   "changePct": 4.78,
-   "monthPct": -21.5,
+   "changePct": 4.76,
+   "monthPct": -21.51,
    "yearPosition": 3,
    "yearLow": 40.052,
    "yearHigh": 115.08,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "HG=F",
    "name": "Copper",
    "group": "metals",
    "unit": "USD/lb",
-   "last": 5.495,
+   "last": 5.48,
    "date": "2026-11-26",
-   "changePct": 3.05,
-   "monthPct": -17.26,
-   "yearPosition": 27,
-   "yearLow": 4.9995,
+   "changePct": 2.77,
+   "monthPct": -17.49,
+   "yearPosition": 22,
+   "yearLow": 5.1045,
    "yearHigh": 6.8035,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "ZNC=F",
@@ -59,37 +59,37 @@
    "yearLow": 2297.0,
    "yearHigh": 4193.5,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "ALI=F",
    "name": "Aluminium",
    "group": "metals",
    "unit": "USD/t",
-   "last": 2787.0,
+   "last": 2822.75,
    "date": "2026-11-25",
-   "changePct": -2.98,
-   "monthPct": -15.17,
+   "changePct": -1.73,
+   "monthPct": -14.08,
    "yearPosition": 4,
-   "yearLow": 2725.0,
+   "yearLow": 2763.5,
    "yearHigh": 4195.0,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "PL=F",
    "name": "Platinum",
    "group": "metals",
    "unit": "USD/oz",
-   "last": 1284.8,
+   "last": 1285.1,
    "date": "2026-11-26",
-   "changePct": 3.5,
-   "monthPct": -17.0,
+   "changePct": 3.52,
+   "monthPct": -16.98,
    "yearPosition": 3,
    "yearLow": 1241.4,
    "yearHigh": 2852.3999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "PA=F",
@@ -104,7 +104,7 @@
    "yearLow": 831.1,
    "yearHigh": 2169.8999,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "NIKL",
@@ -120,7 +120,7 @@
    "yearHigh": 20.59,
    "proxy": true,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "TIO=F",
@@ -135,52 +135,52 @@
    "yearLow": 90.57,
    "yearHigh": 111.42,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "BZ=F",
    "name": "Brent crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 91.0,
+   "last": 91.25,
    "date": "2026-11-26",
-   "changePct": -3.82,
-   "monthPct": -21.09,
+   "changePct": -3.55,
+   "monthPct": -20.87,
    "yearPosition": 54,
    "yearLow": 58.92,
    "yearHigh": 118.35,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "CL=F",
    "name": "WTI crude",
    "group": "energy",
    "unit": "USD/bbl",
-   "last": 84.29,
+   "last": 84.47,
    "date": "2026-11-26",
-   "changePct": 0.73,
-   "monthPct": -17.99,
-   "yearPosition": 50,
+   "changePct": 0.94,
+   "monthPct": -17.81,
+   "yearPosition": 51,
    "yearLow": 55.27,
    "yearHigh": 112.95,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "NG=F",
    "name": "Natural gas",
    "group": "energy",
    "unit": "USD/MMBtu",
-   "last": 3.683,
+   "last": 3.652,
    "date": "2026-11-26",
-   "changePct": 12.66,
-   "monthPct": 30.74,
+   "changePct": 11.72,
+   "monthPct": 29.64,
    "yearPosition": 23,
    "yearLow": 2.523,
    "yearHigh": 7.46,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "URA",
@@ -195,7 +195,7 @@
    "yearLow": 26.79,
    "yearHigh": 61.81,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   }
  ],
  "freight": [
@@ -213,7 +213,7 @@
    "yearLow": 8.42,
    "yearHigh": 16.58,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "BWET",
@@ -229,7 +229,7 @@
    "yearLow": 18.73,
    "yearHigh": 1012.75,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   },
   {
    "ticker": "BOAT",
@@ -245,7 +245,7 @@
    "yearLow": 31.416,
    "yearHigh": 55.2,
    "observationStatus": "reported",
-   "observedAt": "2026-11-26T04:13:03+00:00"
+   "observedAt": "2026-11-26T06:06:08+00:00"
   }
  ],
  "shareClasses": [

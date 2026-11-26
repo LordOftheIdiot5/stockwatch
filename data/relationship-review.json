@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T04:13:49.501408+00:00",
-  "newsRecordsScanned": 2628,
+  "generated": "2026-11-26T06:06:48.960872+00:00",
+  "newsRecordsScanned": 2635,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3731,6 +3731,18 @@
       "candidateType": "issuer_event",
       "published": "2026-11-25T20:56:29Z",
       "sourceUrl": "https://newsweb.oslobors.no/message/687444",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "178f0b0bc3a0adf68c2ad52df940339217258305e752a91c6a99d3165540e7f5",
+      "newsId": "PLCAN.OL:c020758f2cdd942764057d42078f2c50c741cd5b39b64258f5864a08546faf5c",
+      "entityIds": [],
+      "issuerTicker": "PLCAN.OL",
+      "candidateType": "issuer_event",
+      "published": "2026-11-26T06:00:08Z",
+      "sourceUrl": "https://newsweb.oslobors.no/message/687450",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null

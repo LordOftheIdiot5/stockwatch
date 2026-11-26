@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T04:13:48Z",
+  "generated": "2026-11-26T06:06:48Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -468,7 +468,7 @@
         {
           "date": "2026-11-24",
           "issuer": 1,
-          "media": 0
+          "media": 1
         },
         {
           "date": "2026-11-25",
@@ -476,14 +476,23 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 11,
-      "latestRecord": "2026-11-24T14:30:00Z",
+      "potential": [
+        {
+          "id": "AFG.OL:58c2f7b50eac98608077156e15a48bbe7bab3bdd88c8700161bfc0bff72e291f",
+          "published": "2026-11-24T14:32:48Z",
+          "headline": "AF GRUPPEN: DATTERSELSKAP TILDELT AVTALE AV DRAMMEN HELSEPARK AS, VERDI 673M",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVDl3T3Z3b2FURG1lenlZQzEtc09sWTJSRkVYNUJBVkE4SDdEaFg3b2FjUU9XZHl4eGxwZEVZOHdBaU9WbDNaNjFzRi11WHNhb2FWVzJ4UXQ2Wl9PUExIT1VmS3lORUFOeUxrMHBrd1NpZ2dSVXYtd3pFVXlTOXFvREFHRkQxbkZNa2NFVEpFRDhRSk83M1ZmNHlRbW96Ny1SemdvOW50OGhOMmZRNWZnQVdlRE80RS1EVmM5b3hCMDd3cnRi?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 12,
+      "latestRecord": "2026-11-24T14:32:48Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 0,
+        "potential": 1,
         "risk": 0
       },
       "prior7": {
@@ -492,7 +501,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 1
+        "media": 2
       }
     },
     "AFISH.OL": {
@@ -1394,7 +1403,7 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 5
+          "media": 6
         }
       ],
       "potential": [
@@ -1447,7 +1456,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 20,
+      "observedRecords": 21,
       "latestRecord": "2026-11-25T18:53:38Z",
       "topicCounts": {
         "numbers": 2,
@@ -1462,7 +1471,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 12
+        "media": 13
       }
     },
     "AUSS.OL": {
@@ -5928,8 +5937,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 48,
-      "latestRecord": "2026-11-25T18:18:13Z",
+      "observedRecords": 49,
+      "latestRecord": "2026-11-26T05:59:01Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9566,9 +9575,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "PLCAN.OL:c020758f2cdd942764057d42078f2c50c741cd5b39b64258f5864a08546faf5c",
+          "published": "2026-11-26T06:00:08Z",
+          "headline": "Pelican Aqua and Patagonia Wellboat enters into a Strategic Cooperation Agreement",
+          "url": "https://newsweb.oslobors.no/message/687450",
+          "evidence": "issuer",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 2,
+      "latestRecord": "2026-11-26T06:00:08Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13319,8 +13337,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-26T06:00:23Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
