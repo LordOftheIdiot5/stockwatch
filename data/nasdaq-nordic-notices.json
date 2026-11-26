@@ -1,27 +1,49 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T09:08:41Z",
+  "generated": "2026-11-26T10:07:39Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-26T09:08:41Z",
-      "lastSuccess": "2026-11-26T09:08:41Z",
+      "lastAttempt": "2026-11-26T10:07:39Z",
+      "lastSuccess": "2026-11-26T10:07:39Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-26T09:08:41Z",
-      "lastSuccess": "2026-11-26T09:08:41Z",
+      "lastAttempt": "2026-11-26T10:07:39Z",
+      "lastSuccess": "2026-11-26T10:07:39Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:c514ebb77058908b09aa5c07e7ca31ca7634721344ea538d20dd860f7be14018",
+      "title": "Ásar hf. - Increase in share capital",
+      "published": "2026-11-26T09:58:46Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bae2e33834e6168d52bde845e229323e4&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:4bbea2982ce6a71a4d44d4208d1c83b205ac48c8d17c459c85714ce4b2b1fa02",
+      "title": "Investeringsforeningen C WorldWide - merger",
+      "published": "2026-11-26T09:13:36Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b8c08eb087f183670c6ed685765608b06&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:e54df1b057a1775f36fdfc897b0987df7e9ef93d025076f49638dbfa55330372",
       "title": "Lift of Suspension in PortfolioManager Strategic Danske Aktier at XCSE",
