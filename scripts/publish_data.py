@@ -11,7 +11,7 @@ import json
 import subprocess
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from last_known import valid, valid_move
 
@@ -103,6 +103,56 @@ def guarded_signals(incoming, previous, watchlist):
     return incoming
 
 
+def merge_unlisted_news(incoming, previous, registry):
+    """Replay bounded eligible news against latest main, not the job's stale checkout."""
+    from unlisted_news_n41 import candidate, DAYS, LIMIT
+    from news_quality import norm
+    from email.utils import format_datetime
+    new=json.loads(incoming)
+    old=json.loads(previous) if previous else {"schema":1,"attemptedAt":None,"items":[],"coverage":{}}
+    companies={c["id"]:c for c in json.loads(registry)["companies"]}
+    if new.get("schema")!=1 or old.get("schema")!=1:
+        raise ValueError("invalid unlisted news schema")
+    def stamp(value):
+        t=datetime.fromisoformat(value.replace("Z","+00:00"))
+        if t.tzinfo is None:raise ValueError("missing news time zone")
+        return t.astimezone(timezone.utc)
+    now=stamp(new["attemptedAt"])
+    older=old.get("attemptedAt") and stamp(old["attemptedAt"])>now
+    if older:
+        now=stamp(old["attemptedAt"])
+    latest=old if older else new
+    items=[]
+    coverage={}
+    for ident,company in companies.items():
+        eligible=[]
+        for doc in (latest,new if older else old):
+            for item in doc.get("items",[]):
+                if item.get("company")!=ident or item.get("tier")!="named reference":
+                    continue
+                try:
+                    date=stamp(item["date"])
+                    if not now-timedelta(days=DAYS)<=date<=now:continue
+                    raw={"title":item["title"],"url":item["url"],"publisher":item["publisher"],
+                         "published":format_datetime(date)}
+                    verified=candidate(company,raw,now)
+                    if verified:eligible.append(verified)
+                except (KeyError,ValueError,TypeError,OverflowError):
+                    continue
+        seen_titles=set()
+        seen_ids=set()
+        for row in sorted(eligible,key=lambda x:x["date"],reverse=True):
+            k=norm(row["title"])
+            if not k or k in seen_titles or row["id"] in seen_ids:continue
+            seen_titles.add(k);seen_ids.add(row["id"]);items.append(row)
+            if len(seen_ids)>=LIMIT:break
+        c=dict(latest.get("coverage",{}).get(ident,{"status":"unconfirmed","freshNamedReferences":0}))
+        c["retainedReferences"]=len(seen_ids)
+        coverage[ident]=c
+    result={**latest,"items":items,"coverage":coverage}
+    return (json.dumps(result,ensure_ascii=False,indent=2)+"\n").encode("utf-8")
+
+
 def publish(mode, retries=5):
     git("config", "user.name", "stockwatch")
     git("config", "user.email", "actions@github.com")
@@ -129,6 +179,10 @@ def publish(mode, retries=5):
             if path=="data/signals.json":
                 if content is None:raise ValueError("refusing deletion of published scanner snapshot")
                 guarded_signals(content,dest.read_bytes() if dest.is_file() else None,(ROOT/"watchlist.json").read_bytes())
+            if path=="data/unlisted-news-latest-n41.json":
+                if content is None:raise ValueError("refusing deletion of unlisted news")
+                content=merge_unlisted_news(content,dest.read_bytes() if dest.is_file() else None,
+                    (ROOT/"data/unlisted-news-reviewed-n41.json").read_bytes())
             if content is None:
                 dest.unlink(missing_ok=True)
             else:
