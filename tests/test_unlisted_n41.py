@@ -40,6 +40,13 @@ class UnlistedTests(unittest.TestCase):
         self.assertIn("not an automatically refreshed news feed",self.html)
         self.assertIn("listing status review pending",self.html)
         self.assertNotIn('id="indexo"',self.html)
+    def test_recent_listing_handoff_is_not_private_or_quote_monitored(self):
+        self.assertIn("hasko-handoff",self.page.ids)
+        self.assertNotIn("hasko-handoff",{x["id"] for x in self.page.companies})
+        self.assertIn("SE0021308566",self.html)
+        self.assertIn("conditional when-issued period through 26 November",self.html)
+        self.assertIn("not yet a Stockwatch price-monitored listing",self.html)
+        self.assertIn("b00d4d16d1670fc9bcbf3013dc2654292",self.html)
     def test_assets_explicitly_public_and_shared_nav(self):
         manifest=json.loads((ROOT/"scripts/public-pages-manifest-v122.json").read_text())
         for p in ("unlisted.html","unlisted-n41.css","unlisted-n41.js","shell-v47.js"):
