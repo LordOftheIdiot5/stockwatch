@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-26T13:08:37.775648+00:00",
+  "attemptedAt": "2026-11-26T14:07:16.291249+00:00",
   "items": [
     {
       "id": "web-44b6182c22940dc88034f1d0e4bc775df05592747966f5e0acc84483f3894816",
@@ -500,8 +500,8 @@
   ],
   "coverage": {
     "neura": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
+      "status": "named_references_observed",
+      "freshNamedReferences": 3,
       "retainedReferences": 3
     },
     "agile": {
@@ -526,7 +526,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 7,
       "retainedReferences": 7
     },
     "saga": {
@@ -535,8 +535,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
+      "status": "named_references_observed",
+      "freshNamedReferences": 1,
       "retainedReferences": 1
     },
     "1x": {
@@ -551,18 +551,19 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 3,
       "retainedReferences": 4
     },
     "mistral": {
       "status": "named_references_observed",
-      "freshNamedReferences": 2,
+      "freshNamedReferences": 7,
       "retainedReferences": 9
     },
     "helsing": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 2,
-      "retainedReferences": 2
+      "status": "provider_http_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 2,
+      "httpStatus": 429
     }
   },
   "notice": "Open-web headline references only; no verified issuer event, IPO or trading status inferred."
