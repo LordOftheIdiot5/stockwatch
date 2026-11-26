@@ -92,5 +92,52 @@ class SignalPublicationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             publish_data.guarded_signals(b"corrupt",encode(old),encode(wl))
 
+
+class UnlistedPublicationTests(unittest.TestCase):
+    def setUp(self):
+        self.registry={"companies":[{"id":"neura","aliases":["NEURA Robotics"]},{"id":"mistral","aliases":["Mistral AI"]}]}
+    def row(self, company, name, suffix, day="2026-11-25"):
+        return {"company":company,"title":name+" announcement "+suffix,"url":"https://news.google.com/rss/articles/"+suffix,
+                "publisher":"Fixture publisher","date":day+"T12:00:00+00:00","tier":"named reference","id":"fixture"}
+    def doc(self, at, rows, status):
+        return {"schema":1,"attemptedAt":at,"items":rows,"coverage":{c["id"]:{"status":status,"freshNamedReferences":0,"retainedReferences":0} for c in self.registry["companies"]}}
+    def merge(self,new,old):
+        enc=lambda x:json.dumps(x).encode()
+        return json.loads(publish_data.merge_unlisted_news(enc(new),enc(old),enc(self.registry)))
+    def test_failed_newer_scan_retains_remote_news(self):
+        a=self.row("neura","NEURA Robotics","one")
+        b=self.row("mistral","Mistral AI","two")
+        old=self.doc("2026-11-26T03:05:00+00:00",[a,b],"named_references_observed")
+        new=self.doc("2026-11-26T03:13:00+00:00",[a],"provider_skipped_after_error")
+        result=self.merge(new,old)
+        self.assertEqual(len(result["items"]),2)
+        self.assertEqual(result["coverage"]["mistral"]["retainedReferences"],1)
+        self.assertEqual(result["coverage"]["mistral"]["freshNamedReferences"],0)
+        self.assertEqual(result["coverage"]["mistral"]["status"],"provider_skipped_after_error")
+        self.assertEqual(result["attemptedAt"],new["attemptedAt"])
+    def test_old_attempt_cannot_replace_new_health(self):
+        a=self.row("neura","NEURA Robotics","one")
+        b=self.row("neura","NEURA Robotics","two")
+        old=self.doc("2026-11-26T04:00:00+00:00",[b],"named_references_observed")
+        new=self.doc("2026-11-26T03:00:00+00:00",[a],"unconfirmed")
+        r=self.merge(new,old)
+        self.assertEqual(r["attemptedAt"],old["attemptedAt"])
+        self.assertEqual(r["coverage"]["neura"]["status"],"named_references_observed")
+        self.assertEqual(len(r["items"]),2)
+    def test_expiry_identity_url_and_duplicate_boundaries(self):
+        rows=[self.row("neura","NEURA Robotics",str(i)) for i in range(20)]
+        rows.extend([self.row("neura","NEURA Robotics","expired","2026-10-01"),
+                     self.row("neura","NEURA Robotics","future","2026-11-27"),
+                     self.row("removed","NEURA Robotics","removed"),
+                     self.row("mistral","Different company","wrong"),
+                     {**self.row("mistral","Mistral AI","evil"),"url":"https://evil.invalid/article"}])
+        old=self.doc("2026-11-26T03:00:00+00:00",rows,"unconfirmed")
+        new=self.doc("2026-11-26T04:00:00+00:00",[rows[0]],"unconfirmed")
+        r=self.merge(new,old)
+        self.assertEqual(len(r["items"]),15)
+        self.assertEqual(r["coverage"]["mistral"]["retainedReferences"],0)
+        self.assertEqual(len({x["id"] for x in r["items"]}),15)
+        self.assertTrue(all(x["company"]=="neura" and x["date"].startswith("2026-11-25") for x in r["items"]))
+
 if __name__=="__main__":
     unittest.main()
