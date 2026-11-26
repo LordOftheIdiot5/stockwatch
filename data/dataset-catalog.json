@@ -1,60 +1,6 @@
 {
-  "generated": "2026-11-26T03:13:36Z",
+  "generated": "2026-11-26T03:39:44Z",
   "datasets": [
-    {
-      "name": "Official macroeconomic and FX observations",
-      "path": "data/open-data.json",
-      "records": 26,
-      "license": "Attributed per original source and series; official-source exception policies apply"
-    },
-    {
-      "name": "OpenFIGI instrument identity candidates",
-      "path": "data/registered-source-status.json",
-      "records": 103,
-      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
-    },
-    {
-      "name": "European common-stock instrument directory",
-      "path": "data/instrument-directory.json",
-      "records": 3459,
-      "license": "OpenFIGI open symbology and associated metadata; no quote rights implied"
-    },
-    {
-      "name": "European research targets and observed OpenFIGI mapping evidence",
-      "path": "data/research-coverage.json",
-      "records": 75,
-      "license": "OpenFIGI reference metadata and Stockwatch research selections; no market price rights implied"
-    },
-    {
-      "name": "ENTSO-E open energy reference series",
-      "path": "data/entsoe-open.json",
-      "records": 1568,
-      "license": "CC BY 4.0; selected load forecasts and physical flows; ENTSO-E Transparency Platform"
-    },
-    {
-      "name": "USDA weekly ocean-grain freight cost indices",
-      "path": "data/shipping-open.json",
-      "records": 328,
-      "license": "USDA AMS source-attributed index observations; not commercial freight quotes"
-    },
-    {
-      "name": "World Bank annual container-port traffic (TEU)",
-      "path": "data/shipping-ports.json",
-      "records": 225,
-      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required"
-    },
-    {
-      "name": "UNCTAD monthly liner shipping connectivity",
-      "path": "data/shipping-connectivity.json",
-      "records": 1582,
-      "license": "CC BY 3.0 IGO — United Nations Trade and Development Data Hub (UNCTADstat)"
-    },
-    {
-      "name": "Official industry, assets, filings and mineral research",
-      "path": "data/free-research.json",
-      "records": 35384,
-      "license": "Per-dataset source terms; Comtrade preview metadata only"
-    },
     {
       "name": "European issuer directory",
       "path": "data/issuer-identities.json",
@@ -102,6 +48,60 @@
       "path": "data/source-health.json",
       "records": 139,
       "license": "Original scanner telemetry"
+    },
+    {
+      "name": "Official macroeconomic and FX observations",
+      "path": "data/open-data.json",
+      "records": 26,
+      "license": "Attributed per original source and series; official-source exception policies apply"
+    },
+    {
+      "name": "OpenFIGI instrument identity candidates",
+      "path": "data/registered-source-status.json",
+      "records": 103,
+      "license": "OpenFIGI reference symbology only; matches unverified, ENTSO-E observations withheld"
+    },
+    {
+      "name": "European common-stock instrument directory",
+      "path": "data/instrument-directory.json",
+      "records": 3460,
+      "license": "OpenFIGI open symbology and associated metadata; no quote rights implied"
+    },
+    {
+      "name": "European research targets and observed OpenFIGI mapping evidence",
+      "path": "data/research-coverage.json",
+      "records": 75,
+      "license": "OpenFIGI reference metadata and Stockwatch research selections; no market price rights implied"
+    },
+    {
+      "name": "ENTSO-E open energy reference series",
+      "path": "data/entsoe-open.json",
+      "records": 1187,
+      "license": "CC BY 4.0; selected load forecasts and physical flows; ENTSO-E Transparency Platform"
+    },
+    {
+      "name": "USDA weekly ocean-grain freight cost indices",
+      "path": "data/shipping-open.json",
+      "records": 328,
+      "license": "USDA AMS source-attributed index observations; not commercial freight quotes"
+    },
+    {
+      "name": "World Bank annual container-port traffic (TEU)",
+      "path": "data/shipping-ports.json",
+      "records": 225,
+      "license": "CC BY 4.0 — World Bank WDI / UNCTAD-origin indicator; attribution required"
+    },
+    {
+      "name": "UNCTAD monthly liner shipping connectivity",
+      "path": "data/shipping-connectivity.json",
+      "records": 1582,
+      "license": "CC BY 3.0 IGO — United Nations Trade and Development Data Hub (UNCTADstat)"
+    },
+    {
+      "name": "Official industry, assets, filings and mineral research",
+      "path": "data/free-research.json",
+      "records": 35383,
+      "license": "Per-dataset source terms; Comtrade preview metadata only"
     }
   ]
 }

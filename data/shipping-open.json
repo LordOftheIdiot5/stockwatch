@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-25T15:01:33Z",
+  "generated": "2026-11-26T03:38:59Z",
   "notice": "USDA weekly ocean grain cost indices (2017=100), NOT spot freight quotes, not USD/tonne rates, not Baltic Exchange route assessments.",
   "source": {
     "status": "ok",
     "sourceUrl": "https://agtransport.usda.gov/Transportation-Costs/Grain-Transportation-Cost-Indicators/8uye-ieij",
     "records": 2,
     "observations": 328,
-    "lastSuccessAt": "2026-11-25T15:01:33Z"
+    "lastSuccessAt": "2026-11-26T03:38:59Z"
   },
   "series": [
     {
@@ -21,13 +21,9 @@
       "frequency": "weekly",
       "sourceUrl": "https://agtransport.usda.gov/Transportation-Costs/Grain-Transportation-Cost-Indicators/8uye-ieij",
       "license": "USDA/AMS aggregated non-confidential, non-copyrighted source; attribution given; check underlying source notes",
-      "period": "2026-11-18",
+      "period": "2026-11-25",
       "value": 184.97,
       "history": [
-        {
-          "date": "2023-08-23",
-          "value": 132.21
-        },
         {
           "date": "2023-08-30",
           "value": 132.21
@@ -679,9 +675,13 @@
         {
           "date": "2026-11-18",
           "value": 184.97
+        },
+        {
+          "date": "2026-11-25",
+          "value": 184.97
         }
       ],
-      "observedAt": "2026-11-25T15:01:33Z",
+      "observedAt": "2026-11-26T03:38:59Z",
       "isActualRate": false,
       "isBalticBenchmark": false
     },
@@ -697,13 +697,9 @@
       "frequency": "weekly",
       "sourceUrl": "https://agtransport.usda.gov/Transportation-Costs/Grain-Transportation-Cost-Indicators/8uye-ieij",
       "license": "USDA/AMS aggregated non-confidential, non-copyrighted source; attribution given; check underlying source notes",
-      "period": "2026-11-18",
-      "value": 187.65,
+      "period": "2026-11-25",
+      "value": 191.21,
       "history": [
-        {
-          "date": "2023-08-23",
-          "value": 130.64
-        },
         {
           "date": "2023-08-30",
           "value": 130.64
@@ -1355,9 +1351,13 @@
         {
           "date": "2026-11-18",
           "value": 187.65
+        },
+        {
+          "date": "2026-11-25",
+          "value": 191.21
         }
       ],
-      "observedAt": "2026-11-25T15:01:33Z",
+      "observedAt": "2026-11-26T03:38:59Z",
       "isActualRate": false,
       "isBalticBenchmark": false
     }
