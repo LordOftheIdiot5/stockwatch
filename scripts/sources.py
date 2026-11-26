@@ -537,7 +537,7 @@ def detect_language(title: str, fallback: str, publisher: str = "") -> str:
     return fallback
 
 
-def news(query: str, count: int = 25, locale: str = "en") -> list[dict]:
+def news(query: str, count: int = 25, locale: str = "en", *, strict: bool = False) -> list[dict]:
     """Open-web coverage of a company in one locale."""
     hl, gl, ceid = LOCALES.get(locale, LOCALES["en"])
     url = ("https://news.google.com/rss/search?q="
@@ -547,6 +547,8 @@ def news(query: str, count: int = 25, locale: str = "en") -> list[dict]:
         root = ET.fromstring(_get(url))
     except Exception as error:                                   # noqa: BLE001
         print(f"  ! news {query} [{locale}]: {error}")
+        if strict:
+            raise
         return []
 
     out = []

@@ -26,9 +26,11 @@ def main():
                         page.route("**/*",lambda route:route.continue_() if route.request.url.startswith(base) else route.abort())
                         try:
                             page.goto(base+"unlisted.html",wait_until="load")
-                            page.wait_for_function("document.querySelectorAll('.n41-news-row').length>=14")
+                            page.wait_for_function("document.querySelectorAll('.n41-news-row').length>=20")
                             page.locator("#n41-news-tier").select_option("reviewed")
-                            assert page.locator(".n41-news-row").count()==14
+                            assert page.locator(".n41-news-row").count()==20
+                            page.locator("#n41-news-company").select_option("mistral")
+                            assert page.locator(".n41-news-row").count()==2
                             page.locator("#n41-news-company").select_option("neura")
                             assert page.locator(".n41-news-row").count()==2
                             page.locator("#n41-news-category").select_option("Partnerships")

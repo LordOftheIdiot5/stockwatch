@@ -27,9 +27,9 @@ class UnlistedTests(unittest.TestCase):
         self.page.feed(self.html)
     def test_initial_company_identity_and_sources(self):
         self.assertEqual({x["id"] for x in self.page.companies},
-                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft"})
+                         {"neura","agile","sitegeist","sit","anybotics","exotec","saga","wandercraft","1x","robco","lovable","mistral","helsing"})
         self.assertEqual(len(self.page.ids),len(set(self.page.ids)))
-        self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),4)
+        self.assertEqual(sum(x["data-kind"]=="Discovery candidate" for x in self.page.companies),9)
         for link in self.page.urls:
             self.assertFalse(link.lower().startswith(("javascript:","data:")))
     def test_listing_types_separated(self):

@@ -9,6 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 from urllib.parse import urlsplit
+from urllib.error import HTTPError
 from news_quality import has_phrase, norm, topic
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,15 +50,24 @@ def candidate(company, raw, now):
 
 def collect(registry, prior, fetch, now):
     items, status = [], {}
+    unavailable = None
     for company in registry["companies"]:
         ident = company["id"]
         old = [x for x in prior.get("items",[]) if x.get("company")==ident
                and x.get("tier")=="named reference"]
         rows = []
+        error = None
         try:
+            if unavailable is not None:
+                raise HTTPError("", unavailable, "provider unavailable", {}, None)
             raw = fetch(company["aliases"][0], count=LIMIT, locale="en")
             rows = [x for item in raw[:LIMIT] if (x:=candidate(company,item,now))]
             state = "named_references_observed" if rows else "no_usable_results_or_unconfirmed"
+        except HTTPError as exc:
+            state = "provider_http_error" if unavailable is None else "provider_skipped_after_error"
+            error = exc.code
+            if exc.code in (429, 503):
+                unavailable = exc.code
         except Exception:
             state = "unconfirmed"
         seen = set()
@@ -77,6 +87,8 @@ def collect(registry, prior, fetch, now):
                 continue
         status[ident]={"status":state,"freshNamedReferences":len(rows),
                        "retainedReferences":len(seen)}
+        if error is not None:
+            status[ident]["httpStatus"] = error
     return {"schema":1,"attemptedAt":now.isoformat(),"items":items,"coverage":status,
             "notice":"Open-web headline references only; no verified issuer event, IPO or trading status inferred."}
 
@@ -85,7 +97,7 @@ def main():
     import sources
     registry=json.loads(SEED.read_text(encoding="utf-8"))
     previous=json.loads(OUTPUT.read_text(encoding="utf-8"))
-    doc=collect(registry,previous,sources.news,datetime.now(timezone.utc))
+    doc=collect(registry,previous,lambda *a,**k: sources.news(*a,**k,strict=True),datetime.now(timezone.utc))
     temp=OUTPUT.with_suffix(".tmp")
     temp.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     temp.replace(OUTPUT)
