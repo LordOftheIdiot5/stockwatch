@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-25",
+  "reviewed": "2026-11-26",
   "companies": [
     {
       "id": "neura",
@@ -49,6 +49,39 @@
       "id": "wandercraft",
       "aliases": [
         "Wandercraft"
+      ]
+    },
+    {
+      "id": "1x",
+      "aliases": [
+        "1X Technologies",
+        "1X Robotics"
+      ]
+    },
+    {
+      "id": "robco",
+      "aliases": [
+        "RobCo"
+      ]
+    },
+    {
+      "id": "lovable",
+      "aliases": [
+        "Lovable AI",
+        "Lovable"
+      ]
+    },
+    {
+      "id": "mistral",
+      "aliases": [
+        "Mistral AI"
+      ]
+    },
+    {
+      "id": "helsing",
+      "aliases": [
+        "Helsing AI",
+        "Helsing"
       ]
     }
   ],
@@ -190,6 +223,66 @@
       "category": "Commercial deployments",
       "title": "Saga Robotics and Bonterra announce a six-robot vineyard pilot",
       "url": "https://www.sagarobotics.com/post/bonterra-organic-estates-pilots-autonomous-farming-with-light-technology-to-advance-regenerative-v",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-15",
+      "company": "1x",
+      "date": "2026-07-09",
+      "category": "Products",
+      "title": "1X reports new 25-degree-of-freedom hands for its NEO humanoid",
+      "url": "https://www.1x.tech/discover/neos-hands",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-16",
+      "company": "robco",
+      "date": "2026-10-05",
+      "category": "Funding",
+      "title": "RobCo reports valuation above $1 billion in investment and employee liquidity transaction",
+      "url": "https://www.rob.co/resources/news/press/robco-becomes-a-unicorn",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-17",
+      "company": "lovable",
+      "date": "2026-08-12",
+      "category": "Funding",
+      "title": "Lovable announces $400m Series C at $13.3bn valuation",
+      "url": "https://lovable.dev/blog/series-c",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-18",
+      "company": "mistral",
+      "date": "2026-09-08",
+      "category": "Funding",
+      "title": "Mistral announces €3bn Series D at over €21bn post-money valuation",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-19",
+      "company": "helsing",
+      "date": "2026-07-13",
+      "category": "Funding",
+      "title": "Helsing announces $1.8bn Series E at $18bn valuation",
+      "url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-20",
+      "company": "mistral",
+      "date": "2026-10-06",
+      "category": "Products",
+      "title": "Mistral introduces Large 4 model",
+      "url": "https://mistral.ai/news/mistral-large-4/",
       "tier": "issuer announcement",
       "dateType": "announcement date"
     }
