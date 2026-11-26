@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-26T16:44:30.321985+00:00",
+  "attemptedAt": "2026-11-26T17:06:46.649011+00:00",
   "items": [
     {
       "id": "web-44b6182c22940dc88034f1d0e4bc775df05592747966f5e0acc84483f3894816",
       "company": "neura",
-      "date": "2026-11-14T03:48:43+00:00",
+      "date": "2026-11-14T08:00:00+00:00",
       "category": "General",
       "title": "Neura Robotics partners with E.ON to bring humanoid robots to energy infrastructure",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNN09rcE94dkJUTkktSTRPOEF5UHhzNHJVNUo4QnJDV1RBUTJFc0dpV2F6WkRrX3RZZmhRVUJrQXJ0ZWdpbElkVGhPdGRLY3hDaFAtNmJSOFdEbzcxU2cyYm9ISzE1dlpZRTZHcVl5UFRzWFp5bTRwbktGU0kzeFltQlpIbGdjQ1JiWVRVd3hLYjVpUjRUenRTZkNUNzJSaDR6Zkw5VnMxZGUzYng0NEdYM1pwa3hjT0V6MnRJZ0xoWlQ5RzdtZF8zcEhOOXBLN29CY0x3Umdxcw?oc=5",
@@ -522,8 +522,8 @@
   ],
   "coverage": {
     "neura": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
+      "status": "named_references_observed",
+      "freshNamedReferences": 3,
       "retainedReferences": 3
     },
     "agile": {
@@ -548,7 +548,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 8,
+      "freshNamedReferences": 4,
       "retainedReferences": 8
     },
     "saga": {
@@ -573,12 +573,12 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 4
     },
     "mistral": {
       "status": "named_references_observed",
-      "freshNamedReferences": 2,
+      "freshNamedReferences": 6,
       "retainedReferences": 9
     },
     "helsing": {

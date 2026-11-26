@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T16:44:36Z",
+  "generated": "2026-11-26T17:06:52Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -4449,6 +4449,14 @@
       ],
       "potential": [
         {
+          "id": "FCT.MI:384c06b519b8dc7e2908975192f016e21337db6f7a50455d8a4818f000c01aba",
+          "published": "2026-11-26T16:20:44Z",
+          "headline": "Fincantieri, €500m contract with Occar for third LSS ship for Italian Navy",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNkdqTXpBSGpSY1FOVUxnMGJXOTR5UVI4X0NaemM3RUEtZXZubzk0U0FlVkdMTVE1UlFTMUFwcVVVU0VDalFDc3I2cjA3Q1ZqWWJFZnF0WGo4Y0VIS0N5eUFzckhJQkNQRm41M21JQ0E2YkJVZ0VGcnNwY0thY1hiSENGcEx6YjZWMFdjbVBvS2lJSVJ2Q2lIcU5uay1MSDI2cVo5dG05MmlKc2Q1TXo0aE1rbmI5ak5rXzBGY2ozRGhhTVlaMVNQMQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "FCT.MI:2cec207fae4059a36719800f8bc3b0e4e9b1c50f1715c67f6aeb6fa34e26bf56",
           "published": "2026-11-24T01:58:28Z",
           "headline": "Fincantieri, Navantia and Naval Group sign EPC2 Consortium Agreement at Euronaval 2026",
@@ -4561,7 +4569,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 79,
+      "observedRecords": 81,
       "latestRecord": "2026-11-26T16:39:56Z",
       "topicCounts": {
         "numbers": 1,
@@ -12870,6 +12878,14 @@
       ],
       "potential": [
         {
+          "id": "SUBC.OL:7c6fbddc3be9b97d361f74ad1c22dd995e861b533decbad989bf5368ec95be4c",
+          "published": "2026-11-26T14:16:53Z",
+          "headline": "Subsea 7 forlenger Equinor-kontrakt",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE85eGFlRFowdlJybDZsUnlmdGNpdEtMZDg1blg2OVhNRmJISzFaMXBWODFWZHFRTTZiYUx5RUZIMF9BWHhOM0h0SXRtUDFHckZ3QjFJaGtmWnJKVGQ5UGFIbnNVdDZKUQ?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "SUBC.OL:6c0d34bf7b815f05a48f43630728a6372b145fc82d73cdf8a90b52aec0ec1568",
           "published": "2026-11-26T14:09:00Z",
           "headline": "Subsea 7 S.A. (0OGK) Wins Equinor Contract Extension for Seven Viking Through to End of 2028",
@@ -12998,8 +13014,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 31,
-      "latestRecord": "2026-11-26T14:09:00Z",
+      "observedRecords": 32,
+      "latestRecord": "2026-11-26T14:16:53Z",
       "topicCounts": {
         "numbers": 10,
         "prices": 0,

@@ -1,27 +1,49 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T16:44:35Z",
+  "generated": "2026-11-26T17:06:51Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-26T16:44:35Z",
-      "lastSuccess": "2026-11-26T16:44:35Z",
+      "lastAttempt": "2026-11-26T17:06:51Z",
+      "lastSuccess": "2026-11-26T17:06:51Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-26T16:44:35Z",
-      "lastSuccess": "2026-11-26T16:44:35Z",
+      "lastAttempt": "2026-11-26T17:06:51Z",
+      "lastSuccess": "2026-11-26T17:06:51Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:f171d06cf550e3526fafa7d931ccd223487a15259a601e1f1a2746836f2069e4",
+      "title": "New series following adjustment in SKF 248/26",
+      "published": "2026-11-26T17:06:00Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b357f5999b5c3f71f2f4d992f6a6ea0c0&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:e5464ff84e4720ad14ff79ea78e9dc9273de8b9005ee51d284975df60576b300",
+      "title": "Derivatives - New Strikes Stock Products 232/26",
+      "published": "2026-11-26T16:57:19Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b93e4c77c7510a58b8b9cc35b1a9d9644&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:a137ed2387ce4641719bcd1aee563411acb1142854f5f5f2e0f9b78d7be29e58",
       "title": "Adjustment due to share distribution in SKF (247/26)",
