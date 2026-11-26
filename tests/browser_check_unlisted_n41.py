@@ -29,9 +29,11 @@ def main():
                             page.wait_for_function("document.querySelectorAll('.n41-news-row').length>=20")
                             page.locator("#n41-news-tier").select_option("reviewed")
                             assert page.locator(".n41-news-row").count()==20
-                            assert "27 matching records" in page.locator("#n41-news-status").inner_text()
+                            assert "29 matching records" in page.locator("#n41-news-status").inner_text()
                             page.locator("#n41-news-more").click()
-                            assert page.locator(".n41-news-row").count()==27
+                            assert page.locator(".n41-news-row").count()==29
+                            page.locator("#n41-news-company").select_option("reetec")
+                            assert page.locator(".n41-news-row").count()==1
                             page.locator("#n41-news-company").select_option("rocsys")
                             assert page.locator(".n41-news-row").count()==1
                             page.locator("#n41-news-company").select_option("monumental")
@@ -62,6 +64,8 @@ def main():
                             page.goto(base+"stocks.html",wait_until="load")
                             page.locator("#n41-listed-expansion summary").click()
                             assert page.locator(".n41-listed-candidate:visible").count()==7
+                            page.locator("#n41-resource-chain summary").click()
+                            assert page.locator(".n41-resource-group:visible").count()==4
                             assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+2"),(width,theme)
                             assert not errors,errors
                             page.goto(base+"unlisted.html",wait_until="load")
