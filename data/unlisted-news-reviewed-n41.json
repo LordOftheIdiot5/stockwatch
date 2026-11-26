@@ -124,6 +124,18 @@
         "Lely milking",
         "Lely reports"
       ]
+    },
+    {
+      "id": "reetec",
+      "aliases": [
+        "REEtec"
+      ]
+    },
+    {
+      "id": "lkab",
+      "aliases": [
+        "LKAB"
+      ]
     }
   ],
   "items": [
@@ -394,6 +406,26 @@
       "category": "Financial results",
       "title": "Family-owned Lely reports €1,014m turnover for 2025",
       "url": "https://www.lely.com/gb/about-lely/news/lely-reports-2025-financial-results-a-formidable-year/",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-28",
+      "company": "reetec",
+      "date": "2022-11-08",
+      "category": "Funding",
+      "title": "REEtec announces NOK 1.2bn financing for Herøya plant and historical Schaeffler NdPr offtake contract",
+      "url": "https://www.reetec.no/artikler/reetec-raises-nok-1200-million-for-first-industrial-plant",
+      "tier": "issuer announcement",
+      "dateType": "announcement date"
+    },
+    {
+      "id": "review-29",
+      "company": "lkab",
+      "date": "2025-03-27",
+      "category": "Projects",
+      "title": "LKAB reports 2.2m tonnes of in-situ rare earth oxides in inferred Per Geijer resource",
+      "url": "https://lkab.com/en/press/lkab-reports-larger-mineral-resources-significant-increase-in-rare-earth-oxides/",
       "tier": "issuer announcement",
       "dateType": "announcement date"
     }
