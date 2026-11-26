@@ -16,6 +16,18 @@ class DelayedExchangeTests(unittest.TestCase):
         with self.assertRaises(ValueError):d.eur_url("../bad","PREVIOUS_TRADING_DAY")
         raw=b'<a href="/download/NordicEquity-posttrade-2026-01-02T1200">file</a><a href="https://evil.invalid/NordicEquity-posttrade">external</a>'
         self.assertEqual(len(d.nasdaq_links(raw)),1)
+    def test_nasdaq_regions_independent(self):
+        def fetch(url,*args):
+            if url==d.NAS:raise TimeoutError()
+            return b'<a href="/download/BalticEquity-posttrade-2026-01-02T1200">file</a>'
+        r=d.nasdaq_discovery(fetch)
+        self.assertEqual(r["regions"]["nordic"]["errorType"],"TimeoutError")
+        self.assertEqual(r["regions"]["baltic"]["discoveredLinkCount"],1)
+        self.assertEqual(r["discoveredLinkCount"],1)
+        self.assertFalse(r["tradeDownloadEnabled"])
+    def test_nasdaq_links_fail_closed(self):
+        raw=b'<a href="https://tradereports.nasdaq.com@evil.invalid/NordicEquity-posttrade-2026-01-02T1200">external</a><a href="/download/NordicEquity-pretrade-2026-01-02T1200">pre</a><a href="/download/BalticEquity-posttrade-2026-01-02T1200">wrong region</a>'
+        self.assertEqual(d.nasdaq_links(raw),[])
     def test_probe_no_public_data(self):
         def fetch(url,*args):return fixture() if url.startswith(d.EUR) else b"<html></html>"
         r=d.probe(fetch=fetch)

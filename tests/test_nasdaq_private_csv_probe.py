@@ -31,6 +31,28 @@ class NasdaqPrivateProbeTests(unittest.TestCase):
             with self.subTest(raw=raw), self.assertRaises(ValueError):
                 n.inspect_csv(raw)
 
+    def test_advertised_sample_only_and_no_retention(self):
+        calls=[]
+        def fetch(url,limit):
+            calls.append(url)
+            if len(calls)==1:
+                return b'<a href="/download/NordicEquity-posttrade-2026-01-02T1200">report</a><a href="https://evil.invalid/NordicEquity-posttrade-2026-01-02T1200">external</a>'
+            return (HEADER+"\n"+ROW+"\n").encode()
+        r=n.inspect_advertised("nordic",fetch)
+        self.assertEqual(calls,[n.NAS_PORTALS["nordic"],"https://tradereports.nasdaq.com/download/NordicEquity-posttrade-2026-01-02T1200"])
+        self.assertTrue(r["sample_downloaded"])
+        self.assertEqual(r["row_count"],1)
+        self.assertFalse(r["retention_enabled"])
+        self.assertNotIn("PRIVATE-IDENTITY",str(r))
+    def test_no_advertised_file_no_second_request(self):
+        calls=[]
+        def fetch(url,limit):
+            calls.append(url)
+            return b"<html><ul></ul></html>"
+        r=n.inspect_advertised("baltic",fetch)
+        self.assertEqual(calls,[n.NAS_PORTALS["baltic"]])
+        self.assertEqual(r["status"],"no_recognized_report_links")
+        self.assertFalse(r["public_publication"])
     def test_local_file_outside_repository_only(self):
         with self.assertRaises(ValueError):
             n.inspect_file(n.ROOT / "private.csv")

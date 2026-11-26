@@ -63,3 +63,13 @@ Run fixture tests with python -m unittest discover -s tests -p test_nasdaq_priva
 Next validate actual provider format, timestamp semantics, correction flags,
 units and exact MIC/ISIN joins before any price normalization or publication.
 Any future authorized public display must say "Data Delayed 15 minutes".
+
+## N09a.2 — Dual portal discovery and opt-in sample inspection (26 November)
+The scheduled metadata-only check now reports Nordic and Baltic separately, with a bounded 30-second portal timeout. One unavailable portal does not prevent checking the other. The actual report lists retrieved on 26 November were empty; no real Nasdaq sample or schema has been verified.
+
+For an explicitly requested private, non-commercial, one-file inspection without writing a file:
+
+    python scripts/nasdaq_private_csv_probe.py --region nordic --private-noncommercial
+    python scripts/nasdaq_private_csv_probe.py --region baltic --private-noncommercial
+
+The tool follows one recognized post-trade report URL explicitly advertised on the selected official page, never constructs filenames or follows redirects. The candidate Nordic/Baltic filename patterns are not validated against a current report; unrecognized links are not downloaded. It outputs only candidate field roles and counts, never raw rows or quotes. No scheduled sample downloads, storage, public quotes or historical dataset added. Use the existing local --csv mode if the publisher provides a file separately. A successful discovery run is not price collection or provider schema validation.
