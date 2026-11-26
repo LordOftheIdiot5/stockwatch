@@ -111,6 +111,27 @@ export function buildMaritimePulse(data,{now=new Date()}={}){
    {snapshotAt:freight?.generated,comparison:'previous_week',
     investigation:'Review the next dated USDA report and whether both route indices move together. This is not evidence of daily charter earnings.',
     focus:{layer:'lanes'}}),'usda_weekly_unavailable_or_period_mismatch');
+ // Exact 52-week comparison, not a nearest-date or interpolated match.
+ const exact52=s=>{
+  if(!s||!Array.isArray(s.history)||s.unit!=='index, 2017 = 100')return null;
+  const a=entry(s.history,s.history.length-1);
+  if(!a||!isoDay(a.date)||a.date!==s.period||!observationCurrentEnough(a.date,'weekly',now))return null;
+  const target=new Date(Date.parse(a.date)-364*86400000).toISOString().slice(0,10);
+  const prior=s.history.filter(x=>x?.date===target&&finite(x.value));
+  if(prior.length!==1||s.history.filter(x=>x?.date===a.date).length!==1)return null;
+  return {a,b:prior[0]};
+ };
+ const gy=exact52(gf),py=exact52(pf);
+ add(gy&&py&&gy.a.date===py.a.date&&gy.b.date===py.b.date&&gf.sourceUrl===pf.sourceUrl&&
+  baseSignal('usda-grain-52-week','ocean_cost','Ocean grain cost indices: 52-week comparison',gy.a.date,
+   describeMovement('U.S. Gulf → Japan',gy.a.value,gy.b.value)+'; '+describeMovement('Pacific Northwest → Japan',py.a.value,py.b.value)+'. Compared with '+gy.b.date+'.',
+   'Same-route indices, not car-carrier rates, USD/tonne spot prices, causality or future earnings.',
+   'USDA Agricultural Marketing Service',gf.sourceUrl,'U.S. Gulf and Pacific Northwest routes to Japan',
+   [item('U.S. Gulf → Japan',gy,gy.a.date,gf.unit,'weekly','52 weeks earlier: '+gy.b.date),
+    item('Pacific Northwest → Japan',py,py.a.date,pf.unit,'weekly','52 weeks earlier: '+py.b.date)],
+   {snapshotAt:freight?.generated,comparison:'prior_52_weeks',
+    investigation:'Compare dated issuer-specific operating figures and capacity separately. Higher grain transport indices do not establish car-carrier exposure.',focus:{layer:'lanes'}}),
+  'usda_52_week_unavailable_or_period_mismatch');
  const conn=data?.connectivity;const markets=[
   ['denmark','Denmark'],['sweden','Sweden'],['norway','Norway']
  ].map(([slug,label])=>({label,s:seriesBy(conn,'unctad:lsci-monthly:'+slug)}));
