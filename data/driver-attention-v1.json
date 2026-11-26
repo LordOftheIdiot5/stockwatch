@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T06:06:48Z",
+  "generated": "2026-11-26T07:07:52Z",
   "windowStart": "2026-11-12",
   "windowEnd": "2026-11-25",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -76,12 +76,12 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-23T19:02:01Z",
+      "observedRecords": 6,
+      "latestRecord": "2026-11-25T18:19:47Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -95,7 +95,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       }
     },
     "1AST.DE": {
@@ -1642,8 +1642,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-25T06:50:30Z",
+      "observedRecords": 3,
+      "latestRecord": "2026-11-26T06:52:24Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -5818,9 +5818,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "IBAB.BR:49e2e50d37271b00e2b376f8484045b25511570c20d86a780429b1f220f5f5e2",
+          "published": "2026-11-26T06:41:00Z",
+          "headline": "Ion Beam Applications confirme sa guidance 2026",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQVZkbE9XUFFNSmw2cGhsbUZpOFJ6M3Rva0hjOFhPZjFHZXRxNlE2aTY2V1RYSWxZUk5CTHNYRTNhWTlqZ2pDT3NnbDhyYVRHYlJFNnYxWmphNWNfbU1TbGJyN2hCZGVIQWdGYk9KaWlydW94N1JQZGdIMHlfdEY1amlEc2hsRG9zZFN6QjhNY0F0dVo5QzBRMHcyX0dWXzBMTmc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        }
+      ],
+      "observedRecords": 1,
+      "latestRecord": "2026-11-26T06:41:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -9585,8 +9594,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 2,
-      "latestRecord": "2026-11-26T06:00:08Z",
+      "observedRecords": 3,
+      "latestRecord": "2026-11-26T06:59:24Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12068,8 +12077,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 25,
-      "latestRecord": "2026-11-24T22:15:31Z",
+      "observedRecords": 29,
+      "latestRecord": "2026-11-26T07:00:51Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13684,8 +13693,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 156,
-      "latestRecord": "2026-11-25T18:16:00Z",
+      "observedRecords": 157,
+      "latestRecord": "2026-11-26T06:55:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,

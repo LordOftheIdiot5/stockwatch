@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-26T06:06:48.960872+00:00",
-  "newsRecordsScanned": 2635,
+  "generated": "2026-11-26T07:07:52.899766+00:00",
+  "newsRecordsScanned": 2648,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -3743,6 +3743,18 @@
       "candidateType": "issuer_event",
       "published": "2026-11-26T06:00:08Z",
       "sourceUrl": "https://newsweb.oslobors.no/message/687450",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "5c8212da5cc12d22249776cf6d0ed8a8918229651e510c28dd505af5358a5b53",
+      "newsId": "SKA-B.ST:8b1f8451bbb44a72592f5b986d6bb2e8120f3907c972de30eb3fdcd084d8b57a",
+      "entityIds": [],
+      "issuerTicker": "SKA-B.ST",
+      "candidateType": "headline_event",
+      "published": "2026-11-26T07:00:51Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQT0lfOVdxVWF4dXB4Tm9wcmV2aUo2ckJYLWZqMGd6anpOMHRCX3lLMFUtcDJnTEpyVzd0Y2Nha2VORDRMT29HUW1iLUVEVkZfZlhhd2sxaFd5bjJvV3lNeER0VGluTFFBQm91VkpZV01kNEtLOHF0c2pZMkxzU2ctMktn?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null
