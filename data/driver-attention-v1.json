@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T13:06:23Z",
+  "generated": "2026-11-27T14:07:23Z",
   "windowStart": "2026-11-13",
   "windowEnd": "2026-11-26",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -1953,8 +1953,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-26T23:26:55Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-27T10:50:10Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4482,6 +4482,14 @@
       ],
       "potential": [
         {
+          "id": "FCT.MI:740cb5660525471729bce6cd0348de19dda75758a46e97c30cc75c8101744b65",
+          "published": "2026-11-27T12:11:48Z",
+          "headline": "UniCredit, EIB agreement to invest €1.6bn in wind power, Fincantieri first to benefit",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSnVRSkd5UElScE9hM1ViU3BtN0piRHdULXl3MVdlRHRuRHZYWlgxUk5rTGdsY3BIR2s5d2F4SW5iY0FBcWFaUDROV2RtdTkwZnVqYUhDbHNsdWZVWFYxZHY1RldRNzdiRkY2VlhRREM5YzRPNWt2VHB4YkVBRmxWWEJlUWRHNFhkTzF6MkExdnVFTU9YcmNPT3VTVXJSaGZPaTZsTV9YVUczSFVTeTJTZ2x1b0VvN2Zha0ZqU0JPbXVmQTYyVzZNQWs4UGcteXhpRWhtMWlB?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "FCT.MI:13e9865f15f3eb0ec453f451776df820bb234f75a8aa7fa7e74b0d66e7358376",
           "published": "2026-11-27T09:45:00Z",
           "headline": "Fincantieri wins €500M navy contract, shares rise 6% By Investing.com",
@@ -4632,17 +4640,9 @@
           "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQOV9LUEFLOEI4Z0JuLTVjanlSZi11UkE1eGtvTkcwendlWTliYzdXUXlLblVzTmY4QTBSWEtsTkpRSExrUkd5Zjkyei1WZEFQMzRyYUphU3dlX0cwMzg4aDNxcG9aZXdRMmJzWklQT2t3aGFyU2xvVmxlSTJCdzJaaXI5YzZrWG80QzBaN0kxOFVTa0hxbzQzWmxVV0pLd2NOSVJXRnRNOE9jOGZXTTNOZVpiYmRGdWp0UFJuckQyYzl1TlJwUnpZeQ?oc=5",
           "evidence": "named_reference",
           "topic": "Guidance / outlook"
-        },
-        {
-          "id": "FCT.MI:1ee79a7e6a9008918a6b59c6829b838f8e209bfd08462c138834faadf6694033",
-          "published": "2026-11-12T18:41:08Z",
-          "headline": "Decarbonizzazione del Trasporto Marittimo: Outlook di Eni, Fincantieri e RINA evidenzia le criticità",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOXhFMDVxeDNhanhHNjZmSThzVUNPd3pIMHd6WDl0aGdVTVlyVm5nWDhRaG1Da1dmOExJakZidWVvNDh5UlBIc09pU3lQaFpvakVFOVVNTmpHZlJRZnRxNVJBNE44RzVfdUhQRk9iYTBqbjYzb2NUV29ycVU5SVN1MDc5MTFSLW5pN2dsc01iSzVjMk1BdHBqNHdRZjFUZktnSUZRWnlMZUlYcUhLNGkyVWpCRjh0NW54cW1mM1huaHE3SlFzbm5QR9IB0AFBVV95cUxPMmIzTFRYUXVOSjRJSlFkRUtOeV82YzYzOXREMlE0NWQ3NjdLUFU1dkk5eFZhTUdkRVBuU1BTSnVGY2E0S1VJRzVJWmQ4Szd3cmE5eW9NTmZrVTRXSTZDUnd5YVZTSzlFZVFwZXZyZTdLSnRuTkZ5OHlwS093ZVhqRkNjWi0tZHlIdEZQNE9LWXV1dWNId2pKcFhOck9XTUNpT2l3aVloeEp1RWdqYldHUG0zTVJ3WGh0XzJXUTlRbi1UQVFuMUsyWUFnbFdOT2RF?oc=5",
-          "evidence": "named_reference",
-          "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 95,
+      "observedRecords": 96,
       "latestRecord": "2026-11-27T12:11:48Z",
       "topicCounts": {
         "numbers": 1,
@@ -10617,8 +10617,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-23T08:33:54Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-27T12:55:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10942,7 +10942,7 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 4
+          "media": 5
         }
       ],
       "potential": [
@@ -11107,7 +11107,7 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 27,
+      "observedRecords": 28,
       "latestRecord": "2026-11-26T15:45:19Z",
       "topicCounts": {
         "numbers": 0,
@@ -11122,7 +11122,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 18
+        "media": 19
       }
     },
     "SALM.OL": {
@@ -12091,7 +12091,7 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 86,
+      "observedRecords": 87,
       "latestRecord": "2026-11-27T12:28:23Z",
       "topicCounts": {
         "numbers": 3,
@@ -13994,8 +13994,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 188,
-      "latestRecord": "2026-11-27T12:11:48Z",
+      "observedRecords": 189,
+      "latestRecord": "2026-11-27T13:42:49Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,

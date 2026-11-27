@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T13:06:18.616369+00:00",
+  "attemptedAt": "2026-11-27T14:07:15.013945+00:00",
   "items": [
     {
       "id": "web-c3a298b41d12c9722c8fda01904ade527bf9390f13eba8f5146b564846ab5e29",
@@ -417,6 +417,17 @@
       "title": "Lovable AI Apps Left Passport and Payment Data Open to Anyone",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOOVJGVE5leF9vQVBHalJNMDY4UDVjYU5wMkpxZ0hDall3RVVJX0pkbHE2dGpBZFhMMDE4dFplUW1VOW1kYlVsTVhvSGtUZWsyU3FMc3FEZm5iczFOeVpxNGNkYjFucGgwdTctT0xSSXpISnpad2ppZzhldGk0cDBlWm4zeFphdC1tLVdEUjFPSndIZ2c?oc=5",
       "publisher": "Startup Fortune",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
+    {
+      "id": "web-383a4f06760c40d389b33cc41b6f5dced83925b64d64dbcc16d16e0cf779d4a2",
+      "company": "mistral",
+      "date": "2026-11-27T06:43:48+00:00",
+      "category": "General",
+      "title": "Deutsche Telekom Puts 100 Million Euros Into Mistral AI as Two Brokers Map Out a Two-Speed 2027",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOcnM5UG45bWpobWdJSDZURjZadExWVGtjV292ZGxrR1RZYTMyaWpjMjQ2Z3FsUm93NkRWMGtranU5VzUxSk83cWNoRkE1TjhTdHZRMk1uUEpWY1MxdmxFY1VwRXc1YXducGxhREp2dGRheEIzTHRBY0Q5cVFJTy1LN3NBWTZueEtIZFlkLWp4cHdwdFdfVDl2elRqMHVRdldYWXlqeHc2NG5TTjQ5cFZfLTc4dTdBdTJVTFk4bkNYQ3kyYm9hYTlSUGc0eDBCaW1leUxlQVE5SldiMDYyaFViRFNYS0U4M1FhbXFsWk1rUEQ4dUFvVy1ESUFrOA?oc=5",
+      "publisher": "ad-hoc-news.de",
       "tier": "named reference",
       "dateType": "reported publication time"
     },
@@ -1095,7 +1106,7 @@
   "coverage": {
     "neura": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 6
     },
     "agile": {
@@ -1120,7 +1131,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 9,
+      "freshNamedReferences": 5,
       "retainedReferences": 9
     },
     "saga": {
@@ -1129,8 +1140,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 1,
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
       "retainedReferences": 1
     },
     "1x": {
@@ -1139,76 +1150,64 @@
       "retainedReferences": 0
     },
     "robco": {
-      "status": "provider_http_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 1,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 1,
+      "retainedReferences": 1
     },
     "lovable": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 4,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 3,
+      "retainedReferences": 4
     },
     "mistral": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 9,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 1,
+      "retainedReferences": 10
     },
     "helsing": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 2,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 1,
+      "retainedReferences": 2
     },
     "monumental": {
-      "status": "provider_skipped_after_error",
+      "status": "no_usable_results_or_unconfirmed",
       "freshNamedReferences": 0,
-      "retainedReferences": 0,
-      "httpStatus": 429
+      "retainedReferences": 0
     },
     "iceye": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 14,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 8,
+      "retainedReferences": 14
     },
     "quantum-systems": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 15,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 10,
+      "retainedReferences": 15
     },
     "alice-bob": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 8,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 4,
+      "retainedReferences": 8
     },
     "rocsys": {
-      "status": "provider_skipped_after_error",
+      "status": "no_usable_results_or_unconfirmed",
       "freshNamedReferences": 0,
-      "retainedReferences": 0,
-      "httpStatus": 429
+      "retainedReferences": 0
     },
     "lely": {
-      "status": "provider_skipped_after_error",
+      "status": "no_usable_results_or_unconfirmed",
       "freshNamedReferences": 0,
-      "retainedReferences": 0,
-      "httpStatus": 429
+      "retainedReferences": 0
     },
     "reetec": {
-      "status": "provider_skipped_after_error",
+      "status": "no_usable_results_or_unconfirmed",
       "freshNamedReferences": 0,
-      "retainedReferences": 0,
-      "httpStatus": 429
+      "retainedReferences": 0
     },
     "lkab": {
-      "status": "provider_skipped_after_error",
-      "freshNamedReferences": 0,
-      "retainedReferences": 13,
-      "httpStatus": 429
+      "status": "named_references_observed",
+      "freshNamedReferences": 4,
+      "retainedReferences": 13
     }
   },
   "notice": "Open-web headline references only; no verified issuer event, IPO or trading status inferred."
