@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T11:08:36Z",
+  "generated": "2026-11-27T12:07:44Z",
   "windowStart": "2026-11-13",
   "windowEnd": "2026-11-26",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -4083,8 +4083,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-11T07:45:44Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-27T08:22:59Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4634,8 +4634,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 93,
-      "latestRecord": "2026-11-27T09:45:00Z",
+      "observedRecords": 94,
+      "latestRecord": "2026-11-27T11:00:22Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -8965,7 +8965,7 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
@@ -8976,15 +8976,23 @@
           "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQUERQRFVkb1lsXzZpMlB1ZFJPTGl5dzh0SG5ScHJhM2pmMmNfTFVTQVdUMVFGbnB0NFBaR2RlSElSdVdDVXhhTi1pRm9tSTYwSWhXcFRHenVTYkVzbTFWSlVRc0xISlZpWVRMN1Y3RUJTYmNxbkNBU29rbHNLRmZ1Q2FRWTBSclRXS2s5M3FBTWU3czdOeGRzZEt5UjNTbERXQjdEdkEwOGE4TXRzbENaOUpONjdncTh0SzBLT0hBamwwWFZETnZHNnQxeHVGTTJTVk9nTmY2T2NLYy1XNW5TX1JIMTNWdw?oc=5",
           "evidence": "named_reference",
           "topic": "Contracts / agreements"
+        },
+        {
+          "id": "ODF.OL:9d48633c1bf724c79e6bf0e959a2ad13879f0636b31460bd51a75d46e72509be",
+          "published": "2026-11-26T12:00:22Z",
+          "headline": "Odfjell Technology - Further extension of Master Service Agreement in the UK to June 2029",
+          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPc2ZfOHZsQWxTUDdIYmQ3Q1RvX0thalFTMGFGV1V6QnlSOERPWWNLZGN5YnhGUlhPU2x0Wnd4SlBYZlBCRnVVUVBzRlBpTGlCV3NUcTRKT2UwQ3NxX1lNOHp4TEdSSU56WFhDR2Q0WC1LUEJnZWltYlBQNEdpblRGVFZlUmpOU1RzWmNUSWw4bF9zS0VEenJvNE9ld011LVNleHNXU1FBamZ2NVd1cElfd3ltT2lfMHZLbFNHbmRlcVV4a2QwMDlKYlhWVVBHTUtPRjk3a2RlY0lJb1o5UkI3eHpxVlBJeTNQNDU4SC0wNzk3YldZX2VpZ2t2VW9NWDRBNXRCNHpGaEI?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 2,
+      "observedRecords": 3,
       "latestRecord": "2026-11-26T13:05:23Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 1,
+        "potential": 2,
         "risk": 0
       },
       "prior7": {
@@ -8993,7 +9001,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 1
+        "media": 2
       }
     },
     "ORSTED.CO": {
@@ -9960,6 +9968,14 @@
       ],
       "potential": [
         {
+          "id": "PROXI.OL:34adb5dd6ca5789e75571337a978ac5014978f1bfeb29d7370eb033dd95e8d9e",
+          "published": "2026-11-27T11:53:02Z",
+          "headline": "Proximar Seafood as Provides Production Guidance for the Year 2026 and 2027",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcm93OThEa1VNRXMwY2JKNUJ0NjlOWThtRmE0MkVuTmFmTDU5Q25VY202OV9UaDN0SDBpVUNlZWtUdEhFN2k4NkVjMmdEeFJkRnRxcEd1Sl9tbTN4bFpYMzJCQUhtYmo1NUVUcEZfWVBseWtUY0lyZThZNkZnVWJpRFVUY2dLa1NQck9ZQ3Y3ZnpVUWVqT3ItU19LbGY3MlhRaWtCM0g3LXRHaUVEUkRINFlWZnB3UFdMM3o3QnRSakhOOUtoRVVj?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
+        },
+        {
           "id": "PROXI.OL:ddb190fbe2ed6d2de48a0a5be771b5233fa329a3e65deb77a162ce11e684110b",
           "published": "2026-11-27T07:00:00Z",
           "headline": "Proximar Seafood Q3 2026: Positive operational performance and outlook with recapitalization plan progressing",
@@ -9968,8 +9984,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-27T07:00:00Z",
+      "observedRecords": 6,
+      "latestRecord": "2026-11-27T11:53:02Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10061,8 +10077,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 20,
-      "latestRecord": "2026-11-27T10:42:16Z",
+      "observedRecords": 21,
+      "latestRecord": "2026-11-27T11:00:29Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10829,8 +10845,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 20,
-      "latestRecord": "2026-11-27T10:02:00Z",
+      "observedRecords": 21,
+      "latestRecord": "2026-11-27T11:36:15Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12067,8 +12083,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 84,
-      "latestRecord": "2026-11-26T12:52:16Z",
+      "observedRecords": 85,
+      "latestRecord": "2026-11-27T11:32:02Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -13428,8 +13444,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 41,
-      "latestRecord": "2026-11-25T21:20:17Z",
+      "observedRecords": 42,
+      "latestRecord": "2026-11-27T08:15:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -13970,8 +13986,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 186,
-      "latestRecord": "2026-11-27T10:36:24Z",
+      "observedRecords": 187,
+      "latestRecord": "2026-11-27T11:44:29Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,

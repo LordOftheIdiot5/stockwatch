@@ -1,7 +1,18 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T11:08:27.783747+00:00",
+  "attemptedAt": "2026-11-27T12:07:35.639723+00:00",
   "items": [
+    {
+      "id": "web-0533dc7b101b0d6cac9499574709a6ce88fcfef9f09dd28401bc40c056877208",
+      "company": "neura",
+      "date": "2026-11-27T12:03:09+00:00",
+      "category": "General",
+      "title": "Neura Robotics partners with Costa Group to develop Aragón’s physical AI ambitions",
+      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQRHhZZFk5U1Y0SlZ5b3hheTNrakxGY05WYVhCQy1kRG91TGpHa2xKQ3hOcEtfZ2s0ZEtqOXA5bGpEVFQzNmRLOHBlOEV0VW82d2RmV0ZVVVhIbDdJbWptUFQ4WkpVaDFZbkRCTU5GRWdqb21ILURSbEFHN05pU2JlODZoYmVIUE9IRUp1MTV1cVpURzVQd3lNbWJRQi04UmQtZGxLc3JoaGtiVmdBLV96YWUyWHZuTkhaQ191OUM4Y043Y1FXa2ptWWozWWdHN0QzWWdLaFlCNm5mRFAxUzJLaWxub1BHSTNjMVFONEZRTXpDWXowX3Vad3hlSTRaSGN4d3dOZ2d3NVdzSFJkMmdTaWw2UDFCUQ?oc=5",
+      "publisher": "Robotics & Automation News",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
     {
       "id": "web-c7e6788ebeb44bbb50e471335edb70f68e1b2354689ac15ed5482cdcfc3ad58b",
       "company": "neura",
@@ -516,6 +527,17 @@
       "title": "Tresor issues statement condemning Helsing AI military event at Kraftwerk Berlin",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSjZ6Z19ZaEI2S19IUXZEZTd3MV82ZmplT1pOWDVPZ1QyUW9mZkUtRkxfZHI5XzhoS09UM3ZBdWQ4S09rdW9qZnowcGRQZmtKeFZyT3ZCUXZvd2lzdVY3d1BVVURXZzZmWGwtYU5nU3ZqN3VGRGhmR2dmVmo2amVxd1pkbjRnWjc2Y1BTWG5QWEN1WFRRRXZEVVd4dmE0NmJNZEE?oc=5",
       "publisher": "DJ Mag",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
+    {
+      "id": "web-2e1dc2b1c5900a2126e4a29e2c5d17678bcc43fa85117fa00bcb7a0edbda3495",
+      "company": "iceye",
+      "date": "2026-11-27T11:23:34+00:00",
+      "category": "General",
+      "title": "Iceye and Avio: a new space giant for Europe?",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONHdneTdsV3NmQ1VYNjU4bUp6ekhKSHlYekxjMmMxekdOci1PR1NSZV9KY3FiR1RjTlNxLVZBYkJyUk5vNDBDcXRvSEZpbXJySjNSam41anVOVW1HTVpWMjVYN0RfV1RrWGJScEdQZWF5MWFhX0tib2FjNzBhU0VnZm50cGhKd28?oc=5",
+      "publisher": "eurotopics.net",
       "tier": "named reference",
       "dateType": "reported publication time"
     },
@@ -1063,7 +1085,7 @@
     "neura": {
       "status": "named_references_observed",
       "freshNamedReferences": 3,
-      "retainedReferences": 4
+      "retainedReferences": 5
     },
     "agile": {
       "status": "named_references_observed",
@@ -1087,7 +1109,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 9,
+      "freshNamedReferences": 5,
       "retainedReferences": 9
     },
     "saga": {
@@ -1112,7 +1134,7 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 3,
       "retainedReferences": 4
     },
     "mistral": {
@@ -1132,17 +1154,17 @@
     },
     "iceye": {
       "status": "named_references_observed",
-      "freshNamedReferences": 14,
-      "retainedReferences": 13
+      "freshNamedReferences": 8,
+      "retainedReferences": 14
     },
     "quantum-systems": {
       "status": "named_references_observed",
-      "freshNamedReferences": 11,
+      "freshNamedReferences": 10,
       "retainedReferences": 15
     },
     "alice-bob": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 7,
       "retainedReferences": 8
     },
     "rocsys": {

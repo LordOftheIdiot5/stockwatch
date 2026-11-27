@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T11:07:07+00:00",
+  "generated": "2026-11-27T12:06:07+00:00",
   "comparisonDate": "2026-11-26",
   "totalListings": 500,
   "candidates": [
@@ -6796,15 +6796,15 @@
       "name": "Arctic Fish",
       "venue": "Oslo",
       "group": "monitored",
-      "lastSavedDate": "2026-11-26",
+      "lastSavedDate": "2026-11-27",
       "lastSavedKind": "scanner",
-      "quality": "no_volume",
+      "quality": "unconfirmed",
       "reviewedIdentity": false,
       "licensedHistory": false,
       "needsSourcePrice": false,
       "needsDailyVerification": true,
       "reasons": [
-        "monitored_source_quality_no_volume",
+        "monitored_source_quality_unconfirmed",
         "exact_isin_mic_review_required",
         "licensed_history_not_connected"
       ]
