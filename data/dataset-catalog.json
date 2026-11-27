@@ -1,54 +1,6 @@
 {
-  "generated": "2026-11-27T14:30:13Z",
+  "generated": "2026-11-27T15:07:41Z",
   "datasets": [
-    {
-      "name": "European issuer directory",
-      "path": "data/issuer-identities.json",
-      "records": 139,
-      "license": "Original watchlist identities; underlying exchange identifiers subject to source terms"
-    },
-    {
-      "name": "SEC EDGAR filing metadata",
-      "path": "data/sec-filings.json",
-      "records": 420,
-      "license": "Official public filing metadata and source links only"
-    },
-    {
-      "name": "Company driver attention",
-      "path": "data/driver-attention-v1.json",
-      "records": 189,
-      "license": "Derived archive counts and source-linked metadata; not market-wide attention or forecasts"
-    },
-    {
-      "name": "Latest company news",
-      "path": "data/news-latest.json",
-      "records": 100,
-      "license": "Metadata and outbound source links, not reproduced articles"
-    },
-    {
-      "name": "Historical article index",
-      "path": "data/news-store/index.json",
-      "records": 2966,
-      "license": "Git-backed source-linked metadata; inspect original publisher terms"
-    },
-    {
-      "name": "A/B indicator observations",
-      "path": "data/spread-observations.json",
-      "records": 156,
-      "license": "Derived research indicators; no raw historical OHLCV"
-    },
-    {
-      "name": "Freight route definitions",
-      "path": "data/freight-routes.json",
-      "records": 30,
-      "license": "Route metadata only; Baltic benchmark quotes require a redistribution license"
-    },
-    {
-      "name": "Source quality",
-      "path": "data/source-health.json",
-      "records": 139,
-      "license": "Original scanner telemetry"
-    },
     {
       "name": "Official macroeconomic and FX observations",
       "path": "data/open-data.json",
@@ -102,6 +54,54 @@
       "path": "data/free-research.json",
       "records": 35388,
       "license": "Per-dataset source terms; Comtrade preview metadata only"
+    },
+    {
+      "name": "European issuer directory",
+      "path": "data/issuer-identities.json",
+      "records": 139,
+      "license": "Original watchlist identities; underlying exchange identifiers subject to source terms"
+    },
+    {
+      "name": "SEC EDGAR filing metadata",
+      "path": "data/sec-filings.json",
+      "records": 420,
+      "license": "Official public filing metadata and source links only"
+    },
+    {
+      "name": "Company driver attention",
+      "path": "data/driver-attention-v1.json",
+      "records": 189,
+      "license": "Derived archive counts and source-linked metadata; not market-wide attention or forecasts"
+    },
+    {
+      "name": "Latest company news",
+      "path": "data/news-latest.json",
+      "records": 100,
+      "license": "Metadata and outbound source links, not reproduced articles"
+    },
+    {
+      "name": "Historical article index",
+      "path": "data/news-store/index.json",
+      "records": 2983,
+      "license": "Git-backed source-linked metadata; inspect original publisher terms"
+    },
+    {
+      "name": "A/B indicator observations",
+      "path": "data/spread-observations.json",
+      "records": 156,
+      "license": "Derived research indicators; no raw historical OHLCV"
+    },
+    {
+      "name": "Freight route definitions",
+      "path": "data/freight-routes.json",
+      "records": 30,
+      "license": "Route metadata only; Baltic benchmark quotes require a redistribution license"
+    },
+    {
+      "name": "Source quality",
+      "path": "data/source-health.json",
+      "records": 139,
+      "license": "Original scanner telemetry"
     }
   ]
 }
