@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T07:06:29Z",
+  "generated": "2026-11-27T08:08:42Z",
   "windowStart": "2026-11-13",
   "windowEnd": "2026-11-26",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -587,8 +587,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-27T07:49:28Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -1224,12 +1224,12 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 8,
-      "latestRecord": "2026-11-24T09:53:27Z",
+      "observedRecords": 9,
+      "latestRecord": "2026-11-26T10:31:59Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -1243,7 +1243,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       }
     },
     "ANDF.OL": {
@@ -3659,9 +3659,18 @@
           "media": 0
         }
       ],
-      "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "potential": [
+        {
+          "id": "EIOF.OL:54a315577126900a7ee610ffa1c04226645d05378e7ce2c91e0e87d5c0565fbf",
+          "published": "2026-11-27T07:45:00Z",
+          "headline": "EIOF - Expected contract extension for Seven Viking",
+          "url": "https://newsweb.oslobors.no/message/687624",
+          "evidence": "issuer",
+          "topic": "Contracts / agreements"
+        }
+      ],
+      "observedRecords": 1,
+      "latestRecord": "2026-11-27T07:45:00Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -4593,8 +4602,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 87,
-      "latestRecord": "2026-11-27T07:02:32Z",
+      "observedRecords": 89,
+      "latestRecord": "2026-11-27T08:01:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -9529,8 +9538,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 17,
-      "latestRecord": "2026-11-26T04:52:10Z",
+      "observedRecords": 18,
+      "latestRecord": "2026-11-27T05:22:55Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10020,8 +10029,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 18,
-      "latestRecord": "2026-11-26T15:42:10Z",
+      "observedRecords": 19,
+      "latestRecord": "2026-11-27T06:20:48Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12476,8 +12485,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-26T08:40:07Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-27T07:12:10Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,

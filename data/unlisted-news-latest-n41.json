@@ -1,7 +1,18 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T07:06:21.154683+00:00",
+  "attemptedAt": "2026-11-27T08:08:33.170398+00:00",
   "items": [
+    {
+      "id": "web-c7e6788ebeb44bbb50e471335edb70f68e1b2354689ac15ed5482cdcfc3ad58b",
+      "company": "neura",
+      "date": "2026-11-27T07:18:04+00:00",
+      "category": "General",
+      "title": "NEURA Robotics Plans Aragón Physical AI Gym and Model Zone",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcHh1NmtGc1RjQVBpakV1MnpRcGltUmtRcHRKOWVSeUZTV0IwVlZnRDVqRlpzS2Rsa1lNTVM2em5pc2dndGloUzNPaW44SEpFQW9ETUlfMDBtamt2dTNyR0ZRd0FLRjFkMlZUVUxmWGVpR0RzbGFPSHpMc0VWaDNMcVhjNGt3QTg?oc=5",
+      "publisher": "Unite.AI",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
     {
       "id": "web-44b6182c22940dc88034f1d0e4bc775df05592747966f5e0acc84483f3894816",
       "company": "neura",
@@ -995,13 +1006,13 @@
   ],
   "coverage": {
     "neura": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
-      "retainedReferences": 3
+      "status": "named_references_observed",
+      "freshNamedReferences": 3,
+      "retainedReferences": 4
     },
     "agile": {
       "status": "named_references_observed",
-      "freshNamedReferences": 12,
+      "freshNamedReferences": 13,
       "retainedReferences": 15
     },
     "sitegeist": {
@@ -1021,7 +1032,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 9,
+      "freshNamedReferences": 5,
       "retainedReferences": 9
     },
     "saga": {
@@ -1030,8 +1041,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 1,
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
       "retainedReferences": 1
     },
     "1x": {
@@ -1046,12 +1057,12 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 3,
       "retainedReferences": 4
     },
     "mistral": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
+      "status": "named_references_observed",
+      "freshNamedReferences": 6,
       "retainedReferences": 9
     },
     "helsing": {
