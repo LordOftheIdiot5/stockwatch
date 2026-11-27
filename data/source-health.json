@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-27T01:00:51Z",
-  "latestScan": "2026-11-27T00:58:38+00:00",
-  "scanAgeHours": 0.04,
-  "contextAgeHours": 0.04,
+  "generated": "2026-11-27T04:21:35Z",
+  "latestScan": "2026-11-27T04:20:05+00:00",
+  "scanAgeHours": 0.03,
+  "contextAgeHours": 0.03,
   "priceFreshness": {
     "comparisonDate": "2026-11-26",
     "equities": {
-      "comparable": 1,
+      "comparable": 0,
       "older": 4,
       "no_volume": 3,
-      "unconfirmed": 131,
+      "unconfirmed": 132,
       "unavailable": 0
     },
     "total": 139,
@@ -25,12 +25,12 @@
     "micProvided": 1,
     "micMissing": 138,
     "ageCalendarDays": {
-      "targetDate": 132,
+      "targetDate": 131,
       "oneDay": 5,
       "twoToThreeDays": 0,
       "fourToSevenDays": 1,
       "eightPlusDays": 1,
-      "unknownOrFuture": 0
+      "unknownOrFuture": 1
     },
     "byExchange": [
       {
@@ -120,19 +120,19 @@
         "retainedTargetDate": 0,
         "micProvided": 0,
         "quality": {
-          "comparable": 1,
-          "unconfirmed": 0,
+          "comparable": 0,
+          "unconfirmed": 1,
           "older": 0,
           "no_volume": 0,
           "unavailable": 0
         },
         "ageCalendarDays": {
-          "targetDate": 1,
+          "targetDate": 0,
           "oneDay": 0,
           "twoToThreeDays": 0,
           "fourToSevenDays": 0,
           "eightPlusDays": 0,
-          "unknownOrFuture": 0
+          "unknownOrFuture": 1
         },
         "providerOlderSession": 0,
         "providerCurrencyMismatch": 0
@@ -435,13 +435,13 @@
       "counts": {
         "chartUnavailable": 0,
         "barBeforeTarget": 138,
-        "barOnTarget": 1,
-        "barAfterTarget": 0,
+        "barOnTarget": 0,
+        "barAfterTarget": 1,
         "invalidTimestamp": 0,
         "localDateDiffersUtc": 0,
         "localDateBeforeTarget": 138,
-        "localDateOnTarget": 1,
-        "localDateAfterTarget": 0,
+        "localDateOnTarget": 0,
+        "localDateAfterTarget": 1,
         "unknownExchangeTimezone": 0,
         "barOlderThanRetained": 131,
         "retainedTargetDateDespiteOlderBar": 131,
@@ -540,18 +540,18 @@
         {
           "name": "HKSE",
           "tracked": 1,
-          "providerUtcEarliest": "2026-11-26",
-          "providerUtcLatest": "2026-11-26",
+          "providerUtcEarliest": "2026-11-27",
+          "providerUtcLatest": "2026-11-27",
           "counts": {
             "chartUnavailable": 0,
             "barBeforeTarget": 0,
-            "barOnTarget": 1,
-            "barAfterTarget": 0,
+            "barOnTarget": 0,
+            "barAfterTarget": 1,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
             "localDateBeforeTarget": 0,
-            "localDateOnTarget": 1,
-            "localDateAfterTarget": 0,
+            "localDateOnTarget": 0,
+            "localDateAfterTarget": 1,
             "unknownExchangeTimezone": 0,
             "barOlderThanRetained": 0,
             "retainedTargetDateDespiteOlderBar": 0,
@@ -828,7 +828,7 @@
     "Yahoo prices": "requests_ok",
     "Oslo NewsWeb": "requests_ok",
     "MFN filings": "requests_ok",
-    "Google News": "requests_ok",
+    "Google News": "request_errors",
     "Finanstilsynet shorts": "requests_ok"
   },
   "sourceRequests": {
@@ -836,69 +836,71 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 71.0,
+      "avgLatencyMs": 189.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T00:58:48+00:00",
+      "lastSuccessAt": "2026-11-27T04:20:32+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 229.7,
+      "avgLatencyMs": 570.4,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T00:58:51+00:00",
+      "lastSuccessAt": "2026-11-27T04:20:34+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 740.1,
+      "avgLatencyMs": 1278.4,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T00:58:52+00:00",
+      "lastSuccessAt": "2026-11-27T04:20:36+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 598,
-      "failed": 0,
-      "avgLatencyMs": 329.1,
-      "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T00:59:08+00:00",
-      "lastFailureAt": null
+      "succeeded": 597,
+      "failed": 1,
+      "avgLatencyMs": 335.0,
+      "errorTypes": {
+        "HTTPError": 1
+      },
+      "lastSuccessAt": "2026-11-27T04:20:52+00:00",
+      "lastFailureAt": "2026-11-27T04:20:52+00:00"
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2605.6,
+      "avgLatencyMs": 1990.1,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T00:58:51+00:00",
+      "lastSuccessAt": "2026-11-27T04:20:34+00:00",
       "lastFailureAt": null
     }
   },
   "newsQuality": {
-    "total": 2835,
-    "relevant": 1838,
-    "review": 892,
+    "total": 2849,
+    "relevant": 1848,
+    "review": 896,
     "duplicates": 149,
     "issuerLinked": 442,
-    "namedReferences": 1501,
-    "withheldFromIssuerEvents": 892,
+    "namedReferences": 1511,
+    "withheldFromIssuerEvents": 896,
     "identityTiers": {
       "issuer_verified": 442,
-      "named_reference": 1501,
-      "review_candidate": 892
+      "named_reference": 1511,
+      "review_candidate": 896
     },
     "driverClassification": {
       "version": 1,
-      "classified": 611,
+      "classified": 614,
       "categories": {
         "numbers": 322,
         "prices": 10,
         "operations": 1,
-        "potential": 306,
+        "potential": 309,
         "risk": 3
       },
       "notice": "Multi-label topical association; not sentiment, price effect or verified headline facts."
@@ -908,10 +910,10 @@
       "Dividends": 32,
       "M&A": 121,
       "Guidance": 51,
-      "Contracts": 247,
+      "Contracts": 250,
       "Capital & ownership": 3,
-      "Management": 116,
-      "General": 1919
+      "Management": 117,
+      "General": 1929
     }
   },
   "secFilings": {

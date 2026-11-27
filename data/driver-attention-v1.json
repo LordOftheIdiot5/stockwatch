@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T01:00:51Z",
+  "generated": "2026-11-27T04:21:35Z",
   "windowStart": "2026-11-13",
   "windowEnd": "2026-11-26",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -1472,8 +1472,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 30,
-      "latestRecord": "2026-11-27T00:17:45Z",
+      "observedRecords": 31,
+      "latestRecord": "2026-11-27T03:55:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -4452,10 +4452,18 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 9
+          "media": 10
         }
       ],
       "potential": [
+        {
+          "id": "FCT.MI:27aa7fb1bfee49e24bbb0eecc1fb846754e4cd8a0564aebffb543623cc1d734f",
+          "published": "2026-11-27T02:25:15Z",
+          "headline": "Fincantieri-Led RTI Signs €500 Million Contract Amendment with OCCAR for Third Italian Navy LSS",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tNlJIamhic0ZUeWUta21IZmxDSWR2aE5kMng1cHVuMjFFWkx5QzVQaHl6NUhhM3ktY2ZGWUV4Q0IwVXNCbnBvRjlRWE9EaFE?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "FCT.MI:384c06b519b8dc7e2908975192f016e21337db6f7a50455d8a4818f000c01aba",
           "published": "2026-11-26T16:20:44Z",
@@ -4577,8 +4585,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 84,
-      "latestRecord": "2026-11-26T22:03:51Z",
+      "observedRecords": 86,
+      "latestRecord": "2026-11-27T02:25:15Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -4592,7 +4600,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 43
+        "media": 44
       }
     },
     "FRO.OL": {
@@ -6663,6 +6671,14 @@
       ],
       "potential": [
         {
+          "id": "KCR.HE:0f956c58b1187c846687bf791e4f0171e942d144d9944a7c411756837f9a7606",
+          "published": "2026-11-27T02:00:15Z",
+          "headline": "Konecranes secures order for 12 hybrid straddle carriers in Durban",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdTU3Yk9mdmxaU2VMQmphUUlzanRnZ3J4STlWdUR5MDZVX0lfM19NWmR6eTlsOXgxUUJuci1xSlQtU3R6SFhtNVJCOTVrWDVocEFoTUVodHR0aEM3MlJjcDlRWlA2YVFldThFTkM4c0NwdXVHSENTR2dKZGNZSXRSU0IyZktQa29hNEQtLWJrUE1OVjZMdjhNTzFB?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "KCR.HE:435b7eb0bc5ce1904d840cccd5a74def8579d6e85ffa43a16dedae1adda8ee5f",
           "published": "2026-11-26T08:08:37Z",
           "headline": "Konecranes wins order for 12 hybrid-powered straddle carriers in South Africa",
@@ -6711,8 +6727,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 13,
-      "latestRecord": "2026-11-26T19:00:54Z",
+      "observedRecords": 14,
+      "latestRecord": "2026-11-27T02:00:15Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -10587,7 +10603,7 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 3
+          "media": 4
         },
         {
           "date": "2026-11-26",
@@ -10613,7 +10629,7 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 18,
+      "observedRecords": 19,
       "latestRecord": "2026-11-25T17:25:00Z",
       "topicCounts": {
         "numbers": 0,
@@ -10628,7 +10644,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 9
+        "media": 10
       }
     },
     "S92.DE": {
@@ -12905,10 +12921,18 @@
         {
           "date": "2026-11-26",
           "issuer": 1,
-          "media": 2
+          "media": 4
         }
       ],
       "potential": [
+        {
+          "id": "SUBC.OL:9fc74f487099f6c38fbbb06c5643e53cee277514669df3106a0d36856e3a5cf2",
+          "published": "2026-11-26T15:12:12Z",
+          "headline": "Subsea 7 Secures Further Vessel Contract Extension from Equinor",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ0VyS042bXdjYmxMTG5xUnpBU1otZ0xTQ2ZzWlI4anRnZjRVbWY2SnhveTlNZ2ppYVF0VnlfLU1hU19SZWU1RlVJLWE2NXVqOURDODhOMDlHa1lpVjA3U2NPTEpKem83T3k0bTkyV19rU2t2aEtvTUctNjM0UG1oRlBKLTY0eE5icE8xS1RxTWpuYXMwS3lYRzdqQzZNZUh2MWtFNzBxMG1HM3hkZTdCOHVyUXhMSTg?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "SUBC.OL:7c6fbddc3be9b97d361f74ad1c22dd995e861b533decbad989bf5368ec95be4c",
           "published": "2026-11-26T14:16:53Z",
@@ -13046,13 +13070,13 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 32,
-      "latestRecord": "2026-11-26T14:16:53Z",
+      "observedRecords": 34,
+      "latestRecord": "2026-11-26T15:19:37Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
         "operations": 0,
-        "potential": 7,
+        "potential": 8,
         "risk": 0
       },
       "prior7": {
@@ -13061,7 +13085,7 @@
       },
       "recent7": {
         "issuer": 1,
-        "media": 11
+        "media": 13
       }
     },
     "TISG.MI": {
@@ -13707,7 +13731,7 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 23
+          "media": 25
         }
       ],
       "potential": [
@@ -13872,7 +13896,7 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 180,
+      "observedRecords": 182,
       "latestRecord": "2026-11-27T00:30:04Z",
       "topicCounts": {
         "numbers": 2,
@@ -13887,7 +13911,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 80
+        "media": 82
       }
     },
     "VEI.OL": {
@@ -14579,7 +14603,7 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 3
+          "media": 4
         }
       ],
       "potential": [
@@ -14640,8 +14664,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 25,
-      "latestRecord": "2026-11-26T12:51:40Z",
+      "observedRecords": 26,
+      "latestRecord": "2026-11-26T22:33:53Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -14655,7 +14679,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 7
+        "media": 8
       }
     },
     "WAWI.OL": {
