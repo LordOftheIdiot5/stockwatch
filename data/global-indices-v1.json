@@ -9,8 +9,8 @@
   "license": "Taiwan Open Government Data License 1.0; attribution required",
   "licenseUrl": "https://data.gov.tw/en/license",
   "status": "ok",
-  "lastSuccessAt": "2026-11-26T20:44:07.568647+00:00",
-  "lastAttempt": "2026-11-26T20:44:07.568647+00:00",
+  "lastSuccessAt": "2026-11-27T06:07:51.765107+00:00",
+  "lastAttempt": "2026-11-27T06:07:51.765107+00:00",
   "history": [
     {
       "date": "2026-11-02",
@@ -119,13 +119,19 @@
       "close": 38195.43,
       "changePoints": -1926.92,
       "changePct": -4.80261
+    },
+    {
+      "date": "2026-11-26",
+      "close": 39151.81,
+      "changePoints": 956.38,
+      "changePct": 2.503912
     }
   ],
   "latest": {
-    "date": "2026-11-25",
-    "close": 38195.43,
-    "changePoints": -1926.92,
-    "changePct": -4.80261
+    "date": "2026-11-26",
+    "close": 39151.81,
+    "changePoints": 956.38,
+    "changePct": 2.503912
   },
   "notice": "Completed-session index observations; not live quotes. Daily percentage derived from source close and reported point change. Session date is Taiwan local date."
 }

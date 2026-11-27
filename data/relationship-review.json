@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T04:21:36.218158+00:00",
-  "newsRecordsScanned": 2864,
+  "generated": "2026-11-27T06:07:51.357719+00:00",
+  "newsRecordsScanned": 2881,
   "notice": "Metadata-only leads, not evidence-backed relationships. Source review required; no headlines or article text copied.",
   "candidates": [
     {
@@ -4205,6 +4205,32 @@
       "candidateType": "headline_event",
       "published": "2026-11-27T02:25:15Z",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tNlJIamhic0ZUeWUta21IZmxDSWR2aE5kMng1cHVuMjFFWkx5QzVQaHl6NUhhM3ktY2ZGWUV4Q0IwVXNCbnBvRjlRWE9EaFE?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "e5d56e639c27b60f6134c99abf19b8280941e77188ed08adea67915ab86fdb7e",
+      "newsId": "NOVO-B.CO:76a2655896a379bb814afecbc925f05edf640e531169d602c25760a3ad53f17b",
+      "entityIds": [],
+      "issuerTicker": "NOVO-B.CO",
+      "candidateType": "headline_event",
+      "published": "2026-11-27T04:24:00Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWEQ4V0F3OGpmcTA2OE9pV0NmYjFYdmNCSlc5Z0VyWkxTTXBhLThOeUc0OFNOcWVuOTdzVGVyaGdQODdieVQzcldtRnF6TlN0bXJYU2phc1Azd0FneEtHQ3RBSk92SlJsZmlOVmRCRGtPd1czZV9paXhPSC1USTZtX1VmWEtZZm9qX0hPQzFNejV2U3B3aEloN2pscU02R2IxSFlSSVg2bHcwTUlueFFtVDJaR0l1MzNQVGZzLXF1Mkc?oc=5",
+      "status": "review_required",
+      "relationshipVerified": false,
+      "amount": null
+    },
+    {
+      "id": "8d51d7d1ec9818a3f9799c137999b77a6481d69eb801c68f5334c665cac59182",
+      "newsId": "IFX.DE:efa1b4da83f881bd573bd8f2e6488d1b6bd73651b3d2b4c88e3f524fc217111c",
+      "entityIds": [
+        "infineon"
+      ],
+      "issuerTicker": "IFX.DE",
+      "candidateType": "headline_event",
+      "published": "2026-11-27T05:11:10Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQb1pPakdIM0JWSmRuV0VVTF9mQjFaWjV3anB6UDdFZmdlOVN2QTkzQW1wRjR2cGcxVTFUNW0ySDliZHRtQzJJT2VEZ1pQeGpXZjlLb2tjTzJDLXlXcWpEbk1pSmNEN3FtNkwtWXFYNUo1YlBfbDNiYVdZSDVEZlpwRkVnME5IbW5GeGd1S2pKWnlwalFsMmljWktoRGJZa09TMUI5YkFmREhhOTVrMkg2ZHNuUTNGdEVRNlowSktGOW1mUdIBzwFBVV95cUxQNUNrTjFiMzlMYno2UHZIb2ZzUlRvY042Q2pWbzhqZlJsLVFXeEM4bXhFNTIxYnFaSDBEbmw2QkgwYW55bVl3YTYxd1FGT29DOUVEenJGX0o2eFRGbC10SFVYSXFiamN5c0o4QnE1N0M5QkI5NFRzRnVJdGMwZXZmU2M5R2J3NzlhelF2UndSamhNRWZzTXN2bFVKTThlMjRVVmVZb0lUWHdsdDRNWjhJQjJqQUFkYXdCT1prMzBhTmdsUkk1NGRrLXlzbkVnM2c?oc=5",
       "status": "review_required",
       "relationshipVerified": false,
       "amount": null

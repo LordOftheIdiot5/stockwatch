@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T04:21:35Z",
+  "generated": "2026-11-27T06:07:50Z",
   "windowStart": "2026-11-13",
   "windowEnd": "2026-11-26",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -3744,7 +3744,7 @@
         {
           "date": "2026-11-25",
           "issuer": 0,
-          "media": 10
+          "media": 11
         },
         {
           "date": "2026-11-26",
@@ -3770,10 +3770,10 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 15,
+      "observedRecords": 16,
       "latestRecord": "2026-11-26T07:41:20Z",
       "topicCounts": {
-        "numbers": 5,
+        "numbers": 6,
         "prices": 0,
         "operations": 0,
         "potential": 2,
@@ -3785,7 +3785,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 14
+        "media": 15
       }
     },
     "EL.PA": {
@@ -3863,8 +3863,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 12,
-      "latestRecord": "2026-11-25T13:13:34Z",
+      "observedRecords": 13,
+      "latestRecord": "2026-11-27T05:30:54Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -5995,6 +5995,14 @@
       ],
       "potential": [
         {
+          "id": "IFX.DE:efa1b4da83f881bd573bd8f2e6488d1b6bd73651b3d2b4c88e3f524fc217111c",
+          "published": "2026-11-27T05:11:10Z",
+          "headline": "Trilegal, JSA act on Infineon Technologies' acquisition of C2i Semiconductors",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQb1pPakdIM0JWSmRuV0VVTF9mQjFaWjV3anB6UDdFZmdlOVN2QTkzQW1wRjR2cGcxVTFUNW0ySDliZHRtQzJJT2VEZ1pQeGpXZjlLb2tjTzJDLXlXcWpEbk1pSmNEN3FtNkwtWXFYNUo1YlBfbDNiYVdZSDVEZlpwRkVnME5IbW5GeGd1S2pKWnlwalFsMmljWktoRGJZa09TMUI5YkFmREhhOTVrMkg2ZHNuUTNGdEVRNlowSktGOW1mUdIBzwFBVV95cUxQNUNrTjFiMzlMYno2UHZIb2ZzUlRvY042Q2pWbzhqZlJsLVFXeEM4bXhFNTIxYnFaSDBEbmw2QkgwYW55bVl3YTYxd1FGT29DOUVEenJGX0o2eFRGbC10SFVYSXFiamN5c0o4QnE1N0M5QkI5NFRzRnVJdGMwZXZmU2M5R2J3NzlhelF2UndSamhNRWZzTXN2bFVKTThlMjRVVmVZb0lUWHdsdDRNWjhJQjJqQUFkYXdCT1prMzBhTmdsUkk1NGRrLXlzbkVnM2c?oc=5",
+          "evidence": "named_reference",
+          "topic": "Transactions"
+        },
+        {
           "id": "IFX.DE:f57cc54395382becefd759081d2932263051bf8e4e7e8c311243027b6ee35395",
           "published": "2026-11-25T10:28:22Z",
           "headline": "Kinzey Capital Management Announces Analysis of Infineon FY27 AI Sales Outlook",
@@ -6019,8 +6027,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 50,
-      "latestRecord": "2026-11-26T12:46:35Z",
+      "observedRecords": 52,
+      "latestRecord": "2026-11-27T05:55:47Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7805,8 +7813,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 49,
-      "latestRecord": "2026-11-26T08:40:22Z",
+      "observedRecords": 50,
+      "latestRecord": "2026-11-27T04:24:00Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -8397,8 +8405,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-26T12:51:39Z",
+      "observedRecords": 7,
+      "latestRecord": "2026-11-27T05:13:18Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -8579,10 +8587,18 @@
         {
           "date": "2026-11-26",
           "issuer": 0,
-          "media": 1
+          "media": 2
         }
       ],
       "potential": [
+        {
+          "id": "NOVO-B.CO:76a2655896a379bb814afecbc925f05edf640e531169d602c25760a3ad53f17b",
+          "published": "2026-11-27T04:24:00Z",
+          "headline": "What Does the Novo Nordisk Order Mean for Clever Culture Systems (ASX:CC5)?",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWEQ4V0F3OGpmcTA2OE9pV0NmYjFYdmNCSlc5Z0VyWkxTTXBhLThOeUc0OFNOcWVuOTdzVGVyaGdQODdieVQzcldtRnF6TlN0bXJYU2phc1Azd0FneEtHQ3RBSk92SlJsZmlOVmRCRGtPd1czZV9paXhPSC1USTZtX1VmWEtZZm9qX0hPQzFNejV2U3B3aEloN2pscU02R2IxSFlSSVg2bHcwTUlueFFtVDJaR0l1MzNQVGZzLXF1Mkc?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
         {
           "id": "NOVO-B.CO:75608dbaba3641d2b828122f4f81f8f08d70cb0d3910f023e1acd2f80c14feaa",
           "published": "2026-11-13T17:30:36Z",
@@ -8592,8 +8608,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 28,
-      "latestRecord": "2026-11-26T08:27:47Z",
+      "observedRecords": 30,
+      "latestRecord": "2026-11-27T04:24:00Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -8607,7 +8623,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 13
+        "media": 14
       }
     },
     "NRC.OL": {
@@ -10629,8 +10645,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 19,
-      "latestRecord": "2026-11-25T17:25:00Z",
+      "observedRecords": 20,
+      "latestRecord": "2026-11-27T05:31:23Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -11694,8 +11710,8 @@
           "topic": "Other potential-related topic"
         }
       ],
-      "observedRecords": 11,
-      "latestRecord": "2026-11-26T10:40:29Z",
+      "observedRecords": 12,
+      "latestRecord": "2026-11-27T01:34:49Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -12832,8 +12848,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 5,
-      "latestRecord": "2026-11-19T10:07:10Z",
+      "observedRecords": 6,
+      "latestRecord": "2026-11-27T05:08:20Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13642,8 +13658,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 0,
-      "latestRecord": null,
+      "observedRecords": 1,
+      "latestRecord": "2026-11-27T05:13:33Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
