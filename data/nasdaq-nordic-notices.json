@@ -1,27 +1,49 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T15:07:22Z",
+  "generated": "2026-11-27T16:07:42Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-27T15:07:22Z",
-      "lastSuccess": "2026-11-27T15:07:22Z",
+      "lastAttempt": "2026-11-27T16:07:42Z",
+      "lastSuccess": "2026-11-27T16:07:42Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-27T15:07:22Z",
-      "lastSuccess": "2026-11-27T15:07:22Z",
+      "lastAttempt": "2026-11-27T16:07:42Z",
+      "lastSuccess": "2026-11-27T16:07:42Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:907fd8320bcd89c20b19e286e4cb8b528aa4da7f0c67836a57641d4cb679290c",
+      "title": "CORRECTION: Change of issuer name for RVRC Holding AB",
+      "published": "2026-11-27T15:30:55Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b8d40f99bf57d252badc7c3cd90d3d85d&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:3df0efb1d722d3224589916feee84410bd595b8401c47f08b43d954595b7f3b4",
+      "title": "Change of issuer name for RVRC Holding AB",
+      "published": "2026-11-27T15:14:10Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b560b9eaa516305de65702ee79f05ed05&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:629030bbd7602a9cd2d21ac914ee06a214633b01ad1b3bc28f8cef9eeef3556a",
       "title": "STRUCTURED BONDS LISTING ON 30.11.2026",

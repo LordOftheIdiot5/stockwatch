@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T15:07:13.590143+00:00",
+  "attemptedAt": "2026-11-27T16:07:35.032701+00:00",
   "items": [
     {
       "id": "web-c3a298b41d12c9722c8fda01904ade527bf9390f13eba8f5146b564846ab5e29",
@@ -516,6 +516,17 @@
       "title": "Deutsche Telekom invests €100 million in Mistral AI",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE90V3FmLURqS2w4eVNTVFZKell1VlN4R0k1NDJRYnRoMUV0N0RUWkg5SzBuNl85MmdfRjFCTlNrQlpjSFAxLUhUN1VoZ05xdV9lTm0zbjA2R0VfWWFmdHFRRGJyZ2NKVTNiMGNoSXpNQVBCdw?oc=5",
       "publisher": "Mobile Europe",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
+    {
+      "id": "web-980699fe14c398d010e76629e6d18d5b2bd52ab577b3d058c60ad7b55824a3f9",
+      "company": "mistral",
+      "date": "2026-11-19T09:21:00+00:00",
+      "category": "General",
+      "title": "Deutsche Telekom’s Tech Fund Invests $110 Million in Mistral AI",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSW9wWnlNbENyd0dVQ1dBUUxZTEsycU1KcG1Eb0w4UDhkR21DUWEyTTdCbnJUdXNWcmExTExtLWdBbWZPb1hyb29kNzhlYXVHaEx0ZGlseGcwbGliTGF4V29fSXJTTUdVemRTZmJNY0xVazZOT2hpdEZoR1duRmJwcGtPbUw4Q19lZWlpSlg0M0NfOTZCcHVCbURCN3FreGNF?oc=5",
+      "publisher": "WSJ",
       "tier": "named reference",
       "dateType": "reported publication time"
     },
@@ -1106,7 +1117,7 @@
   "coverage": {
     "neura": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 3,
       "retainedReferences": 6
     },
     "agile": {
@@ -1140,8 +1151,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
+      "status": "named_references_observed",
+      "freshNamedReferences": 1,
       "retainedReferences": 1
     },
     "1x": {
@@ -1156,13 +1167,13 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 3,
       "retainedReferences": 4
     },
     "mistral": {
       "status": "named_references_observed",
-      "freshNamedReferences": 1,
-      "retainedReferences": 10
+      "freshNamedReferences": 5,
+      "retainedReferences": 11
     },
     "helsing": {
       "status": "named_references_observed",

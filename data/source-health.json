@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-27T15:07:24Z",
-  "latestScan": "2026-11-27T15:05:27+00:00",
+  "generated": "2026-11-27T16:07:44Z",
+  "latestScan": "2026-11-27T16:05:54+00:00",
   "scanAgeHours": 0.03,
   "contextAgeHours": 0.03,
   "priceFreshness": {
@@ -115,8 +115,8 @@
         "name": "HKSE",
         "tracked": 1,
         "priced": 1,
-        "reported": 1,
-        "retained": 0,
+        "reported": 0,
+        "retained": 1,
         "retainedTargetDate": 0,
         "micProvided": 0,
         "quality": {
@@ -134,7 +134,7 @@
           "eightPlusDays": 0,
           "unknownOrFuture": 1
         },
-        "providerOlderSession": 0,
+        "providerOlderSession": 1,
         "providerCurrencyMismatch": 0
       },
       {
@@ -377,7 +377,8 @@
   "priceDiagnostics": {
     "comparisonDate": "2026-11-26",
     "outcomes": {
-      "reported": 138,
+      "reported": 137,
+      "provider_older_session": 1,
       "currency_mismatch": 1
     },
     "byExchange": {
@@ -391,7 +392,7 @@
         "reported": 11
       },
       "HKSE": {
-        "reported": 1
+        "provider_older_session": 1
       },
       "Helsinki": {
         "reported": 1
@@ -430,15 +431,15 @@
       "counts": {
         "chartUnavailable": 0,
         "barBeforeTarget": 1,
-        "barOnTarget": 5,
-        "barAfterTarget": 133,
+        "barOnTarget": 6,
+        "barAfterTarget": 132,
         "invalidTimestamp": 0,
         "localDateDiffersUtc": 0,
         "localDateBeforeTarget": 1,
-        "localDateOnTarget": 5,
-        "localDateAfterTarget": 133,
+        "localDateOnTarget": 6,
+        "localDateAfterTarget": 132,
         "unknownExchangeTimezone": 0,
-        "barOlderThanRetained": 0,
+        "barOlderThanRetained": 1,
         "retainedTargetDateDespiteOlderBar": 0,
         "sameProviderRecovery": 0,
         "currencyMismatch": 1
@@ -535,20 +536,20 @@
         {
           "name": "HKSE",
           "tracked": 1,
-          "providerUtcEarliest": "2026-11-27",
-          "providerUtcLatest": "2026-11-27",
+          "providerUtcEarliest": "2026-11-26",
+          "providerUtcLatest": "2026-11-26",
           "counts": {
             "chartUnavailable": 0,
             "barBeforeTarget": 0,
-            "barOnTarget": 0,
-            "barAfterTarget": 1,
+            "barOnTarget": 1,
+            "barAfterTarget": 0,
             "invalidTimestamp": 0,
             "localDateDiffersUtc": 0,
             "localDateBeforeTarget": 0,
-            "localDateOnTarget": 0,
-            "localDateAfterTarget": 1,
+            "localDateOnTarget": 1,
+            "localDateAfterTarget": 0,
             "unknownExchangeTimezone": 0,
-            "barOlderThanRetained": 0,
+            "barOlderThanRetained": 1,
             "retainedTargetDateDespiteOlderBar": 0,
             "sameProviderRecovery": 0,
             "currencyMismatch": 0
@@ -817,7 +818,7 @@
       "missing": 0
     }
   ],
-  "storedStories": 144,
+  "storedStories": 150,
   "caveat": "Provider status covers HTTP request success/failure during the latest scan, not parsed data quality or guaranteed timeliness.",
   "sourceStatus": {
     "Yahoo prices": "requests_ok",
@@ -831,62 +832,62 @@
       "requests": 139,
       "succeeded": 139,
       "failed": 0,
-      "avgLatencyMs": 128.8,
+      "avgLatencyMs": 66.5,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T15:05:46+00:00",
+      "lastSuccessAt": "2026-11-27T16:06:04+00:00",
       "lastFailureAt": null
     },
     "Oslo NewsWeb": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 719.2,
+      "avgLatencyMs": 844.0,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T15:05:49+00:00",
+      "lastSuccessAt": "2026-11-27T16:06:19+00:00",
       "lastFailureAt": null
     },
     "MFN filings": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 662.1,
+      "avgLatencyMs": 1396.2,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T15:05:49+00:00",
+      "lastSuccessAt": "2026-11-27T16:06:20+00:00",
       "lastFailureAt": null
     },
     "Google News": {
       "requests": 598,
-      "succeeded": 585,
-      "failed": 13,
-      "avgLatencyMs": 399.4,
+      "succeeded": 591,
+      "failed": 7,
+      "avgLatencyMs": 329.6,
       "errorTypes": {
-        "HTTPError": 13
+        "HTTPError": 7
       },
-      "lastSuccessAt": "2026-11-27T15:06:10+00:00",
-      "lastFailureAt": "2026-11-27T15:06:08+00:00"
+      "lastSuccessAt": "2026-11-27T16:06:39+00:00",
+      "lastFailureAt": "2026-11-27T16:06:24+00:00"
     },
     "Finanstilsynet shorts": {
       "requests": 1,
       "succeeded": 1,
       "failed": 0,
-      "avgLatencyMs": 2122.1,
+      "avgLatencyMs": 13875.6,
       "errorTypes": {},
-      "lastSuccessAt": "2026-11-27T15:05:48+00:00",
+      "lastSuccessAt": "2026-11-27T16:06:18+00:00",
       "lastFailureAt": null
     }
   },
   "newsQuality": {
-    "total": 2983,
-    "relevant": 1929,
-    "review": 944,
+    "total": 2994,
+    "relevant": 1935,
+    "review": 949,
     "duplicates": 154,
-    "issuerLinked": 446,
-    "namedReferences": 1593,
-    "withheldFromIssuerEvents": 944,
+    "issuerLinked": 447,
+    "namedReferences": 1598,
+    "withheldFromIssuerEvents": 949,
     "identityTiers": {
-      "issuer_verified": 446,
-      "named_reference": 1593,
-      "review_candidate": 944
+      "issuer_verified": 447,
+      "named_reference": 1598,
+      "review_candidate": 949
     },
     "driverClassification": {
       "version": 1,
@@ -908,7 +909,7 @@
       "Contracts": 265,
       "Capital & ownership": 4,
       "Management": 124,
-      "General": 2023
+      "General": 2034
     }
   },
   "secFilings": {
