@@ -1,27 +1,104 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T12:07:43Z",
+  "generated": "2026-11-27T13:06:22Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-27T12:07:43Z",
-      "lastSuccess": "2026-11-27T12:07:43Z",
+      "lastAttempt": "2026-11-27T13:06:22Z",
+      "lastSuccess": "2026-11-27T13:06:22Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-27T12:07:43Z",
-      "lastSuccess": "2026-11-27T12:07:43Z",
+      "lastAttempt": "2026-11-27T13:06:22Z",
+      "lastSuccess": "2026-11-27T13:06:22Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:629030bbd7602a9cd2d21ac914ee06a214633b01ad1b3bc28f8cef9eeef3556a",
+      "title": "STRUCTURED BONDS LISTING ON 30.11.2026",
+      "published": "2026-11-27T13:03:41Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b540f1fabbe31d6b9291b4da175d65ab1&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:315b2a1fe602fac08cae80666d442bff5fe0990b08d85f8765078e1c89027227",
+      "title": "Fossar fjárfestingarbanki hf. - Bill (FOS 27 0526) admitted to trading on November 30, 2026",
+      "published": "2026-11-27T12:55:11Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b1781d3661c8de70920b11721525b6721&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:147e92742da5d4676502cc1695d2e81270e7e0b4b8ae390ff4aa714100ce4097",
+      "title": "Trifork Group AG - cancellation of shares",
+      "published": "2026-11-27T12:40:03Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bd74aa8c33f0d75e9fba8babbbe3d8eff&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:4ec5e3a809cb899f83abfb4a7846a6216a2ac7d827f6a22a198ee4b4791d8be9",
+      "title": "Commercial Paper(s) issued by Medicover AB will be admitted to trading on Nasdaq STO Sustainable Commercial Paper (Record Id 374070)",
+      "published": "2026-11-27T12:33:50Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bc10f7b37b0b61093fdd0c5cf171c9755&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:96647160680546c50351dc8236f33c77d5078524ef8fcdbbe8ab234db1216476",
+      "title": "Commercial Paper(s) issued by Medicover AB will be admitted to trading on Nasdaq STO Sustainable Commercial Paper (Record Id 374069)",
+      "published": "2026-11-27T12:32:56Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b3f9a522e6d76cb0a222542720d43b245&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:ece02d4a8138e72f56aee80d9fcc058f22da9e502b2990d86ac9f60e6dcd5517",
+      "title": "Delisting of bond issued by CA Fastigheter Aktiebolag (publ)",
+      "published": "2026-11-27T12:30:02Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b14bb579f601cf39c40a393e49599ade2&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:40d4d47cb15697891d2f498732f6ad821db323f776ccdbb6b78688c5409e0eeb",
+      "title": "Delisting of bond issued by Pamica Group AB",
+      "published": "2026-11-27T12:28:29Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bb58aba2b67a30e341826a233b9d8a43e&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:af1811ebff0b6b8fed466cce5671f20d34e2fb63b11a59f1c4c7d28876f8f9db",
       "title": "Structured bond(s) issued by Nordea Bank Abp will be admitted to trading on STO Structured Products (Record Id 374057)",

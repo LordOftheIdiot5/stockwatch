@@ -1,7 +1,18 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T12:07:35.639723+00:00",
+  "attemptedAt": "2026-11-27T13:06:18.616369+00:00",
   "items": [
+    {
+      "id": "web-c3a298b41d12c9722c8fda01904ade527bf9390f13eba8f5146b564846ab5e29",
+      "company": "neura",
+      "date": "2026-11-27T12:22:26+00:00",
+      "category": "General",
+      "title": "Neura Robotics Plans Multimillion-Euro Physical AI Training Center in Spain",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQ0Y2MXhrakNYY3AwcnNXeG8ydDdSUVh1VThmSGZDWFoxTUdGaFNvOHM0WUd1THU1TkY4aUZaMm1peDNwME1wOGNNY19jclBsSnkxT000NlJsMVYxZkNvYXBhejNSZlBqdG9FaWpqU0JNTDFTY0xBRWY0WFVWbGRDeHJKOWVUb1g4cnliUS1QdnpuSDUyZ092T0I3b0lLRVFXOGRHTUhJUkdHV2JiZ0N2NHptdw?oc=5",
+      "publisher": "AI Insider",
+      "tier": "named reference",
+      "dateType": "reported publication time"
+    },
     {
       "id": "web-0533dc7b101b0d6cac9499574709a6ce88fcfef9f09dd28401bc40c056877208",
       "company": "neura",
@@ -247,7 +258,7 @@
     {
       "id": "web-b070f3af299829fb1bcf88cc4c1ba0ad4d1d17424336392447ce4a138465efe5",
       "company": "exotec",
-      "date": "2026-11-27T06:45:31+00:00",
+      "date": "2026-11-27T06:50:04+00:00",
       "category": "General",
       "title": "Fnac Darty enlists Exotec to deploy refurbished Skypod automation system at its Massy site near Paris",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPU3lqTU5HVmIzS2lYd1ZBeThzVGMyc2hwckgweTkyNU11MGg4VkVGanBRZk84WTZTVVEydmpmdGpTa0VmVVk4c3pyTFZMSkFva1lRZkNyUWd0WUprLVlLR3pjZlFuQnQwdm5RSzNsRUNFVjFGb1RrMUNMZGQ4VkdGRGI4cWpYXzlERWNhODJZN1oweHltMm1GYWpueVV1Mnp1UjdkOFlDZkZRX3dWMXdoMWpvQUFONE8tRG1YQmk5OEk4dlVQSGZMeWVlSmdXNHc1WXFQcDRwcUtaMHRKZmZtWWMtc0wtdElKWXgxRERn?oc=5",
@@ -1085,7 +1096,7 @@
     "neura": {
       "status": "named_references_observed",
       "freshNamedReferences": 3,
-      "retainedReferences": 5
+      "retainedReferences": 6
     },
     "agile": {
       "status": "named_references_observed",
@@ -1109,7 +1120,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 5,
+      "freshNamedReferences": 9,
       "retainedReferences": 9
     },
     "saga": {
@@ -1118,8 +1129,8 @@
       "retainedReferences": 0
     },
     "wandercraft": {
-      "status": "no_usable_results_or_unconfirmed",
-      "freshNamedReferences": 0,
+      "status": "named_references_observed",
+      "freshNamedReferences": 1,
       "retainedReferences": 1
     },
     "1x": {
@@ -1128,64 +1139,76 @@
       "retainedReferences": 0
     },
     "robco": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 1,
-      "retainedReferences": 1
+      "status": "provider_http_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 1,
+      "httpStatus": 429
     },
     "lovable": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 3,
-      "retainedReferences": 4
+      "status": "provider_skipped_after_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 4,
+      "httpStatus": 429
     },
     "mistral": {
-      "status": "no_usable_results_or_unconfirmed",
+      "status": "provider_skipped_after_error",
       "freshNamedReferences": 0,
-      "retainedReferences": 9
+      "retainedReferences": 9,
+      "httpStatus": 429
     },
     "helsing": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 2,
-      "retainedReferences": 2
+      "status": "provider_skipped_after_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 2,
+      "httpStatus": 429
     },
     "monumental": {
-      "status": "no_usable_results_or_unconfirmed",
+      "status": "provider_skipped_after_error",
       "freshNamedReferences": 0,
-      "retainedReferences": 0
+      "retainedReferences": 0,
+      "httpStatus": 429
     },
     "iceye": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 8,
-      "retainedReferences": 14
+      "status": "provider_skipped_after_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 14,
+      "httpStatus": 429
     },
     "quantum-systems": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 10,
-      "retainedReferences": 15
+      "status": "provider_skipped_after_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 15,
+      "httpStatus": 429
     },
     "alice-bob": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 7,
-      "retainedReferences": 8
+      "status": "provider_skipped_after_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 8,
+      "httpStatus": 429
     },
     "rocsys": {
-      "status": "no_usable_results_or_unconfirmed",
+      "status": "provider_skipped_after_error",
       "freshNamedReferences": 0,
-      "retainedReferences": 0
+      "retainedReferences": 0,
+      "httpStatus": 429
     },
     "lely": {
-      "status": "no_usable_results_or_unconfirmed",
+      "status": "provider_skipped_after_error",
       "freshNamedReferences": 0,
-      "retainedReferences": 0
+      "retainedReferences": 0,
+      "httpStatus": 429
     },
     "reetec": {
-      "status": "no_usable_results_or_unconfirmed",
+      "status": "provider_skipped_after_error",
       "freshNamedReferences": 0,
-      "retainedReferences": 0
+      "retainedReferences": 0,
+      "httpStatus": 429
     },
     "lkab": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 4,
-      "retainedReferences": 13
+      "status": "provider_skipped_after_error",
+      "freshNamedReferences": 0,
+      "retainedReferences": 13,
+      "httpStatus": 429
     }
   },
   "notice": "Open-web headline references only; no verified issuer event, IPO or trading status inferred."
