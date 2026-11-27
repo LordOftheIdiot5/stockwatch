@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T09:07:19.609578+00:00",
+  "attemptedAt": "2026-11-27T10:07:16.898282+00:00",
   "items": [
     {
       "id": "web-c7e6788ebeb44bbb50e471335edb70f68e1b2354689ac15ed5482cdcfc3ad58b",
@@ -1002,6 +1002,17 @@
       "publisher": "Cision News",
       "tier": "named reference",
       "dateType": "reported publication time"
+    },
+    {
+      "id": "web-a26fdd367be779ebd2ef6f59f35eb5369bd41f068ba30a71a7b147e24ca850d0",
+      "company": "lkab",
+      "date": "2026-10-30T07:00:00+00:00",
+      "category": "General",
+      "title": "LKAB increased iron ore supplies by 9.7% y/y in 3Q2026",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTjAzT0VvcXIxQWZYM2FSNlBTTG1yZlduSkxMRW1BemdSYjNYTVJsd0V3LVc2VkdIMDNZdkEyUXM0QkhySWpqbVMwS000aWxHeW5NMEtIc2s0cVo5b1NWQ0wxLU8zalVGc3dGc1I5M3RHang0UmlibVI4c2RUX1Rwc0d6VmFrQXFY0gGOAUFVX3lxTE1OaDhMekpzbUd5LXhFdTE0dTN5MUpxeTM2V25XazhHemJIY05yTWY2d1VEVlRGZWU2UTMwZEo4X0NkZzBPZ0JCVDNPU2xYaWZ2TDMtUjE0R3d4MEU1OVZvQU1FeTFLUGFvOTU2bkJPLS1PdkJNMzlnZU1uREd4TjVtTGVpeFE2a1Nra3kwQlE?oc=5",
+      "publisher": "GMK Center",
+      "tier": "named reference",
+      "dateType": "reported publication time"
     }
   ],
   "coverage": {
@@ -1012,7 +1023,7 @@
     },
     "agile": {
       "status": "named_references_observed",
-      "freshNamedReferences": 12,
+      "freshNamedReferences": 13,
       "retainedReferences": 15
     },
     "sitegeist": {
@@ -1032,7 +1043,7 @@
     },
     "exotec": {
       "status": "named_references_observed",
-      "freshNamedReferences": 5,
+      "freshNamedReferences": 9,
       "retainedReferences": 9
     },
     "saga": {
@@ -1057,12 +1068,12 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 4
     },
     "mistral": {
-      "status": "named_references_observed",
-      "freshNamedReferences": 6,
+      "status": "no_usable_results_or_unconfirmed",
+      "freshNamedReferences": 0,
       "retainedReferences": 9
     },
     "helsing": {
@@ -1082,7 +1093,7 @@
     },
     "quantum-systems": {
       "status": "named_references_observed",
-      "freshNamedReferences": 13,
+      "freshNamedReferences": 12,
       "retainedReferences": 15
     },
     "alice-bob": {
@@ -1107,8 +1118,8 @@
     },
     "lkab": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
-      "retainedReferences": 12
+      "freshNamedReferences": 12,
+      "retainedReferences": 13
     }
   },
   "notice": "Open-web headline references only; no verified issuer event, IPO or trading status inferred."

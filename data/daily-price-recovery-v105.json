@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T09:06:42+00:00",
+  "generated": "2026-11-27T10:06:08+00:00",
   "comparisonDate": "2026-11-26",
   "totalListings": 500,
   "candidates": [
@@ -7189,6 +7189,24 @@
       ]
     },
     {
+      "id": "PLCAN.OL",
+      "name": "Pelican Aqua",
+      "venue": "Oslo",
+      "group": "monitored",
+      "lastSavedDate": "2026-11-27",
+      "lastSavedKind": "scanner",
+      "quality": "unconfirmed",
+      "reviewedIdentity": false,
+      "licensedHistory": false,
+      "needsSourcePrice": false,
+      "needsDailyVerification": true,
+      "reasons": [
+        "monitored_source_quality_unconfirmed",
+        "exact_isin_mic_review_required",
+        "licensed_history_not_connected"
+      ]
+    },
+    {
       "id": "PROT.OL",
       "name": "Protector forsikring",
       "venue": "Oslo",
@@ -8919,23 +8937,6 @@
     {
       "id": "NOHAL.OL",
       "name": "Nordic Halibut",
-      "venue": "Oslo",
-      "group": "monitored",
-      "lastSavedDate": "2026-11-26",
-      "lastSavedKind": "scanner",
-      "quality": "comparable",
-      "reviewedIdentity": false,
-      "licensedHistory": false,
-      "needsSourcePrice": false,
-      "needsDailyVerification": false,
-      "reasons": [
-        "exact_isin_mic_review_required",
-        "licensed_history_not_connected"
-      ]
-    },
-    {
-      "id": "PLCAN.OL",
-      "name": "Pelican Aqua",
       "venue": "Oslo",
       "group": "monitored",
       "lastSavedDate": "2026-11-26",
