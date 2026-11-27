@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T16:07:42Z",
+  "generated": "2026-11-27T16:30:32Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-27T16:07:42Z",
-      "lastSuccess": "2026-11-27T16:07:42Z",
+      "lastAttempt": "2026-11-27T16:30:32Z",
+      "lastSuccess": "2026-11-27T16:30:32Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-27T16:07:42Z",
-      "lastSuccess": "2026-11-27T16:07:42Z",
+      "lastAttempt": "2026-11-27T16:30:32Z",
+      "lastSuccess": "2026-11-27T16:30:32Z",
       "status": "ok",
       "received": 20
     }
