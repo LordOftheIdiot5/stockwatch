@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "attemptedAt": "2026-11-27T16:30:24.419589+00:00",
+  "attemptedAt": "2026-11-27T17:07:43.370321+00:00",
   "items": [
     {
       "id": "web-c3a298b41d12c9722c8fda01904ade527bf9390f13eba8f5146b564846ab5e29",
@@ -1128,7 +1128,7 @@
   "coverage": {
     "neura": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 6
     },
     "agile": {
@@ -1178,17 +1178,17 @@
     },
     "lovable": {
       "status": "named_references_observed",
-      "freshNamedReferences": 3,
+      "freshNamedReferences": 4,
       "retainedReferences": 4
     },
     "mistral": {
       "status": "named_references_observed",
-      "freshNamedReferences": 6,
+      "freshNamedReferences": 5,
       "retainedReferences": 11
     },
     "helsing": {
       "status": "named_references_observed",
-      "freshNamedReferences": 1,
+      "freshNamedReferences": 2,
       "retainedReferences": 2
     },
     "monumental": {
@@ -1203,12 +1203,12 @@
     },
     "quantum-systems": {
       "status": "named_references_observed",
-      "freshNamedReferences": 10,
+      "freshNamedReferences": 8,
       "retainedReferences": 15
     },
     "alice-bob": {
       "status": "named_references_observed",
-      "freshNamedReferences": 6,
+      "freshNamedReferences": 7,
       "retainedReferences": 8
     },
     "rocsys": {
@@ -1228,7 +1228,7 @@
     },
     "lkab": {
       "status": "named_references_observed",
-      "freshNamedReferences": 4,
+      "freshNamedReferences": 12,
       "retainedReferences": 13
     }
   },

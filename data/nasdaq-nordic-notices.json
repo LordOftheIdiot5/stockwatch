@@ -1,27 +1,82 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T16:30:32Z",
+  "generated": "2026-11-27T17:07:52Z",
   "sourcePage": "https://subscribe.news.eu.nasdaq.com/rss",
   "status": "ok",
   "sources": {
     "nordicInvestorNews": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/nasdaqNordicNews",
       "label": "Nordic investor & press releases",
-      "lastAttempt": "2026-11-27T16:30:32Z",
-      "lastSuccess": "2026-11-27T16:30:32Z",
+      "lastAttempt": "2026-11-27T17:07:52Z",
+      "lastSuccess": "2026-11-27T17:07:52Z",
       "status": "ok",
       "received": 20
     },
     "nordicExchangeNotices": {
       "url": "https://api.news.eu.nasdaq.com/news/rss/mainMarketNotices",
       "label": "Nordic exchange notices",
-      "lastAttempt": "2026-11-27T16:30:32Z",
-      "lastSuccess": "2026-11-27T16:30:32Z",
+      "lastAttempt": "2026-11-27T17:07:52Z",
+      "lastSuccess": "2026-11-27T17:07:52Z",
       "status": "ok",
       "received": 20
     }
   },
   "items": [
+    {
+      "id": "nasdaq:39709b501b10e2b8f36b4de5b955c487485f9252b9adc620e90b198aeb8b3745",
+      "title": "Weekly Exercise - Swedish Stock",
+      "published": "2026-11-27T16:58:39Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b4c8cf1007f17a5dab4fd8916ae515e58&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:f021ad431152df8f4e0af330dccbe8f2d67490c2a4455dd3b6932a3a30ee1c91",
+      "title": "Weekly Exercise - Norwegian Stock",
+      "published": "2026-11-27T16:57:24Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b057ad08f9d1b837712aaae9a6f87309e&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:87a46ec355c53a15f930329be6b61ff90fd016a6afc8721286535f4ba1f5e6e3",
+      "title": "Weekly Exercise - Danish Stock",
+      "published": "2026-11-27T16:56:12Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b9c29187e76f2c8836e4ab5795eb4f280&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:66b6b137e802f9ce4f0b062254f8ee8852b94d34aa6e091899c4275a69823ce6",
+      "title": "Derivatives - New Strikes Stock Products 233/26",
+      "published": "2026-11-27T16:48:35Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=b3a571a12fd207d80d226043cba90b403&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
+    {
+      "id": "nasdaq:bbabccde34dcdea07cb3b0cdfc3cc5b7a9d5e8c81793c13a90cb316d18a89b89",
+      "title": "OMXS30 Daily Options Expiration Value 121/26",
+      "published": "2026-11-27T16:38:27Z",
+      "url": "https://view.news.eu.nasdaq.com/view?id=bda40b143427e0cf8f9e3e2624e6bd594&lang=en&src=rss",
+      "feed": "nordicExchangeNotices",
+      "category": "Nordic exchange notices",
+      "publisher": "Nasdaq Nordic",
+      "issuerMatch": "not_established",
+      "regulatory": null
+    },
     {
       "id": "nasdaq:907fd8320bcd89c20b19e286e4cb8b528aa4da7f0c67836a57641d4cb679290c",
       "title": "CORRECTION: Change of issuer name for RVRC Holding AB",
