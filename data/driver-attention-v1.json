@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-27T08:08:42Z",
+  "generated": "2026-11-27T09:07:28Z",
   "windowStart": "2026-11-13",
   "windowEnd": "2026-11-26",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -587,8 +587,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 1,
-      "latestRecord": "2026-11-27T07:49:28Z",
+      "observedRecords": 2,
+      "latestRecord": "2026-11-27T08:21:54Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -7923,8 +7923,8 @@
         }
       ],
       "potential": [],
-      "observedRecords": 10,
-      "latestRecord": "2026-11-26T12:07:15Z",
+      "observedRecords": 11,
+      "latestRecord": "2026-11-27T08:25:36Z",
       "topicCounts": {
         "numbers": 2,
         "prices": 0,
@@ -14650,6 +14650,14 @@
       ],
       "potential": [
         {
+          "id": "VWS.CO:91dac1650b0ad6c46729f6b671ec17c8fae1d278ba6672a921fd5542dd259f8b",
+          "published": "2026-11-27T08:39:45Z",
+          "headline": "Vestas får order på 45 vindkraftverk – nästan 300 MW ska byggas i Rumänien",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUG9rMmNKNDVYUi1OeFdVWlBFWTBMQ3YzbnlheW96bDNBSng3YTBvSWxNY1h4STMzbDRyM3c0UHdib0hlTjdQaHoyclQ0MHY0RnNNdWlrQ0I1c0FqTlh1U2lGMC1MM2Nsa2txcWw1eFg0UkI1UXFTWENCUjVyU290MGsxYVk2Qko4S0gzWVJ0T2ZKRzFfS05ROEZqbFpSeTZWaVhGeGQ2V0hvNW5MV3FTQlJ2bnhoUV90N3BV?oc=5",
+          "evidence": "named_reference",
+          "topic": "Contracts / agreements"
+        },
+        {
           "id": "VWS.CO:ea33b668e8640e2342584f7b61c35be945847781ba58249c96c172d94dd437c3",
           "published": "2026-11-26T12:51:40Z",
           "headline": "Vestas wins 293 MW order in Romania from Rezolv Energy",
@@ -14706,8 +14714,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 26,
-      "latestRecord": "2026-11-26T22:33:53Z",
+      "observedRecords": 27,
+      "latestRecord": "2026-11-27T08:39:45Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
