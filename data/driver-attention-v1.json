@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-11-28T00:27:52Z",
+  "generated": "2026-11-28T04:00:59Z",
   "windowStart": "2026-11-14",
   "windowEnd": "2026-11-27",
   "notice": "Counts are from this retained rolling archive, not comprehensive monitoring. Zero means no matching retained records, not no news. No attention, sentiment, hype, upside or price-impact score.",
@@ -1670,12 +1670,12 @@
         {
           "date": "2026-11-27",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [],
-      "observedRecords": 3,
-      "latestRecord": "2026-11-26T06:52:24Z",
+      "observedRecords": 4,
+      "latestRecord": "2026-11-27T20:59:40Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -1689,7 +1689,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 2
+        "media": 3
       }
     },
     "AVARDA.ST": {
@@ -7101,7 +7101,7 @@
         {
           "date": "2026-11-27",
           "issuer": 0,
-          "media": 0
+          "media": 1
         }
       ],
       "potential": [
@@ -7114,10 +7114,10 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 9,
-      "latestRecord": "2026-11-25T15:15:41Z",
+      "observedRecords": 10,
+      "latestRecord": "2026-11-27T03:13:34Z",
       "topicCounts": {
-        "numbers": 0,
+        "numbers": 1,
         "prices": 0,
         "operations": 0,
         "potential": 0,
@@ -7129,7 +7129,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 3
+        "media": 4
       }
     },
     "MRL.MC": {
@@ -7887,8 +7887,8 @@
           "topic": "Transactions"
         }
       ],
-      "observedRecords": 50,
-      "latestRecord": "2026-11-27T04:24:00Z",
+      "observedRecords": 51,
+      "latestRecord": "2026-11-28T00:34:57Z",
       "topicCounts": {
         "numbers": 1,
         "prices": 0,
@@ -12116,8 +12116,8 @@
           "topic": "Guidance / outlook"
         }
       ],
-      "observedRecords": 88,
-      "latestRecord": "2026-11-27T13:51:24Z",
+      "observedRecords": 89,
+      "latestRecord": "2026-11-28T01:26:57Z",
       "topicCounts": {
         "numbers": 3,
         "prices": 0,
@@ -13659,7 +13659,7 @@
         {
           "date": "2026-11-27",
           "issuer": 1,
-          "media": 1
+          "media": 3
         }
       ],
       "potential": [
@@ -13672,8 +13672,8 @@
           "topic": "Contracts / agreements"
         }
       ],
-      "observedRecords": 6,
-      "latestRecord": "2026-11-27T20:04:16Z",
+      "observedRecords": 8,
+      "latestRecord": "2026-11-27T20:44:26Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
@@ -13687,7 +13687,7 @@
       },
       "recent7": {
         "issuer": 2,
-        "media": 4
+        "media": 6
       }
     },
     "TRYG.CO": {
@@ -13854,7 +13854,7 @@
         {
           "date": "2026-11-27",
           "issuer": 0,
-          "media": 15
+          "media": 16
         }
       ],
       "potential": [
@@ -13873,6 +13873,14 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTFhLQXl6czBRZVFKUlRsdjU1VlFPYW9yTkZDQzRlSFFaSGpCeFZoMU93cHdfczlKemFWaHFiS3A2aVpJcVVTS01CSUk5TXZHMWFVbi1JcWVwSzRrRFRWeksybWVRZnhRM1h1VElnLWx6Y094U253THFBZlU1bHV3WU5zOUVEbVNLT3pIdmlDalFpTWlYUWc?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
+        },
+        {
+          "id": "UCG.MI:246a6e60c1d211b4bf51955466ed375a34f66c768c187669457cedb0573af66f",
+          "published": "2026-11-27T07:12:00Z",
+          "headline": "Commerzbank Raises 2026 Profit Outlook as AI Savings Emerge and UniCredit Integration Nears",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTHV2YzlrX2oyaTcwOWJHaG45ODB1T08wdGVMdEtVMnlLVjEtUkVRbkNzN0FuUWZ0cDlvc2NuV1Q2N1pwamF6RE1DUDJmeE9HTGF1NnM4Z19odXBoZmhOQ1Y4UHUwRVJHWGE1bE1yajFGS2Z4bEV5X0YxSzhLNVVacDRDR3FGWHJiUnBoTHA0YVB0R1Etc01TZmRoV3dXOVNNRWU0dG9fV2lCMTZjNWpMdmtCLUhvbFowTVV3a3FaN0p4azhLUEtWZUlQMFE5dTdsb1N2azVJeFVITTV4b2QtTC1SZzlHbDA?oc=5",
+          "evidence": "named_reference",
+          "topic": "Guidance / outlook"
         },
         {
           "id": "UCG.MI:6223192cd694a457d0dc330abea818e139fb9dd3b5062db6d4476f1f51219a90",
@@ -14009,23 +14017,15 @@
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcmk3THhETHdYbzFwa1VaclhFRTBHdW9VVXRXcXVxUTNTbkFTWHUyVlN1cDJ4UmNRVXBTZFVsLWJma2kxR0lIM3lUN0lDeEYtcy1nUXRKZkZ5M0pBQmh2Um1XMGlOaGtrOVJkOTVmcm41dEhYU0VXMnhMTHZjSXNkLVc5a3ZpTWM2eEpQUXVaclJ3aHh4MlRhSnhn?oc=5",
           "evidence": "named_reference",
           "topic": "Transactions"
-        },
-        {
-          "id": "UCG.MI:84cb3743647af73953c9398a6dae75ad0a7a43cb83c31f77cbae63888a77b4af",
-          "published": "2026-11-19T12:09:06Z",
-          "headline": "Germany and UniCredit reach broad agreement in Commerzbank takeover battle",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTHdSVEt1Z1plekU1SWRUOVA3TWNZbDdEUXhPMzZYUDRRWGNwQmlRSkdJTnloUWNVZ016NUozb1VaYk5ETVNZV2prckowTF9sU2tWWGFWdl9CTlFURDBTRHJnbW5iaVdXZXFaLUh6LWhQTXRKLS1jem04OTQ4YUZlRFRGOWVOa25wVkZPeGtEZzBPekJsWWZ2M05VV2RlWksxOHBKQUhB?oc=5",
-          "evidence": "named_reference",
-          "topic": "Transactions"
         }
       ],
-      "observedRecords": 196,
+      "observedRecords": 197,
       "latestRecord": "2026-11-27T22:12:58Z",
       "topicCounts": {
         "numbers": 0,
         "prices": 0,
         "operations": 0,
-        "potential": 9,
+        "potential": 10,
         "risk": 0
       },
       "prior7": {
@@ -14034,7 +14034,7 @@
       },
       "recent7": {
         "issuer": 0,
-        "media": 73
+        "media": 74
       }
     },
     "VEI.OL": {
@@ -14308,10 +14308,10 @@
       ],
       "potential": [
         {
-          "id": "VIG.VI:94b6d9462e00b8addef167d553047759531d91a5b0688eb3acca1162a663ff33",
-          "published": "2026-11-26T14:53:18Z",
+          "id": "VIG.VI:8cb944caaa1068b65c1c0d0482bfc20557374fc426a9a98c1143e131d8b2ab15",
+          "published": "2026-11-26T15:04:49Z",
           "headline": "Earnings call transcript: Vienna Insurance Group lifts 2026 outlook in Q3 2026",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxObXcwazBRQXhVbE1Lcm9wMjJudXpTM0tzUkJiVDYyTld3V0tGQWpWNE85blBLR0NsTGFVczQ0SVlXUUtEZ1g3RnUzNTZBb1VmY2ZLdzltV05aZ0hvUFlNUUZ5TlJNT0ZoS0xsQ3FYMXdiUGx6NXBveHY1bkN3TFJZcDZZeHhOTnpUNFJyQkY0MXBMYVM4SERDeXZmR3l5VkNWTjl2aWJnVWZENVFMSFk3NzNPVWE0NHIwM3ZGVjFuUTd3ZTc1SFhGeXR4UlhQaHpPYVpuTw?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVlB4eG5TNTk4MUFMclU4QkZta2JOVnRiRy1la2hLVzFPTS1WT0JyTjNFUzJaOVFMWHQyOXlZdTROSnR1TVRoRVllSFdpRU0wLXF5MlJ3dzVmVDFtNWgtN0FodVVITUU2Ny15YUJKd0hITFpVS0pRNnkycW0waUl2S0dJdDMyUWIyMTVhYTBTX2hJMGU5RXl0ODVUMlRoQzcwV0t2TjFJek0xdVIzTzh2RXhKWUdxbi1KSkhtcUZFV0twVjN5WXBvTjhrRmFmUQ?oc=5",
           "evidence": "named_reference",
           "topic": "Guidance / outlook"
         },
